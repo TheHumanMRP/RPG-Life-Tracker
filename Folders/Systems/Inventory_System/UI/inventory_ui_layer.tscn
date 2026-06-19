@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://svisxss24oxa"]
+
+[ext_resource type="PackedScene" uid="uid://vrxx363a484n" path="res://Folders/Scenes/inventory_slot.tscn" id="1_x08k6"]
+[ext_resource type="PackedScene" uid="uid://b5nh0b1wgrnuq" path="res://Folders/Scenes/Items/item.tscn" id="2_c4qjx"]
+
+[node name="Inventory_UI_Layer" type="CanvasLayer" unique_id=445007278]
+
+[node name="Inventory_Slot" parent="." unique_id=324414666 instance=ExtResource("1_x08k6")]
+
+[node name="Item" parent="." unique_id=393599023 instance=ExtResource("2_c4qjx")]
