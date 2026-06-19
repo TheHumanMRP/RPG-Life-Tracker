@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://pwtj16da0u0b"]
 
-[ext_resource type="Script" uid="uid://dghwurh18g21o" path="res://Folders/Scripts/player.gd" id="1_6n2b4"]
+[ext_resource type="Script" uid="uid://c20du4ge4p05i" path="res://Folders/Systems/Player/player.gd" id="1_4ek6g"]
 [ext_resource type="Texture2D" uid="uid://bqulutjwvblw" path="res://Folders/Assets/icon.svg" id="2_3rm20"]
 [ext_resource type="Texture2D" uid="uid://c4in8plhxpwjx" path="res://Folders/Assets/Platformer-player-Sheet.png" id="2_6n2b4"]
 [ext_resource type="Script" uid="uid://ckyj7edp33tc8" path="res://Folders/Components/movement_component.gd" id="4_514jh"]
@@ -138,9 +138,8 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gl73e"]
 size = Vector2(52, 52)
 
-[node name="Player" type="CharacterBody2D" unique_id=1761644757 node_paths=PackedStringArray("movement_component")]
-script = ExtResource("1_6n2b4")
-movement_component = NodePath("MovementComponent")
+[node name="Player" type="CharacterBody2D" unique_id=1761644757]
+script = ExtResource("1_4ek6g")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2030784034]
 unique_name_in_owner = true

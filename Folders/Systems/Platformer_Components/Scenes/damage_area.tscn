@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://cu4hnlkwj8l7d"]
 
-[ext_resource type="Script" uid="uid://bsk113tv477ey" path="res://Folders/Scripts/damage_area.gd" id="1_f3jhn"]
+[ext_resource type="Script" uid="uid://b77mfluw42emr" path="res://Folders/Systems/Platformer_Components/Scripts/damage_area.gd" id="1_p4g1b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m2wy4"]
 resource_local_to_scene = true
 size = Vector2(64, 64)
 
 [node name="DamageArea" type="Area2D" unique_id=1450602764]
-script = ExtResource("1_f3jhn")
+script = ExtResource("1_p4g1b")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2017281633]
 unique_name_in_owner = true

@@ -1,19 +1,19 @@
 [gd_scene format=3 uid="uid://mexd1qvl140q"]
 
-[ext_resource type="Script" uid="uid://chsm8tukcmtcp" path="res://Folders/Scripts/checkpoint.gd" id="1_36c22"]
-[ext_resource type="Texture2D" uid="uid://bqulutjwvblw" path="res://Folders/Assets/icon.svg" id="1_ymm8q"]
+[ext_resource type="Script" uid="uid://twhau06h2sb3" path="res://Folders/Systems/Platformer_Components/Scripts/checkpoint.gd" id="1_4xoye"]
+[ext_resource type="Texture2D" uid="uid://bqulutjwvblw" path="res://Folders/Assets/icon.svg" id="2_svqtu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ymm8q"]
 size = Vector2(40, 128)
 
 [node name="Checkpoint" type="Area2D" unique_id=460687773]
-script = ExtResource("1_36c22")
+script = ExtResource("1_4xoye")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=769247356]
 shape = SubResource("RectangleShape2D_ymm8q")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=181682281]
 scale = Vector2(0.3125, 1)
-texture = ExtResource("1_ymm8q")
+texture = ExtResource("2_svqtu")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

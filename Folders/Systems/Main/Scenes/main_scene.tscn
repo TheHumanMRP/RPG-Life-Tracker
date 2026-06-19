@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://ecea6tey6wa5"]
+
+[ext_resource type="PackedScene" uid="uid://dqf5jume5kohl" path="res://Folders/Systems/Platformer_Components/Scenes/level.tscn" id="2_e7ifm"]
+[ext_resource type="PackedScene" uid="uid://bgbgfpngstnov" path="res://Folders/Systems/Main/Scenes/ui_layer.tscn" id="2_inmiq"]
+[ext_resource type="PackedScene" uid="uid://svisxss24oxa" path="res://Folders/Systems/Inventory_System/Scenes/inventory_ui_layer.tscn" id="3_e7ifm"]
+
+[node name="MainScene" type="Node2D" unique_id=928742535]
+
+[node name="UILayer" parent="." unique_id=1819027134 instance=ExtResource("2_inmiq")]
+
+[node name="Level" parent="." unique_id=2061816320 instance=ExtResource("2_e7ifm")]
+
+[node name="Inventory_UI_Layer" parent="." unique_id=1730334149 instance=ExtResource("3_e7ifm")]
