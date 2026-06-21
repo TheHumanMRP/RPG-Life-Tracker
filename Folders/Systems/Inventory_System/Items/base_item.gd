@@ -7,3 +7,6 @@ class_name BaseItem
 @export var type: String = "base_item" # Used to make sure that only the correct item gets accepted into the inventory slot
 									   # basically oor filteration purpose
 @export var logo: Texture2D # Should and can be only used for display purposes
+
+func use() -> void:
+	pass

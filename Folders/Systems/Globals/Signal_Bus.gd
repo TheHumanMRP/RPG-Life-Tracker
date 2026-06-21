@@ -1,7 +1,7 @@
 extends Node
 
 signal refresh_ui
-signal inventory_changed(new_inventory: Array[BaseItem])
+signal inventory_changed(new_inventory: Array[ItemEntry])
 signal respawn_player
 
 func _ready() -> void:
