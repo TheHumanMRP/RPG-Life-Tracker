@@ -1,7 +1,7 @@
 class_name Sword
 extends BaseItem
 
-var damage
+var damage: int = 10
 
 func _init() -> void:
 	type = "sword"
