@@ -1,6 +1,14 @@
 extends Node
 
+signal refresh_ui
 signal respawn_player
+
+func _ready() -> void:
+	call_deferred("refresh_ui_across_project")
+
+func refresh_ui_across_project() -> void:
+	print("\nSignal Bus: Refresh ui emitted")
+	refresh_ui.emit()
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("Respawn"):

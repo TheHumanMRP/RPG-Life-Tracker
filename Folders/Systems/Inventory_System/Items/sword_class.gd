@@ -1,0 +1,11 @@
+class_name Sword
+extends BaseItem
+
+var damage
+
+func _init() -> void:
+	type = "sword"
+
+func setup(new_name: String, new_logo: Texture2D) -> void:
+	name = new_name
+	logo = new_logo

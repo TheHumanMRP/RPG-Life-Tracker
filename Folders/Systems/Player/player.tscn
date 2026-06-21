@@ -55,7 +55,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ofe1v")
 }],
-"loop": true,
+"loop": 1,
 "name": &"GodotIcon",
 "speed": 5.0
 }, {
@@ -63,7 +63,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_3rm20")
 }],
-"loop": true,
+"loop": 1,
 "name": &"Idle",
 "speed": 5.0
 }, {
@@ -71,7 +71,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_6n2b4")
 }],
-"loop": true,
+"loop": 1,
 "name": &"Moveing-Up-Left",
 "speed": 5.0
 }, {
@@ -79,7 +79,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_y3jju")
 }],
-"loop": true,
+"loop": 1,
 "name": &"Moving-Down",
 "speed": 5.0
 }, {
@@ -87,7 +87,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_yqmip")
 }],
-"loop": true,
+"loop": 1,
 "name": &"Moving-Down-Left",
 "speed": 5.0
 }, {
@@ -95,7 +95,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_orhto")
 }],
-"loop": true,
+"loop": 1,
 "name": &"Moving-Down-Right",
 "speed": 5.0
 }, {
@@ -106,7 +106,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_cdrjs")
 }],
-"loop": true,
+"loop": 1,
 "name": &"Moving-Left",
 "speed": 5.0
 }, {
@@ -114,7 +114,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_3sao0")
 }],
-"loop": true,
+"loop": 1,
 "name": &"Moving-Right",
 "speed": 5.0
 }, {
@@ -122,7 +122,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_filjn")
 }],
-"loop": true,
+"loop": 1,
 "name": &"Moving-Up",
 "speed": 5.0
 }, {
@@ -130,7 +130,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_cy0yy")
 }],
-"loop": true,
+"loop": 1,
 "name": &"Moving-Up-Right",
 "speed": 5.0
 }]

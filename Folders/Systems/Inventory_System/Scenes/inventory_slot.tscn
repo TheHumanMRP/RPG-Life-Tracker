@@ -2,36 +2,28 @@
 
 [ext_resource type="Script" uid="uid://bkvmj0hs40ess" path="res://Folders/Systems/Inventory_System/Scripts/inventory_slot.gd" id="1_idi7c"]
 
-[node name="Inventory_Slot" type="Control" unique_id=324414666]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("1_idi7c")
-
-[node name="PanelContainer" type="PanelContainer" parent="." unique_id=278711913]
-layout_mode = 1
+[node name="Inventory_Slot" type="PanelContainer" unique_id=844703346]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+offset_left = -60.0
+offset_top = -31.5
+offset_right = 60.0
+offset_bottom = 31.5
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_idi7c")
+accepted_item_type = null
 
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=1684947038]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1684947038]
 layout_mode = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="Name" type="Label" parent="PanelContainer/MarginContainer" unique_id=1700011461]
+[node name="Logo_Display" type="TextureRect" parent="MarginContainer" unique_id=1196303866]
+unique_name_in_owner = true
 layout_mode = 2
-text = "Base_Item"

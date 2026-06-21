@@ -6,8 +6,8 @@
 
 [node name="MainScene" type="Node2D" unique_id=928742535]
 
-[node name="UILayer" parent="." unique_id=1819027134 instance=ExtResource("2_inmiq")]
-
 [node name="Level" parent="." unique_id=2061816320 instance=ExtResource("2_e7ifm")]
+
+[node name="UILayer" parent="." unique_id=1819027134 instance=ExtResource("2_inmiq")]
 
 [node name="Inventory_UI_Layer" parent="." unique_id=1730334149 instance=ExtResource("3_e7ifm")]

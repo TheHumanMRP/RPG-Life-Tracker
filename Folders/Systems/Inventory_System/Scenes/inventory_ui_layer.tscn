@@ -1,3 +1,19 @@
 [gd_scene format=3 uid="uid://svisxss24oxa"]
 
+[ext_resource type="PackedScene" uid="uid://dc28u3ylx6ryd" path="res://Folders/Systems/Inventory_System/Scenes/inventory_hot_bar.tscn" id="1_ewtii"]
+
 [node name="Inventory_UI_Layer" type="CanvasLayer" unique_id=445007278]
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1160798767]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="InventoryHotBar" parent="MarginContainer" unique_id=1133281896 instance=ExtResource("1_ewtii")]
+layout_mode = 2
