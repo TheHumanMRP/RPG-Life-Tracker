@@ -1,6 +1,7 @@
 extends Node
 
 signal refresh_ui
+signal inventory_changed
 signal respawn_player
 
 func _ready() -> void:
