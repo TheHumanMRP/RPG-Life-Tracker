@@ -1,5 +1,5 @@
 extends Resource
-class_name InventoryLogic
+class_name InventoryLogicComponent
 
 # -------------------------------------------------------------------
 # Inventory Data
