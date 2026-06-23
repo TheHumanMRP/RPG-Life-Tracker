@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @export var health_component: HealthComponent = HealthComponent.new()
 @export var movement_component: MovementComponent = MovementComponent.new()
+@export var inventory_logic_component: InventoryLogicComponent = InventoryLogicComponent.new()
 
 @export var spawn_point: Vector2
 
