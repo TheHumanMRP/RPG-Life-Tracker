@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bqulutjwvblw" path="res://Folders/Assets/icon.svg" id="2_svqtu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ymm8q"]
-size = Vector2(40, 128)
+size = Vector2(40, 38)
 
 [node name="Checkpoint" type="Area2D" unique_id=460687773]
 script = ExtResource("1_4xoye")
@@ -13,7 +13,7 @@ script = ExtResource("1_4xoye")
 shape = SubResource("RectangleShape2D_ymm8q")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=181682281]
-scale = Vector2(0.3125, 1)
+scale = Vector2(0.3125, 0.3125)
 texture = ExtResource("2_svqtu")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
