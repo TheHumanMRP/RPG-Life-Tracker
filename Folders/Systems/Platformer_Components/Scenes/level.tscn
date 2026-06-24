@@ -14,11 +14,11 @@ tile_map_data = PackedByteArray("AADn/+j/AAAAAAAAAADn/+n/AAAAAAEAAADn/+r/AAAAAAI
 [node name="CheckPoints" type="Node" parent="." unique_id=2063058173]
 
 [node name="Checkpoint" parent="CheckPoints" unique_id=460687773 instance=ExtResource("2_cf4ba")]
-position = Vector2(49, 47)
+position = Vector2(62, 71)
 single_time_checkpoint = true
 
 [node name="Checkpoint2" parent="CheckPoints" unique_id=386011850 instance=ExtResource("2_cf4ba")]
-position = Vector2(433, 35)
+position = Vector2(509, 85)
 single_time_checkpoint = true
 
 [node name="SpawnPoint" type="Marker2D" parent="." unique_id=1735526225]
