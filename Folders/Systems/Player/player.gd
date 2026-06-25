@@ -39,8 +39,6 @@ extends CharacterBody2D
 # 	0.12   # Additional movement parameter
 # )
 
-
-## Set
 func _ready() -> void:
 	# Add the player to the "player" group for easier lookup.
 	add_to_group("player")
