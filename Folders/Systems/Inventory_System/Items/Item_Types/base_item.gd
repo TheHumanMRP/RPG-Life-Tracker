@@ -8,5 +8,5 @@ class_name BaseItem
 									   # basically oor filteration purpose
 @export var logo: Texture2D # Should and can be only used for display purposes
 
-func use() -> void:
+func use(target) -> void:
 	pass
