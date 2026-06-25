@@ -26,5 +26,8 @@ unique_name_in_owner = true
 position = Vector2(591, 39)
 
 [node name="DamageArea" parent="." unique_id=1450602764 instance=ExtResource("4_d6cyu")]
-position = Vector2(250, 75)
+position = Vector2(251, 50)
 insta_kill = true
+player_only = true
+width = 10.0
+height = 10.0
