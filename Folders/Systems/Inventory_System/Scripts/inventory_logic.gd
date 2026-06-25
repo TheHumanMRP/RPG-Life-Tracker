@@ -2,6 +2,11 @@ class_name InventoryLogicComponent
 extends Node
 
 # -------------------------------------------------------------------
+# Signals
+# -------------------------------------------------------------------
+signal inventory_changed
+
+# -------------------------------------------------------------------
 # Inventory Data
 # -------------------------------------------------------------------
 
@@ -65,8 +70,12 @@ func remove_item(item_id: int) -> void:
 
 func use_item(item_id: int) -> void:
 	for item in inventory_items:
-		if item.item_id == item_id:
-			
+		if not item.item_id == item_id:
+			continue
+		
+		item.use_item()
+
+		inventory_changed
 
 func get_iten_by_id(item_id: int) -> ItemEntry:
 	for item in inventory_items:
