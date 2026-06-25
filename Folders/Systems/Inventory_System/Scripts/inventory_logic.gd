@@ -74,3 +74,4 @@ func get_iten_by_id(item_id: int) -> ItemEntry:
 		return item
 	
 	push_error("Item not found with item_id: ", item_id)
+	return
