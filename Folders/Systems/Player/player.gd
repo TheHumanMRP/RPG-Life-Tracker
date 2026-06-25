@@ -71,7 +71,8 @@ func kill_self() -> void:
 func take_damage(amount: float) -> void:
 	health_component.take_damage(amount)
 
-func heal(amount: float)
+func heal(amount: float) -> void:
+	health_component.heal(amount)
 
 func damage_taken(new_health: float) -> void:
 	print("\nPlayer: Health Changed to ", new_health)
