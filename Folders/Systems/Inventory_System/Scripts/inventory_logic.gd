@@ -63,12 +63,12 @@ func remove_item(item_id: int) -> void:
 		" was not found for removal."
 	)
 
-func use_item(item_id: int) -> void:
+func use_item(item_id: int, target) -> void:
 	for item in inventory_items:
 		if not item.item_id == item_id:
 			continue
 		
-		item.use_item()
+		item.use_item(target)
 
 		SignalBus.inventory_changed.emit()
 
