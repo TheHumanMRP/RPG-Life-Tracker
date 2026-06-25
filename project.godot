@@ -17,8 +17,8 @@ config/icon="uid://bqulutjwvblw"
 
 [autoload]
 
-Global="*uid://b0m21w7a3y3rf"
 SignalBus="*uid://dackuyp70bkog"
+Global="*uid://b0m21w7a3y3rf"
 
 [debug]
 
