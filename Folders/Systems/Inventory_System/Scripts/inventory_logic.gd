@@ -64,7 +64,9 @@ func remove_item(item_id: int) -> void:
 	)
 
 func use_item(item_id: int) -> void:
-	pass
+	for item in inventory_items:
+		if item.item_id == item_id:
+			
 
 func get_iten_by_id(item_id: int) -> ItemEntry:
 	for item in inventory_items:
