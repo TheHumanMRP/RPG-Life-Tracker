@@ -1,5 +1,5 @@
 class_name InventoryLogicComponent
-extends Node
+extends Resource
 
 # -------------------------------------------------------------------
 # Inventory Data
