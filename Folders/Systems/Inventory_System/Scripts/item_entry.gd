@@ -9,5 +9,5 @@ func setup(new_item: BaseItem, new_durability: int):
 	item = new_item
 	durability = new_durability
 
-func use_item() -> void:
-	item.use()
+func use_item(target) -> void:
+	item.use(target)
