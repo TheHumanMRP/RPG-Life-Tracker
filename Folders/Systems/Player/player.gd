@@ -5,6 +5,8 @@ extends CharacterBody2D
 
 @export var spawn_point: Vector2
 
+
+
 # Movement component config
 "movement_component.set_movement_component_values(200, 500, 200, 1500, 200, 2.5, 200, 600, 0.12)"
 

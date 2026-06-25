@@ -2,11 +2,6 @@ class_name InventoryLogicComponent
 extends Node
 
 # -------------------------------------------------------------------
-# Signals
-# -------------------------------------------------------------------
-signal inventory_changed
-
-# -------------------------------------------------------------------
 # Inventory Data
 # -------------------------------------------------------------------
 
@@ -75,7 +70,7 @@ func use_item(item_id: int) -> void:
 		
 		item.use_item()
 
-		inventory_changed
+		SignalBus.inventory_changed.emit()
 
 func get_iten_by_id(item_id: int) -> ItemEntry:
 	for item in inventory_items:
