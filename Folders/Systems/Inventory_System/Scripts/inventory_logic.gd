@@ -66,9 +66,11 @@ func remove_item(item_id: int) -> void:
 func use_item(item_id: int) -> void:
 	pass
 
-func get_iten_by_id(item_id: int):
+func get_iten_by_id(item_id: int) -> ItemEntry:
 	for item in inventory_items:
 		if not item.item_id == item_id:
 			continue
 		
-		return item_id
+		return item
+	
+	push_error("Item not found with item_id: ", item_id)
