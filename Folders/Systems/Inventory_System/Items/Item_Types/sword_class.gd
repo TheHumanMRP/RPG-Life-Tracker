@@ -9,3 +9,5 @@ func _init() -> void:
 func setup(new_name: String, new_logo: Texture2D) -> void:
 	name = new_name
 	logo = new_logo
+
+func use(target) -> void:
