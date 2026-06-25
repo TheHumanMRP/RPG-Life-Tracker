@@ -62,3 +62,8 @@ func remove_item(item_id: int) -> void:
 		item_id,
 		" was not found for removal."
 	)
+
+func use_item(item_id: int) -> void:
+	pass
+
+func get_iten_by_id(item_id: int)
