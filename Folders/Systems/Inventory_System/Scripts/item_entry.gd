@@ -9,6 +9,7 @@ var logo: Texture2D
 func setup(new_item: BaseItem, new_durability: int, new_logo: Texture2D):
 	item = new_item
 	durability = new_durability
+	logo = new_logo
 
 func use_item(target) -> void:
 	item.use(target)

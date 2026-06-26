@@ -36,7 +36,7 @@ func add_test_sword() -> void:
 
 	var test_iten_entry: ItemEntry = ItemEntry.new()
 
-	test_iten_entry.setup(test_item, test_item.base_durability)
+	test_iten_entry.setup(test_item, test_item.base_durability, null)
 
 	add_item(test_iten_entry)
 
