@@ -23,7 +23,7 @@ func recreate_inventory_slots() -> void:
 
 		inventory_slot.id = id
 
-		id +=
+		id += 1
 
 		h_box_container.add_child(inventory_slot)
 
