@@ -22,10 +22,9 @@ func refresh_inventory_slots() -> void:
 		h_box_container.add_child(inventory_slot)
 
 func hello() -> void:
-	for i in range()
 	var inventory: Array[ItemEntry] = Global.get_inventory()
-		# Global.get_inventory() returns the inventory, and this checks if the item at index i exists or not.
-	if i >= 0 and i < inventory.size():
-		if inventory[i] != null:
-			var new_item: ItemEntry = inventory[i]
-			inventory_slot.item = new_item
+	
+	for i in range(number_of_inventory_slots):
+		if i >= 0 and i < inventory.size():
+			if inventory[i] != null:
+				var new_item: ItemEntry = inventory[i]
