@@ -41,7 +41,7 @@ func add_test_sword() -> void:
 
 	var test_item_entry: ItemEntry = ItemEntry.new()
 
-	test_item_entry.setup(test_item, test_item.base_durability, null)
+	test_item_entry.setup(test_item, test_item.base_durability, load("res://Folders/Assets/icon.svg"))
 
 	add_item(test_item_entry)
 
