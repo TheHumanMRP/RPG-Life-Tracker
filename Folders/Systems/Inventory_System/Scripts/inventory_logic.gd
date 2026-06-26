@@ -29,15 +29,17 @@ func calculate_max_id() -> void:
 		if item.item_id >= max_id:
 			max_id = item.item_id + 1
 
-	var test_item: Sword = Sword.new()
+	print(inventory_items)
 
-	test_item.setup("Hello Brother", null)
+	# var test_item: Sword = Sword.new()
 
-	var test_iten_entry: ItemEntry = ItemEntry.new()
+	# test_item.setup("Hello Brother", null)
 
-	test_iten_entry.setup(test_item, test_item.base_durability)
+	# var test_iten_entry: ItemEntry = ItemEntry.new()
 
-	add_item()
+	# test_iten_entry.setup(test_item, test_item.base_durability)
+
+	# add_item(test_iten_entry)
 
 # -------------------------------------------------------------------
 # Inventory Operations
