@@ -6,8 +6,8 @@ var number_of_inventory_slots: int = Global.number_of_inventory_slots
 
 func _ready() -> void:
 	recreate_inventory_slots()
-	SignalBus.refresh_ui.connect(refresh_inventory_slots)
-	SignalBus.inventory_changed.connect(refresh_inventory_slots)
+	SignalBus.refresh_ui.connect(set_inventory_slot_items)
+	SignalBus.inventory_changed.connect(set_inventory_slot_items)
 
 func recreate_inventory_slots() -> void:
 	# Clear the existing inventory slots
@@ -23,7 +23,7 @@ func recreate_inventory_slots() -> void:
 
 		h_box_container.add_child(inventory_slot)
 
-func refresh_inventory_slots() -> void:
+func set_inventory_slot_items() -> void:
 	var inventory: Array[ItemEntry] = Global.get_inventory()
 	
 	var inventory_slots: Array = h_box_container.get_children()

@@ -11,6 +11,8 @@ class_name InventorySlot
 func _ready() -> void:
 	check_type_of_item()
 	SignalBus.inventory_changed.connect(refresh)
+	
+	refresh()
 
 func refresh() -> void:
 	if not item:
