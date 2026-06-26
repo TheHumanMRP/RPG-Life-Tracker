@@ -14,7 +14,6 @@ var max_id: int = 0
 # -------------------------------------------------------------------
 
 func _init() -> void:
-	print("Inventory created:", self)
 	call_deferred("calculate_max_id")
 
 
