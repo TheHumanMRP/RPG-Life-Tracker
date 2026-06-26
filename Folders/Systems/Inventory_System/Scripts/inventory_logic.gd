@@ -15,7 +15,7 @@ var max_id: int = 0
 
 func _init() -> void:
 	call_deferred("calculate_max_id")
-	call_deferred("add_item", )
+
 
 # -------------------------------------------------------------------
 # ID Management
@@ -29,6 +29,7 @@ func calculate_max_id() -> void:
 		if item.item_id >= max_id:
 			max_id = item.item_id + 1
 
+	add_item()
 
 # -------------------------------------------------------------------
 # Inventory Operations
