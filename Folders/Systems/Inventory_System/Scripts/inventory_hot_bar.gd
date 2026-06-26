@@ -26,7 +26,7 @@ func recreate_inventory_slots() -> void:
 func refresh_inventory_slots() -> void:
 	var inventory: Array[ItemEntry] = Global.get_inventory()
 	
-	var inventory_slots: int = h
+	var inventory_slots: Array = h_box_container.get_children()
 
 	for i in range(number_of_inventory_slots):
 		if not i >= 0 and i < inventory.size():
@@ -37,5 +37,4 @@ func refresh_inventory_slots() -> void:
 			
 		var new_item: ItemEntry = inventory[i]
 
-
-
+		inventory_slots[i].
