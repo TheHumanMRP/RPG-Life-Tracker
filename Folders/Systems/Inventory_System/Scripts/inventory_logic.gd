@@ -63,6 +63,8 @@ func remove_item(item_id: int) -> void:
 		" was not found for removal."
 	)
 
+
+## Uses the item with the specified ID from the inventory
 func use_item(item_id: int, target) -> void:
 	for item in inventory_items:
 		if not item.item_id == item_id:
