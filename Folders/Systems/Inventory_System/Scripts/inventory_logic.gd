@@ -15,7 +15,7 @@ var max_id: int = 0
 
 func _init() -> void:
 	call_deferred("calculate_max_id")
-
+	call_deferred("calculate_max_id")
 
 # -------------------------------------------------------------------
 # ID Management
