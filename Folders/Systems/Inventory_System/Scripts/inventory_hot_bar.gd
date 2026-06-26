@@ -27,6 +27,11 @@ func refresh_inventory_slots() -> void:
 	var inventory: Array[ItemEntry] = Global.get_inventory()
 	
 	for i in range(number_of_inventory_slots):
-		if i >= 0 and i < inventory.size():
-			if inventory[i] != null:
-				var new_item: ItemEntry = inventory[i]
+		if not i >= 0 and i < inventory.size():
+			return
+		
+		if not inventory[i] != null:
+			continue
+			
+		var new_item: ItemEntry = inventory[i]
+
