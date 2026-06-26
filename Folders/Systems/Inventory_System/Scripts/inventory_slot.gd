@@ -4,6 +4,8 @@ class_name InventorySlot
 @export var item: ItemEntry
 @export var accepted_item_type: String = "base_item"
 
+@export var 
+
 @onready var display_logo: TextureRect = $%Logo_Display
 
 func _ready() -> void:

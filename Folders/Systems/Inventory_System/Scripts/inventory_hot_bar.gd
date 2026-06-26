@@ -28,3 +28,5 @@ func hello() -> void:
 		if i >= 0 and i < inventory.size():
 			if inventory[i] != null:
 				var new_item: ItemEntry = inventory[i]
+
+				
