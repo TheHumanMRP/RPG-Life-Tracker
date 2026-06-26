@@ -14,7 +14,12 @@ func _ready() -> void:
 
 func refresh_ui() -> void:
 	if not item:
-		display_logo.texture = item.logo
+		return
+	
+	if not item.logo:
+		return
+
+	display_logo.texture = item.logo
 
 func check_type_of_item() -> void:
 	if not accepted_item_type == "base_item":
