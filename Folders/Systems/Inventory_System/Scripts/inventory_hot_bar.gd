@@ -14,12 +14,16 @@ func recreate_inventory_slots() -> void:
 	for child in h_box_container.get_children():
 		child.queue_free()
 
+	var id: int = 0
+
 	# Add all the item slots again
 	for i in range(number_of_inventory_slots):
 		var packed_inveotory_slot: PackedScene = load("res://Folders/Systems/Inventory_System/Scenes/inventory_slot.tscn")
 		var inventory_slot: InventorySlot = packed_inveotory_slot.instantiate()
 
-		inventory_slot.id = i
+		inventory_slot.id = id
+
+		id +=
 
 		h_box_container.add_child(inventory_slot)
 
