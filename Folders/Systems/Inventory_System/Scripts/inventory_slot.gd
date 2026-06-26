@@ -1,6 +1,7 @@
 extends Control
+class_name InventorySlot
 
-@export var item: BaseItem
+@export var item: ItemEntry
 @export var accepted_item_type: String = "base_item"
 
 @onready var display_logo: TextureRect = $%Logo_Display

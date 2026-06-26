@@ -17,7 +17,7 @@ func refresh_inventory_slots() -> void:
 	# Add all the item slots again
 	for i in range(number_of_inventory_slots):
 		var packed_inveotory_slot: PackedScene = load("res://Folders/Systems/Inventory_System/Scenes/inventory_slot.tscn")
-		var inventory_slot:  = packed_inveotory_slot.instantiate()
+		var inventory_slot: InventorySlot = packed_inveotory_slot.instantiate()
 		
 		# Global.get_inventory() returns the inventory, and this checks if the item at index i exists or not.
 		if Global.get_inventory()[i] != null:
