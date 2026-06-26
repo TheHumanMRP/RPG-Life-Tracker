@@ -14,6 +14,8 @@ func refresh_inventory_slots() -> void:
 	for child in h_box_container.get_children():
 		child.queue_free()
 	
+	var inventory: Array[ItemEntry] = Global.get_inventory()
+
 	# Add all the item slots again
 	for i in range(number_of_inventory_slots):
 		var packed_inveotory_slot: PackedScene = load("res://Folders/Systems/Inventory_System/Scenes/inventory_slot.tscn")
