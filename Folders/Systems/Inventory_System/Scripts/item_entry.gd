@@ -4,8 +4,9 @@ class_name ItemEntry
 var item: BaseItem
 var durability: int
 var item_id: int
+var logo: Texture2D
 
-func setup(new_item: BaseItem, new_durability: int):
+func setup(new_item: BaseItem, new_durability: int, new_logo: Texture2D):
 	item = new_item
 	durability = new_durability
 
