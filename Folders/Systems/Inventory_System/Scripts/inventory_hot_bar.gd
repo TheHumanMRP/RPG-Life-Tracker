@@ -28,7 +28,13 @@ func set_inventory_slot_items() -> void:
 	
 	var inventory_slots: Array = h_box_container.get_children()
 
+	for slot in inventory_slots:
+		var id: int = slot.id
 
+		if not (id >= 0 and id < inventory.size()):
+			return
+		
+		
 
 	for i in range(number_of_inventory_slots):
 		if not (i >= 0 and i < inventory.size()):
