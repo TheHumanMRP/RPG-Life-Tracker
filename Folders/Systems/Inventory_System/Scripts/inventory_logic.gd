@@ -89,6 +89,9 @@ func use_item(item_id: int, target) -> void:
 
 		SignalBus.inventory_changed.emit()
 
+func clear_inventory() -> void:
+	for i in 
+
 func get_iten_by_id(item_id: int) -> ItemEntry:
 	for item in inventory_items:
 		if not item.item_id == item_id:
