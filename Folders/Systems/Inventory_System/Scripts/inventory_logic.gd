@@ -62,7 +62,7 @@ func add_item(new_item_entry: ItemEntry) -> void:
 
 	inventory_items.append(new_item_entry)
 
-	
+	max_id += 1
 
 	# Notify listeners that the inventory has changed.
 	SignalBus.inventory_changed.emit()
@@ -98,7 +98,7 @@ func use_item(item_id: int, target) -> void:
 
 		SignalBus.inventory_changed.emit()
 
-func clear_inventory() -> void	:
+func clear_inventory() -> void:
 	inventory_items.clear()
 	SignalBus.inventory_changed.emit()
 
