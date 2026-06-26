@@ -5,6 +5,7 @@ signal inventory_changed(new_inventory: Array[ItemEntry])
 signal respawn_player
 
 func _ready() -> void:
+	await 
 	call_deferred("refresh_ui_across_project")
 
 func refresh_ui_across_project() -> void:
