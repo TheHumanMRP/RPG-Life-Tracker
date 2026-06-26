@@ -21,11 +21,5 @@ func refresh_inventory_slots() -> void:
 	for i in range(number_of_inventory_slots):
 		var packed_inveotory_slot: PackedScene = load("res://Folders/Systems/Inventory_System/Scenes/inventory_slot.tscn")
 		var inventory_slot: InventorySlot = packed_inveotory_slot.instantiate()
-		
-		# Global.get_inventory() returns the inventory, and this checks if the item at index i exists or not.
-		if i >= 0 and i < inventory.size():
-			if inventory[i] != null:
-				var new_item: ItemEntry = inventory[i]
-				inventory_slot.item = new_item
 
 		h_box_container.add_child(inventory_slot)

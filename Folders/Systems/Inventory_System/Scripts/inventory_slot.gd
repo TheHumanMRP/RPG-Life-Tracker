@@ -11,7 +11,7 @@ func _ready() -> void:
 	SignalBus.refresh_ui.connect(refresh_ui)
 
 func refresh_ui() -> void:
-	if item:
+	if not item:
 		display_logo.texture = item.logo
 
 func check_type_of_item() -> void:
