@@ -10,9 +10,9 @@ class_name InventorySlot
 
 func _ready() -> void:
 	check_type_of_item()
-	SignalBus.refresh_ui.connect(refresh_ui)
+	SignalBus.inventory_changed.connect(refresh)
 
-func refresh_ui() -> void:
+func refresh() -> void:
 	if not item:
 		return
 	
