@@ -8,7 +8,6 @@ func _init() -> void:
 
 func setup(new_name: String, new_logo: Texture2D = null, new_base_durability: int = base_durability) -> void:
 	name = new_name
-	logo = new_logo
 	base_durability = new_base_durability
 
 func use(target) -> void:

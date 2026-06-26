@@ -29,7 +29,7 @@ func refresh_inventory_slots() -> void:
 	var inventory_slots: Array = h_box_container.get_children()
 
 	for i in range(number_of_inventory_slots):
-		if not i >= 0 and i < inventory.size():
+		if not (i >= 0 and i < inventory.size()):
 			return
 		
 		if not inventory[i] != null:
