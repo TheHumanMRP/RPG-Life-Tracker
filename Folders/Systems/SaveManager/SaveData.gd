@@ -3,5 +3,5 @@ extends Resource
 
 @export var inventory_logic: InventoryLogicComponent
 
-# func _init() -> void:
-# 	inventory_logic = InventoryLogicComponent.new()
+func _init() -> void:
+	inventory_logic = InventoryLogicComponent.new()
