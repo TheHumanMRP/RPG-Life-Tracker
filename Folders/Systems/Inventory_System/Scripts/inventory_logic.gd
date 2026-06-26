@@ -5,7 +5,7 @@ extends Resource
 # Inventory Data
 # -------------------------------------------------------------------
 
-var inventory_items: Array[ItemEntry]
+@export var inventory_items: Array[ItemEntry]
 var max_id: int = 0
 
 
