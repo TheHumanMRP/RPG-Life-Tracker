@@ -5,11 +5,11 @@ extends Control
 var number_of_inventory_slots: int = Global.number_of_inventory_slots
 
 func _ready() -> void:
-	refresh_inventory_slots()
+	recreate_inventory_slots()
 	SignalBus.refresh_ui.connect(refresh_inventory_slots)
 	SignalBus.inventory_changed.connect(refresh_inventory_slots)
 
-func refresh_inventory_slots() -> void:
+func recreate_inventory_slots() -> void:
 	# Clear the existing inventory slots
 	for child in h_box_container.get_children():
 		child.queue_free()
@@ -19,14 +19,14 @@ func refresh_inventory_slots() -> void:
 		var packed_inveotory_slot: PackedScene = load("res://Folders/Systems/Inventory_System/Scenes/inventory_slot.tscn")
 		var inventory_slot: InventorySlot = packed_inveotory_slot.instantiate()
 
+		inventory_slot.id = i
+
 		h_box_container.add_child(inventory_slot)
 
-func hello() -> void:
+func refresh_inventory_slots() -> void:
 	var inventory: Array[ItemEntry] = Global.get_inventory()
 	
 	for i in range(number_of_inventory_slots):
 		if i >= 0 and i < inventory.size():
 			if inventory[i] != null:
 				var new_item: ItemEntry = inventory[i]
-
-				
