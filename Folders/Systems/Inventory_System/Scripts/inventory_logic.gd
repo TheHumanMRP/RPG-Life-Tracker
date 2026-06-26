@@ -41,6 +41,9 @@ func calculate_max_id() -> void:
 
 	print("\nInventory Logic: Here's the inventory brother: ", inventory_items)
 
+	print("\nInventory Logic: Here's the inventory size brother: ", inventory_items.size())
+
+
 # -------------------------------------------------------------------
 # Inventory Operations
 # -------------------------------------------------------------------
