@@ -54,6 +54,7 @@ func add_item(new_item_entry: ItemEntry) -> void:
 
 	inventory_items.append(new_item_entry)
 
+	print("\nInventory Logic: Brother, the item: ", new_item_entry, " was added to the inventory.")
 	print("\nInventory Logic: ")
 
 	# Notify listeners that the inventory has changed.
