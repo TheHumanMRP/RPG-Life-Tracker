@@ -39,6 +39,8 @@ func set_inventory_slot_items() -> void:
 		
 		var new_item: ItemEntry = inventory[id]
 
+		
+
 	for i in range(number_of_inventory_slots):
 		if not (i >= 0 and i < inventory.size()):
 			return
