@@ -5,8 +5,8 @@ extends Resource
 # Inventory Data
 # -------------------------------------------------------------------
 
-@export var inventory_items: Array[ItemEntry]
-var max_id: int = 0
+@export var inventory_items: Array[ItemEntry] = []
+@export var max_id: int = 0
 
 
 # -------------------------------------------------------------------
@@ -30,7 +30,6 @@ func calculate_max_id() -> void:
 			max_id = item.item_id + 1
 
 func add_test_sword() -> void:
-
 	var test_item: Sword = Sword.new()
 
 	test_item.setup("Hello Brother", null)
