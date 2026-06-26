@@ -19,4 +19,6 @@ func refresh_inventory_slots() -> void:
 		var packed_inveotory_slot: PackedScene = load("res://Folders/Systems/Inventory_System/Scenes/inventory_slot.tscn")
 		var inventory_slot: Node = packed_inveotory_slot.instantiate()
 		
+		if Global.save_data.inventory_logic.inventory_items[i]
+
 		h_box_container.add_child(inventory_slot)
