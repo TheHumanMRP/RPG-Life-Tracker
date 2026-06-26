@@ -37,8 +37,9 @@ func refresh_inventory_slots() -> void:
 			
 		var new_item: ItemEntry = inventory[i]
 
-		for slot in inventory_slots.size()):
+		for slot in inventory_slots:
 			if not slot.id == i:
 				continue
+			
 			
 
