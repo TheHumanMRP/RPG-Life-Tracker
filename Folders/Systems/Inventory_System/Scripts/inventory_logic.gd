@@ -18,7 +18,7 @@ func _init() -> void:
 
 
 func testing_inventory() -> void:
-	clear_inventory()
+	add_test_sword()
 
 
 # -------------------------------------------------------------------
@@ -39,11 +39,11 @@ func add_test_sword() -> void:
 
 	test_item.setup("Hello Brother", null)
 
-	var test_iten_entry: ItemEntry = ItemEntry.new()
+	var test_item_entry: ItemEntry = ItemEntry.new()
 
-	test_iten_entry.setup(test_item, test_item.base_durability, null)
+	test_item_entry.setup(test_item, test_item.base_durability, null)
 
-	add_item(test_iten_entry)
+	add_item(test_item_entry)
 
 	print("\nInventory Logic: Here's the inventory brother: ", inventory_items)
 
