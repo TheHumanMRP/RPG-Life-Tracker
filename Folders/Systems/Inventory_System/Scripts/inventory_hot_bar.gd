@@ -22,8 +22,9 @@ func refresh_inventory_slots() -> void:
 		var inventory_slot: InventorySlot = packed_inveotory_slot.instantiate()
 		
 		# Global.get_inventory() returns the inventory, and this checks if the item at index i exists or not.
-		if Global.get_inventory()[i] != null:
-			var new_item: ItemEntry = Global.get_inventory()[i]
-			inventory_slot.item = Global.get_inventory()[i]2
+		if i >= 0 and i < inventory.size():
+			if Global.get_inventory()[i] != null:
+				var new_item: ItemEntry = 
+				inventory_slot.item = Global.get_inventory()[i]
 
 		h_box_container.add_child(inventory_slot)
