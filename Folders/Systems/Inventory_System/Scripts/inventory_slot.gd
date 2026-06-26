@@ -1,7 +1,11 @@
 extends Control
 class_name InventorySlot
 
-@export var item: ItemEntry
+@export var item: ItemEntry:
+	set(new_item):
+		item = new_item
+		refresh()
+
 @export var accepted_item_type: String = "base_item"
 
 @export var id: int
@@ -11,7 +15,6 @@ class_name InventorySlot
 func _ready() -> void:
 	check_type_of_item()
 	SignalBus.inventory_changed.connect(refresh)
-	
 	refresh()
 
 func refresh() -> void:
