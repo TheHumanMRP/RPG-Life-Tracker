@@ -19,8 +19,7 @@ func _init() -> void:
 
 func testing_inventory() -> void:
 	clear_inventory()
-	for i in range(9)
-
+	add_test_sword()
 
 # -------------------------------------------------------------------
 # ID Management
