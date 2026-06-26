@@ -8,7 +8,6 @@ extends Resource
 @export var inventory_items: Array[ItemEntry] = []
 @export var max_id: int = 0
 
-
 # -------------------------------------------------------------------
 # Initialization
 # -------------------------------------------------------------------
@@ -28,6 +27,7 @@ func calculate_max_id() -> void:
 	for item in inventory_items:
 		if item.item_id >= max_id:
 			max_id = item.item_id + 1
+
 
 func add_test_sword() -> void:
 	var test_item: Sword = Sword.new()
@@ -54,9 +54,6 @@ func add_item(new_item_entry: ItemEntry) -> void:
 	new_item_entry.item_id = max_id
 
 	inventory_items.append(new_item_entry)
-
-	print("\nInventory Logic: Brother, the item: ", new_item_entry, " was added to the inventory.")
-	print("\nInventory Logic: Here's the new item count: ", inventory_items.size())
 
 	# Notify listeners that the inventory has changed.
 	SignalBus.inventory_changed.emit(inventory_items)
