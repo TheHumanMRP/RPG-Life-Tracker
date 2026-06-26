@@ -18,4 +18,3 @@ func check_type_of_item() -> void:
 	if not accepted_item_type == "base_item":
 		if not item.type == accepted_item_type:
 			push_error("Inventory Slot: Invalid item type ")
-			item = BaseItem.new()
