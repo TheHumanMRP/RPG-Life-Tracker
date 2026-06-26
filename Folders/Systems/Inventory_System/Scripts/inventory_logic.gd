@@ -61,7 +61,7 @@ func add_item(new_item_entry: ItemEntry) -> void:
 	inventory_items.append(new_item_entry)
 
 	# Notify listeners that the inventory has changed.
-	SignalBus.inventory_changed.emit(inventory_items)
+	SignalBus.inventory_changed.emit()
 
 
 ## Removes an item with the specified ID from the inventory.
@@ -73,7 +73,7 @@ func remove_item(item_id: int) -> void:
 		inventory_items.pop_at(index)
 
 		# Notify listeners that the inventory has changed.
-		SignalBus.inventory_changed.emit(inventory_items)
+		SignalBus.inventory_changed.emit()
 
 		return
 
