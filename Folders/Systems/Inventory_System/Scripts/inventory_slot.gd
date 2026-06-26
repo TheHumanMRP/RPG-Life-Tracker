@@ -24,6 +24,8 @@ func refresh() -> void:
 	if not item.logo:
 		return
 
+	check_type_of_item()
+
 	display_logo.texture = item.logo
 
 func check_type_of_item() -> void:

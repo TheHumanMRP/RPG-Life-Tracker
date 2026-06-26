@@ -19,7 +19,7 @@ func _init() -> void:
 
 func testing_inventory() -> void:
 	clear_inventory()
-	add_test_sword()
+	for i in range(9)
 
 
 # -------------------------------------------------------------------
