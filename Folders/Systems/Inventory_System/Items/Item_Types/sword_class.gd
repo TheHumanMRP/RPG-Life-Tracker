@@ -6,10 +6,10 @@ var damage_power: int = 10
 func _init() -> void:
 	type = "sword"
 
-func setup(new_name: String, new_logo: Texture2D, new_in_game_durability: int = base_durability) -> void:
+func setup(new_name: String, new_logo: Texture2D, new_base_durability: int = base_durability) -> void:
 	name = new_name
 	logo = new_logo
-	in_game_durability = 
+	base_durability = new_base_durability
 
 func use(target) -> void:
 	if not target.has_method("take_damage"):
