@@ -29,6 +29,10 @@ func calculate_max_id() -> void:
 		if item.item_id >= max_id:
 			max_id = item.item_id + 1
 
+	var test_item : Sword = Sword.new()
+
+	test_item.setup("Hello Brother")
+
 	add_item()
 
 # -------------------------------------------------------------------
