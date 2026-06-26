@@ -2,20 +2,17 @@ extends Control
 
 @onready var h_box_container: HBoxContainer = $%Hot_Bar
 
+var number_of_inventory_slots: int = Global.number_of_inventory_slots
+
 func _ready() -> void:
 	refresh_inventory_slots()
 	SignalBus.refresh_ui.connect(refresh_inventory_slots)
 	SignalBus.inventory_changed.connect(refresh_inventory_slots)
 
 func refresh_inventory_slots() -> void:
-	# Get the var from the global script
-	var number_of_inventory_slots: int = Global.number_of_inventory_slots
-	
 	# Clear the existing inventory slots
 	for child in h_box_container.get_children():
 		child.queue_free()
-	
-	var inventory: Array[ItemEntry] = Global.get_inventory()
 
 	# Add all the item slots again
 	for i in range(number_of_inventory_slots):
@@ -23,3 +20,12 @@ func refresh_inventory_slots() -> void:
 		var inventory_slot: InventorySlot = packed_inveotory_slot.instantiate()
 
 		h_box_container.add_child(inventory_slot)
+
+func hello() -> void:
+	for i in range()
+	var inventory: Array[ItemEntry] = Global.get_inventory()
+		# Global.get_inventory() returns the inventory, and this checks if the item at index i exists or not.
+	if i >= 0 and i < inventory.size():
+		if inventory[i] != null:
+			var new_item: ItemEntry = inventory[i]
+			inventory_slot.item = new_item
