@@ -1,7 +1,7 @@
 extends Control
 
 @export var item: BaseItem
-@export var accepted_item_type: JavaClass = "base_item"
+@export var accepted_item_type: JavaClass = BaseItem
 
 @onready var display_logo: TextureRect = $%Logo_Display
 
