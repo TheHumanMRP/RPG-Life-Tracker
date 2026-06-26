@@ -35,7 +35,7 @@ func calculate_max_id() -> void:
 
 	var test_iten_entry: ItemEntry = ItemEntry.new()
 
-	test_iten_entry.setup(test_item, test_item.)
+	test_iten_entry.setup(test_item, test_item.base_durability)
 
 	add_item()
 

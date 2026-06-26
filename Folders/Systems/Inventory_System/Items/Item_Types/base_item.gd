@@ -6,7 +6,7 @@ class_name BaseItem
 @export var name: String = "base_item" # Should only be used for ui, not in any way for andy logic
 @export var type: String = "base_item" # Used to make sure that only the correct item gets accepted into the inventory slot
 									   # basically oor filteration purpose
-@export var 
+@export var base_durability: float = 100.0
 @export var logo: Texture2D # Should and can be only used for display purposes
 
 
