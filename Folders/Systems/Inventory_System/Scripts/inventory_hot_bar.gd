@@ -41,5 +41,4 @@ func refresh_inventory_slots() -> void:
 			if not slot.id == i:
 				continue
 			
-			
-
+			slot.item = new_item
