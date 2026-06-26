@@ -14,6 +14,11 @@ extends Resource
 
 func _init() -> void:
 	call_deferred("calculate_max_id")
+	call_deferred("")
+
+
+func testing() -> void:
+	pass
 
 
 # -------------------------------------------------------------------
