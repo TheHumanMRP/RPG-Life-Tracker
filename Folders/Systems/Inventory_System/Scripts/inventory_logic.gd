@@ -6,7 +6,7 @@ extends Resource
 # -------------------------------------------------------------------
 
 @export var inventory_items: Array[ItemEntry] = []
-@export var hotbar_
+@export var hotbar_slots: Array[int] = []
 @export var max_id: int = 0
 
 # -------------------------------------------------------------------
@@ -23,6 +23,10 @@ func testing_inventory() -> void:
 	for i in range(2):
 		add_test_sword()
 	
+
+func setup_hotbar_slots() -> void:
+	
+
 
 # -------------------------------------------------------------------
 # ID Management
@@ -56,6 +60,9 @@ func add_test_sword() -> void:
 # -------------------------------------------------------------------
 # Inventory Operations
 # -------------------------------------------------------------------
+
+func add_item_to_hotbar(item: ItemEntry, slot: int) -> void:
+	pass
 
 ## Adds a new item to the inventory and assigns it a unique ID.
 func add_item(new_item_entry: ItemEntry) -> void:
