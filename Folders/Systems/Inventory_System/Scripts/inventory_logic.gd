@@ -21,8 +21,6 @@ func testing_inventory() -> void:
 	clear_inventory()
 	for i in range(2):
 		add_test_sword()
-	
-	signal
 
 
 # -------------------------------------------------------------------
