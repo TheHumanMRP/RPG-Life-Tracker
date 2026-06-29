@@ -61,7 +61,7 @@ func set_inventory_slot_items() -> void:
 
 		# Prevent out-of-bounds inventory access.
 		if not (id >= 0 and id < inventory.size()):
-			return
+			continue
 
 		# Skip empty inventory slots.
 		if inventory[id] == null:
