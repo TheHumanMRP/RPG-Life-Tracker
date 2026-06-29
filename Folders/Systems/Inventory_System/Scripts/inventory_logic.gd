@@ -6,6 +6,7 @@ extends Resource
 # -------------------------------------------------------------------
 
 @export var inventory_items: Array[ItemEntry] = []
+@export var hotbar_
 @export var max_id: int = 0
 
 # -------------------------------------------------------------------
