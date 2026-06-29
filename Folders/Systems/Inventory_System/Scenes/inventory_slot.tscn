@@ -3,17 +3,8 @@
 [ext_resource type="Script" uid="uid://bkvmj0hs40ess" path="res://Folders/Systems/Inventory_System/Scripts/inventory_slot.gd" id="1_idi7c"]
 
 [node name="Inventory_Slot" type="PanelContainer" unique_id=844703346]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -60.0
-offset_top = -31.5
-offset_right = 60.0
-offset_bottom = 31.5
-grow_horizontal = 2
-grow_vertical = 2
+offset_right = 120.0
+offset_bottom = 63.0
 script = ExtResource("1_idi7c")
 accepted_item_type = null
 
