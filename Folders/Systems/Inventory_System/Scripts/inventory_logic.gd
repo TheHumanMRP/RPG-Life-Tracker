@@ -24,7 +24,7 @@ func _setup() -> void:
 	testing_inventory()
 
 func testing_inventory() -> void:
-	clear_inventory()
+	# clear_inventory()
 	for i in range(2):
 		add_test_sword()
 
