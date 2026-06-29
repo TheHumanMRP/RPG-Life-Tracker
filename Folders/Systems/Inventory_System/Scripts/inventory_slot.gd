@@ -13,6 +13,7 @@ class_name InventorySlot
 @onready var display_logo: TextureRect = $%Logo_Display
 
 func _ready() -> void:
+	display_logo.texture = null
 	check_type_of_item()
 	SignalBus.inventory_changed.connect(refresh)
 	refresh()
