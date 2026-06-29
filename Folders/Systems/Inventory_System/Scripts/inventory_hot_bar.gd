@@ -57,7 +57,11 @@ func set_inventory_slot_items() -> void:
 	var inventory_slots: Array = h_box_container.get_children()
 
 	for item in inventory:
-		print(item)
+		print(
+			item,
+			" | item = ", item.item,
+			" | logo = ", item.logo
+		)
 
 	for slot in inventory_slots:
 		var id: int = slot.id
