@@ -18,8 +18,9 @@ func _init() -> void:
 
 
 func testing_inventory() -> void:
-	for i in range(2):
-		add_test_sword()
+	pass
+	# for i in range(2):
+	# 	add_test_sword()
 
 
 # -------------------------------------------------------------------
