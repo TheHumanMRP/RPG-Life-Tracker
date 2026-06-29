@@ -68,7 +68,10 @@ func add_test_sword() -> void:
 
 func add_item_to_hotbar(item: ItemEntry, slot: int) -> void:
 	if check_if_slot_empty(slot):
-		push_error("Slot not empty: ", slot)
+		push_error("Inventory Logic: Slot not empty to place item in: ", slot)
+		return
+	
+	hotbar_slots[slot] = item.item_id
 
 ## Adds a new item to the inventory and assigns it a unique ID.
 func add_item(new_item_entry: ItemEntry) -> void:
