@@ -25,7 +25,10 @@ func testing_inventory() -> void:
 	
 
 func setup_hotbar_slots() -> void:
-	
+	hotbar_slots.clear()
+
+	for _ in range(9):
+		hotbar_slots.append(n)
 
 
 # -------------------------------------------------------------------
