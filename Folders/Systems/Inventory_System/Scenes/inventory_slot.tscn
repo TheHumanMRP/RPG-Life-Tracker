@@ -24,6 +24,12 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
+[node name="Label" type="Label" parent="MarginContainer" unique_id=569201814]
+z_index = 2
+layout_mode = 2
+text = "1"
+
 [node name="Logo_Display" type="TextureRect" parent="MarginContainer" unique_id=1196303866]
 unique_name_in_owner = true
+z_index = 1
 layout_mode = 2

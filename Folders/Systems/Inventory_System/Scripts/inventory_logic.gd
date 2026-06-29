@@ -19,9 +19,9 @@ func _init() -> void:
 
 func testing_inventory() -> void:
 	print("\nInventory Logic: Here's the inventory size brother, ", inventory_items.size())
-	pass
-	# for i in range(2):
-	# 	add_test_sword()
+	clear_inventory()
+	for i in range(2):
+		add_test_sword()
 
 
 # -------------------------------------------------------------------
