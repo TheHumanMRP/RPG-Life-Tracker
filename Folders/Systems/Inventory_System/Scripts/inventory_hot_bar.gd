@@ -14,7 +14,7 @@ func recreate_inventory_slots() -> void:
 	for child in h_box_container.get_children():
 		child.queue_free()
 
-	var id: int = 1
+	var id: int = 0
 
 	# Add all the item slots again
 	for i in range(number_of_inventory_slots):
