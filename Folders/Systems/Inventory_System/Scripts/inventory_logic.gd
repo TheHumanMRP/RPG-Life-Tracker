@@ -22,8 +22,8 @@ func testing_inventory() -> void:
 	for i in range(2):
 		add_test_sword()
 	
-	SignalBus.refresh_ui.emit()
-	SignalBus.inventory_changed.emit()
+	# SignalBus.refresh_ui.emit()
+	# SignalBus.inventory_changed.emit()
 	
 
 # -------------------------------------------------------------------
