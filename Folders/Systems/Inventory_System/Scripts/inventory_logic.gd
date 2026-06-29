@@ -17,14 +17,16 @@ const EMPTY_HOTBAR_ARRAY: int = -1
 
 func _init() -> void:
 	call_deferred("calculate_max_id")
+	call_deferred("setup_hotbar_slots")
 	call_deferred("testing_inventory")
 
 
 func testing_inventory() -> void:
-	clear_inventory()
-	for i in range(2):
-		add_test_sword()
+	# clear_inventory()
+	# for i in range(2):
+	# 	add_test_sword()
 	
+	pass
 
 func setup_hotbar_slots() -> void:
 	hotbar_slots.clear()
