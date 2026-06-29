@@ -124,3 +124,7 @@ func get_iten_by_id(item_id: int) -> ItemEntry:
 	
 	push_error("Item not found with item_id: ", item_id)
 	return
+
+func check_if_slot_empty(slot: int) -> bool:
+	if hotbar_slots[slot] == EMPTY_HOTBAR_ARRAY:
+		pass
