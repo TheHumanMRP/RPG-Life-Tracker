@@ -9,6 +9,8 @@ extends Resource
 @export var hotbar_slots: Array[int] = []
 @export var max_id: int = 0
 
+const EMPTY_HOTBAR_ARRAY: int = -1
+
 # -------------------------------------------------------------------
 # Initialization
 # -------------------------------------------------------------------
@@ -28,7 +30,7 @@ func setup_hotbar_slots() -> void:
 	hotbar_slots.clear()
 
 	for i in range(9):
-		hotbar_slots.append(null)
+		hotbar_slots.append(EMPTY_HOTBAR_ARRAY)
 
 
 # -------------------------------------------------------------------
