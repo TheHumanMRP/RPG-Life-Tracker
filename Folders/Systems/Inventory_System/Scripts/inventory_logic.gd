@@ -67,7 +67,8 @@ func add_test_sword() -> void:
 # -------------------------------------------------------------------
 
 func add_item_to_hotbar(item: ItemEntry, slot: int) -> void:
-	pass
+	if check_if_slot_empty(slot):
+		push_error("Slot not empty: ", slot)
 
 ## Adds a new item to the inventory and assigns it a unique ID.
 func add_item(new_item_entry: ItemEntry) -> void:
@@ -127,4 +128,6 @@ func get_iten_by_id(item_id: int) -> ItemEntry:
 
 func check_if_slot_empty(slot: int) -> bool:
 	if hotbar_slots[slot] == EMPTY_HOTBAR_ARRAY:
-		pass
+		return true
+	
+	return false
