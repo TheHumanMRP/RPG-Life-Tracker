@@ -21,7 +21,7 @@ func setup() -> void:
 	check_type_of_item()
 	refresh()
 
-	item = Global.get_hotbar()[1]
+	item = Global.get_inventory()[id]
 
 func refresh() -> void:
 	print("Inventory Slot: Refresh called")
