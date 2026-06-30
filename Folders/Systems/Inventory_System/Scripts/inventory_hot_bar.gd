@@ -6,6 +6,7 @@ extends Control
 
 var number_of_inventory_slots: int = Global.number_of_inventory_slots
 
+var slot_item_id: int
 
 func _ready() -> void:
 	recreate_inventory_slots()
@@ -13,9 +14,6 @@ func _ready() -> void:
 	SignalBus.refresh_ui.connect(set_inventory_slot_items)
 	SignalBus.inventory_changed.connect(set_inventory_slot_items)
 
-
-func check_if_mouse_hovering() -> bool:
-	
 
 func recreate_inventory_slots() -> void:
 	# Remove old slots before recreating them.
