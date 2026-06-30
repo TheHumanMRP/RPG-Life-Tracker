@@ -3,11 +3,13 @@ class_name InventorySlot
 
 @export var accepted_item_type: String = "base_item"
 
-@export var inventory_item_id: int
+@export var id: int
 
 @onready var display_logo: TextureRect = $%Logo_Display
 
 const EMPTY_SLOT: int = -1
+
+var item: ItemEntry
 
 func _ready() -> void:
 	setup()
@@ -15,8 +17,11 @@ func _ready() -> void:
 func setup() -> void:
 	display_logo.texture = null
 	SignalBus.inventory_changed.connect(refresh)
+	
 	check_type_of_item()
 	refresh()
+
+	item = Global.get_hotbar()[1]
 
 func refresh() -> void:
 	print("Inventory Slot: Refresh called")
