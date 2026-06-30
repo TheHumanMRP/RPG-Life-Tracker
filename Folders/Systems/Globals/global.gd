@@ -8,6 +8,9 @@ var number_of_inventory_slots: int = 9
 func get_inventory() -> Array[ItemEntry]:
 	return save_data.inventory_logic.inventory_items
 
+func get_hotbar() -> Array[int]:
+	return save_data.inventory_logic.hotbar_slots
+
 # ============================================================================
 # SAVE SETTINGS
 # ============================================================================
