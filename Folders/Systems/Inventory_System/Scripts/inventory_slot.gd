@@ -15,12 +15,13 @@ class_name InventorySlot
 const EMPTY_SLOT: int = -1
 
 func _ready() -> void:
+	setup()
+
+func setup() -> void:
 	display_logo.texture = null
 	SignalBus.inventory_changed.connect(refresh)
 	check_type_of_item()
 	refresh()
-
-func setup
 
 func refresh() -> void:
 	print("Inventory Slot: Refresh called")
@@ -36,6 +37,8 @@ func refresh() -> void:
 	display_logo.texture = item.logo
 
 func check_type_of_item() -> void:
-	if not accepted_item_type == "base_item":
-		if not item.type == accepted_item_type:
-			push_error("Inventory Slot: Invalid item type ")
+	if accepted_item_type == "base_item":
+		return
+	
+	if item.type == accepted_item_type:
+		push_error("Inventory Slot: Invalid item type ")
