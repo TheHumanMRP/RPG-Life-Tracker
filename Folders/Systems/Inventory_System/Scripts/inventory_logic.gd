@@ -9,7 +9,7 @@ extends Resource
 @export var hotbar_slots: Array[int] = []
 @export var max_id: int = 0
 
-const EMPTY_HOTBAR_ARRAY: int = -1
+const EMPTY_HOTBAR_SLOT: int = -1
 
 # -------------------------------------------------------------------
 # Initialization
@@ -33,7 +33,7 @@ func setup_hotbar_slots() -> void:
 	hotbar_slots.clear()
 
 	for i in range(9):
-		hotbar_slots.append(EMPTY_HOTBAR_ARRAY)
+		hotbar_slots.append(EMPTY_HOTBAR_SLOT)
 
 
 # -------------------------------------------------------------------
@@ -133,7 +133,7 @@ func get_iten_by_id(item_id: int) -> ItemEntry:
 	return
 
 func check_if_slot_empty(slot: int) -> bool:
-	if hotbar_slots[slot] == EMPTY_HOTBAR_ARRAY:
+	if hotbar_slots[slot] == EMPTY_HOTBAR_SLOT:
 		return true
 	
 	return false
