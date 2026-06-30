@@ -1,6 +1,6 @@
 extends Control
 
-# Handles the inventory hotbar UI.
+## Handles the inventory hotbar UI.
 
 @onready var h_box_container: HBoxContainer = $%Hot_Bar
 
@@ -13,6 +13,9 @@ func _ready() -> void:
 	SignalBus.refresh_ui.connect(set_inventory_slot_items)
 	SignalBus.inventory_changed.connect(set_inventory_slot_items)
 
+
+func check_if_mouse_hovering() -> bool:
+	
 
 func recreate_inventory_slots() -> void:
 	# Remove old slots before recreating them.
