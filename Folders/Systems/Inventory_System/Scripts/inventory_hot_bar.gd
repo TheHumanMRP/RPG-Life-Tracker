@@ -6,8 +6,6 @@ extends Control
 
 var number_of_inventory_slots: int = Global.number_of_inventory_slots
 
-var slot_item_id: int
-
 func _ready() -> void:
 	recreate_inventory_slots()
 

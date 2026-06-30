@@ -21,6 +21,8 @@ func _ready() -> void:
 func refresh() -> void:
 	print("Inventory Slot: Refresh called")
 
+	
+
 	if not item:
 		return
 	
