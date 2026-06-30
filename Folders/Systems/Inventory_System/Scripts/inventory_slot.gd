@@ -1,14 +1,9 @@
 extends Control
 class_name InventorySlot
 
-@export var item: ItemEntry:
-	set(new_item):
-		item = new_item
-		refresh()
-
 @export var accepted_item_type: String = "base_item"
 
-@export var id: int
+@export var inventory_item_id: int
 
 @onready var display_logo: TextureRect = $%Logo_Display
 
@@ -41,4 +36,6 @@ func check_type_of_item() -> void:
 		return
 	
 	if item.type == accepted_item_type:
-		push_error("Inventory Slot: Invalid item type ")
+		return
+	
+	push_error("Inventory Slot: Invalid item type ")
