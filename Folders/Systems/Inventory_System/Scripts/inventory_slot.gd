@@ -21,7 +21,7 @@ func _ready() -> void:
 func refresh() -> void:
 	print("Inventory Slot: Refresh called")
 
-	
+	if id < 0 or id > 
 
 	if not item:
 		return
