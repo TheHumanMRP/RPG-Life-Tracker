@@ -24,7 +24,7 @@ func _setup() -> void:
 	testing_inventory()
 
 func testing_inventory() -> void:
-	
+	add_item_to_hotbar(0, 1)
 
 func setup_hotbar_slots() -> void:
 	hotbar_slots.clear()
@@ -66,12 +66,12 @@ func add_test_sword() -> void:
 # Inventory Operations
 # -------------------------------------------------------------------
 
-func add_item_to_hotbar(item: ItemEntry, slot: int) -> void:
+func add_item_to_hotbar(item_id: int, slot: int) -> void:
 	if check_if_slot_empty(slot):
 		push_error("Inventory Logic: Slot not empty to place item in: ", slot)
 		return
 	
-	hotbar_slots[slot] = item.item_id
+	hotbar_slots[slot] = item_id
 
 ## Adds a new item to the inventory and assigns it a unique ID.
 func add_item(new_item_entry: ItemEntry) -> void:
