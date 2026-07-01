@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://svisxss24oxa"]
 
-[ext_resource type="PackedScene" uid="uid://dc28u3ylx6ryd" path="res://Folders/Systems/Inventory_System/Scenes/inventory_hot_bar.tscn" id="1_ewtii"]
+[ext_resource type="PackedScene" uid="uid://dc28u3ylx6ryd" path="res://Folders/Systems/Inventory_System/Scenes/hotbar_ui.tscn" id="1_ewtii"]
 
 [node name="Inventory_UI_Layer" type="CanvasLayer" unique_id=445007278]
 

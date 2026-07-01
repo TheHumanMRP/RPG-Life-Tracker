@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dc28u3ylx6ryd"]
 
-[ext_resource type="Script" uid="uid://b3mikwkv45ua3" path="res://Folders/Systems/Inventory_System/Scripts/inventory_hot_bar.gd" id="1_qjpuj"]
+[ext_resource type="Script" path="res://Folders/Systems/Inventory_System/Scripts/inventory_hot_bar.gd" id="1_qjpuj"]
 
 [node name="InventoryHotBar" type="Control" unique_id=1133281896]
 layout_mode = 3
