@@ -34,4 +34,4 @@ func set_inventory_slot_items() -> void:
 
 	var hotbar: Array = hotbar.get_children()
 
-	for slot in hotbar_slots:
+	for i in range(Global.)
