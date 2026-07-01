@@ -3,7 +3,7 @@ extends Node
 # ============================================================================
 # INVENTORY SETTINGS
 # ============================================================================
-var number_of_inventory_slots: int = 9
+var number_of_hotbar_slots: int = 9
 
 func get_inventory_logic() -> InventoryLogicComponent:
 	return save_data.inventory_logic

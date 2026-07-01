@@ -4,7 +4,7 @@ extends Control
 
 @onready var hotbar: HBoxContainer = $%Hot_Bar
 
-var number_of_inventory_slots: int = Global.number_of_inventory_slots
+var number_of_hotbar_slots: int = Global.number_of_inventory_slots
 
 func _ready() -> void:
 	recreate_inventory_slots()
@@ -15,7 +15,7 @@ func _ready() -> void:
 
 func recreate_inventory_slots() -> void:
 	# Remove old slots before recreating them.
-	for child in h_box_container.get_children():
+	for child in hotbar.get_children():
 		child.queue_free()
 
 	var packed_inventory_slot: PackedScene = load("res://Folders/Systems/Inventory_System/Scenes/inventory_slot.tscn")
@@ -34,4 +34,5 @@ func set_inventory_slot_items() -> void:
 
 	var hotbar: Array = hotbar.get_children()
 
-	for i in range(Global.)
+	for i in range(number_of_hotbar_slots):
+		pass
