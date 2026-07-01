@@ -6,7 +6,7 @@ extends Resource
 @export var create_file: bool
 
 
-func _init(new_save_path = "user://gamedata/save_data.tres", new_create_file: bool = true) -> void:
+func _init(new_save_path = get_save_file_path(), new_create_file: bool = true) -> void:
 	save_path = new_save_path
 	create_file = new_create_file
 
