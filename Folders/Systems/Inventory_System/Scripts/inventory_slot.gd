@@ -3,7 +3,7 @@ class_name InventorySlot
 
 @export var accepted_item_type: String = "base_item"
 
-@export var id: int
+@export var item_id: int
 
 @onready var display_logo: TextureRect = $%Logo_Display
 
@@ -32,6 +32,7 @@ func check_id() -> void:
 	if id == EMPTY_SLOT:
 		return
 
+	push_error("Inventory Slot: Invalid item id: ", id)
 
 
 func refresh() -> void:
