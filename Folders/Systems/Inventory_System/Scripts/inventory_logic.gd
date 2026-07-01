@@ -15,12 +15,6 @@ const EMPTY_HOTBAR_SLOT: int = -1
 
 @export var inventory_items: Array[ItemEntry] = []
 
-@export var hotbar_slots: Array[int] = [
-	-1, -1, -1, -1,
-	-1, -1, -1, -1,
-	-1
-]
-
 @export var max_id: int = 0
 
 
@@ -34,7 +28,6 @@ func _init() -> void:
 
 func _setup() -> void:
 	calculate_max_id()
-	reset_hotbar_slots()
 
 	# Temporary testing
 	testing_inventory()
@@ -46,13 +39,6 @@ func testing_inventory() -> void:
 	clear_inventory()
 	add_test_sword()
 	add_item_to_hotbar(0, 4)
-
-
-func reset_hotbar_slots() -> void:
-	hotbar_slots.clear()
-
-	while hotbar_slots.size() < Global.number_of_hotbar_slots:
-		hotbar_slots.append(EMPTY_HOTBAR_SLOT)
 
 
 # ===================================================================
@@ -111,8 +97,6 @@ func use_item(item_id: int, target) -> void:
 ## Removes every item from the inventory.
 func clear_inventory() -> void:
 	inventory_items.clear()
-
-	reset_hotbar_slots()
 
 	max_id = 0
 
