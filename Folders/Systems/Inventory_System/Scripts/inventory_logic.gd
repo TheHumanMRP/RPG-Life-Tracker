@@ -119,6 +119,8 @@ func use_item(item_id: int, target) -> void:
 
 func clear_inventory() -> void:
 	inventory_items.clear()
+	
+	setup_hotbar_slots()
 
 	max_id = 0
 
