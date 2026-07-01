@@ -35,4 +35,4 @@ func set_inventory_slot_items() -> void:
 	var hotbar: Array = hotbar.get_children()
 
 	for i in range(number_of_hotbar_slots):
-		hotbar[i].item_id 
+		hotbar[i].item_id = hotbar_slots[i]
