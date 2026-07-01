@@ -42,7 +42,7 @@ func set_inventory_slot_items() -> void:
 		)
 
 	for slot in inventory_slots:
-		var id: int = slot.id
+		var id: int = slot.item_id
 
 		# Skip invalid or empty inventory slots.
 		if id < 0 or id >= inventory.size():
