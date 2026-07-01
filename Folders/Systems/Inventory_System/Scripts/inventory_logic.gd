@@ -135,3 +135,7 @@ func check_if_slot_empty(slot: int) -> bool:
 		return true
 	
 	return false
+
+func print_all_items() -> void:
+	for item in inventory_items:
+		item.print_self()
