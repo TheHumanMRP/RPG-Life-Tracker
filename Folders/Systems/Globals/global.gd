@@ -12,7 +12,7 @@ func get_inventory() -> Array[ItemEntry]:
 	return save_data.inventory_logic.inventory_items
 
 func get_hotbar() -> Array[int]:
-	return save_data.inventory_logic.hotbar_slots
+	return save_data.hotbar_logic.hotbar_slots
 
 # ============================================================================
 # SAVE SETTINGS
