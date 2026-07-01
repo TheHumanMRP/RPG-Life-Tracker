@@ -38,7 +38,6 @@ func testing_inventory() -> void:
 
 	clear_inventory()
 	add_test_sword()
-	add_item_to_hotbar(0, 4)
 
 
 # ===================================================================
@@ -106,21 +105,6 @@ func clear_inventory() -> void:
 # ===================================================================
 # Hotbar Operations
 # ===================================================================
-
-## Places an item into a hotbar slot.
-func add_item_to_hotbar(item_id: int, slot: int) -> void:
-	if not check_if_slot_empty(slot):
-		push_error("InventoryLogic: Hotbar slot already occupied: ", slot)
-		return
-
-	hotbar_slots[slot] = item_id
-
-	SignalBus.inventory_changed.emit()
-
-
-## Returns true if the slot is empty.
-func check_if_slot_empty(slot: int) -> bool:
-	return hotbar_slots[slot] == EMPTY_HOTBAR_SLOT
 
 
 # ===================================================================
