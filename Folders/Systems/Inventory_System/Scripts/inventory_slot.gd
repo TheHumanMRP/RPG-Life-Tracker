@@ -36,7 +36,7 @@ func assaign_item() -> void:
 func check_id() -> void:
 	var inventory_items: Array[ItemEntry] = Global.get_inventory()
 
-	if item_id >= 0 and item_id <= inventory_items.size():
+	if item_id >= 0 and item_id < inventory_items.size():
 		return
 	
 	if item_id == EMPTY_SLOT:
