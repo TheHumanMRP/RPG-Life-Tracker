@@ -4,7 +4,7 @@ extends Control
 
 @onready var hotbar: HBoxContainer = $%Hot_Bar
 
-var number_of_hotbar_slots: int = Global.number_of_inventory_slots
+var number_of_hotbar_slots: int = Global.number_of_hotbar_slots
 
 func _ready() -> void:
 	recreate_inventory_slots()
@@ -22,11 +22,11 @@ func recreate_inventory_slots() -> void:
 
 	var inventory_hot_bar_slots: Array[int] = Global.get_hotbar()
 
-	for i in range(number_of_inventory_slots):
+	for i in range(number_of_hotbar_slots):
 		var inventory_slot: InventorySlot = packed_inventory_slot.instantiate()
 		inventory_slot.item_id = inventory_hot_bar_slots[i]
 
-		h_box_container.add_child(inventory_slot)
+		hotbar.add_child(inventory_slot)
 
 
 func set_inventory_slot_items() -> void:
@@ -35,4 +35,4 @@ func set_inventory_slot_items() -> void:
 	var hotbar: Array = hotbar.get_children()
 
 	for i in range(number_of_hotbar_slots):
-		pass
+		hotbar[i].item_id 
