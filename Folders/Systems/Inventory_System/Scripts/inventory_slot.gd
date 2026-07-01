@@ -23,7 +23,12 @@ func setup() -> void:
 
 	item = Global.get_inventory()[item_id]
 
-func check_id_and_assaign_item() -> void:
+func assaign_item() -> void:
+	check_id()
+
+	item = Global.get_inventory()
+
+func check_id() -> void:
 	var inventory_items: Array[ItemEntry] = Global.get_inventory()
 
 	if item_id >= 0 and item_id <= inventory_items.size():
