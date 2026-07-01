@@ -6,8 +6,12 @@ extends Resource
 @export var create_file: bool
 
 
-func _init(new_save_path = get_save_file_path(), new_create_file: bool = true) -> void:
-	save_path = new_save_path
+func _init(new_save_path: String = "", new_create_file: bool = true) -> void:
+	if new_save_path:
+		save_path = new_save_path
+	else:
+		save_path = get_save_file_path()
+
 	create_file = new_create_file
 
 func get_save_file_path() -> String:
