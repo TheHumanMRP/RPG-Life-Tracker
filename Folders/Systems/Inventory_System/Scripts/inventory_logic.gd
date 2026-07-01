@@ -6,7 +6,7 @@ extends Resource
 # -------------------------------------------------------------------
 
 @export var inventory_items: Array[ItemEntry] = []
-@export var hotbar_slots: Array[int] = [-1, -1, -1, -1 -1 -1, -1, -1, -1]
+@export var hotbar_slots: Array[int] = [-1, -1, -1, -1 - 1 - 1, -1, -1, -1]
 @export var max_id: int = 0
 
 const EMPTY_HOTBAR_SLOT: int = -1
@@ -119,6 +119,9 @@ func use_item(item_id: int, target) -> void:
 
 func clear_inventory() -> void:
 	inventory_items.clear()
+
+	max_id = 0
+
 	SignalBus.inventory_changed.emit()
 
 func get_iten_by_id(item_id: int) -> ItemEntry:
