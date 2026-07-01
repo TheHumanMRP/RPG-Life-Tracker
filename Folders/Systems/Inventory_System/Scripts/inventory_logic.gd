@@ -59,10 +59,6 @@ func add_test_sword() -> void:
 
 	add_item(test_item_entry)
 
-	print("\nInventory Logic: Here's the inventory brother: ", inventory_items)
-
-	print("\nInventory Logic: Here's the inventory size brother: ", inventory_items.size())
-
 
 # -------------------------------------------------------------------
 # Inventory Operations
@@ -130,7 +126,7 @@ func get_iten_by_id(item_id: int) -> ItemEntry:
 		
 		return item
 	
-	print("Inventory Logic: Debug for item not found error: ", inventory_items.size())
+	print("\nInventory Logic: Debug for item not found error: ", inventory_items.size())
 	push_error("Inventory Logic: Item not found with item_id: ", item_id, " Check the debug print for more detail.")
 	return
 
