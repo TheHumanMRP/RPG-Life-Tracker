@@ -2,7 +2,7 @@ extends Control
 
 ## Handles the inventory hotbar UI.
 
-@onready var h_box_container: HBoxContainer = $%Hot_Bar
+@onready var hotbar: HBoxContainer = $%Hot_Bar
 
 var number_of_inventory_slots: int = Global.number_of_inventory_slots
 
@@ -32,4 +32,6 @@ func recreate_inventory_slots() -> void:
 func set_inventory_slot_items() -> void:
 	var hotbar_slots: Array[int] = Global.get_hotbar()
 
-	for 
+	var hotbar: Array = hotbar.get_children()
+
+	for slot in hotbar_slots:
