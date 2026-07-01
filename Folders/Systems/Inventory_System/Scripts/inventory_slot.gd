@@ -24,7 +24,9 @@ func setup() -> void:
 	item = Global.get_inventory()[id]
 
 func check_id() -> void:
-	if not id <= 0 
+	var inventory_items : Array[int]
+
+	if not id <= 0 or Global.get_inventory().
 	
 	if id == EMPTY_SLOT:
 
