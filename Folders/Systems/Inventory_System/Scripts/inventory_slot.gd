@@ -24,13 +24,11 @@ func setup() -> void:
 	item = Global.get_inventory()[id]
 
 func check_id() -> void:
-	var inventory_items : Array[int]
+	var inventory_items: Array[ItemEntry] = Global.get_inventory().inventory_items
 
-	if not id <= 0 or Global.get_inventory().
+	if not id <= 0 or id > inventory_items.size()
 	
 	if id == EMPTY_SLOT:
-
-
 func refresh() -> void:
 	print("Inventory Slot: Refresh called")
 
