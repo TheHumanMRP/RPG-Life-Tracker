@@ -21,18 +21,18 @@ func setup() -> void:
 	check_type_of_item()
 	refresh()
 
-	item = Global.get_inventory()[id]
+	item = Global.get_inventory()[item_id]
 
 func check_id() -> void:
 	var inventory_items: Array[ItemEntry] = Global.get_inventory()
 
-	if id >= 0 and id <= inventory_items.size():
+	if item_id >= 0 and item_id <= inventory_items.size():
 		return
 	
-	if id == EMPTY_SLOT:
+	if item_id == EMPTY_SLOT:
 		return
 
-	push_error("Inventory Slot: Invalid item id: ", id)
+	push_error("Inventory Slot: Invalid item id: ", item_id)
 
 
 func refresh() -> void:
