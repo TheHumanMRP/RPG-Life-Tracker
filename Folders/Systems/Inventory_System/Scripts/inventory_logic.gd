@@ -24,6 +24,8 @@ func _setup() -> void:
 	testing_inventory()
 
 func testing_inventory() -> void:
+	clear_inventory()
+	add_test_sword()
 	add_item_to_hotbar(0, 1)
 
 func setup_hotbar_slots() -> void:
