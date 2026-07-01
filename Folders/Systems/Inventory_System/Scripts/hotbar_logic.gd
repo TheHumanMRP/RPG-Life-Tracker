@@ -37,12 +37,12 @@ func reset_hotbar_slots() -> void:
 # ============================================================================
 
 ## Places an item into the specified hotbar slot.
-func add_item_to_hotbar(item_id: int, slot: int) -> void:
-	if not check_if_slot_empty(slot):
-		push_error("HotBarLogic: Hotbar slot already occupied: ", slot)
+func add_item_to_hotbar(item_id: int, slot_index: int) -> void:
+	if not check_if_slot_empty(slot_index):
+		push_error("HotBarLogic: Hotbar slot already occupied: ", slot_index)
 		return
 
-	hotbar_slots[slot] = item_id
+	hotbar_slots[slot_index] = item_id
 
 	SignalBus.inventory_changed.emit()
 
