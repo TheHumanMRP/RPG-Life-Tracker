@@ -33,9 +33,9 @@ func testing_inventory() -> void:
 func reset_hotbar_slots() -> void:
 	hotbar_slots.clear()
 
-	var number_of_hotbar_slots : int = Global
+	var number_of_hotbar_slots: int = Global.number_of_hotbar_slots
 
-	for i in range(9):
+	while hotbar_slots.size() < number_of_hotbar_slots:
 		hotbar_slots.append(EMPTY_HOTBAR_SLOT)
 
 
