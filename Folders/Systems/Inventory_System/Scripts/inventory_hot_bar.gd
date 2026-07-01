@@ -22,7 +22,7 @@ func recreate_inventory_slots() -> void:
 
 	for id in range(number_of_inventory_slots):
 		var inventory_slot: InventorySlot = packed_inventory_slot.instantiate()
-		inventory_slot.id = id
+		inventory_slot.item_id = id
 
 		h_box_container.add_child(inventory_slot)
 
