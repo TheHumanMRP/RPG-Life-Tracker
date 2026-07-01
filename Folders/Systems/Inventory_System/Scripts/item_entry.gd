@@ -15,4 +15,7 @@ func use_item(target) -> void:
 	item.use(target)
 
 func print_self() -> void:
-	print("\n-----ItemEntry [", item.name, "]")
+	print("\n-----ItemEntry [", item.name, "]-----")
+	print("1. Name: ", item.name)
+	print("2. Durability: ", durability)
+	print("3. Item ID: ", item_id)
