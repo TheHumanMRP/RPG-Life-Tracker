@@ -16,10 +16,10 @@ func _ready() -> void:
 
 func setup() -> void:
 	display_logo.texture = null
-	SignalBus.inventory_changed.connect(refresh)
+	SignalBus.inventory_changed.connect(refresh_logo)
 	
 	check_type_of_item()
-	refresh()
+	refresh_logo()
 
 	assaign_item()
 
@@ -45,7 +45,7 @@ func check_id() -> void:
 	push_error("Inventory Slot: Invalid item id: ", item_id)
 
 
-func refresh() -> void:
+func refresh_logo() -> void:
 	print("Inventory Slot: Refresh called")
 
 	if not item:
@@ -53,8 +53,6 @@ func refresh() -> void:
 	
 	if not item.logo:
 		return
-
-	check_type_of_item()
 
 	display_logo.texture = item.logo
 
