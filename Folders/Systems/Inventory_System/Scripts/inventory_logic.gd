@@ -128,8 +128,8 @@ func get_iten_by_id(item_id: int) -> ItemEntry:
 		
 		return item
 	
-	print("", inventory_items)
-	push_error("Item not found with item_id: ", item_id)
+	print("Inventory Logic: Debug for item not found error: ", inventory_items)
+	push_error("Item not found with item_id: ", item_id, " Check the debug print.")
 	return
 
 func check_if_slot_empty(slot: int) -> bool:
