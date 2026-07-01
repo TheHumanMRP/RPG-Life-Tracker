@@ -26,7 +26,7 @@ func setup() -> void:
 func assaign_item() -> void:
 	check_id()
 
-	item = Global.get_inventory()
+	item = Global.get_inventory_logic().get_iten_by_id(item_id)
 
 func check_id() -> void:
 	var inventory_items: Array[ItemEntry] = Global.get_inventory()
