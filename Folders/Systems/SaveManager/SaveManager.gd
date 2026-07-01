@@ -5,11 +5,15 @@ extends Resource
 @export var save_info: SaveData
 @export var create_file: bool
 
-func get_
 
 func _init(new_save_path = "user://gamedata/save_data.tres", new_create_file: bool = true) -> void:
 	save_path = new_save_path
 	create_file = new_create_file
+
+func get_save_file_path() -> String:
+	if OS.is_debug_build():
+		return "user://dev/save_data.tres"
+	return "user://live/save_data.tres"
 
 func _ensure_file_exists():
 	var dir_path = save_path.get_base_dir()
