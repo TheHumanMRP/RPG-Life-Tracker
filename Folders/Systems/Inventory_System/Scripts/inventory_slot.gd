@@ -21,11 +21,12 @@ func setup() -> void:
 	check_type_of_item()
 	refresh()
 
-	item = Global.get_inventory()[item_id]
+	assaign_item()
 
 func assaign_item() -> void:
 	check_id()
 
+	if not item_id == EMPTY_SLOT
 	item = Global.get_inventory_logic().get_iten_by_id(item_id)
 
 func check_id() -> void:
