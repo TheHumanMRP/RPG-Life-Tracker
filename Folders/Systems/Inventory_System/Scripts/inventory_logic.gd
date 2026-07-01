@@ -20,7 +20,7 @@ func _init() -> void:
 
 func _setup() -> void:
 	calculate_max_id()
-	setup_hotbar_slots()
+	reset_hotbar_slots()
 	testing_inventory()
 
 func testing_inventory() -> void:
@@ -30,8 +30,10 @@ func testing_inventory() -> void:
 	add_test_sword()
 	add_item_to_hotbar(0, 4)
 
-func setup_hotbar_slots() -> void:
+func reset_hotbar_slots() -> void:
 	hotbar_slots.clear()
+
+	var number_of_hotbar_slots : int = Global
 
 	for i in range(9):
 		hotbar_slots.append(EMPTY_HOTBAR_SLOT)
@@ -120,7 +122,7 @@ func use_item(item_id: int, target) -> void:
 func clear_inventory() -> void:
 	inventory_items.clear()
 	
-	setup_hotbar_slots()
+	reset_hotbar_slots()
 
 	max_id = 0
 
