@@ -6,7 +6,7 @@ extends Resource
 # -------------------------------------------------------------------
 
 @export var inventory_items: Array[ItemEntry] = []
-@export var hotbar_slots: Array[int] = [-1, -1, -1, -1, -1, -1, -1, -1, -1,]
+@export var hotbar_slots: Array[int]
 @export var max_id: int = 0
 
 const EMPTY_HOTBAR_SLOT: int = -1
