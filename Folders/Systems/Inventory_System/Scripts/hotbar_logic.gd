@@ -1,4 +1,4 @@
-class_name HotBarLogic
+class_name HotBarLogicComponent
 extends Resource
 
 
