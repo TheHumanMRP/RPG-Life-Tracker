@@ -6,10 +6,6 @@ signal respawn_player
 
 func _ready() -> void:
 	await get_tree().process_frame
-	call_deferred("refresh_ui_across_project")
-
-func refresh_ui_across_project() -> void:
-	print("\nSignal Bus: Refresh ui emitted")
 	refresh_ui.emit()
 
 func _input(event: InputEvent) -> void:
