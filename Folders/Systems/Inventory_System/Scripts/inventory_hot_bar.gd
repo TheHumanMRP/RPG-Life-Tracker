@@ -7,6 +7,9 @@ extends Control
 var number_of_inventory_slots: int = Global.number_of_inventory_slots
 
 func _ready() -> void:
+	print(Global.get_hotbar())
+	print(Global.get_hotbar().size())
+
 	recreate_inventory_slots()
 
 	SignalBus.refresh_ui.connect(set_inventory_slot_items)
