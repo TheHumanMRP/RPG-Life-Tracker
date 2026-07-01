@@ -30,16 +30,6 @@ func recreate_inventory_slots() -> void:
 
 
 func set_inventory_slot_items() -> void:
-	var inventory: Array[ItemEntry] = Global.get_inventory()
-	var inventory_slots: Array = h_box_container.get_children()
+	var hotbar_slots: Array[int] = Global.get_hotbar()
 
-	for slot in inventory_slots:
-		var id: int = slot.item_id
-
-		# Skip invalid or empty inventory slots.
-		if id < 0 or id >= inventory.size():
-			continue
-		if inventory[id] == null:
-			continue
-
-		slot.item = inventory[id]
+	for 
