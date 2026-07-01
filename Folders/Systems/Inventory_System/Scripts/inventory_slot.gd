@@ -26,7 +26,8 @@ func setup() -> void:
 func check_id() -> void:
 	var inventory_items: Array[ItemEntry] = Global.get_inventory().inventory_items
 
-	if not id <= 0 or id > inventory_items.size()
+	if id >= 0 and id <= inventory_items.size():
+		return
 	
 	if id == EMPTY_SLOT:
 func refresh() -> void:
