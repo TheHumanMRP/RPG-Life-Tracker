@@ -46,8 +46,6 @@ func check_id() -> void:
 
 
 func refresh_logo() -> void:
-	print("Inventory Slot: Refresh called")
-
 	if not item:
 		return
 	
