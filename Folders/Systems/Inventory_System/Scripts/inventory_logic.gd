@@ -65,7 +65,7 @@ func add_item(new_item: ItemEntry) -> void:
 
 	max_id += 1
 
-	SignalBus.inventory_changed.emit()
+	notify_inventory_changed()
 
 
 ## Removes an item from the inventory.
@@ -75,7 +75,7 @@ func remove_item(item_id: int) -> void:
 			continue
 
 		inventory_items.pop_at(i)
-		SignalBus.inventory_changed.emit()
+		notify_inventory_changed()
 		return
 
 	push_error("InventoryLogic: Item not found: ", item_id)
@@ -147,5 +147,7 @@ func print_all_items() -> void:
 
 # ===================================================================
 # Notify Listner
-
 # ===================================================================
+
+func notify_inventory_changed() -> void:
+	SignalBus.inventory_changed.emit()
