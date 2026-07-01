@@ -17,7 +17,7 @@ const EMPTY_HOTBAR_SLOT: int = -1
 
 @export var hotbar_slots: Array[int] = [
 	-1, -1, -1, -1,
-	-1, -1, -1, -1, 
+	-1, -1, -1, -1,
 	-1
 ]
 
