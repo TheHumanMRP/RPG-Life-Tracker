@@ -33,13 +33,6 @@ func _setup() -> void:
 	testing_inventory()
 
 
-func testing_inventory() -> void:
-	print_all_items()
-
-	clear_inventory()
-	add_test_sword()
-
-
 # ===================================================================
 # ID Management
 # ===================================================================
@@ -90,7 +83,7 @@ func use_item(item_id: int, target) -> void:
 
 	item.use_item(target)
 
-	SignalBus.inventory_changed.emit()
+	notify_inventory_changed()
 
 
 ## Removes every item from the inventory.
@@ -99,8 +92,7 @@ func clear_inventory() -> void:
 
 	max_id = 0
 
-	SignalBus.inventory_changed.emit()
-
+	notify_inventory_changed()
 
 # ===================================================================
 # Getters
@@ -126,6 +118,12 @@ func get_item_by_id(item_id: int) -> ItemEntry:
 # ===================================================================
 # Debug
 # ===================================================================
+
+func testing_inventory() -> void:
+	print_all_items()
+
+	clear_inventory()
+	add_test_sword()
 
 func add_test_sword() -> void:
 	var sword := Sword.new()
