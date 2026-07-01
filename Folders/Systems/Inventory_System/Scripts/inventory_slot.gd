@@ -26,12 +26,12 @@ func setup() -> void:
 func assaign_item() -> void:
 	check_id()
 
-	item = Global.get_inventory_logic().get_iten_by_id(item_id)
-
-	check_type_of_item()
-	
 	if item_id == EMPTY_SLOT:
 		return
+
+	item = Global.get_inventory_logic().get_iten_by_id(item_id)
+	
+	check_type_of_item()
 
 func check_id() -> void:
 	var inventory_items: Array[ItemEntry] = Global.get_inventory()
