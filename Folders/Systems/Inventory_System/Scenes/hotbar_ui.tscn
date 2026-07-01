@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dc28u3ylx6ryd"]
 
-[ext_resource type="Script" path="res://Folders/Systems/Inventory_System/Scripts/inventory_hot_bar.gd" id="1_qjpuj"]
+[ext_resource type="Script" uid="uid://dpmecyujhmpgi" path="res://Folders/Systems/Inventory_System/Scripts/hotbar_ui.gd" id="1_et857"]
 
 [node name="InventoryHotBar" type="Control" unique_id=1133281896]
 layout_mode = 3
@@ -9,7 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_qjpuj")
+script = ExtResource("1_et857")
 
 [node name="Hot_Bar" type="HBoxContainer" parent="." unique_id=2080709744]
 unique_name_in_owner = true
