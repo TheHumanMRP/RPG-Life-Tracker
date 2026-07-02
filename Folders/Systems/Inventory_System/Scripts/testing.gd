@@ -11,10 +11,6 @@ func testing() -> void:
 	inventory_logic = Global.get_inventory_logic()
 	hotbar_logic = Global.get_hotbar_logic()
 
-	inventory_logic.
-
-func testing_inventory() -> void:
-	print_all_items()
-
-	clear_inventory()
-	add_test_sword()
+	inventory_logic.print_all_items()
+	inventory_logic.clear_inventory()
+	inventory_logic.add_test_sword()
