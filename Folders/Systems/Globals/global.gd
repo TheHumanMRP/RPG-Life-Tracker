@@ -8,6 +8,9 @@ var number_of_hotbar_slots: int = 9
 func get_inventory_logic() -> InventoryLogicComponent:
 	return save_data.inventory_logic
 
+func get_hotbar_logic() -> HotBarLogicComponent:
+	return save_data.hotbar_logic
+
 func get_inventory() -> Array[ItemEntry]:
 	return save_data.inventory_logic.inventory_items
 
