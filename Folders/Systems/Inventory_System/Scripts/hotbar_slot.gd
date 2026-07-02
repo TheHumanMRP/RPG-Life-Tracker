@@ -19,6 +19,7 @@ func refresh() -> void:
 	display_logo.texture = null
 	
 	check_type_of_item()
+	
 	refresh_logo()
 
 	slot_number_label.text = str(slot_id)
