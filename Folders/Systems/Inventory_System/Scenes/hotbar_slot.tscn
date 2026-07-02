@@ -29,7 +29,7 @@ unique_name_in_owner = true
 layout_mode = 2
 texture = ExtResource("2_5jo53")
 
-[node name="Label" type="Label" parent="MarginContainer" unique_id=1946592826]
+[node name="Slot_Number" type="Label" parent="MarginContainer" unique_id=1946592826]
 z_index = 2
 layout_mode = 2
 size_flags_vertical = 1
