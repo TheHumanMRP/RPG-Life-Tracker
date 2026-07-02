@@ -1,5 +1,5 @@
 extends Control
-class_name InventorySlot
+class_name HotbarSlot
 
 @export var accepted_item_type: String = "base_item"
 @export var item_id: int

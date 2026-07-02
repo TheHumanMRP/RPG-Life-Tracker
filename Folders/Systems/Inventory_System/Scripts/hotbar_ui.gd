@@ -23,10 +23,10 @@ func recreate_inventory_slots() -> void:
 	var inventory_hot_bar_slots: Array[int] = Global.get_hotbar()
 
 	for i in range(number_of_hotbar_slots):
-		var inventory_slot: InventorySlot = packed_inventory_slot.instantiate()
-		inventory_slot.item_id = inventory_hot_bar_slots[i]
+		var hotbar_slot: HotbarSlot = packed_inventory_slot.instantiate()
+		hotbar_slot.item_id = inventory_hot_bar_slots[i]
 
-		hotbar.add_child(inventory_slot)
+		hotbar.add_child(hotbar_slot)
 
 
 func set_inventory_slot_items() -> void:
