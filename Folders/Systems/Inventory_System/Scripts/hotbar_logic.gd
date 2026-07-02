@@ -29,10 +29,7 @@ func reset_hotbar_slots() -> void:
 	hotbar_slots.clear()
 
 	while hotbar_slots.size() < Global.number_of_hotbar_slots:
-		hotbar_slots.append(EMPTY_HOTBAR_SLOT)
-
-	for i in range(Global.number_of_hotbar_slots):
-		hotbar_slots[i].slot_id = 
+		hotbar_slots.append(EMPTY_HOTBAR_SLOT) 
 
 
 # ============================================================================

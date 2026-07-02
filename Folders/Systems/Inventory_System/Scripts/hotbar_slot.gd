@@ -22,7 +22,7 @@ func setup() -> void:
 	check_type_of_item()
 	refresh_logo()
 
-	slot_number_label.text =
+	slot_number_label.text = str(slot_id)
 
 	assaign_item()
 
