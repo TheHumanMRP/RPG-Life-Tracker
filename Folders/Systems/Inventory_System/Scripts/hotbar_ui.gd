@@ -32,7 +32,9 @@ func recreate_inventory_slots() -> void:
 func assaign_proper_id_to_hotbar_slots() -> void:
 	var hotbar_slot_ids: Array[int] = Global.get_hotbar()
 
-	
+	var hotbar_slots: Array[Node] = hotbar.get_children()
+
+	for i in range()
 
 
 func set_inventory_slot_items() -> void:
