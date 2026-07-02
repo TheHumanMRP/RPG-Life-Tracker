@@ -29,9 +29,6 @@ func _init() -> void:
 func _setup() -> void:
 	calculate_max_id()
 
-	# Temporary testing
-	testing_inventory()
-
 
 # ===================================================================
 # ID Management
@@ -118,12 +115,6 @@ func get_item_by_id(item_id: int) -> ItemEntry:
 # ===================================================================
 # Debug
 # ===================================================================
-
-func testing_inventory() -> void:
-	print_all_items()
-
-	clear_inventory()
-	add_test_sword()
 
 func add_test_sword() -> void:
 	var sword := Sword.new()
