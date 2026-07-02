@@ -21,6 +21,8 @@ func setup() -> void:
 	check_type_of_item()
 	refresh_logo()
 
+	slot_number_label.text = 
+
 	assaign_item()
 
 func assaign_item() -> void:
