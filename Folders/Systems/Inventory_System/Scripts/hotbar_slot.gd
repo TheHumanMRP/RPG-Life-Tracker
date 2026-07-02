@@ -3,7 +3,7 @@ class_name InventorySlot
 
 @export var accepted_item_type: String = "base_item"
 @export var item_id: int
-@export var sot_id: int
+@export var slot_id: int
 
 @onready var display_logo: TextureRect = $%Logo_Display
 @onready var slot_number_label: Label = $%Slot_Number
