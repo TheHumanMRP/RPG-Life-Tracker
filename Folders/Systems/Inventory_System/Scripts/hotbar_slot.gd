@@ -13,11 +13,10 @@ const EMPTY_SLOT: int = -1
 var item: ItemEntry
 
 func _ready() -> void:
-	setup()
+	refresh()
 
-func setup() -> void:
+func refresh() -> void:
 	display_logo.texture = null
-	SignalBus.inventory_changed.connect(refresh_logo)
 	
 	check_type_of_item()
 	refresh_logo()
