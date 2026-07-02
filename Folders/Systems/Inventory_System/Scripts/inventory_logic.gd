@@ -140,3 +140,4 @@ func print_all_items() -> void:
 
 func notify_inventory_changed() -> void:
 	SignalBus.inventory_changed.emit()
+	SignalBus.
