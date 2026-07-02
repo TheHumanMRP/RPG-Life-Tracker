@@ -20,11 +20,11 @@ func refresh() -> void:
 	
 	check_type_of_item()
 	
+	assaign_item()
+
 	refresh_logo()
 
 	slot_number_label.text = str(slot_id)
-
-	assaign_item()
 
 func assaign_item() -> void:
 	check_id()
