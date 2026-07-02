@@ -31,6 +31,8 @@ func reset_hotbar_slots() -> void:
 	while hotbar_slots.size() < Global.number_of_hotbar_slots:
 		hotbar_slots.append(EMPTY_HOTBAR_SLOT)
 
+	
+
 
 # ============================================================================
 # Item Management
