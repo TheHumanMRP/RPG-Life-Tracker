@@ -47,6 +47,9 @@ func add_item_to_hotbar(item_id: int, slot_index: int) -> void:
 	SignalBus.inventory_changed.emit()
 
 
+func assaign_all_the_items_from_the_inventory_as_index() -> void:
+	pass
+
 # ============================================================================
 # Queries
 # ============================================================================
