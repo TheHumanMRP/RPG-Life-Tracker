@@ -61,5 +61,10 @@ func assaign_all_the_items_from_the_inventory_as_index() -> void:
 func check_if_slot_empty(slot: int) -> bool:
 	return hotbar_slots[slot] == EMPTY_HOTBAR_SLOT
 
-func check_if_item_at_index_in_inventory_exists() -> bool:
-	var inventoryGlobal.get_inventory()
+func check_if_item_at_index_in_inventory_exists(index: int) -> bool:
+	var inventory: Array[ItemEntry] = Global.get_inventory()
+
+	if index < 0 or index > inventory.size():
+		return false
+	
+	return true
