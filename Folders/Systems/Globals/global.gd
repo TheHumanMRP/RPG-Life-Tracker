@@ -40,7 +40,7 @@ var save_next: bool = false
 var save_timer: int = 60
 var save_data: SaveData
 
-@onready var save_manager: SaveManager = SaveManager.new()
+# @onready var save_manager: SaveManager = SaveManager.new()
 @onready var save_cycle_manager: SaveCycleManager = SaveCycleManager.new()
 
 
