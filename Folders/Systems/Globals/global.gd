@@ -58,7 +58,7 @@ func close_game() -> void:
 func _ready() -> void:
 	_load_data()
 	save_loop()
-	call_deferred("test")
+	test()
 
 func _notification(what):
 	if what == NOTIFICATION_WM_CLOSE_REQUEST:

@@ -101,7 +101,7 @@ func get_item_by_id(item_id: int) -> ItemEntry:
 		if item.item_id == item_id:
 			return item
 
-	print("\nInventoryLogic Debug")
+	print("\nInventoryLogic: Debug")
 	print("Inventory Size: ", inventory_items.size())
 
 	push_error("InventoryLogic: Item not found with ID ", item_id, ". Check the debug print.")
