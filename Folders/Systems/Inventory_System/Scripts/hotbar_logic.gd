@@ -50,11 +50,15 @@ func add_item_to_hotbar(item_id: int, slot_index: int) -> void:
 
 
 func assaign_all_the_items_from_the_inventory_as_index() -> void:
+	var inventory: Array[ItemEntry] = Global.get_inventory()
+	
 	for i in range(NUMBER_OF_HOTBAR_SLOTS):
 		if not Global.check_if_item_at_index_in_inventory_exists(i):
 			continue
 		
-		hotbar_slots[i] = 
+		hotbar_slots[i] = inventory[i].item_id
+	
+	SignalBus.hotbar_changed.emit()
 
 
 # ============================================================================
