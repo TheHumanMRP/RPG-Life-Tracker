@@ -55,6 +55,11 @@ func close_game() -> void:
 # LIFECYCLE
 # ============================================================================
 
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("add_testing_sword"):
+		save_data.inventory_logic.add_test_sword()
+		print("Testing: Adding Item")
+
 func _ready() -> void:
 	_load_data()
 	save_loop()
