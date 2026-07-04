@@ -27,7 +27,7 @@ const NUMBER_OF_HOTBAR_SLOTS: int = 9
 # ============================================================================
 
 func _init() -> void:
-	SignalBus.inventory_changed.connect(assaign_items_to_all_hotbars)
+	call_deferred("SignalBus.inventory_changed.connect(assaign_items_to_all_hotbars)")
 
 # ============================================================================
 # Item Management
@@ -55,7 +55,7 @@ func assaign_items_to_all_hotbars() -> void:
 	var inventory: Array[ItemEntry] = Global.get_inventory()
 	
 	for i in range(NUMBER_OF_HOTBAR_SLOTS):
-		if Global.check_if_item_at_index_in_inventory_exists(i):
+		if not Global.check_if_item_at_index_in_inventory_exists(i):
 			continue
 		
 		hotbar_slots[i] = inventory[i].item_id
