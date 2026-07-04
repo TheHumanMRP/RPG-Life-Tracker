@@ -41,6 +41,7 @@ var save_timer: int = 60
 var save_data: SaveData
 
 @onready var save_manager: SaveManager = SaveManager.new()
+@onready var save_cycle_manager: SaveCycleManager = SaveCycleManager.new()
 
 
 # ============================================================================
@@ -65,7 +66,7 @@ func _process(delta: float) -> void:
 
 func _ready() -> void:
 	_load_data()
-	save_loop()
+	save_cycle_manager.save_loop()
 	test()
 
 func _notification(what):
