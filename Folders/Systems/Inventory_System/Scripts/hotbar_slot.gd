@@ -32,7 +32,7 @@ func assaign_item() -> void:
 	if item_id == EMPTY_SLOT:
 		return
 
-	item = Global.get_inventory_logic().get_iten_by_id(item_id)
+	item = Global.get_inventory_logic().get_item_by_id(item_id)
 	
 	check_type_of_item()
 

@@ -16,4 +16,7 @@ func test() -> void:
 	inventory_logic.clear_inventory()
 	inventory_logic.add_test_sword()
 
-	hotbar_logic.add_item_to_hotbar(0, 0)
+	var item_id: int = 0
+	var slot_index: int = 0
+
+	hotbar_logic.add_item_to_hotbar(item_id, slot_index)
