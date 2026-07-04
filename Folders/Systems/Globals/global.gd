@@ -9,6 +9,8 @@ func test() -> void:
 
 	testing.setup(save_data.inventory_logic, save_data.hotbar_logic)
 
+	testing.test()
+
 # ============================================================================
 # INVENTORY SETTINGS
 # ============================================================================
@@ -56,7 +58,7 @@ func close_game() -> void:
 func _ready() -> void:
 	_load_data()
 	save_loop()
-	call_deferred("testin")
+	call_deferred("test")
 
 func _notification(what):
 	if what == NOTIFICATION_WM_CLOSE_REQUEST:
