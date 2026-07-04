@@ -16,8 +16,6 @@ func _ready() -> void:
 	refresh()
 
 func refresh() -> void:
-	display_logo.texture = null
-	
 	check_type_of_item()
 	
 	assaign_item()

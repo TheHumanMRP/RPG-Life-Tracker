@@ -33,7 +33,7 @@ func recreate_inventory_slots() -> void:
 	assaign_proper_id_to_hotbar_slots()
 
 func assaign_proper_id_to_hotbar_slots() -> void:
-	print("Hotbar Ui: ")
+	print("\nHotbar Ui: Order given to assaign the proper ids sir")
 
 
 	var hotbar_slots: Array[int] = Global.get_hotbar()
