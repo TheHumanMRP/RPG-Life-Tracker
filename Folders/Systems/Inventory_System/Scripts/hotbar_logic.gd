@@ -69,5 +69,6 @@ func assaign_all_the_items_from_the_inventory_as_index() -> void:
 func check_if_slot_empty(slot: int) -> bool:
 	return hotbar_slots[slot] == EMPTY_HOTBAR_SLOT
 
+## Used to singlyfy 
 func notify_hotbar_changed() -> void:
 	SignalBus.hotbar_changed.emit()
