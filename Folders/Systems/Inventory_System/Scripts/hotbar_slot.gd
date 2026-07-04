@@ -3,7 +3,7 @@ class_name HotbarSlot
 
 @export var accepted_item_type: String = "base_item"
 @export var item_id: int
-@export var slot_id: int
+@export var slot_index: int
 
 @onready var display_logo: TextureRect = $%Logo_Display
 @onready var slot_number_label: Label = $%Slot_Number
@@ -24,7 +24,7 @@ func refresh() -> void:
 
 	refresh_logo()
 
-	slot_number_label.text = str(slot_id)
+	slot_number_label.text = str(slot_index)
 
 func assaign_item() -> void:
 	check_id()
