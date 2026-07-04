@@ -27,7 +27,10 @@ const NUMBER_OF_HOTBAR_SLOTS: int = 9
 # ============================================================================
 
 func _init() -> void:
-	call_deferred("SignalBus.inventory_changed.connect(assaign_items_to_all_hotbars)")
+	call_deferred("connect_signals")
+
+func connect_signals() -> void:
+	SignalBus.inventory_changed.connect(assaign_items_to_all_hotbars)
 
 # ============================================================================
 # Item Management
