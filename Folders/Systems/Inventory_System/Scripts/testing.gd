@@ -22,3 +22,7 @@ func test() -> void:
 	var slot_index: int = 0
 
 	hotbar_logic.add_item_to_hotbar(item_id, slot_index)
+
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("add_testing_sword"):
+		inventory_logic.add_test_sword()
