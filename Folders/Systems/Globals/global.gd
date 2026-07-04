@@ -66,7 +66,7 @@ func _process(delta: float) -> void:
 
 func _ready() -> void:
 	_load_data()
-	save_cycle_manager.save_loop()
+	save_loop()
 	test()
 
 func _notification(what):
@@ -79,21 +79,14 @@ func _notification(what):
 # ============================================================================
 
 func save_loop() -> void:
-	while true:
-		await get_tree().create_timer(save_timer).timeout
-		
-		if save_next:
-			_save_data()
-
+	save_cycle_manager.save_loop()
 
 # ============================================================================
 # INTERNAL SAVE/LOAD
 # ============================================================================
 
 func _save_data() -> void:
-	save_manager.save_info = save_data
-	save_manager.save_data()
+	save_cycle_manager._save_data()
 
 func _load_data():
-	save_manager.load_data()
-	save_data = save_manager.save_info
+	save_cycle_manager._load_data()
