@@ -16,9 +16,6 @@ func _ready() -> void:
 	refresh()
 
 func refresh() -> void:
-	print("\nHotbar Slot: Brother, I am supposed to refresh the logo, but I guess I am just a lazy bitch.")
-	print("Here's my index and item_id though: Index: ", slot_index, " Item_ID: ", item_id)
-
 	check_type_of_item()
 	
 	assaign_item()
