@@ -128,6 +128,8 @@ func add_test_sword() -> void:
 
 
 func print_all_items() -> void:
+	print("\nInventory Logic: Printing all items")
+	
 	for item in inventory_items:
 		item.print_self()
 
