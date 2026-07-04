@@ -1,6 +1,12 @@
 extends Node
 
 # ============================================================================
+# 
+
+var save_data: SaveData
+
+
+# ============================================================================
 # Testing
 # ============================================================================
 
@@ -31,16 +37,6 @@ func get_inventory() -> Array[ItemEntry]:
 
 func get_hotbar() -> Array[int]:
 	return save_data.hotbar_logic.hotbar_slots
-
-# ============================================================================
-# SAVE SETTINGS
-# ============================================================================
-
-var save_next: bool = false
-var save_timer: int = 60
-var save_data: SaveData
-
-@onready var save_cycle_manager: SaveCycleManager = SaveCycleManager.new()
 
 # ============================================================================
 # LIFECYCLE
