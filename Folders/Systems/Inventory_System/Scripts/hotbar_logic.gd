@@ -46,9 +46,7 @@ func add_item_to_hotbar(item_id: int, slot_index: int) -> void:
 
 	hotbar_slots[slot_index] = item_id
 
-	SignalBus.inventory_changed.emit()
-
-
+	
 func assaign_all_the_items_from_the_inventory_as_index() -> void:
 	var inventory: Array[ItemEntry] = Global.get_inventory()
 	
@@ -68,3 +66,6 @@ func assaign_all_the_items_from_the_inventory_as_index() -> void:
 ## Returns `true` if the specified hotbar slot is empty.
 func check_if_slot_empty(slot: int) -> bool:
 	return hotbar_slots[slot] == EMPTY_HOTBAR_SLOT
+
+func notify_hotbar_changed() -> void:
+	

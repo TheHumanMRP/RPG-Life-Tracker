@@ -10,7 +10,7 @@ func _ready() -> void:
 	recreate_inventory_slots()
 
 	SignalBus.refresh_ui.connect(assaign_proper_id_to_hotbar_slots)
-	SignalBus.inventory_changed.connect(assaign_proper_id_to_hotbar_slots)
+	SignalBus.hotbar_changed.connect(assaign_proper_id_to_hotbar_slots)
 
 
 func recreate_inventory_slots() -> void:
