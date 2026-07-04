@@ -8,6 +8,8 @@ extends Resource
 
 const EMPTY_HOTBAR_SLOT: int = -1
 
+const NUMEBR: int = 9
+
 
 # ============================================================================
 # Exported Variables
