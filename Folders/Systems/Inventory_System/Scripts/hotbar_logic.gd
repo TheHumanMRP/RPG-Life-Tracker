@@ -51,7 +51,7 @@ func add_item_to_hotbar(item_id: int, slot_index: int) -> void:
 
 func assaign_all_the_items_from_the_inventory_as_index() -> void:
 	for i in range(NUMBER_OF_HOTBAR_SLOTS):
-		pass
+		check_if_item_at_index_in_inventory_exists(i)
 
 # ============================================================================
 # Queries
@@ -60,11 +60,3 @@ func assaign_all_the_items_from_the_inventory_as_index() -> void:
 ## Returns `true` if the specified hotbar slot is empty.
 func check_if_slot_empty(slot: int) -> bool:
 	return hotbar_slots[slot] == EMPTY_HOTBAR_SLOT
-
-func check_if_item_at_index_in_inventory_exists(index: int) -> bool:
-	var inventory: Array[ItemEntry] = Global.get_inventory()
-
-	if index < 0 or index > inventory.size():
-		return false
-	
-	return true
