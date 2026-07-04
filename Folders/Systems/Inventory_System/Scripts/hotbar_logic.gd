@@ -30,7 +30,7 @@ const NUMBER_OF_HOTBAR_SLOTS: int = 9
 func clear_hotbar() -> void:
 	hotbar_slots.clear()
 
-	while hotbar_slots.size() < Global.number_of_hotbar_slots:
+	while hotbar_slots.size() < NUMBER_OF_HOTBAR_SLOTS:
 		hotbar_slots.append(EMPTY_HOTBAR_SLOT)
 
 
