@@ -6,7 +6,7 @@ var save_timer: int = 60
 @onready var save_manager: SaveManager = SaveManager.new()
 
 func _init() -> void:
-	SignalBus.save_game.connect()
+	SignalBus.save_game.connect(_save_data)
 
 func save_loop() -> void:
 	while true:
