@@ -50,7 +50,8 @@ func add_item_to_hotbar(item_id: int, slot_index: int) -> void:
 
 
 func assaign_all_the_items_from_the_inventory_as_index() -> void:
-	pass
+	for i in range(NUMBER_OF_HOTBAR_SLOTS):
+		if i < 0 or i > 
 
 # ============================================================================
 # Queries
