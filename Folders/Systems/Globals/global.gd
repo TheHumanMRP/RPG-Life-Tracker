@@ -65,8 +65,6 @@ func _process(delta: float) -> void:
 		save_data.inventory_logic.add_test_sword()
 
 func _ready() -> void:
-	_load_data()
-	save_loop()
 	test()
 
 func _notification(what):

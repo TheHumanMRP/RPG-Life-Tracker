@@ -5,6 +5,9 @@ var save_timer: int = 60
 
 @onready var save_manager: SaveManager = SaveManager.new()
 
+func _init() -> void:
+	SignalBus.save_game.connect()
+
 func save_loop() -> void:
 	while true:
 		await get_tree().create_timer(save_timer).timeout
