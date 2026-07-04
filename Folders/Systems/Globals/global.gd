@@ -40,21 +40,7 @@ var save_next: bool = false
 var save_timer: int = 60
 var save_data: SaveData
 
-# @onready var save_manager: SaveManager = SaveManager.new()
 @onready var save_cycle_manager: SaveCycleManager = SaveCycleManager.new()
-
-
-# ============================================================================
-# PUBLIC FUNCTIONS
-# ============================================================================s
-
-func load() -> void:
-	_load_data()
-
-func close_game() -> void:
-	_save_data()
-	get_tree().quit()
-
 
 # ============================================================================
 # LIFECYCLE

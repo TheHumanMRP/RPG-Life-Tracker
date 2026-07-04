@@ -22,3 +22,7 @@ func _save_data() -> void:
 func _load_data():
 	save_manager.load_data()
 	Global.save_data = Global.save_manager.save_info
+
+func _notification(what):
+	if what == NOTIFICATION_WM_CLOSE_REQUEST:
+		_save_data()
