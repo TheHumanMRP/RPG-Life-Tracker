@@ -4,10 +4,11 @@ extends Resource
 var inventory_logic: InventoryLogicComponent
 var hotbar_logic: HotBarLogicComponent
 
-func _init() -> void:
-	testing()
+func setup(new_inventory_logic: InventoryLogicComponent, new_hotbar_logic: HotBarLogicComponent) -> void:
+	inventory_logic = new_inventory_logic
+	hotbar_logic = new_hotbar_logic
 
-func testing() -> void:
+func test() -> void:
 	inventory_logic = Global.get_inventory_logic()
 	hotbar_logic = Global.get_hotbar_logic()
 
