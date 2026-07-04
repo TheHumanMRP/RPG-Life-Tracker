@@ -26,17 +26,19 @@ const NUMBER_OF_HOTBAR_SLOTS: int = 9
 # Initialization
 # ============================================================================
 
+func _init() -> void:
+	
+
+# ============================================================================
+# Item Management
+# ============================================================================
+
 ## Resets every hotbar slot to an empty state.
 func clear_hotbar() -> void:
 	hotbar_slots.clear()
 
 	while hotbar_slots.size() < NUMBER_OF_HOTBAR_SLOTS:
 		hotbar_slots.append(EMPTY_HOTBAR_SLOT)
-
-
-# ============================================================================
-# Item Management
-# ============================================================================
 
 ## Places an item into the specified hotbar slot.
 func add_item_to_hotbar(item_id: int, slot_index: int) -> void:
@@ -48,8 +50,8 @@ func add_item_to_hotbar(item_id: int, slot_index: int) -> void:
 
 	notify_hotbar_changed()
 
-	
-func assaign_all_the_items_from_the_inventory_as_index() -> void:
+## Here for testing only
+func assaign_items_to_all_hotbars() -> void:
 	var inventory: Array[ItemEntry] = Global.get_inventory()
 	
 	for i in range(NUMBER_OF_HOTBAR_SLOTS):
