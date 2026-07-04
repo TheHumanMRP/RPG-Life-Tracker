@@ -7,6 +7,7 @@ var save_timer: int = 60
 
 func _init() -> void:
 	SignalBus.save_game.connect(_save_data)
+	_load_data()
 
 func save_loop() -> void:
 	while true:
