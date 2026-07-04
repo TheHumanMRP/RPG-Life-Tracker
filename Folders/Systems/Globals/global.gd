@@ -7,6 +7,8 @@ extends Node
 func test() -> void:
 	var testing: TestingScript = TestingScript.new()
 
+	testing.setup(save_data.inventory_logic, save_data.hotbar_logic)
+
 # ============================================================================
 # INVENTORY SETTINGS
 # ============================================================================
@@ -54,6 +56,7 @@ func close_game() -> void:
 func _ready() -> void:
 	_load_data()
 	save_loop()
+	call_deferred("testin")
 
 func _notification(what):
 	if what == NOTIFICATION_WM_CLOSE_REQUEST:
