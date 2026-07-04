@@ -14,6 +14,9 @@ func test() -> void:
 # ============================================================================
 # INVENTORY SETTINGS
 # ============================================================================
+func check_if_item_at_index_in_inventory_exists(index: int) -> bool:
+	return save_data.inventory_logic.check_if_item_at_index_in_inventory_exists(index)
+
 func get_inventory_logic() -> InventoryLogicComponent:
 	return save_data.inventory_logic
 
