@@ -24,7 +24,7 @@ func refresh() -> void:
 
 	refresh_logo()
 
-	slot_number_label.text = str(slot_index)
+	slot_number_label.text = str(slot_index + 1)
 
 func assaign_item() -> void:
 	check_id()
