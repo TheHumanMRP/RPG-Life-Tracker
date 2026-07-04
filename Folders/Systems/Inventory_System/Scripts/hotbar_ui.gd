@@ -40,4 +40,4 @@ func assaign_proper_id_to_hotbar_slots() -> void:
 		hotbar_children[i].item_id = hotbar_slots[i]
 	
 	for hotbar in hotbar_children:
-		hotbar.refresh_ui()
+		hotbar.refresh()
