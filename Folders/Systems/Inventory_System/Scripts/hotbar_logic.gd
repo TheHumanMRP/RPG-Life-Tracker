@@ -25,11 +25,11 @@ const EMPTY_HOTBAR_SLOT: int = -1
 # ============================================================================
 
 ## Resets every hotbar slot to an empty state.
-func reset_hotbar_slots() -> void:
+func clear_hotbar() -> void:
 	hotbar_slots.clear()
 
 	while hotbar_slots.size() < Global.number_of_hotbar_slots:
-		hotbar_slots.append(EMPTY_HOTBAR_SLOT) 
+		hotbar_slots.append(EMPTY_HOTBAR_SLOT)
 
 
 # ============================================================================
