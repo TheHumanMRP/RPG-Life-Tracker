@@ -8,7 +8,7 @@ extends Resource
 
 const EMPTY_HOTBAR_SLOT: int = -1
 
-const NUMEBR: int = 9
+const NUMBER_OF_HOTBAR_SLOTS: int = 9
 
 
 # ============================================================================

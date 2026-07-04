@@ -17,6 +17,8 @@ func test() -> void:
 func get_inventory_logic() -> InventoryLogicComponent:
 	return save_data.inventory_logic
 
+func get_
+
 func get_hotbar_logic() -> HotBarLogicComponent:
 	return save_data.hotbar_logic
 
