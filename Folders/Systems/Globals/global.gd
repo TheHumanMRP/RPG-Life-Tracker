@@ -66,25 +66,3 @@ func _process(delta: float) -> void:
 
 func _ready() -> void:
 	test()
-
-func _notification(what):
-	if what == NOTIFICATION_WM_CLOSE_REQUEST:
-		_save_data()
-
-
-# ============================================================================
-# SAVE LOOP
-# ============================================================================
-
-func save_loop() -> void:
-	save_cycle_manager.save_loop()
-
-# ============================================================================
-# INTERNAL SAVE/LOAD
-# ============================================================================
-
-func _save_data() -> void:
-	save_cycle_manager._save_data()
-
-func _load_data():
-	save_cycle_manager._load_data()
