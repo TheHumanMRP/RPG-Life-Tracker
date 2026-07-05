@@ -82,3 +82,5 @@ func check_for_mouse_click(event: InputEvent) -> void:
 	print("\nHotbar Slot: I was clicked, here's my index: ", slot_index)
 
 	
+func notify_inventory_selected() -> void:
+	SignalBus
