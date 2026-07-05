@@ -67,7 +67,6 @@ func check_type_of_item() -> void:
 	push_error("Inventory Slot: Invalid item type ")
 
 func _input(event: InputEvent) -> void:
-	if event == InputEventMouseButton:
-		print("Mouse Button Pressed")
-	
-	print(event)
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+            print("Left mouse clicked!")
