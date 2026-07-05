@@ -28,7 +28,7 @@ func get_inventory_logic() -> InventoryLogicComponent:
 	return save_data.inventory_logic
 
 func get_selected_hotbar() -> int:
-	
+	return save_data.hotbar_logic.selected_hotbar_slot
 
 func get_empty_hotbar_slot_const() -> int:
 	return save_data.hotbar_logic.EMPTY_HOTBAR_SLOT
