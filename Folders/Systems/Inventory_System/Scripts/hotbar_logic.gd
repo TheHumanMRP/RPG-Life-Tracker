@@ -10,7 +10,7 @@ const EMPTY_HOTBAR_SLOT: int = -1
 
 const NUMBER_OF_HOTBAR_SLOTS: int = 9
 
-var selected_hotbar_slot: int = -1
+var selected_hotbar_slot_index: int = -1
 
 # ============================================================================
 # Exported Variables
@@ -75,10 +75,11 @@ func assaign_items_to_all_hotbars() -> void:
 func check_if_slot_empty(slot: int) -> bool:
 	return hotbar_slots[slot] == EMPTY_HOTBAR_SLOT
 
+
+func hotbar_selected(slot_index: int) -> void:
+	selected_hotbar_slot_index = slot_index
+	notify_hotbar_changed()
+
 ## This shit is here so that I don't have to go to a billion places if I by mistakely somehow change the signal name
 func notify_hotbar_changed() -> void:
 	SignalBus.hotbar_changed.emit()
-
-func hotbar_selected(slot_index: int) -> void:
-	selected_hotbar_slot = slot_index
-	notify_hotbar_changed()
