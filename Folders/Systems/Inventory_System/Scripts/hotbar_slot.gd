@@ -5,7 +5,7 @@ class_name HotbarSlot
 @export var item_id: int
 @export var slot_index: int
 
-@onready var selection_color_fade: TextureRect = $%Selection_Color_Fade
+@onready var selection_color_fade: ColorRect = $%Selection_Color_Fade
 @onready var display_logo: TextureRect = $%Logo_Display
 @onready var slot_number_label: Label = $%Slot_Number
 
@@ -34,7 +34,7 @@ func set_proper_selection_color_rect_opacity() -> void:
 	var selected_slot_index: int = Global.get_selected_hotbar_index()
 
 	if selected_slot_index != slot_index:
-		selection_color_fade.
+		selection_color_fade.color.hex(int(UNSELECTED_HEX_VALUE))
 
 
 func assaign_item() -> void:
