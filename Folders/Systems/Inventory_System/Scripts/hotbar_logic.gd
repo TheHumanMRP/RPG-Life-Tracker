@@ -10,6 +10,7 @@ const EMPTY_HOTBAR_SLOT: int = -1
 
 const NUMBER_OF_HOTBAR_SLOTS: int = 9
 
+var selected_hotbar_slot: int = -1
 
 # ============================================================================
 # Exported Variables
