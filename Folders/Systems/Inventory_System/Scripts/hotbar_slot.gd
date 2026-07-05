@@ -33,12 +33,13 @@ func refresh() -> void:
 func set_proper_selection_color_rect_opacity() -> void:
 	var selected_slot_index: int = Global.get_selected_hotbar_index()
 
-	if selected_slot_index != slot_index:
-		selection_color_fade.color.a = 255
-		
+	if selected_slot_index == slot_index:
+		# Selected
+		selection_color_fade.color.a = 1
 		return
 	
-	selection_color_fade.color.a = 215
+	# Unselected
+	selection_color_fade.color.a = 0.3
 	
 
 func assaign_item() -> void:
