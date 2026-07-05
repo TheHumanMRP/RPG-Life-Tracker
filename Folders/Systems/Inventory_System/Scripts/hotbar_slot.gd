@@ -80,3 +80,5 @@ func check_for_mouse_click(event: InputEvent) -> void:
 		return
 
 	print("\nHotbar Slot: I was clicked, here's my index: ", slot_index)
+
+	
