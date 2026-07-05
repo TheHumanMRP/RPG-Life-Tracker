@@ -9,6 +9,8 @@ const DEV_SAVE_PATH := "user://dev/save_data.tres"
 const LIVE_SAVE_PATH := "user://live/save_data.tres"
 
 func _init(new_save_path: String = "", new_create_file: bool = true) -> void:
+	print("Save Manager: ", )
+	
 	if new_save_path:
 		save_path = new_save_path
 	else:
