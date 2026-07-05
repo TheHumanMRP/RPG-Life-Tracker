@@ -73,7 +73,10 @@ func check_for_mouse_click(event: InputEvent) -> void:
 	if not event is InputEventMouseButton:
 		return
 
-	if event.button_index != MOUSE_BUTTON_LEFT or not event.pressed:
+	if event.button_index != MOUSE_BUTTON_LEFT:
 			return
 
-	
+	if not event.pressed:
+		return
+
+	print("\nHotbar Slot: I was clicked, here's my index: ", slot_index)
