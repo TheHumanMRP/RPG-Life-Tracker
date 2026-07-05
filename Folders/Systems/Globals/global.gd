@@ -21,6 +21,9 @@ func test() -> void:
 # ============================================================================
 # INVENTORY SETTINGS
 # ============================================================================
+func get_number_of_hotbar_slots() -> void:
+	return save_data.hotbar_logic.
+
 func check_if_item_at_index_in_inventory_exists(index: int) -> bool:
 	return save_data.inventory_logic.check_if_item_at_index_in_inventory_exists(index)
 
