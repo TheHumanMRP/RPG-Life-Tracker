@@ -45,10 +45,7 @@ func load_data() -> void:
 	save_info = ResourceLoader.load(save_path)
 
 func save_data() -> void:
-	if create_file:
-		_ensure_file_exists()
-
-	if not FileAccess.file_exists(save_path):
+	if not create_file and not FileAccess.file_exists(save_path):
 		push_error("File Dosen't Exist: ", save_path)
 		return
 	
