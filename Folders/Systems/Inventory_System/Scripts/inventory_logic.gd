@@ -30,7 +30,7 @@ func _setup() -> void:
 	_connect_signals()
 
 func _connect_signals() -> void:
-	SignalBus.item_selected.connect()
+	SignalBus.item_selected.connect(_on_item_selected)
 
 
 # ===================================================================
@@ -156,4 +156,5 @@ func notify_inventory_changed() -> void:
 
 	print("\nInventory Logic: Notified that the inventory changed.")
 
-func 
+func _on_item_selected() -> void:
+	pass
