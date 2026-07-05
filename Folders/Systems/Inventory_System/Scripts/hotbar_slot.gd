@@ -19,8 +19,6 @@ func _ready() -> void:
 
 func refresh() -> void:
 	check_type_of_item()
-	
-	assaign_item()
 
 	refresh_logo()
 
@@ -59,6 +57,8 @@ func get_item() -> ItemEntry:
 
 
 func refresh_logo() -> void:
+	var item = get_item()
+
 	display_logo.texture = null
 
 	if not item:
@@ -70,6 +70,8 @@ func refresh_logo() -> void:
 	display_logo.texture = item.logo
 
 func check_type_of_item() -> void:
+	var item = get_item()
+	
 	if accepted_item_type == "base_item":
 		return
 	
