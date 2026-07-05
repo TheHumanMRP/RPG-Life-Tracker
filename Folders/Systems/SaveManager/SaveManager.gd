@@ -12,8 +12,9 @@ func _init(new_save_path: String = "", new_create_file: bool = true) -> void:
 	print("Save Manager: Init Called")
 
 	if new_save_path:
-		save_path = 
-	save_path = get_save_file_path()
+		save_path = new_save_path
+	else:
+		save_path = get_save_file_path()
 
 	create_file = new_create_file
 
@@ -38,6 +39,7 @@ func delete_save_file() -> void:
 	DirAccess.remove_absolute(save_path)
 
 func load_data() -> void:
+	if 
 	delete_save_file()
 
 	if not FileAccess.file_exists(save_path):
