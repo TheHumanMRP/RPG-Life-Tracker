@@ -129,8 +129,8 @@ func add_test_sword() -> void:
 	var entry := ItemEntry.new()
 	entry.setup(
 		sword,
+		load("res://Folders/Assets/icon.svg"),
 		sword.base_durability,
-		load("res://Folders/Assets/icon.svg")
 	)
 
 	add_item(entry)
