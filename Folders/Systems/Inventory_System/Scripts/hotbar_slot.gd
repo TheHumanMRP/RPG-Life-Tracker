@@ -39,7 +39,7 @@ func set_proper_selection_color_rect_opacity() -> void:
 		return
 	
 	# Selected
-	selection_color_fade.color.a = 0.5 # 50% Visible
+	selection_color_fade.color.a = 0.5 # 50% Visible, 0.7 means 70% visible
 	
 
 func assaign_item() -> void:
