@@ -28,7 +28,7 @@ func refresh() -> void:
 	slot_number_label.text = str(slot_index + 1)
 
 func set_proper_bg_texture() -> void:
-	var selected_slot_index: int = Global.get_selected_hotbar()
+	var selected_slot_index: int = Global.get_selected_hotbar_index()
 
 func assaign_item() -> void:
 	check_id()
