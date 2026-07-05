@@ -30,6 +30,8 @@ func refresh() -> void:
 func set_proper_bg_texture() -> void:
 	var selected_slot_index: int = Global.get_selected_hotbar_index()
 
+	if
+
 func assaign_item() -> void:
 	check_id()
 
