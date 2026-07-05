@@ -79,7 +79,7 @@ func check_type_of_item() -> void:
 	if accepted_item_type == "base_item":
 		return
 	
-	if item.type == accepted_item_type:
+	if item.get_ty== accepted_item_type:
 		return
 	
 	push_error("Inventory Slot: Invalid item type ")
