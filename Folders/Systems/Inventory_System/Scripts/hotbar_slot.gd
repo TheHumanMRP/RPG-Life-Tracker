@@ -8,7 +8,7 @@ class_name HotbarSlot
 @onready var display_logo: TextureRect = $%Logo_Display
 @onready var slot_number_label: Label = $%Slot_Number
 
-var EMPTY_SLOT: int = Global.get_number_of_hotbar_slots()
+var EMPTY_SLOT: int = Global.get_empty_hotbar_slot_const()
 
 var item: ItemEntry
 
