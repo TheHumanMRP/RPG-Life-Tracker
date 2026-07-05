@@ -101,6 +101,6 @@ func check_for_mouse_click(event: InputEvent) -> void:
 	
 	notify_hotbar_selected()
 
-	
+
 func notify_hotbar_selected() -> void:
 	SignalBus.hotbar_selected.emit(slot_index)
