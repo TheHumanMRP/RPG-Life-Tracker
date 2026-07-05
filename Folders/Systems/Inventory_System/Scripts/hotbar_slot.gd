@@ -55,7 +55,6 @@ func get_item() -> ItemEntry:
 
 	return inventory.get_item_by_id(item_id)
 
-
 func refresh_logo() -> void:
 	var item = get_item()
 
