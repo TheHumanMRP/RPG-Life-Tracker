@@ -35,7 +35,10 @@ func set_proper_selection_color_rect_opacity() -> void:
 
 	if selected_slot_index != slot_index:
 		selection_color_fade.color.hex(int(UNSELECTED_HEX_VALUE))
-
+		return
+	
+	selection_color_fade.color.hex(int(SELECTED_HEX_VALUE))
+	
 
 func assaign_item() -> void:
 	check_id()
