@@ -37,7 +37,7 @@ func set_proper_selection_color_rect_opacity() -> void:
 		selection_color_fade.color.hex(int(UNSELECTED_HEX_VALUE))
 		return
 	
-	selection_color_fade.color.hex(int(SELECTED_HEX_VALUE))
+	selection_color_fade.color = int(SELECTED_HEX_VALUE)
 	
 
 func assaign_item() -> void:
