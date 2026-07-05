@@ -5,12 +5,12 @@ class_name HotbarSlot
 @export var item_id: int
 @export var slot_index: int
 
-@onready var bg_texture: TextureRect = $%BG_Texture
+@onready var bg_texture: TextureRect = $%Selection_Colot_Fade
 @onready var display_logo: TextureRect = $%Logo_Display
 @onready var slot_number_label: Label = $%Slot_Number
 
-const UNSELECTED_HEX_VALUE: String = "34343464"
-const SELECTED_HEX_VALUE: String = "34343400"
+const UNSELECTED_HEX_VALUE: String = "34343400"
+const SELECTED_HEX_VALUE: String = "34343464"
 
 var EMPTY_SLOT: int = Global.get_empty_hotbar_slot_const()
 
