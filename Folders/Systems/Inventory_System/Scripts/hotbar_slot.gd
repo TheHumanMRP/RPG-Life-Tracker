@@ -27,7 +27,8 @@ func refresh() -> void:
 
 	slot_number_label.text = str(slot_index + 1)
 
-func 
+func set_proper_bg_texture() -> void:
+	var selected
 
 func assaign_item() -> void:
 	check_id()
