@@ -8,6 +8,9 @@ class_name HotbarSlot
 @onready var display_logo: TextureRect = $%Logo_Display
 @onready var slot_number_label: Label = $%Slot_Number
 
+const UNSELECTED_SLOT_BG_IMAGE_PATH: String = load("res://Folders/Assets/Pure-White.png")
+
+
 var EMPTY_SLOT: int = Global.get_empty_hotbar_slot_const()
 
 var item: ItemEntry
