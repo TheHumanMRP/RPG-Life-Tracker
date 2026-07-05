@@ -32,7 +32,7 @@ func _init() -> void:
 
 func connect_signals() -> void:
 	SignalBus.inventory_changed.connect(assaign_items_to_all_hotbars)
-	SignalBus.hotbar_changed.connect(hotbar_selected)
+	SignalBus.hotbar_selected.connect(hotbar_selected)
 
 # ============================================================================
 # Item Management
