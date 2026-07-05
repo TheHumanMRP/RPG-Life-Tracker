@@ -16,4 +16,4 @@ func item_selected() -> void:
 	equip()
 
 func equip() -> void:
-	pass
+	SignalBus.equip_item
