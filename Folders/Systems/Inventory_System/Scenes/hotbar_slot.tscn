@@ -2,8 +2,10 @@
 
 [ext_resource type="Script" uid="uid://bkvmj0hs40ess" path="res://Folders/Systems/Inventory_System/Scripts/hotbar_slot.gd" id="1_idi7c"]
 [ext_resource type="Texture2D" uid="uid://bqulutjwvblw" path="res://Folders/Assets/icon.svg" id="2_5jo53"]
+[ext_resource type="Texture2D" uid="uid://1ncvq05dl15u" path="res://Folders/Assets/Pure-White.png" id="2_mihhf"]
 
 [node name="Inventory_Slot" type="PanelContainer" unique_id=844703346]
+z_index = -1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -16,6 +18,10 @@ offset_bottom = 31.5
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_idi7c")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=442182621]
+layout_mode = 2
+texture = ExtResource("2_mihhf")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1684947038]
 layout_mode = 2
