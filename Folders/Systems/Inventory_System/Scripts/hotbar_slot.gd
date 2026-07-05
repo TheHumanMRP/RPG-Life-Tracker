@@ -96,13 +96,10 @@ func check_for_mouse_click(event: InputEvent) -> void:
 
 	if not event.pressed:
 		return
-		
+
 	print("\nHotbar Slot: I was clicked, here's my index: ", slot_index)
 	
 	notify_hotbar_selected()
-
-func equip_item() -> void:
-	pass
 
 func notify_hotbar_selected() -> void:
 	SignalBus.hotbar_selected.emit(slot_index)
