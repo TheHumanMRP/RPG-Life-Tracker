@@ -52,8 +52,10 @@ func check_id() -> void:
 	push_error("Inventory Slot: Invalid item id: ", item_id)
 
 
-func get_item() -> void:
-	
+func get_item() -> ItemEntry:
+	var inventory = Global.get_inventory_logic()
+
+	return inventory.get_item_by_id(item_id)
 
 
 func refresh_logo() -> void:
