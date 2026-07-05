@@ -4,6 +4,7 @@ signal refresh_ui
 signal inventory_changed(new_inventory: Array[ItemEntry])
 signal hotbar_changed
 signal hotbar_selected(slot_index: int)
+signal item_selected(item_id: int)
 signal respawn_player
 signal save_game
 
