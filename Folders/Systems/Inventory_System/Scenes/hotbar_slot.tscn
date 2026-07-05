@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bqulutjwvblw" path="res://Folders/Assets/icon.svg" id="2_5jo53"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_42qie"]
-bg_color = Color(1, 1, 1, 1)
+bg_color = Color(0.5489626, 0.5489626, 0.54896253, 1)
 
 [node name="Inventory_Slot" type="PanelContainer" unique_id=844703346]
 z_index = -1
@@ -26,7 +26,7 @@ script = ExtResource("1_idi7c")
 unique_name_in_owner = true
 z_index = 1
 layout_mode = 2
-color = Color(0.20392157, 0.20392157, 0.20392157, 0.15686275)
+color = Color(1, 1, 1, 0)
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1684947038]
 layout_mode = 2
@@ -37,6 +37,7 @@ theme_override_constants/margin_bottom = 20
 
 [node name="Slot_Number" type="Label" parent="MarginContainer" unique_id=1946592826]
 unique_name_in_owner = true
+z_index = 1
 layout_mode = 2
 size_flags_vertical = 1
 text = "1"
