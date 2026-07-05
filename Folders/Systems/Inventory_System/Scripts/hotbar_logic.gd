@@ -81,3 +81,4 @@ func notify_hotbar_changed() -> void:
 
 func hotbar_selected(slot_index: int) -> void:
 	selected_hotbar_slot = slot_index
+	notify_hotbar_changed()
