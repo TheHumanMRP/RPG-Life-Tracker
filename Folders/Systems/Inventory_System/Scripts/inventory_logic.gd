@@ -159,3 +159,4 @@ func notify_inventory_changed() -> void:
 func _on_item_selected(item_id: int) -> void:
 	var selected_item: ItemEntry = get_item_by_id(item_id)
 	
+	selected_item.item_selected()

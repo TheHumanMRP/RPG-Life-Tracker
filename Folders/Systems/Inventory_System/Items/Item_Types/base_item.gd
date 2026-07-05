@@ -11,9 +11,3 @@ func get_type() -> String:
 
 func use(target) -> void:
 	pass
-
-func item_selected() -> void:
-	equip()
-
-func equip() -> void:
-	SignalBus.equip_item
