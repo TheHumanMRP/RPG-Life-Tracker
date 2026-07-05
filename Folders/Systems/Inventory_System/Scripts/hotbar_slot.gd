@@ -5,7 +5,7 @@ class_name HotbarSlot
 @export var item_id: int
 @export var slot_index: int
 
-@onready var bg_texture: TextureRect = $%Selection_Colot_Fade
+@onready var selection_colot_fade: TextureRect = $%Selection_Colot_Fade
 @onready var display_logo: TextureRect = $%Logo_Display
 @onready var slot_number_label: Label = $%Slot_Number
 
@@ -26,19 +26,15 @@ func refresh() -> void:
 
 	refresh_logo()
 
-	set_proper_bg_texture()
+	set_proper_selection_color_rect_opacity()
 
 	slot_number_label.text = str(slot_index + 1)
 
-func set_proper_bg_texture() -> void:
+func set_proper_selection_color_rect_opacity() -> void:
 	var selected_slot_index: int = Global.get_selected_hotbar_index()
 
 	if selected_slot_index != slot_index:
-		bg_texture.texture = load(UNSELECTED_SLOT_BG_IMAGE_PATH)
-		return
-	
-	bg_texture.texture = load(SELECTED_SLOT_BG_IMAGE_PATH)
-	
+
 
 func assaign_item() -> void:
 	check_id()
