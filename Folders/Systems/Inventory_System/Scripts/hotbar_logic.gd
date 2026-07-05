@@ -79,4 +79,5 @@ func check_if_slot_empty(slot: int) -> bool:
 func notify_hotbar_changed() -> void:
 	SignalBus.hotbar_changed.emit()
 
-func 
+func hotbar_selected(slot_index: int) -> void:
+	
