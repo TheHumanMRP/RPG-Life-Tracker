@@ -67,4 +67,5 @@ func check_type_of_item() -> void:
 	push_error("Inventory Slot: Invalid item type ")
 
 func _input(event: InputEvent) -> void:
-	if event = mouse
+	if event == mouse
+		print()
