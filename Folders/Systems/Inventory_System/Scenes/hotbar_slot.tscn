@@ -26,7 +26,7 @@ script = ExtResource("1_idi7c")
 unique_name_in_owner = true
 z_index = 1
 layout_mode = 2
-color = Color(0.20392157, 0.20392157, 0.20392157, 0)
+color = Color(0.20392157, 0.20392157, 0.20392157, 0.14117648)
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1684947038]
 layout_mode = 2
