@@ -11,6 +11,3 @@ func get_type() -> String:
 
 func use(target) -> void:
 	pass
-
-func equip() -> void:
-	pass
