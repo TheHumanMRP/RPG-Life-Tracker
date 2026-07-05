@@ -5,16 +5,12 @@ extends Control
 @onready var hotbar: HBoxContainer = $%Hot_Bar
 
 var number_of_hotbar_slots: int = Global.get_number_of_hotbar_slots()
-var EMPTY_HOTBAR_SLOT: int = Global.get_empty_hotbar_slot_const()
-
-var selected_slot_index: int = -1
 
 func _ready() -> void:
 	recreate_inventory_slots()
 
 	SignalBus.refresh_ui.connect(assaign_proper_id_to_hotbar_slots)
 	SignalBus.hotbar_changed.connect(assaign_proper_id_to_hotbar_slots)
-
 
 func recreate_inventory_slots() -> void:
 	# Remove old slots before recreating them.
