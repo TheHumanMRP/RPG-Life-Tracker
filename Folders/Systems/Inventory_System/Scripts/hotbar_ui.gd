@@ -4,8 +4,9 @@ extends Control
 
 @onready var hotbar: HBoxContainer = $%Hot_Bar
 
-const NUMBER_OF_HOTBAR_SLOTS: int = Global.get_number_of_hotbar_slots()
+var number_of_hotbar_slots: int = Global.get_number_of_hotbar_slots()
 
+var selected_slot_index: int = -1
 
 func _ready() -> void:
 	recreate_inventory_slots()
