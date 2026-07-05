@@ -66,9 +66,14 @@ func check_type_of_item() -> void:
 	
 	push_error("Inventory Slot: Invalid item type ")
 
-func _gui_input(event):
-	if event is InputEventMouseButton:
-		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			print("Panel clicked!")
-		
-func check_for_mouse_click(event) -> void:
+func _gui_input(event: InputEvent):
+	check_for_mouse_click(event)
+
+func check_for_mouse_click(event: InputEvent) -> void:
+	if not event is InputEventMouseButton:
+		return
+
+	if event.button_index != MOUSE_BUTTON_LEFT or not event.pressed:
+			return
+
+	
