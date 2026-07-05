@@ -157,4 +157,4 @@ func notify_inventory_changed() -> void:
 	print("\nInventory Logic: Notified that the inventory changed.")
 
 func _on_item_selected() -> void:
-	pass
+	get_item_by_id(ite)
