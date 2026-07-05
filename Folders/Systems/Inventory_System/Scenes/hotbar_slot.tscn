@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://bkvmj0hs40ess" path="res://Folders/Systems/Inventory_System/Scripts/hotbar_slot.gd" id="1_idi7c"]
 [ext_resource type="Texture2D" uid="uid://bqulutjwvblw" path="res://Folders/Assets/icon.svg" id="2_5jo53"]
-[ext_resource type="Texture2D" uid="uid://dgx8dtd88fefq" path="res://Folders/Assets/Pure-Black.png" id="2_mihhf"]
 
 [node name="Inventory_Slot" type="PanelContainer" unique_id=844703346]
 z_index = -1
@@ -19,11 +18,9 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_idi7c")
 
-[node name="Selected_Effect" type="TextureRect" parent="." unique_id=442182621]
-unique_name_in_owner = true
+[node name="ColorRect" type="ColorRect" parent="." unique_id=201952789]
 z_index = 1
 layout_mode = 2
-texture = ExtResource("2_mihhf")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1684947038]
 layout_mode = 2
