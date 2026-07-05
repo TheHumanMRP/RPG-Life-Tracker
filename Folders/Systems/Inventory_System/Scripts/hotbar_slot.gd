@@ -34,7 +34,7 @@ func set_proper_selection_color_rect_opacity() -> void:
 	var selected_slot_index: int = Global.get_selected_hotbar_index()
 
 	if selected_slot_index != slot_index:
-		selection_color_fade.color.a = 215
+		selection_color_fade.color.a = 255
 		
 		return
 	
