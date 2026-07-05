@@ -2,12 +2,14 @@ extends Resource
 class_name ItemEntry
 
 @export var item: BaseItem
+@export var item_type: String
 @export var durability: float
 @export var item_id: int
 @export var logo: Texture2D
 
 func setup(new_item: BaseItem, new_durability: float, new_logo: Texture2D):
 	item = new_item
+	item_type = item.get_type()
 	durability = new_durability
 	logo = new_logo
 
