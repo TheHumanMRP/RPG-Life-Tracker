@@ -80,4 +80,4 @@ func notify_hotbar_changed() -> void:
 	SignalBus.hotbar_changed.emit()
 
 func hotbar_selected(slot_index: int) -> void:
-	
+	hotbar
