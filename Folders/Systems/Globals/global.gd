@@ -27,6 +27,9 @@ func check_if_item_at_index_in_inventory_exists(index: int) -> bool:
 func get_inventory_logic() -> InventoryLogicComponent:
 	return save_data.inventory_logic
 
+func get_empty_hotbar_slot_const() -> int:
+	return save_data.hotbar_logic.EMPTY_HOTBAR_SLOT
+
 func get_number_of_hotbar_slots() -> int:
 	return save_data.hotbar_logic.NUMBER_OF_HOTBAR_SLOTS
 
