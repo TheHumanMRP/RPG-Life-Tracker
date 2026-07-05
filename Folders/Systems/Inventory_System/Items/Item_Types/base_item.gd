@@ -10,3 +10,6 @@ class_name BaseItem
 
 func use(target) -> void:
 	pass
+
+func equip() -> void:
+	pass
