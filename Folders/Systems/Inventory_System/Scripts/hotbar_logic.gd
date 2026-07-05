@@ -32,6 +32,7 @@ func _init() -> void:
 
 func connect_signals() -> void:
 	SignalBus.inventory_changed.connect(assaign_items_to_all_hotbars)
+	SignalBus.hotbar_changed.connect(hotbar_selected)
 
 # ============================================================================
 # Item Management
@@ -74,7 +75,6 @@ func assaign_items_to_all_hotbars() -> void:
 ## Returns `true` if the specified hotbar slot is empty.
 func check_if_slot_empty(slot: int) -> bool:
 	return hotbar_slots[slot] == EMPTY_HOTBAR_SLOT
-
 
 func hotbar_selected(slot_index: int) -> void:
 	selected_hotbar_slot_index = slot_index
