@@ -11,3 +11,6 @@ func get_type() -> String:
 
 func use(target) -> void:
 	pass
+
+func item_selected() -> void:
+	pass
