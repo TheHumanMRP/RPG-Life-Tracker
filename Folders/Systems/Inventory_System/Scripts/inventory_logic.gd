@@ -25,14 +25,12 @@ const EMPTY_HOTBAR_SLOT: int = -1
 func _init() -> void:
 	call_deferred("_setup")
 
-
 func _setup() -> void:
 	_calculate_max_id()
 	_connect_signals()
 
-
 func _connect_signals() -> void:
-	pass
+	SignalBus.item_selected.connect()
 
 
 # ===================================================================
@@ -157,3 +155,5 @@ func notify_inventory_changed() -> void:
 	SignalBus.save_game.emit()
 
 	print("\nInventory Logic: Notified that the inventory changed.")
+
+func 
