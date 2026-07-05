@@ -13,4 +13,7 @@ func use(target) -> void:
 	pass
 
 func item_selected() -> void:
+	equip()
+
+func equip() -> void:
 	pass
