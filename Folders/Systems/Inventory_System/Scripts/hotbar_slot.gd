@@ -14,8 +14,6 @@ const SELECTED_HEX_VALUE: String = "343434"
 
 var EMPTY_SLOT: int = Global.get_empty_hotbar_slot_const()
 
-var item: ItemEntry
-
 func _ready() -> void:
 	refresh()
 
@@ -40,17 +38,6 @@ func set_proper_selection_color_rect_opacity() -> void:
 	
 	# Selected
 	selection_color_fade.color.a = 0.5 # 50% Visible, 0.7 means 70% visible
-	
-
-func assaign_item() -> void:
-	check_id()
-
-	if item_id == EMPTY_SLOT:
-		return
-
-	item = Global.get_inventory_logic().get_item_by_id(item_id)
-	
-	check_type_of_item()
 
 func check_id() -> void:
 	var inventory_items: Array[ItemEntry] = Global.get_inventory()
@@ -79,7 +66,7 @@ func check_type_of_item() -> void:
 	if accepted_item_type == "base_item":
 		return
 	
-	if item.get_ty== accepted_item_type:
+	if item.item_type == accepted_item_type:
 		return
 	
 	push_error("Inventory Slot: Invalid item type ")
