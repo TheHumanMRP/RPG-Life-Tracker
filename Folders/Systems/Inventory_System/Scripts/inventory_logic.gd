@@ -28,6 +28,11 @@ func _init() -> void:
 
 func _setup() -> void:
 	calculate_max_id()
+	_connect_signals()
+
+
+func _connect_signals() -> void:
+	pass
 
 
 # ===================================================================
