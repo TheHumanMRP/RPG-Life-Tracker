@@ -8,8 +8,8 @@ class_name HotbarSlot
 @onready var display_logo: TextureRect = $%Logo_Display
 @onready var slot_number_label: Label = $%Slot_Number
 
-const UNSELECTED_SLOT_BG_IMAGE_PATH: String = load("res://Folders/Assets/Pure-White.png")
-
+const UNSELECTED_SLOT_BG_IMAGE_PATH: String = "res://Folders/Assets/Pure-White.png"
+const SELECTED_SLOT_BG_IMAGE_PATH: String = "res://Folders/Assets/Pure-Black.png"
 
 var EMPTY_SLOT: int = Global.get_empty_hotbar_slot_const()
 
@@ -27,7 +27,7 @@ func refresh() -> void:
 
 	slot_number_label.text = str(slot_index + 1)
 
-func 
+func
 
 func assaign_item() -> void:
 	check_id()
