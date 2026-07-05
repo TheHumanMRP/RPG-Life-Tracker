@@ -8,9 +8,11 @@ extends Resource
 const DEV_SAVE_PATH := "user://dev/save_data.tres"
 const LIVE_SAVE_PATH := "user://live/save_data.tres"
 
-func _init(new_create_file: bool = true) -> void:
+func _init(new_save_path: String = "", new_create_file: bool = true) -> void:
 	print("Save Manager: Init Called")
 
+	if new_save_path:
+		save_path = 
 	save_path = get_save_file_path()
 
 	create_file = new_create_file
