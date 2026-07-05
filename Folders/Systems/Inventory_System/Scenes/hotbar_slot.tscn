@@ -21,12 +21,15 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_42qie")
 script = ExtResource("1_idi7c")
+accepted_item_type = null
+item_id = null
+slot_index = null
 
 [node name="Selection_Color_Fade" type="ColorRect" parent="." unique_id=201952789]
 unique_name_in_owner = true
 z_index = 1
 layout_mode = 2
-color = Color(0.20392157, 0.20392157, 0.20392157, 0.14117648)
+color = Color(0.20392157, 0.20392157, 0.20392157, 0.39215687)
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1684947038]
 layout_mode = 2
