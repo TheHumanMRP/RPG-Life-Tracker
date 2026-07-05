@@ -78,3 +78,5 @@ func check_if_slot_empty(slot: int) -> bool:
 ## This shit is here so that I don't have to go to a billion places if I by mistakely somehow change the signal name
 func notify_hotbar_changed() -> void:
 	SignalBus.hotbar_changed.emit()
+
+func 
