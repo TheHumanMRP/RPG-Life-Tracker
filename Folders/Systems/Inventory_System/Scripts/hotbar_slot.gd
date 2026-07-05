@@ -35,11 +35,11 @@ func set_proper_selection_color_rect_opacity() -> void:
 
 	if selected_slot_index == slot_index:
 		# Selected
-		selection_color_fade.color.a = 1
+		selection_color_fade.color.a = 0.5
 		return
 	
 	# Unselected
-	selection_color_fade.color.a = 0.3
+	selection_color_fade.color.a = 0
 	
 
 func assaign_item() -> void:
