@@ -27,7 +27,7 @@ func _init() -> void:
 
 
 func _setup() -> void:
-	calculate_max_id()
+	_calculate_max_id()
 	_connect_signals()
 
 
@@ -40,7 +40,7 @@ func _connect_signals() -> void:
 # ===================================================================
 
 ## Calculates the next available item ID.
-func calculate_max_id() -> void:
+func _calculate_max_id() -> void:
 	max_id = 0
 
 	for item in inventory_items:
