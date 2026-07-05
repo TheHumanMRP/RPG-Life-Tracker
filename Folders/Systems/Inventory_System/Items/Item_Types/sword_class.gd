@@ -3,6 +3,10 @@ extends BaseItem
 
 var damage_power: int = 10
 
+var type: String:
+	get:
+		"sword"
+
 func _init() -> void:
 	type = "sword"
 
