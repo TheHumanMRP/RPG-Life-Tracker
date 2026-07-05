@@ -39,6 +39,7 @@ func set_proper_selection_color_rect_opacity() -> void:
 	# Selected
 	selection_color_fade.color.a = 0.5 # 50% Visible, 0.7 means 70% visible
 
+
 func check_id() -> void:
 	var inventory_items: Array[ItemEntry] = Global.get_inventory()
 
@@ -49,6 +50,10 @@ func check_id() -> void:
 		return
 
 	push_error("Inventory Slot: Invalid item id: ", item_id)
+
+
+func get_item() -> void:
+	
 
 
 func refresh_logo() -> void:
