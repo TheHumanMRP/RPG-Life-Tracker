@@ -26,13 +26,18 @@ func refresh() -> void:
 
 	refresh_logo()
 
+	set_proper_bg_texture()
+
 	slot_number_label.text = str(slot_index + 1)
 
 func set_proper_bg_texture() -> void:
 	var selected_slot_index: int = Global.get_selected_hotbar_index()
 
 	if selected_slot_index != slot_index:
+		bg_texture.texture = load(UNSELECTED_SLOT_BG_IMAGE_PATH)
 		return
+	
+	bg_texture.texture = load(SELECTED_SLOT_BG_IMAGE_PATH)
 	
 
 func assaign_item() -> void:
