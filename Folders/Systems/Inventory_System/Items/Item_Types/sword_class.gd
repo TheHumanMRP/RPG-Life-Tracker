@@ -3,9 +3,6 @@ extends BaseItem
 
 var damage_power: int = 10
 
-func get_type() -> String:
-	return "sword"
-
 func setup(new_name: String, new_logo: Texture2D = null, new_base_durability: int = base_durability) -> void:
 	name = new_name
 	base_durability = new_base_durability
