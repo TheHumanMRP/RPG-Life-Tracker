@@ -58,12 +58,12 @@ func get_item() -> ItemEntry:
 	return inventory.get_item_by_id(item_id)
 
 func refresh_logo() -> void:
+	display_logo.texture = null
+
 	if item_id == EMPTY_SLOT:
 		return
 	
 	var item = get_item()
-
-	display_logo.texture = null
 
 	if not item:
 		return
