@@ -53,7 +53,7 @@ func check_id() -> void:
 func get_item() -> ItemEntry:
 	var inventory = Global.get_inventory_logic()
 
-	print("Hotbar Slot: Here's the ")
+	print("Hotbar Slot: Here's the item_id: ", item_id)
 
 	return inventory.get_item_by_id(item_id)
 
