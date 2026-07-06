@@ -107,8 +107,10 @@ func check_if_item_at_index_in_inventory_exists(index: int) -> bool:
 ## Returns an item using its unique ID.
 func get_item_by_id(item_id: int) -> ItemEntry:
 	for item in inventory_items:
-		if item.item_id == item_id:
-			return item
+		if not item.item_id == item_id:
+			continue
+		
+		return item
 
 	print("\nInventoryLogic: Debug")
 	print("Inventory Size: ", inventory_items.size())
