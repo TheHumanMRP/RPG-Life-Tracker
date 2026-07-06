@@ -82,10 +82,10 @@ func hotbar_selected(slot_index: int) -> void:
 	var selected_item_id: int = hotbar_slots[slot_index]
 
 	if selected_item_id == EMPTY_HOTBAR_SLOT:
+		notify_hotbar_changed()
 		return
-		
+
 	SignalBus.item_selected.emit(selected_item_id)
-	notify_hotbar_changed()
 
 ## This shit is here so that I don't have to go to a billion places if I by mistakely somehow change the signal name
 func notify_hotbar_changed() -> void:
