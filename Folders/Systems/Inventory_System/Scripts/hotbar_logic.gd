@@ -83,6 +83,7 @@ func hotbar_selected(slot_index: int) -> void:
 
 	if selected_item_id == EMPTY_HOTBAR_SLOT:
 		return
+		
 	SignalBus.item_selected.emit(selected_item_id)
 	notify_hotbar_changed()
 
