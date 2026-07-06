@@ -9,8 +9,8 @@ class_name HotbarSlot
 @onready var display_logo: TextureRect = $%Logo_Display
 @onready var slot_number_label: Label = $%Slot_Number
 
-const UNSELECTED_OPACITY: String = "343434"
-const SELECTED_OPACITY: float = 0.0
+const UNSELECTED_OPACITY: float = 0.0
+const SELECTED_OPACITY: float = 0.5
 
 var EMPTY_SLOT: int = Global.get_empty_hotbar_slot_const()
 
@@ -31,11 +31,11 @@ func set_proper_selection_color_rect_opacity() -> void:
 
 	if selected_slot_index != slot_index:
 		# Unselected
-		selection_color_fade.color.a = 0 # Fully transparent
+		selection_color_fade.color.a = UNSELECTED_OPACITY # Fully transparent
 		return
 	
 	# Selected
-	selection_color_fade.color.a = 0.5 # 50% Visible, 0.7 means 70% visible
+	selection_color_fade.color.a = SELECTED_OPACITY # 50% Visible, 0.7 means 70% visible
 
 
 func check_id() -> void:
