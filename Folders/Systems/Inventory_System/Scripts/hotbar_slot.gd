@@ -71,6 +71,9 @@ func refresh_logo() -> void:
 	display_logo.texture = item.logo
 
 func check_type_of_item() -> void:
+	if item_id == EMPTY_SLOT:
+		return
+	
 	var item = get_item()
 	
 	if accepted_item_type == "base_item":
