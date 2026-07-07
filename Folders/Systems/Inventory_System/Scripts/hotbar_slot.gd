@@ -119,39 +119,39 @@ func check_for_keyboard_selection() -> void:
 			return
 
 	if Input.is_action_just_pressed("select_hotbar_slot_2"):
-			if slot_index == 0:
-				notify_hotbar_selected()
-				return
+		if slot_index == 2:
+			notify_hotbar_selected()
+			return
 
 	if Input.is_action_just_pressed("select_hotbar_slot_3"):
-			if slot_index == 0:
-				notify_hotbar_selected()
-				return
+		if slot_index == 3:
+			notify_hotbar_selected()
+			return
 
 	if Input.is_action_just_pressed("select_hotbar_slot_4"):
-			if slot_index == 0:
-				notify_hotbar_selected()
-				return
+		if slot_index == 4:
+			notify_hotbar_selected()
+			return
 
 	if Input.is_action_just_pressed("select_hotbar_slot_5"):
-			if slot_index == 0:
-				notify_hotbar_selected()
-				return
+		if slot_index == 5:
+			notify_hotbar_selected()
+			return
 
 	if Input.is_action_just_pressed("select_hotbar_slot_6"):
-			if slot_index == 0:
-				notify_hotbar_selected()
-				return
+		if slot_index == 6:
+			notify_hotbar_selected()
+			return
 
 	if Input.is_action_just_pressed("select_hotbar_slot_7"):
-			if slot_index == 0:
-				notify_hotbar_selected()
-				return
+		if slot_index == 7:
+			notify_hotbar_selected()
+			return
 
 	if Input.is_action_just_pressed("select_hotbar_slot_8"):
-			if slot_index == 0:
-				notify_hotbar_selected()
-				return
+		if slot_index == 8:
+			notify_hotbar_selected()
+			return
 
 
 func notify_hotbar_selected() -> void:
