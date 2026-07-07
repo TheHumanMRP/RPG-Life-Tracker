@@ -15,5 +15,5 @@ func _ready() -> void:
 	refresh_ui.emit()
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("Respawn"):
+	if event.is_action_pressed("respawn"):
 		respawn_player.emit()
