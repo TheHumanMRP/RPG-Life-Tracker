@@ -29,3 +29,8 @@ position = Vector2(143, 43)
 position = Vector2(0, 137)
 insta_kill = true
 player_only = true
+
+[node name="DamageArea2" parent="." unique_id=31093065 instance=ExtResource("4_d6cyu")]
+position = Vector2(0, 137)
+insta_kill = true
+player_only = true
