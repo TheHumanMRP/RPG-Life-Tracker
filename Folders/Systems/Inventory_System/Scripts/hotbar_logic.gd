@@ -34,6 +34,10 @@ func connect_signals() -> void:
 	SignalBus.inventory_changed.connect(assaign_items_to_all_hotbars)
 	SignalBus.hotbar_selected.connect(hotbar_selected)
 
+
+
+
+
 # ============================================================================
 # Item Management
 # ============================================================================
