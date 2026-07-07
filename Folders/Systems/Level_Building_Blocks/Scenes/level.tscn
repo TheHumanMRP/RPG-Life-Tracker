@@ -25,12 +25,15 @@ single_time_checkpoint = true
 unique_name_in_owner = true
 position = Vector2(143, 43)
 
-[node name="DamageArea" parent="." unique_id=1450602764 instance=ExtResource("4_d6cyu")]
+[node name="DamageAreas" type="Node" parent="." unique_id=1404558046]
+
+[node name="DamageArea" parent="DamageAreas" unique_id=1450602764 instance=ExtResource("4_d6cyu")]
 position = Vector2(0, 137)
 insta_kill = true
 player_only = true
 
-[node name="DamageArea2" parent="." unique_id=31093065 instance=ExtResource("4_d6cyu")]
-position = Vector2(0, 137)
+[node name="DamageArea2" parent="DamageAreas" unique_id=31093065 instance=ExtResource("4_d6cyu")]
+position = Vector2(1382, 877)
 insta_kill = true
 player_only = true
+width = 6000.0
