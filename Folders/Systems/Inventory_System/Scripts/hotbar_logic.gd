@@ -35,9 +35,6 @@ func connect_signals() -> void:
 	SignalBus.hotbar_selected.connect(hotbar_selected)
 
 
-
-
-
 # ============================================================================
 # Item Management
 # ============================================================================
