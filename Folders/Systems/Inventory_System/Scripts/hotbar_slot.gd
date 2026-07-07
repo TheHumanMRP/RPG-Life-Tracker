@@ -104,12 +104,14 @@ func check_for_mouse_click(event: InputEvent) -> void:
 	
 	notify_hotbar_selected()
 
-func notify_hotbar_selected() -> void:
-	SignalBus.hotbar_selected.emit(slot_index)
-
-
 func _process(delta: float) -> void:
 	check_for_keyboard_selection()
 
 func check_for_keyboard_selection() -> void:
 	if Input.is_action_just_pressed("select_hotbar_slot_1"):
+		if slot_index == 0:
+			notify_hotbar_selected()
+			return
+
+func notify_hotbar_selected() -> void:
+	SignalBus.hotbar_selected.emit(slot_index)
