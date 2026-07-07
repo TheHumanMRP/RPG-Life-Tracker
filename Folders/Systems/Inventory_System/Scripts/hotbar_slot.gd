@@ -108,7 +108,7 @@ func _process(delta: float) -> void:
 	check_for_keyboard_selection()
 
 func check_for_keyboard_selection() -> void:
-	if Input.is_action_just_pressed("select_hotbar_slot_1"):
+	if Input.is_action_just_pressed("select_hotbar_slot_0"):
 		if slot_index == 0:
 			notify_hotbar_selected()
 			return
