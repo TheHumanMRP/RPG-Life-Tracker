@@ -63,7 +63,7 @@ func get_velocity(
 		coyote_timer = coyote_time
 	else:
 		if jump_counter < 2:
-		coyote_timer -= delta
+			coyote_timer -= delta
 
 	# Wall Jump
 	# if is_on_wall and jump and not is_on_floor:
