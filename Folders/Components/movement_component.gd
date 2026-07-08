@@ -63,7 +63,8 @@ func get_velocity(
 		coyote_timer -= delta
 
 	# Wall Jump
-	if is_on_wall and and not is_on_floor and jump:
+	if is_on_wall and jump and not is_on_floor:
+		print("\nMovement Componenet: wall jump!")
 		velocity.x = wall_dir * wall_jump_force
 		velocity.y = - (wall_jump_force / 2)
 

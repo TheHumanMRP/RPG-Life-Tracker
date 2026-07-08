@@ -110,13 +110,11 @@ func _physics_process(delta: float) -> void:
 		velocity,
 		x_direction,
 		is_on_floor(),
-		is_on_wall_only(),
+		is_on_wall(),
 		get_wall_normal().x,
 		jump,
 		delta
 	)
-
-	print("Player: Here's the get_wall_normal.x: ", get_wall_normal().x)
 
 	# Move the player.
 	move_and_slide()
