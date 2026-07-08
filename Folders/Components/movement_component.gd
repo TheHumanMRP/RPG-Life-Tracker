@@ -9,6 +9,7 @@ extends Node
 @export var turn_friction_multiplier := 2.5
 @export var jump_force := 500.0
 @export var gravity := 1000.0
+@export var wall_jump: bool = true
 
 @export var coyote_time = 0.12
 
@@ -23,7 +24,8 @@ func set_movement_component_values(
 	new_turn_friction_multiplier: float = 2.5,
 	new_jump_force: float = 500.0,
 	new_gravity: float = 1000.0,
-	new_coyote_time: float = 0.12
+	new_coyote_time: float = 0.12,
+	new_wall_jump: bool = false
 ) -> void:
 	max_speed = new_max_speed
 	acceleration = new_acceleration
