@@ -12,9 +12,9 @@ extends Node
 @export var wall_jump_force: float = 1000.0
 @export var wall_jump: bool = true
 
-
 @export var coyote_time = 0.12
 
+var jump_counter: int = 0
 var coyote_timer = 0
 
 func set_movement_component_values(
@@ -69,7 +69,6 @@ func get_velocity(
 	# 	velocity.y = - (wall_jump_force / 2)
 
 	# print(is_on_wall, ",", jump, ",", is_on_floor)
-
 
 
 	# Jump
