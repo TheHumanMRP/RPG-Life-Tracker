@@ -60,10 +60,12 @@ func get_velocity(
 
 	if is_on_floor:
 		velocity.y = 0
+		jump_counter = 0
 		
 	# Jump
-	if jump:
+	if jump and jump_counter < 2:
 		velocity.y = - jump_force
+		jump_counter += 1
 
 	# Decelerate when no input
 	if direction == 0:
