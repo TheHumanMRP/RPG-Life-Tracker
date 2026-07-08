@@ -25,7 +25,7 @@ func set_movement_component_values(
 	new_jump_force: float = 500.0,
 	new_gravity: float = 1000.0,
 	new_coyote_time: float = 0.12,
-	new_wall_jump: bool = false
+	new_wall_jump: bool = true
 ) -> void:
 	max_speed = new_max_speed
 	acceleration = new_acceleration
@@ -36,6 +36,7 @@ func set_movement_component_values(
 	jump_force = new_jump_force
 	gravity = new_gravity
 	coyote_time = new_coyote_time
+	wall_jump = new_wall_jump
 
 
 func get_velocity(
@@ -55,6 +56,9 @@ func get_velocity(
 		coyote_timer = coyote_time
 	else:
 		coyote_timer -= delta
+
+	# Wall Jump
+	if 
 
 	# Jump
 	if jump and coyote_timer > 0:
