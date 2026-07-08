@@ -27,7 +27,7 @@ extends CharacterBody2D
 # Movement Component Configuration
 # --------------------------------------------------------------------
 
-# Example movement configuration:
+# Pixel Art movement configuration:
 #
 # movement_component.set_movement_component_values(
 # 	200, 500, 200, 1500, 200, 2.5, 200, 600, 0.12
