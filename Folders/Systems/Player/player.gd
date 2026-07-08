@@ -115,7 +115,7 @@ func _physics_process(delta: float) -> void:
 		delta
 	)
 
-	direc
+	print(get_wall_normal()
 
 	# Move the player.
 	move_and_slide()
