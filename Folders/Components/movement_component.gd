@@ -11,6 +11,7 @@ extends Node
 @export var gravity := 1000.0
 @export var wall_jump_force: float = 1000.0
 @export var wall_jump: bool = true
+@export var 
 
 @export var coyote_time = 0.12
 
