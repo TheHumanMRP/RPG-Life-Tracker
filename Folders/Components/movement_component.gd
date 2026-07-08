@@ -43,6 +43,7 @@ func get_velocity(
 	current_velocity: Vector2,
 	direction: int,
 	is_on_floor: bool,
+	is_on_wall_only: bool,
 	jump: bool,
 	delta: float
 ) -> Vector2:
@@ -58,7 +59,7 @@ func get_velocity(
 		coyote_timer -= delta
 
 	# Wall Jump
-	if 
+	if
 
 	# Jump
 	if jump and coyote_timer > 0:

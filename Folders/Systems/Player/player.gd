@@ -110,6 +110,7 @@ func _physics_process(delta: float) -> void:
 		velocity,
 		x_direction,
 		is_on_floor(),
+		is_on_wall_only(),
 		jump,
 		delta
 	)
