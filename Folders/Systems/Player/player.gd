@@ -115,6 +115,8 @@ func _physics_process(delta: float) -> void:
 		delta
 	)
 
+	direc
+
 	# Move the player.
 	move_and_slide()
 
