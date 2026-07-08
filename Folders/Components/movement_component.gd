@@ -60,20 +60,7 @@ func get_velocity(
 
 	if is_on_floor:
 		velocity.y = 0
-		coyote_timer = coyote_time
-	else:
-		if jump_counter < 2:
-			coyote_timer -= delta
-
-	# Wall Jump
-	# if is_on_wall and jump and not is_on_floor:
-	# 	print("\nMovement Componenet: Wall jump!")
-	# 	velocity.x = wall_dir * wall_jump_force
-	# 	velocity.y = - (wall_jump_force / 2)
-
-	# print(is_on_wall, ",", jump, ",", is_on_floor)
-
-
+		
 	# Jump
 	if jump and coyote_timer > 0:
 		velocity.y = - jump_force
