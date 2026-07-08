@@ -46,7 +46,7 @@ func get_velocity(
 	current_velocity: Vector2,
 	direction: int,
 	is_on_floor: bool,
-	is_on_wall_only: bool,
+	is_on_wall: bool,
 	wall_dir: float,
 	jump: bool,
 	delta: float
@@ -63,7 +63,7 @@ func get_velocity(
 		coyote_timer -= delta
 
 	# Wall Jump
-	if is_on_wall_only and jump:
+	if is_on_wall and and not is_on_floor and jump:
 		velocity.x = wall_dir * wall_jump_force
 		velocity.y = - (wall_jump_force / 2)
 
