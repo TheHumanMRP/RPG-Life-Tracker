@@ -59,7 +59,8 @@ func get_velocity(
 		coyote_timer -= delta
 
 	# Wall Jump
-	if
+	if is_on_wall_only and jump:
+		pass
 
 	# Jump
 	if jump and coyote_timer > 0:
