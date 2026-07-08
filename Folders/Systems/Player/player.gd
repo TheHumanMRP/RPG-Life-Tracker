@@ -116,6 +116,8 @@ func _physics_process(delta: float) -> void:
 		delta
 	)
 
+	print("Player: Here's the get_wall_normal.x: ", get_wall_normal().x)
+
 	# Move the player.
 	move_and_slide()
 
