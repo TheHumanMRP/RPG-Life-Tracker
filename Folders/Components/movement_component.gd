@@ -62,7 +62,7 @@ func get_velocity(
 		velocity.y = 0
 		
 	# Jump
-	if jump and coyote_timer > 0:
+	if jump:
 		velocity.y = - jump_force
 
 	# Decelerate when no input
