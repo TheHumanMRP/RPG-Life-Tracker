@@ -60,7 +60,7 @@ func get_velocity(
 
 	# Wall Jump
 	if is_on_wall_only and jump:
-		print("Movement Component: I think I should let the user wall jump")
+		print("\nMovement Component: I think I should let the user wall jump")
 
 	# Jump
 	if jump and coyote_timer > 0:
