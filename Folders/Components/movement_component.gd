@@ -23,7 +23,9 @@ func set_movement_component_values(
 	new_turn_friction_multiplier: float = 2.5,
 	new_jump_force: float = 500.0,
 	new_gravity: float = 1000.0,
-	new_coyote_time: float = 0.12
+	new_coyote_time: float = 0.12,
+	allow_double_jump: bool = trueg
+
 ) -> void:
 	max_speed = new_max_speed
 	acceleration = new_acceleration
