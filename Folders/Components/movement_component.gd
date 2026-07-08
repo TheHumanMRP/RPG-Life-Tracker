@@ -9,7 +9,9 @@ extends Node
 @export var turn_friction_multiplier := 2.5
 @export var jump_force := 500.0
 @export var gravity := 1000.0
+@export var wall_jump_force: float = 1000.0
 @export var wall_jump: bool = true
+
 
 @export var coyote_time = 0.12
 
@@ -25,6 +27,7 @@ func set_movement_component_values(
 	new_jump_force: float = 500.0,
 	new_gravity: float = 1000.0,
 	new_coyote_time: float = 0.12,
+	new_wall_jump_force: float,
 	new_wall_jump: bool = true
 ) -> void:
 	max_speed = new_max_speed
@@ -61,9 +64,6 @@ func get_velocity(
 
 	# Wall Jump
 	if is_on_wall_only and jump:
-		if wall_dir:
-			pass
-
 	# Jump
 	if jump and coyote_timer > 0:
 		velocity.y = - jump_force
