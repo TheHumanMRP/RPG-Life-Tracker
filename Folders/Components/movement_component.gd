@@ -44,6 +44,7 @@ func get_velocity(
 	direction: int,
 	is_on_floor: bool,
 	is_on_wall_only: bool,
+	wall_normal: float,
 	jump: bool,
 	delta: float
 ) -> Vector2:
