@@ -65,7 +65,7 @@ func get_velocity(
 	# Wall Jump
 	if is_on_wall_only and jump:
 		velocity.x = wall_dir * wall_jump_force
-		velocity.y -= wall_jump_force / 6
+		velocity.y -= wall_jump_force / 2
 
 	# Jump
 	if jump and coyote_timer > 0:
