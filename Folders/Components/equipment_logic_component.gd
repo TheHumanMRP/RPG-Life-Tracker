@@ -14,12 +14,15 @@ var weapon_item_id: int = -1
 
 # ======================================
 # Get item entry
-
+# ======================================
 func get_item_entry(item_id: int) -> ItemEntry:
 	var inventory_logic: InventoryLogicComponent = Global.get_inventory_logic()
 
 	return inventory_logic.get_item_by_id(item_id)
 
+# ======================================
+# Equip helmet
+# ======================================
 func equip_new_helmet(new_helmet_item_id: int) -> void:
 	var new_helmet: ItemEntry = get_item_entry(new_helmet_item_id)
 
@@ -28,6 +31,10 @@ func equip_new_helmet(new_helmet_item_id: int) -> void:
 		return
 	
 	helmet_item_id = new_helmet_item_id
+
+# ======================================
+# Equip chestplate
+# ======================================
 
 func equip_new_chestplate(new_chestplate_item_id: int) -> void:
 	var new_chestplate: ItemEntry = get_item_entry(new_chestplate_item_id)
@@ -38,6 +45,10 @@ func equip_new_chestplate(new_chestplate_item_id: int) -> void:
 	
 	chestplate_item_id = new_chestplate_item_id
 
+# ======================================
+# Equip leggings
+# ======================================
+
 func equip_new_leggings(new_leggings_item_id: int) -> void:
 	var new_leggings: ItemEntry = get_item_entry(new_leggings_item_id)
 
@@ -47,6 +58,10 @@ func equip_new_leggings(new_leggings_item_id: int) -> void:
 	
 	leggings_item_id = new_leggings_item_id
 
+# ======================================
+# Equip boots
+# ======================================
+
 func equip_new_boots(new_boots_item_id: int) -> void:
 	var new_boots: ItemEntry = get_item_entry(new_boots_item_id)
 
@@ -55,6 +70,9 @@ func equip_new_boots(new_boots_item_id: int) -> void:
 		return
 	
 	boots_item_id = new_boots_item_id
+
+# ======================================
+# Equip weapon
 
 func equip_new_weapon(new_weapon_item_id: int) -> void:
 	var new_weapon: ItemEntry = get_item_entry(new_weapon_item_id)
@@ -66,7 +84,7 @@ func equip_new_weapon(new_weapon_item_id: int) -> void:
 	weapon_item_id = new_weapon_item_id
 
 # ======================================
-# Unequip shit
+# Unequip helmet
 # ======================================
 
 func unequip_helmet() -> void:
