@@ -9,6 +9,12 @@ var leggings_item_id: int = -1
 var boots_item_id: int = -1
 var weapon_item_id: int = -1
 
+# Quickly comment the entire codebase below please
+
+
+# ======================================
+# Get item entry
+
 func get_item_entry(item_id: int) -> ItemEntry:
 	var inventory_logic: InventoryLogicComponent = Global.get_inventory_logic()
 
@@ -58,3 +64,22 @@ func equip_new_weapon(new_weapon_item_id: int) -> void:
 		return
 	
 	weapon_item_id = new_weapon_item_id
+
+# ======================================
+# Unequip shit
+# ======================================
+
+func unequip_helmet() -> void:
+	helmet_item_id = EMPTY_EQUIPMENT_SLOT
+
+func unequip_chestplate() -> void:
+	chestplate_item_id = EMPTY_EQUIPMENT_SLOT
+
+func unequip_leggings() -> void:
+	leggings_item_id = EMPTY_EQUIPMENT_SLOT
+
+func unequip_boots() -> void:
+	boots_item_id = EMPTY_EQUIPMENT_SLOT
+
+func unequip_weapon() -> void:
+	weapon_item_id = EMPTY_EQUIPMENT_SLOT
