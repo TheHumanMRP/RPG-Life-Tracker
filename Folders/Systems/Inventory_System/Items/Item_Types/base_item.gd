@@ -16,8 +16,5 @@ enum Item_Type {
 	BASE_ITEM
 }
 
-func get_type() -> String:
-	return "base_item"
-
 func use(target) -> void:
 	pass
