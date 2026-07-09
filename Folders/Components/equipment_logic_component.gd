@@ -18,4 +18,4 @@ func equip_new_helmet(new_helmet_item_id: int) -> void:
 	var new_helmet: ItemEntry = get_item_entry(new_helmet_item_id)
 
 	if new_helmet.item_type != "helmet":
-		push_error("")
+		push_error("\nEquipment Logic Componenet: Brother,  `", new_helmet.item_type, "` ")
