@@ -9,20 +9,11 @@ var leggings_item_id: int = -1
 var boots_item_id: int = -1
 var weapon_item_id: int = -1
 
-# Quickly comment the entire codebase below please
-
-
-# ======================================
-# Get item entry
-# ======================================
 func get_item_entry(item_id: int) -> ItemEntry:
 	var inventory_logic: InventoryLogicComponent = Global.get_inventory_logic()
 
 	return inventory_logic.get_item_by_id(item_id)
 
-# ======================================
-# Equip helmet
-# ======================================
 func equip_new_helmet(new_helmet_item_id: int) -> void:
 	var new_helmet: ItemEntry = get_item_entry(new_helmet_item_id)
 
@@ -31,10 +22,6 @@ func equip_new_helmet(new_helmet_item_id: int) -> void:
 		return
 	
 	helmet_item_id = new_helmet_item_id
-
-# ======================================
-# Equip chestplate
-# ======================================
 
 func equip_new_chestplate(new_chestplate_item_id: int) -> void:
 	var new_chestplate: ItemEntry = get_item_entry(new_chestplate_item_id)
