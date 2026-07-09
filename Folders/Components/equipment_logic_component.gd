@@ -42,19 +42,19 @@ func equip_new_leggings(new_leggings_item_id: int) -> void:
 	leggings_item_id = leggings_item_id
 
 func equip_new_boots(new_boots_item_id: int) -> void:
-	var new_helmet: ItemEntry = get_item_entry(new_boots_item_id)
+	var new_boots: ItemEntry = get_item_entry(new_boots_item_id)
 
-	if new_helmet.item_type != "boots":
+	if new_boots.item_type != "boots":
 		push_error("\nEquipment Logic Componenet: Brother, you are inserting an item of type `", new_helmet.item_type, "` into a slot made for fucking boots man.")
 		return
 	
 	boots_item_id = new_boots_item_id
 
 func equip_new_weapon(new_weapon_item_id: int) -> void:
-	var new_helmet: ItemEntry = get_item_entry(new_helmet_item_id)
+	var new_weapon: ItemEntry = get_item_entry(new_weapon_item_id)
 
-	if new_helmet.item_type != "helmet":
-		push_error("\nEquipment Logic Componenet: Brother, you are inserting an item of type `", new_helmet.item_type, "` into a slot made for fucking helmets man.")
+	if new_weapon.item_type != "weapon":
+		push_error("\nEquipment Logic Componenet: Brother, you are inserting an item of type `", new_helmet.item_type, "` into a slot made for weapons helmets man.")
 		return
 	
-	helmet_item_id = new_helmet_item_id
+	helmet_item_id = new_weapon_item_id
