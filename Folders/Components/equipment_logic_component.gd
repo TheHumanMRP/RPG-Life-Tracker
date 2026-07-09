@@ -3,7 +3,8 @@ extends Resource
 
 const EMPTY_EQUIPMENT_SLOT: int = -1
 
-var helmet_item_id: int
-var chestplate_item_id: int
-var leggings_item_id: int
-var boots_item_id: int
+var helmet_item_id: int = -1
+var chestplate_item_id: int = -1
+var leggings_item_id: int = -1
+var boots_item_id: int = -1
+var weapon_item_id: int = -1
