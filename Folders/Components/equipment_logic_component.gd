@@ -50,4 +50,11 @@ func equip_new_boots(new_boots_item_id: int) -> void:
 	
 	boots_item_id = new_boots_item_id
 
-func equip_new_weapon(new_weapon_item_id: int) -> v
+func equip_new_weapon(new_weapon_item_id: int) -> void:
+	var new_weapon: ItemEntry = get_item_entry(new_weapon_item_id)
+
+	if new_weapon.item_type == BaseItem.Item_Type.WEAPON:
+		push_error("\nEquipment Logic Componenet: Brother, you are inserting an item of type `", new_weapon.item_type, "` into a slot made for fucking weapons man.")
+		return
+	
+	weapon_item_id = new_weapon_item_id
