@@ -9,5 +9,9 @@ var leggings_item_id: int = -1
 var boots_item_id: int = -1
 var weapon_item_id: int = -1
 
-func equip_new_helmet(helmet_item_id:) -> void:
+func get_item_entry()
+
+func equip_new_helmet(new_helmet_item_id: int) -> void:
+	var inventory_logic: InventoryLogicComponent = Global.get_inventory_logic()
 	
+	var new_helmet: ItemEntry = inventory_logic.
