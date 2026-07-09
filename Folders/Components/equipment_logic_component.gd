@@ -45,10 +45,6 @@ func equip_new_chestplate(new_chestplate_item_id: int) -> void:
 	
 	chestplate_item_id = new_chestplate_item_id
 
-# ======================================
-# Equip leggings
-# ======================================
-
 func equip_new_leggings(new_leggings_item_id: int) -> void:
 	var new_leggings: ItemEntry = get_item_entry(new_leggings_item_id)
 
@@ -57,10 +53,6 @@ func equip_new_leggings(new_leggings_item_id: int) -> void:
 		return
 	
 	leggings_item_id = new_leggings_item_id
-
-# ======================================
-# Equip boots
-# ======================================
 
 func equip_new_boots(new_boots_item_id: int) -> void:
 	var new_boots: ItemEntry = get_item_entry(new_boots_item_id)
@@ -71,9 +63,6 @@ func equip_new_boots(new_boots_item_id: int) -> void:
 	
 	boots_item_id = new_boots_item_id
 
-# ======================================
-# Equip weapon
-
 func equip_new_weapon(new_weapon_item_id: int) -> void:
 	var new_weapon: ItemEntry = get_item_entry(new_weapon_item_id)
 
@@ -82,10 +71,6 @@ func equip_new_weapon(new_weapon_item_id: int) -> void:
 		return
 	
 	weapon_item_id = new_weapon_item_id
-
-# ======================================
-# Unequip helmet
-# ======================================
 
 func unequip_helmet() -> void:
 	helmet_item_id = EMPTY_EQUIPMENT_SLOT
