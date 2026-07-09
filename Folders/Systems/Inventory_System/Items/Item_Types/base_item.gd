@@ -7,7 +7,7 @@ class_name BaseItem
 @export var base_durability: int = 100 # Used to initialise a new item
 @export var type: String = "base_item" # Should only be used for verification that the item's type is correct
 
-var item_types
+enum item_types = 
 
 func get_type() -> String:
 	return "base_item"
