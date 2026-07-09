@@ -39,7 +39,7 @@ func equip_new_leggings(new_leggings_item_id: int) -> void:
 		push_error("\nEquipment Logic Componenet: Brother, you are inserting an item of type `", new_leggings.item_type, "` into a slot made for fucking leggings man.")
 		return
 	
-	leggings_item_id = leggings_item_id
+	leggings_item_id = new_leggings_item_id
 
 func equip_new_boots(new_boots_item_id: int) -> void:
 	var new_boots: ItemEntry = get_item_entry(new_boots_item_id)
