@@ -26,7 +26,7 @@ func equip_new_helmet(new_helmet_item_id: int) -> void:
 func equip_new_chestplate(new_chestplate_item_id: int) -> void:
 	var new_chestplate: ItemEntry = get_item_entry(new_chestplate_item_id)
 
-	if new_chestplate.item_type != "chestplate":
+	if new_chestplate.item_type == BaseItem:
 		push_error("\nEquipment Logic Componenet: Brother, you are inserting an item of type `", new_chestplate.item_type, "` into a slot made for fucking chestplates man.")
 		return
 	
