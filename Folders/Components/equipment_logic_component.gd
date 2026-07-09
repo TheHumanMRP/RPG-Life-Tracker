@@ -24,18 +24,18 @@ func equip_new_helmet(new_helmet_item_id: int) -> void:
 	helmet_item_id = new_helmet_item_id
 
 func equip_new_chestplate(new_chestplate_item_id: int) -> void:
-	var new_helmet: ItemEntry = get_item_entry(new_chestplate_item_id)
+	var new_chestplate: ItemEntry = get_item_entry(new_chestplate_item_id)
 
-	if new_helmet.item_type != "chestplate":
+	if new_chestplate.item_type != "chestplate":
 		push_error("\nEquipment Logic Componenet: Brother, you are inserting an item of type `", new_helmet.item_type, "` into a slot made for fucking chestplates man.")
 		return
 	
 	chestplate_item_id = new_chestplate_item_id
 
 func equip_new_leggings(new_leggings_item_id: int) -> void:
-	var new_helmet: ItemEntry = get_item_entry(new_leggings_item_id)
+	var new_leggings: ItemEntry = get_item_entry(new_leggings_item_id)
 
-	if new_helmet.item_type != "leggings":
+	if new_leggings.item_type != "leggings":
 		push_error("\nEquipment Logic Componenet: Brother, you are inserting an item of type `", new_helmet.item_type, "` into a slot made for fucking leggings man.")
 		return
 	
@@ -46,6 +46,15 @@ func equip_new_boots(new_boots_item_id: int) -> void:
 
 	if new_helmet.item_type != "boots":
 		push_error("\nEquipment Logic Componenet: Brother, you are inserting an item of type `", new_helmet.item_type, "` into a slot made for fucking boots man.")
+		return
+	
+	boots_item_id = new_boots_item_id
+
+func equip_new_weapon(new_weapon_item_id: int) -> void:
+	var new_helmet: ItemEntry = get_item_entry(new_helmet_item_id)
+
+	if new_helmet.item_type != "helmet":
+		push_error("\nEquipment Logic Componenet: Brother, you are inserting an item of type `", new_helmet.item_type, "` into a slot made for fucking helmets man.")
 		return
 	
 	helmet_item_id = new_helmet_item_id
