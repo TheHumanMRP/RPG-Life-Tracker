@@ -17,6 +17,7 @@ extends Node
 
 @export var coyote_time = 0.12
 
+var jumped: bool = false
 var air_jumped: bool = false
 var coyote_timer = 0
 
@@ -61,7 +62,7 @@ func get_velocity(
 
 	# Apply gravity
 	if not is_on_floor:
-		if increase_gravity_while_falling and velocity.y > 0 and just_jumped:
+		if increase_gravity_while_falling and velocity.y > 0 and jumped:
 			velocity.y += gravity * gravity_multiplier_while_flling * delta
 		else:
 			velocity.y += gravity * delta
@@ -71,6 +72,7 @@ func get_velocity(
 	if is_on_floor:
 		velocity.y = 0
 		coyote_timer = 0
+		jumped = false
 		air_jumped = false
 		
 	# Jump
