@@ -7,7 +7,7 @@ extends Node
 @export var friction := 1500.0
 @export var air_resistance := 200.0
 @export var turn_friction_multiplier := 2.5
-@export var jump_force := 500.0
+@export var jump_force := 550.0
 @export var gravity := 1000.0
 @export var wall_jump_force: float = 1000.0
 @export var allow_wall_jump: bool = true
