@@ -20,6 +20,7 @@ config/icon="uid://bqulutjwvblw"
 SignalBus="*uid://dackuyp70bkog"
 Global="*uid://b0m21w7a3y3rf"
 ManualSaveCycleManager="*uid://iwnqnfof4wq"
+InfoGetter="*uid://bdud558gdepyk"
 
 [debug]
 
