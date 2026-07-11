@@ -27,7 +27,7 @@ func refresh() -> void:
 	slot_number_label.text = str(slot_index + 1)
 
 func set_proper_selection_color_rect_opacity() -> void:
-	var selected_slot_index: int = Global.get_selected_hotbar_index()
+	var selected_slot_index: int = InfoGetter.get_selected_hotbar_index()
 
 	if selected_slot_index != slot_index:
 		# Unselected
@@ -39,7 +39,7 @@ func set_proper_selection_color_rect_opacity() -> void:
 
 
 func check_id() -> void:
-	var inventory_items: Array[ItemEntry] = Global.get_inventory()
+	var inventory_items: Array[ItemEntry] = InfoGetter.get_inventory()
 
 	if item_id >= 0 and item_id < inventory_items.size():
 		return
@@ -51,7 +51,7 @@ func check_id() -> void:
 
 
 func get_item() -> ItemEntry:
-	var inventory = Global.get_inventory_logic()
+	var inventory = InfoGetter.get_inventory_logic()
 
 	print("\nHotbar Slot: `get_item()` func was called. Here's the item_id: ", item_id)
 
