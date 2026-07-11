@@ -4,10 +4,6 @@ extends Node
 var inventory_logic: InventoryLogicComponent
 var hotbar_logic: HotBarLogicComponent
 
-func setup(new_inventory_logic: InventoryLogicComponent, new_hotbar_logic: HotBarLogicComponent) -> void:
-	inventory_logic = new_inventory_logic
-	hotbar_logic = new_hotbar_logic
-
 func test() -> void:
 	pass
 	inventory_logic = InfoGetter.get_inventory_logic()
