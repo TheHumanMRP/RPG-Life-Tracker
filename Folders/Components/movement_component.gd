@@ -13,7 +13,7 @@ extends Node
 @export var allow_wall_jump: bool = true
 @export var allow_air_jump: bool = true
 @export var increase_gravity_while_falling: bool = true
-@export var 
+@export var gravity_multiplier_while_flling: float = 1.5
 
 @export var coyote_time = 0.12
 
@@ -61,7 +61,8 @@ func get_velocity(
 
 	# Apply gravity
 	if not is_on_floor:
-		if 
+		if increase_gravity_while_falling:
+			velocity.y += gravity * 	 
 		velocity.y += gravity * delta
 
 	coyote_timer += delta
