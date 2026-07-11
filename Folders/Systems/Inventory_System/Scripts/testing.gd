@@ -10,8 +10,8 @@ func setup(new_inventory_logic: InventoryLogicComponent, new_hotbar_logic: HotBa
 
 func test() -> void:
 	pass
-	inventory_logic = Global.get_inventory_logic()
-	hotbar_logic = Global.get_hotbar_logic()
+	inventory_logic = InfoGetter.get_inventory_logic()
+	hotbar_logic = InfoGetter.get_hotbar_logic()
 
 	inventory_logic.print_all_items()
 	inventory_logic.clear_inventory()

@@ -12,7 +12,7 @@ class_name HotbarSlot
 const UNSELECTED_OPACITY: float = 0.0
 const SELECTED_OPACITY: float = 0.5
 
-var EMPTY_SLOT: int = Global.get_empty_hotbar_slot_const()
+var EMPTY_SLOT: int = InfoGetter.get_empty_hotbar_slot_const()
 
 func _ready() -> void:
 	refresh()
