@@ -13,6 +13,9 @@ func setup(new_item: BaseItem, new_logo: Texture2D, new_durability: float = new_
 	durability = new_durability
 	logo = new_logo
 
+func item_selected() -> void:
+	pass
+
 func use_item(target) -> void:
 	item.use(target)
 
