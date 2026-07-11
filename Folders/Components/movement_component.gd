@@ -15,7 +15,7 @@ extends Node
 
 @export var coyote_time = 0.12
 
-var jump_counter: int = 0
+var double_jumped: bool = false
 var coyote_timer = 0
 
 func set_movement_component_values(
