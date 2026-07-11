@@ -14,8 +14,6 @@ var save_data: SaveData
 func test() -> void:
 	var testing: TestingScript = TestingScript.new()
 
-	testing.setup(save_data.inventory_logic, save_data.hotbar_logic)
-
 	testing.test()
 
 # ============================================================================

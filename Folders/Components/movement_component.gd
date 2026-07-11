@@ -88,3 +88,6 @@ func get_velocity(
 	velocity.x = move_toward(velocity.x, direction * max_speed, accel * delta)
 
 	return velocity
+
+func handle_gravity() -> void:
+	pass
