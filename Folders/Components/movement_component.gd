@@ -10,8 +10,8 @@ extends Node
 @export var jump_force := 500.0
 @export var gravity := 1000.0
 @export var wall_jump_force: float = 1000.0
-@export var wall_jump: bool = true
-@export var double_jump: bool = true
+@export var allow_wall_jump: bool = true
+@export var allow_double_jump: bool = true
 
 @export var coyote_time = 0.12
 
@@ -29,8 +29,8 @@ func set_movement_component_values(
 	new_gravity: float = 1000.0,
 	new_coyote_time: float = 0.12,
 	new_wall_jump_force: float = 1000.0,
-	new_wall_jump: bool = true,
-	new_double_jump: bool = true
+	new_allow_wall_jump: bool = true,
+	new_allow_double_jump: bool = true
 ) -> void:
 	max_speed = new_max_speed
 	acceleration = new_acceleration

@@ -11,7 +11,7 @@ func setup(new_item: BaseItem, new_logo: Texture2D, new_durability: float = new_
 	item = new_item
 	item_type = item.type
 	durability = new_durability
-	logo = 
+	logo = new_logo
 
 func use_item(target) -> void:
 	item.use(target)
