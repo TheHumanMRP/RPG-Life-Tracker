@@ -58,7 +58,7 @@ func get_velocity(
 	# Apply gravity
 	velocity.y += gravity * delta
 
-	
+	coyote_timer += delta
 
 	if is_on_floor:
 		velocity.y = 0
