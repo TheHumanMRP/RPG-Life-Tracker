@@ -61,9 +61,7 @@ func equip_new_weapon(new_weapon_item_id: int) -> void:
 	weapon_item_id = new_weapon_item_id
 
 func equip_new_holding_item(new_holding_item_id: int) -> void:
-	var new_holding_item: ItemEntry = get_item_entry(new_holding_item_id)
-	
-	new_holding_item = new_holding_item_id
+	holding_item_id = new_holding_item_id
 
 func unequip_helmet() -> void:
 	helmet_item_id = EMPTY_EQUIPMENT_SLOT
@@ -79,3 +77,6 @@ func unequip_boots() -> void:
 
 func unequip_weapon() -> void:
 	weapon_item_id = EMPTY_EQUIPMENT_SLOT
+
+func unequip_holding_item() -> void:
+	holding_item_id = EMPTY_EQUIPMENT_SLOT
