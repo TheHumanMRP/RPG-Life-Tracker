@@ -41,8 +41,8 @@ func set_movement_component_values(
 	jump_force = new_jump_force
 	gravity = new_gravity
 	coyote_time = new_coyote_time
-	wall_jump = new_wall_jump
-	double_jump = new_double_jump
+	allow_wall_jump = new_allow_wall_jump
+	allow_double_jump = new_allow_double_jump
 
 func get_velocity(
 	current_velocity: Vector2,
