@@ -89,5 +89,5 @@ func get_velocity(
 
 	return velocity
 
-func handle_gravity() -> void:
-	pass
+func handle_gravity(working_velocity: Vector2) -> void:
+	
