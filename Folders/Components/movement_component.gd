@@ -63,10 +63,10 @@ func get_velocity(
 	if is_on_floor:
 		velocity.y = 0
 		coyote_timer = 0
-		jump_counter = 0
+		double_jumped = false
 		
 	# Jump
-	if jump and jump_counter < 2:
+	if jump:
 		velocity.y = - jump_force
 		jump_counter += 1
 
