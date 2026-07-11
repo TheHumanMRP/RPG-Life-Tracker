@@ -68,7 +68,6 @@ func get_velocity(
 	# Jump
 	if jump:
 		velocity.y = - jump_force
-		jump_counter += 1
 
 	# Decelerate when no input
 	if direction == 0:
