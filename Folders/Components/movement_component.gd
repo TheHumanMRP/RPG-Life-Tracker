@@ -66,7 +66,7 @@ func get_velocity(
 		air_jumped = false
 		
 	# Jump
-	if jump:
+	if jump and not air_jumped:
 		velocity.y = - jump_force
 		
 		if not is_on_floor:
