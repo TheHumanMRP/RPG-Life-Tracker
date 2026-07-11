@@ -11,11 +11,11 @@ extends Node
 @export var gravity := 1000.0
 @export var wall_jump_force: float = 1000.0
 @export var allow_wall_jump: bool = true
-@export var allow_double_jump: bool = true
+@export var allow_air_jump: bool = true
 
 @export var coyote_time = 0.12
 
-var double_jumped: bool = false
+var air_jumped: bool = false
 var coyote_timer = 0
 
 func set_movement_component_values(
@@ -30,7 +30,7 @@ func set_movement_component_values(
 	new_coyote_time: float = 0.12,
 	new_wall_jump_force: float = 1000.0,
 	new_allow_wall_jump: bool = true,
-	new_allow_double_jump: bool = true
+	new_allow_air_jump: bool = true
 ) -> void:
 	max_speed = new_max_speed
 	acceleration = new_acceleration
@@ -42,7 +42,7 @@ func set_movement_component_values(
 	gravity = new_gravity
 	coyote_time = new_coyote_time
 	allow_wall_jump = new_allow_wall_jump
-	allow_double_jump = new_allow_double_jump
+	allow_air_jump = new_allow_air_jump
 
 func get_velocity(
 	current_velocity: Vector2,
@@ -63,14 +63,15 @@ func get_velocity(
 	if is_on_floor:
 		velocity.y = 0
 		coyote_timer = 0
-		double_jumped = false
+		air_jumped = false
 		
 	# Jump
 	if jump:
 		velocity.y = - jump_force
 		
 		if not is_on_floor:
-				
+			air_jumped = true
+
 
 	# Decelerate when no input
 	if direction == 0:
