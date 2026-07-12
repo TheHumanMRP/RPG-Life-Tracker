@@ -2,136 +2,20 @@
 
 [ext_resource type="Script" uid="uid://c20du4ge4p05i" path="res://Folders/Systems/Player/player.gd" id="1_4ek6g"]
 [ext_resource type="Texture2D" uid="uid://bqulutjwvblw" path="res://Folders/Assets/icon.svg" id="2_3rm20"]
-[ext_resource type="Texture2D" uid="uid://c4in8plhxpwjx" path="res://Folders/Assets/Platformer-player-Sheet.png" id="2_6n2b4"]
 [ext_resource type="Script" uid="uid://ckyj7edp33tc8" path="res://Folders/Components/movement_component.gd" id="4_514jh"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ofe1v"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_8uk81"]
 atlas = ExtResource("2_3rm20")
 region = Rect2(0, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3rm20"]
-atlas = ExtResource("2_6n2b4")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6n2b4"]
-atlas = ExtResource("2_6n2b4")
-region = Rect2(224, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_y3jju"]
-atlas = ExtResource("2_6n2b4")
-region = Rect2(128, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yqmip"]
-atlas = ExtResource("2_6n2b4")
-region = Rect2(256, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_orhto"]
-atlas = ExtResource("2_6n2b4")
-region = Rect2(192, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_514jh"]
-atlas = ExtResource("2_6n2b4")
-region = Rect2(64, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_cdrjs"]
-atlas = ExtResource("2_6n2b4")
-region = Rect2(64, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3sao0"]
-atlas = ExtResource("2_6n2b4")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_filjn"]
-atlas = ExtResource("2_6n2b4")
-region = Rect2(96, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_cy0yy"]
-atlas = ExtResource("2_6n2b4")
-region = Rect2(160, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gl73e"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ofe1v")
+"texture": SubResource("AtlasTexture_8uk81")
 }],
 "loop": 1,
 "name": &"GodotIcon",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3rm20")
-}],
-"loop": 1,
-"name": &"Idle",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6n2b4")
-}],
-"loop": 1,
-"name": &"Moveing-Up-Left",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_y3jju")
-}],
-"loop": 1,
-"name": &"Moving-Down",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_yqmip")
-}],
-"loop": 1,
-"name": &"Moving-Down-Left",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_orhto")
-}],
-"loop": 1,
-"name": &"Moving-Down-Right",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_514jh")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_cdrjs")
-}],
-"loop": 1,
-"name": &"Moving-Left",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3sao0")
-}],
-"loop": 1,
-"name": &"Moving-Right",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_filjn")
-}],
-"loop": 1,
-"name": &"Moving-Up",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_cy0yy")
-}],
-"loop": 1,
-"name": &"Moving-Up-Right",
 "speed": 5.0
 }]
 
