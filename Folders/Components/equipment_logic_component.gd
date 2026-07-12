@@ -7,8 +7,7 @@ var helmet_item_id: int = -1
 var chestplate_item_id: int = -1
 var leggings_item_id: int = -1
 var boots_item_id: int = -1
-var weapon_item_id: int = -1
-var holding_item_id: int = -1
+var selected_item_id: int = -1
 
 func get_item_entry(item_id: int) -> ItemEntry:
 	var inventory_logic: InventoryLogicComponent = Global.get_inventory_logic()
@@ -50,15 +49,6 @@ func equip_new_boots(new_boots_item_id: int) -> void:
 		return
 	
 	boots_item_id = new_boots_item_id
-
-func equip_new_weapon(new_weapon_item_id: int) -> void:
-	var new_weapon: ItemEntry = get_item_entry(new_weapon_item_id)
-
-	if new_weapon.item_type == BaseItem.Item_Type.WEAPON:
-		push_error("\nEquipment Logic Componenet: Brother, you are inserting an item of type `", new_weapon.item_type, "` into a slot made for fucking weapons man.")
-		return
-	
-	weapon_item_id = new_weapon_item_id
 
 func equip_new_holding_item(new_holding_item_id: int) -> void:
 	holding_item_id = new_holding_item_id
