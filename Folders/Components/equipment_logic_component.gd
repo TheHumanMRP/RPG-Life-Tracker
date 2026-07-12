@@ -56,6 +56,8 @@ func equip_new_boots(new_boots_item_id: int) -> void:
 func equip_new_selected_item(new_selected_item_id: int) -> void:
 	selected_item_id = new_selected_item_id
 
+	print("Equipment Component: ")
+
 func unequip_helmet() -> void:
 	helmet_item_id = EMPTY_EQUIPMENT_SLOT
 
