@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhenclupc78t8"
-path="res://.godot/imported/Mosue-Cursor.png-73b277213b34bfac44bc9c7d1c61326a.ctex"
+uid="uid://cn2761nmx2ir"
+path="res://.godot/imported/Platformer-Mouse-Cursor.png-545b2d0ece7ce864ead2e78105c0ca0f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Folders/Assets/Project_Display/Mosue-Cursor.png"
-dest_files=["res://.godot/imported/Mosue-Cursor.png-73b277213b34bfac44bc9c7d1c61326a.ctex"]
+source_file="res://Folders/Assets/Project_Display/Platformer-Mouse-Cursor.png"
+dest_files=["res://.godot/imported/Platformer-Mouse-Cursor.png-545b2d0ece7ce864ead2e78105c0ca0f.ctex"]
 
 [params]
 
