@@ -77,11 +77,11 @@ func get_velocity(
 		
 	# Jump
 	if jump:
-		if not air_jumped:
 
-			
 		if is_on_wall:
 			velocity.x = wall_dir * wall_jump_force
+
+		if not air_jumped:
 
 		velocity.y = - jump_force
 
