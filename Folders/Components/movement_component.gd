@@ -76,7 +76,7 @@ func get_velocity(
 		air_jumped = false
 		
 	# Jump
-	velocity = handle_jump(velocity, is_on_wall, wall_dir)
+	velocity = handle_jump(velocity, is_on_wall, is_on_floor, wall_dir, jump)
 
 	# Decelerate when no input
 	if direction == 0:
@@ -94,7 +94,7 @@ func get_velocity(
 
 	return velocity
 
-func handle_jump(working_velocity: Vector2, is_on_wall: bool, wall_dir: int) -> Vector2:
+func handle_jump(velocity: Vector2, is_on_wall: bool, wall_dir: int, jump: bool) -> Vector2:
 	if jump:
 		if is_on_wall:
 			velocity.x = wall_dir * wall_jump_force
@@ -107,3 +107,5 @@ func handle_jump(working_velocity: Vector2, is_on_wall: bool, wall_dir: int) -> 
 			air_jumped = true
 
 		jumped = true
+	
+	return velocity
