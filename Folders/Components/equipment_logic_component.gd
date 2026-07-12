@@ -50,8 +50,8 @@ func equip_new_boots(new_boots_item_id: int) -> void:
 	
 	boots_item_id = new_boots_item_id
 
-func equip_new_holding_item(new_holding_item_id: int) -> void:
-	holding_item_id = new_holding_item_id
+func equip_new_selected_item(new_selected_item_id: int) -> void:
+	selected_item_id = new_selected_item_id
 
 func unequip_helmet() -> void:
 	helmet_item_id = EMPTY_EQUIPMENT_SLOT
@@ -65,8 +65,5 @@ func unequip_leggings() -> void:
 func unequip_boots() -> void:
 	boots_item_id = EMPTY_EQUIPMENT_SLOT
 
-func unequip_weapon() -> void:
-	weapon_item_id = EMPTY_EQUIPMENT_SLOT
-
-func unequip_holding_item() -> void:
-	holding_item_id = EMPTY_EQUIPMENT_SLOT
+func unequip_selected_item() -> void:
+	selected_item_id = EMPTY_EQUIPMENT_SLOT
