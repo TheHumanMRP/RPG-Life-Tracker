@@ -9,7 +9,7 @@ extends Node
 @export var turn_friction_multiplier := 2.5
 @export var jump_force := 550.0
 @export var gravity := 1000.0
-@export var wall_jump_force: float = 1000.0
+@export var wall_jump_force: float = 500.0
 @export var allow_wall_jump: bool = true
 @export var allow_air_jump: bool = true
 @export var increase_gravity_while_falling: bool = true
@@ -104,6 +104,7 @@ func handle_jump(velocity: Vector2, is_on_wall: bool, is_on_floor: bool, wall_di
 		if is_on_wall:
 			velocity.x = wall_dir * wall_jump_force
 			velocity.y = - jump_force
+			return velocity
 
 		if not air_jumped:
 			velocity.y = - jump_force
