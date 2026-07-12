@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1ncvq05dl15u"
-path="res://.godot/imported/Pure-White.png-7ddac9afac4d8fcf9eb555c9a85b2fc3.ctex"
+uid="uid://5kqp7p3nbx4v"
+path="res://.godot/imported/mouse-cursor.png-00af4449f6df477c0124f9c1dffae534.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Folders/Assets/Pure-White.png"
-dest_files=["res://.godot/imported/Pure-White.png-7ddac9afac4d8fcf9eb555c9a85b2fc3.ctex"]
+source_file="res://Folders/Assets/Project_Display/mouse-cursor.png"
+dest_files=["res://.godot/imported/mouse-cursor.png-00af4449f6df477c0124f9c1dffae534.ctex"]
 
 [params]
 
