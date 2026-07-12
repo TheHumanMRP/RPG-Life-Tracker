@@ -10,7 +10,7 @@ var boots_item_id: int = -1
 var selected_item_id: int = -1
 
 func _init() -> void:
-	SignalBus.item_selected.connect(eq)
+	SignalBus.item_selected.connect(equip_new_selected_item)
 
 func get_item_entry(item_id: int) -> ItemEntry:
 	var inventory_logic: InventoryLogicComponent = Global.get_inventory_logic()
