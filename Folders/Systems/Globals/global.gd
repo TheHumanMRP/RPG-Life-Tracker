@@ -20,8 +20,6 @@ func test() -> void:
 # ============================================================================
 
 func _process(delta: float) -> void:
-	mutthi
-
 	if Input.is_action_just_pressed("add_test_sword"):
 		save_data.inventory_logic.add_test_sword()
 
