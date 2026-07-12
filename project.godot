@@ -26,6 +26,10 @@ InfoGetter="*uid://cbhg7hkcjf8py"
 
 gdscript/warnings/unused_parameter=0
 
+[display]
+
+window/vsync/vsync_mode=2
+
 [input]
 
 move_left={
