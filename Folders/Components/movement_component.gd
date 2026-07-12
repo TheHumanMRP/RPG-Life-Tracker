@@ -98,15 +98,13 @@ func handle_jump(velocity: Vector2, is_on_wall: bool, is_on_floor: bool, wall_di
 	if jump:
 		jumped = true
 
-		if not is_on_floor and not is_on_wall:
-			air_jumped = true
-
 		if is_on_wall:
 			velocity.x = wall_dir * wall_jump_force
 			velocity.y = - jump_force
 			return velocity
 
-		if not air_jumped:
+		if not air_jumped and not is_on_floor:
+			air_jumped = true
 			velocity.y = - jump_force
 	
 	return velocity
