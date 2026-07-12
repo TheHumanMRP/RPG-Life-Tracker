@@ -80,6 +80,7 @@ func get_velocity(
 
 		if is_on_wall:
 			velocity.x = wall_dir * wall_jump_force
+			velocity.y = - jump_force
 
 		if not air_jumped:
 			velocity.y = - jump_force
@@ -104,3 +105,6 @@ func get_velocity(
 	velocity.x = move_toward(velocity.x, direction * max_speed, accel * delta)
 
 	return velocity
+
+func handle_jump(working_velocity: Vector2) -> Vector2:
+	pass
