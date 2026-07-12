@@ -82,13 +82,12 @@ func get_velocity(
 			velocity.x = wall_dir * wall_jump_force
 
 		if not air_jumped:
+			velocity.y = - jump_force
 
-		velocity.y = - jump_force
-
-		jumped = true
-		
-		if not is_on_floor:
+		if not is_on_floor and not is_on_wall:
 			air_jumped = true
+
+		jumped = true		
 
 	# Decelerate when no input
 	if direction == 0:
