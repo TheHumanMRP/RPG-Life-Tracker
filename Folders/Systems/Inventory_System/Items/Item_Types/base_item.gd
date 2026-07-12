@@ -12,7 +12,6 @@ enum Item_Type {
 	CHESTPLATE,
 	LEGGINGS,
 	BOOTS,
-	WEAPON,
 	BASE_ITEM
 }
 
