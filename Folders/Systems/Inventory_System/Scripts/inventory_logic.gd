@@ -27,11 +27,6 @@ func _init() -> void:
 
 func _setup() -> void:
 	_calculate_max_id()
-	_connect_signals()
-
-func _connect_signals() -> void:
-	SignalBus.item_selected.connect(_on_item_selected)
-
 
 # ===================================================================
 # ID Management
@@ -157,8 +152,3 @@ func notify_inventory_changed() -> void:
 	SignalBus.save_game.emit()
 
 	print("\nInventory Logic: Notified that the inventory changed.")
-
-func _on_item_selected(item_id: int) -> void:
-	var selected_item: ItemEntry = get_item_by_id(item_id)
-	
-	selected_item.item_selected()

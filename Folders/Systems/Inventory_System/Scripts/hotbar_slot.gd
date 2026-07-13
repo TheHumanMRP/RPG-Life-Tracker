@@ -107,6 +107,10 @@ func check_for_mouse_click(event: InputEvent) -> void:
 func _process(delta: float) -> void:
 	check_for_keyboard_selection()
 
+func check_for_equip() -> void:
+	if not Input.is_action_just_pressed("equip_item"):
+		return
+
 func check_for_keyboard_selection() -> void:
 	var input_action: String = "select_hotbar_slot_" + str(slot_index)
 
