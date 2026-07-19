@@ -8,18 +8,22 @@ var save_next: bool
 @onready var save_manager: SaveManager
 
 func _init() -> void:
-	SignalBus.save_game.connect(_save_data)
+	SignalBus.save_game.connect(toggle_save_next)
 
 	save_manager = SaveManager.new()
 
 	_load_data()
 
+func toggle_save_next() -> void:
+	save_next = true
+
 func save_loop() -> void:
 	while true:
 		await get_tree().create_timer(save_timer).timeout
 		
-		if Global.save_next:
+		if save_next:
 			_save_data()
+			save_next = false
 
 func _save_data() -> void:
 	save_manager.save_info = Global.save_data
