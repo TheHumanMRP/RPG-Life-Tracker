@@ -52,6 +52,7 @@ func save_data() -> void:
 		push_error("File Dosen't Exist: ", save_path)
 		return
 	
+	_ensure_file_exists()
 	var err = ResourceSaver.save(save_info, save_path)
 
 	if err != OK:

@@ -3,6 +3,8 @@ extends Node
 
 var save_timer: int = 60
 
+var save_next: bool
+
 @onready var save_manager: SaveManager
 
 func _init() -> void:
