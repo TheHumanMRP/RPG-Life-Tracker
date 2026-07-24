@@ -80,14 +80,14 @@ func check_if_item_at_index_in_inventory_exists(index: int) -> bool:
 
 ## Returns an item using its unique ID.
 func get_item_by_id(item_id: int) -> ItemEntry:
-	for item in inventory_items:
+	for item in all_global_items:
 		if not item.item_id == item_id:
 			continue
 		
 		return item
 
 	print("\nInventoryLogic: Debug")
-	print("Inventory Size: ", inventory_items.size())
+	print("Inventory Size: ", all_global_items.size())
 
 	push_error("InventoryLogic: Item not found with ID ", item_id, ". Check the debug print.")
 
@@ -119,7 +119,7 @@ func add_test_sword() -> void:
 func print_all_items() -> void:
 	print("\nInventory Logic: Printing all items")
 	
-	for item in inventory_items:
+	for item in all_global_items:
 		item.print_self()
 
 # ===================================================================
