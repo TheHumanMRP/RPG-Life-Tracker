@@ -41,7 +41,7 @@ func _calculate_max_id() -> void:
 func add_item(new_item: ItemEntry) -> void:
 	new_item.item_id = max_id
 
-	inventory_items.append(new_item)
+	all_global_items.append(new_item)
 
 	max_id += 1
 
@@ -50,11 +50,11 @@ func add_item(new_item: ItemEntry) -> void:
 
 ## Removes an item from the inventory.
 func remove_item(item_id: int) -> void:
-	for i in inventory_items.size():
-		if inventory_items[i].item_id != item_id:
+	for i in all_global_items.size():
+		if all_global_items[i].item_id != item_id:
 			continue
 
-		inventory_items.pop_at(i)
+		all_global_items.pop_at(i)
 		notify_inventory_changed()
 		return
 
@@ -62,14 +62,14 @@ func remove_item(item_id: int) -> void:
 
 ## Removes every item from the inventory.
 func clear_inventory() -> void:
-	inventory_items.clear()
+	all_global_items.clear()
 
 	max_id = 0
 
 	notify_inventory_changed()
 
 func check_if_item_at_index_in_inventory_exists(index: int) -> bool:
-	if index < 0 or index >= inventory_items.size():
+	if index < 0 or index >= all_global_items.size():
 		return false
 	
 	return true
