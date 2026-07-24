@@ -8,6 +8,7 @@ signal item_selected(item_id: int)
 signal equip_item(item_id)
 signal respawn_player
 signal save_game
+signal notify_global_inventory_changed
 
 func _ready() -> void:
 	await get_tree().process_frame

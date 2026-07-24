@@ -45,7 +45,7 @@ func add_item(new_item: ItemEntry) -> void:
 
 	max_id += 1
 
-	notify_inventory_changed()
+	notify_global_inventory_changed()
 
 
 ## Removes an item from the inventory.
@@ -55,7 +55,7 @@ func remove_item(item_id: int) -> void:
 			continue
 
 		all_global_items.pop_at(i)
-		notify_inventory_changed()
+		notify_global_inventory_changed()
 		return
 
 	push_error("InventoryLogic: Item not found: ", item_id)
@@ -66,7 +66,7 @@ func clear_inventory() -> void:
 
 	max_id = 0
 
-	notify_inventory_changed()
+	notify_global_inventory_changed()
 
 func check_if_item_at_index_in_inventory_exists(index: int) -> bool:
 	if index < 0 or index >= all_global_items.size():
@@ -113,7 +113,7 @@ func add_test_sword() -> void:
 
 	print_all_items()
 
-	notify_inventory_changed()
+	notify_global_inventory_changed()
 
 
 func print_all_items() -> void:
@@ -126,8 +126,8 @@ func print_all_items() -> void:
 # Notify Listner
 # ===================================================================
 
-func notify_inventory_changed() -> void:
-	SignalBus.inventory_changed.emit()
+func notify_global_inventory_changed() -> void:
+	SignalBus.notify_global_inventory_changed.emit()
 	SignalBus.save_game.emit()
 
 	print("\nInventory Logic: Notified that the inventory changed.")
