@@ -6,7 +6,7 @@ extends Node
 
 var save_data: SaveData
 
-
+var all_global_items: Array[ItemEntry]
 
 # ============================================================================
 # Testing
