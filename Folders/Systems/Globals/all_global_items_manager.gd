@@ -1,12 +1,11 @@
 class_name AllGlobalItemManager
 extends Resource
 
-
 # ===================================================================
 # Inventory Data
 # ===================================================================
 
-@export var inventory_items: Array[ItemEntry] = []
+@export var all_global_items: Array[ItemEntry] = []
 
 @export var max_id: int = 0
 
@@ -29,7 +28,7 @@ func _setup() -> void:
 func _calculate_max_id() -> void:
 	max_id = 0
 
-	for item in inventory_items:
+	for item in :
 		if item.item_id >= max_id:
 			max_id = item.item_id + 1
 
