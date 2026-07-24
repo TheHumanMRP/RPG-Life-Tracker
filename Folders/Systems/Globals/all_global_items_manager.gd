@@ -68,7 +68,7 @@ func clear_inventory() -> void:
 
 	notify_global_inventory_changed()
 
-func check_if_item_at_index_in_inventory_exists(index: int) -> bool:
+func check_if_item_at_index_in_global_inventory_exists(index: int) -> bool:
 	if index < 0 or index >= all_global_items.size():
 		return false
 	
