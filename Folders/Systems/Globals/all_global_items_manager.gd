@@ -28,7 +28,7 @@ func _setup() -> void:
 func _calculate_max_id() -> void:
 	max_id = 0
 
-	for item in :
+	for item in all_global_items:
 		if item.item_id >= max_id:
 			max_id = item.item_id + 1
 
@@ -59,19 +59,6 @@ func remove_item(item_id: int) -> void:
 		return
 
 	push_error("InventoryLogic: Item not found: ", item_id)
-
-
-## Uses an item.
-func use_item(item_id: int, target) -> void:
-	var item := get_item_by_id(item_id)
-
-	if item == null:
-		return
-
-	item.use_item(target)
-
-	notify_inventory_changed()
-
 
 ## Removes every item from the inventory.
 func clear_inventory() -> void:
