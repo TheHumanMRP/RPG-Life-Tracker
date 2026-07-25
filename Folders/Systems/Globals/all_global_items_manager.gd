@@ -55,21 +55,34 @@ func add_item(new_item: ItemEntry) -> void:
 
 	notify_global_inventory_changed()
 
-
-## Removes an item from the inventory.
 func remove_item(item_id: int) -> void:
-	if not items_by_id.has(item_id):
-		push_error("InventoryLogic: Item not found: ", item_id)
-
-	
-	
-	for i in all_global_items.size():
-		if all_global_items[i].item_id != item_id:
-			continue
-
-		all_global_items.pop_at(i)
-		notify_global_inventory_changed()
+    if not items_by_id.has(item_id):
+        push_error("InventoryLogic: Item not found: %s" % item_id)
 		return
+
+	var item_to_remove: ItemEntry = items_by_id[item_id]
+	items_by_id.erase(item_id)
+
+	for i in all_global_items.size():
+		if all_global_items[i].item_id == item_id:
+			all_global_items.remove_at(i)
+			notify_global_inventory_changed()
+			return
+
+# ## Removes an item from the inventory.
+# func remove_item(item_id: int) -> void:
+# 	if not items_by_id.has(item_id):
+# 		push_error("InventoryLogic: Item not found: ", item_id)
+
+	
+	
+# 	for i in all_global_items.size():
+# 		if all_global_items[i].item_id != item_id:
+# 			continue
+
+# 		all_global_items.pop_at(i)
+# 		notify_global_inventory_changed()
+# 		return
 
 
 ## Removes every item from the inventory.
