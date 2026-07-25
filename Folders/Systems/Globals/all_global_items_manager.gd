@@ -26,6 +26,12 @@ func _setup() -> void:
 # ID Management
 # ===================================================================
 
+func sync_item_by_id_dict() -> void:
+	items_by_id.clear()
+
+	for item in all_global_items:
+		items_by_id[item.item_id] = item
+
 ## Calculates the next available item ID.
 func _calculate_max_id() -> void:
 	max_id = 0
