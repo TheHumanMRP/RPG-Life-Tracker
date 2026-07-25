@@ -50,6 +50,7 @@ func add_item(new_item: ItemEntry) -> void:
 	new_item.item_id = max_id
 
 	all_global_items.append(new_item)
+	items_by_id[new_item.item_id] = new_item
 
 	max_id += 1
 
@@ -72,6 +73,8 @@ func remove_item(item_id: int) -> void:
 ## Removes every item from the inventory.
 func clear_inventory() -> void:
 	all_global_items.clear()
+
+	sync_item_by_id_dict()
 
 	max_id = 0
 
