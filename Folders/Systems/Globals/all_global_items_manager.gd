@@ -58,6 +58,9 @@ func add_item(new_item: ItemEntry) -> void:
 
 ## Removes an item from the inventory.
 func remove_item(item_id: int) -> void:
+	if not items_by_id.has(item_id):
+		
+	
 	for i in all_global_items.size():
 		if all_global_items[i].item_id != item_id:
 			continue
