@@ -7,7 +7,7 @@ extends Resource
 
 @export var all_global_items: Array[ItemEntry] = []
 
-var items_by_id: Dictionary
+var items_by_id_dict: Dictionary
 
 @export var max_id: int = 0
 
@@ -27,10 +27,10 @@ func _setup() -> void:
 # ===================================================================
 
 func sync_item_by_id_dict() -> void:
-	items_by_id.clear()
+	items_by_id_dict.clear()
 
 	for item in all_global_items:
-		items_by_id[item.item_id] = item
+		items_by_id_dict[item.item_id] = item
 
 ## Calculates the next available item ID.
 func _calculate_max_id() -> void:
@@ -50,7 +50,7 @@ func add_item(new_item: ItemEntry) -> void:
 	new_item.item_id = max_id
 
 	all_global_items.append(new_item)
-	items_by_id[new_item.item_id] = new_item
+	items_by_id_dict[new_item.item_id] = new_item
 
 	max_id += 1
 
@@ -58,11 +58,11 @@ func add_item(new_item: ItemEntry) -> void:
 
 ## Removes an item from the inventory.
 func remove_item(item_id: int) -> void:
-	if not items_by_id.has(item_id):
+	if not items_by_id_dict.has(item_id):
 		push_error("InventoryLogic: Item not found: ", item_id)
 		return
 
-	items_by_id.erase(item_id)
+	items_by_id_dict.erase(item_id)
 
 	for i in all_global_items.size():
 		if all_global_items[i].item_id == item_id:
@@ -74,7 +74,7 @@ func remove_item(item_id: int) -> void:
 func clear_inventory() -> void:
 	all_global_items.clear()
 
-	items_by_id.clear()
+	items_by_id_dict.clear()
 
 	max_id = 0
 
