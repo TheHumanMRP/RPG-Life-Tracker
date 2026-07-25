@@ -74,7 +74,7 @@ func remove_item(item_id: int) -> void:
 func clear_inventory() -> void:
 	all_global_items.clear()
 
-	sync_item_by_id_dict()
+	items_by_id.clear()
 
 	max_id = 0
 
