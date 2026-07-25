@@ -94,7 +94,9 @@ func check_if_item_at_index_in_global_inventory_exists(index: int) -> bool:
 func get_item_by_id(item_id: int) -> ItemEntry:
 	if not items_by_id_dict.has(item_id):
 		push_error("All Global Items Manager: No item with item id: ", item_id)
-		Returns
+		return
+	
+	return items_by_id_dict[item_id]
 
 # ===================================================================
 # Debug
