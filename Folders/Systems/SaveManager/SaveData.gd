@@ -1,11 +1,11 @@
 class_name SaveData
 extends Resource
 
-@export var inventory_logic: InventoryLogicComponent
+@export var inventory_component: InventoryComponent
 @export var hotbar_logic: HotBarLogicComponent
 @export var equipment_logic_component: EquipmentLogicComponent
 
 func _init() -> void:
-	inventory_logic = InventoryLogicComponent.new()
+	inventory_logic = InventoryComponent.new()
 	hotbar_logic = HotBarLogicComponent.new()
 	equipment_logic_component = EquipmentLogicComponent.new()
