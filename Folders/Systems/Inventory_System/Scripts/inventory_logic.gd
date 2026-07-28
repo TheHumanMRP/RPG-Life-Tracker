@@ -1,67 +1,48 @@
-class_name InventoryLogicComponent
+class_name InventoryComponent
 extends Resource
 
 # ===================================================================
 # Inventory Data
 # ===================================================================
 
-@export var inventory_items: Array[ItemEntry] = []
-
-@export var max_id: int = 0
-
-
-# ===================================================================
-# Initialization
-# ===================================================================
-
-func _init() -> void:
-	call_deferred("_setup")
-
-func _setup() -> void:
-	_calculate_max_id()
-
-# ===================================================================
-# ID Management
-# ===================================================================
-
-## Calculates the next available item ID.
-func _calculate_max_id() -> void:
-	max_id = 0
-
-	for item in inventory_items:
-		if item.item_id >= max_id:
-			max_id = item.item_id + 1
+## IDs of items (registered in AllGlobalItemManager) that belong to this inventory.
+@export var inventory_item_ids: Array[int] = []
 
 
 # ===================================================================
 # Inventory Operations
 # ===================================================================
 
-## Adds an item to the inventory.
-func add_item(new_item: ItemEntry) -> void:
-	new_item.item_id = max_id
+## Adds an already-globally-registered item to this inventory by its id.
+func add_item(item_id: int) -> void:
+	if inventory_item_ids.has(item_id):
+		push_error("InventoryComponent: Item already in this inventory: ", item_id)
+		return
 
-	inventory_items.append(new_item)
+	if not AllGlobalItemManager.items_by_id_dict.has(item_id):
+		push_error("InventoryComponent: No globally registered item with ID: ", item_id)
+		return
 
-	max_id += 1
+	inventory_item_ids.append(item_id)
 
 	notify_inventory_changed()
 
 
-## Removes an item from the inventory.
+## Removes an item's reference from this inventory. The item itself stays
+## registered in the global item manager (e.g. for dropping/transferring).
 func remove_item(item_id: int) -> void:
-	for i in inventory_items.size():
-		if inventory_items[i].item_id != item_id:
+	for i in inventory_item_ids.size():
+		if inventory_item_ids[i] != item_id:
 			continue
 
-		inventory_items.pop_at(i)
+		inventory_item_ids.pop_at(i)
 		notify_inventory_changed()
 		return
 
-	push_error("InventoryLogic: Item not found: ", item_id)
+	push_error("InventoryComponent: Item not found in this inventory: ", item_id)
 
 
-## Uses an item.
+## Uses an item that belongs to this inventory.
 func use_item(item_id: int, target) -> void:
 	var item := get_item_by_id(item_id)
 
@@ -73,38 +54,36 @@ func use_item(item_id: int, target) -> void:
 	notify_inventory_changed()
 
 
-## Removes every item from the inventory.
+## Removes every item reference from this inventory. Items stay registered
+## in the global item manager.
 func clear_inventory() -> void:
-	inventory_items.clear()
-
-	max_id = 0
+	inventory_item_ids.clear()
 
 	notify_inventory_changed()
 
+
 func check_if_item_at_index_in_inventory_exists(index: int) -> bool:
-	if index < 0 or index >= inventory_items.size():
+	if index < 0 or index >= inventory_item_ids.size():
 		return false
-	
+
 	return true
+
 
 # ===================================================================
 # Getters
 # ===================================================================
 
-## Returns an item using its unique ID.
+## Returns an item using its unique ID, but only if it belongs to this inventory.
 func get_item_by_id(item_id: int) -> ItemEntry:
-	for item in inventory_items:
-		if not item.item_id == item_id:
-			continue
-		
-		return item
+	if not inventory_item_ids.has(item_id):
+		print("\nInventoryComponent: Debug")
+		print("Inventory Size: ", inventory_item_ids.size())
 
-	print("\nInventoryLogic: Debug")
-	print("Inventory Size: ", inventory_items.size())
+		push_error("InventoryComponent: Item not found in this inventory with ID ", item_id, ". Check the debug print.")
 
-	push_error("InventoryLogic: Item not found with ID ", item_id, ". Check the debug print.")
+		return null
 
-	return null
+	return AllGlobalItemManager.get_item_by_id(item_id)
 
 
 # ===================================================================
@@ -122,7 +101,8 @@ func add_test_sword() -> void:
 		sword.base_durability,
 	)
 
-	add_item(entry)
+	AllGlobalItemManager.add_item(entry)
+	add_item(entry.item_id)
 
 	print_all_items()
 
@@ -130,10 +110,13 @@ func add_test_sword() -> void:
 
 
 func print_all_items() -> void:
-	print("\nInventory Logic: Printing all items")
-	
-	for item in inventory_items:
-		item.print_self()
+	print("\nInventory Component: Printing all items")
+
+	for item_id in inventory_item_ids:
+		var item := AllGlobalItemManager.get_item_by_id(item_id)
+
+		if item != null:
+			item.print_self()
 
 # ===================================================================
 # Notify Listner
@@ -143,4 +126,4 @@ func notify_inventory_changed() -> void:
 	SignalBus.inventory_changed.emit()
 	SignalBus.save_game.emit()
 
-	print("\nInventory Logic: Notified that the inventory changed.")
+	print("\nInventory Component: Notified that the inventory changed.")
