@@ -67,24 +67,6 @@ func check_if_item_at_index_in_inventory_exists(index: int) -> bool:
 
 	return true
 
-
-# ===================================================================
-# Getters
-# ===================================================================
-
-## Returns an item using its unique ID, but only if it belongs to this inventory.
-func get_item_by_id(item_id: int) -> ItemEntry:
-	if not inventory_item_ids.has(item_id):
-		print("\nInventoryComponent: Debug")
-		print("Inventory Size: ", inventory_item_ids.size())
-
-		push_error("InventoryComponent: Item not found in this inventory with ID ", item_id, ". Check the debug print.")
-
-		return null
-
-	return AllGlobalItemsManager.get_item_by_id(item_id)
-
-
 # ===================================================================
 # Debug
 # ===================================================================

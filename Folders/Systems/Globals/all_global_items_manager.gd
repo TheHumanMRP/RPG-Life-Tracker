@@ -59,7 +59,7 @@ func add_item(new_item: ItemEntry) -> void:
 ## Removes an item from the inventory.
 func remove_item(item_id: int) -> void:
 	if not items_by_id_dict.has(item_id):
-		push_error("InventoryLogic: Item not found: ", item_id)
+		push_error("All Global Items Manager: Item not found: ", item_id)
 		return
 
 	items_by_id_dict.erase(item_id)
@@ -121,7 +121,7 @@ func add_test_sword() -> void:
 
 
 func print_all_items() -> void:
-	print("\nInventory Logic: Printing all items")
+	print("\nAll Global Items Manager: Printing all items")
 	
 	for item in all_global_items:
 		item.print_self()
@@ -134,4 +134,4 @@ func notify_global_inventory_changed() -> void:
 	SignalBus.notify_global_inventory_changed.emit()
 	SignalBus.save_game.emit()
 
-	print("\nInventory Logic: Notified that the inventory changed.")
+	print("\nAll Global Items Manager: Notified that the inventory changed.")
