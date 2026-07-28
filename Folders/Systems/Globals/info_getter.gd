@@ -6,7 +6,7 @@ extends Node
 # ============================================================================
 
 # Returns the inventory logic component.
-func get_inventory_logic() -> InventoryLogicComponent:
+func get_inventory_component() -> InventoryComponent:
 	return Global.save_data.inventory_logic
 
 # Returns the hotbar logic component.
