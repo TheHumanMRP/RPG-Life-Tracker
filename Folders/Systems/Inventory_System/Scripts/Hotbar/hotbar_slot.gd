@@ -55,7 +55,7 @@ func get_item() -> ItemEntry:
 
 	print("\nHotbar Slot: `get_item()` func was called. Here's the item_id: ", item_id)
 
-	return inventory.get_item_by_id(item_id)
+	return AllGlobalItemsManager.get_item_by_id(item_id)
 
 func refresh_logo() -> void:
 	display_logo.texture = null
