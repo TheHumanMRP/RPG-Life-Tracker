@@ -43,7 +43,7 @@ func remove_item(item_id: int) -> void:
 
 ## Uses an item that belongs to this inventory.
 func use_item(item_id: int, target) -> void:
-	var item := AllGlobalItemsManager.get_item_by_id(item_id)
+	var item: ItemEntry = AllGlobalItemsManager.get_item_by_id(item_id)
 
 	if item == null:
 		return
@@ -94,7 +94,7 @@ func print_all_items() -> void:
 	print("\nInventory Component: Printing all items")
 
 	for item_id in inventory_item_ids:
-		var item := AllGlobalItemsManager.get_item_by_id(item_id)
+		var item: ItemEntry = AllGlobalItemsManager.get_item_by_id(item_id)
 
 		if item != null:
 			item.print_self()
