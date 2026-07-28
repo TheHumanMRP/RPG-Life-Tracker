@@ -19,7 +19,7 @@ func add_item(item_id: int) -> void:
 		push_error("InventoryComponent: Item already in this inventory: ", item_id)
 		return
 
-	if AllGlobalItemManager.get_item_by_id(item_id) == null:
+	if AllGlobalItemsManager.get_item_by_id(item_id) == null:
 		return
 
 	inventory_item_ids.append(item_id)
@@ -82,7 +82,7 @@ func get_item_by_id(item_id: int) -> ItemEntry:
 
 		return null
 
-	return AllGlobalItemManager.get_item_by_id(item_id)
+	return AllGlobalItemsManager.get_item_by_id(item_id)
 
 
 # ===================================================================
@@ -100,7 +100,7 @@ func add_test_sword() -> void:
 		sword.base_durability,
 	)
 
-	AllGlobalItemManager.add_item(entry)
+	AllGlobalItemsManager.add_item(entry)
 	add_item(entry.item_id)
 
 	print_all_items()
@@ -112,7 +112,7 @@ func print_all_items() -> void:
 	print("\nInventory Component: Printing all items")
 
 	for item_id in inventory_item_ids:
-		var item := AllGlobalItemManager.get_item_by_id(item_id)
+		var item := AllGlobalItemsManager.get_item_by_id(item_id)
 
 		if item != null:
 			item.print_self()
