@@ -13,7 +13,7 @@ func _init() -> void:
 	SignalBus.item_selected.connect(equip_new_selected_item)
 
 func get_item_entry(item_id: int) -> ItemEntry:
-	var inventory_logic: InventoryLogicComponent = Global.get_inventory_logic()
+	var inventory_logic: InventoryComponent = Global.get_inventory_logic()
 
 	return inventory_logic.get_item_by_id(item_id)
 
