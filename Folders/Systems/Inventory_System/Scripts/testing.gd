@@ -6,7 +6,7 @@ var hotbar_logic: HotBarLogicComponent
 
 func test() -> void:
 	pass
-	inventory_component = InfoGetter.get_inventory_logic()
+	inventory_component = InfoGetter.get_inventory_component()
 	hotbar_logic = InfoGetter.get_hotbar_logic()
 
 	inventory_component.print_all_items()

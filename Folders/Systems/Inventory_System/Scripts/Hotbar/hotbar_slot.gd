@@ -51,7 +51,7 @@ func check_id() -> void:
 
 
 func get_item() -> ItemEntry:
-	var inventory = InfoGetter.get_inventory_logic()
+	var inventory: InventoryComponent = InfoGetter.get_inventory_component()
 
 	print("\nHotbar Slot: `get_item()` func was called. Here's the item_id: ", item_id)
 
