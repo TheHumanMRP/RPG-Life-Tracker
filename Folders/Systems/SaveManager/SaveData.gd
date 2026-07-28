@@ -6,6 +6,6 @@ extends Resource
 @export var equipment_logic_component: EquipmentLogicComponent
 
 func _init() -> void:
-	inventory_logic = InventoryComponent.new()
+	inventory_component = InventoryComponent.new()
 	hotbar_logic = HotBarLogicComponent.new()
 	equipment_logic_component = EquipmentLogicComponent.new()
