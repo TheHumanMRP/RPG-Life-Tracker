@@ -58,11 +58,9 @@ func add_item_to_hotbar(item_id: int, slot_index: int) -> void:
 
 ## Here for testing only
 func assaign_items_to_all_hotbars() -> void:
-	var inventory: Array[ItemEntry] = 
+	var inventory: Array[ItemEntry] = AllGlobalItemsManager.all_global_items
 	
 	for i in range(NUMBER_OF_HOTBAR_SLOTS):
-		var hotbar_slot_id: int = hotbar_slots[i]
-
 		if not Global.check_if_item_at_index_in_inventory_exists(i):
 			continue
 		
