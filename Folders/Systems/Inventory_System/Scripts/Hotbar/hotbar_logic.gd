@@ -31,7 +31,6 @@ func _init() -> void:
 	call_deferred("connect_signals")
 
 func connect_signals() -> void:
-	SignalBus.inventory_changed.connect(assaign_items_to_all_hotbars)
 	SignalBus.hotbar_selected.connect(hotbar_selected)
 
 
@@ -55,19 +54,6 @@ func add_item_to_hotbar(item_id: int, slot_index: int) -> void:
 	hotbar_slots[slot_index] = item_id
 
 	notify_hotbar_changed()
-
-## Here for testing only
-func assaign_items_to_all_hotbars() -> void:
-	var inventory: Array[ItemEntry] = AllGlobalItemsManager.all_global_items
-	
-	for i in range(NUMBER_OF_HOTBAR_SLOTS):
-		if not Global.check_if_item_at_index_in_inventory_exists(i):
-			continue
-		
-		hotbar_slots[i] = inventory[i].item_id
-	
-	notify_hotbar_changed()
-
 
 # ============================================================================
 # Queries
