@@ -1,5 +1,5 @@
 class_name AllGlobalItemManager
-extends Resource
+extends Node
 
 # ===================================================================
 # Inventory Data
