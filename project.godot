@@ -21,7 +21,6 @@ SignalBus="*uid://dackuyp70bkog"
 Global="*uid://b0m21w7a3y3rf"
 SaveCycleManager="*uid://3qrpfuo82m1t"
 InfoGetter="*uid://cbhg7hkcjf8py"
-AllGlobalItemsManager="*uid://c00ne7x0jygv8"
 
 [debug]
 
