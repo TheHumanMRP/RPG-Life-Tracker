@@ -19,8 +19,7 @@ func add_item(item_id: int) -> void:
 		push_error("InventoryComponent: Item already in this inventory: ", item_id)
 		return
 
-	if not AllGlobalItemManager.items_by_id_dict.has(item_id):
-		push_error("InventoryComponent: No globally registered item with ID: ", item_id)
+	if AllGlobalItemManager.get_item_by_id(item_id) == null:
 		return
 
 	inventory_item_ids.append(item_id)
