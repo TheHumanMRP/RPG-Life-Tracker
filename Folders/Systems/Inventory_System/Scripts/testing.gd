@@ -1,8 +1,8 @@
 class_name TestingScript
 extends Node
 
-var inventory_component: InventoryComponent
-var hotbar_logic: HotBarLogicComponent
+var inventory_component: InventoryComponent = InventoryComponent.new()
+var hotbar_logic: HotBarLogicComponent = HotBarLogicComponent.new()
 
 func test() -> void:
 	pass
