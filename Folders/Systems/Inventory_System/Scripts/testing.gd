@@ -6,7 +6,7 @@ var hotbar_logic: HotBarLogicComponent = HotBarLogicComponent.new()
 
 func test() -> void:
 	pass
-	inventory_component.inventory_name = 
+	inventory_component.inventory_name = Global.PLAYER_INVENTORY_NAME
 
 	inventory_component.print_all_items()
 	inventory_component.clear_inventory()

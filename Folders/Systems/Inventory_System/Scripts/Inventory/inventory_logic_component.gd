@@ -123,7 +123,7 @@ func print_all_items() -> void:
 func notify_inventory_changed() -> void:
 	SignalBus.save_game.emit()
 	
-	if inventory_name != Global.player_inventory_name:
+	if inventory_name != Global.PLAYER_INVENTORY_NAME:
 		return
 	
 	print("\nInventory Component: Notified that the player inventory changed.")
