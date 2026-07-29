@@ -19,7 +19,7 @@ func setup(new_inventory_name: String) -> void:
 # ===================================================================
 
 func get_inventory_item_ids() -> Array[int]:
-	return 
+	return Global.save_data.inventory_items_data.all_inventories
 
 # ===================================================================
 # Inventory Operations
