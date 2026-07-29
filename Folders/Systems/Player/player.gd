@@ -16,7 +16,8 @@ extends CharacterBody2D
 ## Handles the player's movement.
 @export var movement_component: MovementComponent = MovementComponent.new()
 
-
+## handles the player's inventory
+@export var inventory_logic_component: InventoryLogicComponent = InventoryLogicComponent.new()
 # --------------------------------------------------------------------
 # Spawn
 # --------------------------------------------------------------------
