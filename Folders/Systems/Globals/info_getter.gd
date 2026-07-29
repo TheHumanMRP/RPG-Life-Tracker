@@ -46,3 +46,5 @@ func get_number_of_hotbar_slots() -> int:
 # Returns the value representing an empty hotbar slot.
 func get_empty_hotbar_slot_const() -> int:
 	return Global.save_data.hotbar_logic.EMPTY_HOTBAR_SLOT
+
+@ 
