@@ -125,4 +125,5 @@ func notify_global_inventory_changed() -> void:
 
 	print("\nAll Global Items Manager: Notified that the inventory changed.")
 
-func save_
+func save_all_global_items_data() -> void:
+	SaveCycleManager.toggle_save_next()
