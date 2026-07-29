@@ -28,7 +28,14 @@ func get_global_max_id() -> int:
 # Setter
 # ===================================================================
 
-func set_all_global_items(new_all_global_items: )
+func set_all_global_items(new_all_global_items: Array[ItemEntry]) -> void:
+	Global.save_data.all_global_items_data.all_global_items = new_all_global_items
+
+func set_items_by_id_dict() -> Dictionary:
+	return Global.save_data.all_global_items_data.items_by_id_dict
+
+func set_global_max_id(new_global_max_id: int) -> void:
+	return Global.save_data.all_global_items_data.global_max_id
 
 # ===================================================================
 # ID Management
