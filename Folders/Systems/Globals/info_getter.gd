@@ -51,4 +51,10 @@ func get_empty_hotbar_slot_const() -> int:
 # All Global Items Data
 # ============================================================================
 func get_items_by_id_dict() -> Dictionary:
-	return Global.save_data.
+	return Global.save_data.all_global_items_data.items_by_id_dict
+
+func get_all_global_items() -> Array[ItemEntry]:
+	return Global.save_data.all_global_items_data.all_global_items
+
+func get_global_max_id() -> int:
+	
