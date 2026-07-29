@@ -47,4 +47,8 @@ func get_number_of_hotbar_slots() -> int:
 func get_empty_hotbar_slot_const() -> int:
 	return Global.save_data.hotbar_logic.EMPTY_HOTBAR_SLOT
 
-@ 
+# ============================================================================
+# All Global Items Data
+# ============================================================================
+func get_items_by_id_dict() -> Dictionary:
+	return Global.save_data.
