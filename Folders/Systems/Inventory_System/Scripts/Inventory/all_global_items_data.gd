@@ -6,3 +6,6 @@ extends Resource
 @export var items_by_id_dict: Dictionary
 
 @export var global_max_id: int = 0
+
+func clear_inventory() -> void:
+    
