@@ -16,7 +16,7 @@ func _setup() -> void:
 # ===================================================================
 
 func sync_item_by_id_dict() -> void:
-	items_by_id_dict.clear()
+	InfoGetter.get_items_by_id_dict().clear()
 
 	for item in all_global_items:
 		items_by_id_dict[item.item_id] = item
@@ -124,3 +124,5 @@ func notify_global_inventory_changed() -> void:
 	SignalBus.save_game.emit()
 
 	print("\nAll Global Items Manager: Notified that the inventory changed.")
+
+func save_
