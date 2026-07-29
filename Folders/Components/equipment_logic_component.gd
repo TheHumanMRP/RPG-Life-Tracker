@@ -13,9 +13,7 @@ func _init() -> void:
 	SignalBus.item_selected.connect(equip_new_selected_item)
 
 func get_item_entry(item_id: int) -> ItemEntry:
-	var inventory_component: InventoryLogicComponent = InfoGetter.get_inventory_component()
-
-	return inventory_component.get_item_by_id(item_id)
+	return AllGlobalItemManager
 
 func equip_new_helmet(new_helmet_item_id: int) -> void:
 	var new_helmet: ItemEntry = get_item_entry(new_helmet_item_id)
