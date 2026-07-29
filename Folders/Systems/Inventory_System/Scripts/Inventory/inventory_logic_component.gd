@@ -11,8 +11,15 @@ var inventory_name: String
 # Initialise
 # ===================================================================
 
-func setup() -> void:
-	pass
+func setup(new_inventory_name: String) -> void:
+	inventory_name = new_inventory_name
+
+# ===================================================================
+# Getters
+# ===================================================================
+
+func get_inventory_item_ids() -> Array[int]:
+	return 
 
 # ===================================================================
 # Inventory Operations
