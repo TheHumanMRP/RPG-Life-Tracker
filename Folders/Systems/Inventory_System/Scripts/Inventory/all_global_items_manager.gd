@@ -31,11 +31,11 @@ func get_global_max_id() -> int:
 func set_all_global_items(new_all_global_items: Array[ItemEntry]) -> void:
 	Global.save_data.all_global_items_data.all_global_items = new_all_global_items
 
-func set_items_by_id_dict() -> Dictionary:
-	return Global.save_data.all_global_items_data.items_by_id_dict
+func set_items_by_id_dict(new_items_by_id_dict: Dictionary) -> void:
+	Global.save_data.all_global_items_data.items_by_id_dict = new_items_by_id_dict
 
 func set_global_max_id(new_global_max_id: int) -> void:
-	return Global.save_data.all_global_items_data.global_max_id
+	Global.save_data.all_global_items_data.global_max_id = new_global_max_id
 
 # ===================================================================
 # ID Management
@@ -49,7 +49,7 @@ func sync_item_by_id_dict() -> void:
 
 ## Calculates the next available item ID.
 func _calculate_max_id() -> void:
-	InfoGetter.get_global_max_id() = 0
+	set_global_max_id() = 0
 
 	for item in InfoGetter.get_all_global_items():
 		if item.item_id >= InfoGetter.get_global_max_id().value:

@@ -46,15 +46,3 @@ func get_number_of_hotbar_slots() -> int:
 # Returns the value representing an empty hotbar slot.
 func get_empty_hotbar_slot_const() -> int:
 	return Global.save_data.hotbar_logic.EMPTY_HOTBAR_SLOT
-
-# ============================================================================
-# All Global Items Data
-# ============================================================================
-func get_all_global_items() -> Array[ItemEntry]:
-	return Global.save_data.all_global_items_data.all_global_items
-
-func get_items_by_id_dict() -> Dictionary:
-	return Global.save_data.all_global_items_data.items_by_id_dict
-
-func get_global_max_id() -> int:
-	return Global.save_data.all_global_items_data.global_max_id
