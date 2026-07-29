@@ -2,19 +2,6 @@ class_name Getter
 extends Node
 
 # ============================================================================
-# Logic Components
-# ============================================================================
-
-# Returns the inventory logic component.
-func get_inventory_component() -> InventoryComponent:
-	return Global.save_data.inventory_component
-
-# Returns the hotbar logic component.
-func get_hotbar_logic() -> HotBarLogicComponent:
-	return Global.save_data.hotbar_logic
-
-
-# ============================================================================
 # Inventory
 # ============================================================================
 
