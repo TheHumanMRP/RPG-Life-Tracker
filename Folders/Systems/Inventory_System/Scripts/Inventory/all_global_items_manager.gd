@@ -1,16 +1,6 @@
 class_name AllGlobalItemManager
 extends Node
 
-# ===================================================================
-# Inventory Data
-# ===================================================================
-
-@export var all_global_items: Array[ItemEntry] = []
-
-@export var items_by_id_dict: Dictionary
-
-@export var max_id: int = 0
-
 
 # ===================================================================
 # Initialization
