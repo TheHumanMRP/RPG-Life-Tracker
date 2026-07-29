@@ -24,13 +24,6 @@ func get_inventory_item_ids() -> Array[int]:
 	return inventory_item_ids
 
 # ===================================================================
-# Saver
-# ===================================================================
-
-func save_inventory_item_ids() -> void:
-	
-
-# ===================================================================
 # Inventory Operations
 # ===================================================================
 
@@ -129,3 +122,10 @@ func notify_inventory_changed() -> void:
 	SignalBus.save_game.emit()
 
 	print("\nInventory Component: Notified that the inventory changed.")
+
+# ===================================================================
+# Saver
+# ===================================================================
+
+func save_inventory_item_ids() -> void:
+	SaveCycleManager.toggle_save_next()
