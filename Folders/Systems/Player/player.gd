@@ -16,6 +16,7 @@ extends CharacterBody2D
 ## Handles the player's movement.
 @export var movement_component: MovementComponent = MovementComponent.new()
 
+
 # --------------------------------------------------------------------
 # Spawn
 # --------------------------------------------------------------------
