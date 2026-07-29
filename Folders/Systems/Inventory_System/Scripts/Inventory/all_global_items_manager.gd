@@ -15,49 +15,34 @@ func _setup() -> void:
 # Getters
 # ===================================================================
 
-func get_all_global_items() -> Array[ItemEntry]:
-	return Global.save_data.all_global_items_data.all_global_items
-
-func get_items_by_id_dict() -> Dictionary:
-	return Global.save_data.all_global_items_data.items_by_id_dict
-
-func get_global_max_id() -> int:
-	return Global.save_data.all_global_items_data.global_max_id
-
-# ===================================================================
-# Setters
-# ===================================================================
-
-func set_all_global_items(new_all_global_items: Array[ItemEntry]) -> void:
-	Global.save_data.all_global_items_data.all_global_items = new_all_global_items
-
-func set_items_by_id_dict(new_items_by_id_dict: Dictionary) -> void:
-	Global.save_data.all_global_items_data.items_by_id_dict = new_items_by_id_dict
-
-func set_global_max_id(new_global_max_id: int) -> void:
-	Global.save_data.all_global_items_data.global_max_id = new_global_max_id
+func get_all_global_items_data() -> AllGlobalItemsData:
+	return Global.save_data.all_global_items_data
 
 # ===================================================================
 # ID Management
 # ===================================================================
 
 func sync_item_by_id_dict() -> void:
-	var items_by_id_dict := {}
+	var data := get_all_global_items_data()
 
-	for item in get_all_global_items():
-		items_by_id_dict[item.item_id] = item
+	data.items_by_id_dict.clear()
 
-	set_items_by_id_dict(items_by_id_dict)
+	for item in data.all_global_items:
+		data.items_by_id_dict[item.item_id] = item
+
+	save_all_global_items_data()
 
 ## Calculates the next available item ID.
 func _calculate_max_id() -> void:
-	var max_id := 0
+	var data := get_all_global_items_data()
 
-	for item in get_all_global_items():
-		if item.item_id >= max_id:
-			max_id = item.item_id + 1
+	data.global_max_id = 0
 
-	set_global_max_id(max_id)
+	for item in data.all_global_items:
+		if item.item_id >= data.global_max_id:
+			data.global_max_id = item.item_id + 1
+
+	save_all_global_items_data()
 
 # ===================================================================
 # Inventory Operations
@@ -65,56 +50,51 @@ func _calculate_max_id() -> void:
 
 ## Adds an item to the inventory.
 func add_item(new_item: ItemEntry) -> void:
-	var all_global_items := get_all_global_items()
-	var items_by_id_dict := get_items_by_id_dict()
-	var max_id := get_global_max_id()
+	var data := get_all_global_items_data()
 
-	new_item.item_id = max_id
+	new_item.item_id = data.global_max_id
 
-	all_global_items.append(new_item)
-	items_by_id_dict[new_item.item_id] = new_item
+	data.all_global_items.append(new_item)
+	data.items_by_id_dict[new_item.item_id] = new_item
 
-	max_id += 1
+	data.global_max_id += 1
 
-	set_all_global_items(all_global_items)
-	set_items_by_id_dict(items_by_id_dict)
-	set_global_max_id(max_id)
-
+	save_all_global_items_data()
 	notify_global_inventory_changed()
 
 ## Removes an item from the inventory.
 func remove_item(item_id: int) -> void:
-	var all_global_items := get_all_global_items()
-	var items_by_id_dict := get_items_by_id_dict()
+	var data := get_all_global_items_data()
 
-	if not items_by_id_dict.has(item_id):
+	if not data.items_by_id_dict.has(item_id):
 		push_error("All Global Items Manager: Item not found: ", item_id)
 		return
 
-	items_by_id_dict.erase(item_id)
+	data.items_by_id_dict.erase(item_id)
 
-	for i in all_global_items.size():
-		if all_global_items[i].item_id == item_id:
-			all_global_items.remove_at(i)
+	for i in data.all_global_items.size():
+		if data.all_global_items[i].item_id == item_id:
+			data.all_global_items.remove_at(i)
 
-			set_all_global_items(all_global_items)
-			set_items_by_id_dict(items_by_id_dict)
-
+			save_all_global_items_data()
 			notify_global_inventory_changed()
 			return
 
 ## Removes every item from the inventory.
 func clear_inventory() -> void:
-	set_all_global_items([])
-	set_items_by_id_dict({})
-	set_global_max_id(0)
+	var data := get_all_global_items_data()
 
+	data.all_global_items.clear()
+	data.items_by_id_dict.clear()
+	data.global_max_id = 0
+
+	save_all_global_items_data()
 	notify_global_inventory_changed()
 
 func check_if_item_at_index_in_global_inventory_exists(index: int) -> bool:
-	var all_global_items := get_all_global_items()
+	var data := get_all_global_items_data()
 
-	if index < 0 or index >= all_global_items.size():
+	if index < 0 or index >= data.all_global_items.size():
 		return false
 
 	return true
@@ -125,13 +105,13 @@ func check_if_item_at_index_in_global_inventory_exists(index: int) -> bool:
 
 ## Returns an item using its unique ID.
 func get_item_by_id(item_id: int) -> ItemEntry:
-	var items_by_id_dict := get_items_by_id_dict()
+	var data := get_all_global_items_data()
 
-	if not items_by_id_dict.has(item_id):
+	if not data.items_by_id_dict.has(item_id):
 		push_error("All Global Items Manager: No item with item id: ", item_id)
 		return null
 
-	return items_by_id_dict[item_id] as ItemEntry
+	return data.items_by_id_dict[item_id] as ItemEntry
 
 # ===================================================================
 # Debug
@@ -157,7 +137,9 @@ func add_test_sword() -> void:
 func print_all_items() -> void:
 	print("\nAll Global Items Manager: Printing all items")
 
-	for item in get_all_global_items():
+	var data := get_all_global_items_data()
+
+	for item in data.all_global_items:
 		item.print_self()
 
 # ===================================================================
