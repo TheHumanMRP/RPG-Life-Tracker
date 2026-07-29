@@ -30,12 +30,10 @@ func get_inventory_item_ids() -> Array[int]:
 # Helpers
 # ===================================================================
 
-fucn 
-
+func ensure_this_inventory_name_array_exists_in_the_inventory_data_dict() -> void:
 # ===================================================================
 # Inventory Operations
 # ===================================================================
-
 ## Adds an already-globally-registered item to this inventory by its id.
 func add_item(item_id: int) -> void:
 	if get_inventory_item_ids().has(item_id):
