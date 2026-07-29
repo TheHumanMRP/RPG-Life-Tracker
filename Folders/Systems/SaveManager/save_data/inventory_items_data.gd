@@ -1,4 +1,4 @@
 class_name InventoryItemsData
 extends Resource
 
-@export 
+@ all_inventories: 
