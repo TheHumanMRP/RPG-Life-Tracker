@@ -13,7 +13,7 @@ var inventory_name: String
 
 func setup(new_inventory_name: String) -> void:
 	inventory_name = new_inventory_name
-	if 
+	if not 
 
 # ===================================================================
 # Getters
@@ -23,11 +23,12 @@ func get_inventory_item_ids() -> Array[int]:
 	if not inventory_name:
 		push_error("Inventory Logic Component: No Inventory Name")
 
-	var inventory_item_ids: Array[int] = Global.save_data.inventory_items_data.all_inventories[inventory_name] as Array[int]
+	var inventory_item_ids: Array[int] = get_inventory_dict()[inventory_name] as Array[int]
 
 	return inventory_item_ids
 
-func get_
+func get_inventory_dict() -> Dictionary:
+	return Global.save_data.inventory_items_data.all_inventories
 
 # ===================================================================
 # Inventory Operations
