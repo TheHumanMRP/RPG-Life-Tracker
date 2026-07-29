@@ -105,9 +105,6 @@ func remove_item(item_id: int) -> void:
 
 ## Removes every item from the inventory.
 func clear_inventory() -> void:
-	var default_all_global_itmes: Array[ItemEntry] = []
-	var default_items_by_id_dict
-
 	set_all_global_items([])
 	set_items_by_id_dict({})
 	set_global_max_id(0)
