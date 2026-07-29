@@ -1,14 +1,11 @@
 class_name TestingScript
 extends Node
 
-var inventory_component: InventoryComponent = InventoryComponent.new()
+var inventory_component: InventoryLogicComponent = InventoryLogicComponent.new()
 var hotbar_logic: HotBarLogicComponent = HotBarLogicComponent.new()
 
 func test() -> void:
 	pass
-	inventory_component = InfoGetter.get_inventory_component()
-	hotbar_logic = InfoGetter.get_hotbar_logic()
-
 	inventory_component.print_all_items()
 	inventory_component.clear_inventory()
 	inventory_component.add_test_sword()
