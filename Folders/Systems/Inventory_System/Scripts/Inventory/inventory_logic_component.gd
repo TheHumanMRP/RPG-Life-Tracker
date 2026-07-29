@@ -24,7 +24,7 @@ func get_inventory_item_ids() -> Array[int]:
 	if not inventory_name:
 		push_error("Inventory Logic Component: No Inventory Name")
 
-	var inventory_item_ids: Array[int] = get_inventory_dict()[inventory_name] as Array
+	var inventory_item_ids: Array = get_inventory_dict()[inventory_name] as Array
 
 	return inventory_item_ids
 
