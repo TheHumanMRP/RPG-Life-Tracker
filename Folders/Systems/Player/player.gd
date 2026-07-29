@@ -66,6 +66,8 @@ func _setup_component() -> void:
 	if not movement_component:
 		movement_component = MovementComponent.new()
 
+	if not inventory_logic_component:
+		inventory_logic_component = InventoryLogicComponent.new()
 
 ## Sets the player's spawn point and respawns them.
 func setup(new_spawn_point: Vector2) -> void:
