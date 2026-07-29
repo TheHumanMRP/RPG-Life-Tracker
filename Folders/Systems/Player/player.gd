@@ -108,7 +108,7 @@ func take_damage(amount: float) -> void:
 
 ## Heals the player.
 func heal(amount: float) -> void:
-	health_component.heal(amount()
+	health_component.heal(amount)
 
 
 ## Plays the damage flash effect.
@@ -120,7 +120,7 @@ func damage_taken(new_health: float) -> void:
 	tween.tween_property(self, "modulate", Color.RED, 0.1)
 	tween.tween_property(self, "modulate", Color.WHITE, 0.1)
 
-	await tween.finished()
+	await tween.finished
 
 
 ## Handles player death.
