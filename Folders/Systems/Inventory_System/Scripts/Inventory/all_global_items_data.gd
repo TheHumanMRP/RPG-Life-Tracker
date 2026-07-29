@@ -5,4 +5,4 @@ extends Resource
 
 @export var items_by_id_dict: Dictionary
 
-@export var max_id: int = 0
+@export var global_max_id: int = 0
