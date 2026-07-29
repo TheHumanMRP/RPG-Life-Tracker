@@ -39,7 +39,7 @@ func delete_save_file() -> void:
 	DirAccess.remove_absolute(save_path)
 
 func load_data() -> void:
-	delete_save_file()
+	# delete_save_file()
 
 	if not FileAccess.file_exists(save_path):
 		save_info = SaveData.new()
