@@ -2,11 +2,11 @@ class_name InventoryLogicComponent
 extends Resource
 
 # ===================================================================
-# Inventory Data
+# Inventory Vars
 # ===================================================================
 
-## IDs of items (registered in AllGlobalItemManager) that belong to this inventory.
-@export var inventory_item_ids: Array[int] = []
+var inventory_name: String
+
 
 
 # ===================================================================
