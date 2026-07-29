@@ -19,10 +19,10 @@ config/icon="uid://bqulutjwvblw"
 
 SignalBus="*uid://dackuyp70bkog"
 Global="*uid://b0m21w7a3y3rf"
-SaveCycleManager="*uid://3qrpfuo82m1t"
 InfoGetter="*uid://cbhg7hkcjf8py"
 AllGlobalItemsManager="*uid://ge8m2q1sbkg4"
 Signal_Debugger="*uid://bbuwm0mpypy50"
+SaveCycleManager="*uid://h2j1arx22jnu"
 
 [debug]
 
