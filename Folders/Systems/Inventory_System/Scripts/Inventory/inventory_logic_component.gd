@@ -29,14 +29,14 @@ func get_inventory_item_ids() -> Array[int]:
 
 ## Adds an already-globally-registered item to this inventory by its id.
 func add_item(item_id: int) -> void:
-	if inventory_item_ids.has(item_id):
+	if get_inventory_item_ids().has(item_id):
 		push_error("InventoryComponent: Item already in this inventory: ", item_id)
 		return
 
 	if AllGlobalItemsManager.get_item_by_id(item_id) == null:
 		return
 
-	inventory_item_ids.append(item_id)
+	get_inventory_item_ids().append(item_id)
 
 	notify_inventory_changed()
 
@@ -44,11 +44,11 @@ func add_item(item_id: int) -> void:
 ## Removes an item's reference from this inventory. The item itself stays
 ## registered in the global item manager (e.g. for dropping/transferring).
 func remove_item(item_id: int) -> void:
-	for i in inventory_item_ids.size():
-		if inventory_item_ids[i] != item_id:
+	for i in get_inventory_item_ids().size():
+		if get_inventory_item_ids()[i] != item_id:
 			continue
 
-		inventory_item_ids.pop_at(i)
+		get_inventory_item_ids().pop_at(i)
 		notify_inventory_changed()
 		return
 
@@ -70,13 +70,13 @@ func use_item(item_id: int, target) -> void:
 ## Removes every item reference from this inventory. Items stay registered
 ## in the global item manager.
 func clear_inventory() -> void:
-	inventory_item_ids.clear()
+	get_inventory_item_ids().clear()
 
 	notify_inventory_changed()
 
 
 func check_if_item_at_index_in_inventory_exists(index: int) -> bool:
-	if index < 0 or index >= inventory_item_ids.size():
+	if index < 0 or index >= get_inventory_item_ids().size():
 		return false
 
 	return true
@@ -107,7 +107,7 @@ func add_test_sword() -> void:
 func print_all_items() -> void:
 	print("\nInventory Component: Printing all items")
 
-	for item_id in inventory_item_ids:
+	for item_id in get_inventory_item_ids():
 		var item: ItemEntry = AllGlobalItemsManager.get_item_by_id(item_id)
 
 		if item != null:
