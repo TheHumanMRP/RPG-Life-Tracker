@@ -1,4 +1,4 @@
-class_name AllGlobalItemManager
+class_name AllGlobalItemManagerClass
 extends Node
 
 # ===================================================================
