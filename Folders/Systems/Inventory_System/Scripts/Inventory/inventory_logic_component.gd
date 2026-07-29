@@ -13,7 +13,8 @@ var inventory_name: String
 
 func setup(new_inventory_name: String) -> void:
 	inventory_name = new_inventory_name
-	if not 
+	if not get_inventory_dict().has(inventory_name):
+		get_inventory_dict()[inventory_name] = []
 
 # ===================================================================
 # Getters
