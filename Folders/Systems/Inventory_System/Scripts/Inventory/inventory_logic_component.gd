@@ -119,13 +119,7 @@ func print_all_items() -> void:
 
 func notify_inventory_changed() -> void:
 	SignalBus.inventory_changed.emit()
+	
 	SignalBus.save_game.emit()
 
 	print("\nInventory Component: Notified that the inventory changed.")
-
-# ===================================================================
-# Saver
-# ===================================================================
-
-func save_inventory_item_ids() -> void:
-	SaveCycleManager.toggle_save_next()
