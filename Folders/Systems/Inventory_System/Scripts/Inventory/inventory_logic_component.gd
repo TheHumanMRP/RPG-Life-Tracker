@@ -13,6 +13,7 @@ var inventory_name: String
 
 func setup(new_inventory_name: String) -> void:
 	inventory_name = new_inventory_name
+	
 
 # ===================================================================
 # Getters
@@ -26,11 +27,6 @@ func get_inventory_item_ids() -> Array[int]:
 
 	return inventory_item_ids
 
-# ===================================================================
-# Helpers
-# ===================================================================
-
-func ensure_this_inventory_name_array_exists_in_the_inventory_data_dict() -> void:
 # ===================================================================
 # Inventory Operations
 # ===================================================================
