@@ -1,4 +1,4 @@
 class_name InventoryItemsData
 extends Resource
 
-@export var all_inventories: Dictionary
+@export var all_inventories: Dictionary[String, ItemEntry]
