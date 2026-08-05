@@ -12,6 +12,8 @@ func _init() -> void:
 
 func connect_signals() -> void:
 	SignalBus.add_item_to_global_inventory.connect(add_item)
+	SignalBus.remove_item_from_global_inventory.connect(remove_item)
+	SignalBus.rename_item_in_inventory.connect()
 
 func _setup() -> void:
 	_calculate_max_id()
@@ -131,7 +133,7 @@ func get_item_by_id(item_id: int) -> ItemEntry:
 
 func add_test_sword() -> void:
 	var sword := Sword.new()
-	sword.setup("Hello Brother", null)
+	sword.setup(null)
 
 	var sword_name: String = "Test Sword"
 
