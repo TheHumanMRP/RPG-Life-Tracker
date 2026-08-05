@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c20du4ge4p05i" path="res://Folders/Systems/Player/player.gd" id="1_4ek6g"]
 [ext_resource type="Texture2D" uid="uid://bqulutjwvblw" path="res://Folders/Assets/icon.svg" id="2_3rm20"]
+[ext_resource type="PackedScene" uid="uid://dangj2qts40g4" path="res://Folders/Systems/Weapons/sword.tscn" id="4_4ek6g"]
 [ext_resource type="Script" uid="uid://ckyj7edp33tc8" path="res://Folders/Components/movement_component.gd" id="4_514jh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8uk81"]
@@ -45,3 +46,5 @@ position_smoothing_speed = 20.0
 script = ExtResource("4_514jh")
 friction = 5000.0
 metadata/_custom_type_script = "uid://ckyj7edp33tc8"
+
+[node name="Sword" parent="." unique_id=955837665 instance=ExtResource("4_4ek6g")]

@@ -1,8 +1,17 @@
 [gd_scene format=3 uid="uid://dangj2qts40g4"]
 
+[ext_resource type="Texture2D" uid="uid://bqulutjwvblw" path="res://Folders/Assets/icon.svg" id="1_erkv8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rv4w4"]
+size = Vector2(128, 110)
+
 [node name="Sword" type="Area2D" unique_id=955837665]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=318135747]
-position = Vector2(-1, 1.0000001)
-scale = Vector2(1.0014535, 1.017418)
-polygon = PackedVector2Array(0.9985486, -7.863042, 43, -1, 0.9985486, 6.880162)
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2078143280]
+position = Vector2(94, -1)
+scale = Vector2(1, 0.15625)
+texture = ExtResource("1_erkv8")
+
+[node name="Attack_Area" type="CollisionShape2D" parent="." unique_id=1848706569]
+position = Vector2(94, -1)
+shape = SubResource("RectangleShape2D_rv4w4")
