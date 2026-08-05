@@ -41,4 +41,4 @@ player_only = true
 width = 6000.0
 
 [node name="enemy" parent="." unique_id=254105940 instance=ExtResource("5_r324k")]
-position = Vector2(143, 162)
+position = Vector2(58, 89)
