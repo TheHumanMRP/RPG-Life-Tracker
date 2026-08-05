@@ -85,6 +85,9 @@ func remove_item(item_id: int) -> void:
 			notify_global_inventory_changed()
 			return
 
+func rename_item_in_inventory(item_id: int, new_name: String) -> void:
+	pass
+
 ## Removes every item from the inventory.
 func clear_inventory() -> void:
 	var data := get_all_global_items_data()
