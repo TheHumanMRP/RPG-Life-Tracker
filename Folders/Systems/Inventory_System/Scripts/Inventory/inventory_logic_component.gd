@@ -80,7 +80,6 @@ func clear_inventory() -> void:
 	get_inventory_item_ids().clear()
 
 	
-
 	notify_inventory_changed()
 
 
@@ -98,9 +97,12 @@ func add_test_sword() -> void:
 	var sword := Sword.new()
 	sword.setup(null)
 
+	var sword_name: String = "Hello Brother"
+
 	var entry := ItemEntry.new()
 	entry.setup(
 		sword,
+		sword_name,
 		load("res://Folders/Assets/icon.svg"),
 		sword.base_durability,
 	)
