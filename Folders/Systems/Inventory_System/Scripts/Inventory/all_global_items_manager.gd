@@ -6,7 +6,12 @@ extends Node
 # ===================================================================
 
 func _init() -> void:
+	connect_signals()
+
 	call_deferred("_setup")
+
+func connect_signals() -> void:
+	SignalBus.add_item_to_global_inventory.connect(add_item)
 
 func _setup() -> void:
 	_calculate_max_id()
@@ -49,12 +54,12 @@ func _calculate_max_id() -> void:
 # ===================================================================
 
 ## Adds an item to the inventory.
-func add_item(new_item: ItemEntry) -> void:
+func add_item(new_item_entry: ItemEntry) -> void:
 	var data := get_all_global_items_data()
 
-	new_item.item_id = data.global_max_id
+	new_item_entry.item_id = data.global_max_id
 
-	data.all_global_items.append(new_item)
+	data.all_global_items.append(new_item_entry)
 	data.items_by_id_dict[new_item.item_id] = new_item
 
 	data.global_max_id += 1

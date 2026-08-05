@@ -26,7 +26,7 @@ signal hotbar_changed
 # ==============================================
 
 signal notify_global_inventory_changed
-signal add_item_to_global_inventory(: String)
+signal add_item_to_global_inventory(new_item_entry: ItemEntry)
 
 signal refresh_ui
 signal save_game
