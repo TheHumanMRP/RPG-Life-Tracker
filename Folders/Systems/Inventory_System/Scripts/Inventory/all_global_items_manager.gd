@@ -88,7 +88,9 @@ func remove_item(item_id: int) -> void:
 func rename_item_in_inventory(item_id: int, new_name: String) -> void:
 	var item_to_rename: ItemEntry = get_item_by_id(item_id)
 
-	item_to_rename.
+	item_to_rename.name = new_name
+
+	save_all_global_items_data()
 
 ## Removes every item from the inventory.
 func clear_inventory() -> void:
