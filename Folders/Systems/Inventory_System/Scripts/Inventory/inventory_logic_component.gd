@@ -96,7 +96,7 @@ func check_if_item_at_index_in_inventory_exists(index: int) -> bool:
 
 func add_test_sword() -> void:
 	var sword := Sword.new()
-	sword.setup("Hello Brother", null)
+	sword.setup(null)
 
 	var entry := ItemEntry.new()
 	entry.setup(
