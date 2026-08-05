@@ -30,6 +30,10 @@ signal add_item_to_global_inventory(new_item_entry: ItemEntry)
 signal remove_item_from_global_inventory(item_id: int)
 signal rename_item_in_inventory(item_id: int, new_name: String)
 
+# ==============================================
+# Game State
+# ==============================================
+
 signal refresh_ui
 signal save_game
 
