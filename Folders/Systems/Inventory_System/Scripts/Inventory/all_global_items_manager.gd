@@ -60,7 +60,7 @@ func add_item(new_item_entry: ItemEntry) -> void:
 	new_item_entry.item_id = data.global_max_id
 
 	data.all_global_items.append(new_item_entry)
-	data.items_by_id_dict[new_item.item_id] = new_item
+	data.items_by_id_dict[new_item_entry.item_id] = new_item_entry
 
 	data.global_max_id += 1
 
