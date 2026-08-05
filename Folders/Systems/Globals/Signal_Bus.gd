@@ -11,14 +11,26 @@ signal respawn_player
 # ==============================================
 
 signal player_inventory_changed(new_inventory: Array[ItemEntry])
-
-signal equip_item(item_id: int)
-signal refresh_ui
-signal hotbar_changed
-signal hotbar_selected(slot_index: int)
 signal item_selected(item_id: int)
-signal save_game
+signal equip_item(item_id: int)
+
+# ==============================================
+# Hotbar
+# ==============================================
+
+signal hotbar_selected(slot_index: int)
+signal hotbar_changed
+
+# ==============================================
+# Global Inventory
+# ==============================================
+
 signal notify_global_inventory_changed
+
+
+
+signal refresh_ui
+signal save_game
 
 func _ready() -> void:
 	await get_tree().process_frame
