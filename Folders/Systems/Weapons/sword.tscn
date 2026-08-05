@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dangj2qts40g4"]
+
+[node name="Sword" type="Area2D" unique_id=955837665]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=318135747]
+position = Vector2(-1, 1.0000001)
+scale = Vector2(1.0014535, 1.017418)
+polygon = PackedVector2Array(0.9985486, -7.863042, 43, -1, 0.9985486, 6.880162)
