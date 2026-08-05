@@ -37,6 +37,10 @@ signal rename_item_in_inventory(item_id: int, new_name: String)
 signal refresh_ui
 signal save_game
 
+# ==============================================
+# Funcs
+# ==============================================
+
 func _ready() -> void:
 	await get_tree().process_frame
 	refresh_ui.emit()
