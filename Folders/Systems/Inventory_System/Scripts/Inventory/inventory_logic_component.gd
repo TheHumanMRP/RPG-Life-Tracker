@@ -79,6 +79,8 @@ func use_item(item_id: int, target) -> void:
 func clear_inventory() -> void:
 	get_inventory_item_ids().clear()
 
+	
+
 	notify_inventory_changed()
 
 
