@@ -133,9 +133,12 @@ func add_test_sword() -> void:
 	var sword := Sword.new()
 	sword.setup("Hello Brother", null)
 
+	var sword_name: String = "Test Sword"
+
 	var entry := ItemEntry.new()
 	entry.setup(
 		sword,
+		sword_name,
 		load("res://Folders/Assets/icon.svg"),
 		sword.base_durability,
 	)
