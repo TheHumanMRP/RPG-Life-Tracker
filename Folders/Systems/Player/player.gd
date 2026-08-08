@@ -6,11 +6,11 @@ extends CharacterBody2D
 # Onready Vars
 # --------------------------------------------------------------------
 
-@onready var health_component: HealthComponent = HealthComponent.new()
-@onready var movement_component: MovementComponent = MovementComponent.new()
-@onready var inventory_logic_component: InventoryLogicComponent = InventoryLogicComponent.new()
+var health_component: HealthComponent = HealthComponent.new()
+var movement_component: MovementComponent = MovementComponent.new()
+var inventory_logic_component: InventoryLogicComponent = InventoryLogicComponent.new()
 
-@onready var sword: 
+@onready var sword: SwordNode = $Sword
 
 # --------------------------------------------------------------------
 # Spawn
@@ -49,12 +49,11 @@ func _setup_component() -> void:
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("attack"):
-
+		sword.attack()
 
 # --------------------------------------------------------------------
 # Spawn & Respawn
 # --------------------------------------------------------------------
-
 ## Sets the player's spawn point and respawns them.
 func setup(new_spawn_point: Vector2) -> void:
 	spawn_point = new_spawn_point
