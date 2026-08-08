@@ -49,5 +49,5 @@ func check_if_dead() -> void:
 		dead = true
 		died.emit()
 
-func die() -> void:
+func kill_self() -> void:
 	health = 0
