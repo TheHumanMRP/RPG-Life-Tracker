@@ -10,8 +10,6 @@ var health_component: HealthComponent
 var movement_component: MovementComponent
 var inventory_logic_component: InventoryLogicComponent
 
-var alive: bool
-
 @onready var sword: SwordScene = $Sword
 
 # --------------------------------------------------------------------
@@ -54,8 +52,6 @@ func _setup_component() -> void:
 	inventory_logic_component.setup(Global.PLAYER_INVENTORY_NAME)
 
 func _process(delta: float) -> void:
-	sword.rotate(0.01)
-
 	if Input.is_action_just_pressed("attack"):
 		sword.attack()
 
