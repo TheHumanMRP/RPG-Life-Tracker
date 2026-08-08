@@ -3,6 +3,10 @@ extends Area2D
 @onready var attack_component: AttackComponent = AttackComponent.new()
 
 func attack() -> void:
-	var : Array[Node2D] = self.get_overlapping_bodies()
+	var nodes_in_attack_range: Array[Node2D] = self.get_overlapping_bodies()
 
-	for 
+	for node in nodes_in_attack_range:
+		if not node.is_in_group("enemies"):
+			continue
+		
+		attack_component.attack_target(node)

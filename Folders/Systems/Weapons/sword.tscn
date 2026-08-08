@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://dangj2qts40g4"]
 
+[ext_resource type="Script" uid="uid://csjvuces2nkog" path="res://Folders/Systems/Weapons/sword.gd" id="1_103ky"]
 [ext_resource type="Texture2D" uid="uid://bqulutjwvblw" path="res://Folders/Assets/icon.svg" id="1_erkv8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rv4w4"]
 size = Vector2(128, 110)
 
 [node name="Sword" type="Area2D" unique_id=955837665]
+script = ExtResource("1_103ky")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2078143280]
 position = Vector2(94, -1)
