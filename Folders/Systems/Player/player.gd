@@ -112,7 +112,6 @@ func damage_taken(new_health: float) -> void:
 
 	await tween.finished
 
-
 ## Handles player death.
 func dies() -> void:
 	SignalBus.player_died.emit()
