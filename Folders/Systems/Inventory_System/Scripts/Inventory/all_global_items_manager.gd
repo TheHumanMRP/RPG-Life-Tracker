@@ -148,7 +148,7 @@ func add_test_sword() -> void:
 
 	var sword_texture: Texture2D = load("res://Folders/Assets/icon.svg")
 
-	add_item(sword, sword_name, swrod_texture)
+	add_item(sword, sword_name, sword_texture)
 
 	print_all_items()
 
