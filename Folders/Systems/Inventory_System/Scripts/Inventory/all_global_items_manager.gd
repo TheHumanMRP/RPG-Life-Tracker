@@ -49,7 +49,7 @@ func _calculate_max_id() -> void:
 # ===================================================================
 
 ## Adds an item to the inventory.
-func add_item(new_item: BaseItem, new_name: String, new_logo: Texture2D, new_durability: float = new_item.base_durability) -> void:
+func add_item(new_item: BaseItem, new_name: String, new_logo: Texture2D, new_durability: float = new_item.base_durability) -> int:
 	var data := get_all_global_items_data()
 
 	var new_item_entry: ItemEntry = prepare_item_entry(new_item, new_name, new_logo, new_durability)
@@ -140,7 +140,7 @@ func get_all_global_items_data() -> AllGlobalItemsData:
 # Debug
 # ===================================================================
 
-func add_test_sword() -> void:
+func add_test_sword() -> int:
 	var sword := Sword.new()
 	sword.setup(null)
 
@@ -148,11 +148,13 @@ func add_test_sword() -> void:
 
 	var sword_texture: Texture2D = load("res://Folders/Assets/icon.svg")
 
-	add_item(sword, sword_name, sword_texture)
+	var test_item_id: int = add_item(sword, sword_name, sword_texture)
 
 	print_all_items()
 
 	notify_global_inventory_changed()
+
+	return test_item_id
 
 func print_all_items() -> void:
 	print("\nAll Global Items Manager: Printing all items")
