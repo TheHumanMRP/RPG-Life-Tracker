@@ -5,8 +5,8 @@ var health_component: HealthComponent
 var movement_component: MovementComponent
 var respawn_manager: RespawnManager
 
-func setup(new_max_health: int, new_user_name: String) -> void:
-	setup_health_component(new_max_health, new_user_name)
+func setup(user_name: String, user: Node, max_health: int, ) -> void:
+	setup_health_component(max_health, user_name)
 
 	setup_respawn_manager()
 
