@@ -3,7 +3,7 @@ extends CharacterBody2D
 ## Player character controller handling movement, health, and respawning.
 
 # --------------------------------------------------------------------
-# Onready Vars
+# Vars
 # --------------------------------------------------------------------
 
 var health_component: HealthComponent = HealthComponent.new()
