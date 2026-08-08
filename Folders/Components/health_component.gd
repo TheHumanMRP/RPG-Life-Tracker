@@ -8,7 +8,7 @@ var health: float:
 		new_health = clamp(new_health, 0, max_health)
 
 		if new_health < health:
-			print("\nDamage Taken signal emitted")
+			print("\nHealth Component [, ", owner_name, "]: Damage Taken signal emitted")
 			damage_taken.emit(new_health)
 		elif new_health > health:
 			healed.emit(new_health)
