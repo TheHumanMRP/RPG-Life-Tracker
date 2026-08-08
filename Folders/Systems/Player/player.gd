@@ -22,11 +22,14 @@ var inventory_logic_component: InventoryLogicComponent = InventoryLogicComponent
 # Lifecycle
 # --------------------------------------------------------------------
 
-func _ready() -> void:
+## Sets the player's spawn point and respawns them.
+func setup(new_spawn_point: Vector2) -> void:
+	spawn_point = new_spawn_point
+	respawn()
+
 	add_to_group("player")
 	_connect_signals()
 	_setup_component()
-
 
 ## Connects all required signals.
 func _connect_signals() -> void:
@@ -57,11 +60,6 @@ func _process(delta: float) -> void:
 # --------------------------------------------------------------------
 # Spawn & Respawn
 # --------------------------------------------------------------------
-## Sets the player's spawn point and respawns them.
-func setup(new_spawn_point: Vector2) -> void:
-	spawn_point = new_spawn_point
-	respawn()
-
 
 ## Respawns the player.
 func respawn() -> void:
