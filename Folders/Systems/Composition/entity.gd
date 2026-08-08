@@ -8,8 +8,8 @@ var respawn_manager: RespawnManager
 func setup(new_max_health: int, new_user_name: String) -> void:
 	setup_health_component(new_max_health, new_user_name)
 
-func setup_respawn_manager(new_spawn_point: Vector2, new_user: Node) -> void:
-	respawn_manager.setup()
+func setup_respawn_manager(spawn_point: Vector2, user: Node) -> void:
+	respawn_manager.setup(spawn_point, user)
 
 func setup_health_component(new_max_health: int, user_name) -> void:
 	health_component = HealthComponent.new()
