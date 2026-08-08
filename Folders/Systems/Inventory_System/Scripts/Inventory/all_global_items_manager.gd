@@ -56,7 +56,7 @@ func _calculate_max_id() -> void:
 # ===================================================================
 
 ## Adds an item to the inventory.
-func add_item(new_item_entry: ItemEntry) -> void:
+func add_item(new_item: BaseItem, new_name: String, new_logo: Texture2D, new_durability: float = new_item.base_durability) -> void:
 	var data := get_all_global_items_data()
 
 	new_item_entry.item_id = data.global_max_id
