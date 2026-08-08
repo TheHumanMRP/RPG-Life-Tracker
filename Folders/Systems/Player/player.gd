@@ -28,8 +28,8 @@ func setup(new_spawn_point: Vector2) -> void:
 	respawn()
 
 	add_to_group("player")
-	_connect_signals()
 	_setup_component()
+	_connect_signals()
 
 ## Connects all required signals.
 func _connect_signals() -> void:
