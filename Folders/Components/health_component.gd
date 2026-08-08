@@ -17,6 +17,8 @@ var health: float:
 
 		check_if_dead()
 
+func set_health() -> 
+
 var dead: bool
 
 signal died
