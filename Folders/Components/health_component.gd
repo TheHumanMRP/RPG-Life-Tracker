@@ -30,7 +30,7 @@ func setup(new_max_health: int, new_log_name: String) -> void:
 	max_health = new_max_health
 	log_name = new_log_name
 
-	print("\nHealth Component [, ", log_name, "]: Setup Done!")
+	print("\nHealth Component [", log_name, "]: Setup Done!")
 
 func _init() -> void:
 	call_deferred("reset")
