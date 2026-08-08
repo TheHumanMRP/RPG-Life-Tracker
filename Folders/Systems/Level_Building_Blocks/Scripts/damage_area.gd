@@ -82,10 +82,10 @@ func damage() -> void:
 			continue
 
 		if insta_kill:
-			body.kill_self()
+			attack_component.insta_kill_target(body)
 			continue
 		
-		attack_component.attack_target(body, damage_per_interval)
+		attack_component.attack_target(body)
 
 # ==================================================
 # Internal Methods
