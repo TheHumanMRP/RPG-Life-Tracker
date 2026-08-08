@@ -150,13 +150,13 @@ func add_test_sword() -> int:
 
 	var sword_texture: Texture2D = load("res://Folders/Assets/icon.svg")
 
-	var test_item_id: int = add_item(sword, sword_name, sword_texture)
+	var new_test_sword_item_id: int = add_item(sword, sword_name, sword_texture)
 
 	print_all_items()
 
 	notify_global_inventory_changed()
 
-	return test_item_id
+	return new_test_sword_item_id
 
 func print_all_items() -> void:
 	print("\nAll Global Items Manager: Printing all items")
