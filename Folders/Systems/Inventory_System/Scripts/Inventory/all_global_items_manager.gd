@@ -68,6 +68,8 @@ func add_item(new_item: BaseItem, new_name: String, new_logo: Texture2D, new_dur
 
 ## Removes an item from the inventory.
 func remove_item(item_id: int) -> void:
+	print("\nAll Global Items Manager: Removing item with item_id: ", item_id)
+
 	var data := get_all_global_items_data()
 
 	if not data.items_by_id_dict.has(item_id):
@@ -93,6 +95,8 @@ func rename_item_in_inventory(item_id: int, new_name: String) -> void:
 
 ## Removes every item from the inventory.
 func clear_inventory() -> void:
+	print("\nAll Global Items Manager: Clearing Inventory")
+	
 	var data := get_all_global_items_data()
 
 	data.all_global_items.clear()
