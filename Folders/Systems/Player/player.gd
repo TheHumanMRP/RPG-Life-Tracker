@@ -10,6 +10,8 @@ var health_component: HealthComponent
 var movement_component: MovementComponent
 var inventory_logic_component: InventoryLogicComponent
 
+var alive: bool
+
 @onready var sword: SwordScene = $Sword
 
 # --------------------------------------------------------------------
@@ -33,8 +35,8 @@ func setup(new_spawn_point: Vector2) -> void:
 
 ## Connects all required signals.
 func _connect_signals() -> void:
-	health_component.died.connect(dies)
-	health_component.damage_taken.connect(damage_taken)
+	health_component.died.connect(_on_player_dies)
+	health_component.damage_taken.connect(_on_damage_taken)
 
 	SignalBus.respawn_player.connect(respawn)
 
@@ -102,7 +104,7 @@ func _physics_process(delta: float) -> void:
 # --------------------------------------------------------------------
 
 ## Plays the damage flash effect.
-func damage_taken(new_health: float) -> void:
+func _on_damage_taken(new_health: float) -> void:
 	print("\nPlayer: Health Changed to ", new_health)
 
 	var tween := create_tween()
@@ -113,5 +115,7 @@ func damage_taken(new_health: float) -> void:
 	await tween.finished
 
 ## Handles player death.
-func dies() -> void:
+func _on_player_dies() -> void:
 	SignalBus.player_died.emit()
+
+	# TO-DO: Add player death animation here 
