@@ -10,7 +10,7 @@ var health_component: HealthComponent = HealthComponent.new()
 var movement_component: MovementComponent = MovementComponent.new()
 var inventory_logic_component: InventoryLogicComponent = InventoryLogicComponent.new()
 
-@onready var sword: SwordNode = $Sword
+@onready var sword: SwordScene = $Sword
 
 # --------------------------------------------------------------------
 # Spawn
