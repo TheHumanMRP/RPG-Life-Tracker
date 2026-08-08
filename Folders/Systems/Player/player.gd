@@ -45,6 +45,9 @@ func _setup_component() -> void:
 	if not inventory_logic_component:
 		inventory_logic_component = InventoryLogicComponent.new()
 
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("attack")
+
 # --------------------------------------------------------------------
 # Spawn & Respawn
 # --------------------------------------------------------------------
@@ -74,7 +77,6 @@ func _get_axis() -> int:
 	var right = Input.is_action_pressed("move_right")
 
 	return int(right) - int(left)
-
 
 func _physics_process(delta: float) -> void:
 	var x_direction = _get_axis()
