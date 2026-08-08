@@ -53,6 +53,8 @@ func _setup_component() -> void:
 
 	inventory_logic_component.setup("player")
 
+	respawn_manager_component.setup(spawn_point, self)
+
 func _process(delta: float) -> void:
 	sword.rotate(0.01)
 
