@@ -5,19 +5,20 @@ extends Node
 @export var max_health: int = 100
 var health: float:
 	set(new_health):
-		new_health = clamp(new_health, 0, max_health)
-
-		if new_health < health:
-			print("\nHealth Component [, ", log_name, "]: Damage Taken signal emitted")
-			damage_taken.emit(new_health)
-		elif new_health > health:
-			healed.emit(new_health)
-
-		health = new_health
-
+		set_health(new_health)
 		check_if_dead()
 
-func set_health() -> 
+func set_health(new_health) -> float:
+	new_health = clamp(new_health, 0, max_health)
+
+	if new_health < health:
+		print("\nHealth Component [, ", log_name, "]: Damage Taken signal emitted")
+		damage_taken.emit(new_health)
+	elif new_health > health:
+		healed.emit(new_health)
+
+	return new_health
+
 
 var dead: bool
 
