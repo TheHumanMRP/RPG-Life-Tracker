@@ -113,7 +113,11 @@ func check_if_item_at_index_in_global_inventory_exists(index: int) -> bool:
 # ===================================================================
 
 func prepare_item_entry(new_item: BaseItem, new_name: String, new_logo: Texture2D, new_durability: float = new_item.base_durability) -> ItemEntry:
-	
+	var item_entry: ItemEntry = ItemEntry.new()
+
+	item_entry.setup(new_item, new_name, new_logo, new_durability)
+
+	return item_entry
 
 # ===================================================================
 # Getters
@@ -150,7 +154,7 @@ func add_test_sword() -> void:
 		sword.base_durability,
 	)
 
-	add_item(entry)
+	add_item()
 
 	print_all_items()
 
