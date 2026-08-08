@@ -9,4 +9,8 @@ func setup(new_max_health: int, new_owner_name: String) -> void:
     
     health_component.setup(new_max_health, new_owner_name)
 
-func take_damage
+func take_damage(amount: float) -> void:
+    health_component.take_damage(amount)
+
+func heal(amount: float) -> void:
+    health_component.heal(amount)
