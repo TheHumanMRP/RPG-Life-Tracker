@@ -1,3 +1,4 @@
+class_name SwordNode
 extends Area2D
 
 @onready var attack_component: AttackComponent = AttackComponent.new()

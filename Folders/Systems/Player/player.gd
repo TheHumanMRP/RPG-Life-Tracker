@@ -3,14 +3,14 @@ extends CharacterBody2D
 ## Player character controller handling movement, health, and respawning.
 
 # --------------------------------------------------------------------
-# Components
+# Onready Vars
 # --------------------------------------------------------------------
 
-@export var health_component: HealthComponent = HealthComponent.new()
-@export var movement_component: MovementComponent = MovementComponent.new()
-@export var inventory_logic_component: InventoryLogicComponent = InventoryLogicComponent.new()
+@onready var health_component: HealthComponent = HealthComponent.new()
+@onready var movement_component: MovementComponent = MovementComponent.new()
+@onready var inventory_logic_component: InventoryLogicComponent = InventoryLogicComponent.new()
 
-
+@onready var sword: 
 
 # --------------------------------------------------------------------
 # Spawn
