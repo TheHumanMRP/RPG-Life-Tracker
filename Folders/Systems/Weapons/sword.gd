@@ -5,7 +5,7 @@ extends Area2D
 
 var rotation_speed: float = 10.0
 
-var target_angle: float = global_position.angle_to_point(get_global_mouse_position())
+var target_angle: float
 
 func _process(delta: float) -> void:
 	target_angle = global_position.angle_to_point(get_global_mouse_position())
