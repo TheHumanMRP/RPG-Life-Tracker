@@ -5,7 +5,7 @@ extends Node
 @export var max_health: int = 100
 var health: float:
 	set(new_health):
-		set_health(new_health)
+		health = set_health(new_health)
 		check_if_dead()
 
 func set_health(new_health) -> float:
