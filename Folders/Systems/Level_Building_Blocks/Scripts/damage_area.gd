@@ -34,8 +34,6 @@ extends Area2D
 
 @onready var timer: Timer = $%Timer
 
-var 
-
 # ==================================================
 # Lifecycle
 # ==================================================
@@ -73,6 +71,8 @@ func scan() -> void:
 
 # Applies damage to all valid overlapping bodies.
 func damage() -> void:
+	var attack_component: AttackComponent = AttackComponent.new()
+
 	var bodies: Array = get_overlapping_bodies()
 
 	for body in bodies:
