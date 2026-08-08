@@ -1,11 +1,16 @@
 class_name Entity
 extends Node
 
+var user: Node
+var user_name: String
+
 var health_component: HealthComponent
 var movement_component: MovementComponent
 var respawn_manager: RespawnManager
 
-func setup(new_max_health: int, new_owner_name: String) -> void:
+func setup(new_max_health: int, new_user_name: String) -> void:
+	user_name = new_owner_name
+
 	setup_health_component(new_max_health, new_owner_name)
 
 func setup_respawn_manager(new_spawn_point: Vector2, new_user: Node) -> void:
