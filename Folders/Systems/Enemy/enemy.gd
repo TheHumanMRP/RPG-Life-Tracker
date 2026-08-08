@@ -3,6 +3,7 @@ extends CharacterBody2D
 @onready var health_component: HealthComponent = HealthComponent.new()
 
 func _ready() -> void:
+	health_component.setup(100, "Enemy")
 	health_component.died.connect(_on_died)
 	self.add_to_group("enemies")
 
