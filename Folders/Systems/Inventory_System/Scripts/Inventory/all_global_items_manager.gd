@@ -146,15 +146,9 @@ func add_test_sword() -> void:
 
 	var sword_name: String = "Test Sword"
 
-	var entry := ItemEntry.new()
-	entry.setup(
-		sword,
-		sword_name,
-		load("res://Folders/Assets/icon.svg"),
-		sword.base_durability,
-	)
+	var sword_texture: Texture2D = load("res://Folders/Assets/icon.svg")
 
-	add_item()
+	add_item(sword, sword_name, swrod_texture)
 
 	print_all_items()
 
