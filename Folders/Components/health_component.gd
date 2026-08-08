@@ -1,6 +1,7 @@
 class_name HealthComponent
 extends Node
 
+@export var owner_name: String = "None"
 @export var max_health: int = 100
 var health: float:
 	set(new_health):
@@ -21,6 +22,9 @@ var dead: bool
 signal died
 signal damage_taken(new_health)
 signal healed(new_health)
+
+func setup(new_max_health: int, new_owner_name: String) -> void:
+	pass
 
 func _init() -> void:
 	call_deferred("reset")
