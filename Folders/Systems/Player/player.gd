@@ -48,6 +48,8 @@ func _setup_component() -> void:
 		inventory_logic_component = InventoryLogicComponent.new()
 
 func _process(delta: float) -> void:
+	sword.rotate(0.01)
+
 	if Input.is_action_just_pressed("attack"):
 		sword.attack()
 
