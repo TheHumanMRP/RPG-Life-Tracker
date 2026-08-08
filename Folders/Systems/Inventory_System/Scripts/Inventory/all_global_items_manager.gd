@@ -19,13 +19,6 @@ func _setup() -> void:
 	_calculate_max_id()
 
 # ===================================================================
-# Getters
-# ===================================================================
-
-func get_all_global_items_data() -> AllGlobalItemsData:
-	return Global.save_data.all_global_items_data
-
-# ===================================================================
 # ID Management
 # ===================================================================
 
@@ -114,6 +107,12 @@ func check_if_item_at_index_in_global_inventory_exists(index: int) -> bool:
 	return true
 
 # ===================================================================
+# Helpers
+# ===================================================================
+
+
+
+# ===================================================================
 # Getters
 # ===================================================================
 
@@ -126,6 +125,9 @@ func get_item_by_id(item_id: int) -> ItemEntry:
 		return null
 
 	return data.items_by_id_dict[item_id] as ItemEntry
+
+func get_all_global_items_data() -> AllGlobalItemsData:
+	return Global.save_data.all_global_items_data
 
 # ===================================================================
 # Debug
