@@ -41,7 +41,6 @@ func _setup_component() -> void:
 	if not health_component:
 		health_component = HealthComponent.new()
 		
-
 	if not movement_component:
 		movement_component = MovementComponent.new()
 
