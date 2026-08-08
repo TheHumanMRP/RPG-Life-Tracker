@@ -3,14 +3,8 @@ extends Area2D
 
 @onready var attack_component: AttackComponent = AttackComponent.new()
 
-var rotation_speed: float = 10.0
-
-var target_angle: float
-
 func _process(delta: float) -> void:
-	target_angle = global_position.angle_to_point(get_global_mouse_position())
-
-	rotation = rotate_toward(rotation, target_angle, rotation_speed * delta)
+	look_at(get_global_mouse_position())
 
 func attack() -> void:
 	var nodes_in_attack_range: Array[Node2D] = self.get_overlapping_bodies()
