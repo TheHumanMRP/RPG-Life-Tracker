@@ -1,7 +1,7 @@
 class_name HealthComponent
 extends Node
 
-@export var user: name: String = "None"
+@export var user_name: String = "None"
 @export var max_health: int = 100
 var health: float:
 	set(new_health):
