@@ -1,14 +1,14 @@
 class_name HealthComponent
 extends Node
 
-@export var user_name: String = "None"
+@export var log_name: String = "None"
 @export var max_health: int = 100
 var health: float:
 	set(new_health):
 		new_health = clamp(new_health, 0, max_health)
 
 		if new_health < health:
-			print("\nHealth Component [, ", user_name, "]: Damage Taken signal emitted")
+			print("\nHealth Component [, ", log_name, "]: Damage Taken signal emitted")
 			damage_taken.emit(new_health)
 		elif new_health > health:
 			healed.emit(new_health)
