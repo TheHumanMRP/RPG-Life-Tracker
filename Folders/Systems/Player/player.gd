@@ -49,7 +49,7 @@ func _setup_component() -> void:
 
 	health_component.setup(player_max_health, "Player")
 
-	inventory_logic_component.setup("player")
+	inventory_logic_component.setup(Global.PLAYER_INVENTORY_NAME)
 
 func _process(delta: float) -> void:
 	sword.rotate(0.01)
