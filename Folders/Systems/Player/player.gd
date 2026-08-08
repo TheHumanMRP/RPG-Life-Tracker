@@ -43,17 +43,11 @@ func _connect_signals() -> void:
 ## Ensures all required components exist.
 func _setup_component() -> void:
 	health_component = HealthComponent.new()
+	movement_component = MovementComponent.new()
+	inventory_logic_component = InventoryLogicComponent.new()
+	respawn_manager_component = RespawnManagerComponent.new()
 
-	if not health_component:
-		health_component = HealthComponent.new()
-	
-	health_component.setup(100, "Player")
-		
-	if not movement_component:
-		movement_component = MovementComponent.new()
-
-	if not inventory_logic_component:
-		inventory_logic_component = InventoryLogicComponent.new()
+	health_component.setup()
 
 func _process(delta: float) -> void:
 	sword.rotate(0.01)
