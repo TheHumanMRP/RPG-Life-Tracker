@@ -64,6 +64,8 @@ func add_item(new_item: BaseItem, new_name: String, new_logo: Texture2D, new_dur
 	save_all_global_items_data()
 	notify_global_inventory_changed()
 
+	return new_item_entry.item_id
+
 ## Removes an item from the inventory.
 func remove_item(item_id: int) -> void:
 	var data := get_all_global_items_data()

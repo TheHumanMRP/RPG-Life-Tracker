@@ -94,7 +94,9 @@ func check_if_item_at_index_in_inventory_exists(index: int) -> bool:
 # ===================================================================
 
 func add_test_sword() -> void:
-	AllGlobalItemsManager.add_test_sword()
+	var new_test_sword_item_id: int = AllGlobalItemsManager.add_test_sword()
+
+	add_item(new_test_sword_item_id)
 
 
 func print_all_items() -> void:
