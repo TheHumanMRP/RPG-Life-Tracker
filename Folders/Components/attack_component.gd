@@ -6,4 +6,6 @@ extends RefCounted
 func setup(new_attack_power: int) -> void:
     attack_power = new_attack_power
 
-func attack_target(target)
+func attack_target(target) -> void:
+    if target.has_function("take_damage"):
+        target.take_damage(attack_power)
