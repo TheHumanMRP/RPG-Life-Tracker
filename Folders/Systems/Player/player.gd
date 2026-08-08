@@ -80,6 +80,9 @@ func _get_axis() -> int:
 	return int(right) - int(left)
 
 func _physics_process(delta: float) -> void:
+	if health_component.dead:
+		return
+
 	var x_direction = _get_axis()
 	var jump := Input.is_action_just_pressed("jump")
 
