@@ -47,7 +47,11 @@ func _setup_component() -> void:
 	inventory_logic_component = InventoryLogicComponent.new()
 	respawn_manager_component = RespawnManagerComponent.new()
 
-	health_component.setup()
+	var player_max_health: int = InfoGetter.get_player_max_health()
+
+	health_component.setup(player_max_health, "Player")
+
+	inventory_logic_component.setup("player")
 
 func _process(delta: float) -> void:
 	sword.rotate(0.01)
