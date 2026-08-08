@@ -12,4 +12,5 @@ func attack_target(target: Node) -> void:
 
 	target.health_component.take_damage(attack_power)
 
-func insta_kill_target(t)
+func insta_kill_target(target: Node) -> void:
+	
