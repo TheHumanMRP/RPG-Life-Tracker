@@ -24,7 +24,10 @@ signal damage_taken(new_health)
 signal healed(new_health)
 
 func setup(new_max_health: int, new_owner_name: String) -> void:
-	pass
+	max_health = new_max_health
+	owner_name = new_owner_name
+
+	print("\nHealth Component: ")
 
 func _init() -> void:
 	call_deferred("reset")
