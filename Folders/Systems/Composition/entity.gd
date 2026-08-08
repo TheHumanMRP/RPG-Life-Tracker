@@ -1,4 +1,4 @@
-class_name HealthManager
+class_name HealthAPI
 extends Node
 
 var health_component: HealthComponent
