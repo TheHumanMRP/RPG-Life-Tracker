@@ -6,9 +6,9 @@ extends CharacterBody2D
 # Vars
 # --------------------------------------------------------------------
 
-var health_component: HealthComponent = HealthComponent.new()
-var movement_component: MovementComponent = MovementComponent.new()
-var inventory_logic_component: InventoryLogicComponent = InventoryLogicComponent.new()
+var health_component: HealthComponent
+var movement_component: MovementComponent
+var inventory_logic_component: InventoryLogicComponent
 var respawn_manager_component: RespawnManagerComponent
 
 @onready var sword: SwordScene = $Sword
@@ -42,9 +42,12 @@ func _connect_signals() -> void:
 
 ## Ensures all required components exist.
 func _setup_component() -> void:
+	health_component = HealthComponent.new()
+
 	if not health_component:
 		health_component = HealthComponent.new()
-		health_component.setup(100, "Player")
+	
+	health_component.setup(100, "Player")
 		
 	if not movement_component:
 		movement_component = MovementComponent.new()
