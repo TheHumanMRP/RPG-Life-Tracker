@@ -94,25 +94,7 @@ func check_if_item_at_index_in_inventory_exists(index: int) -> bool:
 # ===================================================================
 
 func add_test_sword() -> void:
-	var sword := Sword.new()
-	sword.setup(null)
-
-	var sword_name: String = "Hello Brother"
-
-	var entry := ItemEntry.new()
-	entry.setup(
-		sword,
-		sword_name,
-		load("res://Folders/Assets/icon.svg"),
-		sword.base_durability,
-	)
-
-	AllGlobalItemsManager.add_item(entry)
-	add_item(entry.item_id)
-
-	print_all_items()
-
-	notify_inventory_changed()
+	AllGlobalItemsManager.add_test_sword()
 
 
 func print_all_items() -> void:
