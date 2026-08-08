@@ -10,6 +10,8 @@ extends CharacterBody2D
 @export var movement_component: MovementComponent = MovementComponent.new()
 @export var inventory_logic_component: InventoryLogicComponent = InventoryLogicComponent.new()
 
+
+
 # --------------------------------------------------------------------
 # Spawn
 # --------------------------------------------------------------------
@@ -46,7 +48,8 @@ func _setup_component() -> void:
 		inventory_logic_component = InventoryLogicComponent.new()
 
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("attack")
+	if Input.is_action_just_pressed("attack"):
+
 
 # --------------------------------------------------------------------
 # Spawn & Respawn
