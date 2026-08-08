@@ -73,6 +73,8 @@ func scan() -> void:
 func damage() -> void:
 	var attack_component: AttackComponent = AttackComponent.new()
 
+	attack_component.setup(damage_per_interval)
+
 	var bodies: Array = get_overlapping_bodies()
 
 	for body in bodies:
@@ -83,7 +85,7 @@ func damage() -> void:
 			body.kill_self()
 			continue
 		
-		body.take_damage(damage_per_interval)
+		attack_component.attack_target(body, damage_per_interval)
 
 # ==================================================
 # Internal Methods
