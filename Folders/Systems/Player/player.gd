@@ -9,7 +9,6 @@ extends CharacterBody2D
 var health_component: HealthComponent
 var movement_component: MovementComponent
 var inventory_logic_component: InventoryLogicComponent
-var respawn_manager_component: RespawnManagerComponent
 
 @onready var sword: SwordScene = $Sword
 
@@ -25,12 +24,12 @@ var respawn_manager_component: RespawnManagerComponent
 
 ## Sets the player's spawn point and respawns them.
 func setup(new_spawn_point: Vector2) -> void:
-	spawn_point = new_spawn_point
-	respawn()
-
 	add_to_group("player")
 	_setup_component()
 	_connect_signals()
+
+	spawn_point = new_spawn_point
+	respawn()
 
 ## Connects all required signals.
 func _connect_signals() -> void:
@@ -45,15 +44,12 @@ func _setup_component() -> void:
 	health_component = HealthComponent.new()
 	movement_component = MovementComponent.new()
 	inventory_logic_component = InventoryLogicComponent.new()
-	respawn_manager_component = RespawnManagerComponent.new()
 
 	var player_max_health: int = InfoGetter.get_player_max_health()
 
 	health_component.setup(player_max_health, "Player")
 
 	inventory_logic_component.setup("player")
-
-	respawn_manager_component.setup(spawn_point, self)
 
 func _process(delta: float) -> void:
 	sword.rotate(0.01)
