@@ -7,7 +7,7 @@ func setup(new_attack_power: int) -> void:
 	attack_power = new_attack_power
 
 func attack_target(target: Node) -> void:
-	if not target.has_method("take_damage"):
+	if not "health_component" in target:
 		return
 
-	target.take_damage(attack_power)
+	target.health_component.take_damage(attack_power)

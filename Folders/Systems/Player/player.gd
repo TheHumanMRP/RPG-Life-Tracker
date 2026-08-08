@@ -100,21 +100,6 @@ func _physics_process(delta: float) -> void:
 # Health
 # --------------------------------------------------------------------
 
-## Instantly kills the player.
-func kill_self() -> void:
-	health_component.die()
-
-
-## Damages the player.
-func take_damage(amount: float) -> void:
-	health_component.take_damage(amount)
-
-
-## Heals the player.
-func heal(amount: float) -> void:
-	health_component.heal(amount)
-
-
 ## Plays the damage flash effect.
 func damage_taken(new_health: float) -> void:
 	print("\nPlayer: Health Changed to ", new_health)

@@ -4,7 +4,7 @@ extends Node
 # Player
 # ==============================================
 
-signal respawn_player
+signal player_died
 
 # ==============================================
 # Player Inventory
@@ -47,4 +47,4 @@ func _ready() -> void:
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("respawn"):
-		respawn_player.emit()
+		player_died.emit()
