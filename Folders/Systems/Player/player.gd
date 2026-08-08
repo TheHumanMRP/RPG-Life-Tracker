@@ -52,6 +52,9 @@ func _setup_component() -> void:
 	inventory_logic_component.setup(Global.PLAYER_INVENTORY_NAME)
 
 func _process(delta: float) -> void:
+	if health_component.dead:
+		return
+
 	if Input.is_action_just_pressed("attack"):
 		sword.attack()
 
