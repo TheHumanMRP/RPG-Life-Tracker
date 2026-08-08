@@ -1,4 +1,4 @@
-class_name RespawnManager
+class_name RespawnManagerComponent
 extends RefCounted
 
 @export var respawn_point: Vector2

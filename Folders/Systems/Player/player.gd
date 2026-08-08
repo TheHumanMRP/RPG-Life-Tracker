@@ -9,6 +9,7 @@ extends CharacterBody2D
 var health_component: HealthComponent = HealthComponent.new()
 var movement_component: MovementComponent = MovementComponent.new()
 var inventory_logic_component: InventoryLogicComponent = InventoryLogicComponent.new()
+var respawn_manager_component: RespawnManagerComponent
 
 @onready var sword: SwordScene = $Sword
 
