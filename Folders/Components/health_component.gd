@@ -27,7 +27,7 @@ func setup(new_max_health: int, new_owner_name: String) -> void:
 	max_health = new_max_health
 	owner_name = new_owner_name
 
-	print("\nHealth Component: ")
+	print("\nHealth Component [, ", owner_name, "]: ")
 
 func _init() -> void:
 	call_deferred("reset")
@@ -35,7 +35,7 @@ func _init() -> void:
 func reset() -> void:
 	health = max_health
 	dead = false
-	print("\nHealth Component: Reset Func Called, here's the dead var: ", dead)
+	print("\nHealth Component [", owner_name, "]: Reset Func Called, here's the dead var: ", dead)
 
 func take_damage(amount: float) -> void:
 	health -= amount
@@ -44,7 +44,7 @@ func heal(amount: float) -> void:
 	health += amount
 
 func check_if_dead() -> void:
-	print("\nHealth Component: Check if dead called: here's health and dead brother: ", health, ", ", dead)
+	print("\nHealth Component [", owner_name, "]: Check if dead called: here's health and dead brother: ", health, ", ", dead)
 	if health == 0 and not dead:
 		dead = true
 		died.emit()
