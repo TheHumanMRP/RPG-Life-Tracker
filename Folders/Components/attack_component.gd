@@ -13,4 +13,7 @@ func attack_target(target: Node) -> void:
 	target.health_component.take_damage(attack_power)
 
 func insta_kill_target(target: Node) -> void:
+	if not "health_component" in target:
+		return
 	
+	target.health_component.kill_self()
