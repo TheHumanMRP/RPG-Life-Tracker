@@ -114,4 +114,4 @@ func damage_taken(new_health: float) -> void:
 
 ## Handles player death.
 func dies() -> void:
-	SignalBus.respawn_player.emit()
+	SignalBus.player_died.emit()
