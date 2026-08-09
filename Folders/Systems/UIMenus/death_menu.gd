@@ -21,6 +21,8 @@ func _ready() -> void:
 func _on_player_died() -> void:
 	print("\nDeath Menu: PLayer Died signal received")
 
+	await get_tree().create_timer(0.5).timeout
+
 	Global.current_game_state = Global.GAME_STATES.UIMenu
 
 	show()
