@@ -89,6 +89,9 @@ func _physics_process(delta: float) -> void:
 		return
 
 	var x_direction = _get_axis()
+	
+	
+	
 	var jump := Input.is_action_just_pressed("jump")
 
 	velocity = movement_component.get_velocity(
