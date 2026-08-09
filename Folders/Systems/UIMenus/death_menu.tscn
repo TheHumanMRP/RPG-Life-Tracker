@@ -2,42 +2,35 @@
 
 [ext_resource type="Script" uid="uid://c85obb5b7y12q" path="res://Folders/Systems/UIMenus/death_menu.gd" id="1_dd6n6"]
 
-[node name="DeathMenu" type="PanelContainer" unique_id=1087901046]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="DeathMenu" type="CanvasLayer" unique_id=787886382]
 script = ExtResource("1_dd6n6")
 
-[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1477643591]
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=484555171]
+offset_right = 136.0
+offset_bottom = 133.0
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=1477643591]
 layout_mode = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=53722514]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=53722514]
 layout_mode = 2
 
-[node name="You_Died_Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1269859127]
+[node name="You_Died_Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1269859127]
 unique_name_in_owner = true
 layout_mode = 2
 text = "You Died!"
 horizontal_alignment = 1
 
-[node name="Respawn_Button" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1389422413]
+[node name="Respawn_Button" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1389422413]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Respawn"
 
-[node name="Main_Menu_Button" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1482938906]
+[node name="Main_Menu_Button" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1482938906]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Main Menu"
