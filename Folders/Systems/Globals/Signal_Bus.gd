@@ -43,7 +43,7 @@ signal save_game
 # ==============================================
 
 func _ready() -> void:
-	self.process
+	self.process_mode = Node.PROCESS_MODE_ALWAYS
 	await get_tree().process_frame
 	refresh_ui.emit()
 
