@@ -37,5 +37,6 @@ layout_mode = 2
 text = "Respawn"
 
 [node name="Main_Menu_Button" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1482938906]
+unique_name_in_owner = true
 layout_mode = 2
 text = "Main Menu"

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bgbgfpngstnov"]
 
 [ext_resource type="Script" uid="uid://cfjctevm3r2gq" path="res://Folders/Systems/Main/Scripts/ui_layer.gd" id="1_j4qr7"]
+[ext_resource type="PackedScene" uid="uid://ck6amdbdbjx14" path="res://Folders/Systems/UIMenus/death_menu.tscn" id="2_hxw6d"]
 
 [node name="UILayer" type="CanvasLayer" unique_id=1819027134]
 script = ExtResource("1_j4qr7")
@@ -25,3 +26,5 @@ layout_mode = 2
 unique_name_in_owner = true
 layout_mode = 2
 text = "Fps here"
+
+[node name="DeathMenu" parent="." unique_id=1087901046 instance=ExtResource("2_hxw6d")]
