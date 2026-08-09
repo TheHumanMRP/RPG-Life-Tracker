@@ -3,18 +3,11 @@
 [ext_resource type="PackedScene" uid="uid://dqf5jume5kohl" path="res://Folders/Systems/Level_Building_Blocks/Scenes/level.tscn" id="2_e7ifm"]
 [ext_resource type="PackedScene" uid="uid://bgbgfpngstnov" path="res://Folders/Systems/Main/Scenes/ui_layer.tscn" id="2_inmiq"]
 [ext_resource type="PackedScene" uid="uid://svisxss24oxa" path="res://Folders/Systems/Inventory_System/Scenes/inventory_ui_layer.tscn" id="3_e7ifm"]
-[ext_resource type="PackedScene" uid="uid://ck6amdbdbjx14" path="res://Folders/Systems/UIMenus/death_menu.tscn" id="4_33not"]
 
 [node name="MainScene" type="Node2D" unique_id=928742535]
 
 [node name="Level" parent="." unique_id=2061816320 instance=ExtResource("2_e7ifm")]
 
 [node name="UILayer" parent="." unique_id=1819027134 instance=ExtResource("2_inmiq")]
-
-[node name="DeathMenu" parent="UILayer" unique_id=1087901046 instance=ExtResource("4_33not")]
-offset_left = -644.0
-offset_top = -390.5
-offset_right = -508.0
-offset_bottom = -257.5
 
 [node name="Inventory_UI_Layer" parent="." unique_id=1730334149 instance=ExtResource("3_e7ifm")]
