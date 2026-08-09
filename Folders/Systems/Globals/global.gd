@@ -12,7 +12,10 @@ enum GAME_STATES {
 
 }
 
-var current_game_state: GAME_STATES
+var current_game_state: GAME_STATES:
+	set(new_current_game_state):
+		current_game_state = new_current_game_state
+		_set_game_state_settings()
 
 # ============================================================================
 # Consts
