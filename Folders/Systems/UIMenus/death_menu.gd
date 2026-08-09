@@ -26,4 +26,4 @@ func _on_respawn_button_pressed() -> void:
 	hide()
 
 func _on_main_menu_button_pressed() -> void:
-	print("\nDeath Menu: ")
+	print("\nDeath Menu: Main Menu Button Pressed")
