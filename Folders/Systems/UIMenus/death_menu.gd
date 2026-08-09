@@ -14,6 +14,9 @@ func _ready() -> void:
 func _on_respawn_button_pressed() -> void:
 	SignalBus.respawn_player.emit()
 
+	print("\nDeath Menu: Respawn Button Pressed")
+
+	self.queue_free()
 
 func _on_main_menu_button_pressed() -> void:
 	pass
