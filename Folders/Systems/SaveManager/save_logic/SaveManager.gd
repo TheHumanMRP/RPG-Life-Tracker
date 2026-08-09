@@ -11,10 +11,10 @@ const LIVE_SAVE_PATH := "user://live/save_data.tres"
 func _init(new_save_path: String = "", new_create_file: bool = true) -> void:
 	print("Save Manager: Init Called")
 
-	if new_save_path != "":
-		save_path = new_save_path
-	else:
+	if new_save_path == "":
 		save_path = get_save_file_path()
+	else:
+		save_path = new_save_path
 
 	create_file = new_create_file
 
