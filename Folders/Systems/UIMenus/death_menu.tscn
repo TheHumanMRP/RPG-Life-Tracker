@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://ck6amdbdbjx14"]
 
+[ext_resource type="Script" uid="uid://c85obb5b7y12q" path="res://Folders/Systems/UIMenus/death_menu.gd" id="1_dd6n6"]
+
 [node name="DeathMenu" type="PanelContainer" unique_id=1087901046]
 anchors_preset = 8
 anchor_left = 0.5
@@ -12,6 +14,7 @@ offset_right = 20.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_dd6n6")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1477643591]
 layout_mode = 2
