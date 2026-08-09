@@ -3,9 +3,6 @@ extends Area2D
 
 @onready var attack_component: AttackComponent = AttackComponent.new()
 
-func _process(delta: float) -> void:
-	look_at(get_global_mouse_position())
-
 func face_where_player_is_facing(player_looking_direction: int) -> void:
 	pass
 
