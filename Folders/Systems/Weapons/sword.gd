@@ -7,7 +7,7 @@ func face_where_player_is_facing(player_looking_direction: int) -> void:
 	if player_looking_direction == 1:
 		rotation_degrees = 0
 	elif player_looking_direction == -1:
-		rotation_degrees 
+		rotation_degrees = 180
 
 func attack() -> void:
 	var nodes_in_attack_range: Array[Node2D] = self.get_overlapping_bodies()
