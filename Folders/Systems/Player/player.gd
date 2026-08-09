@@ -92,6 +92,7 @@ func _physics_process(delta: float) -> void:
 	
 	if x_direction != 0:
 		looking_direction = x_direction
+		sword.face_where_player_is_facing(looking_direction)
 
 	var jump := Input.is_action_just_pressed("jump")
 
