@@ -30,8 +30,6 @@ func setup(new_spawn_point: Vector2) -> void:
 	_setup_component()
 	_connect_signals()
 
-	health_component.reset()
-
 	spawn_point = new_spawn_point
 	respawn()
 
