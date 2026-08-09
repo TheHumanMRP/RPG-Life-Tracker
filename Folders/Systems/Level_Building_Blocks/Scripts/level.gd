@@ -23,3 +23,6 @@ func add_player() -> void:
 	player.setup(spawn_point)
 
 	add_child(player)
+
+func _on_player_respawn() -> void:
+	Global.current_game_state = Global.GAME_STATES.Playing
