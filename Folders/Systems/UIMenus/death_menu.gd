@@ -18,6 +18,8 @@ func _ready() -> void:
 	SignalBus.player_died.connect(_on_player_died)
 
 func _on_player_died() -> void:
+	Global.current_game_state = Global.
+	
 	show()
 
 func _on_respawn_button_pressed() -> void:
