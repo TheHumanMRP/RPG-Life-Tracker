@@ -4,7 +4,10 @@ extends Area2D
 @onready var attack_component: AttackComponent = AttackComponent.new()
 
 func face_where_player_is_facing(player_looking_direction: int) -> void:
-	rotation_degrees = player_looking_direction * 180
+	if player_looking_direction == 1:
+		rotation_degrees = 0
+	elif player_looking_direction == -1:
+		rotation_degrees 
 
 func attack() -> void:
 	var nodes_in_attack_range: Array[Node2D] = self.get_overlapping_bodies()
