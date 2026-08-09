@@ -5,6 +5,8 @@ extends Node2D
 @onready var spawn_point_marker: Marker2D
 
 func _ready() -> void:
+	Global.current_game_state = Global.GAME_STATES.Playing
+
 	_setup_spawn_point()
 
 	add_player()
