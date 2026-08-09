@@ -10,6 +10,8 @@ var health_component: HealthComponent
 var movement_component: MovementComponent
 var inventory_logic_component: InventoryLogicComponent
 
+var looking_direction: int
+
 @onready var sword: SwordScene = $Sword
 
 # --------------------------------------------------------------------
