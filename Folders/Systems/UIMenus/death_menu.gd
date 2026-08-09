@@ -19,8 +19,11 @@ func _ready() -> void:
 
 func _on_player_died() -> void:
 	print("\nDeath Menu: PLayer Died signal received")
-	Global.current_game_state = Global.GAME_STATES.Menu
 	
+	print_stack()
+
+	Global.current_game_state = Global.GAME_STATES.Menu
+
 	show()
 
 func _on_respawn_button_pressed() -> void:
