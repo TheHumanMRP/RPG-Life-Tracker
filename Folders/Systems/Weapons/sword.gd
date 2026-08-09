@@ -6,6 +6,9 @@ extends Area2D
 func _process(delta: float) -> void:
 	look_at(get_global_mouse_position())
 
+func face_where_player_is_facing(player_looking_direction: int) -> void:
+	pass
+
 func attack() -> void:
 	var nodes_in_attack_range: Array[Node2D] = self.get_overlapping_bodies()
 
