@@ -7,6 +7,8 @@ extends Node2D
 func _ready() -> void:
 	Global.current_game_state = Global.GAME_STATES.Playing
 
+	SignalBus.respawn_player.connect(_on_player_respawn)
+
 	_setup_spawn_point()
 
 	add_player()
