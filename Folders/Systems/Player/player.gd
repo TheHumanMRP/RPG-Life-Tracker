@@ -35,7 +35,7 @@ func setup(new_spawn_point: Vector2) -> void:
 
 ## Connects all required signals.
 func _connect_signals() -> void:
-	health_component.died.connect(_on_player_dies)
+	health_component.died.connect(_on_player_died)
 	health_component.damage_taken.connect(_on_damage_taken)
 
 	SignalBus.respawn_player.connect(respawn)
@@ -124,7 +124,7 @@ func _on_damage_taken(new_health: float) -> void:
 	await tween.finished
 
 ## Handles player death.
-func _on_player_dies() -> void:
+func _on_player_died() -> void:
 	SignalBus.player_died.emit()
 
 	# TO-DO: Add player death animation here 

@@ -55,6 +55,8 @@ func check_if_dead() -> void:
 	if dead:
 		return
 	
+	print("\nHealth Component [", log_name, "]: Died signal emitted")
+
 	dead = true
 	died.emit()
 
