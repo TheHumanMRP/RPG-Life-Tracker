@@ -43,6 +43,7 @@ signal save_game
 # ==============================================
 
 func _ready() -> void:
+	self.process
 	await get_tree().process_frame
 	refresh_ui.emit()
 

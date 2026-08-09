@@ -6,8 +6,17 @@
 script = ExtResource("1_dd6n6")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=484555171]
-offset_right = 136.0
-offset_bottom = 133.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -68.0
+offset_top = -66.5
+offset_right = 68.0
+offset_bottom = 66.5
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=1477643591]
 layout_mode = 2
