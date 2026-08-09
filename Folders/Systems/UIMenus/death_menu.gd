@@ -5,11 +5,15 @@ extends PanelContainer
 @onready var you_died_label: Label = $%You_Died_Label
 
 func _ready() -> void:
+	hide()
+
 	respawn_button.pressed.connect(_on_respawn_button_pressed)
 
 	main_menu_button.pressed.connect(_on_main_menu_button_pressed)
 
 	you_died_label.text = "You Died!"
+
+
 
 func _on_respawn_button_pressed() -> void:
 	SignalBus.respawn_player.emit()
