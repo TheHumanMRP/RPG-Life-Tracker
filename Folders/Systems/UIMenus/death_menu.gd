@@ -13,14 +13,17 @@ func _ready() -> void:
 
 	you_died_label.text = "You Died!"
 
+	SignalBus.player_died.connect(_on_player_died)
 
+func _on_player_died() -> void:
+	show()
 
 func _on_respawn_button_pressed() -> void:
 	SignalBus.respawn_player.emit()
 
 	print("\nDeath Menu: Respawn Button Pressed")
 
-	self.queue_free()
+	hide()
 
 func _on_main_menu_button_pressed() -> void:
-	pass
+	print("\nDeath Menu: ")
