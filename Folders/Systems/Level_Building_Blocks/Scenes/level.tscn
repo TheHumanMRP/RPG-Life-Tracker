@@ -45,6 +45,9 @@ width = 6000.0
 [node name="enemy" parent="Enemies" unique_id=254105940 instance=ExtResource("5_r324k")]
 position = Vector2(58, 89)
 
+[node name="enemy5" parent="Enemies" unique_id=1423762523 instance=ExtResource("5_r324k")]
+position = Vector2(135, 178)
+
 [node name="enemy2" parent="Enemies" unique_id=34329978 instance=ExtResource("5_r324k")]
 position = Vector2(519, -47)
 
