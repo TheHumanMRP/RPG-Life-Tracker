@@ -39,8 +39,10 @@ func _process(delta: float) -> void:
 
 	if current_game_state == GAME_STATES.Playing:
 		Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
+		
 	elif current_game_state == GAME_STATES.Menu:
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+
 
 func _ready() -> void:
 	test()
