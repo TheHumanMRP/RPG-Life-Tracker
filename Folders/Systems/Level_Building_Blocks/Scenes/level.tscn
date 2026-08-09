@@ -40,5 +40,16 @@ insta_kill = true
 player_only = true
 width = 6000.0
 
-[node name="enemy" parent="." unique_id=254105940 instance=ExtResource("5_r324k")]
+[node name="Enemies" type="Node" parent="." unique_id=484673666]
+
+[node name="enemy" parent="Enemies" unique_id=254105940 instance=ExtResource("5_r324k")]
 position = Vector2(58, 89)
+
+[node name="enemy2" parent="Enemies" unique_id=34329978 instance=ExtResource("5_r324k")]
+position = Vector2(519, -47)
+
+[node name="enemy3" parent="Enemies" unique_id=2006898022 instance=ExtResource("5_r324k")]
+position = Vector2(519, -270)
+
+[node name="enemy4" parent="Enemies" unique_id=1116250895 instance=ExtResource("5_r324k")]
+position = Vector2(537, -514)
