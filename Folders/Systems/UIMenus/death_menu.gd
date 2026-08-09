@@ -7,7 +7,7 @@ extends PanelContainer
 func _ready() -> void:
 	print("\nDeath Menu: _ready func called")
 	
-	hide()
+	self.hide()
 
 	respawn_button.pressed.connect(_on_respawn_button_pressed)
 
