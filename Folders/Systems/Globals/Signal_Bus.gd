@@ -45,3 +45,6 @@ signal save_game
 func _ready() -> void:
 	await get_tree().process_frame
 	refresh_ui.emit()
+
+func _process(delta: float) -> void:
+	if input
