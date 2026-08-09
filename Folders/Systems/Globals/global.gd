@@ -4,6 +4,11 @@ extends Node
 # Game State
 # ============================================================================
 
+enum CURRENT_GAME_STATE {
+	Playing,
+	Menu,
+
+}
 
 # ============================================================================
 # Vars
@@ -33,6 +38,8 @@ func test() -> void:
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("add_test_sword"):
 		save_data.inventory_component.add_test_sword()
+
+	
 
 func _ready() -> void:
 	test()
