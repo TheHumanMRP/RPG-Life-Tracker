@@ -11,12 +11,10 @@
 
 [node name="UILayer" parent="." unique_id=1819027134 instance=ExtResource("2_inmiq")]
 
-[node name="Inventory_UI_Layer" parent="." unique_id=1730334149 instance=ExtResource("3_e7ifm")]
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1476901086]
-
-[node name="DeathMenu" parent="CanvasLayer" unique_id=1087901046 instance=ExtResource("4_33not")]
+[node name="DeathMenu" parent="UILayer" unique_id=1087901046 instance=ExtResource("4_33not")]
 offset_left = -644.0
 offset_top = -390.5
 offset_right = -508.0
 offset_bottom = -257.5
+
+[node name="Inventory_UI_Layer" parent="." unique_id=1730334149 instance=ExtResource("3_e7ifm")]
