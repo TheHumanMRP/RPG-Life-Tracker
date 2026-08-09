@@ -5,6 +5,8 @@ extends PanelContainer
 @onready var you_died_label: Label = $%You_Died_Label
 
 func _ready() -> void:
+	print("\nDeath Menu: _ready func called")
+	
 	hide()
 
 	respawn_button.pressed.connect(_on_respawn_button_pressed)

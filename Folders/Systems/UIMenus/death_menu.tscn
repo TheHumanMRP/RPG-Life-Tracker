@@ -27,6 +27,7 @@ theme_override_constants/margin_bottom = 20
 layout_mode = 2
 
 [node name="You_Died_Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1269859127]
+unique_name_in_owner = true
 layout_mode = 2
 text = "You Died!"
 horizontal_alignment = 1
