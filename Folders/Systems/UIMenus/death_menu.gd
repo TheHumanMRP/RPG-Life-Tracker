@@ -21,7 +21,7 @@ func _ready() -> void:
 func _on_player_died() -> void:
 	print("\nDeath Menu: PLayer Died signal received")
 
-	Global.current_game_state = Global.GAME_STATES.Menu
+	Global.current_game_state = Global.GAME_STATES.UIMenu
 
 	show()
 
