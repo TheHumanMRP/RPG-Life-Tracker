@@ -9,10 +9,11 @@ func _ready() -> void:
 
 	main_menu_button.pressed.connect(_on_main_menu_button_pressed)
 
-	you_died_label.text = ""
+	you_died_label.text = "You Died!"
 
 func _on_respawn_button_pressed() -> void:
-	pass
+	SignalBus.respawn_player.emit()
+
 
 func _on_main_menu_button_pressed() -> void:
 	pass
