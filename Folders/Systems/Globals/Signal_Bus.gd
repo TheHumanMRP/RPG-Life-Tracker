@@ -47,4 +47,5 @@ func _ready() -> void:
 	refresh_ui.emit()
 
 func _process(delta: float) -> void:
-	if input
+	if Input.is_action_just_pressed("respawn"):
+		respawn_player.emit()
