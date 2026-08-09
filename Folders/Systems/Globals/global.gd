@@ -38,7 +38,7 @@ func _process(delta: float) -> void:
 		save_data.inventory_component.add_test_sword()
 
 	if current_game_state == GAME_STATES.Playing:
-		Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
+		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 		get_tree().paused = false
 	elif current_game_state == GAME_STATES.Menu:
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
