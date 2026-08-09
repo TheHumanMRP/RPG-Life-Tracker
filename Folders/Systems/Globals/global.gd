@@ -34,8 +34,10 @@ func test() -> void:
 # ============================================================================
 
 func _set_game_state_settings() -> void:
+	match current_game_state:
+		case GAME_STATES.Playing:
 
-	
+
 	if current_game_state == GAME_STATES.Playing:
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 		get_tree().paused = false
