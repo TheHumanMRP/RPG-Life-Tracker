@@ -1,14 +1,32 @@
 [gd_scene format=3 uid="uid://bgbgfpngstnov"]
 
 [ext_resource type="Script" uid="uid://cfjctevm3r2gq" path="res://Folders/Systems/Main/Scripts/ui_layer.gd" id="1_j4qr7"]
+[ext_resource type="PackedScene" uid="uid://ck6amdbdbjx14" path="res://Folders/Systems/UIMenus/death_menu.tscn" id="2_hxw6d"]
 
 [node name="UILayer" type="CanvasLayer" unique_id=1819027134]
 script = ExtResource("1_j4qr7")
 
-[node name="MarginContainer" type="MarginContainer" parent="." unique_id=234491394]
+[node name="Control" type="Control" parent="." unique_id=2130179276]
+layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DeathMenu" parent="Control" unique_id=1087901046 instance=ExtResource("2_hxw6d")]
+layout_mode = 1
+offset_left = -68.0
+offset_top = -66.5
+offset_right = 68.0
+offset_bottom = 66.5
+
+[node name="MarginContainer" type="MarginContainer" parent="Control" unique_id=234491394]
+layout_mode = 0
+offset_left = -48.0
+offset_top = -46.5
+offset_right = 58.0
+offset_bottom = 16.5
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 0
@@ -18,10 +36,10 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=878775034]
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer" unique_id=878775034]
 layout_mode = 2
 
-[node name="FPSLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=57925531]
+[node name="FPSLabel" type="Label" parent="Control/MarginContainer/VBoxContainer" unique_id=57925531]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Fps here"
