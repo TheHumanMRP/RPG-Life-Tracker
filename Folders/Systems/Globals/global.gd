@@ -41,7 +41,8 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("add_test_sword"):
 		save_data.inventory_component.add_test_sword()
 
-	if 
+	if current_game_state == GAME_STATES.Playing:
+		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 func _ready() -> void:
 	test()
