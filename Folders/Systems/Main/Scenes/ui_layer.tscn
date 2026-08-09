@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bgbgfpngstnov"]
 
 [ext_resource type="Script" uid="uid://cfjctevm3r2gq" path="res://Folders/Systems/Main/Scripts/ui_layer.gd" id="1_j4qr7"]
+[ext_resource type="PackedScene" uid="uid://ck6amdbdbjx14" path="res://Folders/Systems/UIMenus/death_menu.tscn" id="2_hxw6d"]
 
 [node name="UILayer" type="CanvasLayer" unique_id=1819027134]
 script = ExtResource("1_j4qr7")
@@ -12,6 +13,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="DeathMenu" parent="Control" unique_id=1087901046 instance=ExtResource("2_hxw6d")]
+layout_mode = 1
+offset_left = -68.0
+offset_top = -66.5
+offset_right = 68.0
+offset_bottom = 66.5
 
 [node name="MarginContainer" type="MarginContainer" parent="Control" unique_id=167455075]
 layout_mode = 1
