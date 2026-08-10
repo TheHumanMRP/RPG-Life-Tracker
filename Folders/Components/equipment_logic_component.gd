@@ -1,5 +1,5 @@
 class_name EquipmentLogicComponent
-extends Resource
+extends Node
 
 const EMPTY_EQUIPMENT_SLOT: int = -1
 
