@@ -12,6 +12,7 @@ var inventory_logic_component: InventoryLogicComponent
 
 var looking_direction: int
 
+@onready var equipment_logic_component: EquipmentLogicComponent = $%EquipmentLogicComponent
 @onready var sword: SwordScene = $Sword
 
 # --------------------------------------------------------------------

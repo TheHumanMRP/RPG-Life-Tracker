@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://c20du4ge4p05i" path="res://Folders/Systems/Player/player.gd" id="1_4ek6g"]
 [ext_resource type="Texture2D" uid="uid://bqulutjwvblw" path="res://Folders/Assets/icon.svg" id="2_3rm20"]
 [ext_resource type="PackedScene" uid="uid://dangj2qts40g4" path="res://Folders/Systems/Weapons/sword.tscn" id="4_4ek6g"]
+[ext_resource type="Script" uid="uid://dw882gajiur0y" path="res://Folders/Components/equipment_logic_component.gd" id="4_o2hah"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8uk81"]
 atlas = ExtResource("2_3rm20")
@@ -42,3 +43,8 @@ position_smoothing_enabled = true
 position_smoothing_speed = 20.0
 
 [node name="Sword" parent="." unique_id=955837665 instance=ExtResource("4_4ek6g")]
+
+[node name="EquipmentLogicComponent" type="Node" parent="." unique_id=840286445]
+unique_name_in_owner = true
+script = ExtResource("4_o2hah")
+metadata/_custom_type_script = "uid://dw882gajiur0y"
