@@ -23,7 +23,7 @@ func _on_player_died() -> void:
 
 	await get_tree().create_timer(0.5).timeout
 
-	Global.current_game_state = Global.GAME_STATES.UIMenu
+	SignalBus.set_game_state.emit(Global.GAME_STATES.UIMenu)
 
 	show()
 

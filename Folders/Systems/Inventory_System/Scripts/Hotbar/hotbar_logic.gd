@@ -1,38 +1,13 @@
 class_name HotBarLogicComponent
 extends Resource
 
-
-# ============================================================================
-# Constants
-# ============================================================================
-
-const EMPTY_HOTBAR_SLOT: int = -1
-
-const NUMBER_OF_HOTBAR_SLOTS: int = 9
-
-var selected_hotbar_slot_index: int = -1
-
-# ============================================================================
-# Exported Variables
-# ============================================================================
-
-@export var hotbar_slots: Array[int] = [
-	-1, -1, -1, -1,
-	-1, -1, -1, -1,
-	-1
-]
-
-
 # ============================================================================
 # Initialization
 # ============================================================================
 
 func _init() -> void:
-	call_deferred("connect_signals")
-
-func connect_signals() -> void:
-	SignalBus.hotbar_selected.connect(hotbar_selected)
-
+	print("\nHotbar Logic: Init called")
+	SignalBus.hotbar_selected.connect(_on_hotbar_selected)
 
 # ============================================================================
 # Item Management
@@ -40,10 +15,10 @@ func connect_signals() -> void:
 
 ## Resets every hotbar slot to an empty state.
 func clear_hotbar() -> void:
-	hotbar_slots.clear()
+	InfoGetter.get_hotbar_slots().clear()
 
-	while hotbar_slots.size() < NUMBER_OF_HOTBAR_SLOTS:
-		hotbar_slots.append(EMPTY_HOTBAR_SLOT)
+	while InfoGetter.get_hotbar_slots().size() < InfoGetter.NUMBER_OF_HOTBAR_SLOTS:
+		InfoGetter.get_hotbar_slots().append(InfoGetter.EMPTY_HOTBAR_SLOT)
 
 ## Places an item into the specified hotbar slot.
 func add_item_to_hotbar(item_id: int, slot_index: int) -> void:
@@ -51,7 +26,7 @@ func add_item_to_hotbar(item_id: int, slot_index: int) -> void:
 		push_error("HotBarLogic: Hotbar slot already occupied: ", slot_index)
 		return
 
-	hotbar_slots[slot_index] = item_id
+	InfoGetter.get_hotbar_slots()[slot_index] = item_id
 
 	notify_hotbar_changed()
 
@@ -61,18 +36,20 @@ func add_item_to_hotbar(item_id: int, slot_index: int) -> void:
 
 ## Returns `true` if the specified hotbar slot is empty.
 func check_if_slot_empty(slot: int) -> bool:
-	return hotbar_slots[slot] == EMPTY_HOTBAR_SLOT
+	return InfoGetter.get_hotbar_slots()[slot] == InfoGetter.EMPTY_HOTBAR_SLOT
 
-func hotbar_selected(slot_index: int) -> void:
-	selected_hotbar_slot_index = slot_index
+func _on_hotbar_selected(slot_index: int) -> void:
+	Global.save_data.hotbar_save_data.selected_hotbar_slot_index = slot_index
 
-	var selected_item_id: int = hotbar_slots[slot_index]
+	var selected_item_id: int = InfoGetter.get_hotbar()[slot_index]
 
-	if selected_item_id != EMPTY_HOTBAR_SLOT:
+	if selected_item_id != Constants.EMPTY_HOTBAR_SLOT:
 		SignalBus.item_selected.emit(selected_item_id)
 
 	notify_hotbar_changed()
 
 ## This shit is here so that I don't have to go to a billion places if I by mistakely somehow change the signal name
 func notify_hotbar_changed() -> void:
+	print("\nHotbar Logic: Notified that horbar changed")
 	SignalBus.hotbar_changed.emit()
+	SignalBus.save_game.emit()

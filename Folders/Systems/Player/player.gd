@@ -11,15 +11,12 @@ var movement_component: MovementComponent
 var inventory_logic_component: InventoryLogicComponent
 
 var looking_direction: int
-
-@onready var equipment_logic_component: EquipmentLogicComponent = $%EquipmentLogicComponent
-@onready var sword: SwordScene = $Sword
-
 # --------------------------------------------------------------------
-# Spawn
+# Exported vars
 # --------------------------------------------------------------------
 
 @export var spawn_point: Vector2
+@export var equipment_logic_component: EquipmentLogicComponent
 
 # --------------------------------------------------------------------
 # Lifecycle
@@ -52,15 +49,11 @@ func _setup_component() -> void:
 
 	health_component.setup(player_max_health, "Player")
 
-	inventory_logic_component.setup(Global.PLAYER_INVENTORY_NAME)
+	inventory_logic_component.setup(Constants.PLAYER_INVENTORY_NAME)
 
 func _process(delta: float) -> void:
 	if health_component.dead:
 		return
-
-	if Input.is_action_just_pressed("attack"):
-		sword.attack()
-
 # --------------------------------------------------------------------
 # Spawn & Respawn
 # --------------------------------------------------------------------
@@ -72,6 +65,7 @@ func respawn() -> void:
 	global_position = spawn_point
 	velocity = Vector2.ZERO
 
+	movement_component.reset()
 	health_component.reset()
 
 # --------------------------------------------------------------------
@@ -90,10 +84,6 @@ func _physics_process(delta: float) -> void:
 		return
 
 	var x_direction = _get_axis()
-	
-	if x_direction != 0:
-		looking_direction = x_direction
-		sword.face_where_player_is_facing(looking_direction)
 
 	var jump := Input.is_action_just_pressed("jump")
 

@@ -5,9 +5,6 @@ extends Resource
 @export var save_info: SaveData
 @export var create_file: bool
 
-const DEV_SAVE_PATH := "user://dev/save_data.tres"
-const LIVE_SAVE_PATH := "user://live/save_data.tres"
-
 func _init(new_save_path: String = "", new_create_file: bool = true) -> void:
 	print("Save Manager: Init Called")
 
@@ -20,8 +17,8 @@ func _init(new_save_path: String = "", new_create_file: bool = true) -> void:
 
 func get_save_file_path() -> String:
 	if OS.is_debug_build():
-		return DEV_SAVE_PATH
-	return LIVE_SAVE_PATH
+		return Constants.DEV_SAVE_PATH
+	return Constants.LIVE_SAVE_PATH
 
 func _ensure_file_exists():
 	var dir_path = save_path.get_base_dir()

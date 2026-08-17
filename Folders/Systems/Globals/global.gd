@@ -6,28 +6,28 @@ extends Node
 
 var save_data: SaveData
 
-enum GAME_STATES {
-	Playing,
-	UIMenu,
-
-}
-
-var current_game_state: GAME_STATES:
+var current_game_state: All_Enums.GAME_STATES:
 	set(new_current_game_state):
 		current_game_state = new_current_game_state
 		_set_game_state_settings()
 
-# ============================================================================
-# Consts
-# ============================================================================
-
-const PLAYER_INVENTORY_NAME: String = "player"
+func _set_game_state_settings() -> void:
+	match current_game_state:
+		All_Enums.GAME_STATES.Playing:
+			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+			get_tree().paused = false
+		All_Enums.GAME_STATES.UIMenu:
+			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+			get_tree().paused = true
 
 # ============================================================================
 # Testing
 # ============================================================================
 
 func test() -> void:
+	if not OS.is_debug_build():
+		return
+
 	var testing: TestingScript = TestingScript.new()
 
 	testing.test()
@@ -36,18 +36,13 @@ func test() -> void:
 # LIFECYCLE
 # ============================================================================
 
-func _set_game_state_settings() -> void:
-	match current_game_state:
-		GAME_STATES.Playing:
-			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-			get_tree().paused = false
-		GAME_STATES.UIMenu:
-			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-			get_tree().paused = true
-
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("add_test_sword"):
 		save_data.inventory_component.add_test_sword()
 
 func _ready() -> void:
 	test()
+	SignalBus.set_game_state.connect(_on_set_game_state)
+
+func _on_set_game_state(new_game_state: All_Enums.GAME_STATES) -> void:
+	current_game_state = new_game_state

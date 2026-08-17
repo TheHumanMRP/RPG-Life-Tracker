@@ -1,115 +1,140 @@
 extends Control
 class_name HotbarSlot
 
-@export var accepted_item_type: String = "base_item"
+
+# ------------------------------------------------------------------------------
+# Exports
+# ------------------------------------------------------------------------------
+
+@export var accepted_item_type: All_Enums.Item_Type = All_Enums.Item_Type.BASE_ITEM
 @export var item_id: int
 @export var slot_index: int
+
+
+# ------------------------------------------------------------------------------
+# Nodes
+# ------------------------------------------------------------------------------
 
 @onready var selection_color_fade: ColorRect = $%Selection_Color_Fade
 @onready var display_logo: TextureRect = $%Logo_Display
 @onready var slot_number_label: Label = $%Slot_Number
 
-const UNSELECTED_OPACITY: float = 0.0
-const SELECTED_OPACITY: float = 0.5
 
-var EMPTY_SLOT: int = InfoGetter.get_empty_hotbar_slot_const()
+# ------------------------------------------------------------------------------
+# Variables
+# ------------------------------------------------------------------------------
+
+var EMPTY_HOTBAR_SLOT: int
+
+
+# ------------------------------------------------------------------------------
+# Lifecycle
+# ------------------------------------------------------------------------------
 
 func _ready() -> void:
+	EMPTY_HOTBAR_SLOT = Constants.EMPTY_HOTBAR_SLOT
+
+	SignalBus.hotbar_changed.connect(refresh)
+
 	refresh()
 
+
+func _process(_delta: float) -> void:
+	check_for_keyboard_selection()
+
+
+func _gui_input(event: InputEvent) -> void:
+	check_for_mouse_click(event)
+
+
+# ------------------------------------------------------------------------------
+# Refresh
+# ------------------------------------------------------------------------------
+
 func refresh() -> void:
+	print("\nHotbar slot: Refresh func called")
 	check_type_of_item()
-
 	refresh_logo()
-
 	set_proper_selection_color_rect_opacity()
 
 	slot_number_label.text = str(slot_index + 1)
+
+
+func refresh_logo() -> void:
+	display_logo.texture = null
+
+	if item_id == EMPTY_HOTBAR_SLOT:
+		return
+
+	var item: ItemEntry = get_item()
+
+	if not item:
+		return
+
+	if not item.logo:
+		return
+
+	display_logo.texture = item.logo
+
 
 func set_proper_selection_color_rect_opacity() -> void:
 	var selected_slot_index: int = InfoGetter.get_selected_hotbar_index()
 
 	if selected_slot_index != slot_index:
 		# Unselected
-		selection_color_fade.color.a = UNSELECTED_OPACITY # Fully transparent
+		selection_color_fade.color.a = Constants.UNSELECTED_HOTBAR_SLOT_OPACITY
 		return
-	
+
 	# Selected
-	selection_color_fade.color.a = SELECTED_OPACITY # 50% Visible, 0.7 means 70% visible
+	selection_color_fade.color.a = Constants.SELECTED_HOTBAR_SLOT_OPACITY
 
 
-func check_id() -> void:
-	var inventory_items: Array[ItemEntry] = InfoGetter.get_inventory()
-
-	if item_id >= 0 and item_id < inventory_items.size():
-		return
-	
-	if item_id == EMPTY_SLOT:
+# ------------------------------------------------------------------------------
+# Item Validation
+# ------------------------------------------------------------------------------
+func check_type_of_item() -> void:
+	if item_id == EMPTY_HOTBAR_SLOT:
 		return
 
-	push_error("Inventory Slot: Invalid item id: ", item_id)
+	if accepted_item_type == All_Enums.Item_Type.BASE_ITEM:
+		return
 
+	var item: ItemEntry = get_item()
+
+	if item.item_type == accepted_item_type:
+		return
+
+	push_error("Inventory Slot: Invalid item type")
+
+
+# ------------------------------------------------------------------------------
+# Item Access
+# ------------------------------------------------------------------------------
 
 func get_item() -> ItemEntry:
-	var inventory: int = InfoGetter.get_inventory_component()
-
 	print("\nHotbar Slot: `get_item()` func was called. Here's the item_id: ", item_id)
 
 	return AllGlobalItemsManager.get_item_by_id(item_id)
 
-func refresh_logo() -> void:
-	display_logo.texture = null
 
-	if item_id == EMPTY_SLOT:
-		return
-	
-	var item = get_item()
-
-	if not item:
-		return
-	
-	if not item.logo:
-		return
-
-	display_logo.texture = item.logo
-
-func check_type_of_item() -> void:
-	if item_id == EMPTY_SLOT:
-		return
-	
-	var item = get_item()
-	
-	if accepted_item_type == "base_item":
-		return
-	
-	if item.item_type == accepted_item_type:
-		return
-	
-	push_error("Inventory Slot: Invalid item type ")
-
-func _gui_input(event: InputEvent):
-	check_for_mouse_click(event)
+# ------------------------------------------------------------------------------
+# Input
+# ------------------------------------------------------------------------------
 
 func check_for_mouse_click(event: InputEvent) -> void:
 	if not event is InputEventMouseButton:
 		return
 
 	if event.button_index != MOUSE_BUTTON_LEFT:
-			return
+		return
 
 	if not event.pressed:
 		return
 
 	print("\nHotbar Slot: I was clicked, here's my index: ", slot_index)
-	
+
 	notify_hotbar_selected()
 
-func _process(delta: float) -> void:
-	check_for_keyboard_selection()
-
-func check_for_equip() -> void:
-	if not Input.is_action_just_pressed("equip_item"):
-		return
 
 func check_for_keyboard_selection() -> void:
 	var input_action: String = "select_hotbar_slot_" + str(slot_index)
@@ -117,6 +142,11 @@ func check_for_keyboard_selection() -> void:
 	if Input.is_action_just_pressed(input_action):
 		notify_hotbar_selected()
 		return
+
+
+# ------------------------------------------------------------------------------
+# Selection
+# ------------------------------------------------------------------------------
 
 func notify_hotbar_selected() -> void:
 	SignalBus.hotbar_selected.emit(slot_index)

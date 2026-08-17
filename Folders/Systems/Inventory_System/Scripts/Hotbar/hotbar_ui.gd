@@ -1,12 +1,15 @@
 extends Control
 
 ## Handles the inventory hotbar UI.
-
 @onready var hotbar: HBoxContainer = $%Hot_Bar
 
-var number_of_hotbar_slots: int = InfoGetter.get_number_of_hotbar_slots()
+var number_of_hotbar_slots: int
+
+var hotbar_logic: HotBarLogicComponent = HotBarLogicComponent.new()
 
 func _ready() -> void:
+	number_of_hotbar_slots = Constants.NUMBER_OF_HOTBAR_SLOTS
+
 	recreate_inventory_slots()
 
 	SignalBus.refresh_ui.connect(assaign_proper_id_to_hotbar_slots)

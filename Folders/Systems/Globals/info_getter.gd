@@ -14,7 +14,7 @@ func get_player_max_health() -> int:
 
 # Returns all items currently stored in the inventory.
 func get_inventory() -> Array[ItemEntry]:
-	return Global.save_data.inventory_logic.inventory_items
+	return Global.save_data.inventory_items_data.inventory_items
 
 # Returns true if an item exists at the given inventory index.
 func check_if_item_at_index_in_inventory_exists(index: int) -> bool:
@@ -27,16 +27,8 @@ func check_if_item_at_index_in_inventory_exists(index: int) -> bool:
 
 # Returns the array representing the hotbar slots.
 func get_hotbar() -> Array[int]:
-	return Global.save_data.hotbar_logic.hotbar_slots
+	return Global.save_data.hotbar_save_data.hotbar_slots
 
 # Returns the currently selected hotbar slot index.
 func get_selected_hotbar_index() -> int:
-	return Global.save_data.hotbar_logic.selected_hotbar_slot_index
-
-# Returns the total number of hotbar slots.
-func get_number_of_hotbar_slots() -> int:
-	return Global.save_data.hotbar_logic.NUMBER_OF_HOTBAR_SLOTS
-
-# Returns the value representing an empty hotbar slot.
-func get_empty_hotbar_slot_const() -> int:
-	return Global.save_data.hotbar_logic.EMPTY_HOTBAR_SLOT
+	return Global.save_data.hotbar_save_data.selected_hotbar_slot_index

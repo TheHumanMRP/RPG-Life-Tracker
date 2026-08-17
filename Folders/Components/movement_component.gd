@@ -54,7 +54,7 @@ func get_velocity(
 	direction: int,
 	is_on_floor: bool,
 	is_on_wall: bool,
-	wall_dir: float,
+	wall_dir: int,
 	jump: bool,
 	delta: float
 ) -> Vector2:
@@ -113,3 +113,8 @@ func handle_jump(velocity: Vector2, is_on_wall: bool, is_on_floor: bool, wall_di
 			return velocity
 
 	return velocity
+
+func reset() -> void:
+	jumped = false
+	air_jumped = false
+	coyote_timer = 0

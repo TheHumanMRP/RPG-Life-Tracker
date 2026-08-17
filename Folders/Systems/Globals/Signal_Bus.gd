@@ -30,6 +30,7 @@ signal notify_global_inventory_changed
 signal add_item_to_global_inventory(new_item_entry: ItemEntry)
 signal remove_item_from_global_inventory(item_id: int)
 signal rename_item_in_inventory(item_id: int, new_name: String)
+signal set_game_state(new_game_state: All_Enums.GAME_STATES)
 
 # ==============================================
 # Game State
