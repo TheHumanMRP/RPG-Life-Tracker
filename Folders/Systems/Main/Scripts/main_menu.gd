@@ -31,7 +31,9 @@ func setup_signals() -> void:
 func _on_dungeon_button_pressed() -> void:
     var new_packed_scene: PackedScene = load(Constants.PATH_TO_DUNGEON_SELECTION_MENU)
 
-    var 
+    var new_scene: Node = new_packed_scene.instantiate()
+
+    var main_node: Node = get_tree().get_first_node_in_group("main")
 
     get_tree().change_scene_to_file(Constants.PATH_TO_DUNGEON_SELECTION_MENU)
 
