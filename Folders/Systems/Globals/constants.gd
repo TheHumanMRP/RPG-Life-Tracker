@@ -21,5 +21,5 @@ const PLAYER_INVENTORY_NAME: String = "player"
 const EMPTY_EQUIPMENT_SLOT: int = -1
 
 # Saving and loading
-const DEV_SAVE_PATH := "user: / / dev / save_data.tres"
-const LIVE_SAVE_PATH := "user: / / live / save_data.tres"
+const DEV_SAVE_PATH := "user://dev/save_data.tres"
+const LIVE_SAVE_PATH := "user://live/save_data.tres"
