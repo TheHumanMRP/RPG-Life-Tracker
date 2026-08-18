@@ -35,6 +35,8 @@ func _on_dungeon_button_pressed() -> void:
 
     var main_node: Node = get_tree().get_first_node_in_group("main")
 
+    main_node.
+
     get_tree().change_scene_to_file(Constants.PATH_TO_DUNGEON_SELECTION_MENU)
 
 func _on_task_manager_button_pressed() -> void:
