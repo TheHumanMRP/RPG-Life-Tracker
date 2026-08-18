@@ -2,7 +2,7 @@ class_name MainNode
 extends Node2D
 
 func _ready() -> void:
-    self.add_to_group("main")
+    self.add_to_group("main_scene")
 
 func switch_to_scene(myself: Node, new_scene_path: String) -> void:
     if self.get_children().has(myself):
