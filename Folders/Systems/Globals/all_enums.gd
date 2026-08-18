@@ -12,6 +12,7 @@ enum EQUIPMENT_TPYES {
 enum GAME_STATES {
 	Playing,
 	UIMenu,
+	DeathMenu,
 
 }
 

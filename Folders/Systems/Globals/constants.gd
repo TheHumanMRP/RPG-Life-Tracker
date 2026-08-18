@@ -1,14 +1,25 @@
 class_name Consts
 extends Node
 
+# Hotbar
 const NUMBER_OF_HOTBAR_SLOTS: int = 9
 const EMPTY_HOTBAR_SLOT: int = -1
-
-const PLAYER_INVENTORY_NAME: String = "player"
-const EMPTY_EQUIPMENT_SLOT: int = -1
 
 const UNSELECTED_HOTBAR_SLOT_OPACITY: float = 0.0
 const SELECTED_HOTBAR_SLOT_OPACITY: float = 0.5
 
-const DEV_SAVE_PATH := "user://dev/save_data.tres"
-const LIVE_SAVE_PATH := "user://live/save_data.tres"
+# Main Menu
+const MAIN_MENU_LABEL_TEXT: String = "Main Menu"
+const MAIN_MENU_DUNGOEN_BUTTON_TEXT: String = "Dungeon"
+const MAIN_MENU_TASK_MANAGER_BUTTON_TEXT: String = "  Task Manager  "
+
+# Dungeon Related
+const PATH_TO_DUNGEON_SELECTION_MENU: String = "res://Folders/Systems/Dungeon_Related/Scenes/dungeon_selection_menu.tscn"
+
+# PLayer
+const PLAYER_INVENTORY_NAME: String = "player"
+const EMPTY_EQUIPMENT_SLOT: int = -1
+
+# Saving and loading
+const DEV_SAVE_PATH := "user: / / dev / save_data.tres"
+const LIVE_SAVE_PATH := "user: / / live / save_data.tres"

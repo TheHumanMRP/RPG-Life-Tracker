@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bro14pularecm"]
+
+[ext_resource type="Script" uid="uid://bbuxxfdoifd8" path="res://Folders/Systems/Dungeon_Related/Scripts/dungeon_selection_menu.gd" id="1_0nxod"]
+
+[node name="Dungeon_Selection_Menu" type="Node2D" unique_id=1433259561]
+script = ExtResource("1_0nxod")

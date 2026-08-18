@@ -1,9 +1,9 @@
 [gd_scene format=4 uid="uid://dqf5jume5kohl"]
 
-[ext_resource type="Script" uid="uid://clnabym5ucm85" path="res://Folders/Systems/Level_Building_Blocks/Scripts/level.gd" id="1_7d5qf"]
-[ext_resource type="PackedScene" uid="uid://mexd1qvl140q" path="res://Folders/Systems/Level_Building_Blocks/Scenes/checkpoint.tscn" id="2_cf4ba"]
+[ext_resource type="Script" uid="uid://clnabym5ucm85" path="res://Folders/Systems/Dungeon_Related/Scripts/level.gd" id="1_7d5qf"]
+[ext_resource type="PackedScene" uid="uid://mexd1qvl140q" path="res://Folders/Systems/Dungeon_Related/Scenes/checkpoint.tscn" id="2_cf4ba"]
 [ext_resource type="Texture2D" uid="uid://bqulutjwvblw" path="res://Folders/Assets/icon.svg" id="2_r324k"]
-[ext_resource type="PackedScene" uid="uid://cu4hnlkwj8l7d" path="res://Folders/Systems/Level_Building_Blocks/Scenes/damage_area.tscn" id="4_d6cyu"]
+[ext_resource type="PackedScene" uid="uid://cu4hnlkwj8l7d" path="res://Folders/Systems/Dungeon_Related/Scenes/damage_area.tscn" id="4_d6cyu"]
 [ext_resource type="PackedScene" uid="uid://bvnmaqdei35bn" path="res://Folders/Systems/Enemy/enemy.tscn" id="5_r324k"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j5vai"]
