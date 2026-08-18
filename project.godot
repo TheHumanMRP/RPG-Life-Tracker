@@ -23,6 +23,7 @@ InfoGetter="*uid://cbhg7hkcjf8py"
 AllGlobalItemsManager="*uid://ge8m2q1sbkg4"
 SaveCycleManager="*uid://h2j1arx22jnu"
 Constants="*uid://ctro1gx3ndbul"
+MainSceneManager="*uid://b67s8swm5vauk"
 
 [debug]
 
