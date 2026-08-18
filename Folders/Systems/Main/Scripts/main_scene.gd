@@ -8,4 +8,13 @@ func switch_to_scene(myself: Node, new_scene_path: String) -> void:
     if self.get_children().has(myself):
         self.remove_child(myself)
     
+    
+
     add_child(new_scene)
+
+func get_new_scene(new_scene_path: String) -> Node:
+    var packed_new_scene: PackedScene = load(new_scene_path)
+
+    var new_scene: Node = packed_new_scene.instantiate()
+
+    return new_scene
