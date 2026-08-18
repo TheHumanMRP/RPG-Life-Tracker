@@ -6,31 +6,31 @@ extends CanvasLayer
 
 
 func _ready() -> void:
-    set_global_state()
-    setup_labels()
-    setup_signals()
+	set_global_state()
+	setup_labels()
+	setup_signals()
 
-    print("\nMain Menu: _ready func ran")
+	print("\nMain Menu: _ready func ran")
 
 func set_global_state() -> void:
-    SignalBus.set_game_state.emit(All_Enums.GAME_STATES.UIMenu)
+	SignalBus.set_game_state.emit(All_Enums.GAME_STATES.UIMenu)
 
 func setup_labels() -> void:
-    main_menu_label.text = Constants.MAIN_MENU_LABEL_TEXT
-    dungeon_button.text = Constants.MAIN_MENU_DUNGOEN_BUTTON_TEXT
-    task_manager_button.text = Constants.MAIN_MENU_TASK_MANAGER_BUTTON_TEXT
+	main_menu_label.text = Constants.MAIN_MENU_LABEL_TEXT
+	dungeon_button.text = Constants.MAIN_MENU_DUNGOEN_BUTTON_TEXT
+	task_manager_button.text = Constants.MAIN_MENU_TASK_MANAGER_BUTTON_TEXT
 
-    print("\nMain Menu: Setup labels func ran")
+	print("\nMain Menu: Setup labels func ran")
 
 func setup_signals() -> void:
-    dungeon_button.pressed.connect(_on_dungeon_button_pressed)
-    task_manager_button.pressed.connect(_on_task_manager_button_pressed)
+	dungeon_button.pressed.connect(_on_dungeon_button_pressed)
+	task_manager_button.pressed.connect(_on_task_manager_button_pressed)
 
-    print("\nMain Menu: Setup signals func ran")
+	print("\nMain Menu: Setup signals func ran")
 
 func _on_dungeon_button_pressed() -> void:
-    var main_node: MainNode = get_tree().get_first_node_in_group("main_node") as MainNode
-    main_node.switch_to_scene(self, Constants.PATH_TO_DUNGEON_SELECTION_MENU)
+	var main_node: MainNode = get_tree().get_first_node_in_group("main_node") as MainNode
+	main_node.switch_to_scene(self, Constants.PATH_TO_DUNGEON_SELECTION_MENU)
 
 func _on_task_manager_button_pressed() -> void:
-    print("\nMain Menu: Task manager button pressed")
+	print("\nMain Menu: Task manager button pressed")
