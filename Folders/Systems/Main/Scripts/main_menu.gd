@@ -29,13 +29,11 @@ func setup_signals() -> void:
     print("\nMain Menu: Setup signals func ran")
 
 func _on_dungeon_button_pressed() -> void:
-    var packed_dungeon_selection_menu: PackedScene = load(Constants.PATH_TO_DUNGEON_SELECTION_MENU)
-
-    var dungeon_selection_menu: Node = packed_dungeon_selection_menu.instantiate()
-
-    var main_node: MainNode = get_tree().get_first_node_in_group("main") as MainNode
-
-    main_node.switch_to_scene(self, dungeon_selection_menu)
+    # var packed_dungeon_selection_menu: PackedScene = load(Constants.PATH_TO_DUNGEON_SELECTION_MENU)
+    # var dungeon_selection_menu: Node = packed_dungeon_selection_menu.instantiate()
+    # var main_node: MainNode = get_tree().get_first_node_in_group("main") as MainNode
+    # main_node.switch_to_scene(self, dungeon_selection_menu)
+    get_tree().change_scene_to_file(Constants.PATH_TO_DUNGEON_SELECTION_MENU)
 
 func _on_task_manager_button_pressed() -> void:
     print("\nMain Menu: Task manager button pressed")
