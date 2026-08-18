@@ -29,6 +29,10 @@ func setup_signals() -> void:
     print("\nMain Menu: Setup signals func ran")
 
 func _on_dungeon_button_pressed() -> void:
+    var new_packed_scene: PackedScene = load(Constants.PATH_TO_DUNGEON_SELECTION_MENU)
+
+    var 
+
     get_tree().change_scene_to_file(Constants.PATH_TO_DUNGEON_SELECTION_MENU)
 
 func _on_task_manager_button_pressed() -> void:
