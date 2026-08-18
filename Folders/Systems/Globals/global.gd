@@ -14,6 +14,8 @@ var current_game_state: All_Enums.GAME_STATES:
 func _set_game_state_settings() -> void:
 	match current_game_state:
 		All_Enums.GAME_STATES.Playing:
+			if 
+
 			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 			get_tree().paused = false
 		All_Enums.GAME_STATES.UIMenu:
