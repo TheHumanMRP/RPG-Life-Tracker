@@ -1,6 +1,8 @@
 class_name EquipmentManager
 extends Node
 
+@export var sword_scene: SwordScene
+
 var helmet_item_id: int = -1
 var chestplate_item_id: int = -1
 var leggings_item_id: int = -1
