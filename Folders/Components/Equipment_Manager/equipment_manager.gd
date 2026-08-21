@@ -53,47 +53,8 @@ func equip(new_item_id: int) -> void:
 		All_Enums.ITEM_TYPES.Item:
 			selected_item_id = new_item_id
 
-
-func equip_new_helmet(new_helmet_item_id: int) -> void:
-	var new_helmet: ItemEntry = get_item_entry(new_helmet_item_id)
-
-	if new_helmet.item_type == All_Enums.Item_Type.HELMET:
-		push_error("\nEquipment Logic Componenet: Brother, you are inserting an item of type `", new_helmet.item_type, "` into a slot made for fucking helmets man.")
-		return
+func unequip_item() -> void:
 	
-	helmet_item_id = new_helmet_item_id
-
-func equip_new_chestplate(new_chestplate_item_id: int) -> void:
-	var new_chestplate: ItemEntry = get_item_entry(new_chestplate_item_id)
-
-	if new_chestplate.item_type == All_Enums.Item_Type.CHESTPLATE:
-		push_error("\nEquipment Logic Componenet: Brother, you are inserting an item of type `", new_chestplate.item_type, "` into a slot made for fucking chestplates man.")
-		return
-	
-	chestplate_item_id = new_chestplate_item_id
-
-func equip_new_leggings(new_leggings_item_id: int) -> void:
-	var new_leggings: ItemEntry = get_item_entry(new_leggings_item_id)
-
-	if new_leggings.item_type == All_Enums.Item_Type.LEGGINGS:
-		push_error("\nEquipment Logic Componenet: Brother, you are inserting an item of type `", new_leggings.item_type, "` into a slot made for fucking leggings man.")
-		return
-	
-	leggings_item_id = new_leggings_item_id
-
-func equip_new_boots(new_boots_item_id: int) -> void:
-	var new_boots: ItemEntry = get_item_entry(new_boots_item_id)
-
-	if new_boots.item_type == All_Enums.Item_Type.BOOTS:
-		push_error("\nEquipment Logic Componenet: Brother, you are inserting an item of type `", new_boots.item_type, "` into a slot made for fucking boots man.")
-		return
-	
-	boots_item_id = new_boots_item_id
-
-func equip_new_selected_item(new_selected_item_id: int) -> void:
-	selected_item_id = new_selected_item_id
-
-	print("\nEquipment Component: A new item was selected")
 
 func unequip_helmet() -> void:
 	helmet_item_id = Constants.EMPTY_EQUIPMENT_SLOT
