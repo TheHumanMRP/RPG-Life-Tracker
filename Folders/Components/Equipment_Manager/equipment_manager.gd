@@ -19,7 +19,7 @@ func get_item_entry(item_id: int) -> ItemEntry:
 func equip(new_item_id: int) -> void:
 	var new_item: ItemEntry = get_item_entry(new_item_id)
 
-	var item_type : All_Enums.EQUIPMENT_TPYES = new_item.
+	var item_type: All_Enums.ITEM_TYPES = new_item.item_type
 
 	match item_type:
 		All_Enums.EQUIPMENT_TPYES.Helmet:
