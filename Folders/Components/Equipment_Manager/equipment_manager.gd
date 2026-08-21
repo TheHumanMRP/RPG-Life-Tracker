@@ -16,8 +16,10 @@ func get_item_entry(item_id: int) -> ItemEntry:
 	return AllGlobalItemsManager.get_item_by_id(item_id)
 
 
-func equip(item_type: All_Enums.EQUIPMENT_TPYES, new_item_id: int) -> void:
+func equip(new_item_id: int) -> void:
 	var new_item: ItemEntry = get_item_entry(new_item_id)
+
+	var item_type : All_Enums.EQUIPMENT_TPYES = new_item.
 
 	match item_type:
 		All_Enums.EQUIPMENT_TPYES.Helmet:
