@@ -1,7 +1,8 @@
 # Equipment Manager
 ---
-- [ ] Make the equipment manager
+- [ ] Make the equipment manager handle equipment of sword
 
 # Task Manager
 ---
-- [ ] Make the 
+- [ ] Make the `Task` class
+- [ ] 
