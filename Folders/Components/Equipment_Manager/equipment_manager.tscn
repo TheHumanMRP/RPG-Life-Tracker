@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cn2j37mshfv3s"]
+
+[ext_resource type="PackedScene" uid="uid://dangj2qts40g4" path="res://Folders/Systems/Weapons/sword.tscn" id="1_yenfj"]
+
+[node name="Equipment_Manager" type="Node" unique_id=493094115]
+
+[node name="Sword" parent="." unique_id=955837665 instance=ExtResource("1_yenfj")]
