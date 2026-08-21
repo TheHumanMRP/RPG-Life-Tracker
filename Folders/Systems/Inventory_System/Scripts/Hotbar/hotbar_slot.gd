@@ -6,7 +6,7 @@ class_name HotbarSlot
 # Exports
 # ------------------------------------------------------------------------------
 
-@export var accepted_item_type: All_Enums.Item_Type = All_Enums.Item_Type.BASE_ITEM
+@export var accepted_item_type: All_Enums.ITEM_TYPES = All_Enums.ITEM_TYPES.Item
 @export var item_id: int
 @export var slot_index: int
 
@@ -96,7 +96,7 @@ func check_type_of_item() -> void:
 	if item_id == EMPTY_HOTBAR_SLOT:
 		return
 
-	if accepted_item_type == All_Enums.Item_Type.BASE_ITEM:
+	if accepted_item_type == All_Enums.ITEM_TYPES.Item:
 		return
 
 	var item: ItemEntry = get_item()
