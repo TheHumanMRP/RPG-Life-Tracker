@@ -10,7 +10,7 @@ var boots_item_id: int = -1
 var selected_item_id: int = -1
 
 func _init() -> void:
-	SignalBus.item_selected.connect(equip_new_selected_item)
+	SignalBus.item_selected.connect(equip)
 
 func get_item_entry(item_id: int) -> ItemEntry:
 	return AllGlobalItemsManager.get_item_by_id(item_id)
