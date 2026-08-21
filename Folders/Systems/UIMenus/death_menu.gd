@@ -38,4 +38,4 @@ func _on_main_menu_button_pressed() -> void:
 	print("\nDeath Menu: Main Menu Button Pressed")
 
 func set_global_state() -> void:
-	SignalBus.set_game_state.emit(Global.GAME_STATES.UIMenu)
+	SignalBus.set_game_state.emit(All_Enums.GAME_STATES.UIMenu)
