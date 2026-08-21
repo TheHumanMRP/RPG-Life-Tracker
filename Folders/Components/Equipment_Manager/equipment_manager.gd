@@ -63,28 +63,16 @@ func unequip_item(item_id: int) -> void:
 			helmet_item_id = Constants.EMPTY_EQUIPMENT_SLOT
 
 		All_Enums.ITEM_TYPES.Chestplate:
-			if new_item.item_type != All_Enums.ITEM_TYPES.Chestplate:
-				push_error("\nEquipment Logic Component: Invalid item type of: ", new_item.item_type, " instead of chestplate.")
-				return
-			
-			chestplate_item_id = new_item_id
+			chestplate_item_id = Constants.EMPTY_EQUIPMENT_SLOT
 
 		All_Enums.ITEM_TYPES.Leggings:
-			if new_item.item_type != All_Enums.ITEM_TYPES.Leggings:
-				push_error("\nEquipment Logic Component: Invalid item type of: ", new_item.item_type, " instead of leggings.")
-				return
-			
-			leggings_item_id = new_item_id
+			leggings_item_id = Constants.EMPTY_EQUIPMENT_SLOT
 
 		All_Enums.ITEM_TYPES.Boots:
-			if new_item.item_type != All_Enums.ITEM_TYPES.Boots:
-				push_error("\nEquipment Logic Component: Invalid item type of: ", new_item.item_type, " instead of boots.")
-				return
-			
-			boots_item_id = new_item_id
+			boots_item_id = Constants.EMPTY_EQUIPMENT_SLOT
 
 		All_Enums.ITEM_TYPES.Item:
-			selected_item_id = new_item_id
+			selected_item_id = Constants.EMPTY_EQUIPMENT_SLOT
 
 func unequip_helmet() -> void:
 	helmet_item_id = Constants.EMPTY_EQUIPMENT_SLOT
