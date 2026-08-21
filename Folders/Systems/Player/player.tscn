@@ -21,10 +21,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gl73e"]
 size = Vector2(52, 52)
 
-[node name="Player" type="CharacterBody2D" unique_id=1761644757 node_paths=PackedStringArray("equipment_logic_component")]
+[node name="Player" type="CharacterBody2D" unique_id=1761644757]
 collision_layer = 2
 script = ExtResource("1_4ek6g")
-equipment_logic_component = NodePath("")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2030784034]
 unique_name_in_owner = true

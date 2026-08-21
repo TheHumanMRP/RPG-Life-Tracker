@@ -16,7 +16,7 @@ var looking_direction: int
 # --------------------------------------------------------------------
 
 @export var spawn_point: Vector2
-@export var equipment_logic_component: EquipmentLogicComponent
+@export var equipment_logic_component: EquipmentManager
 
 # --------------------------------------------------------------------
 # Lifecycle
