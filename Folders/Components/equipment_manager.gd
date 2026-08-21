@@ -1,4 +1,4 @@
-class_name EquipmentLogicComponent
+class_name EquipmentManager
 extends Node
 
 var helmet_item_id: int = -1
