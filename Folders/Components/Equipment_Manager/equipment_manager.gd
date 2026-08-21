@@ -22,35 +22,35 @@ func equip(new_item_id: int) -> void:
 	var item_type: All_Enums.ITEM_TYPES = new_item.item_type
 
 	match item_type:
-		All_Enums.EQUIPMENT_TPYES.Helmet:
-			if new_item.item_type != All_Enums.Item_Type.HELMET:
+		All_Enums.ITEM_TYPES.Helmet:
+			if new_item.item_type != All_Enums.ITEM_TYPES.Helmet:
 				push_error("\nEquipment Logic Component: Invalid item type of: ", new_item.item_type, " instead of helmet.")
 				return
 			
 			helmet_item_id = new_item_id
 
-		All_Enums.EQUIPMENT_TPYES.Chestplate:
-			if new_item.item_type != All_Enums.Item_Type.CHESTPLATE:
+		All_Enums.ITEM_TYPES.Chestplate:
+			if new_item.item_type != All_Enums.ITEM_TYPES.Chestplate:
 				push_error("\nEquipment Logic Component: Invalid item type of: ", new_item.item_type, " instead of chestplate.")
 				return
 			
 			chestplate_item_id = new_item_id
 
-		All_Enums.EQUIPMENT_TPYES.Leggings:
-			if new_item.item_type != All_Enums.Item_Type.LEGGINGS:
+		All_Enums.ITEM_TYPES.Leggings:
+			if new_item.item_type != All_Enums.ITEM_TYPES.Leggings:
 				push_error("\nEquipment Logic Component: Invalid item type of: ", new_item.item_type, " instead of leggings.")
 				return
 			
 			leggings_item_id = new_item_id
 
-		All_Enums.EQUIPMENT_TPYES.Boots:
-			if new_item.item_type != All_Enums.Item_Type.BOOTS:
+		All_Enums.ITEM_TYPES.Boots:
+			if new_item.item_type != All_Enums.ITEM_TYPES.Boots:
 				push_error("\nEquipment Logic Component: Invalid item type of: ", new_item.item_type, " instead of boots.")
 				return
 			
 			boots_item_id = new_item_id
 
-		All_Enums.EQUIPMENT_TPYES.Item:
+		All_Enums.ITEM_TYPES.Item:
 			selected_item_id = new_item_id
 
 
