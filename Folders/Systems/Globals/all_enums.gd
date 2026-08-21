@@ -1,7 +1,7 @@
 class_name All_Enums
 extends RefCounted
 
-enum EQUIPMENT_TPYES {
+enum ITEM_TYPES {
 	Helmet,
 	Chestplate,
 	Leggings,
@@ -14,12 +14,4 @@ enum GAME_STATES {
 	UIMenu,
 	DeathMenu,
 
-}
-
-enum Item_Type {
-	HELMET,
-	CHESTPLATE,
-	LEGGINGS,
-	BOOTS,
-	BASE_ITEM
 }
