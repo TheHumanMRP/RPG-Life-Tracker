@@ -6,7 +6,9 @@ enum ITEM_TYPES {
 	Chestplate,
 	Leggings,
 	Boots,
+	Weapon,
 	Item
+
 }
 
 enum GAME_STATES {
@@ -14,4 +16,9 @@ enum GAME_STATES {
 	UIMenu,
 	DeathMenu,
 
+}
+
+enum WEAPON_TYPE {
+	Sword,
+	
 }
