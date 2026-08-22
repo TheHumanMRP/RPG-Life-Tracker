@@ -6,9 +6,9 @@ extends Node
 var equipped_helmet_item_id: int = Constants.NO_ITEM
 var equipped_chestplate_item_id: int = Constants.NO_ITEM
 var equipped_leggings_item_id: int = Constants.NO_ITEM
-var boots_item_id: int = Constants.NO_ITEM
-var weapon_item_id: int = Constants.NO_ITEM
-var selected_item_id: int = Constants.NO_ITEM
+var equipped_boots_item_id: int = Constants.NO_ITEM
+var equipped_weapon_item_id: int = Constants.NO_ITEM
+var equipped_selected_item_id: int = Constants.NO_ITEM
 
 func _init() -> void:
 	SignalBus.item_selected.connect(select_item)
@@ -32,28 +32,28 @@ func equip(item_id: int) -> void:
 				push_error("\nEquipment Logic Component: Invalid item type of: ", new_item.item_type, " instead of helmet.")
 				return
 			
-			helmet_item_id = item_id
+			equipped_helmet_item_id = item_id
 
 		All_Enums.ITEM_TYPES.Chestplate:
 			if new_item.item_type != All_Enums.ITEM_TYPES.Chestplate:
 				push_error("\nEquipment Logic Component: Invalid item type of: ", new_item.item_type, " instead of chestplate.")
 				return
 			
-			chestplate_item_id = item_id
+			equipped_chestplate_item_id = item_id
 
 		All_Enums.ITEM_TYPES.Leggings:
 			if new_item.item_type != All_Enums.ITEM_TYPES.Leggings:
 				push_error("\nEquipment Logic Component: Invalid item type of: ", new_item.item_type, " instead of leggings.")
 				return
 			
-			leggings_item_id = item_id
+			equipped_leggings_item_id = item_id
 
 		All_Enums.ITEM_TYPES.Boots:
 			if new_item.item_type != All_Enums.ITEM_TYPES.Boots:
 				push_error("\nEquipment Logic Component: Invalid item type of: ", new_item.item_type, " instead of boots.")
 				return
 			
-			boots_item_id = item_id
+			equipped_boots_item_id = item_id
 
 func select_item(item_id: int) -> void:
 	selected_item_id = item_id
