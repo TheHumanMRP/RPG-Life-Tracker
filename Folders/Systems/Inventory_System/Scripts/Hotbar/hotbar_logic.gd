@@ -7,7 +7,8 @@ extends Resource
 
 func _init() -> void:
 	print("\nHotbar Logic: Init called")
-	SignalBus.hotbar_selected.connect(_on_hotbar_selected)
+	SignalBus.hotbar_item_selected.connect(_on_hotbar_item_selected)
+	SignalBus.hotbar_item_equipped.connect(_on_hotbar_item_equipped)
 
 # ============================================================================
 # Item Management
@@ -48,8 +49,8 @@ func _on_hotbar_item_selected(slot_index: int) -> void:
 
 	notify_hotbar_changed()
 
-func _on_hotbar_item_selected(slot_index: int) -> void:
-	pass
+func _on_hotbar_item_equipped(slot_index: int) -> void:
+	
 
 ## This shit is here so that I don't have to go to a billion places if I by mistakely somehow change the signal name
 func notify_hotbar_changed() -> void:
