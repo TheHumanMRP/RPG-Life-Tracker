@@ -32,7 +32,7 @@ var EMPTY_HOTBAR_SLOT: int
 # ------------------------------------------------------------------------------
 
 func _ready() -> void:
-	EMPTY_HOTBAR_SLOT = Constants.EMPTY_HOTBAR_SLOT
+	EMPTY_HOTBAR_SLOT = Constants.NO_ITEM
 
 	SignalBus.hotbar_changed.connect(refresh)
 

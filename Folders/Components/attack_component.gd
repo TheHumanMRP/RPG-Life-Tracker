@@ -1,9 +1,9 @@
 class_name AttackComponent
 extends RefCounted
 
-@export var attack_power: int = 100
+@export var attack_power: float = 100
 
-func setup(new_attack_power: int) -> void:
+func setup(new_attack_power: float) -> void:
 	attack_power = new_attack_power
 
 func attack_target(target: Node) -> void:
