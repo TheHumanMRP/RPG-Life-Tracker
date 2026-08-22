@@ -18,7 +18,7 @@ func get_item_entry(item_id: int) -> ItemEntry:
 
 
 func equip(item_id: int) -> void:
-	if item_id == Constants.EMPTY_HOTBAR_SLOT:
+	if item_id == Constants.NO_ITEM:
 		return
 
 	var new_item: ItemEntry = get_item_entry(item_id)
@@ -73,22 +73,7 @@ func unequip_item(item_id: int) -> void:
 			leggings_item_id = Constants.NO_ITEM
 
 		All_Enums.ITEM_TYPES.Boots:
-			boots_item_id = Constants.EMPTY_EQUIPMENT_SLOT
+			boots_item_id = Constants.NO_ITEM
 
 		All_Enums.ITEM_TYPES.Item:
-			selected_item_id = Constants.EMPTY_EQUIPMENT_SLOT
-
-func unequip_helmet() -> void:
-	helmet_item_id = Constants.EMPTY_EQUIPMENT_SLOT
-
-func unequip_chestplate() -> void:
-	chestplate_item_id = Constants.EMPTY_EQUIPMENT_SLOT
-
-func unequip_leggings() -> void:
-	leggings_item_id = Constants.EMPTY_EQUIPMENT_SLOT
-
-func unequip_boots() -> void:
-	boots_item_id = Constants.EMPTY_EQUIPMENT_SLOT
-
-func unequip_selected_item() -> void:
-	selected_item_id = Constants.EMPTY_EQUIPMENT_SLOT
+			selected_item_id = Constants.NO_ITEM
