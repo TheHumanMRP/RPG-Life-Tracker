@@ -3,7 +3,6 @@ extends Node
 
 # Hotbar
 const NUMBER_OF_HOTBAR_SLOTS: int = 9
-const EMPTY_HOTBAR_SLOT: int = -1
 
 const UNSELECTED_HOTBAR_SLOT_OPACITY: float = 0.0
 const SELECTED_HOTBAR_SLOT_OPACITY: float = 0.5
@@ -19,7 +18,9 @@ const PATH_TO_MAIN_MENU: String = ("res://Folders/Systems/Main/Scenes/main_menu.
 
 # PLayer
 const PLAYER_INVENTORY_NAME: String = "player"
-const EMPTY_EQUIPMENT_SLOT: int = -1
+
+# Items
+const NO_ITEM = -1
 
 # Saving and loading
 const DEV_SAVE_PATH := "user://dev/save_data.tres"
