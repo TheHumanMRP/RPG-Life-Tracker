@@ -141,7 +141,9 @@ func check_for_keyboard_selection() -> void:
 
 	if Input.is_action_just_pressed(input_action):
 		notify_hotbar_selected()
-		return
+	
+	if Input.is_action_just_pressed("equip_item"):
+		equip_item()
 
 func equip_item() -> void:
 	pass

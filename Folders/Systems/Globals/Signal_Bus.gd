@@ -20,6 +20,7 @@ signal equip_item(item_id: int)
 # ==============================================
 
 signal hotbar_selected(slot_index: int)
+signal hotbar_equipped(slot_index: int)
 signal hotbar_changed
 
 # ==============================================
