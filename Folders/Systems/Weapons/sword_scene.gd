@@ -5,6 +5,9 @@ var damage_power: int
 
 @onready var attack_component: AttackComponent = AttackComponent.new()
 
+func setup() -> void:
+	pass
+
 func face_where_player_is_facing(player_looking_direction: int) -> void:
 	if player_looking_direction == 1:
 		rotation_degrees = 0
