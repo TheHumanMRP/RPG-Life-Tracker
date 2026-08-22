@@ -29,7 +29,7 @@ func setup_signals() -> void:
 	print("\nMain Menu: Setup signals func ran")
 
 func _on_dungeon_button_pressed() -> void:
-	InfoGetter.get_main_node().switch_to_scene(self, Constants.PATH_TO_DUNGEON_SELECTION_MENU)
+	InfoGetter.get_main_node().switch_to_scene(self, Constants.PATH_TO_DUNGEON_SELECTION_MENU, true)
 
 func _on_task_manager_button_pressed() -> void:
 	print("\nMain Menu: Task manager button pressed")

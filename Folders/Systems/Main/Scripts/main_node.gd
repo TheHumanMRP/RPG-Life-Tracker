@@ -4,13 +4,13 @@ extends Node2D
 func _ready() -> void:
 	self.add_to_group("main_node")
 
-func switch_to_scene(myself: Node, new_scene_path: String, clear_all_children: bool = false) -> void:
+func switch_to_scene(caller: Node, new_scene_path: String, clear_all_children: bool = false) -> void:
 	if clear_all_children:
 		for child in self.get_children():
 			child.queue_free()
     
-	if self.get_children().has(myself):
-		self.remove_child(myself)
+	if self.get_children().has(caller):
+		self.remove_child(caller)
     
 	var new_scene: Node = get_new_scene(new_scene_path)
 
