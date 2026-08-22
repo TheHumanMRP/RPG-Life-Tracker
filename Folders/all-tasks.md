@@ -1,7 +1,5 @@
 # Equipment Manager
 ---
-- [ ] Make the equipment manager handle equipment of sword
- 
 - [ ] Refactor the hotbar to handle selection and equipment of item
     - [ ] Make it update the opacity when selected
 
@@ -12,6 +10,8 @@
             - [ ] Refactor the equipment manager
     
         - [ ] Remove that item from the hotbar list
+ 
+- [X] Make the equipment manager handle equipment of sword
 
 # Task Manager
 ---
