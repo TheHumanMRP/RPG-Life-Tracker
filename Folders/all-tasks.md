@@ -1,8 +1,3 @@
-# Death Menu
----
-- [ ] Add the main menu button functionality
-
-
 # Equipment Manager
 ---
 - [ ] Make the equipment manager handle equipment of sword
@@ -25,6 +20,10 @@
 
 # Completed Tasks
 ---
+
+## Death Menu
+---
+- [X] Add the main menu button functionality
 
 ## Hotbar Slots
 - [X] Refactor the hotbar to handle selection and equipment of item
