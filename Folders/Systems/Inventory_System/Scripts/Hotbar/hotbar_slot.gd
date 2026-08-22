@@ -146,7 +146,10 @@ func check_for_keyboard_selection() -> void:
 		equip_item()
 
 func equip_item() -> void:
-	SignalBus.hotbar_item_equipped.emit(slot_index)
+	var selected_slot_index: int = InfoGetter.get_selected_hotbar_index()
+
+	if selected_slot_index == slot_index:
+		SignalBus.hotbar_item_equipped.emit(slot_index)
 
 # ------------------------------------------------------------------------------
 # Selection
