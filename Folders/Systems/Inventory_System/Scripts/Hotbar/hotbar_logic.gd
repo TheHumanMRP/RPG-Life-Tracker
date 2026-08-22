@@ -50,15 +50,13 @@ func _on_hotbar_item_selected(slot_index: int) -> void:
 	notify_hotbar_changed()
 
 func _on_hotbar_item_equipped(slot_index: int) -> void:
+	var item_id: int = Global.save_data.hotbar_save_data.hotbar_slots[slot_index]
 	
-	var item_id: int = 
+	SignalBus.equip_item.emit(item_id)
 
 	Global.save_data.hotbar_save_data.hotbar_slots[slot_index] = Constants.EMPTY_HOTBAR_SLOT
 	
 	
-
-	SignalBus.equip_item.emit()
-
 ## This shit is here so that I don't have to go to a billion places if I by mistakely somehow change the signal name
 func notify_hotbar_changed() -> void:
 	SignalBus.hotbar_changed.emit()
