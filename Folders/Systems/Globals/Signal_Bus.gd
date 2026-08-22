@@ -19,8 +19,8 @@ signal equip_item(item_id: int)
 # Hotbar
 # ==============================================
 
-signal hotbar_selected(slot_index: int)
-signal hotbar_equipped(slot_index: int)
+signal hotbar_item_selected(slot_index: int)
+signal hotbar_item_equipped(slot_index: int)
 signal hotbar_changed
 
 # ==============================================

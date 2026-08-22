@@ -4,7 +4,7 @@
  
 - [ ] Refactor the hotbar to handle selection and equipment of item
     - [ ] Make it a new equip item func in it
-        - [ ] Make a new equip item input
+        - [X] Make a new equip item input
     
         - [ ] Make the func emit a new equip item signal when equipped
             - [ ] Refactor the equipment manager (go to the todo block)
