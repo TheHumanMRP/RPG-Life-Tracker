@@ -4,6 +4,7 @@ class_name ItemEntry
 @export var item: BaseItem
 @export var name: String
 @export var item_type: All_Enums.ITEM_TYPES
+@export var item_weapon_type: All_Enums.WEAPON_TYPE
 @export var durability: float
 @export var item_id: int
 @export var logo: Texture2D
@@ -12,6 +13,7 @@ func setup(new_item: BaseItem, new_name: String, new_logo: Texture2D, new_durabi
 	item = new_item
 	name = new_name
 	item_type = item.type
+	item_weapon_type = item.weapon_type
 	durability = new_durability
 	logo = new_logo
 
