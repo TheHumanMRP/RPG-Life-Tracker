@@ -1,17 +1,8 @@
-# Overall
----
-- [ ] Add transitions when changing scenes
-
-
 # Death Menu
 ---
 - [ ] Add the main menu button functionality
 
 
-# Equipment Manager
----
-- [ ] Make the equipment manager handle equipment of sword
- 
 # Task Manager
 ---
 - [ ] Make the `Task` class
@@ -19,6 +10,17 @@
     - [ ] `add_task`
     - [ ] `remove_task`
     - [ ] `rename_task`
+
+
+# Equipment Manager
+---
+- [ ] Make the equipment manager handle equipment of sword
+
+
+# Overall
+---
+- [ ] Add transitions when changing scenes
+
 
 # Completed Tasks
 ---
