@@ -10,7 +10,7 @@ var boots_item_id: int = -1
 var selected_item_id: int = -1
 
 func _init() -> void:
-	SignalBus.item_selected.connect(equip)
+	SignalBus.item_selected.connect(selected_item_id)
 
 func get_item_entry(item_id: int) -> ItemEntry:
 	return AllGlobalItemsManager.get_item_by_id(item_id)
@@ -50,8 +50,8 @@ func equip(new_item_id: int) -> void:
 			
 			boots_item_id = new_item_id
 
-		All_Enums.ITEM_TYPES.Item:
-			selected_item_id = new_item_id
+func select_item(item_id: int) -> void:
+	selected_item_id = item_id
 
 func unequip_item(item_id: int) -> void:
 	var new_item: ItemEntry = get_item_entry(item_id)
