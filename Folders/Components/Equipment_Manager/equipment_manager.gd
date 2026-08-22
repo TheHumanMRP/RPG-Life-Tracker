@@ -54,6 +54,13 @@ func equip(item_id: int) -> void:
 				return
 			
 			equipped_boots_item_id = item_id
+		
+		All_Enums.ITEM_TYPES.Weapon:
+			if new_item.item_type != All_Enums.ITEM_TYPES.Weapon:
+				push_error("\nEquipment Logic Component: Invalid item type of: ", new_item.item_type, " instead of boots.")
+				return
+			
+			equipped_boots_item_id = item_id
 
 func select_item(item_id: int) -> void:
 	selected_item_id = item_id
