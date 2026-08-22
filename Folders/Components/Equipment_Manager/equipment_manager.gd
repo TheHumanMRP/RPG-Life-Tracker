@@ -28,38 +28,18 @@ func equip(item_id: int) -> void:
 
 	match item_type:
 		All_Enums.ITEM_TYPES.Helmet:
-			if new_item.item_type != All_Enums.ITEM_TYPES.Helmet:
-				push_error("\nEquipment Logic Component: Invalid item type of: ", new_item.item_type, " instead of helmet.")
-				return
-			
 			equipped_helmet_item_id = item_id
 
 		All_Enums.ITEM_TYPES.Chestplate:
-			if new_item.item_type != All_Enums.ITEM_TYPES.Chestplate:
-				push_error("\nEquipment Logic Component: Invalid item type of: ", new_item.item_type, " instead of chestplate.")
-				return
-			
 			equipped_chestplate_item_id = item_id
 
 		All_Enums.ITEM_TYPES.Leggings:
-			if new_item.item_type != All_Enums.ITEM_TYPES.Leggings:
-				push_error("\nEquipment Logic Component: Invalid item type of: ", new_item.item_type, " instead of leggings.")
-				return
-			
 			equipped_leggings_item_id = item_id
 
 		All_Enums.ITEM_TYPES.Boots:
-			if new_item.item_type != All_Enums.ITEM_TYPES.Boots:
-				push_error("\nEquipment Logic Component: Invalid item type of: ", new_item.item_type, " instead of boots.")
-				return
-			
 			equipped_boots_item_id = item_id
 		
 		All_Enums.ITEM_TYPES.Weapon:
-			if new_item.item_type != All_Enums.ITEM_TYPES.Weapon:
-				push_error("\nEquipment Logic Component: Invalid item type of: ", new_item.item_type, " instead of boots.")
-				return
-			
 			equipped_weapon_item_id = item_id
 
 func select_item(item_id: int) -> void:
