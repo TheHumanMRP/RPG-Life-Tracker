@@ -25,6 +25,8 @@
 
 # Completed Tasks
 ---
+
+## Hotbar Slots
 - [X] Refactor the hotbar to handle selection and equipment of item
     - [X] Make it a new equip item func in it
         - [X] Make a new equip item input
@@ -36,5 +38,6 @@
 
     - [X] Make it update the opacity when selected
 
+## Equipment Manager
 - [X] Refactor the equipment manager
     - [X] Make selection and equip management separate
