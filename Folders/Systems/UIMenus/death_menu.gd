@@ -11,7 +11,6 @@ func _ready() -> void:
 	self.hide()
 
 	respawn_button.pressed.connect(_on_respawn_button_pressed)
-
 	main_menu_button.pressed.connect(_on_main_menu_button_pressed)
 
 	you_died_label.text = "You Died!"
@@ -35,7 +34,7 @@ func _on_respawn_button_pressed() -> void:
 	hide()
 
 func _on_main_menu_button_pressed() -> void:
-	print("\nDeath Menu: Main Menu Button Pressed")
+	InfoGetter.get_main_node().switch_to_scene(self, Constants.PATH_TO_MAIN_MENU)
 
 func set_global_state() -> void:
 	SignalBus.set_game_state.emit(All_Enums.GAME_STATES.UIMenu)
