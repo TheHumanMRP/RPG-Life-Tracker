@@ -143,6 +143,9 @@ func check_for_keyboard_selection() -> void:
 		notify_hotbar_selected()
 		return
 
+func equip_item() -> void:
+	pass
+
 # ------------------------------------------------------------------------------
 # Selection
 # ------------------------------------------------------------------------------
