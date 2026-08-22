@@ -18,6 +18,8 @@ func get_item_entry(item_id: int) -> ItemEntry:
 
 
 func equip(item_id: int) -> void:
+	if item_id == Constants.EMPTY_HOTBAR_SLOT
+
 	var new_item: ItemEntry = get_item_entry(item_id)
 
 	var item_type: All_Enums.ITEM_TYPES = new_item.item_type
