@@ -52,7 +52,6 @@ func _gui_input(event: InputEvent) -> void:
 # ------------------------------------------------------------------------------
 
 func refresh() -> void:
-	print("\nHotbar slot: Refresh func called")
 	check_type_of_item()
 	refresh_logo()
 	set_proper_selection_color_rect_opacity()
@@ -149,7 +148,7 @@ func equip_item() -> void:
 	var selected_slot_index: int = InfoGetter.get_selected_hotbar_index()
 
 	if selected_slot_index == slot_index:
-		print("Hotbar Slot: Equipped an item with item_id:, ", item_id, " and slot index: ", slot_index)
+		print("\nHotbar Slot: Equipped an item with item_id:, ", item_id, " and slot index: ", slot_index)
 		SignalBus.hotbar_item_equipped.emit(slot_index)
 
 # ------------------------------------------------------------------------------

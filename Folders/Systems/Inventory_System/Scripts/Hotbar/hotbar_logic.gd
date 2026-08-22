@@ -54,6 +54,5 @@ func _on_hotbar_item_equipped(slot_index: int) -> void:
 
 ## This shit is here so that I don't have to go to a billion places if I by mistakely somehow change the signal name
 func notify_hotbar_changed() -> void:
-	print("\nHotbar Logic: Notified that horbar changed")
 	SignalBus.hotbar_changed.emit()
 	SignalBus.save_game.emit()
