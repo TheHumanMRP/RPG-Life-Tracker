@@ -157,4 +157,4 @@ func equip_item() -> void:
 # ------------------------------------------------------------------------------
 
 func notify_hotbar_selected() -> void:
-	SignalBus.hotbar_selected.emit(slot_index)
+	SignalBus.hotbar_item_selected.emit(slot_index)
