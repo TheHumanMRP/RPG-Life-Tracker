@@ -1,3 +1,13 @@
+# Overall
+---
+- [ ] Add transitions when changing scenes
+
+
+# Death Menu
+---
+- [ ] Add the main menu button functionality
+
+
 # Equipment Manager
 ---
 - [ ] Make the equipment manager handle equipment of sword
