@@ -14,7 +14,7 @@
     - [X] Make it update the opacity when selected
 
 - [ ] Refactor the equipment manager
-    - [ ] Make selection and equip management separate  
+    - [ ] Make selection and equip management separate
 
 # Task Manager
 ---
