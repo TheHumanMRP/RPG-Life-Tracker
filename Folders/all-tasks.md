@@ -6,15 +6,15 @@
     - [ ] Make it a new equip item func in it
         - [X] Make a new equip item input
     
-        - [ ] Make the func emit a new equip item signal when equipped
-            - [ ] Refactor the equipment manager (go to the todo block)
+        - [X] Make the func emit a new equip item signal when equipped
+            - [X] Refactor the equipment manager (go to the todo block)
     
         - [ ] Remove that item from the hotbar list
 
     - [X] Make it update the opacity when selected
 
-- [ ] Refactor the equipment manager
-    - [ ] Make selection and equip management separate
+- [X] Refactor the equipment manager
+    - [X] Make selection and equip management separate
 
 # Task Manager
 ---
