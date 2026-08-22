@@ -22,7 +22,6 @@
 ---
 
 ## Death Menu
----
 - [X] Add the main menu button functionality
 
 ## Hotbar Slots
