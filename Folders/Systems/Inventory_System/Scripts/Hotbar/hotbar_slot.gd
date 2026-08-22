@@ -19,21 +19,11 @@ class_name HotbarSlot
 @onready var display_logo: TextureRect = $%Logo_Display
 @onready var slot_number_label: Label = $%Slot_Number
 
-
-# ------------------------------------------------------------------------------
-# Variables
-# ------------------------------------------------------------------------------
-
-var EMPTY_HOTBAR_SLOT: int
-
-
 # ------------------------------------------------------------------------------
 # Lifecycle
 # ------------------------------------------------------------------------------
 
 func _ready() -> void:
-	EMPTY_HOTBAR_SLOT = Constants.NO_ITEM
-
 	SignalBus.hotbar_changed.connect(refresh)
 
 	refresh()
@@ -151,7 +141,7 @@ func equip_item() -> void:
 		print("\nHotbar Slot: Equipped an item with item_id:, ", item_id, " and slot index: ", slot_index)
 		SignalBus.hotbar_item_equipped.emit(slot_index)
 
-		item_id = Constants.EMPTY_HOTBAR_SLOT
+		item_id = Constants.NO_ITEM
 
 # ------------------------------------------------------------------------------
 # Selection
