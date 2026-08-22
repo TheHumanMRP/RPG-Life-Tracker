@@ -3,6 +3,11 @@
 - [ ] Add the main menu button functionality
 
 
+# Equipment Manager
+---
+- [ ] Make the equipment manager handle equipment of sword
+
+
 # Task Manager
 ---
 - [ ] Make the `Task` class
@@ -12,14 +17,10 @@
     - [ ] `rename_task`
 
 
-# Equipment Manager
----
-- [ ] Make the equipment manager handle equipment of sword
-
-
 # Overall
 ---
 - [ ] Add transitions when changing scenes
+- [ ] Start adding some pixel art
 
 
 # Completed Tasks
