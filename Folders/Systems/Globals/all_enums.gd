@@ -20,5 +20,6 @@ enum GAME_STATES {
 
 enum WEAPON_TYPE {
 	Sword,
+	None,
 	
 }
