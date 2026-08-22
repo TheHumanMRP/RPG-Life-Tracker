@@ -50,7 +50,7 @@ func _on_hotbar_item_selected(slot_index: int) -> void:
 	notify_hotbar_changed()
 
 func _on_hotbar_item_equipped(slot_index: int) -> void:
-	
+	pass
 
 ## This shit is here so that I don't have to go to a billion places if I by mistakely somehow change the signal name
 func notify_hotbar_changed() -> void:
