@@ -13,8 +13,9 @@ const MAIN_MENU_LABEL_TEXT: String = "Main Menu"
 const MAIN_MENU_DUNGOEN_BUTTON_TEXT: String = "Dungeon"
 const MAIN_MENU_TASK_MANAGER_BUTTON_TEXT: String = "  Task Manager  "
 
-# Dungeon Related
+# Scene Paths
 const PATH_TO_DUNGEON_SELECTION_MENU: String = "res://Folders/Systems/Dungeon_Related/Scenes/dungeon_selection_menu.tscn"
+const PATH_TO_MAIN_MENU: String = ("res://Folders/Systems/Main/Scenes/main_menu.tscn")
 
 # PLayer
 const PLAYER_INVENTORY_NAME: String = "player"
