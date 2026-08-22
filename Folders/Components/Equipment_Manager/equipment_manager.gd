@@ -3,11 +3,12 @@ extends Node
 
 @export var sword_scene: SwordScene
 
-var helmet_item_id: int = -1
-var chestplate_item_id: int = -1
-var leggings_item_id: int = -1
-var boots_item_id: int = -1
-var selected_item_id: int = -1
+var equipped_helmet_item_id: int = Constants.NO_ITEM
+var equipped_chestplate_item_id: int = Constants.NO_ITEM
+var equipped_leggings_item_id: int = Constants.NO_ITEM
+var boots_item_id: int = Constants.NO_ITEM
+var weapon_item_id: int = Constants.NO_ITEM
+var selected_item_id: int = Constants.NO_ITEM
 
 func _init() -> void:
 	SignalBus.item_selected.connect(select_item)

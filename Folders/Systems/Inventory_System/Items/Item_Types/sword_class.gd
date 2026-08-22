@@ -5,7 +5,8 @@ var damage_power: int = 10
 
 func setup(new_logo: Texture2D = null, new_base_durability: int = base_durability) -> void:
 	base_durability = new_base_durability
-	type = All_Enums.ITEM_TYPES.Item
+	type = All_Enums.ITEM_TYPES.Weapon
+	weapon_type = All_Enums.WEAPON_TYPE.Sword
 
 func use(target) -> void:
 	if not target.has_method("take_damage"):
