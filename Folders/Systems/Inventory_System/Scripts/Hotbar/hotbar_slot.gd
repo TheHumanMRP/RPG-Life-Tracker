@@ -149,4 +149,5 @@ func check_for_keyboard_selection() -> void:
 # ------------------------------------------------------------------------------
 
 func notify_hotbar_selected() -> void:
+	# set_proper_selection_color_rect_opacity()
 	SignalBus.hotbar_selected.emit(slot_index)
