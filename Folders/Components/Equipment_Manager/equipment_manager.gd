@@ -64,13 +64,13 @@ func unequip_item(item_id: int) -> void:
 
 	match item_type:
 		All_Enums.ITEM_TYPES.Helmet:
-			helmet_item_id = Constants.EMPTY_EQUIPMENT_SLOT
+			helmet_item_id = Constants.NO_ITEM
 
 		All_Enums.ITEM_TYPES.Chestplate:
-			chestplate_item_id = Constants.EMPTY_EQUIPMENT_SLOT
+			chestplate_item_id = Constants.NO_ITEM
 
 		All_Enums.ITEM_TYPES.Leggings:
-			leggings_item_id = Constants.EMPTY_EQUIPMENT_SLOT
+			leggings_item_id = Constants.NO_ITEM
 
 		All_Enums.ITEM_TYPES.Boots:
 			boots_item_id = Constants.EMPTY_EQUIPMENT_SLOT
