@@ -1,4 +1,4 @@
-class_name Sword
+class_name SwordClass
 extends BaseItem
 
 var damage_power: int = 10

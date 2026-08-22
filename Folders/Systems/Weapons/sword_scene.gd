@@ -1,6 +1,8 @@
 class_name SwordScene
 extends Area2D
 
+var damage_power: int
+
 @onready var attack_component: AttackComponent = AttackComponent.new()
 
 func face_where_player_is_facing(player_looking_direction: int) -> void:
