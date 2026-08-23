@@ -1,9 +1,6 @@
 # Equipment Manager
 ---
 
-
-
-
 - [ ] Make the equipment manager handle equipment of sword
 	- [ ] Add the sword scene to the equipment manager scene
 
@@ -11,7 +8,7 @@
 
 
 - [ ] Setup the sword scene
-	- [ ] Add all the sword parameters to the sword scene
+	- [X] Add all the sword parameters to the sword scene
 	- [ ] Make a sword scene init func
 		- [ ] It takes task entry as an input
 		- [ ] Checks all the values and raises errors
@@ -20,6 +17,7 @@
 	- [ ] Make the sword scene hide func
 
 	- [ ] Make the sword scene show func
+
 
 - [ ] Handle the unequipment of gear
 	- [ ] Add 5 more slots to the hotbar
