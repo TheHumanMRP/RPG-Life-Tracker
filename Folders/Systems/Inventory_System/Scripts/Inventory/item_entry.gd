@@ -18,7 +18,7 @@ func setup(new_item: BaseItem, new_name: String, new_logo: Texture2D, new_durabi
 	logo = new_logo
 
 func use_item(target) -> void:
-	item.use(target)
+	durability -= 1
 
 func print_self() -> void:
 	print("\n\t", item_id, ".-----ItemEntry [", name, "]-----")
