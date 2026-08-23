@@ -15,7 +15,9 @@ func setup(new_sword: ItemEntry) -> void:
 
 	sword = new_sword
 
-func refresh_value() -> void:
+	refresh_values()
+
+func refresh_values() -> void:
 	damage_power = sword.damage_power
 	logo = sword.logo
 	durability = sword.durability
