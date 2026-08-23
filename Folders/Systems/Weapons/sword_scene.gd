@@ -3,12 +3,15 @@ extends Area2D
 
 var damage_power: int
 var logo: Texture2D
+var durability: int
 
 @onready var attack_component: AttackComponent = AttackComponent.new()
 
 func setup(new_sword: ItemEntry) -> void:
 	if new_sword.item_weapon_type != All_Enums.WEAPON_TYPES.Sword:
 		push_error("\nSword Scene: Invalid Weapon type!")
+
+
 
 func face_where_player_is_facing(player_looking_direction: int) -> void:
 	if player_looking_direction == 1:

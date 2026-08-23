@@ -4,7 +4,7 @@ class_name ItemEntry
 @export var item: BaseItem
 @export var name: String
 @export var item_type: All_Enums.ITEM_TYPES
-@export var item_weapon_type: All_Enums.WEAPON_TYPE
+@export var item_weapon_type: All_Enums.WEAPON_TYPES
 @export var durability: float
 @export var item_id: int
 @export var logo: Texture2D
