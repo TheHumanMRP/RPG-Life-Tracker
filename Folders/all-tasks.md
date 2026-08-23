@@ -14,7 +14,7 @@
 		- [X] Checks all the values and raises errors
 		- [X] Then sets the values of the scene
 
-	- [ 	] Make the sword scene hide func
+	- [ ] Make the sword scene hide func
 
 	- [ ] Make the sword scene show func
 
