@@ -1,17 +1,14 @@
 # Equipment Manager
 ---
 
-- [ ] Add 5 more slots to the hotbar
-	- [ ] Display all the armor and weapon there
 
-	- [ ]  
 
-- [ ] Handle the unequipment of gear
 
 - [ ] Make the equipment manager handle equipment of sword
 	- [ ] Add the sword scene to the equipment manager scene
 
 	- [ ] Make it show the sword and set it's values when equipped and hide it when it's unequipped
+
 
 - [ ] Setup the sword scene
 	- [ ] Add all the sword parameters to the sword scene
@@ -23,6 +20,12 @@
 	- [ ] Make the sword scene hide func
 
 	- [ ] Make the sword scene show func
+
+- [ ] Handle the unequipment of gear
+	- [ ] Add 5 more slots to the hotbar
+		- [ ] Display all the armor and weapon there
+
+		- [ ] Figure out how to travel to all that 
 
 # Task Manager
 ---
