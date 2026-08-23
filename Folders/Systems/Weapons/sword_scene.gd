@@ -2,11 +2,12 @@ class_name SwordScene
 extends Area2D
 
 var damage_power: int
+var logo: Texture2D
 
 @onready var attack_component: AttackComponent = AttackComponent.new()
 
-func setup() -> void:
-	pass
+func setup(new_sword: ItemEntry) -> void:
+	if new_sword.
 
 func face_where_player_is_facing(player_looking_direction: int) -> void:
 	if player_looking_direction == 1:

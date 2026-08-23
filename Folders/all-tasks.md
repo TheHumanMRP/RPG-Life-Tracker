@@ -10,7 +10,7 @@
 - [ ] Setup the sword scene
 	- [X] Add all the sword parameters to the sword scene
 	- [ ] Make a sword scene init func
-		- [ ] It takes task entry as an input
+		- [ ] It takes item entry as an input
 		- [ ] Checks all the values and raises errors
 		- [ ] Then sets the values of the scene
 
