@@ -9,12 +9,12 @@
 
 - [ ] Setup the sword scene
 	- [X] Add all the sword parameters to the sword scene
-	- [ ] Make a sword scene init func
-		- [ ] It takes item entry as an input
-		- [ ] Checks all the values and raises errors
-		- [ ] Then sets the values of the scene
+	- [X] Make a sword scene init func
+		- [X] It takes item entry as an input
+		- [X] Checks all the values and raises errors
+		- [X] Then sets the values of the scene
 
-	- [ ] Make the sword scene hide func
+	- [ 	] Make the sword scene hide func
 
 	- [ ] Make the sword scene show func
 
