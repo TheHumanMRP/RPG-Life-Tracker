@@ -7,6 +7,8 @@
 - [ ] Setup the sword scene
 	- [ ] Add all the sword parameters to the sword scene
 	- [ ] Make a sword scene init func
+		- [ ] It takes task entry as an input
+		- [ ] Checks all the values and raises errors
 		- [ ] 
 
 # Task Manager
