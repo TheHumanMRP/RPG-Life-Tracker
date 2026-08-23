@@ -3,7 +3,7 @@
 - [ ] Make the equipment manager handle equipment of sword
 	- [ ] Add the sword scene to the equipment manager scene
 
-	- [ ] 
+	- [ ] Make it handle equippemt of sword
 
 - [ ] Setup the sword scene
 	- [ ] Add all the sword parameters to the sword scene
@@ -11,6 +11,10 @@
 		- [ ] It takes task entry as an input
 		- [ ] Checks all the values and raises errors
 		- [ ] Then sets the values of the scene
+
+	- [ ] Make the sword scene hide func
+
+	- [ ] Make the sword scene show func
 
 # Task Manager
 ---
