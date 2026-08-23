@@ -1,6 +1,8 @@
 class_name SwordScene
 extends Area2D
 
+var sword: ItemEntry
+
 var damage_power: int
 var logo: Texture2D
 var durability: float
@@ -11,9 +13,12 @@ func setup(new_sword: ItemEntry) -> void:
 	if new_sword.item_weapon_type != All_Enums.WEAPON_TYPES.Sword:
 		push_error("\nSword Scene: Invalid Weapon type!")
 
-	damage_power = new_sword.damage_power
-	logo = new_sword.logo
-	durability = 
+	sword = new_sword
+
+func refresh_value() -> void:
+	damage_power = sword.damage_power
+	logo = sword.logo
+	durability = sword.durability
 
 func face_where_player_is_facing(player_looking_direction: int) -> void:
 	if player_looking_direction == 1:
