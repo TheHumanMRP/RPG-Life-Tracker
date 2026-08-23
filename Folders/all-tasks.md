@@ -1,7 +1,7 @@
 # Equipment Manager
 ---
 - [ ] Make the equipment manager handle equipment of sword
-	-[ ] Make 
+	- [ ] Add the sword scene to the 
 
 
 # Task Manager
