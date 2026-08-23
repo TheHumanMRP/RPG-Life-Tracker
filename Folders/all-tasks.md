@@ -1,6 +1,11 @@
 # Equipment Manager
 ---
 
+- [ ] Add 5 more slots to the hotbar
+	- [ ] Display all the armor and weapon there
+
+	- [ ]  
+
 - [ ] Handle the unequipment of gear
 
 - [ ] Make the equipment manager handle equipment of sword
