@@ -1,6 +1,7 @@
 # Equipment Manager
 ---
 - [ ] Make the equipment manager handle equipment of sword
+	-[ ] Make 
 
 
 # Task Manager
