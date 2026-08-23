@@ -2,14 +2,15 @@
 ---
 - [ ] Make the equipment manager handle equipment of sword
 	- [ ] Add the sword scene to the equipment manager scene
-	
+
+	- [ ] 
 
 - [ ] Setup the sword scene
 	- [ ] Add all the sword parameters to the sword scene
 	- [ ] Make a sword scene init func
 		- [ ] It takes task entry as an input
 		- [ ] Checks all the values and raises errors
-		- [ ] 
+		- [ ] Then sets the values of the scene
 
 # Task Manager
 ---
