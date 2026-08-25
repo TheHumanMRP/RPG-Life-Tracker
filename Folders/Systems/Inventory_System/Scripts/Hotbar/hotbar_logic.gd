@@ -37,14 +37,14 @@ func add_item_to_hotbar(item_id: int, slot_index: int) -> void:
 
 ## Returns `true` if the specified hotbar slot is empty.
 func check_if_slot_empty(slot: int) -> bool:
-	return InfoGetter.get_hotbar_slots()[slot] == InfoGetter.EMPTY_HOTBAR_SLOT
+	return InfoGetter.get_hotbar_slots()[slot] == Constants.NO_ITEM
 
 func _on_hotbar_item_selected(slot_index: int) -> void:
 	Global.save_data.hotbar_save_data.selected_hotbar_slot_index = slot_index
 
 	var selected_item_id: int = InfoGetter.get_hotbar()[slot_index]
 
-	if selected_item_id != Constants.EMPTY_HOTBAR_SLOT:
+	if selected_item_id != Constants.NO_ITEM:
 		SignalBus.item_selected.emit(selected_item_id)
 
 	notify_hotbar_changed()
