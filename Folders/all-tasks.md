@@ -1,4 +1,4 @@
-- [ ] 
+- [ ] Fix the bug where the sword doesn't show up when equipped through hotbar slot
 
 # Equipment Manager
 ---
