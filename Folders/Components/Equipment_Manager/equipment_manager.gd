@@ -63,7 +63,8 @@ func unequip_item(item_id: int) -> void:
 			equipped_boots_item_id = Constants.NO_ITEM
 
 		All_Enums.ITEM_TYPES.Weapon:
-			equipped_weapon_item_id = Constants.NO_ITEM
+			handle_unequipping_of_weapon(new_item)
+
 # ===================================================
 # Equipping nad unequipping of weapons
 # ===================================================
