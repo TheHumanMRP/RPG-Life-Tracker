@@ -7,18 +7,6 @@
 	- [ ] Make it show the sword and set it's values when equipped and hide it when it's unequipped
 
 
-- [ ] Setup the sword scene
-	- [X] Add all the sword parameters to the sword scene
-	- [X] Make a sword scene init func
-		- [X] It takes item entry as an input
-		- [X] Checks all the values and raises errors
-		- [X] Then sets the values of the scene
-
-	- [ ] Make the sword scene hide func
-
-	- [ ] Make the sword scene show func
-
-
 - [ ] Handle the unequipment of gear
 	- [ ] Add 5 more slots to the hotbar
 		- [ ] Display all the armor and weapon there
