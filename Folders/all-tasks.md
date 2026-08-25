@@ -1,6 +1,7 @@
+- [ ] 
+
 # Equipment Manager
 ---
-
 
 - [ ] Handle the unequipment of gear
 	- [ ] Add 5 more slots to the hotbar
