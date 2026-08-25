@@ -2,4 +2,6 @@ class_name TestingScript
 extends Node
 
 func test() -> void:
-	InfoGetter.get_hotbar()
+	var hotbar_logic_component: HotBarLogicComponent = HotBarLogicComponent.new()
+
+	hotbar_logic_component.add_item_to_hotbar(1, 1)
