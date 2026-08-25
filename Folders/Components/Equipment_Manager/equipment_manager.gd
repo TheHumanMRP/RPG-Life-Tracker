@@ -39,7 +39,7 @@ func equip(item_id: int) -> void:
 			equipped_boots_item_id = item_id
 		
 		All_Enums.ITEM_TYPES.Weapon:
-			equipped_weapon_item_id = item_id
+			handle_equipping_of_weapon(new_item)
 
 func select_item(item_id: int) -> void:
 	selected_item_id = item_id
@@ -69,8 +69,10 @@ func unequip_item(item_id: int) -> void:
 			selected_item_id = Constants.NO_ITEM
 
 func handle_equipping_of_weapon(new_item: ItemEntry) -> void:
-	var item_weapon_type: All_Enums.WEAPON_TYPES = new_item.item_weapon_type
+	equipped_weapon_item_id = new_item.item_id
 	
+	var item_weapon_type: All_Enums.WEAPON_TYPES = new_item.item_weapon_type
+
 	match item_weapon_type:
 		All_Enums.WEAPON_TYPES.Sword:
 			handle_equipping_of_sword(new_item)
