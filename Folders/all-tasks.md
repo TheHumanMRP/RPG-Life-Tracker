@@ -31,6 +31,14 @@
 # Completed Tasks
 ---
 
+## Sword Scene
+- [X] Setup the sword scene
+	- [X] Add all the sword parameters to the sword scene
+	- [X] Make a sword scene init func
+		- [X] It takes item entry as an input
+		- [X] Checks all the values and raises errors
+		- [X] Then sets the values of the scene
+
 ## Death Menu
 - [X] Add the main menu button functionality
 
