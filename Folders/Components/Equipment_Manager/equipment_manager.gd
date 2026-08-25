@@ -67,3 +67,8 @@ func unequip_item(item_id: int) -> void:
 
 		All_Enums.ITEM_TYPES.Item:
 			selected_item_id = Constants.NO_ITEM
+
+func handle_equipping_of_sword(new_item: ItemEntry) -> void:
+	sword_scene.setup(new_item)
+	
+	sword_scene.show()
