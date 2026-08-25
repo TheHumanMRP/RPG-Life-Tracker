@@ -2,7 +2,7 @@
 ---
 
 - [ ] Make the equipment manager handle equipment of sword
-	- [ ] Add the sword scene to the equipment manager scene
+	- [X] Add the sword scene to the equipment manager scene
 
 	- [ ] Make it show the sword and set it's values when equipped and hide it when it's unequipped
 
