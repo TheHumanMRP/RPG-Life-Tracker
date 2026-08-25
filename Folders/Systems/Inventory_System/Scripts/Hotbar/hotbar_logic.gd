@@ -54,7 +54,9 @@ func _on_hotbar_item_equipped(slot_index: int) -> void:
 	
 	SignalBus.equip_item.emit(item_id)
 
-	Global.save_data.hotbar_save_data.hotbar_slots[slot_index] = Constants.EMPTY_HOTBAR_SLOT
+	Global.save_data.hotbar_save_data.hotbar_slots[slot_index] = Constants.NO_ITEM
+
+	notify_hotbar_changed()
 	
 	
 ## This shit is here so that I don't have to go to a billion places if I by mistakely somehow change the signal name
