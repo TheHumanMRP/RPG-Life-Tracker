@@ -79,6 +79,15 @@ func handle_equipping_of_weapon(new_item: ItemEntry) -> void:
 		All_Enums.WEAPON_TYPES.None:
 			push_error("Equipment Manager: Invalid weapon")
 
+func handle_unequipping_of_weapon(new_item: ItemEntry) -> void:
+	equipped_weapon_item_id = Constants.NO_ITEM
+	
+	var item_weapon_type: All_Enums.WEAPON_TYPES = new_item.item_weapon_type
+
+	match item_weapon_type:
+		All_Enums.WEAPON_TYPES.Sword:
+			handle_unequipping_of_sword()
+
 func handle_unequipping_of_sword() -> void:
 	sword_scene.hide()
 
