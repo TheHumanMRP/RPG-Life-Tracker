@@ -1,12 +1,6 @@
 # Equipment Manager
 ---
 
-- [ ] Make the equipment manager handle equipment of sword
-	- [X] Add the sword scene to the equipment manager scene
-
-	- [ ] Make it show the sword and set it's values when equipped and hide it when it's unequipped
-		- [ ] 
-
 
 - [ ] Handle the unequipment of gear
 	- [ ] Add 5 more slots to the hotbar
@@ -31,6 +25,12 @@
 
 # Completed Tasks
 ---
+
+## Equipment Manager
+- [X] Make the equipment manager handle equipment of sword
+	- [X] Add the sword scene to the equipment manager scene
+
+	- [X] Make it show the sword and set it's values when equipped and hide it when it's unequipped
 
 ## Sword Scene
 - [X] Setup the sword scene
