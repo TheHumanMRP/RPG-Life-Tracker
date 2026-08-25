@@ -27,7 +27,7 @@ func add_item_to_hotbar(item_id: int, slot_index: int) -> void:
 		push_error("HotBarLogic: Hotbar slot already occupied: ", slot_index)
 		return
 
-	InfoGetter.get_hotbar_slots()[slot_index] = item_id
+	InfoGetter.get_hotbar()[slot_index] = item_id
 
 	notify_hotbar_changed()
 
@@ -37,7 +37,7 @@ func add_item_to_hotbar(item_id: int, slot_index: int) -> void:
 
 ## Returns `true` if the specified hotbar slot is empty.
 func check_if_slot_empty(slot: int) -> bool:
-	return InfoGetter.get_hotbar_slots()[slot] == Constants.NO_ITEM
+	return InfoGetter.get_hotbar()[slot] == Constants.NO_ITEM
 
 func _on_hotbar_item_selected(slot_index: int) -> void:
 	Global.save_data.hotbar_save_data.selected_hotbar_slot_index = slot_index
