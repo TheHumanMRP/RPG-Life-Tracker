@@ -64,9 +64,9 @@ func unequip_item(item_id: int) -> void:
 
 		All_Enums.ITEM_TYPES.Weapon:
 			equipped_weapon_item_id = Constants.NO_ITEM
-
-		All_Enums.ITEM_TYPES.Item:
-			selected_item_id = Constants.NO_ITEM
+# ===================================================
+# Equipping nad unequipping of weapons
+# ===================================================
 
 func handle_equipping_of_weapon(new_item: ItemEntry) -> void:
 	equipped_weapon_item_id = new_item.item_id
