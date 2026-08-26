@@ -6,7 +6,7 @@ var save_next: bool
 
 var save_manager: SaveManager = SaveManager.new()
 
-func _init() -> void:
+func _ready() -> void:
 	Global.signal_bus.save_game.connect(toggle_save_next)
 
 	_load_data()

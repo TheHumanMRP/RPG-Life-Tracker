@@ -18,6 +18,7 @@ config/icon="uid://bqulutjwvblw"
 [autoload]
 
 Global="*uid://b0m21w7a3y3rf"
+SaveCycleManager="*uid://h2j1arx22jnu"
 
 [debug]
 
