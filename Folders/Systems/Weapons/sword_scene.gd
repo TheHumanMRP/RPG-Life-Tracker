@@ -23,7 +23,9 @@ func refresh_values() -> void:
 	durability = sword_item_entry.durability
 
 func appear() -> void:
-	print("\nSword Scene: ")
+	print("\nSword Scene: Appear func called")
+
+	self.show()
 
 func face_where_player_is_facing(player_looking_direction: int) -> void:
 	if player_looking_direction == 1:

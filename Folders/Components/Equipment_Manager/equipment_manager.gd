@@ -95,7 +95,7 @@ func handle_equipping_of_sword(new_item: ItemEntry) -> void:
 
 	sword_scene.setup(new_item)
 	
-	sword_scene.show()
+	sword_scene.appear()
 
 func handle_unequipping_of_weapon(new_item: ItemEntry) -> void:
 	equipped_weapon_item_id = Constants.NO_ITEM
