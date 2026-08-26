@@ -18,8 +18,6 @@ func get_item_entry(item_id: int) -> ItemEntry:
 	return AllGlobalItemsManager.get_item_by_id(item_id)
 
 func equip(item_id: int) -> void:
-	print("\nEquipment Manager: Equip func called with item_id: ", item_id)
-
 	if item_id == Constants.NO_ITEM:
 		return
 
@@ -43,6 +41,8 @@ func equip(item_id: int) -> void:
 		All_Enums.ITEM_TYPES.Weapon:
 			print("\nEquipment Manager: Signal reached till match type, weapon")
 			handle_equipping_of_weapon(new_item)
+
+	print("\nEquipment Manager: Equip func called with item_id: ", item_id)
 
 func select_item(item_id: int) -> void:
 	selected_item_id = item_id
