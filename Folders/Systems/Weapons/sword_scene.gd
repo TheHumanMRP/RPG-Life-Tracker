@@ -27,6 +27,8 @@ func appear() -> void:
 
 	self.show()
 
+	print()
+
 func face_where_player_is_facing(player_looking_direction: int) -> void:
 	if player_looking_direction == 1:
 		rotation_degrees = 0

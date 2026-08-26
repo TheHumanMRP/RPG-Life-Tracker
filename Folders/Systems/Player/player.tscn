@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://c20du4ge4p05i" path="res://Folders/Systems/Player/player.gd" id="1_4ek6g"]
 [ext_resource type="Texture2D" uid="uid://bqulutjwvblw" path="res://Folders/Assets/icon.svg" id="2_3rm20"]
 [ext_resource type="PackedScene" uid="uid://cn2j37mshfv3s" path="res://Folders/Components/Equipment_Manager/equipment_manager.tscn" id="3_8uk81"]
+[ext_resource type="PackedScene" uid="uid://dangj2qts40g4" path="res://Folders/Systems/Weapons/sword.tscn" id="4_4ek6g"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8uk81"]
 atlas = ExtResource("2_3rm20")
@@ -22,10 +23,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gl73e"]
 size = Vector2(52, 52)
 
-[node name="Player" type="CharacterBody2D" unique_id=1761644757 node_paths=PackedStringArray("equipment_manager")]
+[node name="Player" type="CharacterBody2D" unique_id=1761644757]
 collision_layer = 2
 script = ExtResource("1_4ek6g")
-equipment_manager = NodePath("")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2030784034]
 unique_name_in_owner = true
@@ -41,4 +41,7 @@ shape = SubResource("RectangleShape2D_gl73e")
 position_smoothing_enabled = true
 position_smoothing_speed = 20.0
 
-[node name="Equipment_Manager" parent="." unique_id=493094115 instance=ExtResource("3_8uk81")]
+[node name="Equipment_Manager" parent="." unique_id=493094115 node_paths=PackedStringArray("sword_scene") instance=ExtResource("3_8uk81")]
+sword_scene = NodePath("Sword2")
+
+[node name="Sword2" parent="Equipment_Manager" unique_id=955837665 instance=ExtResource("4_4ek6g")]
