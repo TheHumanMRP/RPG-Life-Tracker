@@ -52,8 +52,8 @@ func _process(delta: float) -> void:
 		save_data.inventory_component.add_test_sword()
 
 func _ready() -> void:
-	test()
 	signal_bus.set_game_state.connect(_on_set_game_state)
+	test()
 
 func _on_set_game_state(new_game_state: All_Enums.GAME_STATES) -> void:
 	current_game_state = new_game_state

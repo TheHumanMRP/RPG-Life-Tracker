@@ -13,7 +13,7 @@ func _ready() -> void:
 	recreate_inventory_slots()
 
 	Global.signal_bus.refresh_ui.connect(recreate_inventory_slots)
-	SignalBus.hotbar_changed.connect(assaign_proper_id_to_hotbar_slots)
+	Global.signal_bus.hotbar_changed.connect(assaign_proper_id_to_hotbar_slots)
 
 func recreate_inventory_slots() -> void:
 	# Remove old slots before recreating them.
@@ -22,7 +22,7 @@ func recreate_inventory_slots() -> void:
 
 	var packed_inventory_slot: PackedScene = load("res://Folders/Systems/Inventory_System/Scenes/hotbar_slot.tscn")
 
-	var inventory_hot_bar_slots: Array[int] = InfoGetter.get_hotbar()
+	var inventory_hot_bar_slots: Array[int] = Global.info_getter.get_hotbar()
 
 	for i in range(number_of_hotbar_slots):
 		var hotbar_slot: HotbarSlot = packed_inventory_slot.instantiate()
@@ -35,7 +35,7 @@ func recreate_inventory_slots() -> void:
 	assaign_proper_id_to_hotbar_slots()
 
 func assaign_proper_id_to_hotbar_slots() -> void:
-	var hotbar_slots: Array[int] = InfoGetter.get_hotbar()
+	var hotbar_slots: Array[int] = Global.info_getter.get_hotbar()
 
 	var hotbar_children: Array[Node] = hotbar.get_children()
 
