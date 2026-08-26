@@ -78,7 +78,7 @@ func unequip_item(item_id: int) -> void:
 # ===================================================
 
 func handle_equipping_of_weapon(new_item: ItemEntry) -> void:
-	print("Equipment Manager: Singal reached till handle equipping of weapon")
+	print("\nEquipment Manager: Singal reached till handle equipping of weapon")
 
 	equipped_weapon_item_id = new_item.item_id
 	
@@ -91,11 +91,13 @@ func handle_equipping_of_weapon(new_item: ItemEntry) -> void:
 			push_error("Equipment Manager: Invalid weapon")
 
 func handle_equipping_of_sword(new_item: ItemEntry) -> void:
-	print("\nEquipment Manager: Signal reached till equpping of ")
+	print("\nEquipment Manager: Signal reached till equpping of sword")
 
 	sword_scene.setup(new_item)
 	
 	sword_scene.show()
+
+	print(sword_scene.hidden)
 
 func handle_unequipping_of_weapon(new_item: ItemEntry) -> void:
 	equipped_weapon_item_id = Constants.NO_ITEM
