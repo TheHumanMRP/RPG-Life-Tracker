@@ -18,7 +18,7 @@ func get_item_entry(item_id: int) -> ItemEntry:
 	return AllGlobalItemsManager.get_item_by_id(item_id)
 
 func equip(item_id: int) -> void:
-	print("Equipment Manager: Equip func called with item_id: ", item_id)
+	print("\nEquipment Manager: Equip func called with item_id: ", item_id)
 
 	if item_id == Constants.NO_ITEM:
 		return
@@ -72,6 +72,8 @@ func unequip_item(item_id: int) -> void:
 # ===================================================
 
 func handle_equipping_of_weapon(new_item: ItemEntry) -> void:
+	print("Equipment Manager: ")
+
 	equipped_weapon_item_id = new_item.item_id
 	
 	var item_weapon_type: All_Enums.WEAPON_TYPES = new_item.item_weapon_type
