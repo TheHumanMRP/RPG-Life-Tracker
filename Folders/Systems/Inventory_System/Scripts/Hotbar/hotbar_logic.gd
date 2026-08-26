@@ -1,4 +1,4 @@
-class_name HotBarLogic
+class_name HotbarLogic
 extends Resource
 
 # ============================================================================

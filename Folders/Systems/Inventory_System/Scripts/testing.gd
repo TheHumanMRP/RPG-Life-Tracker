@@ -2,7 +2,7 @@ class_name TestingScript
 extends Node
 
 func test() -> void:
-	var hotbar_logic_component: HotBarLogicComponent = HotBarLogicComponent.new()
+	var hotbar_logic_component: HotbarLogic = HotbarLogic.new()
 
 	Global.all_global_items_manager.add_test_sword()
 
