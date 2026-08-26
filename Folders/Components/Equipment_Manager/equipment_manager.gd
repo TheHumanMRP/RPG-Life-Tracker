@@ -47,7 +47,7 @@ func equip(item_id: int) -> void:
 			handle_equipping_of_weapon(new_item)
 			return
 
-	print("\nEquipment Manager: Equip func called with item_id: ", item_id)
+	push_warning("")
 
 func select_item(item_id: int) -> void:
 	selected_item_id = item_id
