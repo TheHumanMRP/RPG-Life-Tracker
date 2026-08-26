@@ -148,4 +148,4 @@ func equip_item() -> void:
 # ------------------------------------------------------------------------------
 
 func notify_hotbar_selected() -> void:
-	SignalBus.hotbar_item_selected.emit(slot_index)
+	Global.signal_bus.hotbar_item_selected.emit(slot_index)
