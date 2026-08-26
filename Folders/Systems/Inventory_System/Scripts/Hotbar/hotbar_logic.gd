@@ -33,10 +33,8 @@ func add_item_to_hotbar(item_id: int, slot_index: int) -> void:
 
 	hotbar_slots[slot_index] = item_id
 
-	print("AFTER ASSIGN: ", Global.info_getter.get_hotbar())
-
 	notify_hotbar_changed()
-	
+
 # ============================================================================
 # Queries
 # ============================================================================
