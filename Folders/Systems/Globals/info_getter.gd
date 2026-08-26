@@ -6,7 +6,7 @@ extends Node
 # ============================================================================
 
 func get_main_node() -> MainNode:
-	return get_tree().get_first_node_in_group("main_node")
+	return Global.main_scene
 
 # ============================================================================
 # Player

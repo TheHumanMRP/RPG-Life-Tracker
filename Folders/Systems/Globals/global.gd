@@ -10,7 +10,7 @@ extends Node
 # ============================================================================
 # Vars
 # ============================================================================
-var main_scene: Node
+var main_node: MainNode
 
 var save_data: SaveData = SaveData.new()
 
@@ -48,15 +48,12 @@ func test() -> void:
 # ============================================================================
 # LIFECYCLE
 # ============================================================================
-
-func _ready() -> void:
-	main_scene = get_tree().get_first_node_in_group()
-
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("add_test_sword"):
 		save_data.inventory_component.add_test_sword()
 
 func _ready() -> void:
+	main_node = get_tree().get_first_node_in_group("main_node")
 	signal_bus.set_game_state.connect(_on_set_game_state)
 	test()
 
