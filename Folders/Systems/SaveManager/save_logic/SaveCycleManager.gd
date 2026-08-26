@@ -1,4 +1,4 @@
-class_name SaveCycleManage
+class_name SaveCycleManager
 extends Node
 
 var save_timer: int = 60
