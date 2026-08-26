@@ -41,6 +41,7 @@ func equip(item_id: int) -> void:
 			equipped_boots_item_id = item_id
 		
 		All_Enums.ITEM_TYPES.Weapon:
+			print()
 			handle_equipping_of_weapon(new_item)
 
 func select_item(item_id: int) -> void:
