@@ -150,7 +150,7 @@ func get_all_global_items_data() -> AllGlobalItemsData:
 
 func add_test_sword() -> int:
 	var sword := SwordClass.new()
-	sword.setup(null)
+	sword.setup()
 
 	var sword_name: String = "Test Sword"
 
