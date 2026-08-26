@@ -2,6 +2,7 @@ extends Node
 
 
 @onready var signal_bus: SignalBus = SignalBus.new()
+@onready var info_getter: InfoGetter = InfoGetter.new()
 
 
 
