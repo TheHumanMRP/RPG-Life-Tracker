@@ -1,6 +1,9 @@
 # To-Do
 ---
 
+- [ ] Fix the bug where the hotbar slots aren't getting the proper item_id
+	- [ ] 
+
 - [ ] Make the sword point towards the player's direction
 
 - [ ] Impliment swapping of gear, so that when I equip a gear which is already occupied, 
