@@ -27,7 +27,7 @@ func _on_player_died() -> void:
 	show()
 
 func _on_respawn_button_pressed() -> void:
-	SignalBus.respawn_player.emit()
+	Global.signal_bus.respawn_player.emit()
 
 	print("\nDeath Menu: Respawn Button Pressed")
 
