@@ -6,6 +6,8 @@ func test() -> void:
 
 	var sword: SwordClass = SwordClass.new()
 
+	sword.setup()
+
 	AllGlobalItemsManager.add_item(sword, "NEW_SWORD", load("res://Folders/Assets/icon.svg"))
 
 	hotbar_logic_component.add_item_to_hotbar(1, 1)
