@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rv4w4"]
 size = Vector2(128, 110)
 
-[node name="Sword" type="Marker2D" unique_id=91154277 node_paths=PackedStringArray("attack_area")]
+[node name="Sword" type="Node2D" unique_id=537071447 node_paths=PackedStringArray("attack_area")]
 script = ExtResource("1_103ky")
 attack_area = NodePath("Attack_Area")
 
