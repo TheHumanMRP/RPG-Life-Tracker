@@ -28,19 +28,24 @@ func equip(item_id: int) -> void:
 	match item_type:
 		All_Enums.ITEM_TYPES.Helmet:
 			equipped_helmet_item_id = item_id
+			return
 
 		All_Enums.ITEM_TYPES.Chestplate:
 			equipped_chestplate_item_id = item_id
+			return
 
 		All_Enums.ITEM_TYPES.Leggings:
 			equipped_leggings_item_id = item_id
+			return
 
 		All_Enums.ITEM_TYPES.Boots:
 			equipped_boots_item_id = item_id
-		
+			return
+
 		All_Enums.ITEM_TYPES.Weapon:
 			print("\nEquipment Manager: Signal reached till match type, weapon")
 			handle_equipping_of_weapon(new_item)
+			return
 
 	print("\nEquipment Manager: Equip func called with item_id: ", item_id)
 
