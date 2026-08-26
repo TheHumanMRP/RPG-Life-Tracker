@@ -17,9 +17,7 @@ config/icon="uid://bqulutjwvblw"
 
 [autoload]
 
-SignalBus="*uid://dackuyp70bkog"
 Global="*uid://b0m21w7a3y3rf"
-InfoGetter="*uid://cbhg7hkcjf8py"
 AllGlobalItemsManager="*uid://ge8m2q1sbkg4"
 SaveCycleManager="*uid://h2j1arx22jnu"
 Constants="*uid://ctro1gx3ndbul"

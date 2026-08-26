@@ -1,5 +1,10 @@
 extends Node
 
+
+@onready var signal_bus: SignalBus = SignalBus.new()
+
+
+
 # ============================================================================
 # Vars
 # ============================================================================
@@ -47,7 +52,7 @@ func _process(delta: float) -> void:
 
 func _ready() -> void:
 	test()
-	SignalBus.set_game_state.connect(_on_set_game_state)
+	signal_bus.set_game_state.connect(_on_set_game_state)
 
 func _on_set_game_state(new_game_state: All_Enums.GAME_STATES) -> void:
 	current_game_state = new_game_state
