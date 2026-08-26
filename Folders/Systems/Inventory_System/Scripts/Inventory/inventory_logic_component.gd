@@ -94,7 +94,7 @@ func check_if_item_at_index_in_inventory_exists(index: int) -> bool:
 # ===================================================================
 
 func add_test_sword() -> void:
-	var new_test_sword_item_id: int = Global.All.add_test_sword()
+	var new_test_sword_item_id: int = Global.all_global_items_manager.add_test_sword()
 
 	add_item(new_test_sword_item_id)
 
@@ -103,7 +103,7 @@ func print_all_items() -> void:
 	print("\nInventory Component: Printing all items")
 
 	for item_id in get_inventory_item_ids():
-		var item: ItemEntry = AllGlobalItemsManager.get_item_by_id(item_id)
+		var item: ItemEntry = Global.all_global_items_manager.get_item_by_id(item_id)
 
 		if item != null:
 			item.print_self()
@@ -113,10 +113,10 @@ func print_all_items() -> void:
 # ===================================================================
 
 func notify_inventory_changed() -> void:
-	SignalBus.save_game.emit()
+	Global.signal_bus.save_game.emit()
 	
 	if inventory_name != Global.PLAYER_INVENTORY_NAME:
 		return
 	
 	print("\nInventory Component: Notified that the player inventory changed.")
-	SignalBus.player_inventory_changed.emit()
+	Global.signal_bus.player_inventory_changed.emit()
