@@ -3,7 +3,7 @@ extends Node
 
 @onready var signal_bus: SignalBus = SignalBus.new()
 @onready var info_getter: InfoGetter = InfoGetter.new()
-@onready var all_global_items_manageR: AllGlobalItemsManager = AllGlobalItemsManager.new()
+@onready var all_global_items_manager: AllGlobalItemsManager = AllGlobalItemsManager.new()
 @onready var constant: Constants = Constants.new()
 @onready var save_cycle_manager: SaveCycleManager = SaveCycleManager.new()
 
