@@ -22,6 +22,9 @@ func refresh_values() -> void:
 	logo = sword_item_entry.logo
 	durability = sword_item_entry.durability
 
+func appear() -> void:
+	print("\nSword Scene: ")
+
 func face_where_player_is_facing(player_looking_direction: int) -> void:
 	if player_looking_direction == 1:
 		rotation_degrees = 0
