@@ -1,7 +1,4 @@
-- [ ] Fix the bug where the sword doesn't show up when equipped through hotbar slot
-
-# Equipment Manager
----
+- [X] Fix the bug where the sword doesn't show up when equipped through hotbar slot
 
 - [ ] Handle the unequipment of gear
 	- [ ] Add 5 more slots to the hotbar
@@ -9,8 +6,6 @@
 
 		- [ ] Figure out how to travel to all that 
 
-# Task Manager
----
 - [ ] Make the `Task` class
 - [ ] Make the `TaskManager` with the following funcs:
     - [ ] `add_task`
