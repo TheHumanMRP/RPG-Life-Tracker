@@ -89,7 +89,7 @@ func handle_equipping_of_weapon(new_item: ItemEntry) -> void:
 			handle_equipping_of_sword(new_item)
 		All_Enums.WEAPON_TYPES.None:
 			push_error("Equipment Manager: Invalid weapon")
-
+ 
 func handle_equipping_of_sword(new_item: ItemEntry) -> void:
 	print("\nEquipment Manager: Signal reached till equpping of sword")
 
