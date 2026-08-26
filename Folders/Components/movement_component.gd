@@ -54,11 +54,13 @@ func get_velocity(
 	direction: int,
 	is_on_floor: bool,
 	is_on_wall: bool,
-	wall_dir: int,
+	wall_dir: float,
 	jump: bool,
 	delta: float
 ) -> Vector2:
 	var velocity := current_velocity
+
+	wall_dir = round(wall_dir)
 
 	# Apply gravity
 	if not is_on_floor:

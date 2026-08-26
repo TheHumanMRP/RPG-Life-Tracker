@@ -92,7 +92,7 @@ func _physics_process(delta: float) -> void:
 		x_direction,
 		is_on_floor(),
 		is_on_wall(),
-		int(get_wall_normal().x),
+		get_wall_normal().x,
 		jump,
 		delta
 	)
