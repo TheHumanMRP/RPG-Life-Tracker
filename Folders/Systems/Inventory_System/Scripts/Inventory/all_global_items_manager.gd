@@ -23,7 +23,7 @@ func _setup() -> void:
 # ===================================================================
 
 func sync_item_by_id_dict() -> void:
-	var data := get_all_global_items_data()
+	var data := Global.info_getter.get_all_global_items_data()
 
 	data.items_by_id_dict.clear()
 
@@ -133,7 +133,7 @@ func prepare_item_entry(new_item: BaseItem, new_name: String, new_logo: Texture2
 
 ## Returns an item using its unique ID.
 func get_item_by_id(item_id: int) -> ItemEntry:
-	var data := get_all_global_items_data()
+	var data := Global.info_getter.get_all_global_items_data()
 
 	if not data.items_by_id_dict.has(item_id):
 		push_error("All Global Items Manager: No item with item id: ", item_id)
@@ -141,8 +141,6 @@ func get_item_by_id(item_id: int) -> ItemEntry:
 
 	return data.items_by_id_dict[item_id] as ItemEntry
 
-func get_all_global_items_data() -> AllGlobalItemsData:
-	return Global.save_data.all_global_items_data
 
 # ===================================================================
 # Debug
@@ -167,7 +165,7 @@ func add_test_sword() -> int:
 func print_all_items() -> void:
 	print("\nAll Global Items Manager: Printing all items")
 
-	var data := get_all_global_items_data()
+	var data := Global.info_getter.get_all_global_items_data()
 
 	for item in data.all_global_items:
 		item.print_self()

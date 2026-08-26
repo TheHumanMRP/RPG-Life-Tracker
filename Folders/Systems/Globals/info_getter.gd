@@ -27,6 +27,8 @@ func get_inventory() -> Array[ItemEntry]:
 func check_if_item_at_index_in_inventory_exists(index: int) -> bool:
 	return Global.save_data.inventory_logic.check_if_item_at_index_in_inventory_exists(index)
 
+func get_all_global_items_data() -> AllGlobalItemsData:
+	return Global.save_data.all_global_items_data
 
 # ============================================================================
 # Hotbar
