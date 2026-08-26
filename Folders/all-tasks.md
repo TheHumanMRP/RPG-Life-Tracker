@@ -4,7 +4,7 @@
 	- [ ] Add 5 more slots to the hotbar
 		- [ ] Display all the armor and weapon there
 
-		- [ ] Figure out how to travel to all that 
+		- [ ] Figure out how to travel to all those slots
 
 - [ ] Make the `Task` class
 - [ ] Make the `TaskManager` with the following funcs:
