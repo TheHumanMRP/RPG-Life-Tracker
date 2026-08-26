@@ -13,6 +13,7 @@ var selected_item_id: int = Constants.NO_ITEM
 func _ready() -> void:
 	SignalBus.item_selected.connect(select_item)
 	SignalBus.equip_item.connect(equip)
+	
 
 func get_item_entry(item_id: int) -> ItemEntry:
 	return AllGlobalItemsManager.get_item_by_id(item_id)
