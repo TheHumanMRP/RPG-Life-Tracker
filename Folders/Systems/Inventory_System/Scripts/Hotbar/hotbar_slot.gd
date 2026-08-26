@@ -24,7 +24,7 @@ class_name HotbarSlot
 # ------------------------------------------------------------------------------
 
 func _ready() -> void:
-	SignalBus.hotbar_changed.connect(refresh)
+	Global.signal_bus.hotbar_changed.connect(refresh)
 
 	refresh()
 
@@ -67,7 +67,7 @@ func refresh_logo() -> void:
 
 
 func set_proper_selection_color_rect_opacity() -> void:
-	var selected_slot_index: int = InfoGetter.get_selected_hotbar_index()
+	var selected_slot_index: int = Global.info_getter.get_selected_hotbar_index()
 
 	if selected_slot_index != slot_index:
 		# Unselected
@@ -103,7 +103,7 @@ func check_type_of_item() -> void:
 func get_item() -> ItemEntry:
 	print("\nHotbar Slot: `get_item()` func was called. Here's the item_id: ", item_id)
 
-	return AllGlobalItemsManager.get_item_by_id(item_id)
+	return Global.all_global_items_manager.get_item_by_id(item_id)
 
 
 # ------------------------------------------------------------------------------
