@@ -34,7 +34,7 @@ func sync_item_by_id_dict() -> void:
 
 ## Calculates the next available item ID.
 func _calculate_max_id() -> void:
-	var data := get_all_global_items_data()
+	var data := Global.info_getter.get_all_global_items_data()
 
 	data.global_max_id = 0
 
@@ -52,7 +52,7 @@ func _calculate_max_id() -> void:
 func add_item(new_item: BaseItem, new_name: String, new_logo: Texture2D, new_durability: float = new_item.base_durability) -> int:
 	print("\nAll Global Items Manager: Adding a new item.")
 	
-	var data := get_all_global_items_data()
+	var data := Global.info_getter.get_all_global_items_data()
 
 	var new_item_entry: ItemEntry = prepare_item_entry(new_item, new_name, new_logo, new_durability)
 
@@ -72,7 +72,7 @@ func add_item(new_item: BaseItem, new_name: String, new_logo: Texture2D, new_dur
 func remove_item(item_id: int) -> void:
 	print("\nAll Global Items Manager: Removing item with item_id: ", item_id)
 
-	var data := get_all_global_items_data()
+	var data := Global.info_getter.get_all_global_items_data()
 
 	if not data.items_by_id_dict.has(item_id):
 		push_error("All Global Items Manager: Item not found: ", item_id)
@@ -99,7 +99,7 @@ func rename_item_in_inventory(item_id: int, new_name: String) -> void:
 func clear_inventory() -> void:
 	print("\nAll Global Items Manager: Clearing Inventory")
 	
-	var data := get_all_global_items_data()
+	var data := Global.info_getter.get_all_global_items_data()
 
 	data.all_global_items.clear()
 	data.items_by_id_dict.clear()
@@ -109,7 +109,7 @@ func clear_inventory() -> void:
 	notify_global_inventory_changed()
 
 func check_if_item_at_index_in_global_inventory_exists(index: int) -> bool:
-	var data := get_all_global_items_data()
+	var data := Global.info_getter.get_all_global_items_data()
 
 	if index < 0 or index >= data.all_global_items.size():
 		return false
