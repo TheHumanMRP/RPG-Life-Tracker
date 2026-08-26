@@ -5,6 +5,7 @@ extends Node
 @onready var info_getter: InfoGetter = InfoGetter.new()
 @onready var all_global_items_manageR: AllGlobalItemsManager = AllGlobalItemsManager.new()
 @onready var constant: Constants = Constants.new()
+@onready var save_cycle_manager: SaveCycleManager = SaveCycleManager.new()
 
 # ============================================================================
 # Vars

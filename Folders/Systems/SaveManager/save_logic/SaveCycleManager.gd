@@ -12,6 +12,8 @@ func _init() -> void:
 
 	_load_data()
 
+	save_loop()
+
 func toggle_save_next() -> void:
 	save_next = true
 
