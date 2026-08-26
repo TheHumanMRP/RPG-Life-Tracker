@@ -2,7 +2,8 @@
 ---
 
 - [ ] Fix the bug where the hotbar slots aren't getting the proper item_id
-	- [ ] 
+	- IDK the prob, but when testing, it's setting the slots properly, but after that when the system grabs it for setting the slots id, it just defaults to 
+	[
 
 - [ ] Make the sword point towards the player's direction
 
