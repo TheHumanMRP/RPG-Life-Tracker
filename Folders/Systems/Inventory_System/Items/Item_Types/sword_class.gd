@@ -3,10 +3,12 @@ extends BaseItem
 
 var damage_power: int = 10
 
-func setup(new_logo: Texture2D = null, new_base_durability: int = base_durability) -> void:
-	base_durability = new_base_durability
+func _init() -> void:
 	type = All_Enums.ITEM_TYPES.Weapon
 	weapon_type = All_Enums.WEAPON_TYPES.Sword
+
+func setup(new_base_durability: int = base_durability) -> void:
+	base_durability = new_base_durability
 
 func use(target) -> void:
 	if not target.has_method("take_damage"):
