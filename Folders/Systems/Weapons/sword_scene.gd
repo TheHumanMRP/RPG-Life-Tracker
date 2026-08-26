@@ -1,5 +1,5 @@
 class_name SwordScene
-extends Area2D
+extends Node2D
 
 var sword_item_entry: ItemEntry
 
@@ -7,7 +7,9 @@ var damage_power: int
 var logo: Texture2D
 var durability: float
 
-@onready var attack_component: AttackComponent = AttackComponent.new()
+var attack_component: AttackComponent = AttackComponent.new()
+
+@export var attack_area: 
 
 func setup(new_sword_item_entry: ItemEntry) -> void:
 	if new_sword_item_entry.item_weapon_type != All_Enums.WEAPON_TYPES.Sword:

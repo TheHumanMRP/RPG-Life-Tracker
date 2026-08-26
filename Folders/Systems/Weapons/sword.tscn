@@ -6,9 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rv4w4"]
 size = Vector2(128, 110)
 
-[node name="Sword" type="Area2D" unique_id=955837665]
-collision_layer = 8
-collision_mask = 4
+[node name="Sword" type="Node2D" unique_id=899747866]
 script = ExtResource("1_103ky")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2078143280]
@@ -16,6 +14,8 @@ position = Vector2(94, -1)
 scale = Vector2(1, 0.15625)
 texture = ExtResource("1_erkv8")
 
-[node name="Attack_Area" type="CollisionShape2D" parent="." unique_id=1848706569]
+[node name="Attack_Area" type="Area2D" parent="." unique_id=441711182]
+
+[node name="Attack_Area" type="CollisionShape2D" parent="Attack_Area" unique_id=1848706569]
 position = Vector2(94, -1)
 shape = SubResource("RectangleShape2D_rv4w4")
