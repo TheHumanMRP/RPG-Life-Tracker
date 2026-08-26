@@ -6,11 +6,13 @@ extends Node
 @onready var all_global_items_manager: AllGlobalItemsManager = AllGlobalItemsManager.new()
 @onready var constant: Constants = Constants.new()
 
+@onready var main_scene: Node = get_tree
+
 # ============================================================================
 # Vars
 # ============================================================================
 
-var save_data: SaveData
+var save_data: SaveData = SaveData.new()
 
 var current_game_state: All_Enums.GAME_STATES:
 	set(new_current_game_state):
