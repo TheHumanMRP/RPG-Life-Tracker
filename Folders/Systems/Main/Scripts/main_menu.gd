@@ -13,7 +13,7 @@ func _ready() -> void:
 	print("\nMain Menu: _ready func ran")
 
 func set_global_state() -> void:
-	SignalBus.set_game_state.emit(All_Enums.GAME_STATES.UIMenu)
+	Global.signal_bus.set_game_state.emit(All_Enums.GAME_STATES.UIMenu)
 
 func setup_labels() -> void:
 	main_menu_label.text = Constants.MAIN_MENU_LABEL_TEXT
@@ -29,7 +29,7 @@ func setup_signals() -> void:
 	print("\nMain Menu: Setup signals func ran")
 
 func _on_dungeon_button_pressed() -> void:
-	InfoGetter.get_main_node().switch_to_scene(self, Constants.PATH_TO_DUNGEON_SELECTION_MENU, true)
+	Global.info_getter.get_main_node().switch_to_scene(self, Constants.PATH_TO_DUNGEON_SELECTION_MENU, true)
 
 func _on_task_manager_button_pressed() -> void:
 	print("\nMain Menu: Task manager button pressed")

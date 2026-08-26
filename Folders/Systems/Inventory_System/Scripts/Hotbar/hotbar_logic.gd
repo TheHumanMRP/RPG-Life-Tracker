@@ -16,10 +16,10 @@ func _init() -> void:
 
 ## Resets every hotbar slot to an empty state.
 func clear_hotbar() -> void:
-	InfoGetter.get_hotbar_slots().clear()
+	Global.info_getter.get_hotbar_slots().clear()
 
-	while InfoGetter.get_hotbar_slots().size() < InfoGetter.NUMBER_OF_HOTBAR_SLOTS:
-		InfoGetter.get_hotbar_slots().append(InfoGetter.EMPTY_HOTBAR_SLOT)
+	while Global.info_getter.get_hotbar_slots().size() < Global.info_getter.NUMBER_OF_HOTBAR_SLOTS:
+		Global.info_getter.get_hotbar_slots().append(Global.info_getter.EMPTY_HOTBAR_SLOT)
 
 ## Places an item into the specified hotbar slot.
 func add_item_to_hotbar(item_id: int, slot_index: int) -> void:
@@ -27,7 +27,7 @@ func add_item_to_hotbar(item_id: int, slot_index: int) -> void:
 		push_error("HotBarLogic: Hotbar slot already occupied: ", slot_index)
 		return
 
-	InfoGetter.get_hotbar()[slot_index] = item_id
+	Global.info_getter.get_hotbar()[slot_index] = item_id
 
 	notify_hotbar_changed()
 
@@ -37,12 +37,12 @@ func add_item_to_hotbar(item_id: int, slot_index: int) -> void:
 
 ## Returns `true` if the specified hotbar slot is empty.
 func check_if_slot_empty(slot: int) -> bool:
-	return InfoGetter.get_hotbar()[slot] == Constants.NO_ITEM
+	return Global.info_getter.get_hotbar()[slot] == Constants.NO_ITEM
 
 func _on_hotbar_item_selected(slot_index: int) -> void:
 	Global.save_data.hotbar_save_data.selected_hotbar_slot_index = slot_index
 
-	var selected_item_id: int = InfoGetter.get_hotbar()[slot_index]
+	var selected_item_id: int = Global.info_getter.get_hotbar()[slot_index]
 
 	if selected_item_id != Constants.NO_ITEM:
 		Global.signal_bus.item_selected.emit(selected_item_id)
