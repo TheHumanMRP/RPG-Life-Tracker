@@ -15,7 +15,7 @@ func _ready() -> void:
 
 	you_died_label.text = "You Died!"
 
-	SignalBus.player_died.connect(_on_player_died)
+	Global.signal_bus.player_died.connect(_on_player_died)
 
 func _on_player_died() -> void:
 	print("\nDeath Menu: PLayer Died signal received")
@@ -34,7 +34,7 @@ func _on_respawn_button_pressed() -> void:
 	hide()
 
 func _on_main_menu_button_pressed() -> void:
-	InfoGetter.get_main_node().switch_to_scene(self, Constants.PATH_TO_MAIN_MENU, true)
+	Global.info_getter.get_main_node().switch_to_scene(self, Constants.PATH_TO_MAIN_MENU, true)
 
 func set_global_state() -> void:
-	SignalBus.set_game_state.emit(All_Enums.GAME_STATES.UIMenu)
+	Global.signal_bus.set_game_state.emit(All_Enums.GAME_STATES.UIMenu)
