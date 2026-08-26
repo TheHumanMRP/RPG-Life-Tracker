@@ -10,8 +10,6 @@ extends Node
 # ============================================================================
 # Vars
 # ============================================================================
-var main_node: MainNode
-
 var save_data: SaveData = SaveData.new()
 
 var current_game_state: All_Enums.GAME_STATES:
@@ -62,3 +60,8 @@ func _ready() -> void:
 
 func _on_set_game_state(new_game_state: All_Enums.GAME_STATES) -> void:
 	current_game_state = new_game_state
+
+# ============================================================================
+# Main Node
+# ============================================================================
+var main_node: MainNode
