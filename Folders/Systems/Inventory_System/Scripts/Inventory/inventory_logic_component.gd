@@ -40,7 +40,7 @@ func add_item(item_id: int) -> void:
 		push_error("InventoryComponent: Item already in this inventory: ", item_id)
 		return
 
-	if AllGlobalItemsManager.get_item_by_id(item_id) == null:
+	if Global.all_global_items_manager.get_item_by_id(item_id) == null:
 		return
 
 	get_inventory_item_ids().append(item_id)
@@ -64,7 +64,7 @@ func remove_item(item_id: int) -> void:
 
 ## Uses an item that belongs to this inventory.
 func use_item(item_id: int, target) -> void:
-	var item: ItemEntry = AllGlobalItemsManager.get_item_by_id(item_id)
+	var item: ItemEntry = Global.all_global_items_manager.get_item_by_id(item_id)
 
 	if item == null:
 		return
@@ -94,7 +94,7 @@ func check_if_item_at_index_in_inventory_exists(index: int) -> bool:
 # ===================================================================
 
 func add_test_sword() -> void:
-	var new_test_sword_item_id: int = AllGlobalItemsManager.add_test_sword()
+	var new_test_sword_item_id: int = Global.All.add_test_sword()
 
 	add_item(new_test_sword_item_id)
 
