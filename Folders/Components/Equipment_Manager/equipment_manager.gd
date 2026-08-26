@@ -14,6 +14,7 @@ func _ready() -> void:
 	SignalBus.item_selected.connect(select_item)
 	SignalBus.equip_item.connect(equip)
 	
+	sword_scene.hide()
 
 func get_item_entry(item_id: int) -> ItemEntry:
 	return AllGlobalItemsManager.get_item_by_id(item_id)
