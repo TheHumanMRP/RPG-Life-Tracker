@@ -9,7 +9,7 @@ var durability: float
 
 var attack_component: AttackComponent = AttackComponent.new()
 
-@export var attack_area: 
+@export var attack_area: Area2D
 
 func setup(new_sword_item_entry: ItemEntry) -> void:
 	if new_sword_item_entry.item_weapon_type != All_Enums.WEAPON_TYPES.Sword:
@@ -36,7 +36,7 @@ func face_where_player_is_facing(player_looking_direction: int) -> void:
 		rotation_degrees = 180
 
 func attack() -> void:
-	var nodes_in_attack_range: Array[Node2D] = self.get_overlapping_bodies()
+	var nodes_in_attack_range: Array[Node2D] = attack_area.get_overlapping_bodies()
 
 	for node in nodes_in_attack_range:
 		if not node.is_in_group("enemies"):
