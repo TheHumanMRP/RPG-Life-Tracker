@@ -1,5 +1,10 @@
 # To-Do
 ---
+
+- [ ] Make the sword point towards the player's direction
+
+- [ ] Impliment swapping of gear, so that when I equip a gear which is already occupied, 
+
 - [ ] Handle the unequipment of gear
 	- [ ] Add 5 more slots to the hotbar
 		- [ ] Display all the armor and weapon there
