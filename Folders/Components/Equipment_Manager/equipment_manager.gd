@@ -10,7 +10,7 @@ var equipped_boots_item_id: int = Constants.NO_ITEM
 var equipped_weapon_item_id: int = Constants.NO_ITEM
 var selected_item_id: int = Constants.NO_ITEM
 
-func _init() -> void:
+func _ready() -> void:
 	SignalBus.item_selected.connect(select_item)
 	SignalBus.equip_item.connect(equip)
 
