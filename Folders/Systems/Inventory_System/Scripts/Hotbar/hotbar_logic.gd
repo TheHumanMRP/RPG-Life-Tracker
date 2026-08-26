@@ -29,16 +29,14 @@ func add_item_to_hotbar(item_id: int, slot_index: int) -> void:
 		push_error("HotBarLogic: Hotbar slot already occupied: ", slot_index)
 		return
 
-	var hotbar_slots: Array[int] = 
+	var hotbar_slots: Array[int] = Global.save_data.hotbar_save_data.hotbar_slots
 
-	Global.info_getter.get_hotbar()[slot_index] = item_id
+	hotbar_slots[slot_index] = item_id
 
 	print("AFTER ASSIGN: ", Global.info_getter.get_hotbar())
 
 	notify_hotbar_changed()
-
-	print("AFTER NOTIFY: ", Global.info_getter.get_hotbar())
-
+	
 # ============================================================================
 # Queries
 # ============================================================================
