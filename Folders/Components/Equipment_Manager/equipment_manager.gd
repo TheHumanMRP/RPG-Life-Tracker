@@ -11,13 +11,13 @@ var equipped_weapon_item_id: int = Constants.NO_ITEM
 var selected_item_id: int = Constants.NO_ITEM
 
 func _ready() -> void:
-	SignalBus.item_selected.connect(select_item)
-	SignalBus.equip_item.connect(equip)
+	Global.signal_bus.item_selected.connect(select_item)
+	Global.signal_bus.equip_item.connect(equip)
 	
 	sword_scene.hide()
 
 func get_item_entry(item_id: int) -> ItemEntry:
-	return AllGlobalItemsManager.get_item_by_id(item_id)
+	return Global.all_global_items_manager.get_item_by_id(item_id)
 
 func equip(item_id: int) -> void:
 	if item_id == Constants.NO_ITEM:
