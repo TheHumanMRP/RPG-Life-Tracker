@@ -1,4 +1,4 @@
-class_name AllGlobalItemManager
+class_name AllGlobalItemsManager
 extends Node
 
 # ===================================================================
@@ -177,8 +177,8 @@ func print_all_items() -> void:
 # ===================================================================
 
 func notify_global_inventory_changed() -> void:
-	SignalBus.notify_global_inventory_changed.emit()
-	SignalBus.save_game.emit()
+	Global.signal_bus.notify_global_inventory_changed.emit()
+	Global.signal_bus.save_game.emit()
 
 	print("\nAll Global Items Manager: Notified that the inventory changed.")
 
