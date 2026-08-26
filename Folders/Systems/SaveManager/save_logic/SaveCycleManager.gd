@@ -1,4 +1,4 @@
-class_name SaveCycle
+class_name SaveCycleManage
 extends Node
 
 var save_timer: int = 60
@@ -8,7 +8,7 @@ var save_next: bool
 @onready var save_manager: SaveManager
 
 func _init() -> void:
-	SignalBus.save_game.connect(toggle_save_next)
+	Global.signal_bus.save_game.connect(toggle_save_next)
 
 	save_manager = SaveManager.new()
 

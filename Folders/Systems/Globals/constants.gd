@@ -1,4 +1,4 @@
-class_name Consts
+class_name Constants
 extends Node
 
 # Hotbar
