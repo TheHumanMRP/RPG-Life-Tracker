@@ -54,6 +54,9 @@ func _process(delta: float) -> void:
 
 func _ready() -> void:
 	main_node = get_tree().get_first_node_in_group("main_node")
+
+	print(main_node)
+
 	signal_bus.set_game_state.connect(_on_set_game_state)
 	test()
 
