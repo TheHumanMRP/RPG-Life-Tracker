@@ -6,11 +6,11 @@ extends Node
 @onready var all_global_items_manager: AllGlobalItemsManager = AllGlobalItemsManager.new()
 @onready var constant: Constants = Constants.new()
 
-@onready var main_scene: Node = get_tree
 
 # ============================================================================
 # Vars
 # ============================================================================
+var main_scene: Node
 
 var save_data: SaveData = SaveData.new()
 
@@ -48,6 +48,9 @@ func test() -> void:
 # ============================================================================
 # LIFECYCLE
 # ============================================================================
+
+func _ready() -> void:
+	main_scene = get_tree().get_first_node_in_group()
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("add_test_sword"):
