@@ -5,12 +5,10 @@ var save_timer: int = 60
 
 var save_next: bool
 
-@onready var save_manager: SaveManager
+var save_manager: SaveManager = SaveManager.new()
 
 func _init() -> void:
 	Global.signal_bus.save_game.connect(toggle_save_next)
-
-	save_manager = SaveManager.new()
 
 	_load_data()
 
