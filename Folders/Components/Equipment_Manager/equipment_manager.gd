@@ -72,7 +72,7 @@ func unequip_item(item_id: int) -> void:
 # ===================================================
 
 func handle_equipping_of_weapon(new_item: ItemEntry) -> void:
-	print("Equipment Manager: ")
+	print("Equipment Manager: Singal reached till handle equipping of weapon")
 
 	equipped_weapon_item_id = new_item.item_id
 	
