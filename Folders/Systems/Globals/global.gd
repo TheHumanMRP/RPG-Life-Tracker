@@ -32,6 +32,14 @@ func _set_game_state_settings() -> void:
 			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 # ============================================================================
+# Main Node
+# ============================================================================
+var main_node: MainNode
+
+func set_main_node() -> void:
+	main_node = get_tree().get_first_node_in_group("main_node")
+
+# ============================================================================
 # Testing
 # ============================================================================
 
@@ -51,17 +59,10 @@ func _process(delta: float) -> void:
 		save_data.inventory_component.add_test_sword()
 
 func _ready() -> void:
-	main_node = get_tree().get_first_node_in_group("main_node")
-
-	print(main_node)
-
 	signal_bus.set_game_state.connect(_on_set_game_state)
 	test()
 
+	call_deferred("set_main_node")
+
 func _on_set_game_state(new_game_state: All_Enums.GAME_STATES) -> void:
 	current_game_state = new_game_state
-
-# ============================================================================
-# Main Node
-# ============================================================================
-var main_node: MainNode
