@@ -135,11 +135,11 @@ func check_for_keyboard_selection() -> void:
 		equip_item()
 
 func equip_item() -> void:
-	var selected_slot_index: int = InfoGetter.get_selected_hotbar_index()
+	var selected_slot_index: int = Global.info_getter.get_selected_hotbar_index()
 
 	if selected_slot_index == slot_index:
 		print("\nHotbar Slot: Equipped an item with item_id:, ", item_id, " and slot index: ", slot_index)
-		SignalBus.hotbar_item_equipped.emit(slot_index)
+		Global.signal_bus.hotbar_item_equipped.emit(slot_index)
 
 		item_id = Constants.NO_ITEM
 
