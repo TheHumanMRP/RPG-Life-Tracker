@@ -6,6 +6,6 @@ func test() -> void:
 
 	Global.all_global_items_manager.add_test_sword()
 
-	hotbar_logic_component.add_item_to_hotbar(1, 1)
+	hotbar_logic_component.add_item_to_hotbar(1, 5)
 
 	print("\nTesting: Testing Done!")
