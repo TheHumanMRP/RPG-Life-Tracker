@@ -8,7 +8,7 @@ extends Resource
 func _init() -> void:
 	print("\nHotbar Logic: Init called")
 	SignalBus.hotbar_item_selected.connect(_on_hotbar_item_selected)
-	Global.signal_bus.hotbar_item_equipped.connect(_on_hotbar_item_equipped)
+	SignalBus.hotbar_item_equipped.connect(_on_hotbar_item_equipped)
 
 # ============================================================================
 # Item Management
@@ -16,10 +16,10 @@ func _init() -> void:
 
 ## Resets every hotbar slot to an empty state.
 func clear_hotbar() -> void:
-	Global.info_getter.get_hotbar_slots().clear()
+	InfoGetter.get_hotbar_slots().clear()
 
-	while Global.info_getter.get_hotbar_slots().size() < Global.info_getter.NUMBER_OF_HOTBAR_SLOTS:
-		Global.info_getter.get_hotbar_slots().append(Global.info_getter.EMPTY_HOTBAR_SLOT)
+	while InfoGetter.get_hotbar_slots().size() < InfoGetter.NUMBER_OF_HOTBAR_SLOTS:
+		Global.info_getter.get_hotbar_slots().append(Constants.EMPTY_HOTBAR_SLOT)
 
 ## Places an item into the specified hotbar slot.
 func add_item_to_hotbar(item_id: int, slot_index: int) -> void:
