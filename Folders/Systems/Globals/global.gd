@@ -49,7 +49,9 @@ func test() -> void:
 # ============================================================================
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("add_test_sword"):
-		save_data.inventory_component.add_test_sword()
+		AllGlobalItemsManager.add_test_sword()
+
+		
 
 func _ready() -> void:
 	SignalBus.set_game_state.connect(_on_set_game_state)
