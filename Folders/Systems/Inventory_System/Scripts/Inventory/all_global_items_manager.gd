@@ -71,7 +71,7 @@ func add_item(new_item: BaseItem, new_name: String, new_logo: Texture2D, new_dur
 func remove_item(item_id: int) -> void:
 	print("\nAll Global Items Manager: Removing item with item_id: ", item_id)
 
-	var data := Global.info_getter.get_all_global_items_data()
+	var data := InfoGetter.get_all_global_items_data()
 
 	if not data.items_by_id_dict.has(item_id):
 		push_error("All Global Items Manager: Item not found: ", item_id)
@@ -98,7 +98,7 @@ func rename_item_in_inventory(item_id: int, new_name: String) -> void:
 func clear_inventory() -> void:
 	print("\nAll Global Items Manager: Clearing Inventory")
 	
-	var data := Global.info_getter.get_all_global_items_data()
+	var data := InfoGetter.get_all_global_items_data()
 
 	data.all_global_items.clear()
 	data.items_by_id_dict.clear()
@@ -108,7 +108,7 @@ func clear_inventory() -> void:
 	notify_global_inventory_changed()
 
 func check_if_item_at_index_in_global_inventory_exists(index: int) -> bool:
-	var data := Global.info_getter.get_all_global_items_data()
+	var data := InfoGetter.get_all_global_items_data()
 
 	if index < 0 or index >= data.all_global_items.size():
 		return false
@@ -132,7 +132,7 @@ func prepare_item_entry(new_item: BaseItem, new_name: String, new_logo: Texture2
 
 ## Returns an item using its unique ID.
 func get_item_by_id(item_id: int) -> ItemEntry:
-	var data := Global.info_getter.get_all_global_items_data()
+	var data := InfoGetter.get_all_global_items_data()
 
 	if not data.items_by_id_dict.has(item_id):
 		push_error("All Global Items Manager: No item with item id: ", item_id)
@@ -164,7 +164,7 @@ func add_test_sword() -> int:
 func print_all_items() -> void:
 	print("\nAll Global Items Manager: Printing all items")
 
-	var data := Global.info_getter.get_all_global_items_data()
+	var data := InfoGetter.get_all_global_items_data()
 
 	for item in data.all_global_items:
 		item.print_self()
@@ -174,10 +174,10 @@ func print_all_items() -> void:
 # ===================================================================
 
 func notify_global_inventory_changed() -> void:
-	Global.signal_bus.notify_global_inventory_changed.emit()
-	Global.signal_bus.save_game.emit()
+	SignalBus.notify_global_inventory_changed.emit()
+	SignalBus.save_game.emit()
 
 	print("\nAll Global Items Manager: Notified that the inventory changed.")
 
 func save_all_global_items_data() -> void:
-	Global.signal_bus.save_game.emit()
+	SignalBus.save_game.emit()
