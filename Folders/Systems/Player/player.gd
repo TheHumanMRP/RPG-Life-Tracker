@@ -45,7 +45,7 @@ func _setup_component() -> void:
 	movement_component = MovementComponent.new()
 	inventory_logic_component = InventoryLogicComponent.new()
 
-	var player_max_health: int = Global.info_getter.get_player_max_health()
+	var player_max_health: int = InfoGetter.get_player_max_health()
 
 	health_component.setup(player_max_health, "Player")
 
@@ -116,6 +116,6 @@ func _on_damage_taken(new_health: float) -> void:
 
 ## Handles player death.
 func _on_player_died() -> void:
-	Global.signal_bus.player_died.emit()
+	SignalBus.player_died.emit()
 
 	# TO-DO: Add player death animation here 
