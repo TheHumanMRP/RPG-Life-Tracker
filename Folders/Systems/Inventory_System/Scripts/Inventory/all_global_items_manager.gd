@@ -10,9 +10,9 @@ func _init() -> void:
 	call_deferred("_setup")
 
 func connect_signals() -> void:
-	Global.signal_bus.add_item_to_global_inventory.connect(add_item)
-	Global.signal_bus.remove_item_from_global_inventory.connect(remove_item)
-	Global.signal_bus.rename_item_in_inventory.connect(rename_item_in_inventory)
+	SignalBus.add_item_to_global_inventory.connect(add_item)
+	SignalBus.remove_item_from_global_inventory.connect(remove_item)
+	SignalBus.rename_item_in_inventory.connect(rename_item_in_inventory)
 
 func _setup() -> void:
 	_calculate_max_id()
@@ -22,7 +22,7 @@ func _setup() -> void:
 # ===================================================================
 
 func sync_item_by_id_dict() -> void:
-	var data := Global.info_getter.get_all_global_items_data()
+	var data := InfoGetter.get_all_global_items_data()
 
 	data.items_by_id_dict.clear()
 
@@ -33,7 +33,7 @@ func sync_item_by_id_dict() -> void:
 
 ## Calculates the next available item ID.
 func _calculate_max_id() -> void:
-	var data := Global.info_getter.get_all_global_items_data()
+	var data := InfoGetter.get_all_global_items_data()
 
 	data.global_max_id = 0
 
@@ -51,7 +51,7 @@ func _calculate_max_id() -> void:
 func add_item(new_item: BaseItem, new_name: String, new_logo: Texture2D, new_durability: float = new_item.base_durability) -> int:
 	print("\nAll Global Items Manager: Adding a new item.")
 	
-	var data := Global.info_getter.get_all_global_items_data()
+	var data := InfoGetter.get_all_global_items_data()
 
 	var new_item_entry: ItemEntry = prepare_item_entry(new_item, new_name, new_logo, new_durability)
 
