@@ -35,7 +35,7 @@ func recreate_inventory_slots() -> void:
 	assaign_proper_id_to_hotbar_slots()
 
 func assaign_proper_id_to_hotbar_slots() -> void:
-	var hotbar_slots: Array[int] = Global.info_getter.get_hotbar()
+	var hotbar_slots: Array[int] = InfoGetter.get_hotbar()
 
 	print("\nHotbar UI: Reassigning id to hotbar slots, here's the hotbar: ", hotbar_slots)
 
