@@ -36,7 +36,7 @@ func _connect_signals() -> void:
 	health_component.died.connect(_on_player_died)
 	health_component.damage_taken.connect(_on_damage_taken)
 
-	Global.signal_bus.respawn_player.connect(respawn)
+	SignalBus.respawn_player.connect(respawn)
 
 
 ## Ensures all required components exist.
