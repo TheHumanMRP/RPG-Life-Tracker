@@ -1,12 +1,5 @@
 extends Node
 
-
-@onready var signal_bus: SignalBus = SignalBus.new()
-@onready var info_getter: InfoGetter = InfoGetter.new()
-@onready var all_global_items_manager: AllGlobalItemsManager = AllGlobalItemsManager.new()
-@onready var constant: Constants = Constants.new()
-
-
 # ============================================================================
 # Vars
 # ============================================================================
@@ -59,7 +52,7 @@ func _process(delta: float) -> void:
 		save_data.inventory_component.add_test_sword()
 
 func _ready() -> void:
-	signal_bus.set_game_state.connect(_on_set_game_state)
+	SignalBus.set_game_state.connect(_on_set_game_state)
 	test()
 
 	call_deferred("set_main_node")
