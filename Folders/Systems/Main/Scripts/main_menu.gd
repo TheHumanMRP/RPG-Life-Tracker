@@ -13,7 +13,7 @@ func _ready() -> void:
 	print("\nMain Menu: _ready func ran")
 
 func set_global_state() -> void:
-	Global.signal_bus.set_game_state.emit(All_Enums.GAME_STATES.UIMenu)
+	SignalBus.set_game_state.emit(All_Enums.GAME_STATES.UIMenu)
 
 func setup_labels() -> void:
 	main_menu_label.text = Constants.MAIN_MENU_LABEL_TEXT
