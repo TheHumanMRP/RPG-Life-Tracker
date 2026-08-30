@@ -26,7 +26,6 @@ func equip(item_id: int, slot_index: int) -> void:
 
 	if item_id == Constants.NO_ITEM:
 		SignalBus.swap_hotbar_item.emit(slot_index, Constants.NO_ITEM)
-		return Constants.NO_ITEM
 
 	var new_item: ItemEntry = get_item_entry(item_id)
 
@@ -37,24 +36,28 @@ func equip(item_id: int, slot_index: int) -> void:
 			var previous_helmet_item_id = equipped_helmet_item_id
 
 			equipped_helmet_item_id = item_id
+			SignalBus.swap_hotbar_item.emit(slot_index, Constants.NO_ITEM)
 			return previous_helmet_item_id
 
 		All_Enums.ITEM_TYPES.Chestplate:
 			var previous_chestplate_item_id = equipped_chestplate_item_id
 
 			equipped_chestplate_item_id = item_id
+			SignalBus.swap_hotbar_item.emit(slot_index, Constants.NO_ITEM)
 			return previous_chestplate_item_id
 
 		All_Enums.ITEM_TYPES.Leggings:
 			var previous_leggings_item_id = equipped_leggings_item_id
 
 			equipped_leggings_item_id = item_id
+			SignalBus.swap_hotbar_item.emit(slot_index, Constants.NO_ITEM)
 			return previous_leggings_item_id
 
 		All_Enums.ITEM_TYPES.Boots:
 			var previous_boots_item_id = equipped_boots_item_id
 
 			equipped_boots_item_id = item_id
+			SignalBus.swap_hotbar_item.emit(slot_index, Constants.NO_ITEM)
 			return previous_boots_item_id
 
 		All_Enums.ITEM_TYPES.Weapon:
@@ -62,10 +65,11 @@ func equip(item_id: int, slot_index: int) -> void:
 
 			handle_equipping_of_weapon(new_item)
 
-			return previous_weapon_item_id
+			SignalBus.swap_hotbar_item.emit(slot_index, previous_weapon_item_id)
+			return
 
 	push_warning("Equipment Manager: I don't really think the end of the equip func is supposed to be reached. Search into it.")
-	return Constants.NO_ITEM
+	SignalBus.swap_hotbar_item.emit(slot_index, Constants.NO_ITEM)
 
 func select_item(item_id: int) -> void:
 	selected_item_id = item_id
