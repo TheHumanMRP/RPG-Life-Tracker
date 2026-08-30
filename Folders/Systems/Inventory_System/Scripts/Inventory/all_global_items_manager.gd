@@ -149,11 +149,7 @@ func add_test_sword(new_test_sword_name: String = "Test Sword", new_test_sword_l
 	var sword := SwordClass.new()
 	sword.setup()
 
-	var sword_name: String = new_test_sword_name
-
-	var sword_texture: Texture2D = new_test_sword_logo
-
-	var new_test_sword_item_id: int = add_item(sword, sword_name, sword_texture)
+	var new_test_sword_item_id: int = add_item(sword, new_test_sword_name, new_test_sword_logo)
 
 	print_all_items()
 
