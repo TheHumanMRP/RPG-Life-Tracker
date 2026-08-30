@@ -56,6 +56,7 @@ func _setup_component() -> void:
 	
 	inventory_logic_component.setup(Constants.PLAYER_INVENTORY_NAME)
 
+func _ready() -> void:
 	equipment_manager.setup(self)
 
 func _process(delta: float) -> void:
