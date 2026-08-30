@@ -26,7 +26,6 @@ func recreate_inventory_slots() -> void:
 
 	for i in range(number_of_hotbar_slots):
 		var hotbar_slot: HotbarSlot = packed_inventory_slot.instantiate()
-		hotbar_slot.item_id = inventory_hot_bar_slots[i]
 
 		hotbar_slot.slot_index = i
 

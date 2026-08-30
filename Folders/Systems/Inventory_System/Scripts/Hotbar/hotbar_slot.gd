@@ -100,7 +100,7 @@ func check_type_of_item() -> void:
 # ------------------------------------------------------------------------------
 
 func get_item() -> ItemEntry:
-	return AllGlobalItemsManager.get_item_by_id(item_id)
+	return AllGlobalItemsManager.get_item_by_id(InfoGetter.get_hotbar()[slot_index])
 
 
 # ------------------------------------------------------------------------------
@@ -135,7 +135,7 @@ func equip_item() -> void:
 	var selected_slot_index: int = InfoGetter.get_selected_hotbar_index()
 
 	if selected_slot_index == slot_index:
-		print("\nHotbar Slot: Equipped an item with item_id:, ", item_id, " and slot index: ", slot_index)
+		print("\nHotbar Slot: Equipped an item with item_id:, ", InfoGetter.get_hotbar()[slot_index], " and slot index: ", slot_index)
 		SignalBus.hotbar_item_equipped.emit(slot_index)
 
 # ------------------------------------------------------------------------------
