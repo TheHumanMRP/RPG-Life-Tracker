@@ -9,9 +9,7 @@ func _init() -> void:
 	print("\nHotbar Logic: Init called")
 	SignalBus.hotbar_item_selected.connect(_on_hotbar_item_selected)
 	SignalBus.hotbar_item_equipped.connect(_on_hotbar_item_equipped)
-	
-	# It has basically the same functionality
-	SignalBus.swap_hotbar_item.connect(add_item_to_hotbar)
+	SignalBus.swap_hotbar_item.connect(_on_swap_hotbar_item)
 
 # ============================================================================
 # Item Management
@@ -35,7 +33,8 @@ func add_item_to_hotbar(item_id: int, slot_index: int) -> void:
 	InfoGetter.get_hotbar()[slot_index] = item_id
 
 	notify_hotbar_changed()
-func add_item_to_hotbar(item_id: int, slot_index: int) -> void:
+
+func _on_swap_hotbar_item(slot_index: int, item_id: int) -> void:
 	print("\nHotbar Logic: Add item func called with item id and slot index: ", item_id, " : ", slot_index)
 
 	if not check_if_slot_empty(slot_index):
@@ -45,7 +44,6 @@ func add_item_to_hotbar(item_id: int, slot_index: int) -> void:
 	InfoGetter.get_hotbar()[slot_index] = item_id
 
 	notify_hotbar_changed()
-
 
 
 # ============================================================================
