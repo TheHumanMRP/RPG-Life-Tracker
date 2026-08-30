@@ -36,29 +36,29 @@ func equip(item_id: int, slot_index: int) -> void:
 			var previous_helmet_item_id = equipped_helmet_item_id
 
 			equipped_helmet_item_id = item_id
-			SignalBus.swap_hotbar_item.emit(slot_index, Constants.NO_ITEM)
-			return previous_helmet_item_id
+			SignalBus.swap_hotbar_item.emit(slot_index, previous_helmet_item_id)
+			return
 
 		All_Enums.ITEM_TYPES.Chestplate:
 			var previous_chestplate_item_id = equipped_chestplate_item_id
 
 			equipped_chestplate_item_id = item_id
-			SignalBus.swap_hotbar_item.emit(slot_index, Constants.NO_ITEM)
-			return previous_chestplate_item_id
+			SignalBus.swap_hotbar_item.emit(slot_index, previous_chestplate_item_id)
+			return
 
 		All_Enums.ITEM_TYPES.Leggings:
 			var previous_leggings_item_id = equipped_leggings_item_id
 
 			equipped_leggings_item_id = item_id
-			SignalBus.swap_hotbar_item.emit(slot_index, Constants.NO_ITEM)
-			return previous_leggings_item_id
+			SignalBus.swap_hotbar_item.emit(slot_index, previous_leggings_item_id)
+			return
 
 		All_Enums.ITEM_TYPES.Boots:
 			var previous_boots_item_id = equipped_boots_item_id
 
 			equipped_boots_item_id = item_id
-			SignalBus.swap_hotbar_item.emit(slot_index, Constants.NO_ITEM)
-			return previous_boots_item_id
+			SignalBus.swap_hotbar_item.emit(slot_index, previous_boots_item_id)
+			return
 
 		All_Enums.ITEM_TYPES.Weapon:
 			var previous_weapon_item_id: int = equipped_weapon_item_id
