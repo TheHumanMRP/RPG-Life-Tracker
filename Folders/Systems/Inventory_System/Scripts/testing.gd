@@ -10,5 +10,6 @@ func test() -> void:
 
 	hotbar_logic_component.add_item_to_hotbar(test_sword_item_id, 5)
 
+	hotbar_logic_component.add_item_to_hotbar(second_test_sword_item_id, 2)
 	
 	print("\nTesting: Testing Done!")

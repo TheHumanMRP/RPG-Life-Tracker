@@ -3,6 +3,8 @@
 
 - [ ] Impliment swapping of gear, so that when I equip a gear which is already occupied, it swaps instead of disgarding
 
+- [ ] Make it so that it checks if none of the hotbar slots have the item to put in a slot, cause 
+
 - [ ] Handle the unequipment of gear
 	- [ ] Add 5 more slots to the hotbar
 		- [ ] Display all the armor and weapon there
