@@ -59,7 +59,7 @@ func _on_hotbar_item_selected(slot_index: int) -> void:
 func _on_hotbar_item_equipped(slot_index: int) -> void:
 	var item_id: int = Global.save_data.hotbar_save_data.hotbar_slots[slot_index]
 	
-	SignalBus.equip_item.emit(item_id)
+	SignalBus.equip_item.emit(item_id, slot_index)
 
 	Global.save_data.hotbar_save_data.hotbar_slots[slot_index] = Constants.NO_ITEM
 
