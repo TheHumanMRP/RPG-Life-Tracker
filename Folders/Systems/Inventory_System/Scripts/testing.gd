@@ -4,8 +4,8 @@ extends Node
 func test() -> void:
 	var hotbar_logic_component: HotbarLogic = HotbarLogic.new()
 
-	AllGlobalItemsManager.add_test_sword()
+	var test_sword_item_id: int = AllGlobalItemsManager.add_test_sword()
 
-	hotbar_logic_component.add_item_to_hotbar(1, 5)
+	hotbar_logic_component.add_item_to_hotbar(test_sword_item_id, 5)
 
 	print("\nTesting: Testing Done!")
