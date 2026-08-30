@@ -56,10 +56,11 @@ func equip(item_id: int) -> int:
 
 		All_Enums.ITEM_TYPES.Weapon:
 			print("\nEquipment Manager: Signal reached till match type, weapon")
-			return handle_equipping_of_weapon(new_item)
+			return equipped_weapon_item_id
 
 	push_warning("Equipment Manager: I don't really think the end of the equip func is supposed to be reached. Search into it.")
 	return Constants.NO_ITEM
+
 func select_item(item_id: int) -> void:
 	selected_item_id = item_id
 
