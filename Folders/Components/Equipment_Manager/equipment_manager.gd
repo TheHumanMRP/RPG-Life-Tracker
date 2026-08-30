@@ -22,8 +22,6 @@ func get_item_entry(item_id: int) -> ItemEntry:
 	return AllGlobalItemsManager.get_item_by_id(item_id)
 
 func equip(item_id: int, slot_index: int) -> void:
-	print_stack()
-
 	if item_id == Constants.NO_ITEM:
 		SignalBus.swap_hotbar_item.emit(slot_index, Constants.NO_ITEM)
 		return
