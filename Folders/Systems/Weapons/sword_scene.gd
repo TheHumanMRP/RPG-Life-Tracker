@@ -30,10 +30,7 @@ func appear() -> void:
 	print("\nSword Scene: Appear func called, here's the visibility: ", self.visible)
 
 func face_where_player_is_facing(player_facing_direction: int) -> void:
-	if player_facing_direction == 1:
-		rotation_degrees = 0
-	elif player_facing_direction == -1:
-		rotation_degrees = 180
+	scale.x = player_facing_direction
 
 func attack() -> void:
 	var nodes_in_attack_range: Array[Node2D] = attack_area.get_overlapping_bodies()
