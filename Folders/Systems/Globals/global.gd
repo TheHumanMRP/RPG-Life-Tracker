@@ -51,8 +51,6 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("add_test_sword"):
 		AllGlobalItemsManager.add_test_sword()
 
-		var hotbar_logic: HotbarLogic = HotbarLogic.new()
-
 		hotbar_logic.add_item_to_hotbar(1, 1)
 
 func _ready() -> void:
