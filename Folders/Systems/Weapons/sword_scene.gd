@@ -4,7 +4,7 @@ extends Node2D
 var sword_item_entry: ItemEntry
 
 var damage_power: int
-var logo: Texture2D
+var display_texture: Texture2D
 var durability: float
 
 var attack_component: AttackComponent = AttackComponent.new()
@@ -23,6 +23,9 @@ func refresh_values() -> void:
 	damage_power = sword_item_entry.item.damage_power
 	logo = sword_item_entry.logo
 	durability = sword_item_entry.durability
+
+func update_sword_texture() -> void:
+	
 
 func appear() -> void:
 	self.show()
