@@ -9,6 +9,9 @@ func _init() -> void:
 	print("\nHotbar Logic: Init called")
 	SignalBus.hotbar_item_selected.connect(_on_hotbar_item_selected)
 	SignalBus.hotbar_item_equipped.connect(_on_hotbar_item_equipped)
+	
+	# It has basically the same functionality
+	SignalBus.swap_hotbar_item.connect(add_item_to_hotbar)
 
 # ============================================================================
 # Item Management
