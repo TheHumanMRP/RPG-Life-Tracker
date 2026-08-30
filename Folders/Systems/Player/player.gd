@@ -89,6 +89,8 @@ func _physics_process(delta: float) -> void:
 
 	var x_direction = _get_axis()
 
+	_update_facing_direction(x_direction)
+
 	var jump := Input.is_action_just_pressed("jump")
 
 	velocity = movement_component.get_velocity(
@@ -102,6 +104,14 @@ func _physics_process(delta: float) -> void:
 	)
 
 	move_and_slide()
+
+func _update_facing_direction(direction: int) -> void:
+	if direction == 0:
+		return
+
+	if direction != facing_direction:
+		facing_direction = direction
+		facing_direction_changed.emit(facing_direction)
 
 # --------------------------------------------------------------------
 # Health
