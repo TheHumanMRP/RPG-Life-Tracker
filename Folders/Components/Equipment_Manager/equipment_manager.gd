@@ -22,6 +22,8 @@ func get_item_entry(item_id: int) -> ItemEntry:
 	return AllGlobalItemsManager.get_item_by_id(item_id)
 
 func equip(item_id: int, slot_index: int) -> void:
+	print("\nEquipment Manager: Equip func called with item id: ", item_id)
+
 	if item_id == Constants.NO_ITEM:
 		SignalBus.swap_hotbar_item.emit(slot_index, Constants.NO_ITEM)
 		return
@@ -99,8 +101,6 @@ func unequip_item(item_id: int) -> void:
 # ===================================================
 
 func handle_equipping_of_weapon(new_item: ItemEntry) -> void:
-	print("\nEquipment Manager: Singal reached till handle equipping of weapon")
-
 	equipped_weapon_item_id = new_item.item_id
 	
 	var item_weapon_type: All_Enums.WEAPON_TYPES = new_item.item_weapon_type
@@ -112,8 +112,6 @@ func handle_equipping_of_weapon(new_item: ItemEntry) -> void:
 			push_error("Equipment Manager: Invalid weapon")
  
 func handle_equipping_of_sword(new_item: ItemEntry) -> void:
-	print("\nEquipment Manager: Signal reached till equpping of sword")
-
 	sword_scene.setup(new_item)
 	
 	sword_scene.appear()
