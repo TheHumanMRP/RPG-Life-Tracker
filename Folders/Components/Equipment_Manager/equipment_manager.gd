@@ -17,7 +17,7 @@ func _ready() -> void:
 	sword_scene.hide()
 
 func setup(player: Player) -> void:
-	player.facing_direction_changed.connect()
+	player.facing_direction_changed.connect(update_sword_direction)
 
 func get_item_entry(item_id: int) -> ItemEntry:
 	return AllGlobalItemsManager.get_item_by_id(item_id)
@@ -119,4 +119,5 @@ func handle_unequipping_of_sword() -> void:
 # ===================================================
 
 func update_sword_direction(player_facing_direction: int) -> void:
-	pass
+	if sword_scene.visible:
+		sword_scene.face_where_player_is_facing(player_facing_direction)
