@@ -26,6 +26,7 @@ func equip(item_id: int, slot_index: int) -> void:
 
 	if item_id == Constants.NO_ITEM:
 		SignalBus.swap_hotbar_item.emit(slot_index, Constants.NO_ITEM)
+		return
 
 	var new_item: ItemEntry = get_item_entry(item_id)
 
