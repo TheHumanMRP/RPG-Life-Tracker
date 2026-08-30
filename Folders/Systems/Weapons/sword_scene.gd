@@ -29,10 +29,10 @@ func appear() -> void:
 
 	print("\nSword Scene: Appear func called, here's the visibility: ", self.visible)
 
-func face_where_player_is_facing(player_looking_direction: int) -> void:
-	if player_looking_direction == 1:
+func face_where_player_is_facing(player_facing_direction: int) -> void:
+	if player_facing_direction == 1:
 		rotation_degrees = 0
-	elif player_looking_direction == -1:
+	elif player_facing_direction == -1:
 		rotation_degrees = 180
 
 func attack() -> void:

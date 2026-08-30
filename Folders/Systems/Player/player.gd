@@ -13,7 +13,7 @@ var health_component: HealthComponent
 var movement_component: MovementComponent
 var inventory_logic_component: InventoryLogicComponent
 
-var looking_direction: int
+var facing_direction: int
 
 # --------------------------------------------------------------------
 # Exported vars
