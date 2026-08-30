@@ -7,7 +7,6 @@ class_name HotbarSlot
 # ------------------------------------------------------------------------------
 
 @export var accepted_item_type: All_Enums.ITEM_TYPES = All_Enums.ITEM_TYPES.Item
-@export var item_id: int
 @export var slot_index: int
 
 
@@ -52,7 +51,7 @@ func refresh() -> void:
 func refresh_logo() -> void:
 	display_logo.texture = null
 
-	if item_id == Constants.NO_ITEM:
+	if InfoGetter.get_hotbar()[slot_index] == Constants.NO_ITEM:
 		return
 
 	var item: ItemEntry = get_item()
@@ -82,7 +81,7 @@ func set_proper_selection_color_rect_opacity() -> void:
 # Item Validation
 # ------------------------------------------------------------------------------
 func check_type_of_item() -> void:
-	if item_id == Constants.NO_ITEM:
+	if InfoGetter.get_hotbar()[slot_index] == Constants.NO_ITEM:
 		return
 
 	if accepted_item_type == All_Enums.ITEM_TYPES.Item:
