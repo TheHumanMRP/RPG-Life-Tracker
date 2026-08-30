@@ -22,6 +22,8 @@ func get_item_entry(item_id: int) -> ItemEntry:
 	return AllGlobalItemsManager.get_item_by_id(item_id)
 
 func equip(item_id: int) -> int:
+	print_stack()
+
 	if item_id == Constants.NO_ITEM:
 		return Constants.NO_ITEM
 
