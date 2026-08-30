@@ -63,8 +63,6 @@ func _on_hotbar_item_equipped(slot_index: int) -> void:
 	
 	SignalBus.equip_item.emit(item_id, slot_index)
 
-	Global.save_data.hotbar_save_data.hotbar_slots[slot_index] = Constants.NO_ITEM
-
 	notify_hotbar_changed()
 	
 	
