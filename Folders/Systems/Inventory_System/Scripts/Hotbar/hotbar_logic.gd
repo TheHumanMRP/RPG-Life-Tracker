@@ -59,7 +59,7 @@ func _on_hotbar_item_selected(slot_index: int) -> void:
 	notify_hotbar_changed()
 
 func _on_hotbar_item_equipped(slot_index: int) -> void:
-	var item_id: int = Global.save_data.hotbar_save_data.hotbar_slots[slot_index]
+	var item_id: int = InfoGetter.get_hotbar()[slot_index]
 	
 	SignalBus.equip_item.emit(item_id, slot_index)
 
