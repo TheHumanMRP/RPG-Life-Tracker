@@ -1,8 +1,7 @@
 # To-Do
 ---
-- [ ] Check if rotation sword 180 degrees makes it upside down, if yes, fix it
 
-- [ ] Impliment swapping of gear, so that when I equip a gear which is already occupied, 
+- [ ] Impliment swapping of gear, so that when I equip a gear which is already occupied, it swaps instead of disgarding
 
 - [ ] Handle the unequipment of gear
 	- [ ] Add 5 more slots to the hotbar
@@ -22,6 +21,8 @@
 
 # Completed Tasks
 ---
+
+- [X] Check if rotation sword 180 degrees makes it upside down, if yes, fix it
 
 - [X] Make the sword point towards the player's direction
 
