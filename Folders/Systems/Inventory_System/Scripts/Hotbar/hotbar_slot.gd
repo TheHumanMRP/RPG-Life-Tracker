@@ -60,7 +60,7 @@ func refresh_logo() -> void:
 	if not item.logo:
 		return
 
-	print("\nHotbar Slot [", )
+	print("\nHotbar Slot [", slot_index, "]: Updating logo")
 
 	display_logo.texture = item.logo
 
