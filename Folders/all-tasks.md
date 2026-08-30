@@ -1,9 +1,6 @@
 # To-Do
 ---
-
-- [ ] Make the sword point towards the player's direction
- 
- - [ ] Check if rotation sword 180 degrees makes it upside down, if yes, fix it
+- [ ] Check if rotation sword 180 degrees makes it upside down, if yes, fix it
 
 - [ ] Impliment swapping of gear, so that when I equip a gear which is already occupied, 
 
@@ -25,6 +22,8 @@
 
 # Completed Tasks
 ---
+
+- [X] Make the sword point towards the player's direction
 
 - [X] Fix the bug where the hotbar slots aren't getting the proper item_id
 	- LOL, there was no bug, it was just trash testing code
