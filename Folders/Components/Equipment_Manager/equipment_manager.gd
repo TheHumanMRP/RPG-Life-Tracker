@@ -21,7 +21,7 @@ func setup(player: Player) -> void:
 func get_item_entry(item_id: int) -> ItemEntry:
 	return AllGlobalItemsManager.get_item_by_id(item_id)
 
-func equip(item_id: int) -> void:
+func equip(item_id: int) -> int:
 	if item_id == Constants.NO_ITEM:
 		return
 
@@ -31,6 +31,8 @@ func equip(item_id: int) -> void:
 
 	match item_type:
 		All_Enums.ITEM_TYPES.Helmet:
+			var previo
+
 			equipped_helmet_item_id = item_id
 			return
 
