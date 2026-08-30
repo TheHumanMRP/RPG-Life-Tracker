@@ -6,7 +6,6 @@ class_name HotbarSlot
 # Exports
 # ------------------------------------------------------------------------------
 
-@export var accepted_item_type: All_Enums.ITEM_TYPES = All_Enums.ITEM_TYPES.Item
 @export var slot_index: int
 
 
@@ -41,7 +40,6 @@ func _gui_input(event: InputEvent) -> void:
 # ------------------------------------------------------------------------------
 
 func refresh() -> void:
-	check_type_of_item()
 	refresh_logo()
 	set_proper_selection_color_rect_opacity()
 
@@ -62,6 +60,8 @@ func refresh_logo() -> void:
 	if not item.logo:
 		return
 
+	print("\nHotbar Slot [", )
+
 	display_logo.texture = item.logo
 
 
@@ -75,24 +75,6 @@ func set_proper_selection_color_rect_opacity() -> void:
 
 	# Selected
 	selection_color_fade.color.a = Constants.SELECTED_HOTBAR_SLOT_OPACITY
-
-
-# ------------------------------------------------------------------------------
-# Item Validation
-# ------------------------------------------------------------------------------
-func check_type_of_item() -> void:
-	if InfoGetter.get_hotbar()[slot_index] == Constants.NO_ITEM:
-		return
-
-	if accepted_item_type == All_Enums.ITEM_TYPES.Item:
-		return
-
-	var item: ItemEntry = get_item()
-
-	if item.item_type == accepted_item_type:
-		return
-
-	push_error("Inventory Slot: Invalid item type")
 
 
 # ------------------------------------------------------------------------------
