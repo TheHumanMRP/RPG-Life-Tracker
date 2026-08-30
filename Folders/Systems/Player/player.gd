@@ -1,6 +1,9 @@
+class_name Player
 extends CharacterBody2D
 
 ## Player character controller handling movement, health, and respawning.
+
+signal facing_direction_changed(new_direction: int)
 
 # --------------------------------------------------------------------
 # Vars
@@ -11,6 +14,7 @@ var movement_component: MovementComponent
 var inventory_logic_component: InventoryLogicComponent
 
 var looking_direction: int
+
 # --------------------------------------------------------------------
 # Exported vars
 # --------------------------------------------------------------------
