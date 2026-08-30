@@ -139,8 +139,6 @@ func equip_item() -> void:
 		print("\nHotbar Slot: Equipped an item with item_id:, ", item_id, " and slot index: ", slot_index)
 		SignalBus.hotbar_item_equipped.emit(slot_index)
 
-		item_id = Constants.NO_ITEM
-
 # ------------------------------------------------------------------------------
 # Selection
 # ------------------------------------------------------------------------------
