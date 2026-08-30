@@ -57,7 +57,8 @@ func _process(delta: float) -> void:
 
 func _ready() -> void:
 	SignalBus.set_game_state.connect(_on_set_game_state)
-	test()
+
+	call_deferred("test")
 
 	call_deferred("set_main_node")
 
