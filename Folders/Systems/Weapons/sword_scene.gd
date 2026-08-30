@@ -22,11 +22,10 @@ func setup(new_sword_item_entry: ItemEntry) -> void:
 
 func refresh_values() -> void:
 	damage_power = sword_item_entry.item.damage_power
-	logo = sword_item_entry.logo
 	durability = sword_item_entry.durability
 
 func update_sword_texture() -> void:
-	display_texture.
+	display_texture_sprite_2d.texture = display_texture
 
 func appear() -> void:
 	self.show()

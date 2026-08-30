@@ -145,7 +145,7 @@ func get_item_by_id(item_id: int) -> ItemEntry:
 # Debug
 # ===================================================================
 
-func add_test_sword() -> int:
+func add_test_sword(custom_name: String = "Test Sword") -> int:
 	var sword := SwordClass.new()
 	sword.setup()
 

@@ -6,11 +6,12 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rv4w4"]
 size = Vector2(128, 110)
 
-[node name="Sword" type="Node2D" unique_id=537071447 node_paths=PackedStringArray("attack_area")]
+[node name="Sword" type="Node2D" unique_id=537071447 node_paths=PackedStringArray("attack_area", "display_texture_sprite_2d")]
 script = ExtResource("1_103ky")
 attack_area = NodePath("Attack_Area")
+display_texture_sprite_2d = NodePath("Diaplay_Texture")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2078143280]
+[node name="Diaplay_Texture" type="Sprite2D" parent="." unique_id=2078143280]
 position = Vector2(94, -1)
 scale = Vector2(1, 0.15625)
 texture = ExtResource("1_erkv8")
