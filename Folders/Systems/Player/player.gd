@@ -45,14 +45,15 @@ func _connect_signals() -> void:
 
 ## Ensures all required components exist.
 func _setup_component() -> void:
+	facing_direction = 1
+
 	health_component = HealthComponent.new()
 	movement_component = MovementComponent.new()
 	inventory_logic_component = InventoryLogicComponent.new()
 
 	var player_max_health: int = InfoGetter.get_player_max_health()
-
 	health_component.setup(player_max_health, "Player")
-
+	
 	inventory_logic_component.setup(Constants.PLAYER_INVENTORY_NAME)
 
 func _process(delta: float) -> void:
