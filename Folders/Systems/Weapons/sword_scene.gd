@@ -10,6 +10,7 @@ var durability: float
 var attack_component: AttackComponent = AttackComponent.new()
 
 @export var attack_area: Area2D
+@export var display_texture_sprite_2d: Sprite2D
 
 func setup(new_sword_item_entry: ItemEntry) -> void:
 	if new_sword_item_entry.item_weapon_type != All_Enums.WEAPON_TYPES.Sword:
@@ -25,7 +26,7 @@ func refresh_values() -> void:
 	durability = sword_item_entry.durability
 
 func update_sword_texture() -> void:
-	
+	display_texture.
 
 func appear() -> void:
 	self.show()
