@@ -10,14 +10,13 @@ var equipped_boots_item_id: int = Constants.NO_ITEM
 var equipped_weapon_item_id: int = Constants.NO_ITEM
 var selected_item_id: int = Constants.NO_ITEM
 
-func _ready() -> void:
+func setup(player: Player) -> void:
+	player.facing_direction_changed.connect(update_sword_direction)
+
 	SignalBus.item_selected.connect(select_item)
 	SignalBus.equip_item.connect(equip)
 	
 	sword_scene.hide()
-
-func setup(player: Player) -> void:
-	player.facing_direction_changed.connect(update_sword_direction)
 
 func get_item_entry(item_id: int) -> ItemEntry:
 	return AllGlobalItemsManager.get_item_by_id(item_id)
