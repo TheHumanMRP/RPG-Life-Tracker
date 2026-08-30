@@ -2,6 +2,8 @@
 ---
 
 - [ ] Make the sword point towards the player's direction
+ 
+ - [ ] Check if rotation sword 180 degrees makes it upside down, if yes, fix it
 
 - [ ] Impliment swapping of gear, so that when I equip a gear which is already occupied, 
 
