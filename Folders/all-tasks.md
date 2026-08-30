@@ -1,15 +1,6 @@
 # To-Do
 ---
 
-- [X] Fix the bug where the hotbar slots aren't getting the proper item_id
-	- LOL, there was no bug, it was just trash testing code
-
-	- IDK the prob, but when testing, it's setting the slots properly, but after that when the system grabs it for setting the slots id, it just defaults to the default -1 list
-	
-	- The bug is that the hotbar is not updating, the item is there, but the hotbar is not updating properly
-
-	- [X] Try putting the item in diff slots and testing like that
-
 - [ ] Make the sword point towards the player's direction
 
 - [ ] Impliment swapping of gear, so that when I equip a gear which is already occupied, 
@@ -32,6 +23,15 @@
 
 # Completed Tasks
 ---
+
+- [X] Fix the bug where the hotbar slots aren't getting the proper item_id
+	- LOL, there was no bug, it was just trash testing code
+
+	- IDK the prob, but when testing, it's setting the slots properly, but after that when the system grabs it for setting the slots id, it just defaults to the default -1 list
+	
+	- The bug is that the hotbar is not updating, the item is there, but the hotbar is not updating properly
+
+	- [X] Try putting the item in diff slots and testing like that
 
 - [X] Fix the bug where the sword doesn't show up when equipped through hotbar slot
 
