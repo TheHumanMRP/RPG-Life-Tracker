@@ -145,13 +145,13 @@ func get_item_by_id(item_id: int) -> ItemEntry:
 # Debug
 # ===================================================================
 
-func add_test_sword(custom_name: String = "Test Sword") -> int:
+func add_test_sword(new_test_sword_name: String = "Test Sword", new_test_sword_logo: Texture2D = load("res://Folders/Assets/icon.svg")) -> int:
 	var sword := SwordClass.new()
 	sword.setup()
 
-	var sword_name: String = "Test Sword"
+	var sword_name: String = new_test_sword_name
 
-	var sword_texture: Texture2D = load("res://Folders/Assets/icon.svg")
+	var sword_texture: Texture2D = new_test_sword_logo
 
 	var new_test_sword_item_id: int = add_item(sword, sword_name, sword_texture)
 
