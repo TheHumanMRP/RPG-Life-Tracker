@@ -5,9 +5,15 @@ extends Resource
 @export var task_status: All_Enums.TASK_STATUS
 @export var task_index: int
 
-
 func setup(new_task_name: String) -> void:
+	set_task_name(new_task_name)
+
+func set_task_name(new_task_name: String) -> void:
 	task_name = new_task_name
+
+# ===================================================
+# TASK STATUS
+# ===================================================
 
 func mark_task_as_completed() -> void:
 	task_status = All_Enums.TASK_STATUS.Completed
