@@ -23,3 +23,10 @@ enum WEAPON_TYPES {
 	None,
 	
 }
+
+enum TASK_STATUS {
+	Pending,
+	Working,
+	Completed,
+
+}
