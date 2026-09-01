@@ -3,23 +3,11 @@
 # To-Do
 ---
 
+- [[Bugs]]
 - [[Task-Manager]]
 - [[Hotbar]]
 - [[Equipment]]
 - [[Overall]]
-
-
-
-
-- [ ] Handle the unequipment of gear
-	- [ ] Add 5 more slots to the hotbar
-		- [ ] Display all the armor and weapon there
-
-		- [ ] Figure out how to travel to all those slots
-
-- [ ] Add transitions when changing scenes
-- [ ] Start adding some pixel art
-
 
 # Completed Tasks
 ---
