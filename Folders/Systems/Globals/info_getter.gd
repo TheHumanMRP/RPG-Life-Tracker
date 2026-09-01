@@ -33,3 +33,10 @@ func get_hotbar() -> Array[int]:
 # Returns the currently selected hotbar slot index.
 func get_selected_hotbar_index() -> int:
 	return Global.save_data.hotbar_save_data.selected_hotbar_slot_index
+
+# ============================================================================
+# Task Manager
+# ============================================================================
+
+func get_all_tasks() -> Array[Task]:
+	return Global.save_data.
