@@ -1,6 +1,12 @@
 # To-Do
 ---
 
+- [ ] Make the `Task` class
+- [ ] Make the `TaskManager` with the following funcs:
+    - [ ] `add_task`
+    - [ ] `remove_task`
+    - [ ] `rename_task`
+
 - [ ] Fix the loop because of which there are hundreds of statement being printed every single time I equip an item 
 
 - [ ] Impliment swapping of gear, so that when I equip a gear which is already occupied, it swaps instead of disgarding
@@ -12,12 +18,6 @@
 		- [ ] Display all the armor and weapon there
 
 		- [ ] Figure out how to travel to all those slots
-
-- [ ] Make the `Task` class
-- [ ] Make the `TaskManager` with the following funcs:
-    - [ ] `add_task`
-    - [ ] `remove_task`
-    - [ ] `rename_task`
 
 - [ ] Add transitions when changing scenes
 - [ ] Start adding some pixel art
