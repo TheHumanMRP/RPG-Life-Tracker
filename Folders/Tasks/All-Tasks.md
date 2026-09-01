@@ -6,13 +6,10 @@
 - [[Task-Manager]]
 - [[Hotbar]]
 - [[Equipment]]
-- [[]]
+- [[Overall]]
 
-- [ ] Fix the loop because of which there are hundreds of statement being printed every single time I equip an item 
 
-- [ ] Impliment swapping of gear, so that when I equip a gear which is already occupied, it swaps instead of disgarding
 
-- [ ] Make it so that it checks if none of the hotbar slots have the item to put in a slot, cause that will cause duplication
 
 - [ ] Handle the unequipment of gear
 	- [ ] Add 5 more slots to the hotbar
