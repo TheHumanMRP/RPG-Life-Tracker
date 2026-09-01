@@ -1,7 +1,8 @@
 class_name TaskManager
 extends RefCounted
 
-
+func get_all_tasks() -> Array[Task]:
+	return InfoGetter.get_all_tasks()
 
 func add_item(task_name: String) -> void:
 	var new_task: Task = Task.new()

@@ -39,4 +39,7 @@ func get_selected_hotbar_index() -> int:
 # ============================================================================
 
 func get_all_tasks() -> Array[Task]:
-	return Global.save_data.
+	return Global.save_data.tasks_save_data.all_tasks
+
+func get_max_task_id() -> int:
+	return Global.save_data.tasks_save_data.max_task_id
