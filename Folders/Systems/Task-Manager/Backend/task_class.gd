@@ -13,7 +13,7 @@ extends Resource
 # TASK SETUP
 # ===================================================
 
-func setup(new_task_name: String) -> void:
+func setup(new_task_name: String, new_task_index: int) -> void:
 	set_task_name(new_task_name)
 
 # ===================================================
