@@ -1,3 +1,5 @@
+# Task Manager
+
 [[All-Tasks]]
 
 - [ ] Make the `Task` class
