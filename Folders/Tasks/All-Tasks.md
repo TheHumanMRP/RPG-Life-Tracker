@@ -4,12 +4,9 @@
 ---
 
 - [[Task-Manager]]
-
-- [ ] Make the `Task` class
-- [ ] Make the `TaskManager` with the following funcs:
-    - [ ] `add_task`
-    - [ ] `remove_task`
-    - [ ] `rename_task`
+- [[Hotbar]]
+- [[Equipment]]
+- [[]]
 
 - [ ] Fix the loop because of which there are hundreds of statement being printed every single time I equip an item 
 
