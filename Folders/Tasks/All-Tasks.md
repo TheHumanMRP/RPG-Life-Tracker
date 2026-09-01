@@ -3,6 +3,8 @@
 # To-Do
 ---
 
+- [[Task-Manager]]
+
 - [ ] Make the `Task` class
 - [ ] Make the `TaskManager` with the following funcs:
     - [ ] `add_task`
