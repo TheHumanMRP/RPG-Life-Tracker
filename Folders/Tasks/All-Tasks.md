@@ -7,6 +7,7 @@
 - [[Task-Manager]]
 - [[Hotbar]]
 - [[Equipment]]
+- [[UI]]
 - [[Overall]]
 
 # Completed Tasks
