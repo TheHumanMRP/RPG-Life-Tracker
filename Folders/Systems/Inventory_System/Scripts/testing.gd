@@ -2,8 +2,12 @@ class_name TestingScript
 extends Node
 
 func test() -> void:
+	test_task_manager_backend()
 
-	
+func test_task_manager_backend() -> void:
+	var task_manager_backend: TaskManagerBackend = TaskManagerBackend.new()
+
+	task_manager_backend.add_task("Hello")
 
 func test_hotbar() -> void:
 	var hotbar_logic_component: HotbarLogic = HotbarLogic.new()

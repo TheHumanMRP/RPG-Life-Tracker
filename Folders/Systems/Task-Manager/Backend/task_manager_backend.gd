@@ -1,4 +1,4 @@
-class_name TaskManager
+class_name TaskManagerBackend
 extends RefCounted
 
 func get_all_tasks() -> Array[Task]:
