@@ -17,7 +17,9 @@ func add_task(task_name: String) -> void:
 	new_task.setup(task_name, get_max_task_id())
 
 	get_all_tasks().append(new_task)
+	get_all_tasks().append(new_task)
 
 	print("\nTask Manager Backend: Add task func called, printing all tasks")
 
-	print(get_all_tasks())
+	print(get_all_tasks()[0].task_name, " ", get_all_tasks()[0].task_index)
+	print(get_all_tasks()[1].task_name, " ", get_all_tasks()[1].task_index)
