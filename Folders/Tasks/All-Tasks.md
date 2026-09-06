@@ -25,9 +25,13 @@
 
 		- [ ] Figure out how to travel to all those slots
 
-- [[Hotbar]]
-- [[UI]]
-- [[Overall]]
+- [ ] Fix the loop because of which there are hundreds of statement being printed every single time I equip an item 
+- [ ] Make it so that it checks if none of the hotbar slots have the item to put in a slot, cause that will cause duplication
+
+- [ ] Make esc menu
+
+- [ ] Add transitions when changing scenes
+- [ ] Start adding some pixel art
 
 # Completed Tasks
 ---
