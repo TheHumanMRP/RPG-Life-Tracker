@@ -18,4 +18,6 @@ func add_task(task_name: String) -> void:
 
 	get_all_tasks().append(new_task)
 
+	print("\nTask Manager Backend: Add task func called, printing all tasks")
+
 	print(get_all_tasks())
