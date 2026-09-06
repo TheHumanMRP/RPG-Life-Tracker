@@ -5,12 +5,11 @@ func get_all_tasks() -> Array[Task]:
 	return InfoGetter.get_all_tasks()
 
 func get_max_task_id() -> int:
-	return InfoGetter.get_max_task_id()
+	Global.save_data.tasks_save_data.max_task_id += 1
+
+	return InfoGetter.get_max_task_id() - 1
 
 func add_task(task_name: String) -> void:
 	var new_task: Task = Task.new()
 
 	new_task.setup(task_name, get_max_task_id())
-
-	
-
