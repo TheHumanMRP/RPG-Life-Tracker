@@ -15,3 +15,7 @@ func add_task(task_name: String) -> void:
 	var new_task: Task = Task.new()
 
 	new_task.setup(task_name, get_max_task_id())
+
+	get_all_tasks().append(new_task)
+
+	print(get_all_tasks())

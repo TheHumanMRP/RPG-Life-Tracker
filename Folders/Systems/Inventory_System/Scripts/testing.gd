@@ -2,6 +2,10 @@ class_name TestingScript
 extends Node
 
 func test() -> void:
+
+	
+
+func test_hotbar() -> void:
 	var hotbar_logic_component: HotbarLogic = HotbarLogic.new()
 
 	var test_sword_item_id: int = AllGlobalItemsManager.add_test_sword("Test Sword", load("res://Folders/Assets/Project_Display/Mouse-Cursor.png"))
