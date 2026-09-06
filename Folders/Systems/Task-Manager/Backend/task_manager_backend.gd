@@ -21,5 +21,5 @@ func add_task(task_name: String) -> void:
 
 	print("\nTask Manager Backend: Add task func called, printing all tasks")
 
-	print(get_all_tasks()[0].task_name, " ", get_all_tasks()[0].task_index)
-	print(get_all_tasks()[1].task_name, " ", get_all_tasks()[1].task_index)
+	for task in get_all_tasks():
+		print(task.task_name, " ", task.task_index)
