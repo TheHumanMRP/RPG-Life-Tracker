@@ -3,15 +3,13 @@
 # To-Do
 ---
 
-- [[Bugs]]
-
-- [ ] Make the `Task` class
+- [X] Make the `Task` class
 - [ ] Make the `TaskManager` with the following funcs:
     - [ ] `add_task`
     - [ ] `remove_task`
     - [ ] `rename_task`
 
-- [ ] Make the basic ui with godot nodes
+- [ ] Make the basic ui for task manager with godot nodes
 
 - [ ] Add proper backend and frontend support
 
