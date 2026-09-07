@@ -18,9 +18,13 @@ func add_task(task_name: String) -> void:
 
 	print("\nTask Manager Backend: Add task func called, printing all tasks")
 
+	print_all_tasks(tasks_save_data)
+
 	tasks_changed()
-	
+
 func print_all_tasks(tasks_save_data: TasksSaveData) -> void:
+	var tasks: Array[Task] = tasks_save_data.all_tasks
+
 	if tasks_save_data.all_tasks.size() == 0:
 		print("\nTask Manager Backend: No tasks to print.")
 		return
