@@ -5,7 +5,7 @@
 
 - [X] Make the `Task` class
 - [ ] Make the `TaskManager`
-	- [ ] Make proper max id handling, with reference to incentory manag
+	- [ ] Make proper max id handling, with reference to all global inventory manager
 	- [ ] make the func `add_task`
 	- [ ] make the func `remove_task`
 	- [ ] make the func `rename_task`
