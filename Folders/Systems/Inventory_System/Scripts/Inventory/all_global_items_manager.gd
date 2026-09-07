@@ -51,7 +51,7 @@ func _calculate_max_id() -> void:
 func add_item(new_item: BaseItem, new_name: String, new_logo: Texture2D, new_durability: float = new_item.base_durability) -> int:
 	print("\nAll Global Items Manager: Adding a new item.")
 	
-	var data := InfoGetter.get_all_global_items_data()
+	var data: AllGlobalItemsData = InfoGetter.get_all_global_items_data()
 
 	var new_item_entry: ItemEntry = prepare_item_entry(new_item, new_name, new_logo, new_durability)
 
