@@ -8,6 +8,7 @@ func test_task_manager_backend() -> void:
 	var task_manager_backend: TaskManagerBackend = TaskManagerBackend.new()
 
 	task_manager_backend.add_task("Hello")
+	task_manager_backend.add_task("Hello")
 
 func test_hotbar() -> void:
 	var hotbar_logic_component: HotbarLogic = HotbarLogic.new()
