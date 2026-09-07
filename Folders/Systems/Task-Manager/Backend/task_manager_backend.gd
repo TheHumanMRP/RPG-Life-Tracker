@@ -23,3 +23,8 @@ func add_task(task_name: String) -> void:
 
 	for task in get_all_tasks():
 		print(task.task_name, " ", task.task_index)
+
+	tasks_changed()
+
+func tasks_changed() -> void:
+	SignalBus.save_game.emit()
