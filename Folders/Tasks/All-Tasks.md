@@ -5,11 +5,13 @@
 
 - [X] Make the `Task` class
 - [ ] Make the `TaskManager`
-	- [ ] Make proper max id handling, with reference to all global inventory manager
-	- [ ] make the func `add_task`
-	- [ ] make the func `remove_task`
-	- [ ] make the func `rename_task`
-	- [ ] make the func `clear_all_tasks`
+	- [ ] Make the 
+
+	- [X] Make proper max id handling, with reference to all global inventory manager
+	- [X] make the func `add_task`
+	- [X] make the func `remove_task`
+	- [X] make the func `rename_task`
+	- [X] make the func `clear_all_tasks`
 
 - [ ] Make the basic ui for task manager with godot nodes
 

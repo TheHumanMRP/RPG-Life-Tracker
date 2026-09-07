@@ -84,7 +84,8 @@ func clear_tasks() -> void:
 # Getters
 # ===================================================================
 
-func get_save_data() -> 
+func get_save_data() -> TasksSaveData:
+	return InfoGetter.get_tasks_save_data()
 
 ## Returns a task using its unique ID.
 func get_task_by_id(task_id: int) -> Task:
