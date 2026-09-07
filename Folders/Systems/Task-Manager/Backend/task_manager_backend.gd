@@ -12,18 +12,18 @@ func get_max_task_id() -> int:
 	return max_task_id
 
 func add_task(task_name: String) -> void:
-	var save_data: TasksSaveData = get_save_data()
+	var tasks_save_data: TasksSaveData = get_save_data()
 
 	var new_task: Task = Task.new()
 
 	new_task.setup(task_name, get_max_task_id())
 
-	.append(new_task)
-	get_all_tasks().append(new_task)
+	tasks_save_data.all_tasks.append(new_task)
+	tasks_save_data.all_tasks.append(new_task)
 
 	print("\nTask Manager Backend: Add task func called, printing all tasks")
 
-	for task in get_all_tasks():
+	for task in tasks_save_data.all_tasks:
 		print(task.task_name, " ", task.task_index)
 
 	tasks_changed()
