@@ -14,7 +14,6 @@ func add_task(task_name: String) -> void:
 	tasks_save_data.max_task_id += 1
 
 	tasks_save_data.all_tasks.append(new_task)
-	tasks_save_data.all_tasks.append(new_task)
 
 	print("\nTask Manager Backend: Add task func called, printing all tasks")
 
@@ -29,7 +28,7 @@ func print_all_tasks(tasks_save_data: TasksSaveData) -> void:
 		print("\nTask Manager Backend: No tasks to print.")
 		return
 
-	print("\nTask Manager Backend: Printing all tasks")
+	print("\nTask Manager Backend: Printing all tasks, size: ", tasks.size())
 
 	for task in tasks:
 		print("\t", task.task_name, " : ", task.task_index)
