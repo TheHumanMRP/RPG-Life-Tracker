@@ -13,8 +13,9 @@ extends Resource
 # TASK SETUP
 # ===================================================
 
-func setup(new_task_name: String, new_task_index: int) -> void:
-	task_name
+func setup(new_task_name: String, new_task_id: int) -> void:
+	task_name = new_task_name
+	task_id = new_task_id
 
 # ===================================================
 # TASK STATUS
