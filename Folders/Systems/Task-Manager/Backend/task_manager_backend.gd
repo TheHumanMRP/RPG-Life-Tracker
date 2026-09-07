@@ -4,19 +4,14 @@ extends RefCounted
 func get_save_data() -> TasksSaveData:
 	return InfoGetter.get_tasks_save_data()
 
-func get_max_task_id() -> int:
-	var max_task_id: int = InfoGetter.get_max_task_id()
-
-	Global.save_data.tasks_save_data.max_task_id += 1
-	
-	return max_task_id
-
 func add_task(task_name: String) -> void:
 	var tasks_save_data: TasksSaveData = get_save_data()
 
 	var new_task: Task = Task.new()
 
-	new_task.setup(task_name, get_max_task_id())
+	new_task.setup(task_name, tasks_save_data.max_task_id)
+
+	tasks_save_data.max_task_id += 1
 
 	tasks_save_data.all_tasks.append(new_task)
 	tasks_save_data.all_tasks.append(new_task)
