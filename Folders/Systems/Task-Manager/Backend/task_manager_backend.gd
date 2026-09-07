@@ -1,7 +1,7 @@
 class_name TaskManagerBackend
 extends RefCounted
 
-func get_save_data() -> Array[Task]:
+func get_save_data() -> TasksSaveData:
 	return InfoGetter.get_all_tasks()
 
 func get_max_task_id() -> int:
@@ -12,11 +12,13 @@ func get_max_task_id() -> int:
 	return max_task_id
 
 func add_task(task_name: String) -> void:
+	var save_data: TasksSaveData = get_save_data()
+
 	var new_task: Task = Task.new()
 
 	new_task.setup(task_name, get_max_task_id())
 
-	get_all_tasks().append(new_task)
+	.append(new_task)
 	get_all_tasks().append(new_task)
 
 	print("\nTask Manager Backend: Add task func called, printing all tasks")
