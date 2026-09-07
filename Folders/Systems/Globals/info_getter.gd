@@ -26,15 +26,17 @@ func get_all_global_items_data() -> AllGlobalItemsData:
 # Hotbar
 # ============================================================================
 
-func get_save_data() -> TasksSaveData:
-	return Global.save_data.tasks_save_data
+# Returns the array representing the hotbar slots.
+func get_hotbar() -> Array[int]:
+	return Global.save_data.hotbar_save_data.hotbar_slots
+
+# Returns the currently selected hotbar slot index.
+func get_selected_hotbar_index() -> int:
+	return Global.save_data.hotbar_save_data.selected_hotbar_slot_index
 
 # ============================================================================
 # Task Manager
 # ============================================================================
 
-func get_all_tasks() -> Array[Task]:
-	return Global.save_data.tasks_save_data.all_tasks
-
-func get_max_task_id() -> int:
-	return Global.save_data.tasks_save_data.max_task_id
+func get_tasks_save_data() -> TasksSaveData:
+	return Global.save_data.tasks_save_data

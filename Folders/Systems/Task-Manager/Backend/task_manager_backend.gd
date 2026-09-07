@@ -2,7 +2,7 @@ class_name TaskManagerBackend
 extends RefCounted
 
 func get_save_data() -> TasksSaveData:
-	return InfoGetter.get_all_tasks()
+	return InfoGetter.get_tasks_save_data()
 
 func get_max_task_id() -> int:
 	var max_task_id: int = InfoGetter.get_max_task_id()
