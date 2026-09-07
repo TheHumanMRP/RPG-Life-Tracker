@@ -7,21 +7,14 @@ extends Resource
 
 @export var task_name: String
 @export var task_status: All_Enums.TASK_STATUS
-@export var task_index: int
+@export var task_id: int
 
 # ===================================================
 # TASK SETUP
 # ===================================================
 
 func setup(new_task_name: String, new_task_index: int) -> void:
-	set_task_name(new_task_name)
-
-# ===================================================
-# TASK NAME
-# ===================================================
-
-func set_task_name(new_task_name: String) -> void:
-	task_name = new_task_name
+	task_name
 
 # ===================================================
 # TASK STATUS
