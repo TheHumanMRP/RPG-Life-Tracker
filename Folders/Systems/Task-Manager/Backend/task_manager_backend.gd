@@ -32,9 +32,11 @@ func _calculate_max_id() -> void:
 # ===================================================================
 
 func mark_task_as_todo(task_id: int) -> void:
-	var tasks: Array[Task] = 
+	var tasks: Array[Task] = get_save_data().all_tasks
 
-	for task in 
+	for task in tasks:
+		if task.task_id == task_id:
+			
 
 ## Adds a new task.
 func add_task(task_name: String) -> int:
