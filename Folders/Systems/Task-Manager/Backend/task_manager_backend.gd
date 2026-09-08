@@ -40,6 +40,8 @@ func mark_task_as_todo(task_id: int) -> void:
 		
 		task.mark_task_as_to_do()
 
+
+
 ## Adds a new task.
 func add_task(task_name: String) -> int:
 	print("\nTask Manager Backend: Adding a new task.")
@@ -95,6 +97,15 @@ func clear_tasks() -> void:
 
 func get_save_data() -> TasksSaveData:
 	return InfoGetter.get_tasks_save_data()
+
+func get_task_by_task_id(task_id: int) -> void:
+	var tasks: Array[Task] = get_save_data().all_tasks
+
+	for task in tasks:
+		if task.task_id != task_id:
+			continue
+		
+		task.mark_task_as_to_do()
 
 ## Returns a task using its unique ID.
 func get_task_by_id(task_id: int) -> Task:
