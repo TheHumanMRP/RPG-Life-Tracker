@@ -2,16 +2,6 @@
 
 # To-Do
 ---
-
-- [X] Make the `Task` class
-- [ ] Make the `TaskManager`
-	- [ ] Make the task status handling
-	- [X] Make proper max id handling, with reference to all global inventory manager
-	- [X] make the func `add_task`
-	- [X] make the func `remove_task`
-	- [X] make the func `rename_task`
-	- [X] make the func `clear_all_tasks`
-
 - [ ] Make the basic ui for task manager with godot nodes
 
 - [ ] Add proper backend and frontend support
@@ -36,6 +26,15 @@
 
 # Completed Tasks
 ---
+
+- [X] Make the `Task` class
+- [X] Make the `TaskManager`
+	- [X] Make the task status handling
+	- [X] Make proper max id handling, with reference to all global inventory manager
+	- [X] make the func `add_task`
+	- [X] make the func `remove_task`
+	- [X] make the func `rename_task`
+	- [X] make the func `clear_all_tasks`
 
 - [X] Check if rotation sword 180 degrees makes it upside down, if yes, fix it
 
