@@ -35,8 +35,10 @@ func mark_task_as_todo(task_id: int) -> void:
 	var tasks: Array[Task] = get_save_data().all_tasks
 
 	for task in tasks:
-		if task.task_id == task_id:
-			
+		if task.task_id != task_id:
+			continue
+		
+		task.mark_task_as_to_do()
 
 ## Adds a new task.
 func add_task(task_name: String) -> int:
