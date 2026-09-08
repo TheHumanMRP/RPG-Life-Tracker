@@ -25,8 +25,8 @@ enum WEAPON_TYPES {
 }
 
 enum TASK_STATUS {
-	Pending,
-	Working,
+	ToDo,
+	WorkingOnIt,
 	Completed,
 
 }

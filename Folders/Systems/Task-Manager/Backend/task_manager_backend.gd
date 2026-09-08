@@ -31,6 +31,8 @@ func _calculate_max_id() -> void:
 # Task Operations
 # ===================================================================
 
+func mark_task_as_todo
+
 ## Adds a new task.
 func add_task(task_name: String) -> int:
 	print("\nTask Manager Backend: Adding a new task.")
