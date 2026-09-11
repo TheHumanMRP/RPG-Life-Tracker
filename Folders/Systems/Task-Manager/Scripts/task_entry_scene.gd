@@ -9,6 +9,9 @@ var task_status: All_Enums.TASK_STATUS
 @export var task_name_label: Label
 @export var task_status_option_button: OptionButton
 
+func _ready() -> void:
+	refresh()
+
 func setup(new_task_id: int) -> void:
 	task_id = new_task_id
 
@@ -17,8 +20,13 @@ func setup(new_task_id: int) -> void:
 func refresh() -> void:
 	var task: Task = _get_task()
 
-	task_name = task.task_name
-	task_status = task.task_status
+	if task != null:
+		task_name = task.task_name
+		task_status = task.task_status
+		_refresh_ui()
+		return
+
+
 
 	_refresh_ui()
 
