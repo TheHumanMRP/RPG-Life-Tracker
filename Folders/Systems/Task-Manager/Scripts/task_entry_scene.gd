@@ -22,7 +22,8 @@ func _refresh_status_option_button() -> void:
 	for i in range(task_status_option_button.item_count):
 		task_status_option_button.remove_item(0)
 
-
+	for option in range(Constants.TASK_STATUS_OPTIONS.size()):
+		task_status_option_button.add_item(option)
 
 func _get_task() -> Task:
 	return InfoGetter.get_task_by_task_id(task_id)

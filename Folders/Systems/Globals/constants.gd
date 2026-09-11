@@ -26,4 +26,4 @@ const DEV_SAVE_PATH := "user://dev/save_data.tres"
 const LIVE_SAVE_PATH := "user://live/save_data.tres"
 
 # Tasks
-const TASK_STATUS_OPTION: Array[All_Enums.TASK_STATUS] = [All_Enums.TASK_STATUS.ToDo, All_Enums.TASK_STATUS.Completed]
+const TASK_STATUS_OPTIONS: Array[All_Enums.TASK_STATUS] = [All_Enums.TASK_STATUS.ToDo, All_Enums.TASK_STATUS.Completed]
