@@ -26,6 +26,3 @@ func mark_task_as_completed() -> void:
 
 func mark_task_as_to_do() -> void:
 	task_status = All_Enums.TASK_STATUS.ToDo
-
-func mark_task_as_working_on_it() -> void:
-	task_status = All_Enums.TASK_STATUS.WorkingOnIt

@@ -41,16 +41,6 @@ func mark_task_as_todo(task_id: int) -> void:
 
 	tasks_changed()
 
-func mark_task_as_working_on_it(task_id: int) -> void:
-	var task: Task = get_task_by_task_id(task_id)
-
-	if task == null:
-		return
-	
-	task.mark_task_as_working_on_it()
-
-	tasks_changed()
-
 func mark_task_as_completed(task_id: int) -> void:
 	var task: Task = get_task_by_task_id(task_id)
 
