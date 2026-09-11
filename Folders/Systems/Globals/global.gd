@@ -7,7 +7,8 @@ var hotbar_logic: HotbarLogic
 # ============================================================================
 
 var signal_bus: SignalBus = SignalBus.new()
-var
+var info_getter: InfoGetter = InfoGetter.new()
+
 
 # ============================================================================
 # Vars
