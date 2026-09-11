@@ -22,7 +22,7 @@ func _refresh_status_option_button() -> void:
 	for i in range(task_status_option_button.item_count):
 		task_status_option_button.remove_item(0)
 
-	for option in Constants.TASK_STATUS_OPTIONS.:
+	for key in Constants.TASK_STATUS_OPTIONS.:
 		task_status_option_button.add_item()
 
 func _get_task() -> Task:
