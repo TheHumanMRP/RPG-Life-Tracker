@@ -9,7 +9,7 @@ var hotbar_logic: HotbarLogic
 var signal_bus: SignalBus = SignalBus.new()
 var info_getter: InfoGetter = InfoGetter.new()
 var constants: Constants = Constants.new()
-var 
+var all_global_items_manager: AllGlobalItemsManager = AllGlobalItemsManager.new()
 
 # ============================================================================
 # Vars
