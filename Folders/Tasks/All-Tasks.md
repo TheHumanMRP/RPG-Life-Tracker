@@ -5,10 +5,9 @@
 - [ ] Make the basic ui for task manager with godot nodes
 	- [ ] Compelte the task grid
 	- [ ] Add a right click menu (link)
-	- [ ] Add the add 
+	- [ ] Add the options for shit in it
 
 - [ ] Add a right click menu
-
 
 - [ ] Add proper backend and frontend support
 
