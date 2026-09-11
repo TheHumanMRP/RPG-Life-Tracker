@@ -23,7 +23,7 @@ func _refresh_status_option_button() -> void:
 		task_status_option_button.remove_item(0)
 
 
-	var task_status_options: Constants.Task = Constants.TASK_STATUS_OPTIONS
+	var task_status_options: Array[String] = Constants.TASK_STATUS_OPTIONS
 
 	for key in Constants.TASK_STATUS_OPTIONS:
 		task_status_option_button.add_item()
