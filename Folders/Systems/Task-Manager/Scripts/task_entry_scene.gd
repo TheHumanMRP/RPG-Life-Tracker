@@ -23,10 +23,6 @@ func refresh() -> void:
 	if task != null:
 		task_name = task.task_name
 		task_status = task.task_status
-		_refresh_ui()
-		return
-
-
 
 	_refresh_ui()
 
