@@ -12,6 +12,8 @@ const MAIN_MENU_DUNGOEN_BUTTON_TEXT: String = "Dungeon"
 const MAIN_MENU_TASK_MANAGER_BUTTON_TEXT: String = "  Task Manager  "
 
 # Scene Paths
+# /home/thedev/Godot-Projects/RPG-Life-Tracker/Folders/Systems/Task-Manager/Scenes/task_manager.tscn
+const PATH_TO_TASK_MANAGER: String = "res://Folders/Systems/Task_"
 const PATH_TO_DUNGEON_SELECTION_MENU: String = "res://Folders/Systems/Dungeon_Related/Scenes/dungeon_selection_menu.tscn"
 const PATH_TO_MAIN_MENU: String = ("res://Folders/Systems/Main/Scenes/main_menu.tscn")
 
