@@ -108,15 +108,14 @@ func get_save_data() -> TasksSaveData:
 	return InfoGetter.get_tasks_save_data()
 
 ## Returns a task using its unique ID.
-func get_task_by_task_id(task_id: int, push_error: bool = true) -> Task:
+func get_task_by_task_id(task_id: int) -> Task:
 	var data: TasksSaveData = get_save_data()
 
 	for task in data.all_tasks:
 		if task.task_id == task_id:
 			return task
 
-	if push_error:
-		push_error("Task Manager Backend: No task with task_id: ", task_id)
+	push_error("Task Manager Backend: No task with task_id: ", task_id)
 
 	return null
 
