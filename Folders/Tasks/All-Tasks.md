@@ -3,6 +3,12 @@
 # To-Do
 ---
 - [ ] Make the basic ui for task manager with godot nodes
+	- [ ] Compelte the task grid
+	- [ ] Add a right click menu (link)
+	- [ ] Add the add 
+
+- [ ] Add a right click menu
+
 
 - [ ] Add proper backend and frontend support
 
