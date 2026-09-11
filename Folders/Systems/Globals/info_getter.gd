@@ -41,5 +41,7 @@ func get_selected_hotbar_index() -> int:
 func get_tasks_save_data() -> TasksSaveData:
 	return Global.save_data.tasks_save_data
 
-func get_task_by_task_index(task_index) -> Task:
-	
+func get_task_by_task_index(task_id) -> Task:
+	var task_manager: TaskManagerBackend = TaskManagerBackend.new()
+
+	return task_manager.get_task_by_task_id(task_index)
