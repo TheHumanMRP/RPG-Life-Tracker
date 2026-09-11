@@ -33,3 +33,4 @@ func _on_dungeon_button_pressed() -> void:
 
 func _on_task_manager_button_pressed() -> void:
 	print("\nMain Menu: Task manager button pressed")
+	Global.main_node.switch_to_scene(self, Constants., true)
