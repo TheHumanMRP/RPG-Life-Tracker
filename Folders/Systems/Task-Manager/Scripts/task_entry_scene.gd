@@ -11,12 +11,17 @@ var task_status: All_Enums.TASK_STATUS
 
 func setup(new_task_id: int) -> void:
 	task_id = new_task_id
-	
-	task_name = task_entry.task_name
-	task_status = task_entry.task_status
 
-func get_task() -> Task:
+func refresh() -> void:
+	var task: Task = _get_task()
+
+	task_name = task.task_name
+	task_status = task.task_status
+
+func _get_task() -> Task:
 	return InfoGetter.get_task_by_task_id(task_id)
 
-func refresh_ui() -> void:
+func _refresh_ui() -> void:
 	task_name_label.text = task_name
+
+	if
