@@ -27,12 +27,5 @@ unique_name_in_owner = true
 layout_mode = 2
 text = "Task Name Here"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1791546377]
+[node name="Task_Status_Option_Button" type="OptionButton" parent="MarginContainer/VBoxContainer" unique_id=1842306662]
 layout_mode = 2
-
-[node name="CheckBox" type="CheckBox" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=767733425]
-layout_mode = 2
-
-[node name="Task_Status_Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1624617333]
-layout_mode = 2
-text = "Task Status Here"

@@ -23,6 +23,3 @@ func _get_task() -> Task:
 
 func _refresh_ui() -> void:
 	task_name_label.text = task_name
-
-	if task_status == All_Enums.TASK_STATUS.Completed:
-		task_status_lable.text = 
