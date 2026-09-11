@@ -40,3 +40,6 @@ func get_selected_hotbar_index() -> int:
 
 func get_tasks_save_data() -> TasksSaveData:
 	return Global.save_data.tasks_save_data
+
+func get_task_by_task_index(task_index) -> Task:
+	
