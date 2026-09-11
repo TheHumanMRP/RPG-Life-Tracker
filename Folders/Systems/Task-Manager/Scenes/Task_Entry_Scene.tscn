@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dun2trcix2ryy" path="res://Folders/Systems/Task-Manager/Scripts/task_entry_scene.gd" id="1_hsjk1"]
 
-[node name="Task_Entry_Scene" type="PanelContainer" unique_id=465403137]
+[node name="Task_Entry_Scene" type="PanelContainer" unique_id=465403137 node_paths=PackedStringArray("task_name_label", "task_status_option_button")]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -11,6 +11,8 @@ anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_hsjk1")
+task_name_label = NodePath("MarginContainer/VBoxContainer/Task_Name")
+task_status_option_button = NodePath("MarginContainer/VBoxContainer/Task_Status_Option_Button")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1560095232]
 layout_mode = 2

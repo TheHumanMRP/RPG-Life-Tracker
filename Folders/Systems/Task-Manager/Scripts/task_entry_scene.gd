@@ -7,7 +7,7 @@ var task_name: String
 var task_status: All_Enums.TASK_STATUS
 
 @export var task_name_label: Label
-@export var task_status_lable: Label
+@export var task_status_option_button: OptionButton
 
 func setup(new_task_id: int) -> void:
 	task_id = new_task_id
@@ -17,6 +17,9 @@ func refresh() -> void:
 
 	task_name = task.task_name
 	task_status = task.task_status
+
+func _refresh_status_option_button() -> void:
+	for i in range(task_status_option_button.)
 
 func _get_task() -> Task:
 	return InfoGetter.get_task_by_task_id(task_id)
