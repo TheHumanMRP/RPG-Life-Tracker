@@ -15,5 +15,8 @@ func setup(new_task_id: int) -> void:
 	task_name = task_entry.task_name
 	task_status = task_entry.task_status
 
+func get_task() -> Task:
+	return InfoGetter.get_task_by_task_id(task_id)
+
 func refresh_ui() -> void:
-	task_name_label = task_name
+	task_name_label.text = task_name
