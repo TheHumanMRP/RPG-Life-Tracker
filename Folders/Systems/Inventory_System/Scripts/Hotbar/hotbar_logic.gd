@@ -17,9 +17,9 @@ func _init() -> void:
 
 ## Resets every hotbar slot to an empty state.
 func clear_hotbar() -> void:
-	InfoGetter.get_hotbar_slots().clear()
+	Global.info_getter.get_hotbar_slots().clear()
 
-	while InfoGetter.get_hotbar_slots().size() < InfoGetter.NUMBER_OF_HOTBAR_SLOTS:
+	while Global.info_getter.get_hotbar_slots().size() < InfoGetter.NUMBER_OF_HOTBAR_SLOTS:
 		InfoGetter.get_hotbar_slots().append(Constants.EMPTY_HOTBAR_SLOT)
 
 ## Places an item into the specified hotbar slot.
