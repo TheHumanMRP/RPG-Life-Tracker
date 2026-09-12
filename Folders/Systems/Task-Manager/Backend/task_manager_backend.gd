@@ -105,7 +105,7 @@ func clear_tasks() -> void:
 # ===================================================================
 
 func get_save_data() -> TasksSaveData:
-	return Global.info_getter.get_tasks_save_data()
+	return InfoGetter.get_tasks_save_data()
 
 ## Returns a task using its unique ID.
 func get_task_by_task_id(task_id: int) -> Task:
@@ -142,4 +142,4 @@ func print_all_tasks(tasks_save_data: TasksSaveData = get_save_data()) -> void:
 # ===================================================================
 
 func tasks_changed() -> void:
-	Global.signal_bus.save_game.emit()
+	SignalBus.save_game.emit()
