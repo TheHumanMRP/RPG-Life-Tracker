@@ -19,8 +19,8 @@ func _init() -> void:
 func clear_hotbar() -> void:
 	Global.info_getter.get_hotbar_slots().clear()
 
-	while Global.info_getter.get_hotbar_slots().size() < InfoGetter.NUMBER_OF_HOTBAR_SLOTS:
-		InfoGetter.get_hotbar_slots().append(Constants.EMPTY_HOTBAR_SLOT)
+	while Global.info_getter.get_hotbar_slots().size() < Global.info_getter.NUMBER_OF_HOTBAR_SLOTS:
+		Global.info_getter.get_hotbar_slots().append(Global.constants.EMPTY_HOTBAR_SLOT)
 
 ## Places an item into the specified hotbar slot.
 func add_item_to_hotbar(item_id: int, slot_index: int) -> void:
@@ -30,7 +30,7 @@ func add_item_to_hotbar(item_id: int, slot_index: int) -> void:
 		push_error("HotBarLogic: Hotbar slot already occupied: ", slot_index)
 		return
 
-	InfoGetter.get_hotbar()[slot_index] = item_id
+	Global.info_getter.get_hotbar()[slot_index] = item_id
 
 	notify_hotbar_changed()
 
