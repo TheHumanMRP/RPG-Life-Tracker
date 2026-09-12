@@ -161,7 +161,7 @@ func add_test_sword(new_test_sword_name: String = "Test Sword", new_test_sword_l
 func print_all_items() -> void:
 	print("\nAll Global Items Manager: Printing all items")
 
-	var data := Global.info_getter.get_all_global_items_data()
+	var data := InfoGetter.get_all_global_items_data()
 
 	for item in data.all_global_items:
 		item.print_self()
