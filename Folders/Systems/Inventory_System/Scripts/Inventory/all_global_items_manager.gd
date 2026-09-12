@@ -11,7 +11,7 @@ func _init() -> void:
 	call_deferred("_setup")
 
 func connect_signals() -> void:
-	SignalBus.add_item_to_global_inventory.connect(add_item)
+	Global.signal_bus.add_item_to_global_inventory.connect(add_item)
 	SignalBus.remove_item_from_global_inventory.connect(remove_item)
 	SignalBus.rename_item_in_inventory.connect(rename_item_in_inventory)
 
