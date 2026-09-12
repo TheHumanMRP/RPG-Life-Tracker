@@ -7,9 +7,9 @@ extends Resource
 
 func _init() -> void:
 	print("\nHotbar Logic: Init called")
-	Global.signa.hotbar_item_selected.connect(_on_hotbar_item_selected)
-	SignalBus.hotbar_item_equipped.connect(_on_hotbar_item_equipped)
-	SignalBus.swap_hotbar_item.connect(_on_swap_hotbar_item)
+	Global.signal_bus.hotbar_item_selected.connect(_on_hotbar_item_selected)
+	Global.signal_bus.hotbar_item_equipped.connect(_on_hotbar_item_equipped)
+	Global.signal_bus.swap_hotbar_item.connect(_on_swap_hotbar_item)
 
 # ============================================================================
 # Item Management
