@@ -22,6 +22,7 @@ SaveCycleManager="*uid://h2j1arx22jnu"
 Constants="*uid://ctro1gx3ndbul"
 InfoGetter="*uid://cbhg7hkcjf8py"
 SignalBus="*uid://dackuyp70bkog"
+AllGlobalItemsManager="*uid://ge8m2q1sbkg4"
 
 [debug]
 

@@ -3,11 +3,6 @@ extends Node
 var hotbar_logic: HotbarLogic
 
 # ============================================================================
-# Global scripts
-# ============================================================================
-var all_global_items_manager: AllGlobalItemsManager = AllGlobalItemsManager.new()
-
-# ============================================================================
 # Vars
 # ============================================================================
 var save_data: SaveData = SaveData.new()
