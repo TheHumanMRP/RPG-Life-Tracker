@@ -59,14 +59,14 @@ func _on_hotbar_item_selected(slot_index: int) -> void:
 	notify_hotbar_changed()
 
 func _on_hotbar_item_equipped(slot_index: int) -> void:
-	var item_id: int = InfoGetter.get_hotbar()[slot_index]
+	var item_id: int = Global.info_getter.get_hotbar()[slot_index]
 	
-	SignalBus.equip_item.emit(item_id, slot_index)
+	Global.signal_bus.equip_item.emit(item_id, slot_index)
 
 	notify_hotbar_changed()
 	
 	
 ## This shit is here so that I don't have to go to a billion places if I by mistakely somehow change the signal name
 func notify_hotbar_changed() -> void:
-	SignalBus.hotbar_changed.emit()
-	SignalBus.save_game.emit()
+	Global.signal_bus.hotbar_changed.emit()
+	Global.signal_bus.save_game.emit()
