@@ -65,7 +65,7 @@ func _process(delta: float) -> void:
 		hotbar_logic.add_item_to_hotbar(1, 1)
 
 func _ready() -> void:
-	SignalBus.set_game_state.connect(_on_set_game_state)
+	Global.signal_bus.set_game_state.connect(_on_set_game_state)
 
 	hotbar_logic = HotbarLogic.new()
 

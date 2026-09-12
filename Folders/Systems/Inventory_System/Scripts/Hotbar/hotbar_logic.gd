@@ -7,7 +7,7 @@ extends Resource
 
 func _init() -> void:
 	print("\nHotbar Logic: Init called")
-	SignalBus.hotbar_item_selected.connect(_on_hotbar_item_selected)
+	Global.signa.hotbar_item_selected.connect(_on_hotbar_item_selected)
 	SignalBus.hotbar_item_equipped.connect(_on_hotbar_item_equipped)
 	SignalBus.swap_hotbar_item.connect(_on_swap_hotbar_item)
 
