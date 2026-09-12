@@ -51,7 +51,7 @@ func check_if_slot_empty(slot: int) -> bool:
 	return InfoGetter.get_hotbar()[slot] == Constants.NO_ITEM
 
 func _on_hotbar_item_selected(slot_index: int) -> void:
-	SaveData.hotbar_save_data.selected_hotbar_slot_index = slot_index
+	Global.save_data.hotbar_save_data.selected_hotbar_slot_index = slot_index
 
 	var selected_item_id: int = InfoGetter.get_hotbar()[slot_index]
 

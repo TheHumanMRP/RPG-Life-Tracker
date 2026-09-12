@@ -170,10 +170,10 @@ func print_all_items() -> void:
 # ===================================================================
 
 func notify_global_inventory_changed() -> void:
-	Global.signal_bus.notify_global_inventory_changed.emit()
-	Global.signal_bus.save_game.emit()
+	SignalBus.notify_global_inventory_changed.emit()
+	SignalBus.save_game.emit()
 
 	print("\nAll Global Items Manager: Notified that the inventory changed.")
 
 func save_all_global_items_data() -> void:
-	Global.signal_bus.save_game.emit()
+	SignalBus.save_game.emit()
