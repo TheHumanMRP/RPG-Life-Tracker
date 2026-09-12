@@ -109,7 +109,7 @@ func clear_inventory() -> void:
 	notify_global_inventory_changed()
 
 func check_if_item_at_index_in_global_inventory_exists(index: int) -> bool:
-	var data := InfoGetter.get_all_global_items_data()
+	var data := Global.info_getter.get_all_global_items_data()
 
 	if index < 0 or index >= data.all_global_items.size():
 		return false
@@ -133,7 +133,7 @@ func prepare_item_entry(new_item: BaseItem, new_name: String, new_logo: Texture2
 
 ## Returns an item using its unique ID.
 func get_item_by_id(item_id: int) -> ItemEntry:
-	var data := InfoGetter.get_all_global_items_data()
+	var data := Global.info_getter.get_all_global_items_data()
 
 	if not data.items_by_id_dict.has(item_id):
 		push_error("All Global Items Manager: No item with item id: ", item_id)
@@ -161,7 +161,7 @@ func add_test_sword(new_test_sword_name: String = "Test Sword", new_test_sword_l
 func print_all_items() -> void:
 	print("\nAll Global Items Manager: Printing all items")
 
-	var data := InfoGetter.get_all_global_items_data()
+	var data := Global.info_getter.get_all_global_items_data()
 
 	for item in data.all_global_items:
 		item.print_self()
@@ -171,10 +171,10 @@ func print_all_items() -> void:
 # ===================================================================
 
 func notify_global_inventory_changed() -> void:
-	SignalBus.notify_global_inventory_changed.emit()
-	SignalBus.save_game.emit()
+	Global.signal_bus.notify_global_inventory_changed.emit()
+	Global.signal_bus.save_game.emit()
 
 	print("\nAll Global Items Manager: Notified that the inventory changed.")
 
 func save_all_global_items_data() -> void:
-	SignalBus.save_game.emit()
+	Global.signal_bus.save_game.emit()
