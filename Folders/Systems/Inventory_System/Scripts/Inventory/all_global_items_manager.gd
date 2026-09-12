@@ -11,9 +11,9 @@ func _init() -> void:
 	call_deferred("_setup")
 
 func connect_signals() -> void:
-	Global.signal_bus.add_item_to_global_inventory.connect(add_item)
-	Global.signal_signal_bus.remove_item_from_global_inventory.connect(remove_item)
-	Global.signal_bus.rename_item_in_inventory.connect(rename_item_in_inventory)
+	SignalBus.add_item_to_global_inventory.connect(add_item)
+	SignalBus.remove_item_from_global_inventory.connect(remove_item)
+	SignalBus.rename_item_in_inventory.connect(rename_item_in_inventory)
 
 func _setup() -> void:
 	_calculate_max_id()
@@ -23,7 +23,7 @@ func _setup() -> void:
 # ===================================================================
 
 func sync_item_by_id_dict() -> void:
-	var data := Global.info_getter.get_all_global_items_data()
+	var data := InfoGetter.get_all_global_items_data()
 
 	data.items_by_id_dict.clear()
 
@@ -34,7 +34,7 @@ func sync_item_by_id_dict() -> void:
 
 ## Calculates the next available item ID.
 func _calculate_max_id() -> void:
-	var data := Global.info_getter.get_all_global_items_data()
+	var data := InfoGetter.get_all_global_items_data()
 
 	data.global_max_id = 0
 
@@ -72,7 +72,7 @@ func add_item(new_item: BaseItem, new_name: String, new_logo: Texture2D, new_dur
 func remove_item(item_id: int) -> void:
 	print("\nAll Global Items Manager: Removing item with item_id: ", item_id)
 
-	var data := Global.info_getter.get_all_global_items_data()
+	var data := InfoGetter.get_all_global_items_data()
 
 	if not data.items_by_id_dict.has(item_id):
 		push_error("All Global Items Manager: Item not found: ", item_id)
@@ -99,7 +99,7 @@ func rename_item_in_inventory(item_id: int, new_name: String) -> void:
 func clear_inventory() -> void:
 	print("\nAll Global Items Manager: Clearing Inventory")
 	
-	var data := Global.info_getter.get_all_global_items_data()
+	var data := InfoGetter.get_all_global_items_data()
 
 	data.all_global_items.clear()
 	data.items_by_id_dict.clear()
@@ -109,7 +109,7 @@ func clear_inventory() -> void:
 	notify_global_inventory_changed()
 
 func check_if_item_at_index_in_global_inventory_exists(index: int) -> bool:
-	var data := Global.info_getter.get_all_global_items_data()
+	var data := InfoGetter.get_all_global_items_data()
 
 	if index < 0 or index >= data.all_global_items.size():
 		return false
@@ -133,7 +133,7 @@ func prepare_item_entry(new_item: BaseItem, new_name: String, new_logo: Texture2
 
 ## Returns an item using its unique ID.
 func get_item_by_id(item_id: int) -> ItemEntry:
-	var data := Global.info_getter.get_all_global_items_data()
+	var data := InfoGetter.get_all_global_items_data()
 
 	if not data.items_by_id_dict.has(item_id):
 		push_error("All Global Items Manager: No item with item id: ", item_id)
