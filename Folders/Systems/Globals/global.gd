@@ -5,10 +5,6 @@ var hotbar_logic: HotbarLogic
 # ============================================================================
 # Global scripts
 # ============================================================================
-
-var signal_bus: SignalBus = SignalBus.new()
-var info_getter: InfoGetter = InfoGetter.new()
-var constants: Constants = Constants.new()
 var all_global_items_manager: AllGlobalItemsManager = AllGlobalItemsManager.new()
 
 # ============================================================================
