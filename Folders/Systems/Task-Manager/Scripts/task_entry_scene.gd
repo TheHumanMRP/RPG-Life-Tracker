@@ -1,6 +1,5 @@
 extends PanelContainer
 
-
 var task_id: int
 
 var task_name: String
@@ -11,6 +10,7 @@ var task_status: All_Enums.TASK_STATUS
 
 func _ready() -> void:
 	refresh()
+	task_status_option_button.
 
 func setup(new_task_id: int) -> void:
 	task_id = new_task_id
