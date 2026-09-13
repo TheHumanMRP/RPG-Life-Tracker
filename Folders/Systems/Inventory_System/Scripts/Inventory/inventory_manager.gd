@@ -1,4 +1,4 @@
-class_name InventoryLogicComponent
+class_name InventoryManager
 extends Resource
 
 # ===================================================================
