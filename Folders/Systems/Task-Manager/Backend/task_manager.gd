@@ -1,4 +1,4 @@
-class_name TaskManagerBackend
+class_name TaskManager
 extends RefCounted
 
 
