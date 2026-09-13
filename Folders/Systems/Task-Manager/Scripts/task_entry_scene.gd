@@ -12,8 +12,8 @@ func _ready() -> void:
 	refresh()
 	task_status_option_button.item_selected.connect(task_completed_status_changed)
 
-func task_completed_status_changed(item_id: int) -> void:
-	pass
+func task_completed_status_changed(option_button_index: int) -> void:
+	var 
 
 func setup(new_task_id: int) -> void:
 	task_id = new_task_id
