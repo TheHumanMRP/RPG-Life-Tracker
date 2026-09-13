@@ -1,6 +1,11 @@
 extends Node
 
-var hotbar_logic: HotbarLogic
+# ============================================================================
+# Managers
+# ============================================================================
+
+var inventory_related_managers: InventoryRelatedManagers
+var tasks_related_managers: TasksRelatedManagers
 
 # ============================================================================
 # Vars
