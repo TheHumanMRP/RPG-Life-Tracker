@@ -10,7 +10,10 @@ var task_status: All_Enums.TASK_STATUS
 
 func _ready() -> void:
 	refresh()
-	task_status_option_button.
+	task_status_option_button.item_selected.connect(task_completed_status_changed)
+
+func task_completed_status_changed(item_id: int) -> void:
+	pass
 
 func setup(new_task_id: int) -> void:
 	task_id = new_task_id
