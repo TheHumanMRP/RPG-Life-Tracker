@@ -3,6 +3,8 @@
 # To-Do
 ---
 
+- [ ] Combine all the managers in groups and 
+
 - [ ] Make the basic ui for task manager with godot nodes
 	- [ ] Compelte the task grid
 	- [ ] Link the backend and the frontend
