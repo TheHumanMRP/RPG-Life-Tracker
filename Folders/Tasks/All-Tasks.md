@@ -6,7 +6,7 @@
 - [ ] Combine all the managers in groups
 - [ ] Make a var for each one of them
 - [ ] Make a new var that handles the game state
-- [ ] Make a new 
+- [ ] Make a new func that handles the loading and unloading of those manager group vars
 
 - [ ] Make the basic ui for task manager with godot nodes
 	- [ ] Compelte the task grid
