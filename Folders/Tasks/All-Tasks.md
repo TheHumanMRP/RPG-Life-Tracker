@@ -3,7 +3,9 @@
 # To-Do
 ---
 
-- [ ] Combine all the managers in groups and 
+- [ ] Combine all the managers in groups
+- [ ] Make a var for each one of them
+- [ ] Make a new var that handles the game state
 
 - [ ] Make the basic ui for task manager with godot nodes
 	- [ ] Compelte the task grid
