@@ -1,4 +1,5 @@
 class_name InventoryRelatedManagers
 extends RefCounted
 
-var invetory_manager : InventoryManager
+var invetory_manager: InventoryManager
+var hotbar_manager: HotbarManager
