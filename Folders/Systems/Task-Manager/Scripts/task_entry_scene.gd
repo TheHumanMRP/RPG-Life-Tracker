@@ -13,7 +13,10 @@ func _ready() -> void:
 	task_status_option_button.item_selected.connect(task_completed_status_changed)
 
 func task_completed_status_changed(option_button_index: int) -> void:
-	var 
+	var new_task_completed_status: String = task_status_option_button.get_item_text(option_button_index)
+
+	for status in Constants.TASK_STATUS_OPTIONS:
+		pass
 
 func setup(new_task_id: int) -> void:
 	task_id = new_task_id
