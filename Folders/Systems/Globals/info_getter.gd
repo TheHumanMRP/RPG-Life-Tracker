@@ -42,6 +42,6 @@ func get_tasks_save_data() -> TasksSaveData:
 	return Global.save_data.tasks_save_data
 
 func get_task_by_task_id(task_id: int) -> Task:
-	var task_manager: TaskManagerBackend = TaskManagerBackend.new()
+	var task_manager: TaskManager = TaskManager.new()
 
 	return task_manager.get_task_by_task_id(task_id)

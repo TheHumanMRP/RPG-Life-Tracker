@@ -5,7 +5,7 @@ func test() -> void:
 	test_task_manager_backend()
 
 func test_task_manager_backend() -> void:
-	var task_manager_backend: TaskManagerBackend = TaskManagerBackend.new()
+	var task_manager_backend: TaskManager = TaskManager.new()
 
 	task_manager_backend.add_task("Hello")
 	task_manager_backend.add_task("Hello")

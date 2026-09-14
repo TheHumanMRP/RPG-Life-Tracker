@@ -58,12 +58,8 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("add_test_sword"):
 		AllGlobalItemsManager.add_test_sword()
 
-		AllGlobalItemsManager.add_item_to_hotbar(1, 1)
-
 func _ready() -> void:
 	SignalBus.set_game_state.connect(_on_set_game_state)
-
-	hotbar_logic = HotbarLogic.new()
 
 	call_deferred("test")
 
