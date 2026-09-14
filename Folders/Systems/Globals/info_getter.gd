@@ -34,6 +34,9 @@ func get_hotbar() -> Array[int]:
 func get_selected_hotbar_index() -> int:
 	return Global.save_data.hotbar_save_data.selected_hotbar_slot_index
 
+func get_hotbar_manager() -> HotbarManager:
+	return Global.inventory_related_managers.hotbar_manager
+
 # ============================================================================
 # Task Manager
 # ============================================================================
