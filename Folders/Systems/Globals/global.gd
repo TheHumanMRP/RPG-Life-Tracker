@@ -4,9 +4,8 @@ extends Node
 # Managers
 # ============================================================================
 
-var inventory_related_managers: InventoryRelatedManagers = InventoryRelatedManagers.new()
-var tasks_related_managers: TasksRelatedManagers = TasksRelatedManagers.new()
-
+var inventory_related_managers: InventoryRelatedManagers
+var tasks_related_managers: TasksRelatedManagers
 # ============================================================================
 # Vars
 # ============================================================================
@@ -60,6 +59,8 @@ func _process(delta: float) -> void:
 
 func _ready() -> void:
 	SignalBus.set_game_state.connect(_on_set_game_state)
+
+	
 
 	call_deferred("test")
 
