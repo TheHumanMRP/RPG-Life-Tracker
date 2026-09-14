@@ -23,7 +23,7 @@ func get_all_global_items_data() -> AllGlobalItemsData:
 	return Global.save_data.all_global_items_data
 
 func get_inventory_manager() -> InventoryManager:
-	return Global.inventory_related_managers.invetory_manager
+	return Global.inventory_related_managers.inventory_manager
 
 # ============================================================================
 # Hotbar
