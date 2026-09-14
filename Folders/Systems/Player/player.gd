@@ -51,6 +51,9 @@ func _setup_component() -> void:
 	movement_component = MovementComponent.new()
 	inventory_manager = InfoGetter.get_inventory_manager()
 
+	if inventory_manager == null:
+		
+
 	var player_max_health: int = InfoGetter.get_player_max_health()
 	health_component.setup(player_max_health, "Player")
 	
