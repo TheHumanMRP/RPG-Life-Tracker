@@ -11,7 +11,7 @@ signal facing_direction_changed(new_direction: int)
 
 var health_component: HealthComponent
 var movement_component: MovementComponent
-var inventory_logic_component: Inven
+var inventory_manager: InventoryManager
 
 var facing_direction: int
 
@@ -49,12 +49,12 @@ func _setup_component() -> void:
 
 	health_component = HealthComponent.new()
 	movement_component = MovementComponent.new()
-	inventory_logic_component = InventoryLogicComponent.new()
+	inventory_manager = InfoGetter.get_inventory_manager()
 
 	var player_max_health: int = InfoGetter.get_player_max_health()
 	health_component.setup(player_max_health, "Player")
 	
-	inventory_logic_component.setup(Constants.PLAYER_INVENTORY_NAME)
+	inventory_manager.setup(Constants.PLAYER_INVENTORY_NAME)
 
 	equipment_manager.setup(self)
 
