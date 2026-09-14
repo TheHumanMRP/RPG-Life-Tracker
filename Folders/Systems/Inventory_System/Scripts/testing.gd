@@ -11,7 +11,7 @@ func test_task_manager_backend() -> void:
 	task_manager_backend.add_task("Hello")
 
 func test_hotbar() -> void:
-	var hotbar_logic_component: HotbarLogic = HotbarLogic.new()
+	var hotbar_logic_component: HotbarManager = HotbarManager.new()
 
 	var test_sword_item_id: int = Global.all_global_items_manager.add_test_sword("Test Sword", load("res://Folders/Assets/Project_Display/Mouse-Cursor.png"))
 

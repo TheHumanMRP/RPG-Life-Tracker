@@ -5,7 +5,7 @@ extends Control
 
 var number_of_hotbar_slots: int
 
-var hotbar_logic: HotbarLogic = HotbarLogic.new()
+var hotbar_logic: HotbarManager = InfoGetter.get_horbar_manager()
 
 func _ready() -> void:
 	number_of_hotbar_slots = Constants.NUMBER_OF_HOTBAR_SLOTS
