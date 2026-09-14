@@ -60,11 +60,18 @@ func _process(delta: float) -> void:
 func _ready() -> void:
 	SignalBus.set_game_state.connect(_on_set_game_state)
 
-	
+	inventory_related_managers = InventoryRelatedManagers.new()
+	tasks_related_managers = TasksRelatedManagers.new()
+
+	inventory_related_managers.setup()
+	tasks_related_managers.setup()
 
 	call_deferred("test")
 
 	call_deferred("set_main_node")
+
+func setup_managers() -> void:
+	
 
 func _on_set_game_state(new_game_state: All_Enums.GAME_STATES) -> void:
 	current_game_state = new_game_state
