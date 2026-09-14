@@ -4,8 +4,8 @@ extends Node
 # Managers
 # ============================================================================
 
-var inventory_related_managers: InventoryRelatedManagers
-var tasks_related_managers: TasksRelatedManagers
+var inventory_related_managers: InventoryRelatedManagers = InventoryRelatedManagers.new()
+var tasks_related_managers: TasksRelatedManagers = TasksRelatedManagers.new()
 
 # ============================================================================
 # Vars

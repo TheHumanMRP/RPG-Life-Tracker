@@ -11,7 +11,7 @@ signal facing_direction_changed(new_direction: int)
 
 var health_component: HealthComponent
 var movement_component: MovementComponent
-var inventory_logic_component: InventoryLogicComponent
+var inventory_logic_component: Inven
 
 var facing_direction: int
 
