@@ -6,6 +6,7 @@ extends Node
 
 var inventory_related_managers: InventoryRelatedManagers
 var tasks_related_managers: TasksRelatedManagers
+
 # ============================================================================
 # Vars
 # ============================================================================
