@@ -14,6 +14,7 @@ enum ITEM_TYPES {
 enum GAME_STATES {
 	Playing,
 	UIMenu,
+	TaskManager,
 	DeathMenu,
 
 }
