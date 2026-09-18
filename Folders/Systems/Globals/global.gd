@@ -34,7 +34,7 @@ func _set_game_state_settings() -> void:
 
 			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
-			tasks_related_managers = None
+			tasks_related_managers = void
 
 		All_Enums.GAME_STATES.UIMenu:
 			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
