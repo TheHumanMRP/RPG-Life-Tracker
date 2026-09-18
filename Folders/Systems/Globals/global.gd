@@ -34,7 +34,7 @@ func _set_game_state_settings() -> void:
 
 			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
-			tasks_related_managers.free()
+			tasks_related_managers = null
 
 		All_Enums.GAME_STATES.UIMenu:
 			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
@@ -43,6 +43,8 @@ func _set_game_state_settings() -> void:
 		All_Enums.GAME_STATES.TaskManager:
 			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 			get_tree().paused = false
+
+			tasks_related_managers = TasksRelatedManagers.new()
 
 
 		All_Enums.GAME_STATES.DeathMenu:
