@@ -3,9 +3,9 @@
 # To-Do
 ---
 
-- [ ] Combine all the managers in groups
-- [ ] Make a var for each one of them
-- [ ] Make a new var that handles the game state
+- [X] Combine all the managers in groups
+- [X] Make a var for each one of them
+- [X] Make a new var that handles the game state
 - [ ] Make a new func that handles the loading and unloading of those manager group vars
 
 - [ ] Make the basic ui for task manager with godot nodes
