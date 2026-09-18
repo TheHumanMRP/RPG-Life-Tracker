@@ -10,7 +10,6 @@ var tasks_related_managers: TasksRelatedManagers
 
 func _setup_managers() -> void:
 	inventory_related_managers = InventoryRelatedManagers.new()
-	tasks_related_managers = TasksRelatedManagers.new()
 
 	inventory_related_managers.setup()
 	tasks_related_managers.setup()
@@ -27,13 +26,15 @@ var current_game_state: All_Enums.GAME_STATES:
 
 func _set_game_state_settings() -> void:
 	match current_game_state:
-		All_Enums.GAME_STATES.Playing:
+		All_Enums.GAME_STATES.Dungeon:
 			get_tree().paused = false
 
 			if OS.is_debug_build():
 				return
 
 			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+
+			tasks_related_managers = None
 
 		All_Enums.GAME_STATES.UIMenu:
 			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
@@ -43,7 +44,6 @@ func _set_game_state_settings() -> void:
 			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 			get_tree().paused = false
 
-			
 
 		All_Enums.GAME_STATES.DeathMenu:
 			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
