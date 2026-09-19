@@ -5,7 +5,7 @@ extends Node2D
 func _ready() -> void:
 	temp()
 	
-	# set_global_state()
+	set_global_state()
 	
 	print("\nDungeon Selection Menu: _ready func called")
 
