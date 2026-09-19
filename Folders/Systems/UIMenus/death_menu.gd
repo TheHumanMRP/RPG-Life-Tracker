@@ -37,4 +37,4 @@ func _on_main_menu_button_pressed() -> void:
 	Global.main_node.switch_to_scene(self, Constants.PATH_TO_MAIN_MENU, true)
 
 func set_global_state() -> void:
-	SignalBus.set_game_state.emit(All_Enums.GAME_STATES.UIMenu)
+	SignalBus.set_game_state.emit(All_Enums.GAME_STATES.DeathMenu)
