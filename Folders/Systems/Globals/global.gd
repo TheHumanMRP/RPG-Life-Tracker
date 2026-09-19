@@ -8,12 +8,6 @@ extends Node
 var inventory_related_managers: InventoryRelatedManagers
 var tasks_related_managers: TasksRelatedManagers
 
-func _setup_managers() -> void:
-	inventory_related_managers = InventoryRelatedManagers.new()
-
-	inventory_related_managers.setup()
-	tasks_related_managers.setup()
-
 # ============================================================================
 # Game State
 # ============================================================================
@@ -68,6 +62,8 @@ func _handle_loading_and_unloading_of_managers() -> void:
 				return
 
 			inventory_related_managers = InventoryRelatedManagers.new()
+
+			inventory_related_managers.setup()
 		
 		All_Enums.GAME_STATES.TaskManager:
 			if tasks_related_managers and inventory_related_managers:
@@ -75,6 +71,9 @@ func _handle_loading_and_unloading_of_managers() -> void:
 			
 			tasks_related_managers = TasksRelatedManagers.new()
 			inventory_related_managers = InventoryRelatedManagers.new()
+
+			tasks_related_managers.setup()
+			inventory_related_managers.setup()
 
 
 func _on_set_game_state(new_game_state: All_Enums.GAME_STATES) -> void:
@@ -104,8 +103,6 @@ func set_main_node() -> void:
 
 func _ready() -> void:
 	SignalBus.set_game_state.connect(_on_set_game_state)
-
-	_setup_managers()
 
 	call_deferred("test")
 	call_deferred("set_main_node")
