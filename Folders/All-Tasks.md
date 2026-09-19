@@ -7,7 +7,9 @@
 	- [ ] Inventory_UI_Layer
 	- [ ] DeathMenu
 
-	- cause they are loading before _ready of level runs so 
+	- in a call_deffered func 
+
+	- cause they are currently loading before _ready of level runs so the managers aren't loaded in yet and the hotbar causes a scene 
 
 - [ ] Make the basic ui for task manager with godot nodes
 	- [ ] Compelte the task grid
