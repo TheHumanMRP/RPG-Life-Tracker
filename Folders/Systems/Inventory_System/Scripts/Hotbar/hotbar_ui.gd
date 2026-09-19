@@ -5,9 +5,11 @@ extends Control
 
 var number_of_hotbar_slots: int
 
-@onready var hotbar_logic: HotbarManager = InfoGetter.get_hotbar_manager()
+var hotbar_logic: HotbarManager
 
 func _ready() -> void:
+	hotbar_logic = InfoGetter.get_hotbar_manager()
+
 	number_of_hotbar_slots = Constants.NUMBER_OF_HOTBAR_SLOTS
 
 	recreate_inventory_slots()
