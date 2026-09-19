@@ -66,6 +66,12 @@ func handle_loading_and_unloading_of_managers() -> void:
 				return
 
 			inventory_related_managers = InventoryRelatedManagers.new()
+		
+		All_Enums.GAME_STATES.TaskManager:
+			if tasks_related_managers and inventory_related_managers:
+				return
+			
+			
 
 
 func _on_set_game_state(new_game_state: All_Enums.GAME_STATES) -> void:
