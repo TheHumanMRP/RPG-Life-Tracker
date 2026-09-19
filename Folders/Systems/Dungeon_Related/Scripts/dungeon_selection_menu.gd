@@ -13,8 +13,6 @@ func set_global_state() -> void:
 	Global.signal_bus.set_game_state.emit(All_Enums.GAME_STATES.DungeonSelectionMenu)
 
 func temp() -> void:
-	var packed_level: PackedScene = load("res://Folders/Systems/Dungeon_Related/Scenes/level.tscn")
+	var path_to_level: String = "res://Folders/Systems/Dungeon_Related/Scenes/level.tscn"
 
-	var level: Node = packed_level.instantiate()
-
-	self.add_child(level)
+	Global.main_node.switch_to_scene(self, path_to_level, true)
