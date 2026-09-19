@@ -53,7 +53,8 @@ func _set_game_state_settings() -> void:
 			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 
-func handle_manager
+func handle_loading_and_unloading_of_managers() -> void:
+	
 
 
 func _on_set_game_state(new_game_state: All_Enums.GAME_STATES) -> void:
