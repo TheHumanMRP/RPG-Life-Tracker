@@ -12,11 +12,7 @@ var tasks_related_managers: TasksRelatedManagers
 # Game State
 # ============================================================================
 
-var current_game_state: All_Enums.GAME_STATES:
-	set(new_current_game_state):
-		current_game_state = new_current_game_state
-		_set_game_state_settings()
-		_handle_loading_and_unloading_of_managers()
+var current_game_state: All_Enums.GAME_STATES
 
 func _set_game_state_settings() -> void:
 	match current_game_state:
@@ -85,6 +81,8 @@ func _on_set_game_state(new_game_state: All_Enums.GAME_STATES) -> void:
 	)
 
 	current_game_state = new_game_state
+	_set_game_state_settings()
+	_handle_loading_and_unloading_of_managers()
 
 
 # ============================================================================
