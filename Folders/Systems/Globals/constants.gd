@@ -16,6 +16,10 @@ const PATH_TO_TASK_MANAGER: String = "res://Folders/Systems/Task-Manager/Scenes/
 const PATH_TO_DUNGEON_SELECTION_MENU: String = "res://Folders/Systems/Dungeon_Related/Scenes/dungeon_selection_menu.tscn"
 const PATH_TO_MAIN_MENU: String = "res://Folders/Systems/Main/Scenes/main_menu.tscn"
 
+const PATH_TO_UILAYER_SCENE: String = "res://Folders/Systems/Main/Scenes/ui_layer.tscn"
+const PATH_TO_INVENTORY_UI_LAYER: String = "res://Folders/Systems/Inventory_System/Scenes/inventory_ui_layer.tscn"
+const PATH_TO_DEATH_MENU: String = "res://Folders/Systems/Dungeon_Related/Death_Menu/death_menu.tscn"
+
 # PLayer
 const PLAYER_INVENTORY_NAME: String = "player"
 
@@ -28,8 +32,3 @@ const LIVE_SAVE_PATH := "user://live/save_data.tres"
 
 # Tasks
 const TASK_STATUS_OPTIONS: Array[String] = ["To Do!", "Completed!"]
-
-# Level UI
-const PATH_TO_UILAYER_SCENE: String = "res://Folders/Systems/Main/Scenes/ui_layer.tscn"
-const PATH_TO_INVENTORY_UI_LAYER: String = "res://Folders/Systems/Inventory_System/Scenes/inventory_ui_layer.tscn"
-const PATH_TO_DEATH_MENU: String = load("res://Folders/Systems/Dungeon_Related/Death_Menu/death_menu.tscn")""
