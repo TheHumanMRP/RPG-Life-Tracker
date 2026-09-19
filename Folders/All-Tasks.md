@@ -2,6 +2,11 @@
 
 # To-Do
 ---
+- [ ] Set up the spawning of:
+	- [ ] UILayer
+	- [ ] Inventory_UI_Layer
+	- [ ] DeathMenu
+
 - [ ] Make the basic ui for task manager with godot nodes
 	- [ ] Compelte the task grid
 	- [ ] Link the backend and the frontend
