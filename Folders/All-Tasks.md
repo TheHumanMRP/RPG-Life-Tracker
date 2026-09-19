@@ -2,15 +2,6 @@
 
 # To-Do
 ---
-- [ ] In level set up the spawning of:
-	- [ ] UILayer
-	- [ ] Inventory_UI_Layer
-	- [ ] DeathMenu
-
-	- in a call_deffered func 
-
-	- cause they are currently loading before _ready of level runs so the managers aren't loaded in yet and the hotbar causes a scene 
-
 - [ ] Make the basic ui for task manager with godot nodes
 	- [ ] Compelte the task grid
 	- [ ] Link the backend and the frontend
@@ -41,6 +32,15 @@
 
 # Completed Tasks
 ---
+
+- [X] In level set up the spawning of:
+	- [X] UILayer
+	- [X] Inventory_UI_Layer
+	- [X] DeathMenu
+
+	- in a call_deffered func 
+
+	- cause they are currently loading before _ready of level runs so the managers aren't loaded in yet and the hotbar causes a scene 
 
 - [X] Combine all the managers in groups
 - [X] Make a var for each one of them
