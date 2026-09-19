@@ -31,4 +31,5 @@ const TASK_STATUS_OPTIONS: Array[String] = ["To Do!", "Completed!"]
 
 # Level UI
 const PATH_TO_UILAYER_SCENE: String = "res://Folders/Systems/Main/Scenes/ui_layer.tscn"
-const PATH_TO_INVENTORY_UI_LAYER: String = load("")""
+const PATH_TO_INVENTORY_UI_LAYER: String = "res://Folders/Systems/Inventory_System/Scenes/inventory_ui_layer.tscn"
+const PATH_TO_DEATH_MENU: String = load("res://Folders/Systems/Dungeon_Related/Death_Menu/death_menu.tscn")""
