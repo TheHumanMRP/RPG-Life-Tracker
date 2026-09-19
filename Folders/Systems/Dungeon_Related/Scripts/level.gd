@@ -12,7 +12,7 @@ func _ready() -> void:
 
 	add_player()
 
-	call_deferred("_setup_ui_layers")
+	_setup_ui_layers()
 
 func _setup_spawn_point() -> void:
 	if has_node("%SpawnPoint"):
