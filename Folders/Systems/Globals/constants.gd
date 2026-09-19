@@ -14,7 +14,7 @@ const MAIN_MENU_TASK_MANAGER_BUTTON_TEXT: String = "  Task Manager  "
 # Scene Paths
 const PATH_TO_TASK_MANAGER: String = "res://Folders/Systems/Task-Manager/Scenes/task_manager.tscn"
 const PATH_TO_DUNGEON_SELECTION_MENU: String = "res://Folders/Systems/Dungeon_Related/Scenes/dungeon_selection_menu.tscn"
-const PATH_TO_MAIN_MENU: String = ("res://Folders/Systems/Main/Scenes/main_menu.tscn")
+const PATH_TO_MAIN_MENU: String = "res://Folders/Systems/Main/Scenes/main_menu.tscn"
 
 # PLayer
 const PLAYER_INVENTORY_NAME: String = "player"
@@ -30,4 +30,5 @@ const LIVE_SAVE_PATH := "user://live/save_data.tres"
 const TASK_STATUS_OPTIONS: Array[String] = ["To Do!", "Completed!"]
 
 # Level UI
-const PATH_TO
+const PATH_TO_UILAYER_SCENE: String = "res://Folders/Systems/Main/Scenes/ui_layer.tscn"
+const PATH
