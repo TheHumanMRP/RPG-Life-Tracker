@@ -30,7 +30,11 @@ func _set_game_state_settings() -> void:
 			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 			get_tree().paused = false
 
-		All_Enums.GAME_STATES.Dungeon:
+		All_Enums.GAME_STATES.DungeonSelectionMenu:
+			get_tree().paused = false
+			
+
+		All_Enums.GAME_STATES.DungeonPlaying:
 			get_tree().paused = false
 
 			if OS.is_debug_build():
@@ -55,7 +59,11 @@ func _handle_loading_and_unloading_of_managers() -> void:
 			tasks_related_managers = null
 			inventory_related_managers = null
 		
-		All_Enums.GAME_STATES.Dungeon:
+		All_Enums.GAME_STATES.DungeonSelectionMenu:
+			tasks_related_managers = null
+			inventory_related_managers = null
+
+		All_Enums.GAME_STATES.DungeonPlaying:
 			tasks_related_managers = null
 
 			if inventory_related_managers:
