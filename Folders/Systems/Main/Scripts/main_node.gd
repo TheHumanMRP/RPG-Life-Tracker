@@ -8,10 +8,10 @@ func switch_to_scene(caller: Node, new_scene_path: String, clear_all_children: b
 	if clear_all_children:
 		for child in self.get_children():
 			child.queue_free()
-    
+	
 	if self.get_children().has(caller):
 		self.remove_child(caller)
-    
+	
 	var new_scene: Node = get_new_scene(new_scene_path)
 
 	add_child(new_scene)
