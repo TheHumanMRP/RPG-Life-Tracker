@@ -27,12 +27,12 @@ var current_game_state: All_Enums.GAME_STATES:
 func _set_game_state_settings() -> void:
 	match current_game_state:
 		All_Enums.GAME_STATES.MainMenu:
-			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 			get_tree().paused = false
+			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 		All_Enums.GAME_STATES.DungeonSelectionMenu:
 			get_tree().paused = false
-			
+			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 		All_Enums.GAME_STATES.DungeonPlaying:
 			get_tree().paused = false
@@ -42,14 +42,12 @@ func _set_game_state_settings() -> void:
 
 			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
-			tasks_related_managers = null
-
 		All_Enums.GAME_STATES.TaskManager:
-			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 			get_tree().paused = false
-
+			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 		All_Enums.GAME_STATES.DeathMenu:
+			get_tree().paused = true
 			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 
