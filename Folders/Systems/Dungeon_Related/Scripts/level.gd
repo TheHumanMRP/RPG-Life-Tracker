@@ -5,9 +5,7 @@ extends Node2D
 @onready var spawn_point_marker: Marker2D
 
 func _ready() -> void:
-	SignalBus.set_game_state.emit(All_Enums.GAME_STATES.Playing)
-
-	SignalBus.respawn_player.connect(_on_player_respawn)
+	SignalBus.set_game_state.emit(All_Enums.GAME_STATES.DungeonPlaying)
 
 	_setup_spawn_point()
 
@@ -25,6 +23,3 @@ func add_player() -> void:
 	player.setup(spawn_point)
 
 	add_child(player)
-
-func _on_player_respawn() -> void:
-	SignalBus.set_game_state.emit(All_Enums.GAME_STATES.Playing)
