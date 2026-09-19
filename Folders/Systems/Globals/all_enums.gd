@@ -11,9 +11,11 @@ enum ITEM_TYPES {
 
 }
 
+# Don't forget to update the Global script dude
 enum GAME_STATES {
 	MainMenu,
-	Dungeon,
+	DungeonSelectionMenu,
+	DungeonPlaying,
 	TaskManager,
 	DeathMenu,
 

@@ -10,7 +10,7 @@ func _ready() -> void:
 	print("\nDungeon Selection Menu: _ready func called")
 
 func set_global_state() -> void:
-	Global.signal_bus.set_game_state.emit(All_Enums.GAME_STATES.UIMenu)
+	Global.signal_bus.set_game_state.emit(All_Enums.GAME_STATES.DungeonSelectionMenu)
 
 func temp() -> void:
 	var packed_level: PackedScene = load("res://Folders/Systems/Dungeon_Related/Scenes/level.tscn")
