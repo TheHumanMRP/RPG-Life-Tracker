@@ -77,6 +77,13 @@ func _handle_loading_and_unloading_of_managers() -> void:
 
 
 func _on_set_game_state(new_game_state: All_Enums.GAME_STATES) -> void:
+	print(
+		"\nSTATE CHANGE: ",
+		current_game_state,
+		" -> ",
+		new_game_state
+	)
+
 	current_game_state = new_game_state
 
 
