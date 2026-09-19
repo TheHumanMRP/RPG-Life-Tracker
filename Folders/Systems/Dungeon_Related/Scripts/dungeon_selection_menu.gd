@@ -15,4 +15,6 @@ func set_global_state() -> void:
 func temp() -> void:
 	var path_to_level: String = "res://Folders/Systems/Dungeon_Related/Scenes/level.tscn"
 
+	SignalBus.set_game_state.emit(All_Enums.GAME_STATES.DungeonPlaying)
+
 	Global.main_node.switch_to_scene(self, path_to_level, true)
