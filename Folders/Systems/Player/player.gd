@@ -58,9 +58,12 @@ func _setup_component() -> void:
 
 	equipment_manager.setup(self)
 
-func _process(delta: float) -> void:
-	if health_component.dead:
-		return
+
+# Possibly useless code
+# func _process(delta: float) -> void:
+# 	if health_component.dead:
+# 		return
+
 # --------------------------------------------------------------------
 # Spawn & Respawn
 # --------------------------------------------------------------------
