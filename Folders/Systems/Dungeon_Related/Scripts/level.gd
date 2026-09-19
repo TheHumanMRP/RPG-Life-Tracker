@@ -18,7 +18,7 @@ func _setup_spawn_point() -> void:
 		spawn_point = $%SpawnPoint.position
 
 func _setup_ui_layers() -> void:
-	var ui_layer: Node = load(Constants.PATH_TO_INVENTORY_UI_LAYER).instantiate()
+	var ui_layer: Node = load(Constants.PATH_TO_UILAYER_SCENE).instantiate()
 	var inventory_ui_layer: Node = load(Constants.PATH_TO_INVENTORY_UI_LAYER).instantiate()
 	var death_menu: Node = load(Constants.PATH_TO_DEATH_MENU).instantiate()
 
