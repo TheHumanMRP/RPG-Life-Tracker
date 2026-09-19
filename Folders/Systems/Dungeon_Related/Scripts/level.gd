@@ -11,12 +11,14 @@ func _ready() -> void:
 
 	add_player()
 
+	_setup_ui_layers()
+
 func _setup_spawn_point() -> void:
 	if has_node("%SpawnPoint"):
 		spawn_point = $%SpawnPoint.position
 
 func _setup_ui_layers() -> void:
-	pass
+	var packed_ui_layer : PackedScene = load()
 
 func add_player() -> void:
 	var player_packed_scene: PackedScene = load("res://Folders/Systems/Player/player.tscn")
