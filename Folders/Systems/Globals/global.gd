@@ -15,6 +15,8 @@ func _setup_managers() -> void:
 	tasks_related_managers.setup()
 
 
+
+
 # ============================================================================
 # Game State
 # ============================================================================
@@ -40,7 +42,8 @@ func _set_game_state_settings() -> void:
 			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 			get_tree().paused = false
 
-			
+			tasks_related_managers = null
+			inventory_related_managers = null
 
 		All_Enums.GAME_STATES.TaskManager:
 			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
