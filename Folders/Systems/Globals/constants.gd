@@ -28,3 +28,6 @@ const LIVE_SAVE_PATH := "user://live/save_data.tres"
 
 # Tasks
 const TASK_STATUS_OPTIONS: Array[String] = ["To Do!", "Completed!"]
+
+# Level UI
+const PATH_TO
