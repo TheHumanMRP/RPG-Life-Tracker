@@ -2,12 +2,6 @@
 
 # To-Do
 ---
-
-- [X] Combine all the managers in groups
-- [X] Make a var for each one of them
-- [X] Make a new var that handles the game state
-- [ ] Make a new func that handles the loading and unloading of those manager group vars
-
 - [ ] Make the basic ui for task manager with godot nodes
 	- [ ] Compelte the task grid
 	- [ ] Link the backend and the frontend
@@ -38,6 +32,11 @@
 
 # Completed Tasks
 ---
+
+- [X] Combine all the managers in groups
+- [X] Make a var for each one of them
+- [X] Make a new var that handles the game state
+- [X] Make a new func that handles the loading and unloading of those manager group vars
 
 - [X] Make the `Task` class
 - [X] Make the `TaskManager`

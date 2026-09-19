@@ -22,6 +22,7 @@ var current_game_state: All_Enums.GAME_STATES:
 	set(new_current_game_state):
 		current_game_state = new_current_game_state
 		_set_game_state_settings()
+		_handle_loading_and_unloading_of_managers()
 
 func _set_game_state_settings() -> void:
 	match current_game_state:
