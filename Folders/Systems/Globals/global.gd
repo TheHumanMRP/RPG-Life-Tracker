@@ -48,7 +48,7 @@ func _set_game_state_settings() -> void:
 			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 
-func handle_loading_and_unloading_of_managers() -> void:
+func _handle_loading_and_unloading_of_managers() -> void:
 	match current_game_state:
 		All_Enums.GAME_STATES.MainMenu:
 			tasks_related_managers = null
