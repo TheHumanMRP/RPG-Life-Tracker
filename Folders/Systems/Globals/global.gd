@@ -56,6 +56,7 @@ func _handle_loading_and_unloading_of_managers() -> void:
 			inventory_related_managers = null
 
 		All_Enums.GAME_STATES.DungeonPlaying:
+			print("Dungeon Playing setter")
 			tasks_related_managers = null
 			inventory_related_managers = InventoryRelatedManagers.new()
 			inventory_related_managers.setup()
