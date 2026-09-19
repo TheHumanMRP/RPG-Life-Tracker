@@ -18,10 +18,11 @@ func _setup_spawn_point() -> void:
 		spawn_point = $%SpawnPoint.position
 
 func _setup_ui_layers() -> void:
-	var packed_ui_layer: PackedScene = load(Constants.PATH_TO_INVENTORY_UI_LAYER)
-	packed_ui_layer.instantiate()
-	var packed_inventory_ui_layer: PackedScene = load(Constants.PATH_TO_INVENTORY_UI_LAYER)
-	var packed_death_menu: PackedScene = load(Constants.PATH_TO_DEATH_MENU)
+	var ui_layer: Node = load(Constants.PATH_TO_INVENTORY_UI_LAYER).instantiate()
+	var packed_inventory_ui_layer: Node = load(Constants.PATH_TO_INVENTORY_UI_LAYER).instantiate()
+	var packed_death_menu: Node = load(Constants.PATH_TO_DEATH_MENU).instantiate()
+
+	
 
 
 func add_player() -> void:
