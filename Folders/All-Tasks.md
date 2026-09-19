@@ -2,10 +2,12 @@
 
 # To-Do
 ---
-- [ ] Set up the spawning of:
+- [ ] In level set up the spawning of:
 	- [ ] UILayer
 	- [ ] Inventory_UI_Layer
 	- [ ] DeathMenu
+
+	- cause they are loading before _ready of level runs so 
 
 - [ ] Make the basic ui for task manager with godot nodes
 	- [ ] Compelte the task grid
