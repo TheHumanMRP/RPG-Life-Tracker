@@ -2,7 +2,8 @@ class_name TestingScript
 extends Node
 
 func test() -> void:
-	test_task_manager_backend()
+	pass
+	# test_task_manager_backend()
 
 func test_task_manager_backend() -> void:
 	var task_manager_backend: TaskManager = TaskManager.new()

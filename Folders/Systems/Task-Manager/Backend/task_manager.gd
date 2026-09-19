@@ -53,7 +53,7 @@ func mark_task_as_completed(task_id: int) -> void:
 
 ## Adds a new task.
 func add_task(task_name: String) -> int:
-	print("\nTask Manager Backend: Adding a new task.")
+	print("\nTask Manager: Adding a new task.")
 
 	var data: TasksSaveData = get_save_data()
 
