@@ -18,7 +18,9 @@ func _setup_spawn_point() -> void:
 		spawn_point = $%SpawnPoint.position
 
 func _setup_ui_layers() -> void:
-	var packed_ui_layer : PackedScene = load()
+	var packed_ui_layer: PackedScene = load(Constants.PATH_TO_INVENTORY_UI_LAYER)
+	var packed_inventory_ui_layer: PackedScene = load(Constants.PATH_TO_INVENTORY_UI_LAYER)
+	var packed_death_menu: PackedScene = load(Constants.PATH_TO_DEATH_MENU)
 
 func add_player() -> void:
 	var player_packed_scene: PackedScene = load("res://Folders/Systems/Player/player.tscn")
