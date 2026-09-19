@@ -14,9 +14,6 @@ func _setup_managers() -> void:
 	inventory_related_managers.setup()
 	tasks_related_managers.setup()
 
-
-
-
 # ============================================================================
 # Game State
 # ============================================================================
@@ -54,6 +51,10 @@ func _set_game_state_settings() -> void:
 
 		All_Enums.GAME_STATES.DeathMenu:
 			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+
+
+func handle_manager
+
 
 func _on_set_game_state(new_game_state: All_Enums.GAME_STATES) -> void:
 	current_game_state = new_game_state
