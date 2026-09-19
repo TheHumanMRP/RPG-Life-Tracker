@@ -25,6 +25,13 @@ var current_game_state: All_Enums.GAME_STATES:
 
 func _set_game_state_settings() -> void:
 	match current_game_state:
+		All_Enums.GAME_STATES.MainMenu:
+			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+			get_tree().paused = false
+
+			tasks_related_managers = null
+			inventory_related_managers = null
+
 		All_Enums.GAME_STATES.Dungeon:
 			get_tree().paused = false
 
@@ -34,13 +41,6 @@ func _set_game_state_settings() -> void:
 			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 			tasks_related_managers = null
-
-		All_Enums.GAME_STATES.UIMenu:
-			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-			get_tree().paused = false
-
-			tasks_related_managers = null
-			inventory_related_managers = null
 
 		All_Enums.GAME_STATES.TaskManager:
 			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
@@ -54,7 +54,9 @@ func _set_game_state_settings() -> void:
 
 
 func handle_loading_and_unloading_of_managers() -> void:
-	
+	match current_game_state:
+		All_Enums.GAME_STATES.MainMenu:
+			tasks_related_managers = 
 
 
 func _on_set_game_state(new_game_state: All_Enums.GAME_STATES) -> void:
