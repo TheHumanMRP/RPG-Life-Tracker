@@ -1,4 +1,4 @@
-extends CanvasLayer
+extends PanelContainer
 
 @onready var respawn_button: Button = $%Respawn_Button
 @onready var main_menu_button: Button = $%Main_Menu_Button

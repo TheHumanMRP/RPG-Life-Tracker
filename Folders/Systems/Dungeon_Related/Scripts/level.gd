@@ -25,7 +25,7 @@ func _setup_ui_layers() -> void:
 
 	self.add_child(ui_layer)
 	self.add_child(inventory_ui_layer)
-	self.add_child(death_menu)
+	# self.add_child(death_menu)
 
 
 func add_player() -> void:
