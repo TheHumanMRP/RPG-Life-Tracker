@@ -20,7 +20,7 @@ const PATH_TO_UILAYER_SCENE: String = "res://Folders/Systems/Main/Scenes/ui_laye
 const PATH_TO_INVENTORY_UI_LAYER: String = "res://Folders/Systems/Inventory_System/Scenes/inventory_ui_layer.tscn"
 const PATH_TO_DEATH_MENU: String = "res://Folders/Systems/Dungeon_Related/Death_Menu/death_menu.tscn"
 
-const PATH_TO
+const PATH_TO_HOTBAR_SLOT: String = "res://Folders/Systems/Inventory_System/Scenes/hotbar_slot.tscn"
 
 # PLayer
 const PLAYER_INVENTORY_NAME: String = "player"

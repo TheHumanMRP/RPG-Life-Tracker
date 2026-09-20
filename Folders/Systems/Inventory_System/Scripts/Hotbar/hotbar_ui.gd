@@ -22,7 +22,7 @@ func recreate_inventory_slots() -> void:
 	for child in hotbar.get_children():
 		child.queue_free()
 
-	var packed_inventory_slot: PackedScene = load("res://Folders/Systems/Inventory_System/Scenes/hotbar_slot.tscn")
+	var packed_inventory_slot: PackedScene = load(Constants.PATH_TO_HOTBAR_SLOT)
 
 	for i in range(number_of_hotbar_slots):
 		var hotbar_slot: HotbarSlot = packed_inventory_slot.instantiate()
