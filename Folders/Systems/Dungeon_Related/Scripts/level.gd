@@ -21,7 +21,7 @@ func _setup_spawn_point() -> void:
 func _setup_ui_layers() -> void:
 	var ui_layer: Node = load(Constants.PATH_TO_UILAYER_SCENE).instantiate()
 	var inventory_ui_layer: Node = load(Constants.PATH_TO_INVENTORY_UI_LAYER).instantiate()
-	var death_menu: Node = load(Constants.PATH_TO_DEATH_MENU).instantiate()
+	# var death_menu: Node = load(Constants.PATH_TO_DEATH_MENU).instantiate()
 
 	self.add_child(ui_layer)
 	self.add_child(inventory_ui_layer)
