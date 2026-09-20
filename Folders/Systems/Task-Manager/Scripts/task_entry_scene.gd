@@ -10,7 +10,9 @@ var task_status: All_Enums.TASK_STATUS
 @export var task_name_label: Label
 @export var task_status_option_button: OptionButton
 
-
+# ===============================================================
+# Setup
+# ===============================================================
 func _ready() -> void:
 	task_status_option_button.item_selected.connect(
 		task_completed_status_changed
@@ -36,6 +38,9 @@ func refresh() -> void:
 	_refresh_ui()
 
 
+# ===============================================================
+# STATE MANAGEMENT
+# ===============================================================
 func task_completed_status_changed(option_button_index: int) -> void:
 	var new_status: String = (
 		task_status_option_button.get_item_text(option_button_index)
