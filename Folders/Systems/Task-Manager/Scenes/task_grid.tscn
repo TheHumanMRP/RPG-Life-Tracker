@@ -1,8 +1,34 @@
 [gd_scene format=3 uid="uid://begy5501tfsx6"]
 
-[node name="Task_Grid" type="FlowContainer" unique_id=874202142]
+[ext_resource type="PackedScene" uid="uid://vt6eolqkwws8" path="res://Folders/Systems/Task-Manager/Scenes/task_entry_scene.tscn" id="1_vs7gx"]
+
+[node name="Task_Grid" type="HScrollBar" unique_id=1405335494]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="FlowContainer" type="FlowContainer" parent="." unique_id=563763624]
+layout_mode = 0
+offset_right = 168.0
+offset_bottom = 542.0
+alignment = 1
+
+[node name="Task_Entry_Scene" parent="FlowContainer" unique_id=465403137 instance=ExtResource("1_vs7gx")]
+layout_mode = 2
+
+[node name="Task_Entry_Scene2" parent="FlowContainer" unique_id=1427484251 instance=ExtResource("1_vs7gx")]
+layout_mode = 2
+
+[node name="Task_Entry_Scene3" parent="FlowContainer" unique_id=1906361384 instance=ExtResource("1_vs7gx")]
+layout_mode = 2
+
+[node name="Task_Entry_Scene4" parent="FlowContainer" unique_id=692285340 instance=ExtResource("1_vs7gx")]
+layout_mode = 2
+
+[node name="Task_Entry_Scene5" parent="FlowContainer" unique_id=88181241 instance=ExtResource("1_vs7gx")]
+layout_mode = 2
+
+[node name="Task_Entry_Scene6" parent="FlowContainer" unique_id=220786173 instance=ExtResource("1_vs7gx")]
+layout_mode = 2
