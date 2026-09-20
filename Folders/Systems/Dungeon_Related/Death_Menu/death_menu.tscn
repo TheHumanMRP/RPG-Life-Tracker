@@ -2,8 +2,11 @@
 
 [ext_resource type="Script" uid="uid://c85obb5b7y12q" path="res://Folders/Systems/Dungeon_Related/Death_Menu/death_menu.gd" id="1_dd6n6"]
 
-[node name="DeathMenu" type="CanvasLayer" unique_id=1799669249]
+[node name="DeathMenu" type="CanvasLayer" unique_id=1799669249 node_paths=PackedStringArray("respawn_button", "main_menu_button", "you_died_label")]
 script = ExtResource("1_dd6n6")
+respawn_button = NodePath("Death_Menu_Panel_Container/MarginContainer/VBoxContainer/Respawn_Button")
+main_menu_button = NodePath("Death_Menu_Panel_Container/MarginContainer/VBoxContainer/Main_Menu_Button")
+you_died_label = NodePath("Death_Menu_Panel_Container/MarginContainer/VBoxContainer/You_Died_Label")
 
 [node name="Death_Menu_Panel_Container" type="PanelContainer" parent="." unique_id=156337057]
 unique_name_in_owner = true

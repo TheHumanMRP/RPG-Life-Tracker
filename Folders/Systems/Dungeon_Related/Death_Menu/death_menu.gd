@@ -1,10 +1,8 @@
 extends CanvasLayer
 
-@onready var respawn_button: Button = $%Respawn_Button
-@onready var main_menu_button: Button = $%Main_Menu_Button
-@onready var you_died_label: Label = $%You_Died_Label
-
-@export var death_menu_panel_container: PanelContainer
+@export var respawn_button: Button
+@export var main_menu_button: Button
+@export var you_died_label: Label
 
 func _ready() -> void:
 	print("\nDeath Menu: _ready func called")
@@ -39,6 +37,7 @@ func _on_respawn_button_pressed() -> void:
 
 	set_global_state_dungeon_playing()
 
+	self.hide()
 
 	print("\nDeath Menu: Respawn Button Pressed")
 
