@@ -22,7 +22,7 @@ func _on_player_died() -> void:
 
 	await get_tree().create_timer(0.5).timeout
 
-	set_global_state()
+	set_global_state_death_menu()
 
 	show()
 
@@ -36,5 +36,5 @@ func _on_respawn_button_pressed() -> void:
 func _on_main_menu_button_pressed() -> void:
 	Global.main_node.switch_to_scene(self, Constants.PATH_TO_MAIN_MENU, true)
 
-func set_global_state() -> void:
+func set_global_state_death_menu() -> void:
 	SignalBus.set_game_state.emit(All_Enums.GAME_STATES.DeathMenu)
