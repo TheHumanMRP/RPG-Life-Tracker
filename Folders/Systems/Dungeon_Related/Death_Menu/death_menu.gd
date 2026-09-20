@@ -33,8 +33,6 @@ func _on_respawn_button_pressed() -> void:
 
 	print("\nDeath Menu: Respawn Button Pressed")
 
-	self.queue_free()
-
 func _on_main_menu_button_pressed() -> void:
 	Global.main_node.switch_to_scene(self, Constants.PATH_TO_MAIN_MENU, true)
 
