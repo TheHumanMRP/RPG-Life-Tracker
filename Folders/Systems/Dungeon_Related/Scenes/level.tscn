@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cu4hnlkwj8l7d" path="res://Folders/Systems/Dungeon_Related/Scenes/damage_area.tscn" id="4_d6cyu"]
 [ext_resource type="PackedScene" uid="uid://bvnmaqdei35bn" path="res://Folders/Systems/Enemy/enemy.tscn" id="5_r324k"]
 [ext_resource type="PackedScene" uid="uid://bgbgfpngstnov" path="res://Folders/Systems/Main/Scenes/ui_layer.tscn" id="6_7id7t"]
+[ext_resource type="PackedScene" uid="uid://ck6amdbdbjx14" path="res://Folders/Systems/Dungeon_Related/Death_Menu/death_menu.tscn" id="7_ped18"]
 [ext_resource type="PackedScene" uid="uid://svisxss24oxa" path="res://Folders/Systems/Inventory_System/Scenes/inventory_ui_layer.tscn" id="8_cr37b"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j5vai"]
@@ -186,3 +187,5 @@ position = Vector2(121, 171)
 [node name="UILayer" parent="." unique_id=1819027134 instance=ExtResource("6_7id7t")]
 
 [node name="Inventory_UI_Layer" parent="." unique_id=445007278 instance=ExtResource("8_cr37b")]
+
+[node name="DeathMenu" parent="." unique_id=1799669249 instance=ExtResource("7_ped18")]
