@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dgcrca6nf3v6o"]
 
 [ext_resource type="PackedScene" uid="uid://begy5501tfsx6" path="res://Folders/Systems/Task-Manager/Scenes/task_grid.tscn" id="1_65osv"]
+[ext_resource type="Script" uid="uid://bxep80oxjlhkm" path="res://Folders/Systems/Task-Manager/Scripts/task_manager_ui.gd" id="1_tv5vg"]
 
 [node name="Task_Manager" type="Control" unique_id=763049940]
 layout_mode = 3
@@ -9,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_tv5vg")
 
 [node name="Task_Grid" parent="." unique_id=943145978 instance=ExtResource("1_65osv")]
 layout_mode = 0
