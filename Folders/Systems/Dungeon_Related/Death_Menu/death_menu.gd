@@ -11,6 +11,9 @@ func _ready() -> void:
 
 	setup_properties()
 
+	setup_signals()
+
+func setup_signals() -> void:
 	respawn_button.pressed.connect(_on_respawn_button_pressed)
 	main_menu_button.pressed.connect(_on_main_menu_button_pressed)
 	
@@ -29,12 +32,13 @@ func _on_player_died() -> void:
 
 	set_global_state_death_menu()
 
-	show()
+	self.show()
 
 func _on_respawn_button_pressed() -> void:
 	SignalBus.respawn_player.emit()
 
 	set_global_state_dungeon_playing()
+
 
 	print("\nDeath Menu: Respawn Button Pressed")
 
