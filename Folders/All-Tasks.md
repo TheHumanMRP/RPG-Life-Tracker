@@ -3,7 +3,7 @@
 # To-Do
 ---
 
-- [ ] Handle 
+- [ ] Handle changing of task status in task entry scene
 
 - [ ] Make the basic ui for task manager with godot nodes
 	- [ ] Compelte the task grid
