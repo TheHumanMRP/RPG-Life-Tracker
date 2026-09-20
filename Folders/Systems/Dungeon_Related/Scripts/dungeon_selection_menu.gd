@@ -2,9 +2,10 @@ extends Node2D
 
 # To-Do: Impliment proper selection ui later
 
-func _ready() -> void:
+func _init() -> void:
 	set_global_state()
 
+func _ready() -> void:
 	temp()
 	
 	print("\nDungeon Selection Menu: _ready func called")

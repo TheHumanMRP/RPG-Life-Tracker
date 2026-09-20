@@ -4,9 +4,10 @@ extends CanvasLayer
 @onready var dungeon_button: Button = $%Dungoen_Button
 @onready var task_manager_button: Button = $%Task_Manager_Button
 
+func _init() -> void:
+	set_global_state()
 
 func _ready() -> void:
-	set_global_state()
 	setup_labels()
 	setup_signals()
 
