@@ -2,6 +2,9 @@
 
 # To-Do
 ---
+
+- [ ] Handle 
+
 - [ ] Make the basic ui for task manager with godot nodes
 	- [ ] Compelte the task grid
 	- [ ] Link the backend and the frontend
