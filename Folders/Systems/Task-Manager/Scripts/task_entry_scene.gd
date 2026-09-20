@@ -51,10 +51,9 @@ func task_completed_status_changed(option_button_index: int) -> void:
 			pass
 
 
-func _get_task() -> Task:
-	return InfoGetter.get_task_by_task_id(task_id)
-
-
+# ===============================================================
+# REFRESH UI
+# ===============================================================
 func _refresh_ui() -> void:
 	_refresh_task_name()
 	_refresh_status_option_button()
@@ -69,3 +68,10 @@ func _refresh_status_option_button() -> void:
 
 	for option in Constants.TASK_STATUS_OPTIONS:
 		task_status_option_button.add_item(option)
+
+
+# ===============================================================
+# TASK GETTER
+# ===============================================================
+func _get_task() -> Task:
+	return InfoGetter.get_task_by_task_id(task_id)
