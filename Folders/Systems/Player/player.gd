@@ -58,12 +58,6 @@ func _setup_component() -> void:
 
 	equipment_manager.setup(self)
 
-
-# Possibly useless code
-# func _process(delta: float) -> void:
-# 	if health_component.dead:
-# 		return
-
 # --------------------------------------------------------------------
 # Spawn & Respawn
 # --------------------------------------------------------------------
@@ -116,7 +110,6 @@ func _update_facing_direction(direction: int) -> void:
 		return
 
 	if direction != facing_direction:
-		print("\nPlayer: Facing direction changed signal emitted")
 		facing_direction = direction
 		facing_direction_changed.emit(facing_direction)
 
