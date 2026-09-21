@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dgcrca6nf3v6o"]
 
-[ext_resource type="PackedScene" uid="uid://begy5501tfsx6" path="res://Folders/Systems/Task-Manager/Scenes/task_grid.tscn" id="1_65osv"]
 [ext_resource type="Script" uid="uid://bxep80oxjlhkm" path="res://Folders/Systems/Task-Manager/Scripts/task_manager_ui.gd" id="1_tv5vg"]
+[ext_resource type="PackedScene" uid="uid://vt6eolqkwws8" path="res://Folders/Systems/Task-Manager/Scenes/task_entry_scene.tscn" id="2_tv5vg"]
 
 [node name="Task_Manager" type="Control" unique_id=763049940]
 layout_mode = 3
@@ -12,5 +12,46 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_tv5vg")
 
-[node name="Task_Grid" parent="." unique_id=1175166786 instance=ExtResource("1_65osv")]
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=804979682]
 layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer" unique_id=2138300449]
+layout_mode = 2
+
+[node name="Task_Entry_Scene" parent="ScrollContainer/VBoxContainer" unique_id=465403137 instance=ExtResource("2_tv5vg")]
+layout_mode = 2
+
+[node name="Task_Entry_Scene2" parent="ScrollContainer/VBoxContainer" unique_id=738504402 instance=ExtResource("2_tv5vg")]
+layout_mode = 2
+
+[node name="Task_Entry_Scene3" parent="ScrollContainer/VBoxContainer" unique_id=965431327 instance=ExtResource("2_tv5vg")]
+layout_mode = 2
+
+[node name="Task_Entry_Scene4" parent="ScrollContainer/VBoxContainer" unique_id=1762343041 instance=ExtResource("2_tv5vg")]
+layout_mode = 2
+
+[node name="Task_Entry_Scene5" parent="ScrollContainer/VBoxContainer" unique_id=536277269 instance=ExtResource("2_tv5vg")]
+layout_mode = 2
+
+[node name="Task_Entry_Scene6" parent="ScrollContainer/VBoxContainer" unique_id=373919441 instance=ExtResource("2_tv5vg")]
+layout_mode = 2
+
+[node name="Task_Entry_Scene7" parent="ScrollContainer/VBoxContainer" unique_id=1022147690 instance=ExtResource("2_tv5vg")]
+layout_mode = 2
+
+[node name="Task_Entry_Scene8" parent="ScrollContainer/VBoxContainer" unique_id=740995480 instance=ExtResource("2_tv5vg")]
+layout_mode = 2
+
+[node name="Task_Entry_Scene9" parent="ScrollContainer/VBoxContainer" unique_id=997668158 instance=ExtResource("2_tv5vg")]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="." unique_id=858576306]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Hello"
