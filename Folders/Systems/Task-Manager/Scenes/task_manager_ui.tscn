@@ -13,6 +13,7 @@ grow_vertical = 2
 script = ExtResource("1_tv5vg")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=804979682]
+clip_contents = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
