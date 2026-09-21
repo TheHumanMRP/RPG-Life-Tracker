@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cc57tdf5ulo64" path="res://Folders/Assets/UI_Theme/Buttons/button-hover.png" id="2_jqll8"]
 [ext_resource type="Texture2D" uid="uid://bumasg0l02mi6" path="res://Folders/Assets/UI_Theme/Buttons/button-normal.png" id="3_7273y"]
 [ext_resource type="Texture2D" uid="uid://bn3jneltcyrm0" path="res://Folders/Assets/UI_Theme/Buttons/button-pressed.png" id="4_h40qw"]
+[ext_resource type="Texture2D" uid="uid://doq41bxt5f7n4" path="res://Folders/Assets/UI_Theme/PanelContainer/panel-bg.png" id="5_l21eh"]
 
 [sub_resource type="FontVariation" id="FontVariation_a7ld8"]
 base_font = ExtResource("1_2dlhk")
@@ -41,9 +42,21 @@ expand_margin_top = 4.0
 expand_margin_right = 4.0
 expand_margin_bottom = 4.0
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o0ljh"]
+texture = ExtResource("5_l21eh")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
 [resource]
 default_font = ExtResource("1_2dlhk")
 Button/fonts/font = SubResource("FontVariation_a7ld8")
 Button/styles/hover = SubResource("StyleBoxTexture_73qvp")
 Button/styles/normal = SubResource("StyleBoxTexture_doy41")
 Button/styles/pressed = SubResource("StyleBoxTexture_w1p51")
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_o0ljh")
