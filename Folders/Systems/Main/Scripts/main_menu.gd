@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 @onready var main_menu_label: Label = $%Main_Menu_Label
-@onready var dungeon_button: Button = $%Dungoen_Button
+@onready var dungeon_selection_menu_button: Button = $%Dungoen
 @onready var task_manager_button: Button = $%Task_Manager_Button
 
 func _init() -> void:
