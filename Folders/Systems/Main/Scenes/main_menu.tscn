@@ -18,6 +18,7 @@ grow_horizontal = 2
 offset_transform_enabled = true
 offset_transform_position = Vector2(0, 10)
 offset_transform_visual_only = false
+theme = ExtResource("2_ubp4m")
 theme_override_font_sizes/font_size = 50
 text = "Main Menu"
 horizontal_alignment = 1
