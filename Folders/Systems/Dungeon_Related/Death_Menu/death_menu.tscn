@@ -24,6 +24,7 @@ offset_bottom = 66.5
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(68, 68)
+theme = ExtResource("2_o0ljh")
 
 [node name="MarginContainer" type="MarginContainer" parent="Death_Menu_Panel_Container" unique_id=1477643591]
 layout_mode = 2
