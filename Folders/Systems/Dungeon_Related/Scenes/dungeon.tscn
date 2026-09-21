@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dqf5jume5kohl"]
 
 [ext_resource type="PackedScene" uid="uid://dloofdgwlnik4" path="res://Folders/Systems/Dungeon_Related/Scenes/dungeon_level.tscn" id="4_8xm8m"]
-[ext_resource type="PackedScene" uid="uid://bgbgfpngstnov" path="res://Folders/Systems/Main/Scenes/ui_layer.tscn" id="6_477vo"]
+[ext_resource type="PackedScene" uid="uid://bgbgfpngstnov" path="res://Folders/Systems/Dungeon_Related/Scenes/dungeon_ui_layer.tscn" id="6_477vo"]
 [ext_resource type="PackedScene" uid="uid://svisxss24oxa" path="res://Folders/Systems/Inventory_System/Scenes/inventory_ui_layer.tscn" id="7_8bnhv"]
 [ext_resource type="PackedScene" uid="uid://ck6amdbdbjx14" path="res://Folders/Systems/Dungeon_Related/Death_Menu/death_menu.tscn" id="8_r2rdq"]
 
