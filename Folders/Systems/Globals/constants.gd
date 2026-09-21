@@ -6,11 +6,6 @@ const NUMBER_OF_HOTBAR_SLOTS: int = 9
 const UNSELECTED_HOTBAR_SLOT_OPACITY: float = 0.0
 const SELECTED_HOTBAR_SLOT_OPACITY: float = 0.5
 
-# Main Menu
-const MAIN_MENU_LABEL_TEXT: String = "Main Menu"
-const MAIN_MENU_DUNGOEN_BUTTON_TEXT: String = "Dungeon"
-const MAIN_MENU_TASK_MANAGER_BUTTON_TEXT: String = "  Task Manager  "
-
 # Scene Paths
 const PATH_TO_PLAYER_SCENE: String = "res://Folders/Systems/Player/player.tscn"
 

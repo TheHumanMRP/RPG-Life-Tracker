@@ -8,18 +8,10 @@ func _init() -> void:
 	set_global_state()
 
 func _ready() -> void:
-	setup_labels()
 	setup_signals()
 
 func set_global_state() -> void:
 	SignalBus.set_game_state.emit(All_Enums.GAME_STATES.MainMenu)
-
-func setup_labels() -> void:
-	main_menu_label.text = Constants.MAIN_MENU_LABEL_TEXT
-	dungeon_selection_menu_button.text = Constants.MAIN_MENU_DUNGOEN_BUTTON_TEXT
-	task_manager_button.text = Constants.MAIN_MENU_TASK_MANAGER_BUTTON_TEXT
-
-	print("\nMain Menu: Setup labels func ran")
 
 func setup_signals() -> void:
 	dungeon_selection_menu_button.pressed.connect(_on_dungeon_selection_menu_button_pressed)
