@@ -13,5 +13,6 @@ grow_vertical = 2
 script = ExtResource("1_tv5vg")
 
 [node name="Task_Grid" parent="." unique_id=943145978 instance=ExtResource("1_65osv")]
-layout_mode = 0
-anchors_preset = 0
+layout_mode = 1
+offset_left = 3.0
+offset_right = 3.0
