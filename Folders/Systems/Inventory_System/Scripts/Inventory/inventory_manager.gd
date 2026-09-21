@@ -1,11 +1,11 @@
 class_name InventoryManager
-extends Resource
+extends Node
 
 # ===================================================================
 # Inventory Vars
 # ===================================================================
 
-var inventory_name: String
+@export var inventory_name: String
 
 # ===================================================================
 # Initialise

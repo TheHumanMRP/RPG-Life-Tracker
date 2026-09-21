@@ -3,6 +3,7 @@ extends Node
 
 @export var log_name: String = "None"
 @export var max_health: int = 100
+
 var health: float:
 	set(new_health):
 		health = set_health(new_health)

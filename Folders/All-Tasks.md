@@ -3,6 +3,12 @@
 # To-Do
 ---
 
+- [ ] Make pixel art for sword
+- [ ] Make animations for sword attack
+- [ ] Code sword attack animation playing
+- [ ] Make animations for player movement
+- [ ] Code movement animations playing for player
+
 - [ ] Handle changing of task status in task entry scene
 
 - [ ] Make the basic ui for task manager with godot nodes
@@ -31,11 +37,15 @@
 - [ ] Make esc menu
 
 - [ ] Add transitions when changing scenes
-- [ ] Start adding some pixel art
 
 # Completed Tasks
 ---
 
+- [X] Handle the resolution setting
+	- Setting up so that my game renders in lower resolution and gets scaled up
+	- Took me about ~3 hours
+
+- [X] Start adding some pixel art
 - [X] In level set up the spawning of:
 	- [X] UILayer
 	- [X] Inventory_UI_Layer

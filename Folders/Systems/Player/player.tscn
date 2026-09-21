@@ -1,38 +1,43 @@
 [gd_scene format=3 uid="uid://pwtj16da0u0b"]
 
 [ext_resource type="Script" uid="uid://c20du4ge4p05i" path="res://Folders/Systems/Player/player.gd" id="1_4ek6g"]
-[ext_resource type="Texture2D" uid="uid://bqulutjwvblw" path="res://Folders/Assets/icon.svg" id="2_3rm20"]
+[ext_resource type="Texture2D" uid="uid://p5i1eusd8wfi" path="res://Folders/Assets/Main-Art/Player/Player.png" id="2_8uk81"]
 [ext_resource type="PackedScene" uid="uid://cn2j37mshfv3s" path="res://Folders/Components/Equipment_Manager/equipment_manager.tscn" id="3_8uk81"]
+[ext_resource type="Script" uid="uid://7lp835lq8mpg" path="res://Folders/Components/health_component.gd" id="4_4ek6g"]
+[ext_resource type="Script" uid="uid://ckyj7edp33tc8" path="res://Folders/Components/movement_component.gd" id="5_o2hah"]
+[ext_resource type="Script" uid="uid://d3iu25vhwg824" path="res://Folders/Systems/Inventory_System/Scripts/Inventory/inventory_manager.gd" id="6_7yyeh"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8uk81"]
-atlas = ExtResource("2_3rm20")
-region = Rect2(0, 0, 128, 128)
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ek6g"]
+atlas = ExtResource("2_8uk81")
+region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gl73e"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_8uk81")
+"texture": SubResource("AtlasTexture_4ek6g")
 }],
 "loop": 1,
-"name": &"GodotIcon",
+"name": &"Idle",
 "speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gl73e"]
-size = Vector2(52, 52)
+size = Vector2(32, 32)
 
-[node name="Player" type="CharacterBody2D" unique_id=1761644757 node_paths=PackedStringArray("equipment_manager")]
+[node name="Player" type="CharacterBody2D" unique_id=1761644757 node_paths=PackedStringArray("inventory_manager", "health_component", "movement_component", "equipment_manager")]
 collision_layer = 2
 script = ExtResource("1_4ek6g")
+inventory_manager = NodePath("InventoryManager")
+health_component = NodePath("HealthComponent")
+movement_component = NodePath("MovementComponent")
 equipment_manager = NodePath("Equipment_Manager")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2030784034]
 unique_name_in_owner = true
 z_index = 4
-scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_gl73e")
-animation = &"GodotIcon"
+animation = &"Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1723196683]
 shape = SubResource("RectangleShape2D_gl73e")
@@ -42,3 +47,17 @@ position_smoothing_enabled = true
 position_smoothing_speed = 20.0
 
 [node name="Equipment_Manager" parent="." unique_id=493094115 instance=ExtResource("3_8uk81")]
+
+[node name="HealthComponent" type="Node" parent="." unique_id=1548830847]
+script = ExtResource("4_4ek6g")
+log_name = "Player"
+metadata/_custom_type_script = "uid://7lp835lq8mpg"
+
+[node name="MovementComponent" type="Node" parent="." unique_id=920279630]
+script = ExtResource("5_o2hah")
+metadata/_custom_type_script = "uid://ckyj7edp33tc8"
+
+[node name="InventoryManager" type="Node" parent="." unique_id=1361970025]
+script = ExtResource("6_7yyeh")
+inventory_name = "Player"
+metadata/_custom_type_script = "uid://d3iu25vhwg824"

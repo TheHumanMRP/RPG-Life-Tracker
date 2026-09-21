@@ -9,10 +9,6 @@ signal facing_direction_changed(new_direction: int)
 # Vars
 # --------------------------------------------------------------------
 
-var health_component: HealthComponent
-var movement_component: MovementComponent
-var inventory_manager: InventoryManager
-
 var facing_direction: int
 
 # --------------------------------------------------------------------
@@ -20,6 +16,9 @@ var facing_direction: int
 # --------------------------------------------------------------------
 
 @export var spawn_point: Vector2
+@export var inventory_manager: InventoryManager
+@export var health_component: HealthComponent
+@export var movement_component: MovementComponent
 @export var equipment_manager: EquipmentManager
 
 # --------------------------------------------------------------------
@@ -33,6 +32,7 @@ func setup(new_spawn_point: Vector2) -> void:
 	_connect_signals()
 
 	spawn_point = new_spawn_point
+	facing_direction = 1
 	respawn()
 
 ## Connects all required signals.
@@ -45,13 +45,10 @@ func _connect_signals() -> void:
 
 ## Ensures all required components exist.
 func _setup_component() -> void:
-	facing_direction = 1
-
 	health_component = HealthComponent.new()
-	movement_component = MovementComponent.new()
-	inventory_manager = InfoGetter.get_inventory_manager()
 
 	var player_max_health: int = InfoGetter.get_player_max_health()
+
 	health_component.setup(player_max_health, "Player")
 	
 	inventory_manager.setup(Constants.PLAYER_INVENTORY_NAME)

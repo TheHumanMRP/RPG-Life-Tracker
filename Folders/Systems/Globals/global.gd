@@ -52,14 +52,13 @@ func _handle_loading_and_unloading_of_managers() -> void:
 			inventory_related_managers = null
 
 		All_Enums.GAME_STATES.DungeonPlaying:
-			print("Dungeon Playing setter")
 			tasks_related_managers = null
-			inventory_related_managers = InventoryRelatedManagers.new()
-			inventory_related_managers.setup()
 
 			if inventory_related_managers:
 				return
 
+			inventory_related_managers = InventoryRelatedManagers.new()
+			inventory_related_managers.setup()
 
 		All_Enums.GAME_STATES.TaskManager:
 			if tasks_related_managers and inventory_related_managers:
@@ -73,13 +72,6 @@ func _handle_loading_and_unloading_of_managers() -> void:
 
 
 func _on_set_game_state(new_game_state: All_Enums.GAME_STATES) -> void:
-	print(
-		"\nSTATE CHANGE: ",
-		current_game_state,
-		" -> ",
-		new_game_state
-	)
-
 	current_game_state = new_game_state
 	_set_game_state_settings()
 	_handle_loading_and_unloading_of_managers()

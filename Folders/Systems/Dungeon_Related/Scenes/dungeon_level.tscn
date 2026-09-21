@@ -1,0 +1,58 @@
+[gd_scene format=4 uid="uid://dloofdgwlnik4"]
+
+[ext_resource type="Texture2D" uid="uid://cj6hbcyva6xfl" path="res://Folders/Assets/Main-Art/World/Tile.png" id="1_7yjxa"]
+[ext_resource type="Script" uid="uid://dx61wrve64jwn" path="res://Folders/Systems/Dungeon_Related/Scripts/dungeon_level.gd" id="1_ksvqd"]
+[ext_resource type="PackedScene" uid="uid://mexd1qvl140q" path="res://Folders/Systems/Dungeon_Related/Scenes/checkpoint.tscn" id="2_ksvqd"]
+[ext_resource type="PackedScene" uid="uid://cu4hnlkwj8l7d" path="res://Folders/Systems/Dungeon_Related/Scenes/damage_area.tscn" id="3_rf25c"]
+[ext_resource type="PackedScene" uid="uid://bvnmaqdei35bn" path="res://Folders/Systems/Enemy/enemy.tscn" id="4_e6xot"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0laef"]
+texture = ExtResource("1_7yjxa")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="TileSet" id="TileSet_ic3mt"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+physics_layer_0/collision_mask = 0
+sources/0 = SubResource("TileSetAtlasSource_0laef")
+
+[node name="Dungeon_Level" type="Node2D" unique_id=1601527455]
+script = ExtResource("1_ksvqd")
+
+[node name="Map" type="TileMapLayer" parent="." unique_id=849354234]
+tile_map_data = PackedByteArray("AAAIAAgAAAAAAAAAAAAHAAgAAAAAAAAAAAAGAAgAAAAAAAAAAAAFAAgAAAAAAAAAAAAEAAgAAAAAAAAAAAADAAgAAAAAAAAAAAACAAgAAAAAAAAAAAABAAgAAAAAAAAAAAAAAAgAAAAAAAAAAAD//wgAAAAAAAAAAAD+/wgAAAAAAAAAAAD9/wgAAAAAAAAAAAD8/wgAAAAAAAAAAAD7/wgAAAAAAAAAAAD6/wgAAAAAAAAAAAD5/wgAAAAAAAAAAAD4/wgAAAAAAAAAAAD3/wgAAAAAAAAAAAD2/wgAAAAAAAAAAAD1/wgAAAAAAAAAAAD0/wgAAAAAAAAAAADz/wgAAAAAAAAAAADy/wgAAAAAAAAAAADx/wgAAAAAAAAAAADw/wgAAAAAAAAAAADv/wgAAAAAAAAAAADu/wgAAAAAAAAAAADt/wgAAAAAAAAAAADs/wgAAAAAAAAAAADs/wkAAAAAAAAAAADs/woAAAAAAAAAAADs/wsAAAAAAAAAAADs/wwAAAAAAAAAAADt/wwAAAAAAAAAAADu/wwAAAAAAAAAAADv/wwAAAAAAAAAAADw/wwAAAAAAAAAAADx/wsAAAAAAAAAAADy/wsAAAAAAAAAAADz/wsAAAAAAAAAAAD0/wsAAAAAAAAAAAD1/wsAAAAAAAAAAAD2/wsAAAAAAAAAAAD3/wsAAAAAAAAAAAD4/wsAAAAAAAAAAAD5/wsAAAAAAAAAAAD6/wsAAAAAAAAAAAD7/wsAAAAAAAAAAAD7/wwAAAAAAAAAAADx/wwAAAAAAAAAAADy/wwAAAAAAAAAAADz/wwAAAAAAAAAAAD0/wwAAAAAAAAAAAD1/wwAAAAAAAAAAAD2/wwAAAAAAAAAAAD3/wwAAAAAAAAAAAD4/wwAAAAAAAAAAAD5/wwAAAAAAAAAAAD6/wwAAAAAAAAAAAD8/wwAAAAAAAAAAAD9/wwAAAAAAAAAAAD+/wwAAAAAAAAAAAD//wwAAAAAAAAAAAAAAAwAAAAAAAAAAAABAAwAAAAAAAAAAAACAAwAAAAAAAAAAAADAAwAAAAAAAAAAAAEAAwAAAAAAAAAAAAFAAwAAAAAAAAAAAAGAAwAAAAAAAAAAAAHAAwAAAAAAAAAAAAIAAwAAAAAAAAAAAAIAAsAAAAAAAAAAAAIAAoAAAAAAAAAAAAJAAoAAAAAAAAAAAAJAAkAAAAAAAAAAAAJAAgAAAAAAAAAAAAJAAsAAAAAAAAAAAAJAAwAAAAAAAAAAAAIAAkAAAAAAAAAAAAHAAkAAAAAAAAAAAAGAAkAAAAAAAAAAAAFAAkAAAAAAAAAAAAEAAkAAAAAAAAAAAADAAkAAAAAAAAAAAACAAkAAAAAAAAAAAABAAkAAAAAAAAAAAAAAAkAAAAAAAAAAAD//wkAAAAAAAAAAAD+/wkAAAAAAAAAAAD9/wkAAAAAAAAAAAD8/wkAAAAAAAAAAAD7/wkAAAAAAAAAAAD6/wkAAAAAAAAAAAD5/wkAAAAAAAAAAAD4/wkAAAAAAAAAAAD3/wkAAAAAAAAAAAD2/wkAAAAAAAAAAAD1/wkAAAAAAAAAAAD0/wkAAAAAAAAAAADz/wkAAAAAAAAAAADy/wkAAAAAAAAAAADx/wkAAAAAAAAAAADw/wkAAAAAAAAAAADv/wkAAAAAAAAAAADu/wkAAAAAAAAAAADt/wkAAAAAAAAAAADt/woAAAAAAAAAAADt/wsAAAAAAAAAAADu/wsAAAAAAAAAAADv/wsAAAAAAAAAAADw/wsAAAAAAAAAAAD8/wsAAAAAAAAAAAD9/wsAAAAAAAAAAAD+/wsAAAAAAAAAAAD//wsAAAAAAAAAAAAAAAsAAAAAAAAAAAABAAsAAAAAAAAAAAACAAsAAAAAAAAAAAADAAsAAAAAAAAAAAAEAAsAAAAAAAAAAAAFAAsAAAAAAAAAAAAGAAsAAAAAAAAAAAAHAAsAAAAAAAAAAAAHAAoAAAAAAAAAAAAGAAoAAAAAAAAAAAAFAAoAAAAAAAAAAAAEAAoAAAAAAAAAAAADAAoAAAAAAAAAAAACAAoAAAAAAAAAAAABAAoAAAAAAAAAAAAAAAoAAAAAAAAAAAD//woAAAAAAAAAAAD+/woAAAAAAAAAAAD9/woAAAAAAAAAAAD8/woAAAAAAAAAAAD7/woAAAAAAAAAAAD6/woAAAAAAAAAAAD5/woAAAAAAAAAAAD4/woAAAAAAAAAAAD3/woAAAAAAAAAAAD2/woAAAAAAAAAAAD1/woAAAAAAAAAAAD0/woAAAAAAAAAAADz/woAAAAAAAAAAADy/woAAAAAAAAAAADx/woAAAAAAAAAAADw/woAAAAAAAAAAADv/woAAAAAAAAAAADu/woAAAAAAAAAAAAGAAcAAAAAAAAAAAAGAAYAAAAAAAAAAAAGAAUAAAAAAAAAAAAGAAQAAAAAAAAAAAAGAAMAAAAAAAAAAAAGAAIAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_ic3mt")
+
+[node name="SpawnPoint" type="Marker2D" parent="." unique_id=1782200329]
+unique_name_in_owner = true
+position = Vector2(-140, 93)
+
+[node name="CheckPoints" type="Node" parent="." unique_id=524659959]
+
+[node name="Checkpoint" parent="CheckPoints" unique_id=460687773 instance=ExtResource("2_ksvqd")]
+position = Vector2(-492, 157)
+single_time_checkpoint = true
+
+[node name="Checkpoint2" parent="CheckPoints" unique_id=660479247 instance=ExtResource("2_ksvqd")]
+position = Vector2(-139, 177)
+single_time_checkpoint = true
+
+[node name="DamageAreas" type="Node" parent="." unique_id=498383185]
+
+[node name="DamageArea" parent="DamageAreas" unique_id=1450602764 instance=ExtResource("3_rf25c")]
+position = Vector2(-299, 170)
+insta_kill = true
+player_only = true
+
+[node name="DamageArea2" parent="DamageAreas" unique_id=1666531465 instance=ExtResource("3_rf25c")]
+position = Vector2(1382, 877)
+insta_kill = true
+player_only = true
+width = 6000.0
+
+[node name="Enemies" type="Node" parent="." unique_id=885169905]
+
+[node name="enemy" parent="Enemies" unique_id=254105940 instance=ExtResource("4_e6xot")]
+position = Vector2(-298, 168)

@@ -11,8 +11,6 @@ func _ready() -> void:
 	setup_labels()
 	setup_signals()
 
-	print("\nMain Menu: _ready func ran")
-
 func set_global_state() -> void:
 	SignalBus.set_game_state.emit(All_Enums.GAME_STATES.MainMenu)
 
@@ -27,11 +25,8 @@ func setup_signals() -> void:
 	dungeon_button.pressed.connect(_on_dungeon_button_pressed)
 	task_manager_button.pressed.connect(_on_task_manager_button_pressed)
 
-	print("\nMain Menu: Setup signals func ran")
-
 func _on_dungeon_button_pressed() -> void:
 	Global.main_node.switch_to_scene(self, Constants.PATH_TO_DUNGEON_SELECTION_MENU, true)
 
 func _on_task_manager_button_pressed() -> void:
-	print("\nMain Menu: Task manager button pressed")
 	Global.main_node.switch_to_scene(self, Constants.PATH_TO_TASK_MANAGER, true)

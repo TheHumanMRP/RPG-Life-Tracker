@@ -6,7 +6,7 @@ extends Resource
 # ============================================================================
 
 func _init() -> void:
-	print("\nHotbar Logic: Init called")
+	print("\nHotbar Manager: Init called")
 
 	SignalBus.hotbar_item_selected.connect(_on_hotbar_item_selected)
 	SignalBus.hotbar_item_equipped.connect(_on_hotbar_item_equipped)
@@ -25,10 +25,10 @@ func clear_hotbar() -> void:
 
 ## Places an item into the specified hotbar slot.
 func add_item_to_hotbar(item_id: int, slot_index: int) -> void:
-	print("\nHotbar Logic: Add item func called with item id and slot index: ", item_id, " : ", slot_index)
+	print("\nHotbar Manager: Add item func called with item id and slot index: ", item_id, " : ", slot_index)
 
 	if not check_if_slot_empty(slot_index):
-		push_error("HotBarLogic: Hotbar slot already occupied: ", slot_index)
+		push_error("HotBar Manager: Hotbar slot already occupied: ", slot_index)
 
 		return
 

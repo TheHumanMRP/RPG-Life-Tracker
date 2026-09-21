@@ -1,19 +1,17 @@
 extends CanvasLayer
 
 @export var respawn_button: Button
-@export var main_menu_button: Button
+@export var quit_button: Button
 @export var you_died_label: Label
 
 func _ready() -> void:
-	print("\nDeath Menu: _ready func called")
-
 	setup_properties()
 
 	setup_signals()
 
 func setup_signals() -> void:
 	respawn_button.pressed.connect(_on_respawn_button_pressed)
-	main_menu_button.pressed.connect(_on_main_menu_button_pressed)
+	quit_button.pressed.connect(_on_quit_button_pressed)
 	
 	SignalBus.player_died.connect(_on_player_died)
 
@@ -41,7 +39,7 @@ func _on_respawn_button_pressed() -> void:
 
 	print("\nDeath Menu: Respawn Button Pressed")
 
-func _on_main_menu_button_pressed() -> void:
+func _on_quit_button_pressed() -> void:
 	Global.main_node.switch_to_scene(self, Constants.PATH_TO_MAIN_MENU, true)
 
 func set_global_state_death_menu() -> void:
