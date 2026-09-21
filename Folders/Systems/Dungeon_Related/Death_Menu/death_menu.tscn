@@ -3,11 +3,11 @@
 [ext_resource type="Script" uid="uid://c85obb5b7y12q" path="res://Folders/Systems/Dungeon_Related/Death_Menu/death_menu.gd" id="1_dd6n6"]
 [ext_resource type="Theme" uid="uid://deuleb40h735d" path="res://Folders/Assets/UI_Theme/rpg-life-tracker-ui-theme.tres" id="2_o0ljh"]
 
-[node name="DeathMenu" type="CanvasLayer" unique_id=1799669249 node_paths=PackedStringArray("respawn_button", "quit_button", "you_died_label")]
+[node name="DeathMenu" type="CanvasLayer" unique_id=1799669249 node_paths=PackedStringArray("respawn_button", "return_button", "you_died_label")]
 process_mode = 3
 script = ExtResource("1_dd6n6")
 respawn_button = NodePath("Death_Menu_Panel_Container/MarginContainer/VBoxContainer/VBoxContainer/Respawn_Button")
-quit_button = NodePath("Death_Menu_Panel_Container/MarginContainer/VBoxContainer/VBoxContainer/Return_Button")
+return_button = NodePath("Death_Menu_Panel_Container/MarginContainer/VBoxContainer/VBoxContainer/Return_Button")
 you_died_label = NodePath("Death_Menu_Panel_Container/MarginContainer/VBoxContainer/You_Died_Label")
 
 [node name="Death_Menu_Panel_Container" type="PanelContainer" parent="." unique_id=156337057]
