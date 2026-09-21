@@ -12,7 +12,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_tv5vg")
 
-[node name="VScrollBar" type="HScrollBar" parent="." unique_id=58179802]
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=1116946521]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -20,40 +20,32 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VScrollBar" unique_id=2138300449]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -106.0
-offset_right = 162.0
-offset_bottom = 818.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Task_Entry_Scene" parent="VScrollBar/VBoxContainer" unique_id=465403137 instance=ExtResource("2_tv5vg")]
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer" unique_id=2138300449]
 layout_mode = 2
 
-[node name="Task_Entry_Scene2" parent="VScrollBar/VBoxContainer" unique_id=738504402 instance=ExtResource("2_tv5vg")]
+[node name="Task_Entry_Scene" parent="ScrollContainer/VBoxContainer" unique_id=465403137 instance=ExtResource("2_tv5vg")]
 layout_mode = 2
 
-[node name="Task_Entry_Scene3" parent="VScrollBar/VBoxContainer" unique_id=965431327 instance=ExtResource("2_tv5vg")]
+[node name="Task_Entry_Scene2" parent="ScrollContainer/VBoxContainer" unique_id=738504402 instance=ExtResource("2_tv5vg")]
 layout_mode = 2
 
-[node name="Task_Entry_Scene4" parent="VScrollBar/VBoxContainer" unique_id=1762343041 instance=ExtResource("2_tv5vg")]
+[node name="Task_Entry_Scene3" parent="ScrollContainer/VBoxContainer" unique_id=965431327 instance=ExtResource("2_tv5vg")]
 layout_mode = 2
 
-[node name="Task_Entry_Scene5" parent="VScrollBar/VBoxContainer" unique_id=536277269 instance=ExtResource("2_tv5vg")]
+[node name="Task_Entry_Scene4" parent="ScrollContainer/VBoxContainer" unique_id=1762343041 instance=ExtResource("2_tv5vg")]
 layout_mode = 2
 
-[node name="Task_Entry_Scene6" parent="VScrollBar/VBoxContainer" unique_id=373919441 instance=ExtResource("2_tv5vg")]
+[node name="Task_Entry_Scene5" parent="ScrollContainer/VBoxContainer" unique_id=536277269 instance=ExtResource("2_tv5vg")]
 layout_mode = 2
 
-[node name="Task_Entry_Scene7" parent="VScrollBar/VBoxContainer" unique_id=1022147690 instance=ExtResource("2_tv5vg")]
+[node name="Task_Entry_Scene6" parent="ScrollContainer/VBoxContainer" unique_id=373919441 instance=ExtResource("2_tv5vg")]
 layout_mode = 2
 
-[node name="Task_Entry_Scene8" parent="VScrollBar/VBoxContainer" unique_id=740995480 instance=ExtResource("2_tv5vg")]
+[node name="Task_Entry_Scene7" parent="ScrollContainer/VBoxContainer" unique_id=1022147690 instance=ExtResource("2_tv5vg")]
 layout_mode = 2
 
-[node name="Task_Entry_Scene9" parent="VScrollBar/VBoxContainer" unique_id=997668158 instance=ExtResource("2_tv5vg")]
+[node name="Task_Entry_Scene8" parent="ScrollContainer/VBoxContainer" unique_id=740995480 instance=ExtResource("2_tv5vg")]
+layout_mode = 2
+
+[node name="Task_Entry_Scene9" parent="ScrollContainer/VBoxContainer" unique_id=997668158 instance=ExtResource("2_tv5vg")]
 layout_mode = 2
