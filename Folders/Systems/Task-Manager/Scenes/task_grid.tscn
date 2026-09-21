@@ -1,8 +1,56 @@
 [gd_scene format=3 uid="uid://begy5501tfsx6"]
 
+[ext_resource type="PackedScene" uid="uid://vt6eolqkwws8" path="res://Folders/Systems/Task-Manager/Scenes/task_entry_scene.tscn" id="1_vs7gx"]
+
 [node name="Task_Grid" type="VScrollBar" unique_id=943145978]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=386436699]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 368.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Task_Entry_Scene" parent="VBoxContainer" unique_id=465403137 instance=ExtResource("1_vs7gx")]
+layout_mode = 2
+
+[node name="Task_Entry_Scene2" parent="VBoxContainer" unique_id=1924812438 instance=ExtResource("1_vs7gx")]
+layout_mode = 2
+
+[node name="Task_Entry_Scene3" parent="VBoxContainer" unique_id=2000786610 instance=ExtResource("1_vs7gx")]
+layout_mode = 2
+
+[node name="Task_Entry_Scene4" parent="VBoxContainer" unique_id=1313379341 instance=ExtResource("1_vs7gx")]
+layout_mode = 2
+
+[node name="Task_Entry_Scene5" parent="VBoxContainer" unique_id=1090131334 instance=ExtResource("1_vs7gx")]
+layout_mode = 2
+
+[node name="Task_Entry_Scene6" parent="VBoxContainer" unique_id=479036269 instance=ExtResource("1_vs7gx")]
+layout_mode = 2
+
+[node name="Task_Entry_Scene7" parent="VBoxContainer" unique_id=808839925 instance=ExtResource("1_vs7gx")]
+layout_mode = 2
+
+[node name="Task_Entry_Scene8" parent="VBoxContainer" unique_id=1098804111 instance=ExtResource("1_vs7gx")]
+layout_mode = 2
+
+[node name="Task_Entry_Scene9" parent="VBoxContainer" unique_id=139374952 instance=ExtResource("1_vs7gx")]
+layout_mode = 2
+
+[node name="Task_Entry_Scene10" parent="VBoxContainer" unique_id=1794050504 instance=ExtResource("1_vs7gx")]
+layout_mode = 2
+
+[node name="Task_Entry_Scene11" parent="VBoxContainer" unique_id=1254536178 instance=ExtResource("1_vs7gx")]
+layout_mode = 2
+
+[node name="Task_Entry_Scene12" parent="VBoxContainer" unique_id=428589158 instance=ExtResource("1_vs7gx")]
+layout_mode = 2
