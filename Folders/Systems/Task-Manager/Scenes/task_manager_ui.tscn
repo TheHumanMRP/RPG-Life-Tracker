@@ -49,9 +49,3 @@ layout_mode = 2
 
 [node name="Task_Entry_Scene9" parent="ScrollContainer/VBoxContainer" unique_id=997668158 instance=ExtResource("2_tv5vg")]
 layout_mode = 2
-
-[node name="Label" type="Label" parent="." unique_id=858576306]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-text = "Hello"
