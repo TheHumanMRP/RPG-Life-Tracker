@@ -1,8 +1,8 @@
 extends CanvasLayer
 
-@onready var main_menu_label: Label = $%Main_Menu_Label
-@onready var dungeon_selection_menu_button: Button = $%Dungeon_Selection_Menu_Button
-@onready var task_manager_button: Button = $%Task_Manager_Button
+@export var main_menu_label: Label
+@export var dungeon_selection_menu_button: Button
+@export var task_manager_button: Button
 
 func _init() -> void:
 	set_global_state()

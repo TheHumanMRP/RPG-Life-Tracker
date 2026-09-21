@@ -3,8 +3,11 @@
 [ext_resource type="Script" uid="uid://bvsd1u1q4blrp" path="res://Folders/Systems/Main/Scripts/main_menu.gd" id="1_se87p"]
 [ext_resource type="Theme" uid="uid://deuleb40h735d" path="res://Folders/Assets/UI_Theme/rpg-life-tracker-ui-theme.tres" id="2_ubp4m"]
 
-[node name="Main_Menu" type="CanvasLayer" unique_id=1354644221]
+[node name="Main_Menu" type="CanvasLayer" unique_id=1354644221 node_paths=PackedStringArray("main_menu_label", "dungeon_selection_menu_button", "task_manager_button")]
 script = ExtResource("1_se87p")
+main_menu_label = NodePath("Main_Menu_Label")
+dungeon_selection_menu_button = NodePath("VBoxContainer/Dungeon_Selection_Menu_Button")
+task_manager_button = NodePath("VBoxContainer/Task_Manager_Button")
 
 [node name="Main_Menu_Label" type="Label" parent="." unique_id=846517829]
 unique_name_in_owner = true
