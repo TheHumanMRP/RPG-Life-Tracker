@@ -1,6 +1,6 @@
 extends PanelContainer
 
-var task_id: int
+var task_id: int = Constants.NO_TASK
 
 var task_name: String
 var task_status: All_Enums.TASK_STATUS

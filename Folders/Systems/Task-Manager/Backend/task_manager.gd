@@ -109,7 +109,8 @@ func get_save_data() -> TasksSaveData:
 
 ## Returns a task using its unique ID.
 func get_task_by_task_id(task_id: int) -> Task:
-	if task_id == Constants.
+	if task_id == Constants.NO_TASK:
+		return
 
 	var data: TasksSaveData = get_save_data()
 
