@@ -7,7 +7,7 @@
 process_mode = 3
 script = ExtResource("1_dd6n6")
 respawn_button = NodePath("Death_Menu_Panel_Container/MarginContainer/VBoxContainer/VBoxContainer/Respawn_Button")
-quit_button = NodePath("Death_Menu_Panel_Container/MarginContainer/VBoxContainer/VBoxContainer/Quit_Button")
+quit_button = NodePath("Death_Menu_Panel_Container/MarginContainer/VBoxContainer/VBoxContainer/Return_Button")
 you_died_label = NodePath("Death_Menu_Panel_Container/MarginContainer/VBoxContainer/You_Died_Label")
 
 [node name="Death_Menu_Panel_Container" type="PanelContainer" parent="." unique_id=156337057]
@@ -54,11 +54,11 @@ unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("2_o0ljh")
 theme_override_font_sizes/font_size = 50
-text = "Respawn"
+text = "  Respawn  "
 
-[node name="Quit_Button" type="Button" parent="Death_Menu_Panel_Container/MarginContainer/VBoxContainer/VBoxContainer" unique_id=1482938906]
+[node name="Return_Button" type="Button" parent="Death_Menu_Panel_Container/MarginContainer/VBoxContainer/VBoxContainer" unique_id=1482938906]
 unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("2_o0ljh")
 theme_override_font_sizes/font_size = 50
-text = "Quit"
+text = "  Return  "

@@ -46,7 +46,7 @@ unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("2_ubp4m")
 theme_override_font_sizes/font_size = 30
-text = "Dungeon"
+text = "  Dungeon Selection Menu  "
 
 [node name="Task_Manager_Button" type="Button" parent="VBoxContainer" unique_id=2038934426]
 unique_name_in_owner = true
