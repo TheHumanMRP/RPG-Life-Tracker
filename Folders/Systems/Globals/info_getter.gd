@@ -22,8 +22,8 @@ func check_if_item_at_index_in_inventory_exists(index: int) -> bool:
 func get_all_global_items_data() -> AllGlobalItemsData:
 	return Global.save_data.all_global_items_data
 
-func get_inventory_manager() -> InventoryManager:
-	return Global.inventory_related_managers.inventory_manager
+func get_all_globla_items_manager() -> AllGlobalItemsManager:
+	return Global.inventory_related_managers.all_global_items_manager
 
 # ============================================================================
 # Hotbar
