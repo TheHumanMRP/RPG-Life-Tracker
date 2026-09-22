@@ -19,7 +19,7 @@ func setup(player: Player) -> void:
 	sword_scene.hide()
 
 func get_item_entry(item_id: int) -> ItemEntry:
-	return AllGlobalItemsManager.get_item_by_id(item_id)
+	return InfoGetter.get_all_globla_items_manager().get_item_by_id(item_id)
 
 func equip(item_id: int, slot_index: int) -> void:
 	print("\nEquipment Manager: Equip func called with item id: ", item_id)
