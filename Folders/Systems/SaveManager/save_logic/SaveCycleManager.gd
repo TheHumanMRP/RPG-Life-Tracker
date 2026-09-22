@@ -25,12 +25,12 @@ func save_loop() -> void:
 			save_next = false
 
 func _save_data() -> void:
-	save_manager.save_info = Global.save_data
-	save_manager.save_data()
+	save_manager.save_data(Global.save_data)
 
 func _load_data():
-	save_manager.load_data()
-	Global.save_data = save_manager.save_info
+	Global.save_data = save_manager.load_data()
+
+func _on_quit_game() 
 
 func _notification(what):
 	if what == NOTIFICATION_WM_CLOSE_REQUEST:
