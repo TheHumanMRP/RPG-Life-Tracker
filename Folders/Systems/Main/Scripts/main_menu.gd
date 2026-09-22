@@ -3,6 +3,7 @@ extends CanvasLayer
 @export var main_menu_label: Label
 @export var dungeon_selection_menu_button: Button
 @export var task_manager_button: Button
+@export var quit_game_button: Button
 
 func _init() -> void:
 	set_global_state()
@@ -22,3 +23,7 @@ func _on_dungeon_selection_menu_button_pressed() -> void:
 
 func _on_task_manager_button_pressed() -> void:
 	Global.main_node.switch_to_scene(self, Constants.PATH_TO_TASK_MANAGER, true)
+
+func _on_quit_game_button_pressed() -> void:
+	SignalBus.save_game.emit()
+	
