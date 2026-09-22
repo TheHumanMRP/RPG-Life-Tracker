@@ -82,7 +82,7 @@ func set_proper_selection_color_rect_opacity() -> void:
 # ------------------------------------------------------------------------------
 
 func get_item() -> ItemEntry:
-	return AllGlobalItemsManager.get_item_by_id(InfoGetter.get_hotbar()[slot_index])
+	return InfoGetter.get_all_globla_items_manager().get_item_by_id(InfoGetter.get_hotbar()[slot_index])
 
 
 # ------------------------------------------------------------------------------
