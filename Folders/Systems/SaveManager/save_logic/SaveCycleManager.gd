@@ -7,13 +7,14 @@ var save_next: bool
 var save_manager: SaveManager = SaveManager.new()
 
 func _ready() -> void:
-	SignalBus.save_game.connect(toggle_save_next)
+	SignalBus.save_game.connect(_on_toggle_save_next)
+	SignalBus.quit_game.connect(_on_quit_game)
 
 	_load_data()
 
 	save_loop()
 
-func toggle_save_next() -> void:
+func _on_toggle_save_next() -> void:
 	save_next = true
 
 func save_loop() -> void:
@@ -30,7 +31,9 @@ func _save_data() -> void:
 func _load_data():
 	Global.save_data = save_manager.load_data()
 
-func _on_quit_game() 
+func _on_quit_game() -> void:
+	save_manager.save_data(Global.save_data)
+	get_tree().quit()
 
 func _notification(what):
 	if what == NOTIFICATION_WM_CLOSE_REQUEST:
