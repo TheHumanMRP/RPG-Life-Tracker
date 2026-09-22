@@ -40,6 +40,7 @@ signal set_game_state(new_game_state: All_Enums.GAME_STATES)
 
 signal refresh_ui
 signal save_game
+signal quit_game
 
 # ==============================================
 # Funcs
