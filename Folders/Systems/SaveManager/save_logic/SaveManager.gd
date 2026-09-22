@@ -2,7 +2,7 @@ class_name SaveManager
 extends Resource
 
 @export var save_path: String = "user://dev/save_data.tres"
-@export var create_file: bool
+@export var create_file: bool = true
 
 func _init(new_save_path: String = "", new_create_file: bool = true) -> void:
 	print("Save Manager: Init Called")
@@ -47,7 +47,7 @@ func save_data(save_data: SaveData) -> void:
 		return
 	
 	_ensure_file_exists()
-	var err = ResourceSaver.save(save_info, save_path)
+	var err = ResourceSaver.save(save_data, save_path)
 
 	if err != OK:
 		push_error("Error from resource saver: ", err)
