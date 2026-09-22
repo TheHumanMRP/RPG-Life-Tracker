@@ -2,7 +2,6 @@ class_name SaveManager
 extends Resource
 
 @export var save_path: String = "user://dev/save_data.tres"
-@export var save_info: SaveData
 @export var create_file: bool
 
 func _init(new_save_path: String = "", new_create_file: bool = true) -> void:
@@ -35,15 +34,14 @@ func _ensure_file_exists():
 func delete_save_file() -> void:
 	DirAccess.remove_absolute(save_path)
 
-func load_data() -> void:
+func load_data() -> SaveData:
 	delete_save_file()
 	if not FileAccess.file_exists(save_path):
-		save_info = SaveData.new()
-		return
+		return SaveData.new()
 
-	save_info = ResourceLoader.load(save_path)
+	return ResourceLoader.load(save_path)
 
-func save_data() -> void:
+func save_data(save_data: SaveData) -> void:
 	if not create_file and not FileAccess.file_exists(save_path):
 		push_error("File Dosen't Exist: ", save_path)
 		return
