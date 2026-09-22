@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://vt6eolqkwws8" path="res://Folders/Systems/Task-Manager/Scenes/task_entry_scene.tscn" id="1_vs7gx"]
 
-[node name="MarginContainer" type="MarginContainer" unique_id=418115436]
+[node name="Task_Grid" type="MarginContainer" unique_id=418115436]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
