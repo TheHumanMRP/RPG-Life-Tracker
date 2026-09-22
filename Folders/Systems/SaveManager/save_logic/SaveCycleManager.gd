@@ -7,14 +7,14 @@ var save_next: bool
 var save_manager: SaveManager = SaveManager.new()
 
 func _ready() -> void:
-	SignalBus.save_game.connect(_on_toggle_save_next)
+	SignalBus.save_game.connect(_on_save_game)
 	SignalBus.quit_game.connect(_on_quit_game)
 
 	_load_data()
 
 	save_loop()
 
-func _on_toggle_save_next() -> void:
+func _on_save_game() -> void:
 	save_next = true
 
 func save_loop() -> void:

@@ -26,5 +26,4 @@ func _on_task_manager_button_pressed() -> void:
 	Global.main_node.switch_to_scene(self, Constants.PATH_TO_TASK_MANAGER, true)
 
 func _on_quit_game_button_pressed() -> void:
-	SignalBus.save_game.emit()
-	get_tree().quit()
+	SignalBus.quit_game.emit()
