@@ -57,3 +57,10 @@ layout_mode = 2
 theme = ExtResource("2_ubp4m")
 theme_override_font_sizes/font_size = 30
 text = "  Task Manager  "
+
+[node name="Quit_Game_Button" type="Button" parent="VBoxContainer" unique_id=1459450233]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("2_ubp4m")
+theme_override_font_sizes/font_size = 30
+text = "  Quit Game  "
