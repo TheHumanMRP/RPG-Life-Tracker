@@ -1,7 +1,7 @@
 class_name InventoryRelatedManagers
 extends RefCounted
 
-var inventory_manager: InventoryManager
+var all_global_items_manager: AllGlobalItemsM
 var hotbar_manager: HotbarManager
 
 func setup() -> void:
