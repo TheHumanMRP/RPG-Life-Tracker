@@ -3,7 +3,7 @@
 # To-Do
 ---
 
-- [ ] Make pixel art for sword
+- [X] Make pixel art for sword
 - [ ] Make animations for sword attack
 - [ ] Code sword attack animation playing
 - [ ] Make animations for player movement
