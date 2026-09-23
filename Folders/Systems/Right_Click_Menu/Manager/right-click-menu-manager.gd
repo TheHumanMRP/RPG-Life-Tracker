@@ -1,1 +1,3 @@
 extends Node
+
+var right_click_menu_manager

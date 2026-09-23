@@ -1,18 +1,10 @@
 [gd_scene format=3 uid="uid://djxvmvc88fbo8"]
 
-[ext_resource type="Texture2D" uid="uid://doq41bxt5f7n4" path="res://Folders/Assets/UI_Theme/PanelContainer/panel-bg.png" id="1_60qby"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0rbyw"]
-texture = ExtResource("1_60qby")
-texture_margin_left = 4.0
-texture_margin_top = 4.0
-texture_margin_right = 4.0
-texture_margin_bottom = 4.0
-
-[sub_resource type="Theme" id="Theme_tvq0m"]
-PopupMenu/styles/panel = SubResource("StyleBoxTexture_0rbyw")
+[ext_resource type="Theme" uid="uid://ci6nhukplcm2u" path="res://Folders/Assets/UI_Theme/right_click_menu_theme.tres" id="1_qu6mg"]
+[ext_resource type="Script" uid="uid://b23pgl8ademmo" path="res://Folders/Systems/Right_Click_Menu/Script/right_click_menu.gd" id="2_aemw1"]
 
 [node name="Right_Click_Menu" type="PopupMenu" unique_id=1421674717]
 oversampling_override = 1.0
 visible = true
-theme = SubResource("Theme_tvq0m")
+theme = ExtResource("1_qu6mg")
+script = ExtResource("2_aemw1")
