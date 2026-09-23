@@ -9,10 +9,12 @@
 - [ ] Make animations for player movement
 - [ ] Code movement animations playing for player
 
-- [ ] Make the bg scene 
+- [ ] Make the bg scene
+	- [ ] Make it intercept the mouse click and summom right click menu
 
 - [ ] Add a right click menu
 	- [ ] Follow the structure from the planning file and make it
+	- [ ] Make a new dict of game states and their menu options
 
 - [ ] Add proper backend and frontend support
 
