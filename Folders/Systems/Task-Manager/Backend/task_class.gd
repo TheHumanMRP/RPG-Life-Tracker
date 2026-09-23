@@ -21,4 +21,5 @@ func setup(new_task_name: String, new_task_id: int) -> void:
 # TASK STATUS
 # ===================================================
 
-func set_task_status()
+func set_task_status(new_task_status: All_Enums.TASK_STATUS) -> void:
+	task_status = new_task_status
