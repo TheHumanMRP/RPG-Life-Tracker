@@ -1,0 +1,2 @@
+class_name RightClickMenu
+extends PopupMenu
