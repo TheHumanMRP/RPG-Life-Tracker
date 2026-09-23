@@ -21,8 +21,4 @@ func setup(new_task_name: String, new_task_id: int) -> void:
 # TASK STATUS
 # ===================================================
 
-func mark_task_as_completed() -> void:
-	task_status = All_Enums.TASK_STATUS.Completed
-
-func mark_task_as_to_do() -> void:
-	task_status = All_Enums.TASK_STATUS.ToDo
+func set_task_status()
