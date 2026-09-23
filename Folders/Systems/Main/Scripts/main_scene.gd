@@ -3,8 +3,8 @@ extends Node2D
 
 @export var right_click_menu: RightClickMenu
 
-func _ready() -> void:
-	self.add_to_group("main_node")
+func _init() -> void:
+	self.add_to_group("main_scene")
 
 func switch_to_scene(caller: Node, new_scene_path: String, clear_all_children: bool = false) -> void:
 	if clear_all_children:

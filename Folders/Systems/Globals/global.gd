@@ -88,10 +88,10 @@ var save_data: SaveData = SaveData.new()
 # Main Node
 # ============================================================================
 
-var main_node: MainNode
+var main_scene: MainScene
 
-func set_main_node() -> void:
-	main_node = get_tree().get_first_node_in_group("main_node")
+func set_main_scene_var() -> void:
+	main_scene = get_tree().get_first_node_in_group("main_node")
 
 
 # ============================================================================
@@ -102,7 +102,7 @@ func _ready() -> void:
 	SignalBus.set_game_state.connect(_on_set_game_state)
 
 	call_deferred("test")
-	call_deferred("set_main_node")
+	
 
 
 func _process(delta: float) -> void:
