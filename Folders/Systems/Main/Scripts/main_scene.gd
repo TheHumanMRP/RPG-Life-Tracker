@@ -6,6 +6,9 @@ extends Node2D
 func _init() -> void:
 	self.add_to_group("main_scene")
 
+func _ready() -> void:
+	
+
 func switch_to_scene(caller: Node, new_scene_path: String, clear_all_children: bool = false) -> void:
 	if clear_all_children:
 		clear_all_children()
