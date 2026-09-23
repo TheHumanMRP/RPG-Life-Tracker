@@ -7,7 +7,7 @@ func _init() -> void:
 	self.add_to_group("main_scene")
 
 func _ready() -> void:
-	
+	SignalBus.switch_scene.connect(switch_to_scene)
 
 func switch_to_scene(caller: Node, new_scene_path: String, clear_all_children: bool = false) -> void:
 	if clear_all_children:

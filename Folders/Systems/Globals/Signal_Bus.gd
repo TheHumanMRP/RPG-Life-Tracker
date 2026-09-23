@@ -42,7 +42,7 @@ signal refresh_ui
 signal save_game
 signal quit_game
 
-signal switch_to_scene(caller: Node, new_scene_path: String, clear_all_children: bool)
+signal switch_scene(caller: Node, new_scene_path: String, clear_all_children: bool)
 
 # ==============================================
 # Funcs
