@@ -44,7 +44,8 @@ func task_completed_status_changed(option_button_index: int) -> void:
 		task_status_option_button.get_item_text(option_button_index)
 	)
 
-	InfoGetter.get_task_manager().set_task_status(Constants.TASK_STATUS_OPTIONS[new_status])
+	# Set the status by grabbing the value from the constants dict
+	InfoGetter.get_task_manager().set_task_status(task_id, Constants.TASK_STATUS_OPTIONS[new_status])
 
 
 # ===============================================================
