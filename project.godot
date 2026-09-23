@@ -22,6 +22,7 @@ SaveCycleManager="*uid://h2j1arx22jnu"
 Constants="*uid://ctro1gx3ndbul"
 InfoGetter="*uid://cbhg7hkcjf8py"
 SignalBus="*uid://dackuyp70bkog"
+RightClickMenuManager="*res://Folders/Systems/Globals/right-click-menu-manager.gd"
 
 [debug]
 
