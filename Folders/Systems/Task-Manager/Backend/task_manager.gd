@@ -32,7 +32,14 @@ func _calculate_max_id() -> void:
 # ===================================================================
 
 func set_task_status(task_id: int, new_task_status: All_Enums.TASK_STATUS) -> void:
-	
+	var task: Task = get_task_by_task_id(task_id)
+
+	if task == null:
+		return
+
+	task.set_task_status(new_task_status)
+
+	tasks_changed()
 
 ## Adds a new task.
 func add_task(task_name: String) -> int:
