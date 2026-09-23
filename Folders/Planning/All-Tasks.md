@@ -10,6 +10,7 @@
 - [ ] Code movement animations playing for player
 
 - [ ] Add a right click menu
+	- [ ] Follow the structure from the planning file and make it
 
 - [ ] Add proper backend and frontend support
 
