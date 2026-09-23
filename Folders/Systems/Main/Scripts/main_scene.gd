@@ -18,6 +18,8 @@ func switch_to_scene(caller: Node, new_scene_path: String, clear_all_children: b
 
 	add_child(new_scene)
 
+func clear_
+
 func get_new_scene(new_scene_path: String) -> Node:
 	var packed_new_scene: PackedScene = load(new_scene_path)
 
