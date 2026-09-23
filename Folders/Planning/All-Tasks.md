@@ -9,6 +9,8 @@
 - [ ] Make animations for player movement
 - [ ] Code movement animations playing for player
 
+- [ ] Make the bg scene 
+
 - [ ] Add a right click menu
 	- [ ] Follow the structure from the planning file and make it
 
