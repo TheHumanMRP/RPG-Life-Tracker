@@ -46,7 +46,7 @@ func task_completed_status_changed(option_button_index: int) -> void:
 
 	match new_status:
 		"Completed!":
-			Global.tasks_related_managers.tasks_manager
+			InfoGetter.get_Taskmana
 
 
 # ===============================================================

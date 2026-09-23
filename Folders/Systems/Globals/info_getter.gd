@@ -49,3 +49,5 @@ func get_tasks_save_data() -> TasksSaveData:
 
 func get_task_by_task_id(task_id: int) -> Task:
 	return Global.tasks_related_managers.tasks_manager.get_task_by_task_id(task_id)
+
+func get_task_manager
