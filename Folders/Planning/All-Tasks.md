@@ -9,14 +9,6 @@
 - [ ] Make animations for player movement
 - [ ] Code movement animations playing for player
 
-- [ ] Handle changing of task status in task entry scene
-
-- [ ] Make the basic ui for task manager with godot nodes
-	- [ ] Compelte the task grid
-	- [ ] Link the backend and the frontend
-	- [ ] Add a right click menu (link)
-	- [ ] Add the options for shit in it
-
 - [ ] Add a right click menu
 
 - [ ] Add proper backend and frontend support
@@ -40,6 +32,16 @@
 
 # Completed Tasks
 ---
+
+- [X] Make the basic ui for task manager with godot nodes
+	- [X] Compelte the task grid
+	- [X] Link the backend and the frontend
+
+- [X] Handle changing of task status in task entry scene
+
+- [X] Check if the task entry option button is working properly with a dict
+
+- [X] Make pixel art for sword
 
 - [X] Handle the resolution setting
 	- Setting up so that my game renders in lower resolution and gets scaled up
