@@ -3,6 +3,8 @@
 # To-Do
 ---
 
+- [ ] Check if the task entry option button is working properly with a dict
+
 - [X] Make pixel art for sword
 - [ ] Make animations for sword attack
 - [ ] Code sword attack animation playing
