@@ -8,8 +8,7 @@ func _ready() -> void:
 
 func switch_to_scene(caller: Node, new_scene_path: String, clear_all_children: bool = false) -> void:
 	if clear_all_children:
-		for child in self.get_children():
-			child.queue_free()
+		clear_all_children()
 	
 	if self.get_children().has(caller):
 		self.remove_child(caller)
@@ -18,7 +17,12 @@ func switch_to_scene(caller: Node, new_scene_path: String, clear_all_children: b
 
 	add_child(new_scene)
 
-func clear_
+func clear_all_children() -> void:
+	for child in self.get_children():
+		if child == right_click_menu:
+			continue
+		
+		child.queue_free()
 
 func get_new_scene(new_scene_path: String) -> Node:
 	var packed_new_scene: PackedScene = load(new_scene_path)
