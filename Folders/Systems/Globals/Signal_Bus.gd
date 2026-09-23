@@ -42,6 +42,8 @@ signal refresh_ui
 signal save_game
 signal quit_game
 
+signal switch_to_scene
+
 # ==============================================
 # Funcs
 # ==============================================

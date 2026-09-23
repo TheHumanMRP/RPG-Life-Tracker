@@ -20,10 +20,10 @@ func setup_signals() -> void:
 	quit_game_button.pressed.connect(_on_quit_game_button_pressed)
 
 func _on_dungeon_selection_menu_button_pressed() -> void:
-	Global.main_node.switch_to_scene(self, Constants.PATH_TO_DUNGEON_SELECTION_MENU, true)
+	Global.main_scene.switch_to_scene(self, Constants.PATH_TO_DUNGEON_SELECTION_MENU, true)
 
 func _on_task_manager_button_pressed() -> void:
-	Global.main_node.switch_to_scene(self, Constants.PATH_TO_TASK_MANAGER, true)
+	Global..switch_to_scene(self, Constants.PATH_TO_TASK_MANAGER, true)
 
 func _on_quit_game_button_pressed() -> void:
 	SignalBus.quit_game.emit()

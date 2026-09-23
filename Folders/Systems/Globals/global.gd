@@ -91,7 +91,7 @@ var save_data: SaveData = SaveData.new()
 var main_scene: MainScene
 
 func set_main_scene_var() -> void:
-	main_scene = get_tree().get_first_node_in_group("main_node")
+	main_scene = get_tree().get_first_node_in_group("main_scene")
 
 
 # ============================================================================
@@ -103,7 +103,7 @@ func _ready() -> void:
 
 	call_deferred("test")
 	
-
+	set_main_scene_var()
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("add_test_sword"):
