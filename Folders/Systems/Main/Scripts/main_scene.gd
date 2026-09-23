@@ -1,5 +1,7 @@
-class_name MainNode
+class_name MainScene
 extends Node2D
+
+@export var right_click_menu: RightClickMenu
 
 func _ready() -> void:
 	self.add_to_group("main_node")
