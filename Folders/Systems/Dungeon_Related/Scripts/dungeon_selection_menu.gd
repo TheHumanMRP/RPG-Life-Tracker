@@ -12,4 +12,4 @@ func set_global_state() -> void:
 	SignalBus.set_game_state.emit(All_Enums.GAME_STATES.DungeonSelectionMenu)
 
 func temp() -> void:
-	Global.main_node.switch_to_scene(self, Constants.PATH_TO_DUNGEON_SCENE, true)
+	SignalBus.switch_scene.emit(self, Constants.PATH_TO_DUNGEON_SCENE, true)
