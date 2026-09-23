@@ -44,10 +44,7 @@ func task_completed_status_changed(option_button_index: int) -> void:
 		task_status_option_button.get_item_text(option_button_index)
 	)
 
-	match new_status:
-		"Completed!":
-			InfoGetter.get_task_manager().set_task_status(task_id, All_Enums.TASK_STATUS.Completed)
-		"To Do!":
+	InfoGetter.get_task_manager().set_task_status(Constants.TASK_STATUS_OPTIONS[new_status])
 
 
 # ===============================================================
