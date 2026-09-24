@@ -45,5 +45,17 @@ func play_animation(velocity: Vector2):
 			animation_player.play(up_right_animation_name)
 			return
 
+	# Handle Left Animations
 	if velocity.x < 10:
+		# PLayer not falling nor going up
+		if velocity.y == 0:
+			animation_player.play(left_animation_name)
+			return
 		
+		# Player falling
+		if velocity.y > 0:
+			animation_player.play(down_left_animation_name)
+			return
+		
+		if velocity.y < 0:
+			animation_player.play(up_left_animation_name)
