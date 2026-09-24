@@ -21,7 +21,7 @@ extends Node
 
 @export_group("Animation Player")
 
-@export var animation_player: AnimationPlayer
+@export var animation_player: AnimatedSprite2D
 
 func play_animation(velocity: Vector2):
 	if velocity.abs().x < 10 and velocity.abs().y == 0:

@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://ckyj7edp33tc8" path="res://Folders/Components/movement_component.gd" id="5_o2hah"]
 [ext_resource type="Script" uid="uid://d3iu25vhwg824" path="res://Folders/Systems/Inventory_System/Scripts/Inventory/inventory_manager.gd" id="6_7yyeh"]
 [ext_resource type="Texture2D" uid="uid://f1lj0q5jnxkk" path="res://Folders/Assets/Main-Art/Player/Player-Up.png" id="6_qb4sw"]
+[ext_resource type="Script" uid="uid://qf5hws2m7t25" path="res://Folders/Components/animation_player_component.gd" id="11_ynv66"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nhsef"]
 atlas = ExtResource("2_t2caf")
@@ -113,3 +114,13 @@ metadata/_custom_type_script = "uid://ckyj7edp33tc8"
 script = ExtResource("6_7yyeh")
 inventory_name = "Player"
 metadata/_custom_type_script = "uid://d3iu25vhwg824"
+
+[node name="AnimationPlayerComponent" type="Node" parent="." unique_id=1118374658 node_paths=PackedStringArray("animation_player")]
+script = ExtResource("11_ynv66")
+idle_animation_name = "Front"
+up_right_animation_name = "Right"
+up_left_animation_name = "Left"
+down_right_animation_name = "Right"
+down_left_animation_name = "Left"
+animation_player = NodePath("../AnimatedSprite2D")
+metadata/_custom_type_script = "uid://qf5hws2m7t25"

@@ -100,6 +100,8 @@ func _physics_process(delta: float) -> void:
 		delta
 	)
 
+	
+
 	move_and_slide()
 
 func _update_facing_direction(direction: int) -> void:
