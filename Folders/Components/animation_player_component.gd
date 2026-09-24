@@ -23,3 +23,5 @@ extends Node
 
 @export var animation_player: AnimationPlayer
 
+func play_animation(velocity: Vector2):
+	pass
