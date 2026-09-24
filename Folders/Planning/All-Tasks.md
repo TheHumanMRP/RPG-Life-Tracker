@@ -6,8 +6,6 @@
 
 - [ ] Make animations for sword attack
 - [ ] Code sword attack animation playing
-- [ ] Make animations for player movement
-- [ ] Code movement animations playing for player
 
 - [ ] Make the bg scene
 	- [ ] Make it intercept the mouse click and summom right click menu
@@ -37,6 +35,9 @@
 
 # Completed Tasks
 ---
+
+- [X] Make animations for player movement
+- [X] Code movement animations playing for player
 
 - [X] Make the basic ui for task manager with godot nodes
 	- [X] Compelte the task grid
