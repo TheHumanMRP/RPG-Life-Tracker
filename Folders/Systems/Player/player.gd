@@ -20,6 +20,7 @@ var facing_direction: int
 @export var health_component: HealthComponent
 @export var movement_component: MovementComponent
 @export var equipment_manager: EquipmentManager
+@export var animation_player_component: AnimationPlayerComponent
 
 # --------------------------------------------------------------------
 # Lifecycle
@@ -100,8 +101,8 @@ func _physics_process(delta: float) -> void:
 		delta
 	)
 
+	animation_player_component.play_animation(velocity)
 	
-
 	move_and_slide()
 
 func _update_facing_direction(direction: int) -> void:

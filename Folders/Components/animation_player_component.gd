@@ -26,3 +26,6 @@ extends Node
 func play_animation(velocity: Vector2):
 	if velocity.abs().x < 10 and velocity.abs().y == 0:
 		animation_player.play(idle_animation_name)
+		return
+	
+	if 
