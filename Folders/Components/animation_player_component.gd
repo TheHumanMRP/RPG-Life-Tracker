@@ -24,4 +24,5 @@ extends Node
 @export var animation_player: AnimationPlayer
 
 func play_animation(velocity: Vector2):
-	if velocity.abs() 
+	if velocity.abs().x < 10 and Vector2:
+		animation_player.play(idle_animation_name)
