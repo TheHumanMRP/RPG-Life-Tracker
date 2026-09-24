@@ -28,4 +28,6 @@ func play_animation(velocity: Vector2):
 		animation_player.play(idle_animation_name)
 		return
 	
-	if 
+	if velocity.x > 10:
+		if velocity.y > 0:
+			
