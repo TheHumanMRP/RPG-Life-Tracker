@@ -40,7 +40,7 @@ func _on_respawn_button_pressed() -> void:
 	print("\nDeath Menu: Respawn Button Pressed")
 
 func _on_return_button_pressed() -> void:
-	Global.main_node.switch_to_scene(self, Constants.PATH_TO_MAIN_MENU, true)
+	SignalBus.set_game_state.emit(self, Constants.PATH_TO_MAIN_MENU, true)
 
 func set_global_state_death_menu() -> void:
 	SignalBus.set_game_state.emit(All_Enums.GAME_STATES.DeathMenu)
