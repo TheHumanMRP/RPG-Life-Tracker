@@ -29,5 +29,13 @@ func play_animation(velocity: Vector2):
 		return
 	
 	if velocity.x > 10:
+		if velocity.y == 0:
+			animation_player.play(right_animation_name)
+			return
+
 		if velocity.y > 0:
-			
+			animation_player.play(down_right_animation_name)
+			return
+		
+		if velocity.y < 0:
+			animation_player.play(up_right_animation_name)
