@@ -24,11 +24,20 @@ extends Node
 @export var animation_player: AnimatedSprite2D
 
 func play_animation(velocity: Vector2):
-	# Handle Player Standing Still
-	if velocity.abs().x < 10 and velocity.abs().y == 0:
-		animation_player.play(idle_animation_name)
-		return
+	# Handle Player not moving animations
+	if velocity.abs().x < 10:
+		if velocity.y == 0:
+			animation_player.play(idle_animation_name)
+			return
 	
+		if velocity.y < 0:
+			animation_player.play(up_animation_name)
+			return
+		
+		if velocity.y > 0:
+			animation_player.play(down_animation_name)
+			return
+
 	# Handle Right Animations
 	if velocity.x > 10:
 		# Player not falling nor going up
