@@ -45,6 +45,13 @@ signal quit_game
 signal switch_scene(caller: Node, new_scene_path: String, clear_all_children: bool)
 
 # ==============================================
+# Right Click Menu
+# ==============================================
+
+signal popup_right_click_menu(list_of_options: Array[String], mouse_position: Vector2)
+signal right_click_menu_option_selected(selected_option: String)
+
+# ==============================================
 # Funcs
 # ==============================================
 
@@ -52,7 +59,3 @@ func _ready() -> void:
 	self.process_mode = Node.PROCESS_MODE_ALWAYS
 	await get_tree().process_frame
 	refresh_ui.emit()
-
-func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("respawn"):
-		respawn_player.emit()

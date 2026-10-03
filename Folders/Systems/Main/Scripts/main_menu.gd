@@ -20,6 +20,7 @@ func setup_signals() -> void:
 	dungeon_selection_menu_button.pressed.connect(_on_dungeon_selection_menu_button_pressed)
 	task_manager_button.pressed.connect(_on_task_manager_button_pressed)
 	quit_game_button.pressed.connect(_on_quit_game_button_pressed)
+	SignalBus.right_click_menu_option_selected.connect(_on_right_click_menu_option_selected)
 
 func _on_dungeon_selection_menu_button_pressed() -> void:
 	SignalBus.switch_scene.emit(self, Constants.PATH_TO_DUNGEON_SELECTION_MENU, true)
@@ -31,5 +32,7 @@ func _on_quit_game_button_pressed() -> void:
 	SignalBus.quit_game.emit()
 
 
-func handle_right_click_menu_quit_game() -> void:
-	SignalBus.quit_game.emit()
+func _on_right_click_menu_option_selected(option: String) -> void:
+	match option:
+		"Quit Game":
+			SignalBus.quit_game.emit()

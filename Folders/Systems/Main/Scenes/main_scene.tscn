@@ -3,10 +3,14 @@
 [ext_resource type="PackedScene" uid="uid://cw07ljkm68ifd" path="res://Folders/Systems/Main/Scenes/main_menu.tscn" id="1_43mws"]
 [ext_resource type="Script" uid="uid://cr0wj1xefy3g7" path="res://Folders/Systems/Main/Scripts/main_scene.gd" id="1_t2aa3"]
 [ext_resource type="PackedScene" uid="uid://djxvmvc88fbo8" path="res://Folders/Systems/Right_Click_Menu/Scene/right_click_menu.tscn" id="3_mxhho"]
+[ext_resource type="PackedScene" uid="uid://bwho71tqs4v1u" path="res://Folders/Systems/Main/Scenes/back_ground.tscn" id="4_33not"]
 
-[node name="MainScene" type="Node2D" unique_id=677144385 node_paths=PackedStringArray("right_click_menu")]
+[node name="MainScene" type="Node2D" unique_id=677144385 node_paths=PackedStringArray("right_click_menu", "background_scene")]
 script = ExtResource("1_t2aa3")
 right_click_menu = NodePath("Right_Click_Menu")
+background_scene = NodePath("BackGround")
+
+[node name="BackGround" parent="." unique_id=1464096325 instance=ExtResource("4_33not")]
 
 [node name="Main_Menu" parent="." unique_id=1303169397 instance=ExtResource("1_43mws")]
 

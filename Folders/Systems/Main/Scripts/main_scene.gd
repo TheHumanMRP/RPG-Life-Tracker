@@ -2,6 +2,7 @@ class_name MainScene
 extends Node2D
 
 @export var right_click_menu: RightClickMenu
+@export var background_scene: Background
 
 func _init() -> void:
 	self.add_to_group("main_scene")
@@ -22,7 +23,11 @@ func switch_scenes(caller: Node, new_scene_path: String, _clear_all_children: bo
 
 func clear_all_children() -> void:
 	for child in self.get_children():
+		# Don't remove the needed scenes
 		if child == right_click_menu:
+			continue
+		
+		if child == background_scene:
 			continue
 		
 		child.queue_free()

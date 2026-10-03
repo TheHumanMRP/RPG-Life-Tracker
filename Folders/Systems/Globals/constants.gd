@@ -24,19 +24,16 @@ const PATH_TO_HOTBAR_SLOT: String = "res://Folders/Systems/Inventory_System/Scen
 const PLAYER_INVENTORY_NAME: String = "player"
 
 # Items
-const NO_ITEM = -1
+const NO_ITEM: int = -1
 
 # Saving and loading
-const DEV_SAVE_PATH := "user://dev/save_data.tres"
-const LIVE_SAVE_PATH := "user://live/save_data.tres"
+const DEV_SAVE_PATH: String = "user://dev/save_data.tres"
+const LIVE_SAVE_PATH: String = "user://live/save_data.tres"
 
-# Right Click Menu
-
-const RIGHT_CLICK_MENU_OPTIONS_WITH_GAME_STATES: Dictionary[All_Enums.GAME_STATES, Array] = {
-	All_Enums.GAME_STATES.MainMenu: [""]
-}
-
-const callable: Callable = InfoGetter.get_main_menu().handle_right_click_menu_quit_game
+# Right Click Menu Options
+const MAIN_MENU_RIGHT_CLICK_MENU_OPTIONS: Array[String] = ["Quit Game"]
+const TASK_MANAGER_RIGHT_CLICK_MENU_OPTIONS: Array[String] = ["Add Task", "Remove Task"]
+const DEATH_MENU_RIGHT_CLICK_MENU_OPTIONS: Array[String] = ["Return to Main Menu", "Respawn"]
 
 # Tasks
 const TASK_STATUS_OPTIONS: Dictionary[String, All_Enums.TASK_STATUS] = {

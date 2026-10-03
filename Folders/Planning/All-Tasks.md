@@ -7,14 +7,16 @@
 - [ ] Make animations for sword attack
 - [ ] Code sword attack animation playing
 
-- [ ] Make the bg scene
-	- [ ] Make it intercept the mouse click and summom right click menu
+- [ ] Impliment the right click menu option handlings
+	- [ ] For death menu
+	- [X] For Main Menu
+	- [ ] For task Manager
 
-- [ ] Add a right click menu
-	- [ ] Follow the structure from the planning file and make it
-	- [ ] Make a new dict of game states and their menu options
+- [ ] Make the add task name input
+- [ ] Make the main menu quit right click menu option ask for conformation
 
-- [ ] Add proper backend and frontend support
+- [ ] Make the input menu for taking text inputs
+- [ ] Make the input menu for conformations
 
 - [ ] Make pixel art for the UI
 
@@ -35,6 +37,14 @@
 
 # Completed Tasks
 ---
+
+- [X] Make the bg scene
+	- [X] Make it intercept the mouse click and summom right click menu
+
+- [X] Add a right click menu
+	- [X] Make the signal bus signals
+	- [X] Impliment popping up of options
+		- [X] Make it accept a list of string which it adds to the menu
 
 - [X] Make animations for player movement
 - [X] Code movement animations playing for player

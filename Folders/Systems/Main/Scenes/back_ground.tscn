@@ -1,6 +1,12 @@
 [gd_scene format=3 uid="uid://bwho71tqs4v1u"]
 
-[node name="BackGround" type="Control" unique_id=1464096325]
+[ext_resource type="Script" uid="uid://cbnly07wkmj6f" path="res://Folders/Systems/Main/Scripts/back_ground.gd" id="1_cbsoh"]
+
+[node name="BackGround" type="CanvasLayer" unique_id=150657637 node_paths=PackedStringArray("background_control_node")]
+script = ExtResource("1_cbsoh")
+background_control_node = NodePath("Actual_Background")
+
+[node name="Actual_Background" type="Control" parent="." unique_id=1365170367]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
