@@ -88,7 +88,7 @@ var save_data: SaveData = SaveData.new()
 # Main Node
 # ============================================================================
 
-var main_scene: MainScene
+@onready var main_scene: MainScene
 
 func set_main_scene_var() -> void:
 	main_scene = get_tree().get_first_node_in_group("main_scene")

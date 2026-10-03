@@ -1,3 +1,4 @@
+class_name MainMenu
 extends CanvasLayer
 
 @export var main_menu_label: Label
@@ -9,6 +10,7 @@ func _init() -> void:
 	set_global_state()
 
 func _ready() -> void:
+	self.add_to_group("main_menu")
 	setup_signals()
 
 func set_global_state() -> void:
@@ -26,4 +28,8 @@ func _on_task_manager_button_pressed() -> void:
 	SignalBus.switch_scene.emit(self, Constants.PATH_TO_TASK_MANAGER, true)
 
 func _on_quit_game_button_pressed() -> void:
+	SignalBus.quit_game.emit()
+
+
+func handle_right_click_menu_quit_game() -> void:
 	SignalBus.quit_game.emit()

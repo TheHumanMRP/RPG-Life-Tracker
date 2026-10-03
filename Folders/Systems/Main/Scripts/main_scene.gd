@@ -9,8 +9,8 @@ func _init() -> void:
 func _ready() -> void:
 	SignalBus.switch_scene.connect(switch_scenes)
 
-func switch_scenes(caller: Node, new_scene_path: String, clear_all_children: bool = false) -> void:
-	if clear_all_children:
+func switch_scenes(caller: Node, new_scene_path: String, _clear_all_children: bool = false) -> void:
+	if _clear_all_children:
 		clear_all_children()
 	
 	if self.get_children().has(caller):

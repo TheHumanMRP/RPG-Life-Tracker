@@ -52,3 +52,13 @@ func get_task_by_task_id(task_id: int) -> Task:
 
 func get_task_manager() -> TaskManager:
 	return Global.tasks_related_managers.tasks_manager
+
+# ============================================================================
+# Right Click Menu
+# ============================================================================
+
+func get_main_menu() -> MainMenu:
+	if Global.current_game_state != All_Enums.GAME_STATES.MainMenu:
+		return null
+	
+	return get_tree().get_first_node_in_group("main_menu")
