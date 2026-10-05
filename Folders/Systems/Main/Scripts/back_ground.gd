@@ -23,7 +23,7 @@ func detect_right_mouse_click(event: InputEvent) -> void:
 func open_right_click_menu() -> void:
 	# Purposefully uninitialised to that I can do a null check later
 	# Could use an empty array, but whatever
-	var right_click_menu_options: Array[String]
+	var right_click_menu_options: Array[String] = []
 
 	match Global.current_game_state:
 		All_Enums.GAME_STATES.MainMenu:
@@ -33,7 +33,7 @@ func open_right_click_menu() -> void:
 	
 	# Checks if the right_click_menu_options wasn't initialised by the match
 	# meaning it's a game state where I don't need a right click menu
-	if right_click_menu_options == null:
+	if right_click_menu_options == []]:
 		return
 
 	SignalBus.popup_right_click_menu.emit(right_click_menu_options, background_control_node.get_global_mouse_position())
