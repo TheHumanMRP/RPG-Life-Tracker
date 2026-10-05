@@ -3,6 +3,9 @@ extends MarginContainer
 # ==============================================
 # Initialize
 # ==============================================
+func _init() -> void:
+	SignalBus.set_game_state.emit(All_Enums.GAME_STATES.TaskManager)
+
 func _ready() -> void:
 	SignalBus.right_click_menu_option_selected.connect(_on_right_click_menu_option_selected)
 	_set_mouse_filter()
