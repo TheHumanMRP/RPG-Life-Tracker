@@ -16,6 +16,8 @@ func switch_scenes(caller: Node, new_scene_path: String, _clear_all_children: bo
 	if self.get_children().has(caller):
 		self.remove_child(caller)
 	
+	print("Switching to scene: ", new_scene_path)
+
 	var new_scene: Node = get_new_scene(new_scene_path)
 
 	add_child(new_scene)
