@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dgcrca6nf3v6o"]
 
-[ext_resource type="Script" uid="uid://bxep80oxjlhkm" path="res://Folders/Systems/Task-Manager/Scripts/task_manager_ui.gd" id="1_sajli"]
+[ext_resource type="Script" uid="uid://bttpe437nq6am" path="res://Folders/Systems/Task-Manager/Scripts/task_manager_ui_canvas_layer.gd" id="1_sajli"]
 [ext_resource type="PackedScene" uid="uid://gdbbj4t5s8w8" path="res://Folders/Systems/Task-Manager/Scenes/task_manager_ui.tscn" id="2_sajli"]
 
 [node name="Task_Manager_UI_Canvas_Layer" type="CanvasLayer" unique_id=576735466]
