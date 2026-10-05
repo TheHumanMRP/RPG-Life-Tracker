@@ -1,22 +1,24 @@
 class_name MainMenu
-extends CanvasLayer
+extends Control
 
 @export var main_menu_label: Label
 @export var dungeon_selection_menu_button: Button
 @export var task_manager_button: Button
 @export var quit_game_button: Button
 
+# Initialize 
+
 func _init() -> void:
-	set_global_state()
+	_set_global_state()
 
 func _ready() -> void:
 	self.add_to_group("main_menu")
-	setup_signals()
+	_setup_signals()
 
-func set_global_state() -> void:
+func _set_global_state() -> void:
 	SignalBus.set_game_state.emit(All_Enums.GAME_STATES.MainMenu)
 
-func setup_signals() -> void:
+func _setup_signals() -> void:
 	dungeon_selection_menu_button.pressed.connect(_on_dungeon_selection_menu_button_pressed)
 	task_manager_button.pressed.connect(_on_task_manager_button_pressed)
 	quit_game_button.pressed.connect(_on_quit_game_button_pressed)
