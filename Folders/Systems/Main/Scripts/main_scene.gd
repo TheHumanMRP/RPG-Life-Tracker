@@ -15,8 +15,6 @@ func switch_scenes(caller: Node, new_scene_path: String, _clear_all_children: bo
 	
 	if self.get_children().has(caller):
 		self.remove_child(caller)
-	
-	print("Switching to scene: ", new_scene_path)
 
 	var new_scene: Node = get_new_scene(new_scene_path)
 
@@ -33,10 +31,6 @@ func clear_all_children() -> void:
 func get_new_scene(new_scene_path: String) -> Node:
 	var packed_new_scene: PackedScene = load(new_scene_path)
 
-	print("Got packed scnee")
-
 	var new_scene: Node = packed_new_scene.instantiate()
-
-	print("Got new scene and returning it now")
 
 	return new_scene
