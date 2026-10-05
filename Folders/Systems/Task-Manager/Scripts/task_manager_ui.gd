@@ -4,6 +4,7 @@ extends MarginContainer
 # Initialize
 # ==============================================
 func _init() -> void:
+	print("Init called")
 	SignalBus.set_game_state.emit(All_Enums.GAME_STATES.TaskManager)
 
 func _ready() -> void:
