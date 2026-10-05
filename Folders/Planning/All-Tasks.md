@@ -8,7 +8,6 @@
 - [ ] Code sword attack animation playing
 
 - [ ] Impliment the right click menu option handlings
-	- [ ] For death menu
 	- [X] For Main Menu
 	- [ ] For task Manager
 

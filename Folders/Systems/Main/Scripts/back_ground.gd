@@ -31,7 +31,7 @@ func open_right_click_menu() -> void:
 			right_click_menu_options = Constants.TASK_MANAGER_RIGHT_CLICK_MENU_OPTIONS
 	
 	# Checks if the right_click_menu_options wasn't filled with the match
-	# Meaning there was no 
+	# Meaning it's a game state where I don't need the right click menu
 	if right_click_menu_options == []:
 		return
 
