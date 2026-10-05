@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://dgcrca6nf3v6o"]
 
-[ext_resource type="Script" uid="uid://bxep80oxjlhkm" path="res://Folders/Systems/Task-Manager/Scripts/task_manager_ui.gd" id="1_tv5vg"]
-[ext_resource type="PackedScene" uid="uid://begy5501tfsx6" path="res://Folders/Systems/Task-Manager/Scenes/task_grid.tscn" id="2_tv5vg"]
+[ext_resource type="Script" uid="uid://bxep80oxjlhkm" path="res://Folders/Systems/Task-Manager/Scripts/task_manager_ui.gd" id="1_sajli"]
+[ext_resource type="PackedScene" uid="uid://begy5501tfsx6" path="res://Folders/Systems/Task-Manager/Scenes/task_grid.tscn" id="2_w5agn"]
 
-[node name="Task_Manager" type="CanvasLayer" unique_id=576735466]
-script = ExtResource("1_tv5vg")
+[node name="Task_Manager_UI_Canvas_Layer" type="CanvasLayer" unique_id=576735466]
+script = ExtResource("1_sajli")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=526869144]
 anchors_preset = 15
@@ -17,5 +17,5 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="Task_Grid" parent="MarginContainer" unique_id=418115436 instance=ExtResource("2_tv5vg")]
+[node name="Task_Grid" parent="MarginContainer" unique_id=418115436 instance=ExtResource("2_w5agn")]
 layout_mode = 2
