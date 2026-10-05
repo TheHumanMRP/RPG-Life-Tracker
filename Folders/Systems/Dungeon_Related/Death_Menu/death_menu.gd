@@ -47,3 +47,6 @@ func set_global_state_death_menu() -> void:
 
 func set_global_state_dungeon_playing() -> void:
 	SignalBus.set_game_state.emit(All_Enums.GAME_STATES.DungeonPlaying)
+
+func _on_right_click_menu_option_selected(selected_option: String) -> void:
+	if selected 
