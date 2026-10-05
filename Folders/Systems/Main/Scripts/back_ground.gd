@@ -30,8 +30,6 @@ func open_right_click_menu() -> void:
 			right_click_menu_options = Constants.MAIN_MENU_RIGHT_CLICK_MENU_OPTIONS
 		All_Enums.GAME_STATES.TaskManager:
 			right_click_menu_options = Constants.TASK_MANAGER_RIGHT_CLICK_MENU_OPTIONS
-		All_Enums.GAME_STATES.DeathMenu:
-			right_click_menu_options = Constants.DEATH_MENU_RIGHT_CLICK_MENU_OPTIONS
 	
 	# Checks if the right_click_menu_options wasn't initialised by the match
 	# meaning it's a game state where I don't need a right click menu
