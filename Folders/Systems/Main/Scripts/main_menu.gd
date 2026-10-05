@@ -32,7 +32,7 @@ func _setup_signals() -> void:
 func _set_mouse_filters() -> void:
 	self.mouse_filter = Control.MOUSE_FILTER_STOP
 
-	var children: Array[Control] = get_children() as Array[Control]
+	var children: Array[Node] = get_children()
 
 	for child in children:
 		child.mouse_filter = Control.MOUSE_FILTER_PASS
