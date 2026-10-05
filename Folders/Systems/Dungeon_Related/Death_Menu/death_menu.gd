@@ -51,4 +51,4 @@ func set_global_state_dungeon_playing() -> void:
 func _on_right_click_menu_option_selected(selected_option: String) -> void:
 	match selected_option:
 		"Return to Main Menu":
-			
+			pass
