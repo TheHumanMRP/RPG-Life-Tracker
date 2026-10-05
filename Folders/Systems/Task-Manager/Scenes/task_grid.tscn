@@ -1,7 +1,5 @@
 [gd_scene format=3 uid="uid://begy5501tfsx6"]
 
-[ext_resource type="PackedScene" uid="uid://vt6eolqkwws8" path="res://Folders/Systems/Task-Manager/Scenes/task_entry_scene.tscn" id="1_vs7gx"]
-
 [node name="Task_Grid" type="ScrollContainer" unique_id=77195755]
 anchors_preset = 15
 anchor_right = 1.0
@@ -13,30 +11,3 @@ grow_vertical = 2
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-
-[node name="Task_Entry_Scene" parent="VBoxContainer" unique_id=465403137 instance=ExtResource("1_vs7gx")]
-layout_mode = 2
-
-[node name="Task_Entry_Scene2" parent="VBoxContainer" unique_id=1365254451 instance=ExtResource("1_vs7gx")]
-layout_mode = 2
-
-[node name="Task_Entry_Scene3" parent="VBoxContainer" unique_id=189865065 instance=ExtResource("1_vs7gx")]
-layout_mode = 2
-
-[node name="Task_Entry_Scene4" parent="VBoxContainer" unique_id=246469555 instance=ExtResource("1_vs7gx")]
-layout_mode = 2
-
-[node name="Task_Entry_Scene5" parent="VBoxContainer" unique_id=421645514 instance=ExtResource("1_vs7gx")]
-layout_mode = 2
-
-[node name="Task_Entry_Scene6" parent="VBoxContainer" unique_id=923932323 instance=ExtResource("1_vs7gx")]
-layout_mode = 2
-
-[node name="Task_Entry_Scene7" parent="VBoxContainer" unique_id=1660285274 instance=ExtResource("1_vs7gx")]
-layout_mode = 2
-
-[node name="Task_Entry_Scene8" parent="VBoxContainer" unique_id=562353163 instance=ExtResource("1_vs7gx")]
-layout_mode = 2
-
-[node name="Task_Entry_Scene9" parent="VBoxContainer" unique_id=541939615 instance=ExtResource("1_vs7gx")]
-layout_mode = 2
