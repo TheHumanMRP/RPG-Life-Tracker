@@ -10,4 +10,4 @@ func _on_right_click_menu_option_selected(option: String) -> void:
 
 func _ready() -> void:
 	for child in get_children():
-		child.
+		child.mouse_filter = .Propogate
