@@ -28,7 +28,7 @@ func detect_right_mouse_click(event: InputEvent) -> void:
 	if event.button_index != MOUSE_BUTTON_RIGHT or not event.pressed:
 		return
 	
-	open_right_click_menu()
+	_open_right_click_menu()
 
-func open_right_click_menu() -> void:
-	pass
+func _open_right_click_menu() -> void:
+	SignalBus.popup_right_click_menu.emit(Constants.TASK_MANAGER_RIGHT_CLICK_MENU_OPTIONS, get_global_mouse_position())
