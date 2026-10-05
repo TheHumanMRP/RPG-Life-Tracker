@@ -6,8 +6,9 @@ extends Control
 @export var task_manager_button: Button
 @export var quit_game_button: Button
 
-# Initialize 
-
+# ==============================================
+# Initialize
+# ==============================================
 func _init() -> void:
 	_set_global_state()
 
@@ -15,6 +16,9 @@ func _ready() -> void:
 	self.add_to_group("main_menu")
 	_setup_signals()
 
+# ==============================================
+# Setup
+# ==============================================
 func _set_global_state() -> void:
 	SignalBus.set_game_state.emit(All_Enums.GAME_STATES.MainMenu)
 
@@ -24,6 +28,16 @@ func _setup_signals() -> void:
 	quit_game_button.pressed.connect(_on_quit_game_button_pressed)
 	SignalBus.right_click_menu_option_selected.connect(_on_right_click_menu_option_selected)
 
+func _set_mouse_filters() -> void:
+	self.mouse_filter = Control.MOUSE_FILTER_STOP
+
+	var children: Array[Control] = get_children() as Array[Control]
+
+	
+
+# ==============================================
+# Handling Input
+# ==============================================
 func _on_dungeon_selection_menu_button_pressed() -> void:
 	SignalBus.switch_scene.emit(self, Constants.PATH_TO_DUNGEON_SELECTION_MENU, true)
 
