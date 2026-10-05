@@ -18,9 +18,9 @@ func _set_mouse_filter() -> void:
 		child.mouse_filter = Control.MOUSE_FILTER_PASS
 	
 func _gui_input(event: InputEvent) -> void:
-	detect_right_mouse_click(event)
+	_detect_right_mouse_click(event)
 
-func detect_right_mouse_click(event: InputEvent) -> void:
+func _detect_right_mouse_click(event: InputEvent) -> void:
 	if event is not InputEventMouseButton:
 		return
 

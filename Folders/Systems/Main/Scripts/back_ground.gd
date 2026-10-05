@@ -7,9 +7,9 @@ func _ready() -> void:
 	background_control_node.gui_input.connect(_gui_input)
 
 func _gui_input(event: InputEvent) -> void:
-	detect_right_mouse_click(event)
+	_detect_right_mouse_click(event)
 
-func detect_right_mouse_click(event: InputEvent) -> void:
+func _detect_right_mouse_click(event: InputEvent) -> void:
 	if event is not InputEventMouseButton:
 		return
 
@@ -17,10 +17,10 @@ func detect_right_mouse_click(event: InputEvent) -> void:
 	if event.button_index != MOUSE_BUTTON_RIGHT or not event.pressed:
 		return
 	
-	open_right_click_menu()
+	_open_right_click_menu()
 		
 	
-func open_right_click_menu() -> void:
+func _open_right_click_menu() -> void:
 	# Just use an empty array as a null representative
 	var right_click_menu_options: Array[String] = []
 
