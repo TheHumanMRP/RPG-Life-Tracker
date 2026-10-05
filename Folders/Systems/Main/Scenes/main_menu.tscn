@@ -3,15 +3,24 @@
 [ext_resource type="Script" uid="uid://bvsd1u1q4blrp" path="res://Folders/Systems/Main/Scripts/main_menu.gd" id="1_se87p"]
 [ext_resource type="Theme" uid="uid://deuleb40h735d" path="res://Folders/Assets/UI_Theme/rpg-life-tracker-ui-theme.tres" id="2_ubp4m"]
 
-[node name="Main_Menu" type="CanvasLayer" unique_id=1354644221 node_paths=PackedStringArray("main_menu_label", "dungeon_selection_menu_button", "task_manager_button", "quit_game_button")]
+[node name="Main_Menu_Canvas_Later" type="CanvasLayer" unique_id=1354644221 node_paths=PackedStringArray("main_menu_label", "dungeon_selection_menu_button", "task_manager_button", "quit_game_button")]
 script = ExtResource("1_se87p")
-main_menu_label = NodePath("Main_Menu_Label")
-dungeon_selection_menu_button = NodePath("VBoxContainer/Dungeon_Selection_Menu_Button")
-task_manager_button = NodePath("VBoxContainer/Task_Manager_Button")
-quit_game_button = NodePath("VBoxContainer/Quit_Game_Button")
+main_menu_label = NodePath("Main_Menu/Main_Menu_Label")
+dungeon_selection_menu_button = NodePath("Main_Menu/VBoxContainer/Dungeon_Selection_Menu_Button")
+task_manager_button = NodePath("Main_Menu/VBoxContainer/Task_Manager_Button")
+quit_game_button = NodePath("Main_Menu/VBoxContainer/Quit_Game_Button")
 
-[node name="Main_Menu_Label" type="Label" parent="." unique_id=846517829]
+[node name="Main_Menu" type="Control" parent="." unique_id=991180715]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Main_Menu_Label" type="Label" parent="Main_Menu" unique_id=846517829]
 unique_name_in_owner = true
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -31,35 +40,36 @@ theme_override_font_sizes/font_size = 50
 text = "Main Menu"
 horizontal_alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1652717170]
+[node name="VBoxContainer" type="VBoxContainer" parent="Main_Menu" unique_id=1652717170]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -121.0
-offset_top = -52.0
-offset_right = 121.0
-offset_bottom = 52.0
+offset_left = -192.0
+offset_top = -77.0
+offset_right = 192.0
+offset_bottom = 77.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 20
 
-[node name="Dungeon_Selection_Menu_Button" type="Button" parent="VBoxContainer" unique_id=173817697]
+[node name="Dungeon_Selection_Menu_Button" type="Button" parent="Main_Menu/VBoxContainer" unique_id=173817697]
 unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("2_ubp4m")
 theme_override_font_sizes/font_size = 30
 text = "  Dungeon Selection Menu  "
 
-[node name="Task_Manager_Button" type="Button" parent="VBoxContainer" unique_id=2038934426]
+[node name="Task_Manager_Button" type="Button" parent="Main_Menu/VBoxContainer" unique_id=2038934426]
 unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("2_ubp4m")
 theme_override_font_sizes/font_size = 30
 text = "  Task Manager  "
 
-[node name="Quit_Game_Button" type="Button" parent="VBoxContainer" unique_id=1459450233]
+[node name="Quit_Game_Button" type="Button" parent="Main_Menu/VBoxContainer" unique_id=1459450233]
 unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("2_ubp4m")
