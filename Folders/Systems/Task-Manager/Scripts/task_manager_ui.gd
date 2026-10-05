@@ -10,6 +10,11 @@ func _on_right_click_menu_option_selected(option: String) -> void:
 			pass
 
 func _ready() -> void:
+	_set_propogation()
+
+func _set_propogation() -> void:
+	self.mouse_filter = Control.MOUSE_FILTER_STOP
+
 	var children: Array[Control] = get_children() as Array[Control]
 
 	for child in children:
