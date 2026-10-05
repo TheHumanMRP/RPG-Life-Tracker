@@ -15,6 +15,7 @@ func _init() -> void:
 func _ready() -> void:
 	self.add_to_group("main_menu")
 	_setup_signals()
+	_set_mouse_filters()
 
 # ==============================================
 # Setup
@@ -33,7 +34,8 @@ func _set_mouse_filters() -> void:
 
 	var children: Array[Control] = get_children() as Array[Control]
 
-	
+	for child in children:
+		child.mouse_filter = Control.MOUSE_FILTER_PASS
 
 # ==============================================
 # Handling Input
