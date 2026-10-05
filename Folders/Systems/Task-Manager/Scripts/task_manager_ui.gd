@@ -16,3 +16,19 @@ func _set_mouse_filter() -> void:
 
 	for child in children:
 		child.mouse_filter = Control.MOUSE_FILTER_PASS
+	
+func _gui_input(event: InputEvent) -> void:
+	detect_right_mouse_click(event)
+
+func detect_right_mouse_click(event: InputEvent) -> void:
+	if event is not InputEventMouseButton:
+		return
+
+	# Check if it's the right mouse button and it was just pressed down
+	if event.button_index != MOUSE_BUTTON_RIGHT or not event.pressed:
+		return
+	
+	open_right_click_menu()
+
+func open_right_click_menu() -> void:
+	pass
