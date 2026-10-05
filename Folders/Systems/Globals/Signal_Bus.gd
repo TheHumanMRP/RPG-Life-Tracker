@@ -52,10 +52,8 @@ signal popup_right_click_menu(list_of_options: Array[String], mouse_position: Ve
 signal right_click_menu_option_selected(selected_option: String)
 
 # ==============================================
-# Funcs
+# Set process mode
 # ==============================================
 
 func _ready() -> void:
 	self.process_mode = Node.PROCESS_MODE_ALWAYS
-	await get_tree().process_frame
-	refresh_ui.emit()
