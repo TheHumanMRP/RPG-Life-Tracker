@@ -7,6 +7,8 @@ var save_next: bool
 var save_manager: SaveManager = SaveManager.new()
 
 func _ready() -> void:
+	self.process_mode = Node.PROCESS_MODE_ALWAYS
+
 	SignalBus.save_game.connect(_on_save_game)
 	SignalBus.quit_game.connect(_on_quit_game)
 
