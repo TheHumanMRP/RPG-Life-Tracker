@@ -55,7 +55,7 @@ signal right_click_menu_option_selected(selected_option: String)
 # Input
 # ==============================================
 
-signal 
+signal get_user_text_input(question: String, user_input_line_edit_placeholder_text: String)
 
 # ==============================================
 # Set process mode
