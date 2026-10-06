@@ -6,7 +6,9 @@ extends PanelContainer
 func _ready() -> void:
 	user_input_line_edit.text_submitted.connect(_on_user_input_line_edit_text_submitted)
 
-func get_text_input(question: String, user_input_placeholder_text: String = "Answer Here") -> void:
+	SignalBus.get_text_input_from_user.con
+
+func _on_get_text_input_from_user(question: String, user_input_placeholder_text: String = "Answer Here") -> void:
 	question_label.text = question
 	user_input_line_edit.placeholder_text = user_input_placeholder_text
 
