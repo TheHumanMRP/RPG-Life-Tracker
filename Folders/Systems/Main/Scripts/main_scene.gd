@@ -38,4 +38,6 @@ func _get_new_scene(new_scene_path: String) -> Node:
 	return new_scene
 
 func _add_needed_scenes() -> void:
-	match 
+	match Global.current_game_state:
+		All_Enums.GAME_STATES.MainMenu:
+			
