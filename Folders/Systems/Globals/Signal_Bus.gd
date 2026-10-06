@@ -52,6 +52,12 @@ signal popup_right_click_menu(list_of_options: Array[String], mouse_position: Ve
 signal right_click_menu_option_selected(selected_option: String)
 
 # ==============================================
+# Input
+# ==============================================
+
+signal 
+
+# ==============================================
 # Set process mode
 # ==============================================
 
