@@ -16,3 +16,5 @@ func _on_get_text_input_from_user(question: String, user_input_placeholder_text:
 
 func _on_user_input_line_edit_text_submitted(text_submitted: String) -> void:
 	SignalBus.text_input_submitted_by_user.emit(text_submitted)
+
+	self.hide()
