@@ -41,11 +41,20 @@ func _add_needed_scenes() -> void:
 	match Global.current_game_state:
 		All_Enums.GAME_STATES.MainMenu:
 			_add_right_click_menu()
-		
+			_add_conformation_input_box()
+			_add_text_input_box()
+
 		All_Enums.GAME_STATES.TaskManager:
 			_add_right_click_menu()
-			
+			_add_conformation_input_box()
+			_add_text_input_box()
 
 
 func _add_right_click_menu() -> void:
+	pass
+
+func _add_text_input_box() -> void:
+	pass
+
+func _add_conformation_input_box() -> void:
 	pass
