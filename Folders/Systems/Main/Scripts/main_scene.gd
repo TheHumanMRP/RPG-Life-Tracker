@@ -40,4 +40,12 @@ func _get_new_scene(new_scene_path: String) -> Node:
 func _add_needed_scenes() -> void:
 	match Global.current_game_state:
 		All_Enums.GAME_STATES.MainMenu:
+			_add_right_click_menu()
+		
+		All_Enums.GAME_STATES.TaskManager:
+			_add_right_click_menu()
 			
+
+
+func _add_right_click_menu() -> void:
+	pass
