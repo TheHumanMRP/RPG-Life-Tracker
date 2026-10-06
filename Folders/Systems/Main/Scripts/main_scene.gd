@@ -36,3 +36,6 @@ func _get_new_scene(new_scene_path: String) -> Node:
 	var new_scene: Node = packed_new_scene.instantiate()
 
 	return new_scene
+
+func _add_needed_scenes() -> void:
+	match 
