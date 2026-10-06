@@ -9,8 +9,8 @@ func _init() -> void:
 func _ready() -> void:
 	SignalBus.switch_scene.connect(switch_scenes)
 
-func switch_scenes(caller: Node, new_scene_path: String, _clear_all_children: bool = false) -> void:
-	if _clear_all_children:
+func switch_scenes(caller: Node, new_scene_path: String, _clear_children: bool = false) -> void:
+	if _clear_children:
 		_clear_all_children()
 	
 	# Remove the caller of the scene change caller regardless
@@ -18,7 +18,7 @@ func switch_scenes(caller: Node, new_scene_path: String, _clear_all_children: bo
 	if self.get_children().has(caller):
 		self.remove_child(caller)
 
-	var new_scene: Node = get_new_scene(new_scene_path)
+	var new_scene: Node = _get_new_scene(new_scene_path)
 
 	add_child(new_scene)
 
@@ -36,4 +36,3 @@ func _get_new_scene(new_scene_path: String) -> Node:
 	var new_scene: Node = packed_new_scene.instantiate()
 
 	return new_scene
-
