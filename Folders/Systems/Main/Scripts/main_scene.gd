@@ -15,7 +15,7 @@ func switch_scenes(caller: Node, new_scene_path: String, _clear_all_children: bo
 	
 	# Remove the caller of the scene change caller regardless
 	# of wether clear_all_children is true or false
-	if self.get_children().has(caller) and not _clear_all_children:
+	if self.get_children().has(caller):
 		self.remove_child(caller)
 
 	var new_scene: Node = get_new_scene(new_scene_path)
