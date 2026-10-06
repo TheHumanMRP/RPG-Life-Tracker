@@ -56,6 +56,7 @@ signal right_click_menu_option_selected(selected_option: String)
 # ==============================================
 
 signal get_text_input_from_user(question: String, user_input_line_edit_placeholder_text: String)
+signal text_input_submitted_by_user(text_sumitted: String)
 
 # ==============================================
 # Set process mode
