@@ -4,7 +4,7 @@
 ---
 
 
-- [ ] Make 
+- [ ] Make the main_scene load and unload needed tools according to game mode
 
 
 - [ ] Make animations for sword attack
