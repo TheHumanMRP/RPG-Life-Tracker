@@ -14,9 +14,11 @@ func switch_scenes(caller: Node, new_scene_path: String, _clear_children: bool =
 		_clear_all_children()
 	
 	# Remove the caller of the scene change caller regardless
-	# of wether clear_all_children is true or false
+	# of wether clear_children is true or false
 	if self.get_children().has(caller):
 		self.remove_child(caller)
+
+	_add_needed_scenes()
 
 	var new_scene: Node = _get_new_scene(new_scene_path)
 
@@ -24,10 +26,6 @@ func switch_scenes(caller: Node, new_scene_path: String, _clear_children: bool =
 
 func _clear_all_children() -> void:
 	for child in self.get_children():
-		# Don't remove the needed scenes
-		if child == right_click_menu:
-			continue
-		
 		child.queue_free()
 
 func _get_new_scene(new_scene_path: String) -> Node:
