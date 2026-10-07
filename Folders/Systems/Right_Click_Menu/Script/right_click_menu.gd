@@ -5,6 +5,7 @@ func _init() -> void:
 	self.add_to_group("right_click_menu")
 
 func _ready() -> void:
+	self.hide()
 	SignalBus.popup_right_click_menu.connect(_on_popup_right_click_menu)
 	self.index_pressed.connect(_on_index_pressed)
 
