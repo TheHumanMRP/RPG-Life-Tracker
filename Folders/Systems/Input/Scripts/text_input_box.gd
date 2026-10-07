@@ -4,7 +4,7 @@ extends PanelContainer
 @export var user_input_line_edit: LineEdit
 
 func _ready() -> void:
-	self.hide() 
+	self.hide()
 
 	user_input_line_edit.text_submitted.connect(_on_user_input_line_edit_text_submitted)
 
@@ -13,6 +13,7 @@ func _ready() -> void:
 func _on_get_text_input_from_user(question: String, user_input_placeholder_text: String = "Answer Here") -> void:
 	question_label.text = question
 	user_input_line_edit.placeholder_text = user_input_placeholder_text
+	user_input_line_edit.text = ""
 
 	self.show()
 
