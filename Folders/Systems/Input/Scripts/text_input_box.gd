@@ -12,10 +12,11 @@ func _ready() -> void:
 
 	SignalBus.get_text_input_from_user.connect(_on_get_text_input_from_user)
 
-func _on_get_text_input_from_user(question: String, user_input_placeholder_text: String = "Answer Here") -> void:
+func _on_get_text_input_from_user(question: String, new_caller_tag: String, user_input_placeholder_text: String = "Answer Here") -> void:
 	question_label.text = question
 	user_input_line_edit.placeholder_text = user_input_placeholder_text
 	user_input_line_edit.text = ""
+	caller_tag = new_caller_tag
 
 	self.show()
 
