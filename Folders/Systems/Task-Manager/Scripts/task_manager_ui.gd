@@ -14,7 +14,7 @@ func _ready() -> void:
 func _set_mouse_filter() -> void:
 	self.mouse_filter = Control.MOUSE_FILTER_STOP
 
-	var children: Array[Control] = self.get_children() as Array[Node]
+	var children: Array[Node] = self.get_children()
 
 	for child in children:
 		child.mouse_filter = Control.MOUSE_FILTER_PASS
