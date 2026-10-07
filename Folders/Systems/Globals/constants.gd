@@ -20,6 +20,8 @@ const PATH_TO_DEATH_MENU: String = "res://Folders/Systems/Dungeon_Related/Death_
 
 const PATH_TO_HOTBAR_SLOT: String = "res://Folders/Systems/Inventory_System/Scenes/hotbar_slot.tscn"
 
+const PATH_TO_RIGHT_CLICK_MENU : String = load("")
+
 # PLayer
 const PLAYER_INVENTORY_NAME: String = "player"
 
