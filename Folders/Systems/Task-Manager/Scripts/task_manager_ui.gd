@@ -4,7 +4,6 @@ extends MarginContainer
 # Initialize
 # ==============================================
 func _ready() -> void:
-	print("Readt task manager")
 	SignalBus.right_click_menu_option_selected.connect(_on_right_click_menu_option_selected)
 	_set_mouse_filter()
 
