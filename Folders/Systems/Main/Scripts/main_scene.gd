@@ -49,7 +49,9 @@ func _add_needed_scenes() -> void:
 
 
 func _add_right_click_menu() -> void:
-	pass
+	var right_click_menu: Node = _get_new_scene(Constants.PATH_TO_RIGHT_CLICK_MENU)
+
+	self.add_child(right_click_menu)
 
 func _add_text_input_box() -> void:
 	pass
