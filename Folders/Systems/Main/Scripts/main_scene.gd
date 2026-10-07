@@ -52,7 +52,9 @@ func _add_right_click_menu() -> void:
 	self.add_child(right_click_menu)
 
 func _add_text_input_box() -> void:
-	pass
+	var text_input_box: Node = _get_new_scene(Constants.PATH_TO_TEXT_INPUT_BOX)
+
+	self.add_child(text_input_box)
 
 func _add_conformation_input_box() -> void:
 	pass
