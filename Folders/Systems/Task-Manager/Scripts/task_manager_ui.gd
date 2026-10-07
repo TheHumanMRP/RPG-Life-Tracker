@@ -4,6 +4,7 @@ extends MarginContainer
 # Initialize
 # ==============================================
 func _ready() -> void:
+	print("Readt task manager")
 	SignalBus.right_click_menu_option_selected.connect(_on_right_click_menu_option_selected)
 	_set_mouse_filter()
 
@@ -13,7 +14,7 @@ func _ready() -> void:
 func _set_mouse_filter() -> void:
 	self.mouse_filter = Control.MOUSE_FILTER_STOP
 
-	var children: Array[Control] = self.get_children() as Array[Control]
+	var children: Array[Control] = self.get_children() as Array[Node]
 
 	for child in children:
 		child.mouse_filter = Control.MOUSE_FILTER_PASS
