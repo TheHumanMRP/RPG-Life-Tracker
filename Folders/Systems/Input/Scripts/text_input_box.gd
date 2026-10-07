@@ -3,6 +3,8 @@ extends PanelContainer
 @export var question_label: Label
 @export var user_input_line_edit: LineEdit
 
+var caller_tag: String
+
 func _ready() -> void:
 	self.hide()
 
