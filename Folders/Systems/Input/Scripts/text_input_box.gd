@@ -4,6 +4,8 @@ extends PanelContainer
 @export var user_input_line_edit: LineEdit
 
 func _ready() -> void:
+	self.hide()
+
 	user_input_line_edit.text_submitted.connect(_on_user_input_line_edit_text_submitted)
 
 	SignalBus.get_text_input_from_user.connect(_on_get_text_input_from_user)
