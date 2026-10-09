@@ -5,6 +5,8 @@
 
 
 - [ ] Make the main_scene load and unload needed tools according to game mode
+	- [ ] Right click menu
+	- [ ] 
 
 
 - [ ] Make animations for sword attack
