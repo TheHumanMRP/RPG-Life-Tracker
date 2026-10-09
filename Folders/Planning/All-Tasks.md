@@ -6,8 +6,14 @@
 
 - [ ] Make the main_scene load and unload needed tools according to game mode
 	- [ ] Right click menu
-	- [ ] 
-
+		- [X] Load
+		- [ ] Unload
+	- [ ] Text input box
+		- [X] Load
+		- [ ] Unload
+	- [ ] Conformation Box
+		- [ ] Load
+		- [ ] Unload
 
 - [ ] Make animations for sword attack
 - [ ] Code sword attack animation playing
