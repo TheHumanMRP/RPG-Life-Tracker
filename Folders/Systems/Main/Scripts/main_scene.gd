@@ -1,6 +1,8 @@
 class_name MainScene
 extends Node2D
 
+var right_click_menu: Node
+
 func _init() -> void:
 	self.add_to_group("main_scene")
 
@@ -47,9 +49,11 @@ func _add_needed_scenes() -> void:
 
 
 func _add_right_click_menu() -> void:
-	var right_click_menu: Node = _get_new_scene(Constants.PATH_TO_RIGHT_CLICK_MENU)
+	var new_right_click_menu: Node = _get_new_scene(Constants.PATH_TO_RIGHT_CLICK_MENU)
 
 	self.add_child(right_click_menu)
+
+	right_click_menu
 
 func _add_text_input_box() -> void:
 	var text_input_box: Node = _get_new_scene(Constants.PATH_TO_TEXT_INPUT_BOX)
