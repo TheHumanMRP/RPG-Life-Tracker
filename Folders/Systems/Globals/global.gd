@@ -107,10 +107,6 @@ func _ready() -> void:
 	
 	set_main_scene_var()
 
-func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("add_test_sword"):
-		InfoGetter.get_all_global_items_manager().add_test_sword()
-
 
 # ============================================================================
 # Testing
