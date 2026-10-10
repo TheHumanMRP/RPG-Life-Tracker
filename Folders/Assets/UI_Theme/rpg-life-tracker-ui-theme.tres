@@ -53,6 +53,13 @@ expand_margin_top = 4.0
 expand_margin_right = 4.0
 expand_margin_bottom = 4.0
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f70ks"]
+texture = ExtResource("5_l21eh")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
 [resource]
 default_font = ExtResource("1_2dlhk")
 Button/fonts/font = SubResource("FontVariation_a7ld8")
@@ -60,3 +67,4 @@ Button/styles/hover = SubResource("StyleBoxTexture_73qvp")
 Button/styles/normal = SubResource("StyleBoxTexture_doy41")
 Button/styles/pressed = SubResource("StyleBoxTexture_w1p51")
 PanelContainer/styles/panel = SubResource("StyleBoxTexture_yntfl")
+PopupMenu/styles/panel = SubResource("StyleBoxTexture_f70ks")
