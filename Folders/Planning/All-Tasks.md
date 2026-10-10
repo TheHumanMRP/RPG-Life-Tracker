@@ -3,6 +3,8 @@
 # To-Do
 ---
 
+- [ ] Figure out why does 
+
 - [ ] Add go back to main menu to task manager
 
 - [ ] Make animations for sword attack
