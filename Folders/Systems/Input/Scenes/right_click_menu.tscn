@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://djxvmvc88fbo8"]
 
 [ext_resource type="Theme" uid="uid://ci6nhukplcm2u" path="res://Folders/Assets/UI_Theme/right_click_menu_theme.tres" id="1_qu6mg"]
-[ext_resource type="Script" uid="uid://b23pgl8ademmo" path="res://Folders/Systems/Right_Click_Menu/Script/right_click_menu.gd" id="2_aemw1"]
+[ext_resource type="Script" uid="uid://b23pgl8ademmo" path="res://Folders/Systems/Input/Scripts/right_click_menu.gd" id="2_aemw1"]
 
 [node name="Right_Click_Menu" type="PopupMenu" unique_id=1421674717]
 oversampling_override = 1.0
