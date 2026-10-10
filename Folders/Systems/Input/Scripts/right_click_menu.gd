@@ -1,6 +1,8 @@
 class_name RightClickMenu
 extends PopupMenu
 
+var current_request_sender: Node = null
+
 func _init() -> void:
 	self.add_to_group("right_click_menu")
 
