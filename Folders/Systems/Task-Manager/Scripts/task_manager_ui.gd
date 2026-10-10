@@ -21,7 +21,10 @@ func _set_mouse_filter() -> void:
 # ==============================================
 # Handle Input
 # ==============================================
-func _on_right_click_menu_option_selected(option: String) -> void:
+func _on_right_click_menu_option_selected(request_sender: Node, option: String) -> void:
+	if request_sender != self:
+		return
+
 	match option:
 		"Add Task":
 			SignalBus.get_text_input_from_user.emit("What should be the name of the task?")
@@ -40,4 +43,4 @@ func _detect_right_mouse_click(event: InputEvent) -> void:
 	_open_right_click_menu()
 
 func _open_right_click_menu() -> void:
-	SignalBus.popup_right_click_menu.emit(Constants.TASK_MANAGER_RIGHT_CLICK_MENU_OPTIONS, get_global_mouse_position())
+	SignalBus.popup_right_click_menu.emit(self, Constants.TASK_MANAGER_RIGHT_CLICK_MENU_OPTIONS, get_global_mouse_position())

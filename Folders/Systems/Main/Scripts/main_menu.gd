@@ -66,10 +66,13 @@ func _detect_right_mouse_click(event: InputEvent) -> void:
 	_open_right_click_menu()
 
 func _open_right_click_menu() -> void:
-	SignalBus.popup_right_click_menu.emit(Constants.MAIN_MENU_RIGHT_CLICK_MENU_OPTIONS, get_global_mouse_position())
+	SignalBus.popup_right_click_menu.emit(self, Constants.MAIN_MENU_RIGHT_CLICK_MENU_OPTIONS, get_global_mouse_position())
 
 
-func _on_right_click_menu_option_selected(option: String) -> void:
+func _on_right_click_menu_option_selected(request_sender: Node, option: String) -> void:
+	if request_sender != self:
+		return
+
 	match option:
 		"Quit Game":
 			SignalBus.quit_game.emit()
