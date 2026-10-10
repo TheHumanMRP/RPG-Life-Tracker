@@ -22,6 +22,7 @@ const PATH_TO_HOTBAR_SLOT: String = "res://Folders/Systems/Inventory_System/Scen
 
 const PATH_TO_RIGHT_CLICK_MENU: String = "res://Folders/Systems/Input/Scenes/right_click_menu.tscn"
 const PATH_TO_TEXT_INPUT_BOX: String = "res://Folders/Systems/Input/Scenes/text_input_box.tscn"
+const PATH_TO_CONFORMATION_BOX: String = "res://Folders/Systems/Input/Scenes/conformation_box.tscn"
 
 # PLayer
 const PLAYER_INVENTORY_NAME: String = "player"
