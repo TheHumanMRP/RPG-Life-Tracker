@@ -23,6 +23,10 @@
 - [ ] Make animations for sword attack
 - [ ] Code sword attack animation playing
 
+- [ ] Impliment Inventory screen
+
+- [ ] Impliment dungoen selection menu
+
 - [ ] Make esc menu
 
 - [ ] Add transitions when changing scenes
