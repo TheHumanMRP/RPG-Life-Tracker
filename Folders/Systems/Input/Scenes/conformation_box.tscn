@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://bk0cn4yt32xv0"]
 
+[ext_resource type="Theme" uid="uid://deuleb40h735d" path="res://Folders/Assets/UI_Theme/rpg-life-tracker-ui-theme.tres" id="1_k17gl"]
+
 [node name="ConformationBox" type="PanelContainer" unique_id=1137508350]
 anchors_preset = 8
 anchor_left = 0.5
@@ -12,3 +14,33 @@ offset_right = 20.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1604118409]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1161150716]
+layout_mode = 2
+
+[node name="Conformation_TextBox" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1820642929]
+layout_mode = 2
+theme = ExtResource("1_k17gl")
+text = "Conformation Text Box"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=779835440]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Conform_Button" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=278653922]
+layout_mode = 2
+theme = ExtResource("1_k17gl")
+text = "Conform"
+
+[node name="Deny_Button" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=679907519]
+layout_mode = 2
+theme = ExtResource("1_k17gl")
+text = "Deny"
