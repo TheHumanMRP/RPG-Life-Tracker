@@ -12,7 +12,7 @@ func _ready() -> void:
 	self.index_pressed.connect(_on_index_pressed)
 
 func _on_popup_right_click_menu(request_sender: Node, list_of_options: Array[String], mouse_position: Vector2) -> void:
-	var current_request_sender = request_sender
+	current_request_sender = request_sender
 
 	# Clear the existing options 
 	self.clear()
@@ -29,4 +29,6 @@ func _on_popup_right_click_menu(request_sender: Node, list_of_options: Array[Str
 func _on_index_pressed(index: int) -> void:
 	var selected_option: String = self.get_item_text(index)
 
-	SignalBus.right_click_menu_option_selected.emit(selected_option)
+	SignalBus.right_click_menu_option_selected.emit(current_request_sender, selected_option)
+
+	current_request_sender = null
