@@ -136,3 +136,7 @@ func print_all_tasks(tasks_save_data: TasksSaveData = get_save_data()) -> void:
 
 func tasks_changed() -> void:
 	SignalBus.save_game.emit()
+
+# ===================================================================
+# Handle 
+# ===================================================================
