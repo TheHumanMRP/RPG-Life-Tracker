@@ -11,7 +11,9 @@ func _ready() -> void:
 	SignalBus.popup_right_click_menu.connect(_on_popup_right_click_menu)
 	self.index_pressed.connect(_on_index_pressed)
 
-func _on_popup_right_click_menu(list_of_options: Array[String], mouse_position: Vector2) -> void:
+func _on_popup_right_click_menu(request_sender: Node, list_of_options: Array[String], mouse_position: Vector2) -> void:
+	var current_request_sender = request_sender
+
 	# Clear the existing options 
 	self.clear()
 
