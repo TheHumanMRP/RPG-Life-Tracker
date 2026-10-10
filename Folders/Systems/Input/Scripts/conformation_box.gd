@@ -11,7 +11,7 @@ func _ready() -> void:
 
 	SignalBus.popup_conformation_menu.connect(_on_popup_conformation_menu)
 
-	conform_button.pressed.connect()
+	conform_button.pressed.connect(_on_conform_button_pressed)
 
 func _on_popup_conformation_menu(request_sender: Node, conformation_textbox_text: String, conform_button_text: String, deny_button_text: String) -> void:
 	current_request_sender = request_sender
@@ -21,3 +21,6 @@ func _on_popup_conformation_menu(request_sender: Node, conformation_textbox_text
 	conform_button.text = conform_button_text
 
 	self.show()
+
+func _on_conform_button_pressed() -> void:
+	SignalBus.conformation_menu_option_selected.emit(reque)
