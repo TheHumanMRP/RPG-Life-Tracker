@@ -24,8 +24,9 @@ func _on_get_text_input_from_user(question: String, tag: String, request_sender:
 	self.show()
 
 func _on_user_input_line_edit_text_submitted(text_submitted: String) -> void:
-	SignalBus.text_input_submitted_by_user.emit(text_submitted, current_request_sender)
+	SignalBus.text_input_submitted_by_user.emit(text_submitted, current_tag, current_request_sender)
 
 	current_request_sender = null
+	current_tag = ""
 
 	self.hide()
