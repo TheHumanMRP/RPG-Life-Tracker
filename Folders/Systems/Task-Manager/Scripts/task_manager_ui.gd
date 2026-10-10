@@ -51,4 +51,5 @@ func _on_text_input_submitted_by_user(text_submitted: String, tag: String, reque
 		return
 	
 	if tag == "add_task":
-		
+		InfoGetter.get_task_manager().add_task(text_submitted)
+		return
