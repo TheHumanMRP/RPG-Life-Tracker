@@ -17,6 +17,7 @@ func _on_get_text_input_from_user(question: String, tag: String, request_sender:
 	question_label.text = question
 	user_input_line_edit.placeholder_text = user_input_placeholder_text
 	user_input_line_edit.text = ""
+	user_input_line_edit.grab_focus()
 
 	current_request_sender = request_sender
 	current_tag = tag
