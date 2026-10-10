@@ -20,6 +20,8 @@ const PATH_TO_DEATH_MENU: String = "res://Folders/Systems/Dungeon_Related/Death_
 
 const PATH_TO_HOTBAR_SLOT: String = "res://Folders/Systems/Inventory_System/Scenes/hotbar_slot.tscn"
 
+"res:/Folders/Systems/Input/Scenes/right_click_menu.tscn"
+
 const PATH_TO_RIGHT_CLICK_MENU: String = "res://Folders/Systems/Right_Click_Menu/Scene/right_click_menu.tscn"
 const PATH_TO_TEXT_INPUT_BOX: String = "res://Folders/Systems/Input/Scenes/text_input_box.tscn"
 
