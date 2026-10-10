@@ -67,4 +67,5 @@ Button/styles/hover = SubResource("StyleBoxTexture_73qvp")
 Button/styles/normal = SubResource("StyleBoxTexture_doy41")
 Button/styles/pressed = SubResource("StyleBoxTexture_w1p51")
 PanelContainer/styles/panel = SubResource("StyleBoxTexture_yntfl")
+PopupMenu/font_sizes/font_size = 25
 PopupMenu/styles/panel = SubResource("StyleBoxTexture_f70ks")
