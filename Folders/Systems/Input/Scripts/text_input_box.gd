@@ -3,7 +3,7 @@ extends PanelContainer
 @export var question_label: Label
 @export var user_input_line_edit: LineEdit
 
-var current_request_sender: Node
+var current_request_sender: Node = null
 
 func _ready() -> void:
 	self.hide()
