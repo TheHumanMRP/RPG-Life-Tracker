@@ -7,20 +7,9 @@
 
 - [ ] Add go back to main menu to task manager
 
-- [ ] Make animations for sword attack
-- [ ] Code sword attack animation playing
-
-- [ ] Impliment the right click menu option handlings
-	- [X] For Main Menu
-	- [ ] For task Manager
-
-- [ ] Make the add task name input
 - [ ] Make the main menu quit right click menu option ask for conformation
 
-- [ ] Make the input menu for taking text inputs
-- [ ] Make the input menu for conformations
-
-- [ ] Make pixel art for the UI
+- [X] Make pixel art for the UI
 
 - [ ] Impliment swapping of gear, so that when I equip a gear which is already occupied, it swaps instead of disgarding
 
@@ -33,12 +22,23 @@
 - [ ] Fix the loop because of which there are hundreds of statement being printed every single time I equip an item 
 - [ ] Make it so that it checks if none of the hotbar slots have the item to put in a slot, cause that will cause duplication
 
+- [ ] Make animations for sword attack
+- [ ] Code sword attack animation playing
+
 - [ ] Make esc menu
 
 - [ ] Add transitions when changing scenes
 
 # Completed Tasks
 ---
+
+- [X] Impliment the right click menu option handlings
+	- [X] For Main Menu
+	- [X] For task Manager
+
+- [X] Make the input menu for taking text inputs
+- [X] Make the input menu for conformations
+- [X] Make the add task name input
 
 - [X] Make the main_scene load and unload needed tools according to game mode
 	- [X] Right click menu
