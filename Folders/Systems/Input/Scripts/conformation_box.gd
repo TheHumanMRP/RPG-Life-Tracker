@@ -23,4 +23,11 @@ func _on_popup_conformation_menu(request_sender: Node, conformation_textbox_text
 	self.show()
 
 func _on_conform_button_pressed() -> void:
-	SignalBus.conformation_menu_option_selected.emit(reque)
+	SignalBus.conformation_menu_option_selected.emit(current_request_sender, true)
+
+	current_request_sender = null
+
+func _on_deny_button_pressed() -> void:
+	SignalBus.conformation_menu_option_selected.emit(current_request_sender, false)
+
+	current_request_sender = null
