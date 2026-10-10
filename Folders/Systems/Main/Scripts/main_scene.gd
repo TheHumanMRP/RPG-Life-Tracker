@@ -26,6 +26,9 @@ func switch_scenes(caller: Node, new_scene_path: String, _clear_children: bool =
 
 func _clear_all_children() -> void:
 	for child in self.get_children():
+		if child == important_UI_canvas_layer:
+			continue
+
 		child.queue_free()
 
 func _get_new_scene(new_scene_path: String) -> Node:
@@ -51,14 +54,14 @@ func _add_needed_scenes() -> void:
 func _add_right_click_menu() -> void:
 	var right_click_menu: Node = _get_new_scene(Constants.PATH_TO_RIGHT_CLICK_MENU)
 
-	self.add_child(right_click_menu)
+	important_UI_canvas_layer.add_child(right_click_menu)
 
 func _add_text_input_box() -> void:
 	var text_input_box: Node = _get_new_scene(Constants.PATH_TO_TEXT_INPUT_BOX)
 
-	self.add_child(text_input_box)
+	important_UI_canvas_layer.add_child(text_input_box)
 
 func _add_conformation_input_box() -> void:
 	var conformation_input_box: Node = _get_new_scene(Constants.PATH_TO_CONFORMATION_BOX)
 
-	self.add_child(conformation_input_box)
+	important_UI_canvas_layer.add_child(conformation_input_box)
