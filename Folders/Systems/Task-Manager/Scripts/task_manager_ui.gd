@@ -5,6 +5,7 @@ extends MarginContainer
 # ==============================================
 func _ready() -> void:
 	SignalBus.right_click_menu_option_selected.connect(_on_right_click_menu_option_selected)
+	SignalBus.text_input_submitted_by_user.connect(_on_text_input_submitted_by_user)
 	_set_mouse_filter()
 
 # ==============================================
@@ -46,4 +47,5 @@ func _on_right_click_menu_option_selected(request_sender: Node, option: String) 
 			SignalBus.get_text_input_from_user.emit("What should be the name of the task?", self)
 
 func _on_text_input_submitted_by_user(text_submitted: String, request_sender: Node) -> void:
-	pass
+	if request_sender != self:
+		return
