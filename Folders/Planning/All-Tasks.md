@@ -3,11 +3,7 @@
 # To-Do
 ---
 
-
-- [ ] Make the main_scene load and unload needed tools according to game mode
-	- [X] Right click menu
-	- [X] Text input box
-	- [ ] Conformation Box
+- [ ] Add go back to main menu to task manager
 
 - [ ] Make animations for sword attack
 - [ ] Code sword attack animation playing
@@ -41,6 +37,11 @@
 
 # Completed Tasks
 ---
+
+- [X] Make the main_scene load and unload needed tools according to game mode
+	- [X] Right click menu
+	- [X] Text input box
+	- [X] Conformation Box
 
 - [X] Make the bg scene
 	- [X] Make it intercept the mouse click and summom right click menu
