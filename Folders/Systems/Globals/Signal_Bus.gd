@@ -51,6 +51,9 @@ signal switch_scene(caller: Node, new_scene_path: String, clear_children: bool)
 signal popup_right_click_menu(list_of_options: Array[String], mouse_position: Vector2)
 signal right_click_menu_option_selected(selected_option: String)
 
+signal popup_conformation_menu(conformation_textbox_text: String, mouse_position: Vector2)
+signal right_click_menu_option_selected(selected_option: String)
+
 # ==============================================
 # Input
 # ==============================================
