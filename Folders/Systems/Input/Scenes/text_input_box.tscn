@@ -29,10 +29,14 @@ theme_override_constants/margin_bottom = 20
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=413745202]
 layout_mode = 2
+theme_override_constants/separation = 10
 
 [node name="Question_label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=46566412]
 layout_mode = 2
 text = "Question Label"
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer" unique_id=60389570]
+layout_mode = 2
 
 [node name="User_Input_Line_Edit" type="LineEdit" parent="MarginContainer/VBoxContainer" unique_id=572737712]
 layout_mode = 2

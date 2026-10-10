@@ -5,6 +5,7 @@
 
 [node name="Right_Click_Menu" type="PopupMenu" unique_id=1421674717]
 oversampling_override = 1.0
+mode = 3
 visible = true
 theme = ExtResource("1_qu6mg")
 script = ExtResource("2_aemw1")
