@@ -3,7 +3,7 @@
 # To-Do
 ---
 
-- [ ] Figure out why does 
+- [ ] Figure out why does the task manager does not save tasks
 
 - [ ] Add go back to main menu to task manager
 
