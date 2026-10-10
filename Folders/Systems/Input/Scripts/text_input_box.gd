@@ -4,6 +4,7 @@ extends PanelContainer
 @export var user_input_line_edit: LineEdit
 
 var current_request_sender: Node = null
+var current_tag: String = ""
 
 func _ready() -> void:
 	self.hide()
@@ -12,11 +13,13 @@ func _ready() -> void:
 
 	SignalBus.get_text_input_from_user.connect(_on_get_text_input_from_user)
 
-func _on_get_text_input_from_user(question: String, request_sender: Node, user_input_placeholder_text: String = "Answer Here") -> void:
+func _on_get_text_input_from_user(question: String, tag: String, request_sender: Node, user_input_placeholder_text: String = "Answer Here") -> void:
 	question_label.text = question
 	user_input_line_edit.placeholder_text = user_input_placeholder_text
 	user_input_line_edit.text = ""
+
 	current_request_sender = request_sender
+	current_tag = tag
 
 	self.show()
 
