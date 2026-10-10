@@ -2,7 +2,9 @@ extends PanelContainer
 
 var current_request_sender: Node = null
 
-@export var conformation_te
+@export var conformation_textbox: Label
+@export var conform_button: Button
+@export var deny_button: Button
 
 func _ready() -> void:
 	SignalBus.popup_conformation_menu.connect(_on_popup_conformation_menu)
@@ -11,5 +13,6 @@ func _on_popup_conformation_menu(request_sender: Node, conformation_textbox_text
 	current_request_sender = request_sender
 
 
+	conform_button.text = conform_button_text
 
 	self.show()
