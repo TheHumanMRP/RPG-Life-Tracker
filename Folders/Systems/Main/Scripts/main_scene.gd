@@ -1,6 +1,8 @@
 class_name MainScene
 extends Node2D
 
+@export var important_UI_canvas_layer: CanvasLayer
+
 func _init() -> void:
 	self.add_to_group("main_scene")
 
