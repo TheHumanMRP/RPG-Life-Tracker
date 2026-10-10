@@ -66,8 +66,8 @@ signal conformation_menu_option_selected(request_sender: Node, conformed: bool)
 # Input
 # ==============================================
 
-signal get_text_input_from_user(question: String, request_sender: String, user_input_line_edit_placeholder_text: String)
-signal text_input_submitted_by_user(text_sumitted: String, caller_tag: String)
+signal get_text_input_from_user(question: String, request_sender: Node, user_input_line_edit_placeholder_text: String)
+signal text_input_submitted_by_user(text_sumitted: String, request_sender: Node)
 
 # ==============================================
 # Set process mode
