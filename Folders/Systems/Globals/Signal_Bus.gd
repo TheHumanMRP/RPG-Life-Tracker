@@ -57,7 +57,7 @@ conform_button_text: String,
 deny_button_text: String
 )
 
-signal conformation_menu_button_selected(request_sender: Node, selected_option: String)
+signal conformation_menu_option_selected(request_sender: Node, conformed: bool)
 
 # ==============================================
 # Input
