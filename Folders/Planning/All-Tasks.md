@@ -9,8 +9,6 @@
 
 - [ ] Make the main menu quit right click menu option ask for conformation
 
-- [X] Make pixel art for the UI
-
 - [ ] Impliment swapping of gear, so that when I equip a gear which is already occupied, it swaps instead of disgarding
 
 - [ ] Handle the unequipment of gear
@@ -31,6 +29,8 @@
 
 # Completed Tasks
 ---
+
+- [X] Make pixel art for the UI
 
 - [X] Impliment the right click menu option handlings
 	- [X] For Main Menu
