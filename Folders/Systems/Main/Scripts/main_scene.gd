@@ -57,4 +57,6 @@ func _add_text_input_box() -> void:
 	self.add_child(text_input_box)
 
 func _add_conformation_input_box() -> void:
-	var conformation_input_box: Node = _
+	var conformation_input_box: Node = _get_new_scene(Constants.PATH_TO_CONFORMATION_BOX)
+
+	self.add_child(conformation_input_box)
