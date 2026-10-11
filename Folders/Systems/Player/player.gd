@@ -54,7 +54,7 @@ func _setup_component() -> void:
 	
 	inventory_manager.setup(Constants.PLAYER_INVENTORY_NAME)
 
-	equipment_manager.setup(self)
+	equipment_manager.setup(selfz)
 
 # --------------------------------------------------------------------
 # Spawn & Respawn
