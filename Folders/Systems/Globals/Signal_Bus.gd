@@ -58,9 +58,10 @@ signal right_click_menu_option_selected(request_sender: Node, selected_option: S
 signal popup_conformation_menu(request_sender: Node,
 conformation_textbox_text: String,
 conform_button_text: String,
-deny_button_text: String
+deny_button_text: String,
+tag: String
 )
-signal conformation_menu_option_selected(request_sender: Node, conformed: bool)
+signal conformation_menu_option_selected(request_sender: Node, conformed: bool, tag: String)
 
 # ==============================================
 # Input
