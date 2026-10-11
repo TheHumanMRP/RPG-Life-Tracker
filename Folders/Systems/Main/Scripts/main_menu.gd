@@ -47,7 +47,7 @@ func _on_task_manager_button_pressed() -> void:
 	SignalBus.switch_scene.emit(self, Constants.PATH_TO_TASK_MANAGER, true)
 
 func _on_quit_game_button_pressed() -> void:
-	SignalBus.quit_game.emit()
+	SignalBus.popup_conformation_menu.emit(self, "Are you sure you want to quit the game?", "Yes", "No", "quit game")
 
 # ==============================================
 # Right Click Menu
@@ -81,6 +81,9 @@ func _on_conformation_menu_option_selected(request_sender: Node, conformed: bool
 	if request_sender != self:
 		return
 	
+	if not conformed:
+		return
+
 	match tag:
 		"quit game":
-			
+			SignalBus.quit_game.emit()
