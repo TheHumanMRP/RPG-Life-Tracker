@@ -8,6 +8,7 @@ func _init() -> void:
 
 func _ready() -> void:
 	SignalBus.switch_scene.connect(switch_scenes)
+	_add_needed_scenes()
 
 func switch_scenes(caller: Node, new_scene_path: String, _clear_children: bool = false) -> void:
 	if _clear_children:
