@@ -45,15 +45,17 @@ func set_task_status(task_id: int, new_task_status: All_Enums.TASK_STATUS) -> vo
 func add_task(task_name: String) -> int:
 	print("\nTask Manager: Adding a new task.")
 
-	var data: TasksSaveData = get_save_data()
+	var task_data: TasksSaveData = get_save_data()
 
 	var new_task: Task = Task.new()
 
-	new_task.setup(task_name, data.max_task_id)
+	new_task.setup(task_name, task_data.max_task_id)
 
-	data.all_tasks.append(new_task)
+	print(task_data.all_tasks)
 
-	data.max_task_id += 1
+	task_data.all_tasks.append(new_task)
+
+	task_data.max_task_id += 1
 
 	print_all_tasks()
 
