@@ -43,7 +43,7 @@ func set_task_status(task_id: int, new_task_status: All_Enums.TASK_STATUS) -> vo
 
 ## Adds a new task.
 func add_task(task_name: String) -> int:
-	print("\nTask Managerp: Adding a new task.")
+	print("\nTask Manager: Adding a new task.")
 
 	var data: TasksSaveData = get_save_data()
 
