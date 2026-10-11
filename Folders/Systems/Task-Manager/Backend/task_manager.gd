@@ -55,6 +55,8 @@ func add_task(task_name: String) -> int:
 
 	task_data.all_tasks.append(new_task)
 
+	print(task_data.all_tasks)
+
 	task_data.max_task_id += 1
 
 	print_all_tasks()
