@@ -34,3 +34,7 @@ func _on_deny_button_pressed() -> void:
 	SignalBus.conformation_menu_option_selected.emit(current_request_sender, false)
 
 	current_request_sender = null
+
+func _answer_button_pressed(conform: bool) -> void:
+	current_request_sender = null
+	
