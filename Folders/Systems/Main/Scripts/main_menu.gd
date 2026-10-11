@@ -81,8 +81,12 @@ func _on_conformation_menu_option_selected(request_sender: Node, conformed: bool
 	if request_sender != self:
 		return
 	
+	print(conformed)
+
 	if not conformed:
 		return
+
+	print("Conformed Mian menu")
 
 	match tag:
 		"quit game":
