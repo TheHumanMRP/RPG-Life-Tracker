@@ -5,6 +5,10 @@
 
 - [ ] Add go back to main menu to task manager
 
+- [ ] Add conformation to quit game in main menu
+- [ ] Add conformation to return in dungeon death menu
+- [ ] Add conformation to go back to main menu in task manager
+
 - [ ] Make the main menu quit right click menu option ask for conformation
 
 - [ ] Impliment swapping of gear, so that when I equip a gear which is already occupied, it swaps instead of disgarding
