@@ -86,8 +86,6 @@ func _on_conformation_menu_option_selected(request_sender: Node, conformed: bool
 	if not conformed:
 		return
 
-	print("Conformed Mian menu")
-
 	match tag:
 		"quit game":
 			SignalBus.quit_game.emit()

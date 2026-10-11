@@ -26,7 +26,6 @@ func _on_popup_conformation_menu(request_sender: Node, conformation_textbox_text
 	self.show()
 
 func _on_conform_button_pressed() -> void:
-	print("Conformed")
 	_answer_button_pressed(true)
 
 func _on_deny_button_pressed() -> void:
