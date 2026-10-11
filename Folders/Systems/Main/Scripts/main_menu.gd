@@ -27,7 +27,9 @@ func _setup_signals() -> void:
 	dungeon_selection_menu_button.pressed.connect(_on_dungeon_selection_menu_button_pressed)
 	task_manager_button.pressed.connect(_on_task_manager_button_pressed)
 	quit_game_button.pressed.connect(_on_quit_game_button_pressed)
+	
 	SignalBus.right_click_menu_option_selected.connect(_on_right_click_menu_option_selected)
+	SignalBus.conformation_menu_option_selected.connect(_on_conformation_menu_option_selected)
 
 func _set_mouse_filters() -> void:
 	self.mouse_filter = Control.MOUSE_FILTER_STOP
@@ -80,8 +82,6 @@ func _on_right_click_menu_option_selected(request_sender: Node, option: String) 
 func _on_conformation_menu_option_selected(request_sender: Node, conformed: bool, tag: String) -> void:
 	if request_sender != self:
 		return
-	
-	print(conformed)
 
 	if not conformed:
 		return
