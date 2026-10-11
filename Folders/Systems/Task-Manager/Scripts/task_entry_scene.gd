@@ -12,9 +12,7 @@ var task_status: All_Enums.TASK_STATUS
 # Setup
 # ===============================================================
 func _ready() -> void:
-	task_status_option_button.item_selected.connect(
-		task_completed_status_changed
-	)
+	task_status_option_button.item_selected.connect(_on_task_completed_status_changed)
 
 	refresh()
 
@@ -39,7 +37,7 @@ func refresh() -> void:
 # ===============================================================
 # STATUS MANAGEMENT
 # ===============================================================
-func task_completed_status_changed(option_button_index: int) -> void:
+func _on_task_completed_status_changed(option_button_index: int) -> void:
 	var new_status: String = (
 		task_status_option_button.get_item_text(option_button_index)
 	)
