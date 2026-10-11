@@ -40,6 +40,7 @@ func _on_respawn_button_pressed() -> void:
 	print("\nDeath Menu: Respawn Button Pressed")
 
 func _on_return_button_pressed() -> void:
+	SignalBus.popup_conformation_menu.emit(self, "Are you sure you want to quit the dungeon?", "Yes", "No", "quit dungeon")
 	SignalBus.switch_scene.emit(self, Constants.PATH_TO_MAIN_MENU, true)
 
 func set_global_state_death_menu() -> void:
