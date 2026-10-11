@@ -10,8 +10,8 @@ func _ready() -> void:
 	setup_signals()
 
 func setup_signals() -> void:
+	respawn_button.pressed.connect(_on_respawn_button_pressed)
 	quit_dungeon_button.pressed.connect(_on_quit_dungeon_button_pressed)
-	return_button.pressed.connect(_on_return_button_pressed)
 	
 	SignalBus.player_died.connect(_on_player_died)
 	SignalBus.conformation_menu_option_selected.connect(_on_conformation_menu_option_selected)
@@ -31,7 +31,7 @@ func _on_player_died() -> void:
 
 	self.show()
 
-func _on_quit_dungeon_button_pressed() -> void:
+func _on_respawn_button_pressed() -> void:
 	SignalBus.respawn_player.emit()
 
 	set_global_state_dungeon_playing()
@@ -40,7 +40,7 @@ func _on_quit_dungeon_button_pressed() -> void:
 
 	print("\nDeath Menu: Respawn Button Pressed")
 
-func _on_return_button_pressed() -> void:
+func _on_quit_dungeon_button_pressed() -> void:
 	SignalBus.popup_conformation_menu.emit(self, "Are you sure you want to quit the dungeon?", "Yes", "No", "quit dungeon")
 
 func set_global_state_death_menu() -> void:
