@@ -17,6 +17,7 @@ func _ready() -> void:
 	save_loop()
 
 func _on_save_game() -> void:
+	print("Save Cycle Manager: Save Game signal received.")
 	save_next = true
 
 func save_loop() -> void:
