@@ -55,7 +55,7 @@ func add_task(task_name: String) -> int:
 
 	data.max_task_id += 1
 
-	print_all_tasks(data)
+	print_all_tasks()
 
 	tasks_changed()
 
@@ -117,7 +117,9 @@ func get_task_by_task_id(task_id: int) -> Task:
 # Debug
 # ===================================================================
 
-func print_all_tasks(tasks_save_data: TasksSaveData = get_save_data()) -> void:
+func print_all_tasks() -> void:
+	var tasks_save_data: TasksSaveData = get_save_data()
+
 	var tasks: Array[Task] = tasks_save_data.all_tasks
 
 	if tasks.is_empty():
