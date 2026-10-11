@@ -121,10 +121,10 @@ func print_all_tasks(tasks_save_data: TasksSaveData = get_save_data()) -> void:
 	var tasks: Array[Task] = tasks_save_data.all_tasks
 
 	if tasks.is_empty():
-		print("\nTask Manager Backend: No tasks to print.")
+		print("\nTask Manager: No tasks to print.")
 		return
 
-	print("\nTask Manager Backend: Printing all tasks, size: ", tasks.size())
+	print("\nTask Manager: Printing all tasks, size: ", tasks.size())
 
 	for task in tasks:
 		print("\t", task.task_name, " : ", task.task_id)
@@ -135,4 +135,5 @@ func print_all_tasks(tasks_save_data: TasksSaveData = get_save_data()) -> void:
 # ===================================================================
 
 func tasks_changed() -> void:
+	print("Task Manager: Save game signal emitted")
 	SignalBus.save_game.emit()
