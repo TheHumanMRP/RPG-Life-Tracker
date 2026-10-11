@@ -3,7 +3,9 @@
 # To-Do
 ---
 
-- [ ] Add conformation to return in dungeon death menu
+- [ ] Fix the conformation box bug in quit dungeon in death menu
+
+- [ ] Add conformation to quit dungeon in dungeon death menu
 - [ ] Add conformation to go back to main menu in task manager
 
 - [ ] Impliment swapping of gear, so that when I equip a gear which is already occupied, it swaps instead of disgarding
