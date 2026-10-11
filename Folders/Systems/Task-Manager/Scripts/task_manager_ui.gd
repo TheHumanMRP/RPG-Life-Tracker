@@ -45,6 +45,8 @@ func _on_right_click_menu_option_selected(request_sender: Node, option: String) 
 	match option:
 		"Add Task":
 			SignalBus.get_text_input_from_user.emit("What should be the name of the task?", "add_task", self)
+		"Go back to main menu":
+			
 
 func _on_text_input_submitted_by_user(text_submitted: String, tag: String, request_sender: Node) -> void:
 	if request_sender != self:
