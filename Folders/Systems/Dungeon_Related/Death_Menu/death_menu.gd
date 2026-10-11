@@ -1,7 +1,7 @@
 extends CanvasLayer
 
+@export var respawn_button: Button
 @export var quit_dungeon_button: Button
-@export var return_button: Button
 @export var you_died_label: Label
 
 func _ready() -> void:
