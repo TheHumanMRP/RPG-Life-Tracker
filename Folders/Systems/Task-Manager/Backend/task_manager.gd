@@ -141,6 +141,4 @@ func print_all_tasks() -> void:
 # ===================================================================
 
 func tasks_changed() -> void:
-	print_stack()
-	print("Task Manager: Save game signal emitted")
 	SignalBus.save_game.emit()
