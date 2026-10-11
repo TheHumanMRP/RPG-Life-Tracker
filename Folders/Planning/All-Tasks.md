@@ -3,8 +3,6 @@
 # To-Do
 ---
 
-- [ ] Add go back to main menu to task manager
-
 - [ ] Add conformation to quit game in main menu
 - [ ] Add conformation to return in dungeon death menu
 - [ ] Add conformation to go back to main menu in task manager
@@ -36,8 +34,10 @@
 # Completed Tasks
 ---
 
+- [X] Add go back to main menu to task manager
+
 - [X] Figure out why does the task manager does not save tasks
-	- Just forgot to comment out the delete_save_file
+	- Just forgot to comment out the delete_save_file in load_save_data
 
 - [X] Make pixel art for the UI
 

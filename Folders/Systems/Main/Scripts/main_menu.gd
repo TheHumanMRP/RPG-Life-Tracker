@@ -75,4 +75,4 @@ func _on_right_click_menu_option_selected(request_sender: Node, option: String) 
 
 	match option:
 		"Quit Game":
-			SignalBus.quit_game.emit()
+			SignalBus.conf.emit()
