@@ -7,7 +7,7 @@
 process_mode = 3
 script = ExtResource("1_dd6n6")
 quit_dungeon_button = NodePath("Death_Menu_Panel_Container/MarginContainer/VBoxContainer/VBoxContainer/Quit_Dungeon_Button")
-return_button = NodePath("Death_Menu_Panel_Container/MarginContainer/VBoxContainer/VBoxContainer/Return_Button")
+return_button = NodePath("Death_Menu_Panel_Container/MarginContainer/VBoxContainer/VBoxContainer/Respawn_Button")
 you_died_label = NodePath("Death_Menu_Panel_Container/MarginContainer/VBoxContainer/You_Died_Label")
 
 [node name="Death_Menu_Panel_Container" type="PanelContainer" parent="." unique_id=156337057]
@@ -49,16 +49,16 @@ horizontal_alignment = 1
 layout_mode = 2
 theme_override_constants/separation = 20
 
-[node name="Quit_Dungeon_Button" type="Button" parent="Death_Menu_Panel_Container/MarginContainer/VBoxContainer/VBoxContainer" unique_id=1389422413]
+[node name="Respawn_Button" type="Button" parent="Death_Menu_Panel_Container/MarginContainer/VBoxContainer/VBoxContainer" unique_id=1389422413]
 unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("2_o0ljh")
 theme_override_font_sizes/font_size = 50
-text = " Quit Dungoen "
+text = " Respawn "
 
-[node name="Return_Button" type="Button" parent="Death_Menu_Panel_Container/MarginContainer/VBoxContainer/VBoxContainer" unique_id=1482938906]
+[node name="Quit_Dungeon_Button" type="Button" parent="Death_Menu_Panel_Container/MarginContainer/VBoxContainer/VBoxContainer" unique_id=1482938906]
 unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("2_o0ljh")
 theme_override_font_sizes/font_size = 50
-text = "  Return  "
+text = " Quit Dungeon "
