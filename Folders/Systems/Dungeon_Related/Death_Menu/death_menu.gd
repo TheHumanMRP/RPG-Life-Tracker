@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-@export var respawn_button: Button
+@export var quit_dungeon_button: Button
 @export var return_button: Button
 @export var you_died_label: Label
 
@@ -10,7 +10,7 @@ func _ready() -> void:
 	setup_signals()
 
 func setup_signals() -> void:
-	respawn_button.pressed.connect(_on_respawn_button_pressed)
+	respawn_button.pressed.connect(_on_quit_dungeon_button_pressed)
 	return_button.pressed.connect(_on_return_button_pressed)
 	
 	SignalBus.player_died.connect(_on_player_died)
@@ -31,7 +31,7 @@ func _on_player_died() -> void:
 
 	self.show()
 
-func _on_respawn_button_pressed() -> void:
+func _on_quit_dungeon_button_pressed() -> void:
 	SignalBus.respawn_player.emit()
 
 	set_global_state_dungeon_playing()
