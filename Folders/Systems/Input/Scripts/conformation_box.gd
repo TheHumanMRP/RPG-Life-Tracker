@@ -26,15 +26,13 @@ func _on_popup_conformation_menu(request_sender: Node, conformation_textbox_text
 	self.show()
 
 func _on_conform_button_pressed() -> void:
-	SignalBus.conformation_menu_option_selected.emit(current_request_sender, true)
-
-	current_request_sender = null
+	_answer_button_pressed(true)
 
 func _on_deny_button_pressed() -> void:
-	SignalBus.conformation_menu_option_selected.emit(current_request_sender, false)
-
-	current_request_sender = null
+	_answer_button_pressed(false)
 
 func _answer_button_pressed(conform: bool) -> void:
+	SignalBus.conformation_menu_option_selected.emit(current_request_sender, conform, current_tag)
+
 	current_request_sender = null
-	
+	current_tag = ""
