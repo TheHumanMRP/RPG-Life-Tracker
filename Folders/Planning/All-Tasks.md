@@ -3,8 +3,6 @@
 # To-Do
 ---
 
-- [ ] Figure out why does the task manager does not save tasks
-
 - [ ] Add go back to main menu to task manager
 
 - [ ] Make the main menu quit right click menu option ask for conformation
@@ -33,6 +31,9 @@
 
 # Completed Tasks
 ---
+
+- [X] Figure out why does the task manager does not save tasks
+	- Just forgot to comment out the delete_save_file
 
 - [X] Make pixel art for the UI
 
