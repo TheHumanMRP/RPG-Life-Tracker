@@ -41,10 +41,20 @@ func _on_respawn_button_pressed() -> void:
 
 func _on_return_button_pressed() -> void:
 	SignalBus.popup_conformation_menu.emit(self, "Are you sure you want to quit the dungeon?", "Yes", "No", "quit dungeon")
-	SignalBus.switch_scene.emit(self, Constants.PATH_TO_MAIN_MENU, true)
 
 func set_global_state_death_menu() -> void:
 	SignalBus.set_game_state.emit(All_Enums.GAME_STATES.DeathMenu)
 
 func set_global_state_dungeon_playing() -> void:
 	SignalBus.set_game_state.emit(All_Enums.GAME_STATES.DungeonPlaying)
+
+func _on_conformation_menu_option_selected(request_sender: Node, conformed: bool, tag: String) -> void:
+	if request_sender != self:
+		return
+	
+	if not conformed:
+		return
+	
+	match tag:
+		"quit dungeon":
+		SignalBus.switch_scene.emit(self, Constants.PATH_TO_MAIN_MENU, true)
