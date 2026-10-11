@@ -10,7 +10,7 @@ func _ready() -> void:
 	setup_signals()
 
 func setup_signals() -> void:
-	respawn_button.pressed.connect(_on_quit_dungeon_button_pressed)
+	quit_dungeon_button.pressed.connect(_on_quit_dungeon_button_pressed)
 	return_button.pressed.connect(_on_return_button_pressed)
 	
 	SignalBus.player_died.connect(_on_player_died)
