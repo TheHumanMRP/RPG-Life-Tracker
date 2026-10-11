@@ -37,4 +37,4 @@ func _answer_button_pressed(conform: bool) -> void:
 	current_request_sender = null
 	current_tag = ""
 
-	self.hide()
+	# self.hide()
