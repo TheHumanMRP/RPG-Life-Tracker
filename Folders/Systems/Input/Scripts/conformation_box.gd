@@ -8,6 +8,7 @@ var current_tag: String = ""
 @export var deny_button: Button
 
 func _ready() -> void:
+	self.process_mode = Node.PROCESS_MODE_ALWAYS
 	self.hide()
 
 	SignalBus.popup_conformation_menu.connect(_on_popup_conformation_menu)
