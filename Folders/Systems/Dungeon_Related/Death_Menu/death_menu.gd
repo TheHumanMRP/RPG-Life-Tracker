@@ -14,6 +14,7 @@ func setup_signals() -> void:
 	return_button.pressed.connect(_on_return_button_pressed)
 	
 	SignalBus.player_died.connect(_on_player_died)
+	SignalBus.conformation_menu_option_selected.connect(_on_conformation_menu_option_selected)
 
 func setup_properties() -> void:
 	self.process_mode = Node.PROCESS_MODE_ALWAYS
@@ -57,4 +58,4 @@ func _on_conformation_menu_option_selected(request_sender: Node, conformed: bool
 	
 	match tag:
 		"quit dungeon":
-		SignalBus.switch_scene.emit(self, Constants.PATH_TO_MAIN_MENU, true)
+			SignalBus.switch_scene.emit(self, Constants.PATH_TO_MAIN_MENU, true)
