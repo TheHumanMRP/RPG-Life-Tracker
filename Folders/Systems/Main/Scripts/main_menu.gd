@@ -76,3 +76,11 @@ func _on_right_click_menu_option_selected(request_sender: Node, option: String) 
 	match option:
 		"Quit Game":
 			SignalBus.popup_conformation_menu.emit(self, "Are you sure you want to quit the game?", "Yes", "No", "quit game")
+
+func _on_conformation_menu_option_selected(request_sender: Node, conformed: bool, tag: String) -> void:
+	if request_sender != self:
+		return
+	
+	match tag:
+		"quit game":
+			
