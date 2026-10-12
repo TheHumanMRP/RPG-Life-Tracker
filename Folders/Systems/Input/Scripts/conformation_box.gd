@@ -7,8 +7,10 @@ var current_tag: String = ""
 @export var conform_button: Button
 @export var deny_button: Button
 
-func _ready() -> void:
+func _init() -> void:
 	self.process_mode = Node.PROCESS_MODE_ALWAYS
+
+func _ready() -> void:
 	self.hide()
 
 	SignalBus.popup_conformation_menu.connect(_on_popup_conformation_menu)
