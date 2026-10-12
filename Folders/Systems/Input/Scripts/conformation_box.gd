@@ -34,10 +34,18 @@ func _on_conform_button_pressed() -> void:
 func _on_deny_button_pressed() -> void:
 	_answer_button_pressed(false)
 
+```gdscript
 func _answer_button_pressed(conform: bool) -> void:
-	self.hide()
-
-	SignalBus.conformation_menu_option_selected.emit(current_request_sender, conform, current_tag)
+	var request_sender: Node = current_request_sender
+	var tag: String = current_tag
 
 	current_request_sender = null
 	current_tag = ""
+
+	self.hide()
+
+	SignalBus.conformation_menu_option_selected.emit(
+		request_sender,
+		conform,
+		tag
+	)
