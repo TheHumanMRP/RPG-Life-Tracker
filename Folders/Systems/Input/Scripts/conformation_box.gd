@@ -38,7 +38,4 @@ func _answer_button_pressed(conform: bool) -> void:
 	current_request_sender = null
 	current_tag = ""
 
-	_set_visibility(false)
-
-func _set_visibility(new_visibility: bool) -> void:
-	self.visible = new_visibility
+	self.hide()
