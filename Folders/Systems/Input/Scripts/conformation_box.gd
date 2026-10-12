@@ -38,6 +38,4 @@ func _answer_button_pressed(conform: bool) -> void:
 	current_request_sender = null
 	current_tag = ""
 
-	print("Hidden: ", self.visible)
 	self.hide()
-	print("Hidden: ", self.visible)
