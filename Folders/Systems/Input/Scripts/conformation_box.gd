@@ -26,7 +26,6 @@ func _on_popup_conformation_menu(request_sender: Node, conformation_textbox_text
 	deny_button.text = deny_button_text
 	conform_button.text = conform_button_text
 
-	print_stack()
 	self.show()
 
 func _on_conform_button_pressed() -> void:
