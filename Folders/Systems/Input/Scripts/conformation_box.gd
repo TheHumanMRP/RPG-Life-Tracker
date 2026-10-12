@@ -34,7 +34,6 @@ func _on_conform_button_pressed() -> void:
 func _on_deny_button_pressed() -> void:
 	_answer_button_pressed(false)
 
-```gdscript
 func _answer_button_pressed(conform: bool) -> void:
 	var request_sender: Node = current_request_sender
 	var tag: String = current_tag
