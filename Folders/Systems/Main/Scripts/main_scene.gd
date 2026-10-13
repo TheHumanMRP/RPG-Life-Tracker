@@ -9,6 +9,8 @@ func _init() -> void:
 func _ready() -> void:
 	SignalBus.switch_scene.connect(switch_scenes)
 
+	_add_right_click_menu()
+
 	SignalBus.popup_conformation_menu.connect(_on_popup_conformation_menu)
 	SignalBus.get_text_input_from_user.connect(_on_get_text_input_from_user)
 
@@ -16,7 +18,7 @@ func switch_scenes(caller: Node, new_scene_path: String, _clear_children: bool =
 	if _clear_children:
 		_clear_all_children()
 	
-
+	_add_right_click_menu()
 
 	# Remove the caller of the scene change caller regardless
 	# of wether clear_children is true or false
