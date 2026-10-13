@@ -41,7 +41,6 @@ func _on_respawn_button_pressed() -> void:
 	print("\nDeath Menu: Respawn Button Pressed")
 
 func _on_quit_dungeon_button_pressed() -> void:
-	print_stack()
 	SignalBus.popup_conformation_menu.emit(self, "Are you sure you want to quit the dungeon?", "Yes", "No", "quit dungeon")
 
 func set_global_state_death_menu() -> void:
@@ -59,5 +58,4 @@ func _on_conformation_menu_option_selected(request_sender: Node, conformed: bool
 	
 	match tag:
 		"quit dungeon":
-			print_stack()
 			SignalBus.switch_scene.emit(self, Constants.PATH_TO_MAIN_MENU, true)

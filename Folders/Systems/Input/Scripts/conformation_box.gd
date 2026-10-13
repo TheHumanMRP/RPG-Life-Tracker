@@ -17,7 +17,6 @@ func _ready() -> void:
 	deny_button.pressed.connect(_on_deny_button_pressed)
 
 func _on_popup_conformation_menu(request_sender: Node, conformation_textbox_text: String, conform_button_text: String, deny_button_text: String, tag: String) -> void:
-	print_stack()
 	current_request_sender = request_sender
 	current_tag = tag
 
