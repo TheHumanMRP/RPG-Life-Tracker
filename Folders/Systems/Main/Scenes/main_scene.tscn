@@ -10,4 +10,5 @@ important_UI_canvas_layer = NodePath("Important_UI_Canvas_Layer")
 [node name="Main_Menu" parent="." unique_id=1303169397 instance=ExtResource("1_43mws")]
 
 [node name="Important_UI_Canvas_Layer" type="CanvasLayer" parent="." unique_id=22360007]
+process_mode = 3
 layer = 2
