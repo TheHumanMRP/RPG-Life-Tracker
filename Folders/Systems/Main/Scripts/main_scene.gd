@@ -9,7 +9,6 @@ func _init() -> void:
 func _ready() -> void:
 	SignalBus.switch_scene.connect(switch_scenes)
 
-	SignalBus.popup_right_click_menu.connect(_on_popup_right_click_menu)
 	SignalBus.popup_conformation_menu.connect(_on_popup_conformation_menu)
 	SignalBus.get_text_input_from_user.connect(_on_get_text_input_from_user)
 
@@ -40,12 +39,10 @@ func _get_new_scene(new_scene_path: String) -> Node:
 
 	return new_scene
 
-func _on_popup_right_click_menu(request_sender: Node, list_of_options: Array[String], mouse_position: Vector2) -> void:
+func _add_right_click_menu() -> void:
 	var right_click_menu: Node = _get_new_scene(Constants.PATH_TO_RIGHT_CLICK_MENU)
 
 	important_UI_canvas_layer.add_child(right_click_menu)
-
-	right_click_menu.popup_right_click_menu(request_sender, list_of_options, mouse_position)
 
 func _on_get_text_input_from_user(question: String, tag: String, request_sender: Node, user_input_placeholder_text: String = "Answer Here") -> void:
 	var text_input_box: Node = _get_new_scene(Constants.PATH_TO_TEXT_INPUT_BOX)
