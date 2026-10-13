@@ -48,7 +48,7 @@ func _on_popup_right_click_menu(request_sender: Node, list_of_options: Array[Str
 func _add_text_input_box() -> void:
 	var text_input_box: Node = _get_new_scene(Constants.PATH_TO_TEXT_INPUT_BOX)
 
-	
+	question: String, tag: String, request_sender: Node, user_input_placeholder_text: String = "Answer Here"
 
 	important_UI_canvas_layer.add_child(text_input_box)
 
