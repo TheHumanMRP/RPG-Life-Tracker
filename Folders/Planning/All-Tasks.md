@@ -3,7 +3,9 @@
 # To-Do
 ---
 
-- [ ] Fix the conformation box bug in quit dungeon in death menu
+- [X] Fix the conformation box bug in quit dungeon in death menu
+	- Fixed by making shit work where it does
+	- Basically I tried switching to isntanciating and 
 
 - [ ] Add conformation to quit dungeon in dungeon death menu
 - [ ] Add conformation to go back to main menu in task manager
