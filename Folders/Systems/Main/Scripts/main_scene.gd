@@ -41,6 +41,7 @@ func _get_new_scene(new_scene_path: String) -> Node:
 	return new_scene
 
 func _on_popup_right_click_menu(request_sender: Node, list_of_options: Array[String], mouse_position: Vector2) -> void:
+	print("H")
 	var right_click_menu: Node = _get_new_scene(Constants.PATH_TO_RIGHT_CLICK_MENU)
 
 	important_UI_canvas_layer.add_child(right_click_menu)
