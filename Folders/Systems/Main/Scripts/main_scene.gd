@@ -52,7 +52,9 @@ func _on_get_text_input_from_user(question: String, tag: String, request_sender:
 
 	important_UI_canvas_layer.add_child(text_input_box)
 
-func _add_conformation_input_box() -> void:
+func _on_popup_conformation_menu(request_sender: Node, conformation_textbox_text: String, conform_button_text: String, deny_button_text: String, tag: String) -> void:
 	var conformation_input_box: Node = _get_new_scene(Constants.PATH_TO_CONFORMATION_BOX)
+
+	conformation_input_box.popup_conformation_menu(request_sender, conformation_textbox_text, conform_button_text, deny_button_text, tag)
 
 	important_UI_canvas_layer.add_child(conformation_input_box)
