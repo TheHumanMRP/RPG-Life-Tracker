@@ -11,8 +11,6 @@ func _ready() -> void:
 	self.index_pressed.connect(_on_index_pressed)
 
 func popup_right_click_menu(request_sender: Node, list_of_options: Array[String], mouse_position: Vector2) -> void:
-	print_stack()
-
 	current_request_sender = request_sender
 
 	# Clear the existing options 
