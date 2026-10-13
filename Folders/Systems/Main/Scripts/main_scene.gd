@@ -10,6 +10,8 @@ func _ready() -> void:
 	SignalBus.switch_scene.connect(switch_scenes)
 
 	SignalBus.popup_right_click_menu.connect(_on_popup_right_click_menu)
+	SignalBus.popup_conformation_menu.connect(_on_popup_conformation_menu)
+	SignalBus.get_text_input_from_user.connect(_on_get_text_input_from_user)
 
 func switch_scenes(caller: Node, new_scene_path: String, _clear_children: bool = false) -> void:
 	if _clear_children:
@@ -41,20 +43,20 @@ func _get_new_scene(new_scene_path: String) -> Node:
 func _on_popup_right_click_menu(request_sender: Node, list_of_options: Array[String], mouse_position: Vector2) -> void:
 	var right_click_menu: Node = _get_new_scene(Constants.PATH_TO_RIGHT_CLICK_MENU)
 
-	right_click_menu.popup_right_click_menu(request_sender, list_of_options, mouse_position)
-
 	important_UI_canvas_layer.add_child(right_click_menu)
+
+	right_click_menu.popup_right_click_menu(request_sender, list_of_options, mouse_position)
 
 func _on_get_text_input_from_user(question: String, tag: String, request_sender: Node, user_input_placeholder_text: String = "Answer Here") -> void:
 	var text_input_box: Node = _get_new_scene(Constants.PATH_TO_TEXT_INPUT_BOX)
 
-	text_input_box.get_text_input_from_user(question, tag, request_sender, user_input_placeholder_text)
-
 	important_UI_canvas_layer.add_child(text_input_box)
+
+	text_input_box.get_text_input_from_user(question, tag, request_sender, user_input_placeholder_text)
 
 func _on_popup_conformation_menu(request_sender: Node, conformation_textbox_text: String, conform_button_text: String, deny_button_text: String, tag: String) -> void:
 	var conformation_input_box: Node = _get_new_scene(Constants.PATH_TO_CONFORMATION_BOX)
 
-	conformation_input_box.popup_conformation_menu(request_sender, conformation_textbox_text, conform_button_text, deny_button_text, tag)
-
 	important_UI_canvas_layer.add_child(conformation_input_box)
+
+	conformation_input_box.popup_conformation_menu(request_sender, conformation_textbox_text, conform_button_text, deny_button_text, tag)
