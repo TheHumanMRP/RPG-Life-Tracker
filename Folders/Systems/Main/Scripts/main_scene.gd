@@ -9,9 +9,8 @@ func _init() -> void:
 func _ready() -> void:
 	SignalBus.switch_scene.connect(switch_scenes)
 
-	# Search the completed task for explanation
-	# why this works separately than
-	# text and conformation input box
+	# Search the completed task for explanation why this works separately than text and conformation input box
+	# `Fix the conformation box bug in quit dungeon in death menu` is the name of the task
 	_add_right_click_menu()
 
 	SignalBus.popup_conformation_menu.connect(_on_popup_conformation_menu)
