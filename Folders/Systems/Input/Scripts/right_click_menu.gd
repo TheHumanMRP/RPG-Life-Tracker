@@ -31,3 +31,5 @@ func _on_index_pressed(index: int) -> void:
 	SignalBus.right_click_menu_option_selected.emit(current_request_sender, selected_option)
 
 	current_request_sender = null
+
+	self.queue_free()

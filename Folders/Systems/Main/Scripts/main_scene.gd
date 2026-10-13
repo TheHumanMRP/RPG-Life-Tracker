@@ -41,10 +41,14 @@ func _get_new_scene(new_scene_path: String) -> Node:
 func _on_popup_right_click_menu(request_sender: Node, list_of_options: Array[String], mouse_position: Vector2) -> void:
 	var right_click_menu: Node = _get_new_scene(Constants.PATH_TO_RIGHT_CLICK_MENU)
 
+	right_click_menu.popup_right_click_menu(request_sender, list_of_options, mouse_position)
+
 	important_UI_canvas_layer.add_child(right_click_menu)
 
 func _add_text_input_box() -> void:
 	var text_input_box: Node = _get_new_scene(Constants.PATH_TO_TEXT_INPUT_BOX)
+
+	
 
 	important_UI_canvas_layer.add_child(text_input_box)
 
