@@ -3,13 +3,6 @@
 # To-Do
 ---
 
-- [X] Fix the conformation box bug in quit dungeon in death menu
-	- Fixed by making shit work where it does
-	- Basically I tried switching to isntanciating and freeing the scenes
-	- and that worked for both text and conformation input
-	- but that caused bugs with the right cick menu
-	- So I just let the right click menu handle shit like before by adding it to the scene  
-
 - [ ] Add conformation to quit dungeon in dungeon death menu
 - [ ] Add conformation to go back to main menu in task manager
 
@@ -37,6 +30,15 @@
 
 # Completed Tasks
 ---
+
+- [X] Fix the conformation box bug in quit dungeon in death menu
+	- Fixed by making shit work where it does
+	- Basically I tried switching to isntanciating and freeing the scenes
+	- and that worked for both text and conformation input
+	- but that caused bugs with the right cick menu
+	- So I just let the right click menu handle shit like before by adding it to the scene
+	- and letting it handle the fucking popping and stuff
+	- While I am instnciating and freeing the input menus
 
 - [X] Add conformation to quit game in main menu
 
