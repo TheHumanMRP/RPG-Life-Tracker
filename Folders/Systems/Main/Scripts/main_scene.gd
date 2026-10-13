@@ -8,7 +8,6 @@ func _init() -> void:
 
 func _ready() -> void:
 	SignalBus.switch_scene.connect(switch_scenes)
-	_add_needed_scenes()
 
 	SignalBus.popup_right_click_menu.connect(_on_popup_right_click_menu)
 
@@ -20,8 +19,6 @@ func switch_scenes(caller: Node, new_scene_path: String, _clear_children: bool =
 	# of wether clear_children is true or false
 	if self.get_children().has(caller):
 		self.remove_child(caller)
-
-	_add_needed_scenes()
 
 	var new_scene: Node = _get_new_scene(new_scene_path)
 
@@ -40,19 +37,6 @@ func _get_new_scene(new_scene_path: String) -> Node:
 	var new_scene: Node = packed_new_scene.instantiate()
 
 	return new_scene
-
-func _add_needed_scenes() -> void:
-	match Global.current_game_state:
-		All_Enums.GAME_STATES.MainMenu:
-			_on_popup_right_click_menu()
-			_add_conformation_input_box()
-			_add_text_input_box()
-
-		All_Enums.GAME_STATES.TaskManager:
-			_on_popup_right_click_menu()
-			_add_conformation_input_box()
-			_add_text_input_box()
-
 
 func _on_popup_right_click_menu(request_sender: Node, list_of_options: Array[String], mouse_position: Vector2) -> void:
 	var right_click_menu: Node = _get_new_scene(Constants.PATH_TO_RIGHT_CLICK_MENU)
