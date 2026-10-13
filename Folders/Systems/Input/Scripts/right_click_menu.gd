@@ -25,6 +25,9 @@ func popup_right_click_menu(request_sender: Node, list_of_options: Array[String]
 	# Popup the menu
 	self.popup()
 
+
+	print(self.visible)
+
 func _on_index_pressed(index: int) -> void:
 	var selected_option: String = self.get_item_text(index)
 
