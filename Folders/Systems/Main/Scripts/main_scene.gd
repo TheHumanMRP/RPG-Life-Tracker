@@ -45,10 +45,10 @@ func _on_popup_right_click_menu(request_sender: Node, list_of_options: Array[Str
 
 	important_UI_canvas_layer.add_child(right_click_menu)
 
-func _add_text_input_box() -> void:
+func _on_get_text_input_from_user() -> void:
 	var text_input_box: Node = _get_new_scene(Constants.PATH_TO_TEXT_INPUT_BOX)
 
-	question: String, tag: String, request_sender: Node, user_input_placeholder_text: String = "Answer Here"
+	text_input_box.get_text_input_from_user()
 
 	important_UI_canvas_layer.add_child(text_input_box)
 
