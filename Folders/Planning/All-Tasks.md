@@ -3,6 +3,8 @@
 # To-Do
 ---
 
+- [ ] Separate `equipment_manager` and `equipment_scene_manager`, currently the equipment manager script is handling the logic and 
+
 - [ ] Impliment swapping of gear, so that when I equip a gear which is already occupied, it swaps instead of disgarding
 
 - [ ] Handle the unequipment of gear
