@@ -2,6 +2,9 @@
 
 # To-Do
 ---
+
+- [ ] 
+
 - [ ] Impliment swapping of gear, so that when I equip a gear which is already occupied, it swaps instead of disgarding
 
 - [ ] Handle the unequipment of gear
@@ -29,7 +32,6 @@
 
 - [X] Add conformation to quit dungeon in dungeon death menu
 - [X] Add conformation to go back to main menu in task manager
-
 
 - [X] Fix the conformation box bug in quit dungeon in death menu
 	- Fixed by making shit work where it does
