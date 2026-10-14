@@ -3,7 +3,7 @@
 # To-Do
 ---
 
-- [ ] Separate `equipment_manager` and `equipment_scene_manager`, currently the equipment manager script is handling the logic and 
+- [ ] Separate `equipment_manager` and `equipment_scene_manager`, currently the equipment manager script is handling the logic and the scene is displaying the sword and visual scenes, separate them
 
 - [ ] Impliment swapping of gear, so that when I equip a gear which is already occupied, it swaps instead of disgarding
 
