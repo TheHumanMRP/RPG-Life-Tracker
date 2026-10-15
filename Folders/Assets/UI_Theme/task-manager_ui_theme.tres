@@ -1,6 +1,15 @@
 [gd_resource type="Theme" format=3 uid="uid://bcri7pjwtih8w"]
 
+[ext_resource type="Texture2D" uid="uid://cc57tdf5ulo64" path="res://Folders/Assets/UI_Theme/Buttons/button-hover.png" id="1_1a4o4"]
 [ext_resource type="Texture2D" uid="uid://doq41bxt5f7n4" path="res://Folders/Assets/UI_Theme/PanelContainer/panel-bg.png" id="1_3x5pv"]
+[ext_resource type="FontFile" uid="uid://djau3r863cbqu" path="res://Folders/Assets/UI_Theme/Pixel-Fonts/LowresPixel-Regular.otf" id="3_u4bun"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m7bbo"]
+texture = ExtResource("1_1a4o4")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ehy8m"]
 texture = ExtResource("1_3x5pv")
@@ -10,4 +19,6 @@ texture_margin_right = 4.0
 texture_margin_bottom = 4.0
 
 [resource]
+default_font = ExtResource("3_u4bun")
+OptionButton/styles/normal = SubResource("StyleBoxTexture_m7bbo")
 PanelContainer/styles/panel = SubResource("StyleBoxTexture_ehy8m")
