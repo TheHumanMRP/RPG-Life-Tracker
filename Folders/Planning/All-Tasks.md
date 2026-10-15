@@ -3,6 +3,10 @@
 # To-Do
 ---
 
+- [ ] Impliment Removing in task manager
+
+- [ ] Make task manager actually use real data instead of those test items I added
+
 - [ ] Impliment dungoen selection menu
 
 - [ ] Impliment the shifting of items from inventory to hotbar when starting a dungeon
@@ -26,7 +30,6 @@
 - [ ] Code sword attack animation playing
 
 - [ ] Impliment Inventory screen
-
 
 - [ ] Make esc menu
 
