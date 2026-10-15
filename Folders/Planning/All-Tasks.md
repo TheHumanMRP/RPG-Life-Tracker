@@ -3,6 +3,14 @@
 # To-Do
 ---
 
+- [ ] Impliment dungoen selection menu
+
+- [ ] Impliment the shifting of items from inventory to hotbar when starting a dungeon
+
+- [ ] Add enemies in the dungeon
+
+- [ ] Make pixel art for the enemy
+
 - [ ] Impliment swapping of gear, so that when I equip a gear which is already occupied, it swaps instead of disgarding
 
 - [ ] Handle the unequipment of gear
@@ -19,7 +27,6 @@
 
 - [ ] Impliment Inventory screen
 
-- [ ] Impliment dungoen selection menu
 
 - [ ] Make esc menu
 
