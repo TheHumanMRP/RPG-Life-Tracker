@@ -1,7 +1,7 @@
 class_name EquipmentManager
 extends Node
 
-# See the All-Tasks.md for explanation on why the vis
+# See the All-Tasks.md for explanation on why the visual and the logic are in the same script
 
 @export var sword_scene: SwordScene
 

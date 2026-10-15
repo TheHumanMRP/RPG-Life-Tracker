@@ -4,6 +4,8 @@
 ---
 
 - [ ] Separate `equipment_manager` and `equipment_scene_manager`, currently the equipment manager script is handling the logic and the scene is displaying the sword and visual scenes, separate them
+	- Not doing so cause the overhead of managing the communication surpasses the
+	- 
 
 - [ ] Impliment swapping of gear, so that when I equip a gear which is already occupied, it swaps instead of disgarding
 
