@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://vt6eolqkwws8"]
 
+[ext_resource type="Theme" uid="uid://deuleb40h735d" path="res://Folders/Assets/UI_Theme/rpg-life-tracker-ui-theme.tres" id="1_7jaep"]
 [ext_resource type="Script" uid="uid://dun2trcix2ryy" path="res://Folders/Systems/Task-Manager/Scripts/task_entry_scene.gd" id="1_hsjk1"]
 
 [node name="Task_Entry_Scene" type="PanelContainer" unique_id=465403137 node_paths=PackedStringArray("task_name_label", "task_status_option_button")]
@@ -12,6 +13,7 @@ anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
+theme = ExtResource("1_7jaep")
 script = ExtResource("1_hsjk1")
 task_name_label = NodePath("MarginContainer/VBoxContainer/Task_Name")
 task_status_option_button = NodePath("MarginContainer/VBoxContainer/Task_Status_Option_Button")

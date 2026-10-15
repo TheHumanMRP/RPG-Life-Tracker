@@ -16,6 +16,7 @@ task_vbox_container = NodePath("VBoxContainer")
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_constants/separation = 10
 
 [node name="Task_Entry_Scene" parent="VBoxContainer" unique_id=465403137 instance=ExtResource("1_vs7gx")]
 layout_mode = 2
