@@ -34,6 +34,9 @@ layout_mode = 2
 mouse_filter = 1
 text = "Task Name Here"
 
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer" unique_id=1619514795]
+layout_mode = 2
+
 [node name="Task_Status_Option_Button" type="OptionButton" parent="MarginContainer/VBoxContainer" unique_id=1842306662]
 layout_mode = 2
 mouse_filter = 1
