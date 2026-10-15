@@ -3,10 +3,6 @@
 # To-Do
 ---
 
-- [ ] Separate `equipment_manager` and `equipment_scene_manager`, currently the equipment manager script is handling the logic and the scene is displaying the sword and visual scenes, separate them
-	- Not doing so cause the overhead of managing the communication surpasses the
-	- 
-
 - [ ] Impliment swapping of gear, so that when I equip a gear which is already occupied, it swaps instead of disgarding
 
 - [ ] Handle the unequipment of gear
@@ -31,6 +27,13 @@
 
 # Completed Tasks
 ---
+
+- [X] Separate `equipment_manager` and `equipment_scene_manager`, currently the equipment manager script is handling the logic and the scene is displaying the sword and visual scenes, separate them
+	- Not doing so cause the overhead of managing the communication surpasses the
+	- code needed for visual management
+	- Basically, I can handle visual management with way less code than handling
+	- communication cause all of the actual logic of the equipment is done within
+	- the respective scene
 
 - [X] Add conformation to quit dungeon in dungeon death menu
 - [X] Add conformation to go back to main menu in task manager
