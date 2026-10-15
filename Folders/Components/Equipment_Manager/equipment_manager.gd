@@ -1,6 +1,8 @@
 class_name EquipmentManager
 extends Node
 
+# See the All-Tasks.md for explanation on why the vis
+
 @export var sword_scene: SwordScene
 
 var equipped_helmet_item_id: int = Constants.NO_ITEM
