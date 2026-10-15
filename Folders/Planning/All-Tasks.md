@@ -3,6 +3,8 @@
 # To-Do
 ---
 
+- [ ] Setup the pixel art for the task manager - task item
+
 - [ ] Impliment Removing in task manager
 
 - [ ] Make task manager actually use real data instead of those test items I added
