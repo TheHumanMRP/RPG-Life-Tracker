@@ -1,5 +1,7 @@
 extends Node
 
+@warning_ignore_start("unused_signal")
+
 # ==============================================
 # Player
 # ==============================================
@@ -69,6 +71,8 @@ signal conformation_menu_option_selected(request_sender: Node, conformed: bool, 
 
 signal get_text_input_from_user(question: String, tag: String, request_sender: Node, user_input_line_edit_placeholder_text: String)
 signal text_input_submitted_by_user(text_sumitted: String, tag: String, request_sender: Node)
+
+@warning_ignore_restore("unused_signal")
 
 # ==============================================
 # Set process mode
