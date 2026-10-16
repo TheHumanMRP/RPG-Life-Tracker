@@ -95,7 +95,7 @@ func _detect_right_mouse_click(event: InputEvent) -> void:
 func _get_list_of_right_click_menu_options() -> Array[String]:
 	var list_of_options: Array[String] = Constants.TASK_MANAGER_RIGHT_CLICK_MENU_OPTIONS.duplicate()
 	
-	list_of_options.push_front(Constants.TASK_ITEM_SCENE_EXTRA_OPTIONS, )
+	list_of_options.push_front(Constants.TASK_ITEM_SCENE_EXTRA_OPTIONS)
 
 	return list_of_options
 
@@ -103,4 +103,7 @@ func _open_right_click_menu() -> void:
 	SignalBus.popup_right_click_menu.emit(self, _get_list_of_right_click_menu_options(), get_global_mouse_position())
 
 func _on_right_click_menu_option_selected(request_sender: Node, selected_option: String) -> void:
-	pass
+	if request_sender != self:
+		return
+	
+	if selected_option 
