@@ -4,6 +4,8 @@ extends MarginContainer
 # Initialize
 # ==============================================
 func _ready() -> void:
+	self.add_to_group("task_manager_ui")
+
 	SignalBus.right_click_menu_option_selected.connect(_on_right_click_menu_option_selected)
 	SignalBus.text_input_submitted_by_user.connect(_on_text_input_submitted_by_user)
 	_set_mouse_filter()
@@ -42,7 +44,9 @@ func _on_right_click_menu_option_selected(request_sender: Node, option: String) 
 	if request_sender != self:
 		return
 
-func handle_right_click_menu_selection
+	handle_right_click_menu_selection(option)
+
+func handle_right_click_menu_selection(option: String) -> void:
 	match option:
 		"Add Task":
 			SignalBus.get_text_input_from_user.emit("What should be the name of the task?", "add_task", self)

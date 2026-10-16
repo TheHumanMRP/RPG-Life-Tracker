@@ -107,4 +107,4 @@ func _on_right_click_menu_option_selected(request_sender: Node, selected_option:
 		return
 	
 	if selected_option in Constants.TASK_MANAGER_RIGHT_CLICK_MENU_OPTIONS:
-		
+		get
