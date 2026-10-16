@@ -16,6 +16,8 @@ func _ready() -> void:
 	
 	self.mouse_filter = Control.MOUSE_FILTER_STOP
 
+	SignalBus.right_click_menu_option_selected.connect(_on_right_click_menu_option_selected)
+
 	refresh()
 
 
