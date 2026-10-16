@@ -3,9 +3,10 @@
 # To-Do
 ---
 
-- [ ] Make task manager actually use real data instead of those test items I added
+- [-] Impliment Removing of task in task manager UI
+	- [X] Make the right click menu popup
 
-- [ ] Impliment Removing of task in task manager UI
+- [ ] Make task manager actually use real data instead of those test items I added
 
 - [ ] Make esc menu in dungoen
 

@@ -91,4 +91,4 @@ func _get_list_of_right_click_menu_options() -> Array[String]:
 	return list_of_options
 
 func _open_right_click_menu() -> void:
-	SignalBus.popup_conformation_menu.emit(self, _get_list_of_right_click_menu_options)
+	SignalBus.popup_conformation_menu.emit(self, _get_list_of_right_click_menu_options(), get_global_mouse_position())
