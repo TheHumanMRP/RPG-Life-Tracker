@@ -48,8 +48,6 @@ func heal(amount: float) -> void:
 	health += amount
 
 func check_if_dead() -> void:
-	print("\nHealth Component [", log_name, "]: Check if dead called: here's health and dead brother: ", health, ", ", dead)
-	
 	if health > 0:
 		return
 	
