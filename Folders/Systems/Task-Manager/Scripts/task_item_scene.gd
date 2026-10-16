@@ -84,7 +84,7 @@ func _detect_right_mouse_click(event: InputEvent) -> void:
 	_open_right_click_menu()
 
 func _open_right_click_menu() -> void:
-	var list_of_options: Array[String] = Constants.TASK_MANAGER_RIGHT_CLICK_MENU_OPTIONS.duplicate().
+	var list_of_options: Array[String] = Constants.TASK_MANAGER_RIGHT_CLICK_MENU_OPTIONS.duplicate().push_front("Remove this task")
 
 
-	SignalBus.popup_conformation_menu.emit(self, )
+	SignalBus.popup_conformation_menu.emit(self, list_of_options)
