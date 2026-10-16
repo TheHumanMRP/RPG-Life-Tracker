@@ -106,10 +106,9 @@ func get_task_by_task_id(task_id: int) -> Task:
 	if task_id == Constants.NO_TASK:
 		return
 
-	var data: TasksSaveData = get_save_data()
-
-	for task in data.all_tasks:
+	for task in get_save_data().all_tasks:
 		if task.task_id == task_id:
+			# Return task if found
 			return task
 
 	push_error("Task Manager Backend: No task with task_id: ", task_id)

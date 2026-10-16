@@ -3,8 +3,9 @@
 # To-Do
 ---
 
-- [-] Impliment Removing of task in task manager UI
-	- [X] Make the right click menu popup
+- [ ] Impliment refresh ui in task item scene
+
+- [ ] Add a cancle option to text input
 
 - [ ] Make task manager actually use real data instead of those test items I added
 
@@ -38,6 +39,13 @@
 
 # Completed Tasks
 ---
+
+- [X] Impliment Removing of task in task manager UI
+	- [X] Make the right click menu popup
+	- [X] Make the task item scene handle the right click menu input
+		- [X] Impliment removing of task
+		- [X] Impliment renaming of task
+	- [X] Connect the signals
 
 - [X] Setup the pixel art for the task manager - task item
 

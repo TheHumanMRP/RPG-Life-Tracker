@@ -16,6 +16,9 @@ func _ready() -> void:
 	
 	self.mouse_filter = Control.MOUSE_FILTER_STOP
 
+	SignalBus.text_input_submitted_by_user.connect(_on_text_input_submitted_by_user)
+	SignalBus.conformation_menu_option_selected.connect(_on_conformation_menu_option_selected)
+
 	SignalBus.right_click_menu_option_selected.connect(_on_right_click_menu_option_selected)
 
 	refresh()
@@ -73,7 +76,7 @@ func _refresh_status_option_button() -> void:
 # TASK GETTER
 # ===============================================================
 func _get_task() -> Task:
-	return InfoGetter.get_task_by_task_id(task_id)
+	return InfoGetter.get_task_manager().get_task_by_task_id(task_id)
 
 # ===============================================================
 # Right Click Management
@@ -108,3 +111,41 @@ func _on_right_click_menu_option_selected(request_sender: Node, selected_option:
 	
 	if selected_option in Constants.TASK_MANAGER_RIGHT_CLICK_MENU_OPTIONS:
 		get_tree().get_first_node_in_group("task_manager_ui").handle_right_click_menu_selection(selected_option)
+		return
+
+	match selected_option:
+		"Remove this task":
+			_handle_removing_of_task()
+		"Rename this task":
+			_handle_renaming_of_task()
+
+func _handle_removing_of_task() -> void:
+	var conformation_question: String = "Are you sure you want to delete the task: " + task_name + "?"
+
+	SignalBus.popup_conformation_menu.emit(self, conformation_question, "Yes", "No", "remove task")
+
+func _handle_renaming_of_task() -> void:
+	var text_input_question: String = "Enter the new name of the task: " + task_name
+
+	SignalBus.get_text_input_from_user.emit(text_input_question, "rename task", self, "\"" + task_name + "\"")
+
+func _on_conformation_menu_option_selected(request_sender: Node, conformed: bool, tag: String) -> void:
+	if request_sender != self:
+		return
+	
+	if not conformed:
+		return
+	
+	if tag == "remove task":
+		InfoGetter.get_task_manager().remove_task(task_id)
+		SignalBus.refresh_ui.emit()
+		return
+
+func _on_text_input_submitted_by_user(text_sumitted: String, tag: String, request_sender: Node) -> void:
+	if request_sender != self:
+		return
+	
+	if tag == "rename task":
+		_get_task().task_name = text_sumitted
+		SignalBus.refresh_ui.emit()
+		return
