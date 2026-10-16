@@ -72,3 +72,16 @@ func _refresh_status_option_button() -> void:
 # ===============================================================
 func _get_task() -> Task:
 	return InfoGetter.get_task_by_task_id(task_id)
+
+func _detect_right_mouse_click(event: InputEvent) -> void:
+	if event is not InputEventMouseButton:
+		return
+
+	# Check if it's the right mouse button and it was just pressed down
+	if event.button_index != MOUSE_BUTTON_RIGHT or not event.pressed:
+		return
+	
+	_open_right_click_menu()
+
+func _open_right_click_menu() -> void:
+	pass

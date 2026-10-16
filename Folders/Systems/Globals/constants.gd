@@ -36,7 +36,7 @@ const LIVE_SAVE_PATH: String = "user://live/save_data.tres"
 
 # Right Click Menu Options
 const MAIN_MENU_RIGHT_CLICK_MENU_OPTIONS: Array[String] = ["Quit Game"]
-const TASK_MANAGER_RIGHT_CLICK_MENU_OPTIONS: Array[String] = ["Add Task", "Remove Task", "Go back to main menu"]
+const TASK_MANAGER_RIGHT_CLICK_MENU_OPTIONS: Array[String] = ["Add Task", "Go back to main menu"]
 
 # Tasks
 const TASK_STATUS_OPTIONS: Dictionary[String, All_Enums.TASK_STATUS] = {
