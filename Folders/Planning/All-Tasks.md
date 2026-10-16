@@ -3,7 +3,7 @@
 # To-Do
 ---
 
-- [ ] Setup the pixel art for the task manager - task item
+- [X] Setup the pixel art for the task manager - task item
 
 - [ ] Impliment Removing in task manager
 
