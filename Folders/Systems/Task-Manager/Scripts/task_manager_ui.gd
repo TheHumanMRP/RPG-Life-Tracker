@@ -40,14 +40,14 @@ func _detect_right_mouse_click(event: InputEvent) -> void:
 func _open_right_click_menu() -> void:
 	SignalBus.popup_right_click_menu.emit(self, Constants.TASK_MANAGER_RIGHT_CLICK_MENU_OPTIONS, get_global_mouse_position())
 
-func _on_right_click_menu_option_selected(request_sender: Node, option: String) -> void:
+func _on_right_click_menu_option_selected(request_sender: Node, selected_option: String) -> void:
 	if request_sender != self:
 		return
 
-	handle_right_click_menu_selection(option)
+	handle_right_click_menu_selection(selected_option)
 
-func handle_right_click_menu_selection(option: String) -> void:
-	match option:
+func handle_right_click_menu_selection(selected_option: String) -> void:
+	match selected_option:
 		"Add Task":
 			SignalBus.get_text_input_from_user.emit("What should be the name of the task?", "add_task", self)
 		"Go back to main menu":
