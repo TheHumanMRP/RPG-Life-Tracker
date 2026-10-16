@@ -13,6 +13,8 @@ var task_status: All_Enums.TASK_STATUS
 # ===============================================================
 func _ready() -> void:
 	task_status_option_button.item_selected.connect(_on_task_completed_status_changed)
+	
+	self.mouse_filter = Control.MOUSE_FILTER_STOP
 
 	refresh()
 
