@@ -73,6 +73,13 @@ func _refresh_status_option_button() -> void:
 func _get_task() -> Task:
 	return InfoGetter.get_task_by_task_id(task_id)
 
+# ===============================================================
+# Right Click Management
+# ===============================================================
+
+func _gui_input(event: InputEvent) -> void:
+	_detect_right_mouse_click(event)
+
 func _detect_right_mouse_click(event: InputEvent) -> void:
 	if event is not InputEventMouseButton:
 		return
