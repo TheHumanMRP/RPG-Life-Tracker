@@ -3,11 +3,9 @@
 # To-Do
 ---
 
-- [X] Setup the pixel art for the task manager - task item
-
-- [ ] Impliment Removing in task manager
-
 - [ ] Make task manager actually use real data instead of those test items I added
+
+- [ ] Impliment Removing of task in task manager UI
 
 - [ ] Make esc menu in dungoen
 
@@ -39,6 +37,8 @@
 
 # Completed Tasks
 ---
+
+- [X] Setup the pixel art for the task manager - task item
 
 - [X] Separate `equipment_manager` and `equipment_scene_manager`, currently the equipment manager script is handling the logic and the scene is displaying the sword and visual scenes, separate them
 	- Not doing so cause the overhead of managing the communication surpasses the
