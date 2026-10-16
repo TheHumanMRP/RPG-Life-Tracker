@@ -3,8 +3,6 @@
 # To-Do
 ---
 
-- [ ] Impliment refresh ui in task item scene
-
 - [ ] Add a cancle option to text input
 
 - [ ] Make task manager actually use real data instead of those test items I added
@@ -39,6 +37,8 @@
 
 # Completed Tasks
 ---
+
+- [X] Impliment refresh ui in task item scene
 
 - [X] Impliment Removing of task in task manager UI
 	- [X] Make the right click menu popup
