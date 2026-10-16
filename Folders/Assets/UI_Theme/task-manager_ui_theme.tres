@@ -20,5 +20,6 @@ texture_margin_bottom = 4.0
 
 [resource]
 default_font = ExtResource("3_u4bun")
+default_font_size = 16
 OptionButton/styles/normal = SubResource("StyleBoxTexture_m7bbo")
 PanelContainer/styles/panel = SubResource("StyleBoxTexture_ehy8m")
