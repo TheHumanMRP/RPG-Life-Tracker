@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://begy5501tfsx6"]
 
 [ext_resource type="Script" uid="uid://dmtghran153mx" path="res://Folders/Systems/Task-Manager/Scripts/task_grid.gd" id="1_ugsxi"]
-[ext_resource type="PackedScene" uid="uid://vt6eolqkwws8" path="res://Folders/Systems/Task-Manager/Scenes/task_entry_scene.tscn" id="1_vs7gx"]
+[ext_resource type="PackedScene" uid="uid://vt6eolqkwws8" path="res://Folders/Systems/Task-Manager/Scenes/task_item_scene.tscn" id="1_vs7gx"]
 
 [node name="Task_Grid" type="ScrollContainer" unique_id=77195755 node_paths=PackedStringArray("task_vbox_container")]
 anchors_preset = 15
