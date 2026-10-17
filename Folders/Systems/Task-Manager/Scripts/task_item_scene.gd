@@ -98,7 +98,8 @@ func _detect_right_mouse_click(event: InputEvent) -> void:
 func _get_list_of_right_click_menu_options() -> Array[String]:
 	var list_of_options: Array[String] = Constants.TASK_MANAGER_RIGHT_CLICK_MENU_OPTIONS.duplicate()
 	
-	list_of_options.push_front(Constants.TASK_ITEM_SCENE_EXTRA_OPTIONS)
+	for option in Constants.TASK_ITEM_SCENE_EXTRA_OPTIONS:
+		list_of_options.push_front(option)
 
 	return list_of_options
 
