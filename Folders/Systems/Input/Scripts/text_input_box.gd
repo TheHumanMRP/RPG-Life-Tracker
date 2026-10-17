@@ -2,7 +2,7 @@ extends PanelContainer
 
 @export var question_label: Label
 @export var user_input_line_edit: LineEdit
-@export var 
+@export var cancle_button: Button
 
 var current_request_sender: Node = null
 var current_tag: String = ""
@@ -11,6 +11,8 @@ func _ready() -> void:
 	self.hide()
 
 	user_input_line_edit.text_submitted.connect(_on_user_input_line_edit_text_submitted)
+
+	cancle_button.pressed.connect(_on_cancle_button_pressed)
 
 func get_text_input_from_user(question: String, tag: String, request_sender: Node, user_input_placeholder_text: String = "Answer Here") -> void:
 	question_label.text = question
@@ -31,4 +33,7 @@ func _on_user_input_line_edit_text_submitted(text_submitted: String) -> void:
 
 	self.hide()
 
+	self.queue_free()
+
+func _on_cancle_button_pressed() -> void:
 	self.queue_free()
