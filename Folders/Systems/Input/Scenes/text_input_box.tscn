@@ -3,7 +3,7 @@
 [ext_resource type="Theme" uid="uid://deuleb40h735d" path="res://Folders/Assets/UI_Theme/rpg-life-tracker-ui-theme.tres" id="1_fv8me"]
 [ext_resource type="Script" uid="uid://byxkob84wcyo6" path="res://Folders/Systems/Input/Scripts/text_input_box.gd" id="1_n75gt"]
 
-[node name="Text_Input_Box" type="PanelContainer" unique_id=287076170 node_paths=PackedStringArray("question_label", "user_input_line_edit")]
+[node name="Text_Input_Box" type="PanelContainer" unique_id=287076170 node_paths=PackedStringArray("question_label", "user_input_line_edit", "cancle_button")]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -19,6 +19,7 @@ theme = ExtResource("1_fv8me")
 script = ExtResource("1_n75gt")
 question_label = NodePath("MarginContainer/VBoxContainer/Question_label")
 user_input_line_edit = NodePath("MarginContainer/VBoxContainer/User_Input_Line_Edit")
+cancle_button = NodePath("Cancle_Button")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1159187859]
 layout_mode = 2
