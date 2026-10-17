@@ -2,6 +2,7 @@ extends PanelContainer
 
 @export var question_label: Label
 @export var user_input_line_edit: LineEdit
+@export var 
 
 var current_request_sender: Node = null
 var current_tag: String = ""

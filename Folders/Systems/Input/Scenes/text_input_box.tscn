@@ -20,6 +20,9 @@ script = ExtResource("1_n75gt")
 question_label = NodePath("MarginContainer/VBoxContainer/Question_label")
 user_input_line_edit = NodePath("MarginContainer/VBoxContainer/User_Input_Line_Edit")
 
+[node name="Control" type="Control" parent="." unique_id=430275264]
+layout_mode = 2
+
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1159187859]
 layout_mode = 2
 theme_override_constants/margin_left = 20
@@ -41,3 +44,8 @@ layout_mode = 2
 [node name="User_Input_Line_Edit" type="LineEdit" parent="MarginContainer/VBoxContainer" unique_id=572737712]
 layout_mode = 2
 placeholder_text = "User Input"
+
+[node name="Button" type="Button" parent="." unique_id=765245960]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
