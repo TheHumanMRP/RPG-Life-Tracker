@@ -3,9 +3,9 @@
 # To-Do
 ---
 
-- [ ] Add pixel art for text input cancle button
+- [ ] Impliment refresh_ui in task manager ui
 
-- [ ] Make task manager actually use real data instead of those test items I added
+- [ ] Add pixel art for text input cancle button
 
 - [ ] Make esc menu in dungoen
 
