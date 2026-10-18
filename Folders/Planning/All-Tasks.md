@@ -3,7 +3,7 @@
 # To-Do
 ---
 
-- [ ] Add a cancle option to text input
+- [ ] Add pixel art for text input cancle button
 
 - [ ] Make task manager actually use real data instead of those test items I added
 
@@ -37,6 +37,8 @@
 
 # Completed Tasks
 ---
+
+- [X] Add a cancle option to text input
 
 - [X] Impliment refresh ui in task item scene
 
