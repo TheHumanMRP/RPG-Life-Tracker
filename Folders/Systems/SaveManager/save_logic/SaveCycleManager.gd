@@ -16,18 +16,18 @@ func _ready() -> void:
 
 	save_time_tick.initialize(60.0)
 
-	save_time_tick.tick_updated
+	save_time_tick.tick_updated.connect(_on_save_time_tick_updated)
 
 	_load_data()
 
-	save_loop()
-
 func _on_save_time_tick_updated(_current_tick: int) -> void:
-	
+	if save_next:
+		_save_data()
+		save_next = false
 
 func _on_save_game() -> void:
 	print("Save Cycle Manager: Save Game signal received.")
-	save_next = true		
+	save_next = true
 
 func _save_data() -> void:
 	save_manager.save_data(Global.save_data)
