@@ -6,7 +6,7 @@ func test() -> void:
 
 	var time_tick: TimeTick = TimeTick.new()
 
-	time_tick.tick_updated
+	time_tick.initialize()
 
 	# test_task_manager_backend()
 
