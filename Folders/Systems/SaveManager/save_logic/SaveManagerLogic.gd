@@ -1,4 +1,4 @@
-class_name SaveManager
+class_name SaveManagerLogic
 extends Resource
 
 @export var save_path: String = "user://dev/save_data.tres"

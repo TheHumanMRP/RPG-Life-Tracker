@@ -4,7 +4,9 @@ var save_timer: int = 60
 
 var save_next: bool
 
-var save_manager: SaveManager = SaveManager.new()
+var save_manager: SaveManagerLogic = SaveManagerLogic.new()
+
+var time_tick : TimeTick = TimeTick.new()
 
 func _ready() -> void:
 	self.process_mode = Node.PROCESS_MODE_ALWAYS
