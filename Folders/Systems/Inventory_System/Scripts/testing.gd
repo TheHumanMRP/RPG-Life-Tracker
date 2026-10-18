@@ -4,6 +4,8 @@ extends Node
 func test() -> void:
 	pass
 
+	time_tick = TimeTick.new()
+
 	
 
 	# test_task_manager_backend()
