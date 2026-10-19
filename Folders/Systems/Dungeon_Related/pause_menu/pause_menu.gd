@@ -41,7 +41,7 @@ func _respawn_player() -> void:
 
 	set_global_state_dungeon_playing()
 
-	self.hide()
+	_set_visibility(false)
 
 	print("\nDeath Menu: Respawn Button Pressed")
 
