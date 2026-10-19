@@ -20,6 +20,13 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("open_pause_menu") and not opened:
 		self.show()
 
+func _set_visibility(visible: bool) -> void:
+	if visible:
+		self.show()
+		opened = true
+	
+	
+
 func setup_properties() -> void:
 	self.process_mode = Node.PROCESS_MODE_ALWAYS
 	self.hide()
