@@ -17,13 +17,16 @@ func setup_signals() -> void:
 	SignalBus.conformation_menu_option_selected.connect(_on_conformation_menu_option_selected)
 
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("open_pause_menu") and 
+	if Input.is_action_just_pressed("open_pause_menu") and not opened:
+		self.show()
 
 func setup_properties() -> void:
 	self.process_mode = Node.PROCESS_MODE_ALWAYS
 	self.hide()
 
 func _on_respawn_button_pressed() -> void:
+	
+
 	SignalBus.respawn_player.emit()
 
 	set_global_state_dungeon_playing()
