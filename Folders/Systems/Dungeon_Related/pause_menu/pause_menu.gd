@@ -27,6 +27,7 @@ func setup_properties() -> void:
 func _on_respawn_button_pressed() -> void:
 	SignalBus.popup_conformation_menu.emit(self, "Are you sure you want to respawn?", "Yes", "No", "respawn_conformation")
 
+func _respawn_player() -> void:
 	SignalBus.respawn_player.emit()
 
 	set_global_state_dungeon_playing()
@@ -54,3 +55,6 @@ func _on_conformation_menu_option_selected(request_sender: Node, conformed: bool
 	match tag:
 		"quit dungeon":
 			SignalBus.switch_scene.emit(self, Constants.PATH_TO_MAIN_MENU, true)
+
+		"respawn_conformation":
+			_respawn_player()

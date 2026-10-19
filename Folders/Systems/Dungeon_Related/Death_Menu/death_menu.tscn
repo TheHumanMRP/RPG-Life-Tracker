@@ -3,15 +3,13 @@
 [ext_resource type="Script" uid="uid://c85obb5b7y12q" path="res://Folders/Systems/Dungeon_Related/Death_Menu/death_menu.gd" id="1_dd6n6"]
 [ext_resource type="Theme" uid="uid://deuleb40h735d" path="res://Folders/Assets/UI_Theme/rpg-life-tracker-ui-theme.tres" id="2_o0ljh"]
 
-[node name="DeathMenu" type="CanvasLayer" unique_id=1799669249 node_paths=PackedStringArray("respawn_button", "quit_dungeon_button", "you_died_label")]
+[node name="DeathMenu" type="CanvasLayer" unique_id=1799669249 node_paths=PackedStringArray("respawn_button", "quit_dungeon_button")]
 process_mode = 3
 script = ExtResource("1_dd6n6")
 respawn_button = NodePath("Death_Menu_Panel_Container/MarginContainer/VBoxContainer/VBoxContainer/Respawn_Button")
 quit_dungeon_button = NodePath("Death_Menu_Panel_Container/MarginContainer/VBoxContainer/VBoxContainer/Quit_Dungeon_Button")
-you_died_label = NodePath("Death_Menu_Panel_Container/MarginContainer/VBoxContainer/You_Died_Label")
 
 [node name="Death_Menu_Panel_Container" type="PanelContainer" parent="." unique_id=156337057]
-unique_name_in_owner = true
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -38,7 +36,6 @@ layout_mode = 2
 theme_override_constants/separation = 30
 
 [node name="You_Died_Label" type="Label" parent="Death_Menu_Panel_Container/MarginContainer/VBoxContainer" unique_id=1269859127]
-unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("2_o0ljh")
 theme_override_font_sizes/font_size = 50
@@ -50,14 +47,12 @@ layout_mode = 2
 theme_override_constants/separation = 20
 
 [node name="Respawn_Button" type="Button" parent="Death_Menu_Panel_Container/MarginContainer/VBoxContainer/VBoxContainer" unique_id=1389422413]
-unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("2_o0ljh")
 theme_override_font_sizes/font_size = 50
 text = " Respawn "
 
 [node name="Quit_Dungeon_Button" type="Button" parent="Death_Menu_Panel_Container/MarginContainer/VBoxContainer/VBoxContainer" unique_id=1482938906]
-unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("2_o0ljh")
 theme_override_font_sizes/font_size = 50
