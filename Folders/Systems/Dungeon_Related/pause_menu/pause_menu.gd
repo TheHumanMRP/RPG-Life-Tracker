@@ -18,6 +18,7 @@ func setup_signals() -> void:
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("open_pause_menu") and not opened:
+		
 		_set_visibility(true)
 
 func _set_visibility(_visible: bool) -> void:
@@ -39,7 +40,7 @@ func _on_respawn_button_pressed() -> void:
 func _respawn_player() -> void:
 	SignalBus.respawn_player.emit()
 
-	set_global_state_dungeon_playing()
+	_set_global_state_dungeon_playing()
 
 	_set_visibility(false)
 
@@ -48,10 +49,10 @@ func _respawn_player() -> void:
 func _on_quit_dungeon_button_pressed() -> void:
 	SignalBus.popup_conformation_menu.emit(self, "Are you sure you want to quit the dungeon?", "Yes", "No", "quit dungeon")
 
-func set_global_state_pause_menu() -> void:
-	SignalBus.set_game_state.emit(All_Enums.GAME_STATES.DeathMenu)
+func _set_global_state_pause_menu() -> void:
+	SignalBus.set_game_state.emit(All_Enums.GAME_STATES.PauseMenu)
 
-func set_global_state_dungeon_playing() -> void:
+func _set_global_state_dungeon_playing() -> void:
 	SignalBus.set_game_state.emit(All_Enums.GAME_STATES.DungeonPlaying)
 
 func _on_conformation_menu_option_selected(request_sender: Node, conformed: bool, tag: String) -> void:

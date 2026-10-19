@@ -18,6 +18,7 @@ enum GAME_STATES {
 	DungeonPlaying,
 	TaskManager,
 	DeathMenu,
+	PauseMenu,
 
 }
 

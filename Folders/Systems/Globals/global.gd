@@ -39,6 +39,10 @@ func _set_game_state_settings() -> void:
 		All_Enums.GAME_STATES.DeathMenu:
 			get_tree().paused = true
 			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+		
+		All_Enums.GAME_STATES.PauseMenu:
+			get_tree().paused = true
+			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 
 func _handle_loading_and_unloading_of_managers() -> void:
