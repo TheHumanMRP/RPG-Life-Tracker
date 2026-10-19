@@ -18,7 +18,7 @@ func setup_signals() -> void:
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("open_pause_menu") and not opened:
-		
+		_set_global_state_pause_menu()
 		_set_visibility(true)
 
 func _set_visibility(_visible: bool) -> void:
