@@ -12,21 +12,14 @@ func setup_signals() -> void:
 	respawn_button.pressed.connect(_on_respawn_button_pressed)
 	quit_dungeon_button.pressed.connect(_on_quit_dungeon_button_pressed)
 	
-	SignalBus.player_died.connect(_on_player_died)
 	SignalBus.conformation_menu_option_selected.connect(_on_conformation_menu_option_selected)
+
+func _process(delta: float) -> void:
+	if Input.
 
 func setup_properties() -> void:
 	self.process_mode = Node.PROCESS_MODE_ALWAYS
 	self.hide()
-
-func _on_player_died() -> void:
-	print("\nDeath Menu: PLayer Died signal received")
-
-	await get_tree().create_timer(0.5).timeout
-
-	set_global_state_death_menu()
-
-	self.show()
 
 func _on_respawn_button_pressed() -> void:
 	SignalBus.respawn_player.emit()
