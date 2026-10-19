@@ -25,7 +25,7 @@ func setup_properties() -> void:
 	self.hide()
 
 func _on_respawn_button_pressed() -> void:
-	
+	SignalBus.popup_conformation_menu.emit(self, "Are you sure you want to respawn?", "Yes", "No", "respawn_conformation")
 
 	SignalBus.respawn_player.emit()
 
