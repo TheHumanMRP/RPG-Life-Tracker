@@ -3,6 +3,8 @@ extends CanvasLayer
 @export var respawn_button: Button
 @export var quit_dungeon_button: Button
 
+var opened: bool = false
+
 func _ready() -> void:
 	setup_properties()
 
@@ -15,7 +17,7 @@ func setup_signals() -> void:
 	SignalBus.conformation_menu_option_selected.connect(_on_conformation_menu_option_selected)
 
 func _process(delta: float) -> void:
-	if Input.
+	if Input.is_action_just_pressed("open_pause_menu") and 
 
 func setup_properties() -> void:
 	self.process_mode = Node.PROCESS_MODE_ALWAYS
