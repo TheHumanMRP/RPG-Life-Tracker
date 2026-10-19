@@ -2,7 +2,6 @@ extends CanvasLayer
 
 @export var respawn_button: Button
 @export var quit_dungeon_button: Button
-@export var you_died_label: Label
 
 func _ready() -> void:
 	setup_properties()
@@ -20,7 +19,6 @@ func setup_properties() -> void:
 	self.process_mode = Node.PROCESS_MODE_ALWAYS
 	self.hide()
 
-	you_died_label.text = "You Died!"
 
 func _on_player_died() -> void:
 	print("\nDeath Menu: PLayer Died signal received")
