@@ -18,18 +18,20 @@ func setup_signals() -> void:
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("open_pause_menu") and not opened:
-		self.show()
+		_set_visibility(true)
 
-func _set_visibility(visible: bool) -> void:
-	if visible:
+func _set_visibility(_visible: bool) -> void:
+	if _visible:
 		self.show()
 		opened = true
+		return
 	
-	
+	self.hide()
+	opened = false
 
 func setup_properties() -> void:
 	self.process_mode = Node.PROCESS_MODE_ALWAYS
-	self.hide()
+	_set_visibility(false)
 
 func _on_respawn_button_pressed() -> void:
 	SignalBus.popup_conformation_menu.emit(self, "Are you sure you want to respawn?", "Yes", "No", "respawn_conformation")
