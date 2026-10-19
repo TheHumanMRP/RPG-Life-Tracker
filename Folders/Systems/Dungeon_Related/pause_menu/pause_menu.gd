@@ -48,7 +48,7 @@ func _respawn_player() -> void:
 func _on_quit_dungeon_button_pressed() -> void:
 	SignalBus.popup_conformation_menu.emit(self, "Are you sure you want to quit the dungeon?", "Yes", "No", "quit dungeon")
 
-func set_global_state_death_menu() -> void:
+func set_global_state_pause_menu() -> void:
 	SignalBus.set_game_state.emit(All_Enums.GAME_STATES.DeathMenu)
 
 func set_global_state_dungeon_playing() -> void:

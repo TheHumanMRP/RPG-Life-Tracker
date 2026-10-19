@@ -3,9 +3,11 @@
 [ext_resource type="Script" uid="uid://hoawh4anmllh" path="res://Folders/Systems/Dungeon_Related/pause_menu/pause_menu.gd" id="1_os02c"]
 [ext_resource type="Theme" uid="uid://deuleb40h735d" path="res://Folders/Assets/UI_Theme/rpg-life-tracker-ui-theme.tres" id="2_b6yfs"]
 
-[node name="PauseMenu" type="CanvasLayer" unique_id=1799669249]
+[node name="PauseMenu" type="CanvasLayer" unique_id=1799669249 node_paths=PackedStringArray("respawn_button", "quit_dungeon_button")]
 process_mode = 3
 script = ExtResource("1_os02c")
+respawn_button = NodePath("Pause_Menu_Panel_Container/MarginContainer/VBoxContainer/VBoxContainer/Respawn_Button")
+quit_dungeon_button = NodePath("Pause_Menu_Panel_Container/MarginContainer/VBoxContainer/VBoxContainer/Quit_Dungeon_Button")
 
 [node name="Pause_Menu_Panel_Container" type="PanelContainer" parent="." unique_id=156337057]
 anchors_preset = 8
