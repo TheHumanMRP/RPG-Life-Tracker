@@ -3,7 +3,7 @@
 # To-Do
 ---
 
-- [ ] Impliment refresh_ui in task grid
+- [ ] Fix the go back to main menu task manager nill bug
 
 - [ ] Add pixel art for text input cancle button
 
@@ -37,6 +37,7 @@
 
 # Completed Tasks
 ---
+- [X] Impliment refresh_ui in task grid
 
 - [X] Add a cancle option to text input
 
