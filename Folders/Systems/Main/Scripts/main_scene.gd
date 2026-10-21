@@ -31,6 +31,8 @@ func switch_scenes(caller: Node, new_scene_path: String, _clear_children: bool =
 
 	add_child(new_scene)
 
+	SignalBus.refresh_ui.emit()
+
 func _clear_all_children() -> void:
 	for child in self.get_children():
 		if child == important_UI_canvas_layer:

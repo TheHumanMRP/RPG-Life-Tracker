@@ -3,7 +3,7 @@
 # To-Do
 ---
 
-- [ ] Impliment refresh_ui in task manager ui
+- [ ] Impliment refresh_ui in task grid
 
 - [ ] Add pixel art for text input cancle button
 
