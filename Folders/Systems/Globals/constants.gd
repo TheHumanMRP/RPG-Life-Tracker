@@ -24,6 +24,8 @@ const PATH_TO_RIGHT_CLICK_MENU: String = "res://Folders/Systems/Input/Scenes/rig
 const PATH_TO_TEXT_INPUT_BOX: String = "res://Folders/Systems/Input/Scenes/text_input_box.tscn"
 const PATH_TO_CONFORMATION_BOX: String = "res://Folders/Systems/Input/Scenes/conformation_box.tscn"
 
+const PATH_TO_
+
 # PLayer
 const PLAYER_INVENTORY_NAME: String = "player"
 
