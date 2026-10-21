@@ -1,4 +1,4 @@
-wextends PanelContainer
+extends PanelContainer
 
 var task_id: int = Constants.NO_TASK
 
