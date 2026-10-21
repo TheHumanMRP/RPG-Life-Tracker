@@ -15,4 +15,4 @@ func _on_refresh_ui() -> void:
 
 
 func _get_task_scene_preload() -> PackedScene:
-	
+	return load()
