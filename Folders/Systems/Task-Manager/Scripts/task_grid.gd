@@ -11,10 +11,15 @@ func _on_refresh_ui() -> void:
 	for child in task_vbox_container.get_children():
 		child.queue_free()
 
-	var task_scene_preload: PackedScene = _get_task_scene_preload()
+	var packed_task_scene: PackedScene = _get_task_scene_preload()
 
 	for task in all_tasks:
-		var task_scene : Node = task_scene_preload 
+		var task_scene: Node = packed_task_scene.instantiate()
+
+		task_scene.setup(task.task_id)
+
+		task_vbox_container.add_child(task_scene)
+
 
 
 func _get_task_scene_preload() -> PackedScene:
