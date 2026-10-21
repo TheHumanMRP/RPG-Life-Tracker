@@ -20,7 +20,5 @@ func _on_refresh_ui() -> void:
 
 		task_vbox_container.add_child(task_scene)
 
-
-
 func _get_task_scene_preload() -> PackedScene:
 	return load(Constants.PATH_TO_TASK_ITEM_SCENE)
