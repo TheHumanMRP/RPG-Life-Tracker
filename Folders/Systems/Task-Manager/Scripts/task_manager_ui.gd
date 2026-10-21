@@ -53,6 +53,8 @@ func handle_right_click_menu_selection(selected_option: String) -> void:
 		"Go back to main menu":
 			SignalBus.switch_scene.emit(self, Constants.PATH_TO_MAIN_MENU, true)
 
+	SignalBus.refresh_ui.emit()
+
 func _on_text_input_submitted_by_user(text_submitted: String, tag: String, request_sender: Node) -> void:
 	if request_sender != self:
 		return
