@@ -119,7 +119,3 @@ func _ready() -> void:
 func test() -> void:
 	if not OS.is_debug_build():
 		return
-
-	var testing: TestingScript = TestingScript.new()
-
-	testing.test()

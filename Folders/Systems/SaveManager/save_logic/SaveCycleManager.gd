@@ -6,19 +6,15 @@ var save_next: bool
 
 var save_manager: SaveManagerLogic = SaveManagerLogic.new()
 
-var save_time_tick: TimeTick = TimeTick.new()
-
 func _ready() -> void:
 	self.process_mode = Node.PROCESS_MODE_ALWAYS
 
 	SignalBus.save_game.connect(_on_save_game)
 	SignalBus.quit_game.connect(_on_quit_game)
 
-	save_time_tick.initialize(60.0)
-
-	save_time_tick.tick_updated.connect(_on_save_time_tick_updated)
-
 	_load_data()
+
+func _save_cycle()
 
 func _on_save_time_tick_updated(_current_tick: int) -> void:
 	if save_next:
