@@ -16,7 +16,7 @@ func _ready() -> void:
 	SignalBus.popup_conformation_menu.connect(_on_popup_conformation_menu)
 	SignalBus.get_text_input_from_user.connect(_on_get_text_input_from_user)
 
-func switch_scenes(caller: Node, new_scene_path: String, _clear_children: bool = false) -> void:
+func switch_scenes(caller: Node, new_scene_path: String, _clear_children: bool = true) -> void:
 	if _clear_children:
 		_clear_all_children()
 	

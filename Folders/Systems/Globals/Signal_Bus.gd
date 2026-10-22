@@ -44,7 +44,7 @@ signal refresh_ui
 signal save_game
 signal quit_game
 
-signal switch_scene(caller: Node, new_scene_path: String, clear_children: bool)
+signal switch_scene(caller: Node, new_scene_path: String, _clear_children: bool)
 
 # ==============================================
 # Right Click Menu
