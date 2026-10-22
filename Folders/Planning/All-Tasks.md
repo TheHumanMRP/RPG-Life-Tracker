@@ -5,7 +5,8 @@
 
 - [X] Fix the go back to main menu task manager nill bug
 	- Used gemini to fix it
-	- Basically 
+	- Basically it was cause he refresh signal was being emitted in the same frame
+	- And since queue free doesn't immidietly 
 
 - [ ] Add pixel art for text input cancle button
 
