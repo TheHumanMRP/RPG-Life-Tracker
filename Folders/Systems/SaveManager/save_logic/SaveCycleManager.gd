@@ -14,7 +14,8 @@ func _ready() -> void:
 
 	_load_data()
 
-func _save_cycle()
+func _save_cycle() -> void:
+	
 
 func _on_save_time_tick_updated(_current_tick: int) -> void:
 	if save_next:
@@ -22,7 +23,6 @@ func _on_save_time_tick_updated(_current_tick: int) -> void:
 		save_next = false
 
 func _on_save_game() -> void:
-	print("Save Cycle Manager: Save Game signal received.")
 	save_next = true
 
 func _save_data() -> void:
