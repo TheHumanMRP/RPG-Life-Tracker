@@ -3,14 +3,7 @@
 # To-Do
 ---
 
-- [X] Fix the go back to main menu task manager nill bug
-	- Used gemini to fix it
-	- Basically it was cause he refresh signal was being emitted in the same frame
-	- And since queue free doesn't immidietly 
-
 - [ ] Add pixel art for text input cancle button
-
-- [ ] Make esc menu in dungoen
 
 - [ ] Impliment dungoen selection menu
 
@@ -40,6 +33,16 @@
 
 # Completed Tasks
 ---
+
+- [X] Make pause menu in dungoen
+
+- [X] Fix the go back to main menu task manager nill bug
+	- Used gemini to fix it
+	- Basically it was cause he refresh signal was being emitted in the same frame
+	- And since queue free doesn't immidietly free the node, but at the end of the frame
+	- It was causing the bug
+	- Fix is just call the refresh ui deferred
+
 - [X] Impliment refresh_ui in task grid
 
 - [X] Add a cancle option to text input
@@ -177,15 +180,15 @@
 - [X] Add the main menu button functionality
 
 - [X] Refactor the hotbar to handle selection and equipment of item
-    - [X] Make it a new equip item func in it
+	- [X] Make it a new equip item func in it
 	- [X] Make a new equip item input
-    
+	
 	- [X] Make the func emit a new equip item signal when equipped
-	    - [X] Refactor the equipment manager (go to the todo block)
-    
+		- [X] Refactor the equipment manager (go to the todo block)
+	
 	- [X] Remove that item from the hotbar list
 
-    - [X] Make it update the opacity when selected
+	- [X] Make it update the opacity when selected
 
 - [X] Refactor the equipment manager
-    - [X] Make selection and equip management separate
+	- [X] Make selection and equip management separate
