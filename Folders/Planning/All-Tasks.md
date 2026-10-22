@@ -3,9 +3,11 @@
 # To-Do
 ---
 
-- [ ] Add pixel art for text input cancle button
-
 - [ ] Impliment dungoen selection menu
+
+- [ ] Impliment Inventory screen
+
+- [ ] Add pixel art for text input cancle button
 
 - [ ] Impliment the shifting of items from inventory to hotbar when starting a dungeon
 
@@ -26,8 +28,6 @@
 
 - [ ] Make animations for sword attack
 - [ ] Code sword attack animation playing
-
-- [ ] Impliment Inventory screen
 
 - [ ] Add transitions when changing scenes
 
