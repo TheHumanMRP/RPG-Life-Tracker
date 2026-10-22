@@ -33,6 +33,6 @@ func _on_quit_game() -> void:
 	save_manager.save_data(Global.save_data)
 	get_tree().quit()
 
-func _notification(what):
+func _notification(what: int) -> void:
 	if what == NOTIFICATION_WM_CLOSE_REQUEST:
 		_save_data()
