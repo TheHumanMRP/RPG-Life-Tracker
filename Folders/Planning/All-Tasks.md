@@ -3,7 +3,9 @@
 # To-Do
 ---
 
-- [ ] Fix the go back to main menu task manager nill bug
+- [X] Fix the go back to main menu task manager nill bug
+	- Used gemini to fix it
+	- Basically 
 
 - [ ] Add pixel art for text input cancle button
 

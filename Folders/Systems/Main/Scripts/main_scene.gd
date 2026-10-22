@@ -31,7 +31,8 @@ func switch_scenes(caller: Node, new_scene_path: String, _clear_children: bool =
 
 	add_child(new_scene)
 
-	SignalBus.refresh_ui.emit()
+	# See the task `main menu task manager nill bug` for explanation for call_deferred
+	SignalBus.refresh_ui.emit.call_deferred()
 
 func _clear_all_children() -> void:
 	for child in self.get_children():
