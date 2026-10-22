@@ -15,12 +15,10 @@ func _ready() -> void:
 	_load_data()
 
 func _save_cycle() -> void:
-	
+	while true:
+		await get_tree().create_timer(save_timer).timeout
 
-func _on_save_time_tick_updated(_current_tick: int) -> void:
-	if save_next:
 		_save_data()
-		save_next = false
 
 func _on_save_game() -> void:
 	save_next = true
