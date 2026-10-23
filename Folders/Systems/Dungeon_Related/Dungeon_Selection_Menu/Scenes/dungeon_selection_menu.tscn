@@ -2,11 +2,12 @@
 
 [ext_resource type="Script" uid="uid://bbuxxfdoifd8" path="res://Folders/Systems/Dungeon_Related/Dungeon_Selection_Menu/Scripts/dungeon_selection_menu.gd" id="1_wstq6"]
 
-[node name="Dungeon_Selection_Menu" type="Control" unique_id=1602098802]
-layout_mode = 3
+[node name="Dungeon_Selection_Menu" type="CanvasLayer" unique_id=915991939]
+script = ExtResource("1_wstq6")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=277244033]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_wstq6")

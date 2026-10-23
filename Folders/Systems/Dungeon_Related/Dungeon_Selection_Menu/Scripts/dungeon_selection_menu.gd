@@ -1,4 +1,4 @@
-extends Node2D
+extends CanvasLayer
 
 # To-Do: Impliment proper selection ui later
 
