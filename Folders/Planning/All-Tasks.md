@@ -4,7 +4,10 @@
 ---
 
 - [-] Impliment dungoen selection menu
-	- [ ] 
+	- [-] Impliment dungeon_item
+		- 
+	- [ ] Impliment selection of dungeon_item
+	- [ ] Impliment saving of dungeon layouts
 
 - [ ] Impliment Inventory screen
 
