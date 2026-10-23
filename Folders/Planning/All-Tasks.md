@@ -3,7 +3,8 @@
 # To-Do
 ---
 
-- [ ] Impliment dungoen selection menu
+- [-] Impliment dungoen selection menu
+	- [ ] 
 
 - [ ] Impliment Inventory screen
 

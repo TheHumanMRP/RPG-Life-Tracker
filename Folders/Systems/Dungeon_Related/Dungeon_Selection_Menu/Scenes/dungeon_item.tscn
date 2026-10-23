@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://mo3byinu41e0"]
 
+[ext_resource type="Theme" uid="uid://deuleb40h735d" path="res://Folders/Assets/UI_Theme/rpg-life-tracker-ui-theme.tres" id="1_b030d"]
+
 [node name="Dungeon_Item" type="PanelContainer" unique_id=1998990663]
 anchors_preset = 8
 anchor_left = 0.5
@@ -8,6 +10,7 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_b030d")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1113106317]
 layout_mode = 2
