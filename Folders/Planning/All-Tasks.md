@@ -5,7 +5,7 @@
 
 - [-] Impliment dungoen selection menu
 	- [-] Impliment dungeon_item
-		- 
+		- [-] Decide on the stats to show in the dungeon_item
 	- [ ] Impliment selection of dungeon_item
 	- [ ] Impliment saving of dungeon layouts
 
