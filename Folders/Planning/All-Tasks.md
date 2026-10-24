@@ -11,7 +11,11 @@
 
 - [ ] Impliment backing up of save file
         - [ ] Make the google drive script work
-        - [ ] Link godot 
+        - [ ] Link godot to the google drive
+        - [ ] Test the connection
+        - [ ] Impliment a func to change the google drive url
+        
+- [ ] Make a settings menu
 
 - [ ] Impliment Inventory screen
 
