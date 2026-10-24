@@ -10,8 +10,8 @@
 	- [ ] Impliment saving of dungeon layouts
 
 - [-] Impliment backing up of save file
-        - [-] Make the google drive script work
-        - [ ] Link godot to the google drive
+        - [X] Make the google drive script work
+        - [-] Link godot to the google drive
         - [ ] Test the connection
         - [ ] Impliment a func to change the google drive url
         
