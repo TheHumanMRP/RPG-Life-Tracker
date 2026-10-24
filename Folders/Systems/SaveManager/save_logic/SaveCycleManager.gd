@@ -21,6 +21,7 @@ func _save_cycle() -> void:
 
 		if save_next:
 			_save_data()
+			save_next = false
 
 func _on_save_game() -> void:
 	save_next = true
