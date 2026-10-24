@@ -10,7 +10,8 @@
 	- [ ] Impliment saving of dungeon layouts
 
 - [ ] Impliment backing up of save file
-        - [ ] Make the google drive script working
+        - [ ] Make the google drive script work
+        - [ ] Link godot 
 
 - [ ] Impliment Inventory screen
 
