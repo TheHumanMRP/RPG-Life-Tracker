@@ -13,12 +13,14 @@ func _ready() -> void:
 	SignalBus.quit_game.connect(_on_quit_game)
 
 	_load_data()
+	_save_cycle()
 
 func _save_cycle() -> void:
 	while true:
 		await get_tree().create_timer(save_timer).timeout
 
-		_save_data()
+		if save_next:
+			_save_data()
 
 func _on_save_game() -> void:
 	save_next = true
