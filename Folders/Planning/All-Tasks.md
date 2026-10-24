@@ -9,6 +9,8 @@
 	- [ ] Impliment selection of dungeon_item
 	- [ ] Impliment saving of dungeon layouts
 
+- [ ] Impliment backing up of save file
+
 - [ ] Impliment Inventory screen
 
 - [ ] Add pixel art for text input cancle button
