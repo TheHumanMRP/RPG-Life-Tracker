@@ -34,7 +34,7 @@ func upload_save() -> void:
 	var file_bytes := FileAccess.get_file_as_bytes(save_path)
 	var encoded_content := Marshalls.raw_to_base64(file_bytes)
 
-	var save_file :SaveData 
+	var save_file :SaveData = InfoGetter.
 
 	var url := "%s/repos/%s/%s/contents/%s" % [
 		API_URL, OWNER, REPOSITORY, REMOTE_PATH

@@ -14,3 +14,4 @@ func _init() -> void:
 	player_stats = PlayerStats.new()
 	hotbar_save_data = HotbarSaveData.new()
 	tasks_save_data = TasksSaveData.new()
+	online_backup_settings = OnlineBackupSettings.new()
