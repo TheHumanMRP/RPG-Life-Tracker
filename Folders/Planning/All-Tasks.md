@@ -3,18 +3,24 @@
 # To-Do
 ---
 
+- [-] Impliment backing up of save file
+        - [X] Make codeberg linking work
+        - [-] Link godot to codeberg
+        - [ ] Test the connection
+        - [ ] Make a config file with codeberg url and codeberg token
+        - [ ] Impliment a func to change the codeberg url
+        - [ ] Make it backup the .res and the .cfg file
+
 - [-] Impliment dungoen selection menu
 	- [-] Impliment dungeon_item
 		- [-] Decide on the stats to show in the dungeon_item
+                - [ ] Make the dungeon_item scene
 	- [ ] Impliment selection of dungeon_item
-	- [ ] Impliment saving of dungeon layouts
 
-- [-] Impliment backing up of save file
-        - [X] Make the google drive script work
-        - [-] Link godot to the google drive
-        - [ ] Test the connection
-        - [ ] Impliment a func to change the google drive url
-        
+- [ ] Impliment saving of dungeon layouts
+
+- [ ] Impliment loading of dungeon layouts
+
 - [ ] Make a settings menu
         - [ ] Make the google drive url setting
 
