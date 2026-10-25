@@ -6,6 +6,7 @@ extends Resource
 @export var player_stats: PlayerStats
 @export var hotbar_save_data: HotbarSaveData
 @export var tasks_save_data: TasksSaveData
+@export var online_backup_settings: OnlineBackupSettings
 
 func _init() -> void:
 	all_global_items_data = AllGlobalItemsData.new()
