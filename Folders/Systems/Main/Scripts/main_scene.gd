@@ -19,8 +19,6 @@ func _ready() -> void:
 func switch_scenes(caller: Node, new_scene_path: String, _clear_children: bool = true) -> void:
 	if _clear_children:
 		_clear_all_children()
-	
-	_add_right_click_menu()
 
 	# Remove the caller of the scene change caller regardless
 	# of wether clear_children is true or false
