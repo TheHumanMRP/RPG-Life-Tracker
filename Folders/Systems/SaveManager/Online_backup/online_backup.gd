@@ -2,11 +2,6 @@ extends HTTPRequest
 
 signal backup_completed(success: bool, message: String)
 
-const API_URL := "https://codeberg.org/api/v1"
-const OWNER := "ThedevTheGoatFR"
-const REPOSITORY := "godot-save-backup"
-const REMOTE_PATH := "save.res"
-
 var save_path: String
 var api_token := ""
 
