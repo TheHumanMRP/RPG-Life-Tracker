@@ -34,10 +34,10 @@ func upload_save() -> void:
 	var file_bytes := FileAccess.get_file_as_bytes(save_path)
 	var encoded_content := Marshalls.raw_to_base64(file_bytes)
 
-	var save_file: SaveData = InfoGetter.get_save_data()
+	var online_backup_settings: OnlineBackupSettings = InfoGetter.get_save_data().online_backup_settings
 
 	var url := "%s/repos/%s/%s/contents/%s" % [
-		API_URL, OWNER, REPOSITORY, REMOTE_PATH
+		online_backup_settings.API_URL, online_backup_settings.OWNER, online_backup_settings.REPOSITORY, online_backup_settings.REMOTE_PATH
 	]
 
 	var headers := PackedStringArray([
