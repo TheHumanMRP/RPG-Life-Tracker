@@ -1,4 +1,3 @@
-```gdscript
 extends HTTPRequest
 
 signal backup_completed(success: bool, message: String)
@@ -26,7 +25,7 @@ func upload_save() -> void:
 
 	backup_in_progress = true
 
-	var encoded_content := _get_encoded_save()
+	var encoded_content: String = _get_encoded_save()
 
 	if encoded_content.is_empty():
 		_finish(false, "Failed to read local save file.")
@@ -202,4 +201,3 @@ func _send_request(
 func _finish(success: bool, message: String) -> void:
 	backup_in_progress = false
 	backup_completed.emit(success, message)
-```
