@@ -10,8 +10,10 @@ const REMOTE_PATH := "save.res"
 var save_path: String
 var api_token := ""
 
-var backup_in_progress := false
+var backup_in_progress: bool = false
 
+func _ready() -> void:
+	save_path = get_save_file_path()
 
 func get_save_file_path() -> String:
 	if OS.is_debug_build():
