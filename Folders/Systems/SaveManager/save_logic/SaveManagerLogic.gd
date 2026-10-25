@@ -1,8 +1,7 @@
 class_name SaveManagerLogic
 extends Resource
 
-@export var save_path: String = "user://dev/save_data.tres"
-@export var create_file: bool = true
+@export var save_path: String
 
 func _init() -> void:
 	print("Save Manager: Init Called")
@@ -36,12 +35,9 @@ func load_data() -> SaveData:
 
 	return ResourceLoader.load(save_path)
 
-func save_data(save_info: SaveData) -> void:
-	if not create_file and not FileAccess.file_exists(save_path):
-		push_error("File Dosen't Exist: ", save_path)
-		return
-	
+func save_data(save_info: SaveData) -> void:	
 	_ensure_file_exists()
+	
 	var err = ResourceSaver.save(save_info, save_path)
 
 	if err != OK:

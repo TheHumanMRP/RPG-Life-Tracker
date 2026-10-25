@@ -8,7 +8,7 @@ const REPOSITORY := "godot-save-backup"
 const REMOTE_PATH := "save.res"
 
 @export_file var save_path := "user://save.res"
-@export var api_token := ""
+@export var api_token := 
 
 var backup_in_progress := false
 
