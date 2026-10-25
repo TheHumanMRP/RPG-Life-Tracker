@@ -7,23 +7,27 @@ const OWNER := "ThedevTheGoatFR"
 const REPOSITORY := "godot-save-backup"
 const REMOTE_PATH := "save.res"
 
-@export_file var save_path := "user://save.res"
-@export var api_token := 
+@export_file var save_path := Constants.
+@export var api_token := ""
 
 var backup_in_progress := false
 
+func get_save_file_path() -> String:
+	if OS.is_debug_build():
+		return Constants.DEV_SAVE_PATH
+	return Constants.LIVE_SAVE_PATH
 
 func upload_save() -> void:
-    if backup_in_progress:
-        return
+	if backup_in_progress:
+		return
 
-    if api_token.is_empty():
-        backup_completed.emit(false, "API token is missing.")
-        return
+	if api_token.is_empty():
+		backup_completed.emit(false, "API token is missing.")
+		return
 
-    if not FileAccess.file_exists(save_path):
-        backup_completed.emit(false, "Local save file not found.")
-        return
+	if not FileAccess.file_exists(save_path):
+		backup_completed.emit(false, "Local save file not found.")
+		return
 
     backup_in_progress = true
 
@@ -32,74 +36,74 @@ func upload_save() -> void:
     var encoded_content := Marshalls.raw_to_base64(file_bytes)
 
     var url := "%s/repos/%s/%s/contents/%s" % [
-        API_URL, OWNER, REPOSITORY, REMOTE_PATH
+	API_URL, OWNER, REPOSITORY, REMOTE_PATH
     ]
 
     var headers := PackedStringArray([
-        "Authorization: token " + api_token,
-        "Content-Type: application/json",
-        "Accept: application/json"
+	"Authorization: token " + api_token,
+	"Content-Type: application/json",
+	"Accept: application/json"
     ])
 
     # Find out whether the remote file already exists.
     var response := await _send_request(
-        HTTPClient.METHOD_GET, url, headers
+	HTTPClient.METHOD_GET, url, headers
     )
 
     if not response.get("transport_ok", false):
-        _finish(false, "Failed to contact Codeberg.")
-        return
+	_finish(false, "Failed to contact Codeberg.")
+	return
 
     var status: int = response["status"]
     var sha := ""
 
     if status == 200:
-        var metadata = JSON.parse_string(response["body"])
+	var metadata = JSON.parse_string(response["body"])
 
-        if not metadata is Dictionary or not metadata.has("sha"):
-            _finish(false, "Invalid remote file metadata.")
-            return
+	if not metadata is Dictionary or not metadata.has("sha"):
+	    _finish(false, "Invalid remote file metadata.")
+	    return
 
-        sha = metadata["sha"]
+	sha = metadata["sha"]
 
     elif status != 404:
-        _finish(false, "Metadata request failed: HTTP %d" % status)
-        return
+	_finish(false, "Metadata request failed: HTTP %d" % status)
+	return
 
     # Prepare the create/update payload.
     var payload := {
-        "message": "Automatic save backup",
-        "content": encoded_content
+	"message": "Automatic save backup",
+	"content": encoded_content
     }
 
     var method: int
 
     if status == 200:
-        method = HTTPClient.METHOD_PUT
-        payload["sha"] = sha
+	method = HTTPClient.METHOD_PUT
+	payload["sha"] = sha
     else:
-        method = HTTPClient.METHOD_POST
+	method = HTTPClient.METHOD_POST
 
     # Upload the file.
     var upload_response := await _send_request(
-        method, url, headers, JSON.stringify(payload)
+	method, url, headers, JSON.stringify(payload)
     )
 
     if not upload_response.get("transport_ok", false):
-        _finish(false, "Upload request failed.")
-        return
+	_finish(false, "Upload request failed.")
+	return
 
     var upload_status: int = upload_response["status"]
 
     if upload_status == 200 or upload_status == 201:
-        _finish(true, "Save backed up to Codeberg.")
+	_finish(true, "Save backed up to Codeberg.")
     else:
-        _finish(
-            false,
-            "Upload failed: HTTP %d — %s" % [
-                upload_status, upload_response["body"]
-            ]
-        )
+	_finish(
+	    false,
+	    "Upload failed: HTTP %d — %s" % [
+		upload_status, upload_response["body"]
+	    ]
+	)
 
 
 func _send_request(
@@ -111,14 +115,14 @@ func _send_request(
     var error := request(url, headers, method, body)
 
     if error != OK:
-        return {"transport_ok": false}
+	return {"transport_ok": false}
 
     var result: Array = await request_completed
 
     return {
-        "transport_ok": result[0] == HTTPRequest.RESULT_SUCCESS,
-        "status": result[1],
-        "body": (result[3] as PackedByteArray).get_string_from_utf8()
+	"transport_ok": result[0] == HTTPRequest.RESULT_SUCCESS,
+	"status": result[1],
+	"body": (result[3] as PackedByteArray).get_string_from_utf8()
     }
 
 
