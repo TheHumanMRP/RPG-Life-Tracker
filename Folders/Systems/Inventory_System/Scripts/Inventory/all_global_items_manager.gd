@@ -23,7 +23,7 @@ func _setup() -> void:
 # ===================================================================
 
 func sync_item_by_id_dict() -> void:
-	var data := InfoGetter.get_all_global_items_data()
+	var data: AllGlobalItemsData = InfoGetter.get_save_data().all_global_items_data
 
 	data.items_by_id_dict.clear()
 
@@ -34,7 +34,7 @@ func sync_item_by_id_dict() -> void:
 
 ## Calculates the next available item ID.
 func _calculate_max_id() -> void:
-	var data := InfoGetter.get_all_global_items_data()
+	var data: AllGlobalItemsData = InfoGetter.get_save_data().all_global_items_data
 
 	data.global_max_id = 0
 
@@ -72,7 +72,7 @@ func add_item(new_item: BaseItem, new_name: String, new_logo: Texture2D, new_dur
 func remove_item(item_id: int) -> void:
 	print("\nAll Global Items Manager: Removing item with item_id: ", item_id)
 
-	var data := InfoGetter.get_all_global_items_data()
+	var data: AllGlobalItemsData = InfoGetter.get_save_data().all_global_items_data
 
 	if not data.items_by_id_dict.has(item_id):
 		push_error("All Global Items Manager: Item not found: ", item_id)
@@ -99,7 +99,7 @@ func rename_item_in_inventory(item_id: int, new_name: String) -> void:
 func clear_inventory() -> void:
 	print("\nAll Global Items Manager: Clearing Inventory")
 	
-	var data := InfoGetter.get_all_global_items_data()
+	var data: AllGlobalItemsData = InfoGetter.get_save_data().all_global_items_data
 
 	data.all_global_items.clear()
 	data.items_by_id_dict.clear()
