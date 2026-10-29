@@ -8,7 +8,7 @@
 	- [X] Make the https scene
 	- [X] Script the scene
 	- [X] Make it add in main menu _add_https_node func
-	- [ ] Make the save manager emit the upload_save signal
+	- [-] Make the save manager emit the upload_save signal
 	- [ ] Link godot to codeberg
         - [ ] Test the connection
         - [ ] Make a resource file with codeberg url and codeberg token
