@@ -9,9 +9,9 @@
 	- [ ] Make it add in main menu _add_https_node func
         - [ ] Link godot to codeberg
         - [ ] Test the connection
-        - [ ] Make a config file with codeberg url and codeberg token
+        - [ ] Make a resource file with codeberg url and codeberg token
         - [ ] Impliment a func to change the codeberg url
-        - [ ] Make it backup the .res and the .cfg file
+        - [ ] Make it backup the .res
 
 - [-] Impliment dungoen selection menu
 	- [-] Impliment dungeon_item
