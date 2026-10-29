@@ -65,7 +65,7 @@ func _on_popup_conformation_menu(request_sender: Node, conformation_textbox_text
 
 	conformation_input_box.popup_conformation_menu(request_sender, conformation_textbox_text, conform_button_text, deny_button_text, tag)
 
-func _add_https_node() -> void:
+func _add_online_backup_node() -> void:
 	var online_backup_scene: Node = _get_new_scene(Constants.PATH_TO_ONLINE_BACKUP_SCENE)
 
 	important_Stuff_canvas_layer.add_child(online_backup_scene)
