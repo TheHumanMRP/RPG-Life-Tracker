@@ -5,8 +5,9 @@
 
 - [-] Impliment backing up of save file
         - [X] Make codeberg linking work
-	- [-] Make the https scene
-	- [ ] Make it add in main menu _add_https_node func
+	- [X] Make the https scene
+	- [X] Script the scene
+	- [-] Make it add in main menu _add_https_node func
         - [ ] Link godot to codeberg
         - [ ] Test the connection
         - [ ] Make a resource file with codeberg url and codeberg token
