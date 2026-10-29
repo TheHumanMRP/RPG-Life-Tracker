@@ -3,6 +3,8 @@
 # To-Do
 ---
 
+- [ ] Add documentation for main scene
+
 - [-] Impliment backing up of save file
         - [X] Make codeberg linking work
 	- [X] Make the https scene
