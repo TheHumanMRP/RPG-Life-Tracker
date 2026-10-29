@@ -6,23 +6,7 @@
 
 - [ ] Add a `Saving Data` scene
 
-- [-] Impliment backing up of save file
-        - [X] Make codeberg linking work
-	- [X] Make the https scene
-	- [X] Script the scene
-	- [X] Make it add in main menu _add_https_node func
-	- [X] Make the save manager emit the upload_save signal
-	- [X] Link godot to codeberg
-        - [ ] Test the connection
-        - [ ] Make a resource file with codeberg url and codeberg token
-        - [ ] Impliment a func to change the codeberg url
-        - [ ] Make it backup the .res
 
-- [-] Impliment dungoen selection menu
-	- [-] Impliment dungeon_item
-		- [-] Decide on the stats to show in the dungeon_item
-                - [ ] Make the dungeon_item scene
-	- [ ] Impliment selection of dungeon_item
 
 - [ ] Impliment saving of dungeon layouts
 
