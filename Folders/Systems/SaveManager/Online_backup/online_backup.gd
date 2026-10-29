@@ -18,8 +18,7 @@ func get_save_file_path() -> String:
 
 	return Constants.LIVE_SAVE_PATH
 
-# 
-# Handled here cause of backup_in_progress check
+# Qutting Handled here cause of backup_in_progress check
 func _notification(what: int) -> void:
 	if what == NOTIFICATION_WM_CLOSE_REQUEST:
 		handle_closing()

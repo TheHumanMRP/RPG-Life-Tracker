@@ -3,7 +3,6 @@
 # To-Do
 ---
 
-- [ ] Add documentation for main scene
 
 - [-] Impliment backing up of save file
         - [X] Make codeberg linking work
@@ -55,6 +54,8 @@
 - [ ] Code sword attack animation playing
 
 - [ ] Add transitions when changing scenes
+
+- [ ] Add documentation for main scene
 
 # Completed Tasks
 ---
