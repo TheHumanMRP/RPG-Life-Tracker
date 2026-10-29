@@ -15,7 +15,12 @@ func _ready() -> void:
 	SignalBus.get_text_input_from_user.connect(_on_get_text_input_from_user)
 
 func _add_one_time_scenes() -> void:
-	pass
+	# Search the completed task for explanation why the right click menu works separately than text and conformation input box
+	# `Fix the conformation box bug in quit dungeon in death menu` is the name of the task
+	_add_right_click_menu()
+
+
+	_add_online_backup_node()
 
 func switch_scenes(caller: Node, new_scene_path: String, _clear_children: bool = true) -> void:
 	if _clear_children:
