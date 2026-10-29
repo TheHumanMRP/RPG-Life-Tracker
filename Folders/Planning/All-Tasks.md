@@ -1,6 +1,7 @@
 # All-Tasks
+---
 
-# To-Do
+## To-Do
 ---
 
 - [ ] Add a `Saving Data` scene
@@ -58,7 +59,7 @@
 
 - [ ] Add documentation for main scene
 
-# Completed Tasks
+## Completed Tasks
 ---
 
 - [X] Make pause menu in dungoen
