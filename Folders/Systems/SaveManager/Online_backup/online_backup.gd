@@ -11,7 +11,6 @@ func _ready() -> void:
 	save_path = get_save_file_path()
 	SignalBus.upload_save.connect(_on_upload_save)
 
-	get_tree().set_auto_accept_quit(false)
 
 
 func get_save_file_path() -> String:
@@ -22,6 +21,9 @@ func get_save_file_path() -> String:
 
 
 func _on_upload_save() -> void:
+	#
+	get_tree().set_auto_accept_quit(false)
+
 	var settings: OnlineBackupSettings = InfoGetter.get_save_data().online_backup_settings
 	var api_token: String = settings.API_URL
 	var url := _get_remote_url(settings)
