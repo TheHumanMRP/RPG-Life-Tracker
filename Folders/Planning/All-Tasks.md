@@ -8,7 +8,7 @@
 	- [X] Make the https scene
 	- [X] Script the scene
 	- [X] Make it add in main menu _add_https_node func
-        - [ ] Link godot to codeberg
+	- [ ] Link godot to codeberg
         - [ ] Test the connection
         - [ ] Make a resource file with codeberg url and codeberg token
         - [ ] Impliment a func to change the codeberg url
