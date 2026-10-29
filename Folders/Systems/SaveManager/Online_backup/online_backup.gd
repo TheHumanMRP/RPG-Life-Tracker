@@ -12,16 +12,18 @@ func _ready() -> void:
 	SignalBus.upload_save.connect(_on_upload_save)
 
 
-
 func get_save_file_path() -> String:
 	if OS.is_debug_build():
 		return Constants.DEV_SAVE_PATH
 
 	return Constants.LIVE_SAVE_PATH
 
+func _notification(what: int) -> void:
+	if what == NOTIFICATION_WM_CLOSE_REQUEST:
+		
 
 func _on_upload_save() -> void:
-	#
+	# It's here so that the upload doesn't get interrupted
 	get_tree().set_auto_accept_quit(false)
 
 	var settings: OnlineBackupSettings = InfoGetter.get_save_data().online_backup_settings
@@ -50,6 +52,8 @@ func _on_upload_save() -> void:
 	var method: HTTPClient.Method = metadata_response["method"]
 
 	await _upload_payload(url, headers, method, payload)
+
+	get_tree().set_auto_accept_quit(true)
 
 
 func _validate_backup(api_token: String) -> bool:
