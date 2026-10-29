@@ -28,7 +28,6 @@ func _on_save_game() -> void:
 
 func _save_data() -> void:
 	save_manager.save_data(Global.save_data)
-	SignalBus.upload_save.emit()
 
 func _load_data():
 	Global.save_data = save_manager.load_data()

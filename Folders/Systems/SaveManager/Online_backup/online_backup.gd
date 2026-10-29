@@ -9,7 +9,6 @@ var backup_in_progress: bool = false
 
 func _ready() -> void:
 	save_path = get_save_file_path()
-	SignalBus.upload_save.connect(_on_upload_save)
 
 
 func get_save_file_path() -> String:
@@ -24,8 +23,7 @@ func _notification(what: int) -> void:
 		handle_closing()
 	
 func handle_closing() -> void:
-	while backup_in_progress:
-		await get_tree().create_timer(1.0).timeout
+	await _on_upload_save()
 	
 	SignalBus.quit_game.emit()
 
