@@ -26,6 +26,8 @@ const PATH_TO_CONFORMATION_BOX: String = "res://Folders/Systems/Input/Scenes/con
 
 const PATH_TO_TASK_ITEM_SCENE: String = "res://Folders/Systems/Task-Manager/Scenes/task_item_scene.tscn"
 
+const PATH_TO_HTTP_SCENE: String = 
+
 # PLayer
 const PLAYER_INVENTORY_NAME: String = "player"
 
