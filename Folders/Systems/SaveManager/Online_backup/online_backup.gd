@@ -9,6 +9,7 @@ var backup_in_progress: bool = false
 
 func _ready() -> void:
 	save_path = get_save_file_path()
+	SignalBus.upload_save.connect(_on_upload_save)
 
 
 func get_save_file_path() -> String:
@@ -18,7 +19,7 @@ func get_save_file_path() -> String:
 	return Constants.LIVE_SAVE_PATH
 
 
-func upload_save() -> void:
+func _on_upload_save() -> void:
 	var settings: OnlineBackupSettings = InfoGetter.get_save_data().online_backup_settings
 	var api_token: String = settings.API_URL
 	var url := _get_remote_url(settings)
