@@ -39,4 +39,5 @@ func _on_quit_game() -> void:
 
 func _notification(what: int) -> void:
 	if what == NOTIFICATION_WM_CLOSE_REQUEST:
+		get_tree().set_auto_accept_quit(false)
 		_save_data()
