@@ -18,7 +18,7 @@ func get_save_file_path() -> String:
 	return Constants.LIVE_SAVE_PATH
 
 
-func upload_save(api_token: String) -> void:
+func upload_save() -> void:
 	if not _validate_backup(api_token):
 		return
 
