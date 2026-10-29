@@ -20,7 +20,13 @@ func get_save_file_path() -> String:
 
 func _notification(what: int) -> void:
 	if what == NOTIFICATION_WM_CLOSE_REQUEST:
-		
+		handle_closing()
+	
+func handle_closing() -> void:
+	while backup_in_progress:
+		await get_tree().create_timer(1.0).timeout
+
+	
 
 func _on_upload_save() -> void:
 	# It's here so that the upload doesn't get interrupted
