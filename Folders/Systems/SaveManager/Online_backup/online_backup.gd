@@ -2,6 +2,8 @@ extends HTTPRequest
 
 signal backup_completed(success: bool, message: String)
 
+var save_path: String
+
 var backup_in_progress: bool = false
 
 
@@ -16,8 +18,8 @@ func get_save_file_path() -> String:
 	return Constants.LIVE_SAVE_PATH
 
 
-func upload_save() -> void:
-	if not _validate_backup():
+func upload_save(api_token: String) -> void:
+	if not _validate_backup(api_token):
 		return
 
 	backup_in_progress = true
@@ -30,7 +32,7 @@ func upload_save() -> void:
 
 	var settings: OnlineBackupSettings = InfoGetter.get_save_data().online_backup_settings
 	var url := _get_remote_url(settings)
-	var headers := _get_request_headers()
+	var headers := _get_request_headers(api_token)
 
 	var metadata_response: Dictionary = await _get_remote_metadata(url, headers)
 
@@ -44,7 +46,7 @@ func upload_save() -> void:
 	await _upload_payload(url, headers, method, payload)
 
 
-func _validate_backup() -> bool:
+func _validate_backup(api_token: String) -> bool:
 	if backup_in_progress:
 		return false
 
@@ -77,7 +79,7 @@ func _get_remote_url(settings: OnlineBackupSettings) -> String:
 	]
 
 
-func _get_request_headers() -> PackedStringArray:
+func _get_request_headers(api_token: String) -> PackedStringArray:
 	return PackedStringArray([
 		"Authorization: token " + api_token,
 		"Content-Type: application/json",
