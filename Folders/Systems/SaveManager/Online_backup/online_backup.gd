@@ -2,9 +2,6 @@ extends HTTPRequest
 
 signal backup_completed(success: bool, message: String)
 
-var save_path: String
-var api_token := ""
-
 var backup_in_progress: bool = false
 
 
