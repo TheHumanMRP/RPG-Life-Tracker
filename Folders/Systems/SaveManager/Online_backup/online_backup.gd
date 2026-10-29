@@ -18,14 +18,13 @@ func get_save_file_path() -> String:
 
 	return Constants.LIVE_SAVE_PATH
 
+# 
+# Handled here cause of backup_in_progress check
 func _notification(what: int) -> void:
 	if what == NOTIFICATION_WM_CLOSE_REQUEST:
 		handle_closing()
 	
 func handle_closing() -> void:
-	if get_tree().auto_accept_quit:
-		return
-
 	while backup_in_progress:
 		await get_tree().create_timer(1.0).timeout
 	
@@ -59,8 +58,6 @@ func _on_upload_save() -> void:
 	var method: HTTPClient.Method = metadata_response["method"]
 
 	await _upload_payload(url, headers, method, payload)
-
-	get_tree().set_auto_accept_quit(true)
 
 
 func _validate_backup(api_token: String) -> bool:
