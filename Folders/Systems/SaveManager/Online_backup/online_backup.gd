@@ -19,6 +19,11 @@ func get_save_file_path() -> String:
 
 
 func upload_save() -> void:
+	var settings: OnlineBackupSettings = InfoGetter.get_save_data().online_backup_settings
+	var api_token: String = settings.API_URL
+	var url := _get_remote_url(settings)
+	var headers := _get_request_headers(api_token)
+
 	if not _validate_backup(api_token):
 		return
 
@@ -29,10 +34,6 @@ func upload_save() -> void:
 	if encoded_content.is_empty():
 		_finish(false, "Failed to read local save file.")
 		return
-
-	var settings: OnlineBackupSettings = InfoGetter.get_save_data().online_backup_settings
-	var url := _get_remote_url(settings)
-	var headers := _get_request_headers(api_token)
 
 	var metadata_response: Dictionary = await _get_remote_metadata(url, headers)
 
