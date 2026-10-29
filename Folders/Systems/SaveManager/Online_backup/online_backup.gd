@@ -23,10 +23,14 @@ func _notification(what: int) -> void:
 		handle_closing()
 	
 func handle_closing() -> void:
+	if get_tree().auto_accept_quit:
+		return
+
 	while backup_in_progress:
 		await get_tree().create_timer(1.0).timeout
-
 	
+	SignalBus.quit_game.emit()
+
 
 func _on_upload_save() -> void:
 	# It's here so that the upload doesn't get interrupted
