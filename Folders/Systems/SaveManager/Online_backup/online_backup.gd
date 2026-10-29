@@ -33,9 +33,6 @@ func handle_closing() -> void:
 
 
 func _on_upload_save() -> void:
-	# It's here so that the upload doesn't get interrupted
-	get_tree().set_auto_accept_quit(false)
-
 	var settings: OnlineBackupSettings = InfoGetter.get_save_data().online_backup_settings
 	var api_token: String = settings.API_URL
 	var url := _get_remote_url(settings)

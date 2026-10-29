@@ -103,6 +103,8 @@ func set_main_scene_var() -> void:
 # ============================================================================
 
 func _ready() -> void:
+	get_tree().set_auto_accept_quit(false)
+	
 	self.process_mode = Node.PROCESS_MODE_ALWAYS
 
 	SignalBus.set_game_state.connect(_on_set_game_state)
