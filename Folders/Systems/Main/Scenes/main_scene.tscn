@@ -3,9 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://cw07ljkm68ifd" path="res://Folders/Systems/Main/Scenes/main_menu.tscn" id="1_43mws"]
 [ext_resource type="Script" uid="uid://cr0wj1xefy3g7" path="res://Folders/Systems/Main/Scripts/main_scene.gd" id="1_t2aa3"]
 
-[node name="MainScene" type="Node2D" unique_id=677144385 node_paths=PackedStringArray("important_Stuff_canvas_layer")]
+[node name="MainScene" type="Node2D" unique_id=677144385 node_paths=PackedStringArray("important_stuff_canvas_layer")]
 script = ExtResource("1_t2aa3")
-important_Stuff_canvas_layer = NodePath("Important_Stuff_Canvas_Layer")
+important_stuff_canvas_layer = NodePath("Important_Stuff_Canvas_Layer")
 
 [node name="Main_Menu" parent="." unique_id=1303169397 instance=ExtResource("1_43mws")]
 
