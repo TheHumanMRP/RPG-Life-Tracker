@@ -11,6 +11,8 @@ func _ready() -> void:
 	save_path = get_save_file_path()
 	SignalBus.upload_save.connect(_on_upload_save)
 
+	get_tree().set_auto_accept_quit(false)
+
 
 func get_save_file_path() -> String:
 	if OS.is_debug_build():
