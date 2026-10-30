@@ -36,7 +36,7 @@ const NO_ITEM: int = -1
 
 # Saving and loading
 const DEV_SAVE_PATH: String = "user://dev/save_data.tres"
-const LIVE_SAVE_PATH: String = "user://live/save_data.tres"
+const LIVE_SAVE_PATH: String = "user://live/save_data.res"
 
 # Right Click Menu Options
 const MAIN_MENU_RIGHT_CLICK_MENU_OPTIONS: Array[String] = ["Quit Game"]
