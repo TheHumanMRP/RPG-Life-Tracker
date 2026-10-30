@@ -9,7 +9,7 @@ var backup_in_progress: bool = false
 
 func _ready() -> void:
 	save_path = get_save_file_path()
-	SignalBus.upload_save.connect(handle_closing)
+	SignalBus.upload_save_game.connect(handle_closing_game)
 
 
 func get_save_file_path() -> String:
@@ -21,9 +21,9 @@ func get_save_file_path() -> String:
 # Qutting Handled here cause of uploading before save
 func _notification(what: int) -> void:
 	if what == NOTIFICATION_WM_CLOSE_REQUEST:
-		handle_closing()
+		handle_closing_game()
 	
-func handle_closing() -> void:
+func handle_closing_game() -> void:
 	if not backup_in_progress:
 		await _on_upload_save()
 		SignalBus.quit_game.emit()
