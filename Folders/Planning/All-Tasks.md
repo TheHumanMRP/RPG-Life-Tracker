@@ -16,7 +16,8 @@
         - [X] Make a resource file with codeberg url and codeberg token
         - [ ] Test the connection
         - [ ] Impliment a func to change the codeberg url
-        - [ ] Make it backup the .res
+	- [ ] Make it backup only on every 10 offline saves
+	- [ ] Make it backup the .res
 
 - [-] Impliment dungoen selection menu
 	- [-] Impliment dungeon_item
