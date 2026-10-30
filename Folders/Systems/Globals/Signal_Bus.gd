@@ -77,6 +77,7 @@ signal text_input_submitted_by_user(text_sumitted: String, tag: String, request_
 # ==============================================
 
 signal upload_save
+signal offline_save_completed
 
 @warning_ignore_restore("unused_signal")
 
