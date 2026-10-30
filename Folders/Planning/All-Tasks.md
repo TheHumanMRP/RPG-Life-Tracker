@@ -13,8 +13,8 @@
 	- [X] Make it add in main menu _add_https_node func
 	- [X] Make the save manager emit the upload_save signal
 	- [X] Link godot to codeberg
-        - [ ] Test the connection
         - [X] Make a resource file with codeberg url and codeberg token
+        - [ ] Test the connection
         - [ ] Impliment a func to change the codeberg url
         - [ ] Make it backup the .res
 
