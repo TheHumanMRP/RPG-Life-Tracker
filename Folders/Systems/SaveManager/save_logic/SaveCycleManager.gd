@@ -34,7 +34,7 @@ func _load_data():
 
 func _on_quit_game() -> void:
 	save_manager.save_data(Global.save_data)
-	SignalBus.handling_closing_game.emit()
+	SignalBus.handle_closing_game.emit()
 
 func _notification(what: int) -> void:
 	if what == NOTIFICATION_WM_CLOSE_REQUEST:
