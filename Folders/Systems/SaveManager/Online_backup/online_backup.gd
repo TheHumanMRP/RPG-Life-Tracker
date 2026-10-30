@@ -9,6 +9,7 @@ var backup_in_progress: bool = false
 
 func _ready() -> void:
 	save_path = get_save_file_path()
+	SignalBus.upload_save.connect(handle_closing)
 
 
 func get_save_file_path() -> String:
