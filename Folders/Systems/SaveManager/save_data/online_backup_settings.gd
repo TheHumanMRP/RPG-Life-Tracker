@@ -6,5 +6,3 @@ extends Resource
 @export var OWNER: String = "ThedevTheGoatFR"
 @export var REPOSITORY: String = "godot-save-backup"
 @export var REMOTE_PATH: String = "save.res"
-@export var number_of_offline_saves_done: int
-const number_of_saves_before_upload: int = 10

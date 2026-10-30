@@ -72,13 +72,6 @@ signal conformation_menu_option_selected(request_sender: Node, conformed: bool, 
 signal get_text_input_from_user(question: String, tag: String, request_sender: Node, user_input_line_edit_placeholder_text: String)
 signal text_input_submitted_by_user(text_sumitted: String, tag: String, request_sender: Node)
 
-# ==============================================
-# Online Backup
-# ==============================================
-
-signal upload_save
-signal offline_save_completed
-
 @warning_ignore_restore("unused_signal")
 
 # ==============================================

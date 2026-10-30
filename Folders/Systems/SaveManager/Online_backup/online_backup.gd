@@ -9,7 +9,6 @@ var backup_in_progress: bool = false
 
 func _ready() -> void:
 	save_path = get_save_file_path()
-	SignalBus.upload_save.connect(_on_upload_save)
 
 
 func get_save_file_path() -> String:
@@ -18,7 +17,7 @@ func get_save_file_path() -> String:
 
 	return Constants.LIVE_SAVE_PATH
 
-# Qutting Handled here cause of backup_in_progress check
+# Qutting Handled here cause of uploading before save
 func _notification(what: int) -> void:
 	if what == NOTIFICATION_WM_CLOSE_REQUEST:
 		handle_closing()
