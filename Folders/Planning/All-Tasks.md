@@ -4,8 +4,6 @@
 ## To-Do
 ---
 
-- [ ] Add a `Saving Data` scene
-
 - [-] Impliment backing up of save file
         - [X] Make codeberg linking work
 	- [X] Make the https scene
@@ -24,6 +22,8 @@
 		- [-] Decide on the stats to show in the dungeon_item
                 - [ ] Make the dungeon_item scene
 	- [ ] Impliment selection of dungeon_item
+
+- [ ] Add a `Saving Data` loading screen scene
 
 - [ ] Impliment saving of dungeon layouts
 
