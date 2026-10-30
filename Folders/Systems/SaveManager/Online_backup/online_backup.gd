@@ -23,14 +23,14 @@ func _notification(what: int) -> void:
 		handle_closing()
 	
 func handle_closing() -> void:
-	await _on_upload_save()
-	
-	SignalBus.quit_game.emit()
+	if not backup_in_progress:
+		await _on_upload_save()
+		SignalBus.quit_game.emit()
 
 
 func _on_upload_save() -> void:
 	print("Upload save func ran")
-	
+
 	var settings: OnlineBackupSettings = InfoGetter.get_save_data().online_backup_settings
 	var api_token: String = settings.API_URL
 	var url := _get_remote_url(settings)
