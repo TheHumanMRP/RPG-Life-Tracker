@@ -32,7 +32,7 @@ func _on_upload_save() -> void:
 	print("Upload save func ran")
 
 	var settings: OnlineBackupSettings = InfoGetter.get_save_data().online_backup_settings
-	var api_token: String = settings.API_URL
+	var api_token: String = settings.CODEBERG_TOKEN
 	var url := _get_remote_url(settings)
 	var headers := _get_request_headers(api_token)
 
