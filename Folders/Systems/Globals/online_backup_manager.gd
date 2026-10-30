@@ -8,7 +8,7 @@ func _on_offline_save_completed() -> void:
 
 	online_backup_settings.number_of_offline_saves_done += 1
 
-	if not online_backup_settings.number_of_offline_saves_done >= online_backup_settings.number_of_saves_before_upload:
+	if not (online_backup_settings.number_of_offline_saves_done >= online_backup_settings.number_of_saves_before_upload):
 		return
 	
 	SignalBus.upload_save.emit()
