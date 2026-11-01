@@ -10,9 +10,9 @@ func _on_set_online_backup_setting(setting: All_Enums.ONLINE_BACKUP_SETTINGS, ne
 	match setting:
 		All_Enums.ONLINE_BACKUP_SETTINGS.CodebergToken:
 			settings.CODEBERG_TOKEN = new_value
-		All_Enums.ONLINE_BACKUP_SETTINGS.ApiUrl:
-			settings.API_URL = new_value
+		All_Enums.ONLINE_BACKUP_SETTINGS.User_Name:
+			settings.USER_NAME = new_value
+		All_Enums.ONLINE_BACKUP_SETTINGS.Repository:
+			settings.REPOSITORY = new_value
 		All_Enums.ONLINE_BACKUP_SETTINGS.File_Name:
 			settings.FILE_NAME = new_value
-		All_Enums.ONLINE_BACKUP_SETTINGS.Owner:
-			settings.USER_NAME
