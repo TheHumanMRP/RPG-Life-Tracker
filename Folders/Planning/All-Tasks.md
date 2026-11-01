@@ -12,7 +12,10 @@
 	- [X] Make the save manager emit the upload_save signal
 	- [X] Link godot to codeberg
         - [X] Make a resource file with codeberg url and codeberg token
-	- [ ] Fix the bug where the game gets stuck and doesn't close in online backup
+	- [X] Fix the bug where the game gets stuck and doesn't close in online backup
+		- I was just sending quit game signal in handle closing
+		- And handle closing in quit game in save manager
+		- Just added get_tree().quit() in handle closing
         - [ ] Test the connection
         - [ ] Impliment a func to change the codeberg url
 	- [ ] Make it backup only on every 10 offline saves
