@@ -1,6 +1,11 @@
 class_name All_Enums
 extends RefCounted
 
+enum ONLINE_BACKUP_SETTINGS {
+	CODEBERG_TOKEN,
+	API_URL
+}
+
 enum ITEM_TYPES {
 	Helmet,
 	Chestplate,
