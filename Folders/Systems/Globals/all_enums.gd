@@ -2,8 +2,11 @@ class_name All_Enums
 extends RefCounted
 
 enum ONLINE_BACKUP_SETTINGS {
-	CODEBERG_TOKEN,
-	API_URL
+	CodebergToken,
+	ApiUrl,
+	Owner,
+	Repository,
+	File_Name
 }
 
 enum ITEM_TYPES {
