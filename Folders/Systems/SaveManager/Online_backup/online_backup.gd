@@ -27,6 +27,9 @@ func handle_closing_game() -> void:
 	if not backup_in_progress:
 		await _on_upload_save()
 		SignalBus.quit_game.emit()
+	
+	if backup_in_progress:
+		print("Backup in progress")
 
 
 func _on_upload_save() -> void:
