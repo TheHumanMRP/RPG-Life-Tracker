@@ -92,7 +92,7 @@ func _get_remote_url(settings: OnlineBackupSettings) -> String:
 		settings.API_URL,
 		settings.OWNER,
 		settings.REPOSITORY,
-		settings.REMOTE_PATH
+		settings.FILE_NAME
 	]
 
 

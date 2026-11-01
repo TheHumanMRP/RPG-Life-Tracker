@@ -1,4 +1,5 @@
 extends Node
 class_name OnlineBackupManager
 
-func 
+func set_codeberg_token() -> void:
+	pass

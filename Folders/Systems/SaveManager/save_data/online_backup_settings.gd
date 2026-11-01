@@ -5,4 +5,4 @@ extends Resource
 @export var API_URL: String = "https://codeberg.org/api/v1"
 @export var OWNER: String = "ThedevTheGoatFR"
 @export var REPOSITORY: String = "godot-save-backup"
-@export var REMOTE_PATH: String = "save.res"
+@export var FILE_NAME: String = "save.res"
