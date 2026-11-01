@@ -26,7 +26,7 @@ func _notification(what: int) -> void:
 func handle_closing_game() -> void:
 	if not backup_in_progress:
 		await _on_upload_save()
-		SignalBus.quit_game.emit()
+		get_tree().quit()
 	
 	if backup_in_progress:
 		print("Backup in progress")
