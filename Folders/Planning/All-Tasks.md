@@ -16,10 +16,9 @@
 		- I was just sending quit game signal in handle closing
 		- And handle closing in quit game in save manager
 		- Just added get_tree().quit() in handle closing
-        - [ ] Test the connection
+        - [X] Test the connection
+	- [X] Make it backup the .res
         - [ ] Impliment a func to change the codeberg url
-	- [ ] Make it backup only on every 10 offline saves
-	- [ ] Make it backup the .res
 
 - [-] Impliment dungoen selection menu
 	- [-] Impliment dungeon_item
