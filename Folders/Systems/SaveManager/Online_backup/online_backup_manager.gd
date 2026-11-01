@@ -16,3 +16,5 @@ func _on_set_online_backup_setting(setting: All_Enums.ONLINE_BACKUP_SETTINGS, ne
 			settings.REPOSITORY = new_value
 		All_Enums.ONLINE_BACKUP_SETTINGS.File_Name:
 			settings.FILE_NAME = new_value
+	
+	SignalBus.save_game.emit()

@@ -4,7 +4,7 @@
 ## To-Do
 ---
 
-- [-] Impliment backing up of save file
+- [X] Impliment backing up of save file
         - [X] Make codeberg linking work
 	- [X] Make the https scene
 	- [X] Script the scene
@@ -18,7 +18,7 @@
 		- Just added get_tree().quit() in handle closing
         - [X] Test the connection
 	- [X] Make it backup the .res
-        - [ ] Impliment a func to change the codeberg url
+        - [X] Impliment a func to change the codeberg url
 
 - [-] Impliment dungoen selection menu
 	- [-] Impliment dungeon_item
