@@ -3,8 +3,7 @@ extends RefCounted
 
 enum ONLINE_BACKUP_SETTINGS {
 	CodebergToken,
-	ApiUrl,
-	Owner,
+	User_Name,
 	Repository,
 	File_Name
 }
