@@ -6,6 +6,7 @@ var save_path: String
 
 var backup_in_progress: bool = false
 
+const WAIT_TIMER_BEFORE_QUIT: int = 15
 
 func _ready() -> void:
 	save_path = get_save_file_path()
@@ -31,7 +32,8 @@ func handle_closing_game() -> void:
 	if backup_in_progress:
 		print("Backup in progress")
 
-func _start_limited_timer
+func wait_TIMER_before_quit() -> void:
+	await get_tree().create_timer(WAIT_TIMER_BEFORE_QUIT).timeout
 
 func _on_upload_save() -> void:
 	print("Upload save func ran")
