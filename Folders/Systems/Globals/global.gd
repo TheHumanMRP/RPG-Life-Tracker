@@ -74,7 +74,6 @@ func _handle_loading_and_unloading_of_managers() -> void:
 			tasks_related_managers.setup()
 			inventory_related_managers.setup()
 
-
 func _on_set_game_state(new_game_state: All_Enums.GAME_STATES) -> void:
 	current_game_state = new_game_state
 	_set_game_state_settings()

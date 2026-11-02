@@ -26,7 +26,7 @@ func _notification(what: int) -> void:
 		handle_closing_game()
 	
 func handle_closing_game() -> void:
-	SignalBus.set_game_state.emit(All_Enums.)
+	SignalBus.set_game_state.emit(All_Enums.GAME_STATES.BackingUpOnlineData)
 	_start_wait_timer_before_quit()
 
 	if not backup_in_progress:
