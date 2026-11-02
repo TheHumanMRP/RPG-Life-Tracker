@@ -20,19 +20,19 @@
 	- [X] Make it backup the .res
         - [X] Impliment a func to change the codeberg url
 	- [ ] Add a timer to the http node so that if the network is not working properly, the game still closes
-
-- [-] Impliment dungoen selection menu
+---
+- [ ] Impliment dungoen selection menu
 	- [ ] Impliment dungeon_item
 		- [ ] Decide on the stats to show in the dungeon_item
                 - [ ] Make the dungeon_item scene
 	- [ ] Impliment selection of dungeon_item
-
+---
 - [ ] Add a `Saving Data` loading screen scene
-
+---
 - [ ] Impliment saving of dungeon layouts
-
+---
 - [ ] Impliment loading of dungeon layouts
-
+---
 - [ ] Make a settings menu
         - [ ] Make the google drive url setting
 
