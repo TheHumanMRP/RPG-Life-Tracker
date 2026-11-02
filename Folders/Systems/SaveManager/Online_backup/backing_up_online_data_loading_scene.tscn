@@ -3,7 +3,7 @@
 [ext_resource type="Theme" uid="uid://deuleb40h735d" path="res://Folders/Assets/UI_Theme/rpg-life-tracker-ui-theme.tres" id="1_kiaxj"]
 [ext_resource type="Script" uid="uid://chsrimu16l6hk" path="res://Folders/Systems/SaveManager/Online_backup/backing_up_online_data_loading_scene.gd" id="2_kdk66"]
 
-[node name="BackingUpOnlineDataLoadingScene" type="PanelContainer" unique_id=949477069]
+[node name="BackingUpOnlineDataLoadingScene" type="PanelContainer" unique_id=949477069 node_paths=PackedStringArray("loading_label")]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -17,6 +17,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_kiaxj")
 script = ExtResource("2_kdk66")
+loading_label = NodePath("MarginContainer/Loading_Label")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=393729753]
 layout_mode = 2
