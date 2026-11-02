@@ -2,13 +2,12 @@ extends PanelContainer
 
 @export var loading_label: Label
 
-const ORIGINAL_TEXT: String = "Backing Up Save Data to Codeberg."
+const ORIGINAL_TEXT: String = "Backing Up Save Data to Codeberg"
 
 func _ready() -> void:
-	loading_label.text = ORIGINAL_TEXT + "."
+	_set_loading_screen_text()
 
-func _loading_screen() -> void:
-
+func _set_loading_screen_text() -> void:
 	while true:
 		loading_label.text = ORIGINAL_TEXT + "."
 		await get_tree().create_timer(1).timeout
@@ -16,5 +15,5 @@ func _loading_screen() -> void:
 		loading_label.text = ORIGINAL_TEXT + ".."
 		await get_tree().create_timer(1).timeout
 	
-		loading_label.text = ORIGINAL_TEXT + ".."
+		loading_label.text = ORIGINAL_TEXT + "..."
 		await get_tree().create_timer(1).timeout

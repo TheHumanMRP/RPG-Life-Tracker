@@ -96,7 +96,7 @@ func _get_encoded_save() -> String:
 
 func _get_remote_url(settings: OnlineBackupSettings) -> String:
 	return "%s/repos/%s/%s/contents/%s" % [
-		settings.API_URL,
+		settings.CODEBERG_URL,
 		settings.USER_NAME,
 		settings.REPOSITORY,
 		settings.FILE_NAME
