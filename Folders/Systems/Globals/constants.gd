@@ -27,7 +27,7 @@ const PATH_TO_CONFORMATION_BOX: String = "res://Folders/Systems/Input/Scenes/con
 const PATH_TO_TASK_ITEM_SCENE: String = "res://Folders/Systems/Task-Manager/Scenes/task_item_scene.tscn"
 
 const PATH_TO_ONLINE_BACKUP_SCENE: String = "res://Folders/Systems/SaveManager/Online_backup/online_backup.tscn"
-const PATH_TO_BACKING_UP_ONLINE_
+const PATH_TO_BACKING_UP_ONLINE_DATA_LOADING_SCENE: String = "res://Folders/Systems/SaveManager/Online_backup/backing_up_online_data_loading_scene.tscn"
 
 # PLayer
 const PLAYER_INVENTORY_NAME: String = "player"
