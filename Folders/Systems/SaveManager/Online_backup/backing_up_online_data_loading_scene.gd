@@ -8,4 +8,9 @@ func _ready() -> void:
 	loading_label.text = ORIGINAL_TEXT + "."
 
 func _process(delta: float) -> void:
-	loading_label.text = ORIGINAL_TEXT
+
+func _loading_screen() -> void:
+	
+
+	while true:
+		loading_label.text = ORIGINAL_TEXT + "."
