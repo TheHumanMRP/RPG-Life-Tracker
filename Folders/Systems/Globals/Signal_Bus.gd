@@ -77,6 +77,7 @@ signal text_input_submitted_by_user(text_sumitted: String, tag: String, request_
 # ==============================================
 
 signal handle_closing_game
+signal start_loading_screen
 signal set_online_backup_setting(setting: All_Enums.ONLINE_BACKUP_SETTINGS, new_value: String)
 
 @warning_ignore_restore("unused_signal")

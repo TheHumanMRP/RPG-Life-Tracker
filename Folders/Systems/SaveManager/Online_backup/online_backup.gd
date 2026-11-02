@@ -35,6 +35,8 @@ func handle_closing_game() -> void:
 		print("Backup in progress")
 
 func _start_wait_timer_before_quit() -> void:
+	SignalBus.start_loading_screen.emit()
+
 	await get_tree().create_timer(WAIT_TIMER_BEFORE_QUIT).timeout
 
 	get_tree().quit()

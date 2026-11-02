@@ -5,7 +5,7 @@ extends PanelContainer
 const ORIGINAL_TEXT: String = "Backing Up Save Data to Codeberg"
 
 func _ready() -> void:
-	_set_loading_screen_text()
+	
 
 func _set_loading_screen_text() -> void:
 	while true:
