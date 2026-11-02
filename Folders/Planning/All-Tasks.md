@@ -35,33 +35,33 @@
 ---
 - [ ] Make a settings menu
         - [ ] Make the google drive url setting
-
+---
 - [ ] Impliment Inventory screen
-
+---
 - [ ] Add pixel art for text input cancle button
-
+---
 - [ ] Impliment the shifting of items from inventory to hotbar when starting a dungeon
-
+---
 - [ ] Add enemies in the dungeon
-
+---
 - [ ] Make pixel art for the enemy
-
+---
 - [ ] Impliment swapping of gear, so that when I equip a gear which is already occupied, it swaps instead of disgarding
-
+---
 - [ ] Handle the unequipment of gear
 	- [ ] Add 5 more slots to the hotbar
 		- [ ] Display all the armor and weapon there
 
 		- [ ] Figure out how to travel to all those slots
-
+---
 - [ ] Fix the loop because of which there are hundreds of statement being printed every single time I equip an item 
 - [ ] Make it so that it checks if none of the hotbar slots have the item to put in a slot, cause that will cause duplication
-
+---
 - [ ] Make animations for sword attack
 - [ ] Code sword attack animation playing
-
+---
 - [ ] Add transitions when changing scenes
-
+---
 - [ ] Add documentation for main scene
 
 ## Completed Tasks
