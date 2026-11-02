@@ -4,6 +4,7 @@
 [ext_resource type="Theme" uid="uid://deuleb40h735d" path="res://Folders/Assets/UI_Theme/rpg-life-tracker-ui-theme.tres" id="2_ubp4m"]
 
 [node name="Main_Menu_Canvas_Later" type="CanvasLayer" unique_id=1354644221]
+process_mode = 1
 
 [node name="Main_Menu" type="Control" parent="." unique_id=991180715 node_paths=PackedStringArray("main_menu_label", "dungeon_selection_menu_button", "task_manager_button", "quit_game_button")]
 layout_mode = 3
