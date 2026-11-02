@@ -4,7 +4,7 @@
 ## To-Do
 ---
 
-- [X] Impliment backing up of save file
+- [ ] Impliment backing up of save file
         - [X] Make codeberg linking work
 	- [X] Make the https scene
 	- [X] Script the scene
@@ -19,6 +19,7 @@
         - [X] Test the connection
 	- [X] Make it backup the .res
         - [X] Impliment a func to change the codeberg url
+	- [ ] Add a timer to the http node so that if the network is not working properly, the game still closes
 
 - [-] Impliment dungoen selection menu
 	- [-] Impliment dungeon_item
