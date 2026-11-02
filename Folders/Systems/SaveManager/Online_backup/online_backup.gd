@@ -9,6 +9,7 @@ var backup_in_progress: bool = false
 const WAIT_TIMER_BEFORE_QUIT: int = 15
 
 func _ready() -> void:
+	self.process_mode = Node.PROCESS_MODE_ALWAYS
 	save_path = get_save_file_path()
 	SignalBus.handle_closing_game.connect(handle_closing_game)
 
@@ -25,6 +26,7 @@ func _notification(what: int) -> void:
 		handle_closing_game()
 	
 func handle_closing_game() -> void:
+	SignalBus.set_game_state.emit(All_Enums.)
 	_start_wait_timer_before_quit()
 
 	if not backup_in_progress:

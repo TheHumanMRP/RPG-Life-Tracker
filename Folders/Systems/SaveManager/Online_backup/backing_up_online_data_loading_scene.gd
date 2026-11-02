@@ -6,7 +6,6 @@ const ORIGINAL_TEXT: String = "Backing Up Save Data to Codeberg"
 
 func _ready() -> void:
 	hide()
-	loading_label.text
 	SignalBus.start_loading_screen.connect(_on_start_loading_screen)
 
 func _on_start_loading_screen() -> void:

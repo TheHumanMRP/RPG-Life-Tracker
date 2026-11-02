@@ -26,6 +26,7 @@ enum GAME_STATES {
 	TaskManager,
 	DeathMenu,
 	PauseMenu,
+	BackingUpOnlineData,
 
 }
 
