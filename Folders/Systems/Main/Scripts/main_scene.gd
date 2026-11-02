@@ -32,6 +32,8 @@ func _add_one_time_scenes() -> void:
 
 	_add_online_backup_node()
 
+	_add_backing_up_online_data_loading_scene()
+
 
 func _add_right_click_menu() -> void:
 	var right_click_menu: Node = _get_new_scene(Constants.PATH_TO_RIGHT_CLICK_MENU)
