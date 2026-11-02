@@ -3,13 +3,13 @@
 
 ## To-Do
 ---
+- [ ] Add a `Backup Up data online` loading screen scene
+---
 - [ ] Impliment dungoen selection menu
 	- [ ] Impliment dungeon_item
 		- [ ] Decide on the stats to show in the dungeon_item
                 - [ ] Make the dungeon_item scene
 	- [ ] Impliment selection of dungeon_item
----
-- [ ] Add a `Saving Data` loading screen scene
 ---
 - [ ] Impliment saving of dungeon layouts
 ---
