@@ -25,6 +25,8 @@ func _notification(what: int) -> void:
 		handle_closing_game()
 	
 func handle_closing_game() -> void:
+	_start_wait_timer_before_quit()
+
 	if not backup_in_progress:
 		await _on_upload_save()
 		get_tree().quit()
@@ -32,8 +34,10 @@ func handle_closing_game() -> void:
 	if backup_in_progress:
 		print("Backup in progress")
 
-func wait_TIMER_before_quit() -> void:
+func _start_wait_timer_before_quit() -> void:
 	await get_tree().create_timer(WAIT_TIMER_BEFORE_QUIT).timeout
+
+	get_tree().quit()
 
 func _on_upload_save() -> void:
 	print("Upload save func ran")
