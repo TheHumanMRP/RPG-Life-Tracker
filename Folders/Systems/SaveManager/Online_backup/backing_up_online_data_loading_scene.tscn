@@ -28,4 +28,5 @@ theme_override_constants/margin_bottom = 20
 
 [node name="Loading_Label" type="Label" parent="MarginContainer" unique_id=570272768]
 layout_mode = 2
+theme_override_font_sizes/font_size = 40
 text = "Backing Up Save Data to Codeberg."
