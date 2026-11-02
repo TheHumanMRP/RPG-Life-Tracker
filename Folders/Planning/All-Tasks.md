@@ -3,24 +3,6 @@
 
 ## To-Do
 ---
-
-- [ ] Impliment backing up of save file
-        - [X] Make codeberg linking work
-	- [X] Make the https scene
-	- [X] Script the scene
-	- [X] Make it add in main menu _add_https_node func
-	- [X] Make the save manager emit the upload_save signal
-	- [X] Link godot to codeberg
-        - [X] Make a resource file with codeberg url and codeberg token
-	- [X] Fix the bug where the game gets stuck and doesn't close in online backup
-		- I was just sending quit game signal in handle closing
-		- And handle closing in quit game in save manager
-		- Just added get_tree().quit() in handle closing
-        - [X] Test the connection
-	- [X] Make it backup the .res
-        - [X] Impliment a func to change the codeberg url
-	- [ ] Add a timer to the http node so that if the network is not working properly, the game still closes
----
 - [ ] Impliment dungoen selection menu
 	- [ ] Impliment dungeon_item
 		- [ ] Decide on the stats to show in the dungeon_item
@@ -66,6 +48,23 @@
 
 ## Completed Tasks
 ---
+
+- [X] Impliment backing up of save file
+        - [X] Make codeberg linking work
+	- [X] Make the https scene
+	- [X] Script the scene
+	- [X] Make it add in main menu _add_https_node func
+	- [X] Make the save manager emit the upload_save signal
+	- [X] Link godot to codeberg
+        - [X] Make a resource file with codeberg url and codeberg token
+	- [X] Fix the bug where the game gets stuck and doesn't close in online backup
+		- I was just sending quit game signal in handle closing
+		- And handle closing in quit game in save manager
+		- Just added get_tree().quit() in handle closing
+        - [X] Test the connection
+	- [X] Make it backup the .res
+        - [X] Impliment a func to change the codeberg url
+	- [X] Add a timer to the http node so that if the network is not working properly, the game still closes
 
 - [X] Make pause menu in dungoen
 
