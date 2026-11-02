@@ -22,8 +22,8 @@
 	- [ ] Add a timer to the http node so that if the network is not working properly, the game still closes
 
 - [-] Impliment dungoen selection menu
-	- [-] Impliment dungeon_item
-		- [-] Decide on the stats to show in the dungeon_item
+	- [ ] Impliment dungeon_item
+		- [ ] Decide on the stats to show in the dungeon_item
                 - [ ] Make the dungeon_item scene
 	- [ ] Impliment selection of dungeon_item
 
