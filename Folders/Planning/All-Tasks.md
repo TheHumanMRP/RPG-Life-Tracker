@@ -4,6 +4,7 @@
 ## To-Do
 ---
 - [ ] Add a `Backup Up data online` loading screen scene
+	- [ ] Make it popup when the backup starts 
 ---
 - [ ] Impliment dungoen selection menu
 	- [ ] Impliment dungeon_item
