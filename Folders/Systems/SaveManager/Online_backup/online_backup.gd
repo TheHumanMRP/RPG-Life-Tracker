@@ -31,6 +31,7 @@ func handle_closing_game() -> void:
 	if backup_in_progress:
 		print("Backup in progress")
 
+func _start_limited_timer
 
 func _on_upload_save() -> void:
 	print("Upload save func ran")
