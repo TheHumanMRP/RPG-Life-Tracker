@@ -42,6 +42,9 @@ func _add_online_backup_node() -> void:
 	var online_backup_scene: Node = _get_new_scene(Constants.PATH_TO_ONLINE_BACKUP_SCENE)
 	important_stuff_canvas_layer.add_child(online_backup_scene)
 
+func _add_backing_up_online_data_loading_scene() -> void:
+	var online_backup_scene: Node = _get_new_scene(Constants.PATH_TO_ONLINE_BACKUP_SCENE)
+	important_stuff_canvas_layer.add_child(online_backup_scene)
 
 # ==============================================================================
 # SCENE MANAGEMENT
