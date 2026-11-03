@@ -9,7 +9,7 @@
                 - [ ] Make the dungeon_item scene
 	- [ ] Impliment selection of dungeon_item
 ---
-- [ ] Make the `dungoen` 
+- [ ] Make the `dungoen` resource which will represent the dungeon
 ---
 - [ ] Make a settings menu
         - [ ] Make the google drive url setting
