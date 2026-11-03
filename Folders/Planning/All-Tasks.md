@@ -3,12 +3,6 @@
 
 ## To-Do
 ---
-- [ ] Add a `Backup Up data online` loading screen scene
-	- [X] Make the scene
-	- [ ] Make it add to the main scene
-	- [ ] Make it popup when the backup starts
-	- [ ] Make it pause the scene tree
----
 - [ ] Impliment dungoen selection menu
 	- [ ] Impliment dungeon_item
 		- [ ] Decide on the stats to show in the dungeon_item
@@ -52,6 +46,12 @@
 
 ## Completed Tasks
 ---
+
+- [X] Add a `Backup Up data online` loading screen scene
+	- [X] Make the scene
+	- [X] Make it add to the main scene
+	- [X] Make it popup when the backup starts
+	- [X] Make it pause the scene tree
 
 - [X] Impliment backing up of save file
         - [X] Make codeberg linking work
