@@ -68,15 +68,15 @@ func use_item(inventory_name: String, item_id: int, target: Node) -> void:
 
 ## Removes every item reference from this inventory. Items stay registered
 ## in the global item manager.
-func clear_inventory() -> void:
-	get_inventory_item_ids().clear()
+func clear_inventory(inventory_name: String) -> void:
+	get_inventory_item_ids(inventory_name).clear()
 
 	
-	notify_inventory_changed()
+	notify_inventory_changed(inventory_name)
 
 
-func check_if_item_at_index_in_inventory_exists(index: int) -> bool:
-	if index < 0 or index >= get_inventory_item_ids().size():
+func check_if_item_at_index_in_inventory_exists(inventory_name: String, index: int) -> bool:
+	if index < 0 or index >= get_inventory_item_ids(inventory_name).size():
 		return false
 
 	return true
@@ -85,10 +85,10 @@ func check_if_item_at_index_in_inventory_exists(index: int) -> bool:
 # Debug
 # ===================================================================
 
-func add_test_sword() -> void:
+func add_test_sword(inventory_name: String) -> void:
 	var new_test_sword_item_id: int = Global.all_global_items_manager.add_test_sword()
 
-	add_item(new_test_sword_item_id)
+	add_item(inventory_name, new_test_sword_item_id)
 
 
 func print_all_items() -> void:
