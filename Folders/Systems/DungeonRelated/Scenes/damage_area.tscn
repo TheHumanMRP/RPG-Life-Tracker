@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cu4hnlkwj8l7d"]
 
-[ext_resource type="Script" uid="uid://b77mfluw42emr" path="res://Folders/Systems/Dungeon_Related/Scripts/damage_area.gd" id="1_p4g1b"]
+[ext_resource type="Script" uid="uid://b77mfluw42emr" path="res://Folders/Systems/DungeonRelated/Scripts/damage_area.gd" id="1_p4g1b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m2wy4"]
 resource_local_to_scene = true
