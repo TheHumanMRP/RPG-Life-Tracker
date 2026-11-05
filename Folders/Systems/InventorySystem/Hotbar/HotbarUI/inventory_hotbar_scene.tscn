@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://b5gfvc0shp061"]
 
+[ext_resource type="Script" uid="uid://lcm283jm2a7a" path="res://Folders/Systems/InventorySystem/Hotbar/HotbarUI/inventory_hotbar_scene.gd" id="1_kbmxq"]
+
 [node name="InventoryHotbar" type="Control" unique_id=2071298164]
 layout_mode = 3
 anchors_preset = 15
@@ -7,3 +9,4 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_kbmxq")
