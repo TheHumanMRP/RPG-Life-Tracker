@@ -42,8 +42,8 @@ func add_item(inventory_name: String, item_id: int) -> void:
 
 ## Removes an item's reference from this inventory. The item itself stays
 ## registered in the global item manager (e.g. for dropping/transferring).
-func remove_item(item_id: int) -> void:
-	for i in get_inventory_item_ids().size():
+func remove_item(inventory_name: String, item_id: int) -> void:
+	for i in get_inventory_item_ids(inventory_name).size():
 		if get_inventory_item_ids()[i] != item_id:
 			continue
 
