@@ -15,5 +15,5 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="InventoryHotbar" parent="MarginContainer" unique_id=2071298164 instance=ExtResource("1_dv7hd")]
+[node name="InventoryHotbarScene" parent="MarginContainer" unique_id=2071298164 instance=ExtResource("1_dv7hd")]
 layout_mode = 2
