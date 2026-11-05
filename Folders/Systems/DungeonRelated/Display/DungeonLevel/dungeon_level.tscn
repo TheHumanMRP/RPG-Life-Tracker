@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://dx61wrve64jwn" path="res://Folders/Systems/DungeonRelated/Display/DungeonLevel/dungeon_level.gd" id="1_u83e5"]
 [ext_resource type="Texture2D" uid="uid://cj6hbcyva6xfl" path="res://Folders/Assets/MainArt/World/Tile.png" id="2_3siah"]
-[ext_resource type="PackedScene" uid="uid://mexd1qvl140q" path="res://Folders/Systems/DungeonRelated/Scenes/checkpoint.tscn" id="3_8eds7"]
-[ext_resource type="PackedScene" uid="uid://cu4hnlkwj8l7d" path="res://Folders/Systems/DungeonRelated/Scenes/damage_area.tscn" id="4_vk527"]
+[ext_resource type="PackedScene" uid="uid://mexd1qvl140q" path="res://Folders/Systems/DungeonRelated/CheckPoints/checkpoint.tscn" id="3_8eds7"]
+[ext_resource type="PackedScene" uid="uid://cu4hnlkwj8l7d" path="res://Folders/Systems/DungeonRelated/DamageAreas/damage_area.tscn" id="4_vk527"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0laef"]
 texture = ExtResource("2_3siah")
