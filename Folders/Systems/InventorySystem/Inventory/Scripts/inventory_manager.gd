@@ -91,10 +91,10 @@ func add_test_sword(inventory_name: String) -> void:
 	add_item(inventory_name, new_test_sword_item_id)
 
 
-func print_all_items() -> void:
+func print_all_items(inventory_name) -> void:
 	print("\nInventory Component: Printing all items")
 
-	for item_id in get_inventory_item_ids():
+	for item_id in get_inventory_item_ids(inventory_name):
 		var item: ItemEntry = Global.all_global_items_manager.get_item_by_id(item_id)
 
 		if item != null:
