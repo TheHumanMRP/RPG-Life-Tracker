@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://vrxx363a484n"]
 
-[ext_resource type="Script" uid="uid://xt1tdnwnnt5j" path="res://Folders/Systems/InventorySystem/Hotbar/Scripts/hotbar_slot.gd" id="1_42qie"]
+[ext_resource type="Script" uid="uid://xt1tdnwnnt5j" path="res://Folders/Systems/InventorySystem/Hotbar/HotbarUI/HotbarSlot/hotbar_slot.gd" id="1_42qie"]
 [ext_resource type="Texture2D" uid="uid://bqulutjwvblw" path="res://Folders/Assets/icon.svg" id="2_5jo53"]
 
 [node name="Inventory_Slot" type="PanelContainer" unique_id=844703346]
