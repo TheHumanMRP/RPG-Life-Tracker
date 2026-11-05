@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dangj2qts40g4"]
 
-[ext_resource type="Script" uid="uid://beqxklvt1rw03" path="res://Folders/Systems/InventorySystem/Items/Weapons/sword_scene.gd" id="1_103ky"]
+[ext_resource type="Script" uid="uid://beqxklvt1rw03" path="res://Folders/Components/EquipmentManager/Sword/sword_scene.gd" id="1_103ky"]
 [ext_resource type="Texture2D" uid="uid://chco0ybjhmfdu" path="res://Folders/Assets/MainArt/Weapons/sword.png" id="2_103ky"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_103ky"]
