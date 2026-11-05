@@ -14,10 +14,10 @@ const PATH_TO_DUNGEON_SELECTION_MENU: String = "res://Folders/Systems/DungeonRel
 const PATH_TO_DUNGEON_CANVAS_LAYER: String = "res://Folders/Systems/DungeonRelated/Display/dungeon_canvas_layer.tscn"
 const PATH_TO_MAIN_MENU: String = "res://Folders/Systems/Main/MainMenu/main_menu.tscn"
 
-const PATH_TO_INVENTORY_UI_LAYER: String = "res://Folders/Systems/Inventory_System/Scenes/inventory_ui_layer.tscn"
-const PATH_TO_DEATH_MENU: String = "res://Folders/Systems/Dungeon_Related/Death_Menu/death_menu.tscn"
+const PATH_TO_INVENTORY_UI_LAYER: String = "res://Folders/Systems/InventorySystem/Display/inventory_ui_layer.tscn"
+const PATH_TO_DEATH_MENU: String = "res://Folders/Systems/DungeonRelated/DeathMenu/death_menu.tscn"
 
-const PATH_TO_HOTBAR_SLOT: String = "res://Folders/Systems/Inventory_System/Scenes/hotbar_slot.tscn"
+const PATH_TO_HOTBAR_SLOT: String = "res://Folders/Systems/InventorySystem/Hotbar/HotbarSlot/hotbar_slot.tscn"
 
 const PATH_TO_RIGHT_CLICK_MENU: String = "res://Folders/Systems/Input/Scenes/right_click_menu.tscn"
 const PATH_TO_TEXT_INPUT_BOX: String = "res://Folders/Systems/Input/Scenes/text_input_box.tscn"
