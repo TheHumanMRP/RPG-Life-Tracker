@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://ecea6tey6wa5"]
+
+[ext_resource type="Script" uid="uid://cr0wj1xefy3g7" path="res://Folders/Systems/Main/MainScene/main_scene.gd" id="1_2tcbf"]
+[ext_resource type="PackedScene" uid="uid://cw07ljkm68ifd" path="res://Folders/Systems/Main/MainMenu/main_menu.tscn" id="2_8khhu"]
+
+[node name="MainScene" type="Node2D" unique_id=677144385 node_paths=PackedStringArray("important_stuff_canvas_layer")]
+script = ExtResource("1_2tcbf")
+important_stuff_canvas_layer = NodePath("Important_Stuff_Canvas_Layer")
+
+[node name="Main_Menu" parent="." unique_id=1303169397 instance=ExtResource("2_8khhu")]
+
+[node name="Important_Stuff_Canvas_Layer" type="CanvasLayer" parent="." unique_id=22360007]
+process_mode = 3
+layer = 2
