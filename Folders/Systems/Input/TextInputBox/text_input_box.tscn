@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dggq6dnm63yn1"]
 
 [ext_resource type="Theme" uid="uid://deuleb40h735d" path="res://Folders/Assets/UITheme/rpg-life-tracker-ui-theme.tres" id="1_fv8me"]
-[ext_resource type="Script" uid="uid://byxkob84wcyo6" path="res://Folders/Systems/Input/Scripts/text_input_box.gd" id="1_n75gt"]
+[ext_resource type="Script" uid="uid://byxkob84wcyo6" path="res://Folders/Systems/Input/TextInputBox/text_input_box.gd" id="1_n75gt"]
 
 [node name="Text_Input_Box" type="PanelContainer" unique_id=287076170 node_paths=PackedStringArray("question_label", "user_input_line_edit", "cancle_button")]
 anchors_preset = 8
