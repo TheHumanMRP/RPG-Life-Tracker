@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cn2j37mshfv3s"]
 
-[ext_resource type="Script" uid="uid://bbpb7xvseo36n" path="res://Folders/Components/Equipment_Manager/equipment_manager.gd" id="1_b0xun"]
+[ext_resource type="Script" uid="uid://bbpb7xvseo36n" path="res://Folders/Components/EquipmentManager/equipment_manager.gd" id="1_b0xun"]
 [ext_resource type="PackedScene" uid="uid://dangj2qts40g4" path="res://Folders/Systems/Weapons/sword.tscn" id="1_yenfj"]
 
 [node name="Equipment_Manager" type="Node2D" unique_id=116755837 node_paths=PackedStringArray("sword_scene")]

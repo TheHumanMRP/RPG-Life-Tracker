@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bq3csw6a6eqcm"]
 
-[ext_resource type="Script" uid="uid://hoawh4anmllh" path="res://Folders/Systems/DungeonRelated/pause_menu/pause_menu.gd" id="1_os02c"]
+[ext_resource type="Script" uid="uid://hoawh4anmllh" path="res://Folders/Systems/DungeonRelated/PauseMenu/pause_menu.gd" id="1_os02c"]
 [ext_resource type="Theme" uid="uid://deuleb40h735d" path="res://Folders/Assets/UITheme/rpg-life-tracker-ui-theme.tres" id="2_b6yfs"]
 
 [node name="PauseMenu" type="CanvasLayer" unique_id=1799669249 node_paths=PackedStringArray("respawn_button", "quit_dungeon_button")]
