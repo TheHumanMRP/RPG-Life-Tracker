@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://fo5y6f8bfnis"]
 
-[ext_resource type="Script" uid="uid://c4pqs0b3ey8dq" path="res://Folders/Systems/SaveManager/Online_backup/online_backup.gd" id="1_6sbhj"]
+[ext_resource type="Script" uid="uid://c4pqs0b3ey8dq" path="res://Folders/Systems/SaveManager/OnlineBackup/online_backup.gd" id="1_6sbhj"]
 
 [node name="Online_Backup" type="HTTPRequest" unique_id=126343340]
 script = ExtResource("1_6sbhj")

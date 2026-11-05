@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dv0nbjbaanutb"]
 
 [ext_resource type="Theme" uid="uid://deuleb40h735d" path="res://Folders/Assets/UI_Theme/rpg-life-tracker-ui-theme.tres" id="1_kiaxj"]
-[ext_resource type="Script" uid="uid://chsrimu16l6hk" path="res://Folders/Systems/SaveManager/Online_backup/backing_up_online_data_loading_scene.gd" id="2_kdk66"]
+[ext_resource type="Script" uid="uid://chsrimu16l6hk" path="res://Folders/Systems/SaveManager/OnlineBackup/backing_up_online_data_loading_scene.gd" id="2_kdk66"]
 
 [node name="BackingUpOnlineDataLoadingScene" type="PanelContainer" unique_id=949477069 node_paths=PackedStringArray("loading_label")]
 anchors_preset = 8
