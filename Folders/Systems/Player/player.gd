@@ -10,13 +10,13 @@ signal facing_direction_changed(new_direction: int)
 # --------------------------------------------------------------------
 
 var facing_direction: int
+var inventory_manager: InventoryManager = InventoryManager.new()
 
 # --------------------------------------------------------------------
 # Exported vars
 # --------------------------------------------------------------------
 
 @export var spawn_point: Vector2
-@export var inventory_manager: InventoryManager
 @export var health_component: HealthComponent
 @export var movement_component: MovementComponent
 @export var equipment_manager: EquipmentManager
