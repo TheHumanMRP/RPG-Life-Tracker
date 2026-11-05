@@ -3,6 +3,10 @@
 
 ## To-Do
 ---
+- [ ] Refactor the entire project
+	- [ ] Re-arrange DungeonRelated folder
+	- [X] Rename the folders to PascalCase
+---
 - [ ] Impliment dungoen selection menu
 	- [ ] Impliment dungeon_item
 		- [ ] Decide on the stats to show in the dungeon_item
