@@ -16,8 +16,6 @@ func _ensure_entry_exists(inventory_name: String) -> void:
 # ===================================================================
 
 func get_inventory_item_ids(inventory_name: String) -> Array[int]:
-	_ensure_entry_exists(inventory_name)
-
 	var inventory_item_ids: Array = get_inventory_dict()[inventory_name] as Array
 
 	return inventory_item_ids
@@ -29,7 +27,7 @@ func get_inventory_dict() -> Dictionary:
 # Inventory Operations
 # ===================================================================
 ## Adds an already-globally-registered item to this inventory by its id.
-func add_item(item_id: int) -> void:
+func add_item(inventory_name: String, item_id: int) -> void:
 	if get_inventory_item_ids().has(item_id):
 		push_error("InventoryComponent: Item already in this inventory: ", item_id)
 		return
@@ -106,7 +104,7 @@ func print_all_items() -> void:
 # Notify Listner
 # ===================================================================
 
-func notify_inventory_changed() -> void:
+func notify_inventory_changed(inventory_name: String) -> void:
 	Global.signal_bus.save_game.emit()
 	
 	if inventory_name != Global.PLAYER_INVENTORY_NAME:
