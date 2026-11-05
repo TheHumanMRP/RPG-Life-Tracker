@@ -10,8 +10,8 @@ const SELECTED_HOTBAR_SLOT_OPACITY: float = 0.5
 const PATH_TO_PLAYER_SCENE: String = "res://Folders/Systems/Player/player.tscn"
 
 const PATH_TO_TASK_MANAGER: String = "res://Folders/Systems/TaskManager/Display/TaskManagerCanvasLayer/task_manager_ui_canvas_layer.tscn"
-const PATH_TO_DUNGEON_SELECTION_MENU: String = "res://Folders/Systems/Dungeon_Related/Dungeon_Selection_Menu/Scenes/dungeon_selection_menu.tscn"
-const PATH_TO_DUNGEON_SCENE: String = "res://Folders/Systems/Dungeon_Related/Scenes/dungeon_canvas_layer.tscn"
+const PATH_TO_DUNGEON_SELECTION_MENU: String = "res://Folders/Systems/DungeonRelated/DungeonSelectionMenu/DungeonSelectionMenuScene/dungeon_selection_menu.tscn"
+const PATH_TO_DUNGEON_CANVAS_LAYER: String = "res://Folders/Systems/Dungeon_Related/Scenes/dungeon_canvas_layer.tscn"
 const PATH_TO_MAIN_MENU: String = "res://Folders/Systems/Main/Scenes/main_menu.tscn"
 
 const PATH_TO_UILAYER_SCENE: String = "res://Folders/Systems/Main/Scenes/ui_layer.tscn"
