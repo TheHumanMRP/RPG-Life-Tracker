@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dt0kbnwt050rd" path="res://Folders/Assets/MainArt/Player/Player-Left.png" id="4_6knuv"]
 [ext_resource type="Texture2D" uid="uid://7017yfbv44at" path="res://Folders/Assets/MainArt/Player/Player-Right.png" id="5_2rjet"]
 [ext_resource type="Script" uid="uid://ckyj7edp33tc8" path="res://Folders/Components/movement_component.gd" id="5_o2hah"]
-[ext_resource type="Script" uid="uid://d3iu25vhwg824" path="res://Folders/Systems/InventorySystem/Scripts/Inventory/inventory_manager.gd" id="6_7yyeh"]
+[ext_resource type="Script" uid="uid://d3iu25vhwg824" path="res://Folders/Systems/InventorySystem/Inventory/Scripts/inventory_manager.gd" id="6_7yyeh"]
 [ext_resource type="Texture2D" uid="uid://f1lj0q5jnxkk" path="res://Folders/Assets/MainArt/Player/Player-Up.png" id="6_qb4sw"]
 [ext_resource type="Script" uid="uid://qf5hws2m7t25" path="res://Folders/Components/animation_player_component.gd" id="11_ynv66"]
 
