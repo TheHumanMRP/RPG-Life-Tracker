@@ -2,19 +2,20 @@ class_name InventoryManager
 extends Node
 
 # ===================================================================
-# Initialise
+# Ensure Dict Entry
 # ===================================================================
 
-func setup(new_inventory_name: String) -> void:
-	inventory_name = new_inventory_name
-	if not get_inventory_dict().has(inventory_name):
-		get_inventory_dict()[inventory_name] = []
+func _ensure_entry_exists(inventory_name: String) -> void:
+	if get_inventory_dict().has(inventory_name):
+		return
+	
+	get_inventory_dict()[inventory_name] = []
 
 # ===================================================================
 # Getters
 # ===================================================================
 
-func get_inventory_item_ids() -> Array[int]:
+func get_inventory_item_ids(inventory_name) -> Array[int]:
 	if not inventory_name:
 		push_error("Inventory Logic Component: No Inventory Name")
 
