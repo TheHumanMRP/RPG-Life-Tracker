@@ -3,9 +3,11 @@
 
 ## To-Do
 ---
-- [ ] Refactor the entire dungeon_level to the new `dungeon` resource
----
 - [ ] Make the `dungoen` resource which will represent the dungeon
+	- [ ] 
+	- [X] Add mapping
+---
+- [ ] Refactor the entire dungeon_level to the new `dungeon` resource
 ---
 - [ ] Refactor the entire project
 	- [ ] Re-arrange DungeonRelated folder
