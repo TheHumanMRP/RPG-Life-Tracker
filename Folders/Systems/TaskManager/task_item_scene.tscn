@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://vt6eolqkwws8"]
 
 [ext_resource type="Theme" uid="uid://bcri7pjwtih8w" path="res://Folders/Assets/UITheme/task-manager_ui_theme.tres" id="1_7jaep"]
-[ext_resource type="Script" uid="uid://dun2trcix2ryy" path="res://Folders/Systems/TaskManager/Scripts/task_item_scene.gd" id="1_hsjk1"]
+[ext_resource type="Script" uid="uid://dun2trcix2ryy" path="res://Folders/Systems/TaskManager/task_item_scene.gd" id="1_hsjk1"]
 
 [node name="Task_Entry_Scene" type="PanelContainer" unique_id=465403137 node_paths=PackedStringArray("task_name_label", "task_status_option_button")]
 custom_minimum_size = Vector2(170, 100)
