@@ -14,7 +14,6 @@ const PATH_TO_DUNGEON_SELECTION_MENU: String = "res://Folders/Systems/DungeonRel
 const PATH_TO_DUNGEON_CANVAS_LAYER: String = "res://Folders/Systems/DungeonRelated/Display/dungeon_canvas_layer.tscn"
 const PATH_TO_MAIN_MENU: String = "res://Folders/Systems/Main/MainMenu/main_menu.tscn"
 
-const PATH_TO_UILAYER_SCENE: String = "res://Folders/Systems/Main/Scenes/ui_layer.tscn"
 const PATH_TO_INVENTORY_UI_LAYER: String = "res://Folders/Systems/Inventory_System/Scenes/inventory_ui_layer.tscn"
 const PATH_TO_DEATH_MENU: String = "res://Folders/Systems/Dungeon_Related/Death_Menu/death_menu.tscn"
 
