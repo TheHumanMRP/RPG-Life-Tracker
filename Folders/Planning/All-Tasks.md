@@ -3,16 +3,16 @@
 
 ## To-Do
 ---
+- [ ] Refactor the entire project
+	- [ ] Re-arrange DungeonRelated folder
+	- [X] Rename the folders to PascalCase
+---
 - [ ] Make the `dungoen` resource which will represent the dungeon
 	- [ ] Add settings for checkpoints
 	- [ ] Add settings for damage areas
 	- [X] Add mapping
 ---
 - [ ] Refactor the entire dungeon_level to the new `dungeon` resource
----
-- [ ] Refactor the entire project
-	- [ ] Re-arrange DungeonRelated folder
-	- [X] Rename the folders to PascalCase
 ---
 - [ ] Impliment dungoen selection menu
 	- [ ] Impliment dungeon_item
