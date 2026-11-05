@@ -3,10 +3,6 @@
 
 ## To-Do
 ---
-- [ ] Re-arrange the entire project
-	- [X] Re-arrange DungeonRelated folder
-	- [X] Rename the folders to PascalCase
----
 - [ ] Make the `dungoen` resource which will represent the dungeon
 	- [ ] Add settings for checkpoints
 	- [ ] Add settings for damage areas
