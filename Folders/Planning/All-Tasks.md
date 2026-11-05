@@ -3,6 +3,10 @@
 
 ## To-Do
 ---
+- [ ] Refactor the entire dungeon_level to the new `dungeon` resource
+---
+- [ ] Make the `dungoen` resource which will represent the dungeon
+---
 - [ ] Refactor the entire project
 	- [ ] Re-arrange DungeonRelated folder
 	- [X] Rename the folders to PascalCase
@@ -13,10 +17,8 @@
                 - [ ] Make the dungeon_item scene
 	- [ ] Impliment selection of dungeon_item
 ---
-- [ ] Make the `dungoen` resource which will represent the dungeon
----
 - [ ] Make a settings menu
-        - [ ] Make the google drive url setting
+        - [ ] Make the online backup settings section
 ---
 - [ ] Impliment Inventory screen
 ---
