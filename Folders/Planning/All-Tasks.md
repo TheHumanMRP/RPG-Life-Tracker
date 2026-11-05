@@ -49,6 +49,10 @@
 
 ## Completed Tasks
 ---
+- [X] Re-arrange the entire project
+	- [X] Update all the broken references
+	- [X] Re-arrange DungeonRelated folder
+	- [X] Rename the folders to PascalCase
 
 - [X] Add a `Backup Up data online` loading screen scene
 	- [X] Make the scene
