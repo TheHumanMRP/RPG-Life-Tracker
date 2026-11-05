@@ -15,9 +15,8 @@ func _ensure_entry_exists(inventory_name: String) -> void:
 # Getters
 # ===================================================================
 
-func get_inventory_item_ids(inventory_name) -> Array[int]:
-	if not inventory_name:
-		push_error("Inventory Logic Component: No Inventory Name")
+func get_inventory_item_ids(inventory_name: String) -> Array[int]:
+	_ensure_entry_exists(inventory_name)
 
 	var inventory_item_ids: Array = get_inventory_dict()[inventory_name] as Array
 
