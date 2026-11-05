@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bk0cn4yt32xv0"]
 
-[ext_resource type="Theme" uid="uid://deuleb40h735d" path="res://Folders/Assets/UI_Theme/rpg-life-tracker-ui-theme.tres" id="1_k17gl"]
+[ext_resource type="Theme" uid="uid://deuleb40h735d" path="res://Folders/Assets/UITheme/rpg-life-tracker-ui-theme.tres" id="1_k17gl"]
 [ext_resource type="Script" uid="uid://bpai0n4ebvivs" path="res://Folders/Systems/Input/Scripts/conformation_box.gd" id="2_n4t7i"]
 
 [node name="ConformationBox" type="PanelContainer" unique_id=1137508350 node_paths=PackedStringArray("conformation_textbox", "conform_button", "deny_button")]

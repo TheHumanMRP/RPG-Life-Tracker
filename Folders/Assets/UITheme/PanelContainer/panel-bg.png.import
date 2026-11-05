@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cj6hbcyva6xfl"
-path="res://.godot/imported/Tile.png-4dbbc1c964fe05424ece19474c20b97f.ctex"
+uid="uid://doq41bxt5f7n4"
+path="res://.godot/imported/panel-bg.png-df33fdd4438fca6937a221eece703c29.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Folders/Assets/Main-Art/World/Tile.png"
-dest_files=["res://.godot/imported/Tile.png-4dbbc1c964fe05424ece19474c20b97f.ctex"]
+source_file="res://Folders/Assets/UITheme/PanelContainer/panel-bg.png"
+dest_files=["res://.godot/imported/panel-bg.png-df33fdd4438fca6937a221eece703c29.ctex"]
 
 [params]
 

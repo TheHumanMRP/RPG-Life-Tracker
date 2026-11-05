@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://duypwv8ql7v1"
-path="res://.godot/imported/Mouse-Cursor.png-fd0697b41fed3d1005e18f03f74c3248.ctex"
+uid="uid://f1pqqksdl63w"
+path="res://.godot/imported/cancle_button.png-300459f04e9eb2d9d477a9df28eab685.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Folders/Assets/Project_Display/Mouse-Cursor.png"
-dest_files=["res://.godot/imported/Mouse-Cursor.png-fd0697b41fed3d1005e18f03f74c3248.ctex"]
+source_file="res://Folders/Assets/UITheme/Buttons/cancle_button.png"
+dest_files=["res://.godot/imported/cancle_button.png-300459f04e9eb2d9d477a9df28eab685.ctex"]
 
 [params]
 

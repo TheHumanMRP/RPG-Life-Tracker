@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bgbgfpngstnov"]
 
 [ext_resource type="Script" uid="uid://cfjctevm3r2gq" path="res://Folders/Systems/Main/Scripts/ui_layer.gd" id="1_a1dv6"]
-[ext_resource type="Theme" uid="uid://deuleb40h735d" path="res://Folders/Assets/UI_Theme/rpg-life-tracker-ui-theme.tres" id="2_18fi3"]
+[ext_resource type="Theme" uid="uid://deuleb40h735d" path="res://Folders/Assets/UITheme/rpg-life-tracker-ui-theme.tres" id="2_18fi3"]
 
 [node name="UILayer" type="CanvasLayer" unique_id=1819027134]
 process_mode = 3

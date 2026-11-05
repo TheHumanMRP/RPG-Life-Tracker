@@ -1,10 +1,10 @@
 [gd_resource type="Theme" format=3 uid="uid://bcri7pjwtih8w"]
 
-[ext_resource type="Texture2D" uid="uid://cc57tdf5ulo64" path="res://Folders/Assets/UI_Theme/Buttons/button-hover.png" id="1_1a4o4"]
-[ext_resource type="Texture2D" uid="uid://bn3jneltcyrm0" path="res://Folders/Assets/UI_Theme/Buttons/button-pressed.png" id="1_1cuij"]
-[ext_resource type="Texture2D" uid="uid://doq41bxt5f7n4" path="res://Folders/Assets/UI_Theme/PanelContainer/panel-bg.png" id="1_3x5pv"]
-[ext_resource type="Texture2D" uid="uid://bumasg0l02mi6" path="res://Folders/Assets/UI_Theme/Buttons/button-normal.png" id="3_rgr24"]
-[ext_resource type="FontFile" uid="uid://djau3r863cbqu" path="res://Folders/Assets/UI_Theme/Pixel-Fonts/LowresPixel-Regular.otf" id="3_u4bun"]
+[ext_resource type="Texture2D" uid="uid://cc57tdf5ulo64" path="res://Folders/Assets/UITheme/Buttons/button-hover.png" id="1_1a4o4"]
+[ext_resource type="Texture2D" uid="uid://bn3jneltcyrm0" path="res://Folders/Assets/UITheme/Buttons/button-pressed.png" id="1_1cuij"]
+[ext_resource type="Texture2D" uid="uid://doq41bxt5f7n4" path="res://Folders/Assets/UITheme/PanelContainer/panel-bg.png" id="1_3x5pv"]
+[ext_resource type="Texture2D" uid="uid://bumasg0l02mi6" path="res://Folders/Assets/UITheme/Buttons/button-normal.png" id="3_rgr24"]
+[ext_resource type="FontFile" uid="uid://djau3r863cbqu" path="res://Folders/Assets/UITheme/PixelArtFonts/LowresPixel-Regular.otf" id="3_u4bun"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1a4o4"]
 content_margin_left = 8.0

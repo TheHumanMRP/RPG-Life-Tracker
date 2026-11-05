@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://f1lj0q5jnxkk"
-path="res://.godot/imported/Player-Up.png-8f1b5754f1f14d3be6fc91ddba25ae7b.ctex"
+uid="uid://duypwv8ql7v1"
+path="res://.godot/imported/Mouse-Cursor.png-1e37ec2ba8a0c11e07d4483984e55498.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Folders/Assets/Main-Art/Player/Player-Up.png"
-dest_files=["res://.godot/imported/Player-Up.png-8f1b5754f1f14d3be6fc91ddba25ae7b.ctex"]
+source_file="res://Folders/Assets/ProjectDisplay/Mouse-Cursor.png"
+dest_files=["res://.godot/imported/Mouse-Cursor.png-1e37ec2ba8a0c11e07d4483984e55498.ctex"]
 
 [params]
 

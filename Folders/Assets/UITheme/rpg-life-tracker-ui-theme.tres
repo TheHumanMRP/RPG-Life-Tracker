@@ -1,10 +1,10 @@
 [gd_resource type="Theme" format=3 uid="uid://deuleb40h735d"]
 
-[ext_resource type="FontFile" uid="uid://djau3r863cbqu" path="res://Folders/Assets/UI_Theme/Pixel-Fonts/LowresPixel-Regular.otf" id="1_2dlhk"]
-[ext_resource type="Texture2D" uid="uid://cc57tdf5ulo64" path="res://Folders/Assets/UI_Theme/Buttons/button-hover.png" id="2_jqll8"]
-[ext_resource type="Texture2D" uid="uid://bumasg0l02mi6" path="res://Folders/Assets/UI_Theme/Buttons/button-normal.png" id="3_7273y"]
-[ext_resource type="Texture2D" uid="uid://bn3jneltcyrm0" path="res://Folders/Assets/UI_Theme/Buttons/button-pressed.png" id="4_h40qw"]
-[ext_resource type="Texture2D" uid="uid://doq41bxt5f7n4" path="res://Folders/Assets/UI_Theme/PanelContainer/panel-bg.png" id="5_l21eh"]
+[ext_resource type="FontFile" uid="uid://djau3r863cbqu" path="res://Folders/Assets/UITheme/PixelArtFonts/LowresPixel-Regular.otf" id="1_2dlhk"]
+[ext_resource type="Texture2D" uid="uid://cc57tdf5ulo64" path="res://Folders/Assets/UITheme/Buttons/button-hover.png" id="2_jqll8"]
+[ext_resource type="Texture2D" uid="uid://bumasg0l02mi6" path="res://Folders/Assets/UITheme/Buttons/button-normal.png" id="3_7273y"]
+[ext_resource type="Texture2D" uid="uid://bn3jneltcyrm0" path="res://Folders/Assets/UITheme/Buttons/button-pressed.png" id="4_h40qw"]
+[ext_resource type="Texture2D" uid="uid://doq41bxt5f7n4" path="res://Folders/Assets/UITheme/PanelContainer/panel-bg.png" id="5_l21eh"]
 
 [sub_resource type="FontVariation" id="FontVariation_a7ld8"]
 base_font = ExtResource("1_2dlhk")

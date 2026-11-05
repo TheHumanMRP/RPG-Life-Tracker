@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://f1pqqksdl63w"
-path="res://.godot/imported/cancle_button.png-7e6667b6cc0af8bbf8e8e41189e83ae0.ctex"
+uid="uid://cg6o77s4u673j"
+path="res://.godot/imported/Player-Down.png-59a5976f0ef14cb122f4c22c5151b45f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Folders/Assets/UI_Theme/Buttons/cancle_button.png"
-dest_files=["res://.godot/imported/cancle_button.png-7e6667b6cc0af8bbf8e8e41189e83ae0.ctex"]
+source_file="res://Folders/Assets/MainArt/Player/Player-Down.png"
+dest_files=["res://.godot/imported/Player-Down.png-59a5976f0ef14cb122f4c22c5151b45f.ctex"]
 
 [params]
 

@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://dloofdgwlnik4"]
 
-[ext_resource type="Texture2D" uid="uid://cj6hbcyva6xfl" path="res://Folders/Assets/Main-Art/World/Tile.png" id="1_7yjxa"]
+[ext_resource type="Texture2D" uid="uid://cj6hbcyva6xfl" path="res://Folders/Assets/MainArt/World/Tile.png" id="1_7yjxa"]
 [ext_resource type="Script" uid="uid://dx61wrve64jwn" path="res://Folders/Systems/DungeonRelated/Scripts/dungeon_level.gd" id="1_ksvqd"]
 [ext_resource type="PackedScene" uid="uid://mexd1qvl140q" path="res://Folders/Systems/DungeonRelated/Scenes/checkpoint.tscn" id="2_ksvqd"]
 [ext_resource type="PackedScene" uid="uid://cu4hnlkwj8l7d" path="res://Folders/Systems/DungeonRelated/Scenes/damage_area.tscn" id="3_rf25c"]

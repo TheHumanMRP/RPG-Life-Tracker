@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://mo3byinu41e0"]
 
-[ext_resource type="Theme" uid="uid://deuleb40h735d" path="res://Folders/Assets/UI_Theme/rpg-life-tracker-ui-theme.tres" id="1_b030d"]
+[ext_resource type="Theme" uid="uid://deuleb40h735d" path="res://Folders/Assets/UITheme/rpg-life-tracker-ui-theme.tres" id="1_b030d"]
 [ext_resource type="Script" uid="uid://yq8cvwng1ati" path="res://Folders/Systems/DungeonRelated/Dungeon_Selection_Menu/Scripts/dungeon_item.gd" id="2_dn3w8"]
 
 [node name="Dungeon_Item" type="PanelContainer" unique_id=1998990663]

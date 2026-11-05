@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chco0ybjhmfdu"
-path="res://.godot/imported/sword.png-ec33db43394e884b018559475422c8e3.ctex"
+uid="uid://cc57tdf5ulo64"
+path="res://.godot/imported/button-hover.png-47cacf8b68b33dc92face216e0affc71.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Folders/Assets/Main-Art/Weapons/sword.png"
-dest_files=["res://.godot/imported/sword.png-ec33db43394e884b018559475422c8e3.ctex"]
+source_file="res://Folders/Assets/UITheme/Buttons/button-hover.png"
+dest_files=["res://.godot/imported/button-hover.png-47cacf8b68b33dc92face216e0affc71.ctex"]
 
 [params]
 
