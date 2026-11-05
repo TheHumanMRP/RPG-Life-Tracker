@@ -4,7 +4,6 @@
 [ext_resource type="Script" uid="uid://dx61wrve64jwn" path="res://Folders/Systems/DungeonRelated/Scripts/dungeon_level.gd" id="1_ksvqd"]
 [ext_resource type="PackedScene" uid="uid://mexd1qvl140q" path="res://Folders/Systems/DungeonRelated/Scenes/checkpoint.tscn" id="2_ksvqd"]
 [ext_resource type="PackedScene" uid="uid://cu4hnlkwj8l7d" path="res://Folders/Systems/DungeonRelated/Scenes/damage_area.tscn" id="3_rf25c"]
-[ext_resource type="PackedScene" path="res://Folders/Systems/Enemy/enemy.tscn" id="4_e6xot"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0laef"]
 texture = ExtResource("1_7yjxa")
@@ -51,8 +50,3 @@ position = Vector2(1382, 877)
 insta_kill = true
 player_only = true
 width = 6000.0
-
-[node name="Enemies" type="Node" parent="." unique_id=885169905]
-
-[node name="enemy" parent="Enemies" unique_id=254105940 instance=ExtResource("4_e6xot")]
-position = Vector2(-298, 168)
