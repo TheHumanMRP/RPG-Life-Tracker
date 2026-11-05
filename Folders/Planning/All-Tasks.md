@@ -3,7 +3,7 @@
 
 ## To-Do
 ---
-- [ ] Refactor the entire project
+- [ ] Re-arrange the entire project
 	- [X] Re-arrange DungeonRelated folder
 	- [X] Rename the folders to PascalCase
 ---

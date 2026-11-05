@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dgcrca6nf3v6o"]
+
+[ext_resource type="Script" uid="uid://dqkbm8av1i4gx" path="res://Folders/Systems/TaskManager/Scripts/task_manager_ui_canvas_layer.gd" id="1_sajli"]
+[ext_resource type="PackedScene" uid="uid://gdbbj4t5s8w8" path="res://Folders/Systems/TaskManager/Scenes/task_manager_ui.tscn" id="2_sajli"]
+
+[node name="Task_Manager_UI_Canvas_Layer" type="CanvasLayer" unique_id=576735466]
+script = ExtResource("1_sajli")
+
+[node name="Task_Manager_UI" parent="." unique_id=661376298 instance=ExtResource("2_sajli")]
