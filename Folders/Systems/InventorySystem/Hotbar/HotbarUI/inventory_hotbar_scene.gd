@@ -1,14 +1,14 @@
 extends Control
 
 ## Handles the inventory hotbar UI.
-@onready var hotbar: HBoxContainer = $%Hot_Bar
+@export var hotbar: HBoxContainer
 
 var number_of_hotbar_slots: int
 
-var hotbar_logic: HotbarManager
+var hotbar_manager: HotbarManager
 
 func _ready() -> void:
-	hotbar_logic = InfoGetter.get_hotbar_manager()
+	hotbar_manager = InfoGetter.get_hotbar_manager()
 
 	number_of_hotbar_slots = Constants.NUMBER_OF_HOTBAR_SLOTS
 

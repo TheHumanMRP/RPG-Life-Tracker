@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://svisxss24oxa"]
 
-[ext_resource type="PackedScene" uid="uid://dc28u3ylx6ryd" path="res://Folders/Systems/InventorySystem/Hotbar/InventoryHotbar/InventoryHotbar.tscn" id="1_dv7hd"]
+[ext_resource type="PackedScene" uid="uid://b5gfvc0shp061" path="res://Folders/Systems/InventorySystem/Hotbar/HotbarUI/inventory_hotbar_scene.tscn" id="1_dv7hd"]
 
 [node name="Inventory_UI_Layer" type="CanvasLayer" unique_id=445007278]
 
@@ -15,5 +15,5 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="InventoryHotBar" parent="MarginContainer" unique_id=1133281896 instance=ExtResource("1_dv7hd")]
+[node name="InventoryHotbar" parent="MarginContainer" unique_id=2071298164 instance=ExtResource("1_dv7hd")]
 layout_mode = 2
