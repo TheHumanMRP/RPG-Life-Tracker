@@ -4,7 +4,8 @@
 ## To-Do
 ---
 - [ ] Make the `dungoen` resource which will represent the dungeon
-	- [ ] 
+	- [ ] Add settings for checkpoints
+	- [ ] Add settings for damage areas
 	- [X] Add mapping
 ---
 - [ ] Refactor the entire dungeon_level to the new `dungeon` resource
