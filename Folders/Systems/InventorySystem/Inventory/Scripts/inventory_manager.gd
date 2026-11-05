@@ -1,11 +1,11 @@
 class_name InventoryManager
-extends Node
+extends Resource
 
 # ===================================================================
 # Ensure Dict Entry
 # ===================================================================
 
-func _ensure_entry_exists(inventory_name: String) -> void:
+func setup(inventory_name: String) -> void:
 	if get_inventory_dict().has(inventory_name):
 		return
 	
@@ -28,16 +28,16 @@ func get_inventory_dict() -> Dictionary:
 # ===================================================================
 ## Adds an already-globally-registered item to this inventory by its id.
 func add_item(inventory_name: String, item_id: int) -> void:
-	if get_inventory_item_ids().has(item_id):
+	if get_inventory_item_ids(inventory_name).has(item_id):
 		push_error("InventoryComponent: Item already in this inventory: ", item_id)
 		return
 
 	if Global.all_global_items_manager.get_item_by_id(item_id) == null:
 		return
 
-	get_inventory_item_ids().append(item_id)
+	get_inventory_item_ids(inventory_name).append(item_id)
 
-	notify_inventory_changed()
+	notify_inventory_changed(inventory_name)
 
 
 ## Removes an item's reference from this inventory. The item itself stays
