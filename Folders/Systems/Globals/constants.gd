@@ -19,9 +19,9 @@ const PATH_TO_DEATH_MENU: String = "res://Folders/Systems/DungeonRelated/DeathMe
 
 const PATH_TO_HOTBAR_SLOT: String = "res://Folders/Systems/InventorySystem/Hotbar/HotbarSlot/hotbar_slot.tscn"
 
-const PATH_TO_RIGHT_CLICK_MENU: String = "res://Folders/Systems/Input/Scenes/right_click_menu.tscn"
-const PATH_TO_TEXT_INPUT_BOX: String = "res://Folders/Systems/Input/Scenes/text_input_box.tscn"
-const PATH_TO_CONFORMATION_BOX: String = "res://Folders/Systems/Input/Scenes/conformation_box.tscn"
+const PATH_TO_RIGHT_CLICK_MENU: String = "res://Folders/Systems/Input/RightClickMenu/right_click_menu.tscn"
+const PATH_TO_TEXT_INPUT_BOX: String = "res://Folders/Systems/Input/TextInputBox/text_input_box.tscn"
+const PATH_TO_CONFORMATION_BOX: String = "res://Folders/Systems/Input/ConformationBox/conformation_box.tscn"
 
 const PATH_TO_TASK_ITEM_SCENE: String = "res://Folders/Systems/Task-Manager/Scenes/task_item_scene.tscn"
 
