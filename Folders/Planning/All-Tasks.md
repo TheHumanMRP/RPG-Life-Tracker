@@ -4,7 +4,7 @@
 ## To-Do
 ---
 - [ ] Refactor the entire project
-	- [ ] Re-arrange DungeonRelated folder
+	- [X] Re-arrange DungeonRelated folder
 	- [X] Rename the folders to PascalCase
 ---
 - [ ] Make the `dungoen` resource which will represent the dungeon
