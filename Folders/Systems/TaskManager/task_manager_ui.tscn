@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://gdbbj4t5s8w8"]
 
 [ext_resource type="Script" uid="uid://b2q4bgckmbgh1" path="res://Folders/Systems/TaskManager/task_manager_ui.gd" id="1_tv5vg"]
-[ext_resource type="PackedScene" uid="uid://begy5501tfsx6" path="res://Folders/Systems/TaskManager/task_grid.tscn" id="2_tv5vg"]
+[ext_resource type="PackedScene" uid="uid://begy5501tfsx6" path="res://Folders/Systems/TaskManager/TaskGrid/task_grid.tscn" id="2_tv5vg"]
 
 [node name="Task_Manager_UI" type="MarginContainer" unique_id=661376298]
 anchors_preset = 15
