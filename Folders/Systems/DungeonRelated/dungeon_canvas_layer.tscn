@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dqf5jume5kohl"]
 
-[ext_resource type="PackedScene" uid="uid://dloofdgwlnik4" path="res://Folders/Systems/DungeonRelated/Display/DungeonLevel/dungeon_level.tscn" id="1_es7gv"]
-[ext_resource type="PackedScene" uid="uid://bgbgfpngstnov" path="res://Folders/Systems/DungeonRelated/Display/UI/dungeon_ui_layer.tscn" id="2_os15i"]
+[ext_resource type="PackedScene" uid="uid://dloofdgwlnik4" path="res://Folders/Systems/DungeonRelated/DungeonLevel/dungeon_level.tscn" id="1_es7gv"]
+[ext_resource type="PackedScene" uid="uid://bgbgfpngstnov" path="res://Folders/Systems/DungeonRelated/UI/dungeon_ui_layer.tscn" id="2_os15i"]
 [ext_resource type="PackedScene" uid="uid://svisxss24oxa" path="res://Folders/Systems/InventorySystem/Display/inventory_ui_layer.tscn" id="3_88frb"]
 [ext_resource type="PackedScene" uid="uid://ck6amdbdbjx14" path="res://Folders/Systems/DungeonRelated/DeathMenu/death_menu.tscn" id="4_3cdor"]
 [ext_resource type="PackedScene" uid="uid://bq3csw6a6eqcm" path="res://Folders/Systems/DungeonRelated/PauseMenu/pause_menu.tscn" id="5_os15i"]
