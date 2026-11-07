@@ -9,7 +9,8 @@
 	- [X] Add mapping
 ---
 - [ ] Refactor the entire dungeon_level to the new `dungeon` resource
-	- [ ] Import the tilemap script and stuff from the `tile-map-testing` project
+	- [X] Import the tilemap script and stuff from the `tile-map-testing` project
+	- [ ] Setup the inported stuff
 ---
 - [ ] Impliment dungoen selection menu
 	- [ ] Impliment dungeon_item
