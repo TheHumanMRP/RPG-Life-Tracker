@@ -11,11 +11,9 @@ func _ready() -> void:
 	tile_set = TileSet.new()
 	tile_set.tile_size = TILE_SIZE
 
-	var new_map_data = MapData.new()
 	
-	new_map_data.setup(1, 1, [1])
 
-	build_tilemap(new_map_data)
+	build_tilemap(dungeon_resource.dungeon_tilemap)
 
 
 func build_tilemap(map_data: MapData) -> void:
