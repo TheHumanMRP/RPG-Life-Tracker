@@ -8,7 +8,7 @@
                 - [X] Make it display the proper name
 		- [ ] Make it emit the `dungoen_item_pressed` signal
 
-	- [ ] Make it load the dungoen_level when dungeon_item is pressed
+	- [ ] Make it load the dungoen_level when `dungeon_item_pressed` signal is emitted
 ---
 - [ ] Make the `dungoen` resource which will represent the dungeon
 	- [ ] Add settings for checkpoints

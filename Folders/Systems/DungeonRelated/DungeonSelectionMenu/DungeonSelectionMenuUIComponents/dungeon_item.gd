@@ -1,5 +1,7 @@
 extends PanelContainer
 
+signal dungeon_item_pressed(dungeon_resource)
+
 @export var dungeon_name_label: Label
 @export var play_button: Button
 
