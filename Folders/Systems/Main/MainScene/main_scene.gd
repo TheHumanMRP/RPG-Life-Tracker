@@ -52,21 +52,8 @@ func _add_backing_up_online_data_loading_scene() -> void:
 # SCENE MANAGEMENT
 # ==============================================================================
 
-func switch_scenes(caller: Node, new_scene_path: String, _clear_children: bool = true) -> void:
-	if _clear_children:
-		_clear_all_children()
-
-	# Remove the caller of the scene change caller regardless
-	# of wether clear_children is true or false
-	if self.get_children().has(caller):
-		self.remove_child(caller)
-
-	var new_scene: Node = _get_new_scene(new_scene_path)
-
-	add_child(new_scene)
-
-	# See the task `main menu task manager nill bug` for explanation for call_deferred
-	SignalBus.refresh_ui.emit.call_deferred()
+func switch_scenes() -> void:
+	
 
 
 func _clear_all_children() -> void:
