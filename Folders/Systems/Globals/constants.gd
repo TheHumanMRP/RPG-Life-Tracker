@@ -11,7 +11,7 @@ const PATH_TO_PLAYER_SCENE: String = "res://Folders/Systems/Player/player.tscn"
 
 const PATH_TO_TASK_MANAGER: String = "res://Folders/Systems/TaskManager/Display/TaskManagerCanvasLayer/task_manager_ui_canvas_layer.tscn"
 const PATH_TO_DUNGEON_SELECTION_MENU: String = "res://Folders/Systems/DungeonRelated/DungeonSelectionMenu/DungeonSelectionMenuScene/dungeon_selection_menu.tscn"
-const Path
+const PATH_TO_DUNGEON_ITEM: String = "res://Folders/Systems/DungeonRelated/DungeonSelectionMenu/DungeonSelectionMenuUIComponents/dungeon_item.tscn"
 const PATH_TO_DUNGEON_CANVAS_LAYER: String = "res://Folders/Systems/DungeonRelated/Display/dungeon_canvas_layer.tscn"
 const PATH_TO_MAIN_MENU: String = "res://Folders/Systems/Main/MainMenu/main_menu.tscn"
 
