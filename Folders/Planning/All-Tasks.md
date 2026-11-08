@@ -10,7 +10,7 @@
 		- [X] Make it emit the `dungoen_item_pressed` signal
 
 	- [X] Impliment the `refresh_ui` func
-	- [ ] Test refresh func
+	- [X] Test refresh func
 
 	- [ ] Make it load the dungoen_level when `dungeon_item_pressed` signal is emitted
 ---
