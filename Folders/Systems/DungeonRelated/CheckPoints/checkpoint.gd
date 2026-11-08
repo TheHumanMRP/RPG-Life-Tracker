@@ -1,10 +1,12 @@
 extends Area2D
 
+@export var checkpoint_resource: CheckpointResource
+
 # Prevents making running 2 times if player enters again
 var is_claimed: bool = false
 
 func _ready() -> void:
-	respawn_location = global_position
+	global_position = checkpoint_resource.
 
 
 func _on_body_entered(body: Node2D) -> void:
