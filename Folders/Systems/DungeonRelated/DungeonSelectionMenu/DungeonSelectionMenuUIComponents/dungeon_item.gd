@@ -1,9 +1,9 @@
 extends PanelContainer
 
-signal dungeon_item_pressed(selected_dungeon_resource: DungeonResource)
-
 @export var dungeon_name_label: Label
 @export var play_button: Button
+
+signal dungeon_item_pressed(selected_dungeon_resource: DungeonResource)
 
 var dungeon_resource: DungeonResource
 
@@ -27,7 +27,13 @@ func _refresh_ui() -> void:
 func _on_play_button_pressed() -> void:
 	var conformation_textbox_text: String = "Are you sure you want to play the dungeon: " + dungeon_resource.dungeon_name
 
-	SignalBus.popup_conformation_menu.emit(self, conformation_textbox_text, "Yes", "No", "Play Dungeon")
+	SignalBus.popup_conformation_menu.emit(self, conformation_textbox_text, "Yes", "No", )
 
-func _on_conformation_menu_option_selected() -> void:
-	pass
+func _on_conformation_menu_option_selected(request_sender: Node, conformed: bool, tag: String) -> void:
+	if request_sender != self:
+		return
+	
+	if not conformed:
+		return
+	
+	if tag == "Play Dungeon":
