@@ -34,6 +34,10 @@ func _load_data():
 
 func _on_quit_game() -> void:
 	save_manager.save_data(Global.save_data)
+	
+	if OS.is_debug_build():
+		return
+
 	SignalBus.handle_closing_game.emit()
 
 func _notification(what: int) -> void:
