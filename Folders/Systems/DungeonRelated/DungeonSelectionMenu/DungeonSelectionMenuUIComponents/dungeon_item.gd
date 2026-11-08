@@ -23,6 +23,8 @@ func _refresh_ui() -> void:
 	dungeon_name_label.text = dungeon_resource.dungeon_name
 
 func _on_play_button_pressed() -> void:
-	SignalBus.get_conf
+	var conformation_textbox_text: String = 
+
+	SignalBus.popup_conformation_menu.emit(self, "Are you sure you want to play the dungeon: ")
 
 	dungeon_item_pressed.emit(dungeon_resource)
