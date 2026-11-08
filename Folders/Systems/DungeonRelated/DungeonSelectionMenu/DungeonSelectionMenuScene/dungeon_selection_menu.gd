@@ -23,4 +23,6 @@ func _refresh_ui() -> void:
 		_add_dungeon_item_entry(dungeon_item_packed_scene)
 
 func _add_dungeon_item_entry(dungeon_item_packed_scene: PackedScene) -> void:
+	var dungeon_item_scene: Node = dungeon_item_packed_scene.instantiate()
+
 	
