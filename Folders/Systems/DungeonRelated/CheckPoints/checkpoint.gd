@@ -4,24 +4,22 @@ const levitate_amount: float = 100.0
 
 # Prevents making running 2 times if player enters again
 var is_claimed: bool = false
-var checkpoint_resource: CheckpointResource
 
 @export var collision_area: CollisionShape2D
 @export var display_texture: Sprite2D
 
-func _ready() -> void:
-	# Crash game if checkpoint resource not found
-	assert(checkpoint_resource, "Checkpoint: No Checkpoint Resource")
+var respawn_position: Vector2
 
-func setuo() -> void:
-	global_position = checkpoint_resource.respawn_location
+func setuo(checkpoint_position: Vector2) -> void:
+	respawn_position = checkpoint_position
+	global_position = respawn_position
 
 
 func _on_body_entered(body: Node2D) -> void:
 	if not body.is_in_group("player") or is_claimed:
 		return
 
-	body.spawn_point = checkpoint_resource.respawn_location
+	body.spawn_point = respawn_position
 	
 	claim()
 	
