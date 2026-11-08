@@ -9,6 +9,8 @@ func _ready() -> void:
 	SignalBus.start_loading_screen.connect(_on_start_loading_screen)
 
 func _on_start_loading_screen() -> void:
+	
+
 	show()
 
 	while true:
