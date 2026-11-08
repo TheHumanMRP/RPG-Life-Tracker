@@ -57,6 +57,8 @@ func switch_scenes(new_scene: Node) -> void:
 
 	self.add_child(new_scene)
 
+	SignalBus.refresh_ui.emit()
+
 
 func _clear_all_children() -> void:
 	for child in self.get_children():
