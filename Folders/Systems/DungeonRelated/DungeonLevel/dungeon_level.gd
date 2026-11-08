@@ -2,8 +2,10 @@ extends TileMapLayer
 
 const TILE_SIZE := Vector2i(32, 32)
 
-func _init(dungeon_resource: DungeonResource) -> void:
-	
+var dungeon_resource: DungeonResource
+
+func _init(new_dungeon_resource: DungeonResource) -> void:
+	dungeon_resource = new_dungeon_resource
 
 func _ready() -> void:
 	tile_set = TileSet.new()
