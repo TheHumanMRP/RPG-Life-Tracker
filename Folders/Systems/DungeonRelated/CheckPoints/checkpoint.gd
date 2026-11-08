@@ -14,7 +14,7 @@ func _ready() -> void:
 	assert(checkpoint_resource, "Checkpoint: No Checkpoint Resource")
 
 func _setuo() -> void:
-	collision_area.move_local_x()
+	collision_area.extents.x = 
 	global_position = checkpoint_resource.respawn_location
 
 
