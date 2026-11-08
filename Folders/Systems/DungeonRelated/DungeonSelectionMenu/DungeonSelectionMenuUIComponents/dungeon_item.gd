@@ -1,12 +1,15 @@
 extends PanelContainer
 
 @export var dungeon_name_label: Label
+@export var play_button: Button
 
 var dungeon_resource: DungeonResource
 
 func _ready() -> void:
 	# Crash if dungeon_resource not present in debug builds
 	assert(dungeon_resource, "Dungeon Item: No Dungeon Resource!")
+
+	play_button.pressed.connect()
 
 
 func refresh(new_dungeon_resource: DungeonResource) -> void:
@@ -16,3 +19,5 @@ func refresh(new_dungeon_resource: DungeonResource) -> void:
 
 func _refresh_ui() -> void:
 	dungeon_name_label.text = dungeon_resource.dungeon_name
+
+func _on_play_button
