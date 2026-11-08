@@ -25,6 +25,8 @@
 	- [ ] Impliment the setting of coins
 	- [ ] Impliment the setting of damage areas
 ---
+- [ ] 
+---
 - [ ] Make a settings menu
         - [ ] Make the online backup settings section
 ---
