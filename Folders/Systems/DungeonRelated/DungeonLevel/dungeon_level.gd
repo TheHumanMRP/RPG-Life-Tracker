@@ -11,7 +11,8 @@ func _ready() -> void:
 	tile_set = TileSet.new()
 	tile_set.tile_size = TILE_SIZE
 
-	assert(not dungeon_resource, "Dungeon Level: No dungeon resource!")
+	# Crash if dungeon_resource not present in debug builds
+	assert(dungeon_resource, "Dungeon Level: No dungeon resource!")
 
 	build_tilemap(dungeon_resource.dungeon_tilemap)
 
