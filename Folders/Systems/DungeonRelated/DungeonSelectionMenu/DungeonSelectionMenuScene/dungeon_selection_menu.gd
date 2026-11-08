@@ -30,6 +30,8 @@ func _add_dungeon_item_entry(dungeon_item_packed_scene: PackedScene, dungoen_lev
 
 	dungeon_items_container.add_child(dungeon_item_scene)
 
+	dungeon_items_container.dungeon_item_pressed.connect(_on_dungeon_item_selected)
+
 func _get_dungeon_level() -> Array[DungeonResource]:
 	var dungeon_level: DungeonResource = DungeonResource.new()
 
@@ -43,5 +45,6 @@ func _get_dungeon_level() -> Array[DungeonResource]:
 
 func _on_dungeon_item_selected(selected_dungeon_resource: DungeonResource) -> void:
 	# To-Do: Make the level spawning code
-	
+	print("Item Selected")
+
 	return
