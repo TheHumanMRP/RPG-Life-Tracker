@@ -13,6 +13,8 @@ func _ready() -> void:
 
 	play_button.pressed.connect(_on_play_button_pressed)
 
+	SignalBus.conformation_menu_option_selected.connect(_on_conformation_menu_option_selected)
+
 
 func refresh(new_dungeon_resource: DungeonResource) -> void:
 	dungeon_resource = new_dungeon_resource
@@ -27,4 +29,5 @@ func _on_play_button_pressed() -> void:
 
 	SignalBus.popup_conformation_menu.emit(self, conformation_textbox_text, "Yes", "No", "Play Dungeon")
 
-	dungeon_item_pressed.emit(dungeon_resource)
+func _on_conformation_menu_option_selected() -> void:
+	pass
