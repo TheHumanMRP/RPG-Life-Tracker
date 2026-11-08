@@ -41,4 +41,7 @@ func _get_dungeon_level() -> Array[DungeonResource]:
 
 	# return InfoGetter.get_save_data().dungeon_save_data.dungeon_levels
 
-func _
+func _on_dungeon_item_selected(selected_dungeon_resource: DungeonResource) -> void:
+	# To-Do: Make the level spawning code
+	
+	return
