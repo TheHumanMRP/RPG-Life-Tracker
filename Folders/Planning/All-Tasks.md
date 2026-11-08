@@ -3,7 +3,7 @@
 
 ## To-Do
 ---
-- [ ] Impliment dungoen selection menu
+- [X] Impliment dungoen selection menu
 	- [X] Impliment dungeon_item
 		- [X] Make it conform the press before the emmition of signal
                 - [X] Make it display the proper name
@@ -12,7 +12,9 @@
 	- [X] Impliment the `refresh_ui` func
 	- [X] Test refresh func
 
-	- [ ] Make it load the dungoen_level when `dungeon_item_pressed` signal is emitted
+	- [X] Make it load the dungoen_level when `dungeon_item_pressed` signal is emitted
+
+	- [ ] Connect the 
 ---
 - [ ] Make the `dungoen` resource which will represent the dungeon
 	- [ ] Add settings for checkpoints
