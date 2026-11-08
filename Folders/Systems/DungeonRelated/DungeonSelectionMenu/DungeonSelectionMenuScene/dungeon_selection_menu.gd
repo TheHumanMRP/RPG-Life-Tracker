@@ -15,7 +15,8 @@ func _refresh_ui() -> void:
 	for child in dungeon_items_container.get_children():
 		child.queue_free()
 	
-	var dungeon_levels: Array[DungeonResource] = InfoGetter.get_save_data().dungeon_save_data.dungeon_levels
+	# Remove the test data later
+	var dungeon_levels: Array[DungeonResource] = _get_dungeon_level()
 
 	var dungeon_item_packed_scene: PackedScene = load(Constants.PATH_TO_DUNGEON_ITEM)
 
@@ -34,8 +35,8 @@ func _get_dungeon_level() -> Array[DungeonResource]:
 
 	dungeon_level.dungeon_name = "Hello"
 
-	var dungeon_levels : Array[DungeonResource] = []
+	var dungeon_levels: Array[DungeonResource] = [dungeon_level]
 
-	return []
+	return dungeon_levels
 
 	# return InfoGetter.get_save_data().dungeon_save_data.dungeon_levels
