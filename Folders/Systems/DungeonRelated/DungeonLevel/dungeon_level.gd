@@ -1,7 +1,5 @@
 extends TileMapLayer
 
-var loaded_tiles: Dictionary[int, Vector2i] = {}
-
 const TILE_SIZE := Vector2i(32, 32)
 
 func _ready() -> void:
@@ -16,6 +14,8 @@ func _ready() -> void:
 
 
 func build_map(map_data: MapData) -> void:
+	var loaded_tiles: Dictionary[int, Vector2i] = {}
+
 	for y in range(map_data.map_height):
 		for x in range(map_data.map_width):
 			var index := y * map_data.map_width + x
