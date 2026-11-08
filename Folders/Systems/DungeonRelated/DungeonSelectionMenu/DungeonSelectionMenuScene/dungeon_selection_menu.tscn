@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://bro14pularecm"]
 
 [ext_resource type="Script" uid="uid://bbuxxfdoifd8" path="res://Folders/Systems/DungeonRelated/DungeonSelectionMenu/DungeonSelectionMenuScene/dungeon_selection_menu.gd" id="1_wstq6"]
-[ext_resource type="PackedScene" uid="uid://mo3byinu41e0" path="res://Folders/Systems/DungeonRelated/DungeonSelectionMenu/DungeonSelectionMenuUIComponents/dungeon_item.tscn" id="2_ybwv1"]
 
 [node name="Dungeon_Selection_Menu" type="CanvasLayer" unique_id=915991939]
 script = ExtResource("1_wstq6")
@@ -18,7 +17,4 @@ theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
 [node name="DungeonItemContainer" type="VBoxContainer" parent="MarginContainer" unique_id=277244033]
-layout_mode = 2
-
-[node name="Dungeon_Item" parent="MarginContainer/DungeonItemContainer" unique_id=1998990663 instance=ExtResource("2_ybwv1")]
 layout_mode = 2

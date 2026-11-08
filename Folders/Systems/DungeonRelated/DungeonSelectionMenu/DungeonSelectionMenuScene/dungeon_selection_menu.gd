@@ -26,9 +26,9 @@ func _refresh_ui() -> void:
 func _add_dungeon_item_entry(dungeon_item_packed_scene: PackedScene, dungoen_level: DungeonResource) -> void:
 	var dungeon_item_scene: Node = dungeon_item_packed_scene.instantiate()
 
-	dungeon_items_container.add_child(dungeon_item_scene)
+	dungeon_item_scene.setup(dungoen_level)
 
-	dungeon_item_scene.refresh(dungoen_level)
+	dungeon_items_container.add_child(dungeon_item_scene)
 
 func _get_dungeon_level() -> Array[DungeonResource]:
 	var dungeon_level: DungeonResource = DungeonResource.new()
