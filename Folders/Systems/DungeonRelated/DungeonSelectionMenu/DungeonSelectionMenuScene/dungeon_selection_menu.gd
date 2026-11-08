@@ -20,11 +20,11 @@ func _refresh_ui() -> void:
 	var dungeon_item_packed_scene: PackedScene = load(Constants.PATH_TO_DUNGEON_ITEM)
 
 	for dungeon_level in dungeon_levels:
-		_add_dungeon_item_entry(dungeon_item_packed_scene)
+		_add_dungeon_item_entry(dungeon_item_packed_scene, dungeon_level)
 
-func _add_dungeon_item_entry(dungeon_item_packed_scene: PackedScene, dungeon_resource: DungeonResource) -> void:
+func _add_dungeon_item_entry(dungeon_item_packed_scene: PackedScene, dungoen_level: DungeonResource) -> void:
 	var dungeon_item_scene: Node = dungeon_item_packed_scene.instantiate()
 
 	dungeon_items_container.add_child(dungeon_item_scene)
 
-	dungeon_item_scene.refresh()
+	dungeon_item_scene.refresh(dungoen_level)
