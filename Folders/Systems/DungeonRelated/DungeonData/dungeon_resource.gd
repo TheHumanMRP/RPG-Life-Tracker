@@ -3,4 +3,4 @@ extends Resource
 
 @export var dungeon_name: String
 @export var dungeon_tilemap: MapData
-@export
+@export var checkpoints: 
