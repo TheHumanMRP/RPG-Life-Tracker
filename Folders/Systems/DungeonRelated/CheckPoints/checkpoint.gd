@@ -4,6 +4,7 @@ extends Area2D
 
 var respawn_location: Vector2
 
+# Prevents making running 2 times if player enters again
 var is_claimed: bool = false
 
 func _ready() -> void:
