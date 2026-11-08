@@ -1,9 +1,10 @@
 extends Area2D
 
-@export var checkpoint_resource: CheckpointResource
+const levitate_amount: float = 100.0
 
 # Prevents making running 2 times if player enters again
 var is_claimed: bool = false
+var checkpoint_resource: CheckpointResource
 
 func _ready() -> void:
 	# Crash game if checkpoint resource not found
