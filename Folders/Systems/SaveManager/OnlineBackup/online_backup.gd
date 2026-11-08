@@ -22,10 +22,10 @@ func get_save_file_path() -> String:
 
 # Qutting Handled here cause of uploading before save
 func _notification(what: int) -> void:
-	if OS.is_debug_build():
-		return
 
 	if what != NOTIFICATION_WM_CLOSE_REQUEST:
+	if OS.is_debug_build():
+		get_tree().quit()
 		handle_closing_game()
 	
 func handle_closing_game() -> void:
