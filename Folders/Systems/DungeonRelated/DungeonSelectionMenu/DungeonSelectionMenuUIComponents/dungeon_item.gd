@@ -9,7 +9,7 @@ func _ready() -> void:
 	# Crash if dungeon_resource not present in debug builds
 	assert(dungeon_resource, "Dungeon Item: No Dungeon Resource!")
 
-	play_button.pressed.connect()
+	play_button.pressed.connect(_on_play_button_pressed)
 
 
 func refresh(new_dungeon_resource: DungeonResource) -> void:
@@ -20,4 +20,5 @@ func refresh(new_dungeon_resource: DungeonResource) -> void:
 func _refresh_ui() -> void:
 	dungeon_name_label.text = dungeon_resource.dungeon_name
 
-func _on_play_button
+func _on_play_button_pressed() -> void:
+	pass

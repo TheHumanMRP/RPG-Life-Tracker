@@ -10,7 +10,9 @@
 ---
 - [ ] Refactor the entire dungeon_level to the new `dungeon` resource
 	- [X] Import the tilemap script and stuff from the `tile-map-testing` project
-	- [ ] Setup the inported stuff
+	- [X] Setup the inported stuff
+	- [ ] Impliment the setting of coins
+	- [ ] Impliment the setting of damage areas
 ---
 - [ ] Impliment dungoen selection menu
 	- [ ] Impliment dungeon_item
