@@ -3,6 +3,12 @@
 
 ## To-Do
 ---
+- [ ] Impliment dungoen selection menu
+	- [ ] Impliment dungeon_item
+                - [X] Make it display the proper name
+
+	- [ ] Make it load the dungoen_level when dungeon_item is pressed
+---
 - [ ] Make the `dungoen` resource which will represent the dungeon
 	- [ ] Add settings for checkpoints
 	- [ ] Add settings for damage areas
@@ -13,12 +19,6 @@
 	- [X] Setup the inported stuff
 	- [ ] Impliment the setting of coins
 	- [ ] Impliment the setting of damage areas
----
-- [ ] Impliment dungoen selection menu
-	- [ ] Impliment dungeon_item
-		- [ ] Decide on the stats to show in the dungeon_item
-                - [ ] Make the dungeon_item scene
-	- [ ] Impliment selection of dungeon_item
 ---
 - [ ] Make a settings menu
         - [ ] Make the online backup settings section
