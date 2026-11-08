@@ -53,4 +53,4 @@ func _add_dungeon_level(selected_dungeon_resource: DungeonResource) -> void:
 
 	dungeon_level.setup(selected_dungeon_resource)
 
-	
+	SignalBus.

@@ -52,8 +52,10 @@ func _add_backing_up_online_data_loading_scene() -> void:
 # SCENE MANAGEMENT
 # ==============================================================================
 
-func switch_scenes() -> void:
-	
+func switch_scenes(new_scene: Node) -> void:
+	_clear_all_children()
+
+	self.add_child(new_scene)
 
 
 func _clear_all_children() -> void:
