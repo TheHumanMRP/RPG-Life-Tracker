@@ -11,9 +11,7 @@ func _ready() -> void:
 	tile_set = TileSet.new()
 	tile_set.tile_size = TILE_SIZE
 
-	if not dungeon_resource:
-		push_error("Dungoen Level: No dungeon resouce")
-		
+	assert(not dungeon_resource, "Dungeon Level: No dungeon resource!")
 
 	build_tilemap(dungeon_resource.dungeon_tilemap)
 
