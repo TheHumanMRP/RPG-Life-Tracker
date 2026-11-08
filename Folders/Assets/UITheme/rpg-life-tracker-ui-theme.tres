@@ -42,6 +42,10 @@ expand_margin_top = 4.0
 expand_margin_right = 4.0
 expand_margin_bottom = 4.0
 
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_l67cu"]
+color = Color(1, 1, 1, 1)
+thickness = 2
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yntfl"]
 texture = ExtResource("5_l21eh")
 texture_margin_left = 4.0
@@ -66,6 +70,7 @@ Button/fonts/font = SubResource("FontVariation_a7ld8")
 Button/styles/hover = SubResource("StyleBoxTexture_73qvp")
 Button/styles/normal = SubResource("StyleBoxTexture_doy41")
 Button/styles/pressed = SubResource("StyleBoxTexture_w1p51")
+HSeparator/styles/separator = SubResource("StyleBoxLine_l67cu")
 PanelContainer/styles/panel = SubResource("StyleBoxTexture_yntfl")
 PopupMenu/font_sizes/font_size = 25
 PopupMenu/styles/panel = SubResource("StyleBoxTexture_f70ks")
