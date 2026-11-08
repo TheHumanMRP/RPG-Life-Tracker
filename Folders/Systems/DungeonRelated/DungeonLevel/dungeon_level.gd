@@ -8,11 +8,11 @@ func setup(new_dungeon_resource: DungeonResource) -> void:
 	dungeon_resource = new_dungeon_resource
 
 func _ready() -> void:
-	tile_set = TileSet.new()
-	tile_set.tile_size = TILE_SIZE
-
 	# Crash if dungeon_resource not present in debug builds
 	assert(dungeon_resource, "Dungeon Level: No dungeon resource!")
+
+	tile_set = TileSet.new()
+	tile_set.tile_size = TILE_SIZE
 
 	build_tilemap(dungeon_resource.dungeon_tilemap)
 
