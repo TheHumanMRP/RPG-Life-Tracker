@@ -47,4 +47,6 @@ func _on_dungeon_item_selected(selected_dungeon_resource: DungeonResource) -> vo
 	_add_dungeon_level(selected_dungeon_resource)
 
 func _add_dungeon_level(selected_dungeon_resource: DungeonResource) -> void:
-	
+	var dungeon_level_packed_scene: PackedScene = load(Constants.PATH_TO_DUNGEON_LEVEL)
+
+	var dungeon_level: Node = dungeon_level_packed_scene.instantiate(selected_dungeon_resource)

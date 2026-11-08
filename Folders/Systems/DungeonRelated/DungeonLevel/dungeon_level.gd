@@ -4,7 +4,7 @@ const TILE_SIZE := Vector2i(32, 32)
 
 var dungeon_resource: DungeonResource
 
-func setup(new_dungeon_resource: DungeonResource) -> void:
+func _init(new_dungeon_resource: DungeonResource) -> void:
 	dungeon_resource = new_dungeon_resource
 
 func _ready() -> void:
