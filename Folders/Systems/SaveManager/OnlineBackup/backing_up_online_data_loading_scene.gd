@@ -9,7 +9,8 @@ func _ready() -> void:
 	SignalBus.start_loading_screen.connect(_on_start_loading_screen)
 
 func _on_start_loading_screen() -> void:
-	
+	if OS.is_debug_build():
+		return
 
 	show()
 
