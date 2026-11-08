@@ -13,7 +13,7 @@ func _ready() -> void:
 	# Crash game if checkpoint resource not found
 	assert(checkpoint_resource, "Checkpoint: No Checkpoint Resource")
 
-func _setuo() -> void:
+func setuo() -> void:
 	global_position = checkpoint_resource.respawn_location
 
 
