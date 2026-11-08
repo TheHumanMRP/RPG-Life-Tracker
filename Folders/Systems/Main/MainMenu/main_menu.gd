@@ -43,7 +43,7 @@ func _set_mouse_filters() -> void:
 # Handling Input
 # ==============================================
 func _on_dungeon_selection_menu_button_pressed() -> void:
-	SignalBus.switch_scene.emit(self, Constants.PATH_TO_DUNGEON_SELECTION_MENU, true)
+	SignalBus.switch_scene.emit()
 
 func _on_task_manager_button_pressed() -> void:
 	SignalBus.switch_scene.emit(self, Constants.PATH_TO_TASK_MANAGER, true)
@@ -52,7 +52,7 @@ func _on_quit_game_button_pressed() -> void:
 	SignalBus.popup_conformation_menu.emit(self, "Are you sure you want to quit the game?", "Yes", "No", "quit game")
 
 func _get_scene(path_to_scene: String) -> Node:
-	return load()
+	return load(path_to_scene).instantiate()
 
 # ==============================================
 # Right Click Menu
