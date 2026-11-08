@@ -14,9 +14,6 @@ func _ready() -> void:
 	assert(checkpoint_resource, "Checkpoint: No Checkpoint Resource")
 
 func _setuo() -> void:
-	collision_area.extents.x = checkpoint_resource.checkpoint_width / 2.0
-	collision_area.extents.y = checkpoint_resource.checkpoint_width / 2.0
-	
 	global_position = checkpoint_resource.respawn_location
 
 
