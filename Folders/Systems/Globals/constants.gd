@@ -54,6 +54,7 @@ const PATH_TO_TASK_ENTRY_SCENE: String = "res://Folders/Systems/TaskManager/Task
 const PATH_TO_DUNGEON_SELECTION_MENU: String = "res://Folders/Systems/DungeonRelated/DungeonSelectionMenu/DungeonSelectionMenuScene/dungeon_selection_menu.tscn"
 const PATH_TO_DUNGEON_ITEM: String = "res://Folders/Systems/DungeonRelated/DungeonSelectionMenu/DungeonSelectionMenuUIComponents/dungeon_item.tscn"
 const PATH_TO_DUNGEON_CANVAS_LAYER: String = "res://Folders/Systems/DungeonRelated/Display/dungeon_canvas_layer.tscn"
+const PATH_TO_DUNGEON_LEVEL: String
 
 # Inventory & Hotbar
 const PATH_TO_INVENTORY_UI_LAYER: String = "res://Folders/Systems/InventorySystem/Display/inventory_ui_layer.tscn"
