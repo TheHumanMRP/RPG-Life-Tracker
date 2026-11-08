@@ -6,12 +6,15 @@ const levitate_amount: float = 100.0
 var is_claimed: bool = false
 var checkpoint_resource: CheckpointResource
 
+@export var collision_area: CollisionShape2D
+@export var display_texture: Sprite2D
+
 func _ready() -> void:
 	# Crash game if checkpoint resource not found
 	assert(checkpoint_resource, "Checkpoint: No Checkpoint Resource")
 
 func _setuo() -> void:
-	self
+	collision_area.move_local_x()
 	global_position = checkpoint_resource.respawn_location
 
 
