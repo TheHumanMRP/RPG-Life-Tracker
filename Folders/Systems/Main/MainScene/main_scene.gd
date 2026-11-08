@@ -67,9 +67,7 @@ func _clear_all_children() -> void:
 
 
 func _get_new_scene(new_scene_path: String) -> Node:
-	var packed_new_scene: PackedScene = load(new_scene_path)
-	var new_scene: Node = packed_new_scene.instantiate()
-	return new_scene
+	return (load(new_scene_path) as PackedScene).instantiate()
 
 
 # ==============================================================================
