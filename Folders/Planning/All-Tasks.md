@@ -25,6 +25,8 @@
 ---
 - [ ] Impliment the shifting of items from inventory to hotbar when starting a dungeon
 ---
+
+---
 - [ ] Add enemies in the dungeon
 ---
 - [ ] Make pixel art for the enemy
