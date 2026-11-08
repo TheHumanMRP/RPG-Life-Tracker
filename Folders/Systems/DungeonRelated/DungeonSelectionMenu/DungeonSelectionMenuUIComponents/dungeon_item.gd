@@ -1,6 +1,6 @@
 extends PanelContainer
 
-signal dungeon_item_pressed(dungeon_resource)
+signal dungeon_item_pressed(selected_dungeon_resource: DungeonResource)
 
 @export var dungeon_name_label: Label
 @export var play_button: Button
@@ -23,4 +23,6 @@ func _refresh_ui() -> void:
 	dungeon_name_label.text = dungeon_resource.dungeon_name
 
 func _on_play_button_pressed() -> void:
-	pass
+	SignalBus.get_conf
+
+	dungeon_item_pressed.emit(dungeon_resource)

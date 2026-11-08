@@ -5,8 +5,9 @@
 ---
 - [ ] Impliment dungoen selection menu
 	- [ ] Impliment dungeon_item
+		- [ ] Make it conform the press before the emmition of signal
                 - [X] Make it display the proper name
-		- [ ] Make it emit the `dungoen_item_pressed` signal
+		- [X] Make it emit the `dungoen_item_pressed` signal
 
 	- [ ] Make it load the dungoen_level when `dungeon_item_pressed` signal is emitted
 ---
