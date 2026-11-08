@@ -1,9 +1,5 @@
 extends Area2D
 
-@export var levitate_amount: float = 100.0
-
-var respawn_location: Vector2
-
 # Prevents making running 2 times if player enters again
 var is_claimed: bool = false
 
@@ -17,9 +13,9 @@ func _on_body_entered(body: Node2D) -> void:
 
 	body.spawn_point = respawn_location
 	
-	mark_as_claimed()
+	claim()
 	
-func mark_as_claimed() -> void:
+func claim() -> void:
 	is_claimed = true
 
 	var tween := create_tween()

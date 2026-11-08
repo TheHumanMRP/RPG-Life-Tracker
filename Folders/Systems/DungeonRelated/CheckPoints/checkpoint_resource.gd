@@ -1,3 +1,4 @@
 extends Resource
 
-@export var 
+@export var levitate_amount: float = 100.0
+@export var respawn_location: Vector2
