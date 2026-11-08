@@ -1,4 +1,4 @@
-class_name DungeonLevels
+class_name DungeonSaveData
 extends Resource
 
-@export var dungeons: Array[DungeonResource]
+@export var dungeon_levels: Array[DungeonResource]

@@ -15,4 +15,4 @@ func _refresh_ui() -> void:
 	for child in dungeon_items_container.get_children():
 		child.queue_free()
 	
-	var dungeon_levels: Array[DungeonResource] = InfoGetter.get_save_data().dungeon_levels.dungeons
+	var dungeon_levels: Array[DungeonResource] = InfoGetter.get_save_data().dungeon_save_data.dungeons
