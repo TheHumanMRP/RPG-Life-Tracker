@@ -3,10 +3,6 @@
 [ext_resource type="Theme" uid="uid://deuleb40h735d" path="res://Folders/Assets/UITheme/rpg-life-tracker-ui-theme.tres" id="1_b030d"]
 [ext_resource type="Script" uid="uid://yq8cvwng1ati" path="res://Folders/Systems/DungeonRelated/DungeonSelectionMenu/DungeonSelectionMenuUIComponents/dungeon_item.gd" id="2_dn3w8"]
 
-[sub_resource type="StyleBoxLine" id="StyleBoxLine_pd0ek"]
-color = Color(1, 1, 1, 1)
-thickness = 2
-
 [node name="Dungeon_Item" type="PanelContainer" unique_id=1998990663]
 anchors_preset = 8
 anchor_left = 0.5
@@ -34,9 +30,7 @@ text = "Dungeon Name"
 
 [node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer" unique_id=1418608227]
 layout_mode = 2
-theme = ExtResource("1_b030d")
 theme_override_constants/separation = 8
-theme_override_styles/separator = SubResource("StyleBoxLine_pd0ek")
 
 [node name="Play_Button" type="Button" parent="MarginContainer/VBoxContainer" unique_id=2074031362]
 layout_mode = 2
