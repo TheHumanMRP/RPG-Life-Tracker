@@ -6,14 +6,17 @@ extends Area2D
 var is_claimed: bool = false
 
 func _ready() -> void:
-	global_position = checkpoint_resource.
+	# Crash game if checkpoint resource not found
+	assert(checkpoint_resource, "Checkpoint: No Checkpoint Resource")
+
+	global_position = checkpoint_resource.respawn_location
 
 
 func _on_body_entered(body: Node2D) -> void:
 	if not body.is_in_group("player") or is_claimed:
 		return
 
-	body.spawn_point = respawn_location
+	body.spawn_point = checkpoint_resource.respawn_location
 	
 	claim()
 	
