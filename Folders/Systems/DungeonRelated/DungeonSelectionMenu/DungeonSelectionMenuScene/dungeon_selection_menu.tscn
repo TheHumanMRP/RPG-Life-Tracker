@@ -2,8 +2,9 @@
 
 [ext_resource type="Script" uid="uid://bbuxxfdoifd8" path="res://Folders/Systems/DungeonRelated/DungeonSelectionMenu/DungeonSelectionMenuScene/dungeon_selection_menu.gd" id="1_wstq6"]
 
-[node name="Dungeon_Selection_Menu" type="CanvasLayer" unique_id=915991939]
+[node name="Dungeon_Selection_Menu" type="CanvasLayer" unique_id=915991939 node_paths=PackedStringArray("dungeon_items_container")]
 script = ExtResource("1_wstq6")
+dungeon_items_container = NodePath("MarginContainer/DungeonItemContainer")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=782637956]
 anchors_preset = 15

@@ -15,8 +15,6 @@ var tasks_related_managers: TasksRelatedManagers
 var current_game_state: All_Enums.GAME_STATES
 
 func _set_game_state_settings() -> void:
-	print("Set Game State Called, new state: ", current_game_state)
-
 	match current_game_state:
 		All_Enums.GAME_STATES.MainMenu:
 			get_tree().paused = false
