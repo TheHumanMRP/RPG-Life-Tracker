@@ -8,6 +8,8 @@ func _init() -> void:
 func _ready() -> void:
 	_refresh_ui()
 
+	SignalBus.refresh_ui.connect(_refresh_ui)
+
 func _set_global_state() -> void:
 	SignalBus.set_game_state.emit(All_Enums.GAME_STATES.DungeonSelectionMenu)
 

@@ -3,19 +3,6 @@
 
 ## To-Do
 ---
-- [X] Impliment dungoen selection menu
-	- [X] Impliment dungeon_item
-		- [X] Make it conform the press before the emmition of signal
-                - [X] Make it display the proper name
-		- [X] Make it emit the `dungoen_item_pressed` signal
-
-	- [X] Impliment the `refresh_ui` func
-	- [X] Test refresh func
-
-	- [X] Make it load the dungoen_level when `dungeon_item_pressed` signal is emitted
-
-	- [ ] Connect the 
----
 - [ ] Make the `dungoen` resource which will represent the dungeon
 	- [ ] Add settings for checkpoints
 	- [ ] Add settings for damage areas
@@ -62,6 +49,19 @@
 
 ## Completed Tasks
 ---
+- [X] Impliment dungoen selection menu
+	- [X] Impliment dungeon_item
+		- [X] Make it conform the press before the emmition of signal
+                - [X] Make it display the proper name
+		- [X] Make it emit the `dungoen_item_pressed` signal
+
+	- [X] Impliment the `refresh_ui` func
+	- [X] Test refresh func
+
+	- [X] Make it load the dungoen_level when `dungeon_item_pressed` signal is emitted
+
+	- [X] Connect the refresh_ui func to the refresh_ui signal
+
 - [X] Re-arrange the entire project
 	- [X] Update all the broken references
 	- [X] Re-arrange DungeonRelated folder
