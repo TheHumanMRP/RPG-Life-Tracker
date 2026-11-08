@@ -24,13 +24,13 @@ func _refresh_ui() -> void:
 		_add_dungeon_item_entry(dungeon_item_packed_scene, dungeon_level)
 
 func _add_dungeon_item_entry(dungeon_item_packed_scene: PackedScene, dungoen_level: DungeonResource) -> void:
-	var dungeon_item_scene: Node = dungeon_item_packed_scene.instantiate()
+	var dungeon_item_scene: DungeonItem = dungeon_item_packed_scene.instantiate() as DungeonItem
 
 	dungeon_item_scene.setup(dungoen_level)
 
 	dungeon_items_container.add_child(dungeon_item_scene)
 
-	dungeon_items_container.dungeon_item_pressed.connect(_on_dungeon_item_selected)
+	dungeon_item_scene..connect(_on_dungeon_item_selected)
 
 func _get_dungeon_level() -> Array[DungeonResource]:
 	var dungeon_level: DungeonResource = DungeonResource.new()
