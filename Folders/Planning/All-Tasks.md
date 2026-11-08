@@ -4,8 +4,8 @@
 ## To-Do
 ---
 - [ ] Impliment dungoen selection menu
-	- [ ] Impliment dungeon_item
-		- [ ] Make it conform the press before the emmition of signal
+	- [X] Impliment dungeon_item
+		- [X] Make it conform the press before the emmition of signal
                 - [X] Make it display the proper name
 		- [X] Make it emit the `dungoen_item_pressed` signal
 

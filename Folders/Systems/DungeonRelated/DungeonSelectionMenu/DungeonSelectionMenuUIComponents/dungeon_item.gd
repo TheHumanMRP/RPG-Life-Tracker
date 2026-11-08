@@ -39,4 +39,4 @@ func _on_conformation_menu_option_selected(request_sender: Node, conformed: bool
 		return
 	
 	if tag == DUNGEON_PLAYING_CONFORMATION_TAG:
-		dungeon_item_pressed.emit(s)
+		dungeon_item_pressed.emit(dungeon_resource)
