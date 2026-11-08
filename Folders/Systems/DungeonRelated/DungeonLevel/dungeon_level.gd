@@ -10,10 +10,10 @@ func _ready() -> void:
 	
 	new_map_data.setup(1, 1, [1])
 
-	build_map(new_map_data)
+	build_tilemap(new_map_data)
 
 
-func build_map(map_data: MapData) -> void:
+func build_tilemap(map_data: MapData) -> void:
 	var loaded_tiles: Dictionary[int, Vector2i] = {}
 
 	for y in range(map_data.map_height):
