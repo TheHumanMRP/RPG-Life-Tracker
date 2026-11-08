@@ -24,7 +24,7 @@ func build_map(map_data: MapData) -> void:
 			if tile_id == 0:
 				continue
 
-			var atlas_coords := get_tile(tile_id)
+			var atlas_coords := get_tile(loaded_tiles, tile_id)
 
 			if atlas_coords == Vector2i(-1, -1):
 				continue
@@ -36,7 +36,7 @@ func build_map(map_data: MapData) -> void:
 			)
 
 
-func get_tile(tile_id: int) -> Vector2i:
+func get_tile(loaded_tiles: Dictionary[int, Vector2i], tile_id: int) -> Vector2i:
 	if loaded_tiles.has(tile_id):
 		return loaded_tiles[tile_id]
 
