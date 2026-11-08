@@ -3,7 +3,7 @@
 [ext_resource type="Theme" uid="uid://deuleb40h735d" path="res://Folders/Assets/UITheme/rpg-life-tracker-ui-theme.tres" id="1_b030d"]
 [ext_resource type="Script" uid="uid://yq8cvwng1ati" path="res://Folders/Systems/DungeonRelated/DungeonSelectionMenu/DungeonSelectionMenuUIComponents/dungeon_item.gd" id="2_dn3w8"]
 
-[node name="Dungeon_Item" type="PanelContainer" unique_id=1998990663]
+[node name="Dungeon_Item" type="PanelContainer" unique_id=1998990663 node_paths=PackedStringArray("dungeon_name_label", "play_button")]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -13,6 +13,8 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_b030d")
 script = ExtResource("2_dn3w8")
+dungeon_name_label = NodePath("MarginContainer/VBoxContainer/Dungeon_Name")
+play_button = NodePath("MarginContainer/VBoxContainer/Play_Button")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1113106317]
 layout_mode = 2
