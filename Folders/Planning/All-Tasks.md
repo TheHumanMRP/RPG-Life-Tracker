@@ -11,7 +11,7 @@
 - [ ] Refactor the entire dungeon_level to the new `dungeon` resource
 	- [X] Import the tilemap script and stuff from the `tile-map-testing` project
 	- [X] Setup the inported stuff
-	- [ ] Impliment the setting of coins
+	- [X] Impliment the settings of checkpoints
 	- [ ] Impliment the setting of damage areas
 ---
 - [ ] Make a dungeon creation system
@@ -25,7 +25,8 @@
 ---
 - [ ] Impliment the shifting of items from inventory to hotbar when starting a dungeon
 ---
-
+- [ ] Make pixel art for checkpoints
+- [ ] Setup the collision for checkpoints
 ---
 - [ ] Add enemies in the dungeon
 ---
