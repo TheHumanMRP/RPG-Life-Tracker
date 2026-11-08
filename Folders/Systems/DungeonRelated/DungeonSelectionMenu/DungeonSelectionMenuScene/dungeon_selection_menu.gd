@@ -22,7 +22,9 @@ func _refresh_ui() -> void:
 	for dungeon_level in dungeon_levels:
 		_add_dungeon_item_entry(dungeon_item_packed_scene)
 
-func _add_dungeon_item_entry(dungeon_item_packed_scene: PackedScene) -> void:
+func _add_dungeon_item_entry(dungeon_item_packed_scene: PackedScene, dungeon_resource: DungeonResource) -> void:
 	var dungeon_item_scene: Node = dungeon_item_packed_scene.instantiate()
 
-	
+	dungeon_items_container.add_child(dungeon_item_scene)
+
+	dungeon_item_scene.refresh()
