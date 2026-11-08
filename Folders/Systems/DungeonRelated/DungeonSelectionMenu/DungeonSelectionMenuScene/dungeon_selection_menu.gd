@@ -30,6 +30,12 @@ func _add_dungeon_item_entry(dungeon_item_packed_scene: PackedScene, dungoen_lev
 	dungeon_item_scene.refresh(dungoen_level)
 
 func _get_dungeon_level() -> Array[DungeonResource]:
-	return [DungeonResource.new()]
+	var dungeon_level: DungeonResource = DungeonResource.new()
+
+	dungeon_level.dungeon_name = "Hello"
+
+	var dungeon_levels : Array[DungeonResource] = []
+
+	return []
 
 	# return InfoGetter.get_save_data().dungeon_save_data.dungeon_levels
