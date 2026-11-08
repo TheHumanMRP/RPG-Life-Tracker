@@ -17,11 +17,11 @@ func _ready() -> void:
 
 	SignalBus.conformation_menu_option_selected.connect(_on_conformation_menu_option_selected)
 
-
-func refresh(new_dungeon_resource: DungeonResource) -> void:
-	dungeon_resource = new_dungeon_resource
-
 	_refresh_ui()
+
+
+func setup(new_dungeon_resource: DungeonResource) -> void:
+	dungeon_resource = new_dungeon_resource
 
 func _refresh_ui() -> void:
 	dungeon_name_label.text = dungeon_resource.dungeon_name
