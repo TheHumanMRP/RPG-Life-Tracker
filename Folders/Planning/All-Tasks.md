@@ -4,7 +4,7 @@
 ## To-Do
 ---
 - [ ] Make the `dungeon` resource which will represent the dungeon
-	- [ ] Add settings for checkpoints
+	- [X] Add settings for checkpoints
 	- [ ] Add settings for damage areas
 	- [X] Add mapping
 ---
