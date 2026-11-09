@@ -5,7 +5,8 @@ extends Area2D
 # Vars
 # ==================================================
 
-@export var dungeon_area_resource: DungeonAreaResource
+var dungeon_area_resource: DungeonAreaResource
+@export var collision_shape: 
 @onready var timer: Timer = $%Timer
 
 # ==================================================
@@ -61,19 +62,7 @@ func damage() -> void:
 		
 		attack_component.attack_target(body)
 
-# ==================================================
-# Internal Methods
-# ==================================================
+func setup() -> void:
 
-# Updates the collision shape size based on
-# the exported width and height values.
-func _update_collision() -> void:
-	var collision_shape := $%CollisionShape2D
-
-	if collision_shape == null:
-		return
-
-	if collision_shape.shape == null:
-		collision_shape.shape = RectangleShape2D.new()
 
 	(collision_shape.shape as RectangleShape2D).size = Vector2(dungeon_area_resource.width, dungeon_area_resource.height)
