@@ -1,1 +1,3 @@
+class_name DungeonAreaResource
 extends Resource
+
