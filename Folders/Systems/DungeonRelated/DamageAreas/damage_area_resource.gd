@@ -8,3 +8,4 @@ extends Resource
 @export var interval_in_seconds: float = 1.0
 @export var width: float = 64.0
 @export var height: float = 64.0
+@export var position: Vector2
