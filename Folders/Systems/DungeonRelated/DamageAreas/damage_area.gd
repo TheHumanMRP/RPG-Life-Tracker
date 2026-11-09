@@ -64,3 +64,5 @@ func damage() -> void:
 
 func setup() -> void:
 	(collision_shape.shape as RectangleShape2D).size = Vector2(dungeon_area_resource.width, dungeon_area_resource.height)
+
+	self.position = dungeon_area_resource.position
