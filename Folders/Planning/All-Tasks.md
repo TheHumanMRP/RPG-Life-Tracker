@@ -9,7 +9,9 @@
 	- [X] Add mapping
 
 - [ ] Make the setup func that sets
-
+	- [ ] Width
+	- [ ] Height
+	- [ ] Position
 
 ---
 - [ ] Refactor the entire dungeon_level to the new `dungeon` resource
