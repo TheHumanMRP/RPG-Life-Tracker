@@ -5,6 +5,7 @@ extends Area2D
 # Vars
 # ==================================================
 
+@export var dungeon_area_resource: DungeonAreaResource
 @onready var timer: Timer = $%Timer
 
 # ==================================================
@@ -14,7 +15,7 @@ extends Area2D
 func _ready() -> void:
 	_update_collision()
 
-	timer.wait_time = interval_in_seconds
+	timer.wait_time = dungeon_area_resource.interval_in_seconds
 	timer.timeout.connect(damage)
 
 # ==================================================
@@ -39,22 +40,22 @@ func scan() -> void:
 
 	damage()
 
-	if not one_time_damage:
+	if not dungeon_area_resource.one_time_damage:
 		timer.start()
 
 # Applies damage to all valid overlapping bodies.
 func damage() -> void:
 	var attack_component: AttackComponent = AttackComponent.new()
 
-	attack_component.setup(damage_per_interval)
+	attack_component.setup(dungeon_area_resource.damage_per_interval)
 
 	var bodies: Array = get_overlapping_bodies()
 
 	for body in bodies:
-		if player_only and not body.is_in_group("player"):
+		if dungeon_area_resource.player_only and not body.is_in_group("player"):
 			continue
 
-		if insta_kill:
+		if dungeon_area_resource.insta_kill:
 			attack_component.insta_kill_target(body)
 			continue
 		
@@ -75,4 +76,4 @@ func _update_collision() -> void:
 	if collision_shape.shape == null:
 		collision_shape.shape = RectangleShape2D.new()
 
-	(collision_shape.shape as RectangleShape2D).size = Vector2(width, height)
+	(collision_shape.shape as RectangleShape2D).size = Vector2(dungeon_area_resource.width, dungeon_height)
