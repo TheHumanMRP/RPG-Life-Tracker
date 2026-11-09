@@ -1,4 +1,4 @@
-class_name DungeonAreaResource
+class_name DamageAreaResource
 extends Resource
 
 @export var insta_kill: bool = false
