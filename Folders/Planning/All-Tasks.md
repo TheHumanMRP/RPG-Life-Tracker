@@ -3,10 +3,14 @@
 
 ## To-Do
 ---
-- [ ] Make the `dungeon` resource which will represent the dungeon
+- [X] Make the `dungeon` resource which will represent the dungeon
 	- [X] Add settings for checkpoints
-	- [ ] Add settings for damage areas
+	- [X] Add settings for damage areas
 	- [X] Add mapping
+
+- [ ] Make the setup func that sets
+
+
 ---
 - [ ] Refactor the entire dungeon_level to the new `dungeon` resource
 	- [X] Import the tilemap script and stuff from the `tile-map-testing` project

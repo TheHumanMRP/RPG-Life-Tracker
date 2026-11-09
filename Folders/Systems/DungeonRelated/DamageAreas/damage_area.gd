@@ -76,4 +76,4 @@ func _update_collision() -> void:
 	if collision_shape.shape == null:
 		collision_shape.shape = RectangleShape2D.new()
 
-	(collision_shape.shape as RectangleShape2D).size = Vector2(dungeon_area_resource.width, dungeon_height)
+	(collision_shape.shape as RectangleShape2D).size = Vector2(dungeon_area_resource.width, dungeon_area_resource.height)
