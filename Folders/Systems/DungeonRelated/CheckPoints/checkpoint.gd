@@ -10,7 +10,7 @@ var is_claimed: bool = false
 
 var respawn_position: Vector2
 
-func setuo(checkpoint_position: Vector2) -> void:
+func setup(checkpoint_position: Vector2) -> void:
 	respawn_position = checkpoint_position
 	global_position = respawn_position
 
