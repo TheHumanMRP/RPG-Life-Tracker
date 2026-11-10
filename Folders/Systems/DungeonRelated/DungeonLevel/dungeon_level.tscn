@@ -14,3 +14,5 @@ position = Vector2(-140, 93)
 [node name="DungeonTileMap" type="TileMapLayer" parent="." unique_id=722540266]
 
 [node name="CheckpointContainer" type="Node" parent="." unique_id=2139208561]
+
+[node name="DamageAreasContainer" type="Node" parent="." unique_id=1960987707]
