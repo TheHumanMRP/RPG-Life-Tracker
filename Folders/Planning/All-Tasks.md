@@ -3,8 +3,6 @@
 
 ## To-Do
 ---
-- [ ] Test the dungeon_level and selection menu with a test resource
----
 - [ ] Make a dungeon creation system
 ---
 - [ ] Make a settings menu
