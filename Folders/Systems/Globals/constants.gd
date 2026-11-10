@@ -56,6 +56,7 @@ const PATH_TO_DUNGEON_ITEM: String = "res://Folders/Systems/DungeonRelated/Dunge
 const PATH_TO_DUNGEON_CANVAS_LAYER: String = "res://Folders/Systems/DungeonRelated/Display/dungeon_canvas_layer.tscn"
 const PATH_TO_DUNGEON_LEVEL: String = "res://Folders/Systems/DungeonRelated/DungeonLevel/dungeon_level.tscn"
 const PATH_TO_CHECKPOINT: String = "res://Folders/Systems/DungeonRelated/CheckPoints/checkpoint.tscn"
+const PATH_TO_DAMAGE_AREA: String = "res://Folders/Systems/DungeonRelated/DamageAreas/damage_area.tscn"
 
 # Inventory & Hotbar
 const PATH_TO_INVENTORY_UI_LAYER: String = "res://Folders/Systems/InventorySystem/Display/inventory_ui_layer.tscn"
