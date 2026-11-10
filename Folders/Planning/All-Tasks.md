@@ -3,10 +3,10 @@
 
 ## To-Do
 ---
-- [ ] Make the setup func in damage area that sets
-	- [ ] Width
-	- [ ] Height
-	- [ ] Position
+- [X] Make the setup func in damage area that sets
+	- [X] Width
+	- [X] Height
+	- [X] Position
 ---
 - [ ] Refactor the entire dungeon_level to the new `dungeon` resource
 	- [X] Import the tilemap script and stuff from the `tile-map-testing` project

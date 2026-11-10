@@ -63,6 +63,8 @@ func damage() -> void:
 		attack_component.attack_target(body)
 
 func setup(new_damage_area_resource: DamageAreaResource) -> void:
+	damage_area_resource = new_damage_area_resource
+
 	(collision_shape.shape as RectangleShape2D).size = Vector2(damage_area_resource.width, damage_area_resource.height)
 
 	self.position = damage_area_resource.position
