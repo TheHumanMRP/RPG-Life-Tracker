@@ -12,8 +12,10 @@ func _ready() -> void:
 	# Only in debug build cause the assert is removed in export
 	assert(dungeon_resource, "Dungeon Level: No dungeon resource!")
 
+	# For exported builds
 	if not dungeon_resource:
-		push_error(""Dungeon Level: No dungeon resource!")
+		push_error("Dungeon Level: No dungeon resource!")
+		return
 
 	dungoen_tilemap.tile_set = TileSet.new()
 	dungoen_tilemap.tile_set.tile_size = dungeon_resource.dungeon_tilemap.tile_size
@@ -69,3 +71,6 @@ func get_tile(loaded_tiles: Dictionary[int, Vector2i], tile_id: int) -> Vector2i
 	loaded_tiles[tile_id] = Vector2i.ZERO
 
 	return coords
+
+func place_checkpoints() -> void:
+	pass
