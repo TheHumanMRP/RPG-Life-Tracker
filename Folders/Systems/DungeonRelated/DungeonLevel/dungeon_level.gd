@@ -1,7 +1,5 @@
 extends Node2D
 
-const TILE_SIZE := Vector2i(32, 32)
-
 var dungeon_resource: DungeonResource
 
 @export var dungoen_tilemap: TileMap
