@@ -11,13 +11,13 @@ extends Node
 
 @export_group("Up Animations")
 
-@export var up_right_animation_name: String = "up-right"
-@export var up_left_animation_name: String = "up-left"
+@export var up_right_animation_name: String = "UpRight"
+@export var up_left_animation_name: String = "UpLeft"
 
 @export_group("Down Animations")
 
-@export var down_right_animation_name: String = "down-right"
-@export var down_left_animation_name: String = "down-left"
+@export var down_right_animation_name: String = "DownRight"
+@export var down_left_animation_name: String = "DownLeft"
 
 @export_group("Animation Player")
 
