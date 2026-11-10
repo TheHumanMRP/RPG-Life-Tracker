@@ -18,7 +18,7 @@ enum ITEM_TYPES {
 
 }
 
-# Don't forget to update the Global script after editing thsi
+# Don't forget to update the Global script after editing this
 enum GAME_STATES {
 	MainMenu,
 	DungeonSelectionMenu,
@@ -40,4 +40,10 @@ enum TASK_STATUS {
 	ToDo,
 	Completed,
 
+}
+
+enum DUNGEON_TILEMAP_TYPES {
+	Fire,
+	Ice,
+	Wood
 }
