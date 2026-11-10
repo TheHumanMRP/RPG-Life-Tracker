@@ -22,13 +22,13 @@ func build_tilemap(map_data: MapData) -> void:
 
 	for y in range(map_data.map_height):
 		for x in range(map_data.map_width):
-			var index := y * map_data.map_width + x
-			var tile_id := map_data.map[index]
+			var index: int = y * map_data.map_width + x
+			var tile_id: int = map_data.map[index]
 
 			if tile_id == 0:
 				continue
 
-			var atlas_coords := get_tile(loaded_tiles, tile_id)
+			var atlas_coords: Vector2i = get_tile(loaded_tiles, tile_id)
 
 			if atlas_coords == Vector2i(-1, -1):
 				continue
@@ -48,13 +48,13 @@ func get_tile(loaded_tiles: Dictionary[int, Vector2i], tile_id: int) -> Vector2i
 		push_warning("Unknown tile ID: " + str(tile_id))
 		return Vector2i(-1, -1)
 
-	var texture := load(MapData.MAP_TILES[tile_id]) as Texture2D
+	var texture: Texture2D = load(MapData.MAP_TILES[tile_id]) as Texture2D
 
 	if texture == null:
 		push_error("Failed to load tile: " + str(tile_id))
 		return Vector2i(-1, -1)
 
-	var atlas := TileSetAtlasSource.new()
+	var atlas: TileSetAtlasSource = TileSetAtlasSource.new()
 	atlas.texture = texture
 	atlas.texture_region_size = dungeon_resource.dungeon_tilemap.tile_size
 	atlas.create_tile(Vector2i.ZERO)
