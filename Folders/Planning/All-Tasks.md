@@ -3,12 +3,7 @@
 
 ## To-Do
 ---
-- [X] Make the setup func in damage area that sets
-	- [X] Width
-	- [X] Height
-	- [X] Position
----
-- [ ] Refactor the entire dungeon_level to the new `dungeon` resource
+- [ ] Refactor the entire dungeon_level to the new `DungeonResource` resource
 	- [X] Import the tilemap script and stuff from the `tile-map-testing` project
 	- [X] Setup the inported stuff
 	- [X] Impliment the settings of checkpoints
@@ -52,6 +47,11 @@
 
 ## Completed Tasks
 ---
+- [X] Make the setup func in damage area that sets
+	- [X] Width
+	- [X] Height
+	- [X] Position
+
 - [X] Make the `dungeon` resource which will represent the dungeon
 	- [X] Add settings for checkpoints
 	- [X] Add settings for damage areas
