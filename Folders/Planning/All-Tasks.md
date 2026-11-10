@@ -3,6 +3,8 @@
 
 ## To-Do
 ---
+- [ ] Test the dungeon_level and selection menu with a test resource
+---
 - [ ] Make a dungeon creation system
 ---
 - [ ] Make a settings menu
@@ -41,6 +43,12 @@
 
 ## Completed Tasks
 ---
+- [X] Refactor the entire dungeon_level to the new `DungeonResource` resource
+	- [X] Import the tilemap script and stuff from the `tile-map-testing` project
+	- [X] Setup the inported stuff
+	- [X] Impliment the settings of checkpoints
+	- [X] Impliment the setting of damage areas
+
 - [X] Make the setup func in damage area that sets
 	- [X] Width
 	- [X] Height
