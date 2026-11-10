@@ -56,12 +56,12 @@ func get_tile(loaded_tiles: Dictionary[int, Vector2i], tile_id: int) -> Vector2i
 
 	var atlas := TileSetAtlasSource.new()
 	atlas.texture = texture
-	atlas.texture_region_size = TILE_SIZE
+	atlas.texture_region_size = dungeon_resource.dungeon_tilemap.tile_size
 	atlas.create_tile(Vector2i.ZERO)
 
-	var source_id := tile_set.add_source(atlas)
+	var source_id: int = dungoen_tilemap.tile_set.add_source(atlas)
 
-	var coords := Vector2i(source_id, 0)
+	var coords: Vector2i = Vector2i(source_id, 0)
 	loaded_tiles[tile_id] = Vector2i.ZERO
 
 	return coords
