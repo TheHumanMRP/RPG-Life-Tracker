@@ -7,4 +7,7 @@ extends Resource
 @export var tilemap_sheet: Texture2D
 @export var tilemap_data: Dictionary[int, Vector2i]
 
-func get_tile_at_id
+func get_tile_at_id(tile_id: int) -> Texture2D:
+	var tile_position: Vector2i = tilemap_data[tile_id]
+
+	
