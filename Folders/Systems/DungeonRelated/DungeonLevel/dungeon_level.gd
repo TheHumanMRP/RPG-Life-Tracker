@@ -34,9 +34,9 @@ func _build_tilemap(map_data: MapData) -> void:
 
 	# Register all available tiles in the atlas.
 	for tile_id in dungeon_tilemap.tilemap_data:
-		var pixel_position: Vector2 = dungeon_tilemap.tilemap_data[tile_id]
+		var pixel_position: Vector2i = dungeon_tilemap.tilemap_data[tile_id]
 
-		var atlas_coords: Vector2 = pixel_position / dungeon_tilemap.tile_size
+		var atlas_coords: Vector2i = pixel_position / dungeon_tilemap.tile_size
 
 		atlas.create_tile(atlas_coords)
 
