@@ -22,7 +22,7 @@ func _ready() -> void:
 		return
 
 	dungoen_tilemap.tile_set = TileSet.new()
-	dungoen_tilemap.tile_set.tile_size = dungeon_resource.dungeon_tilemap.tile_size
+	dungoen_tilemap.tile_set.tile_size = dungeon_resource.dungeon_tilemap.map
 
 	_build_tilemap(dungeon_resource.dungeon_tilemap)
 
