@@ -33,7 +33,7 @@ func build_tilemap(map_data: MapData) -> void:
 			if atlas_coords == Vector2i(-1, -1):
 				continue
 
-			set_cell(
+			dungoen_tilemap.set_cell(
 				Vector2i(x, y),
 				0,
 				atlas_coords
