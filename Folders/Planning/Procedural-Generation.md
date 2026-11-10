@@ -1,426 +1,565 @@
-# Procedural Dungeon Generation — Design Documentation v1.0
+# Procedural Dungeon Generation
 
+**Status:** Design specification\
+**Version:** 1.0
 
+## 1. Overview
 
-Design finalized
+The procedural dungeon generation system combines handcrafted room
+templates with procedurally generated room placement and passages.
 
-Implementation pending
+Rooms are authored manually and stored as resources. The generator
+selects rooms, rotates and positions them, connects their doorways with
+irregular passages, and assembles the result into the existing dungeon
+data structure.
 
+The intended dungeon experience focuses on exploration and combat. The
+layout should be large, irregular, and difficult to predict. The player
+should not be able to identify the main route simply by looking at the
+dungeon.
 
+The generator creates the dungeon's structure and tilemap. Enemy
+placement, checkpoints, damage areas, loot, and other gameplay
+population systems are outside the scope of the initial implementation.
 
-## 1. Core concept
+## 2. Design Goals
 
-The dungeon generation system will combine handcrafted room templates with procedurally generated connections and placements.
+-   Combine handcrafted rooms with procedural layout generation.
+-   Generate one designated main progression path.
+-   Generate additional branches from unused room doorways.
+-   Make room placement irregular, with horizontal and vertical
+    variation.
+-   Rotate rooms in 90-degree increments to increase layout variety.
+-   Connect rooms using winding, irregular passages rather than only
+    straight corridors.
+-   Allow passages to create traversal challenges, provided every
+    required connection remains reachable.
+-   Support configurable connections to existing rooms.
+-   Avoid an arbitrary maximum dungeon world size.
+-   Produce a `DungeonResource` compatible with the existing dungeon
+    rendering system.
 
-Rather than generating individual rooms from scratch, the generator selects premade rooms, rotates them, positions them, and connects their doorways using procedurally generated passages.
+## 3. Existing Dungeon Data Structure
 
-The result should be a large, irregular dungeon that encourages exploration and combat.
+The generated dungeon must use the existing resource structure:
 
-The player should never know which path leads to the boss. Every unexplored doorway should feel like a potential continuation of the dungeon.
+``` gdscript
+class_name DungeonResource
+extends Resource
 
-### Design principles
-
-- Exploration over linear progression.
-- Combat-focused encounters.
-- Irregular room placement without recognizable patterns.
-- Handcrafted room geometry.
-- Procedurally generated passages.
-- Randomized room rotation.
-- Potentially enormous dungeons.
-- No arbitrary dungeon world-size limit.
-
-## 2. Room resources
-
-Rooms will be manually created and stored as individual resources.
-
-Each room defines its own dimensions, tile data, and doorways.
-
-### Proposed resource structure
-
+@export var dungeon_name: String
+@export var dungeon_tilemap: MapData
+@export var checkpoints: Array[Vector2]
+@export var damage_areas: Array[DamageAreaResource]
 ```
+
+The map data stores the final tile layout and references the tile
+definitions used to render it.
+
+``` gdscript
+class_name MapData
+extends Resource
+
+@export var tile_size: Vector2i
+@export var map_width: int
+@export var map_height: int
+@export var map: Array[int]
+@export var map_tiles: Dictionary[int, String]
+```
+
+The procedural generator must output a normal `DungeonResource`. The
+rendering system should not need to know whether the dungeon was
+authored manually or generated procedurally.
+
+## 4. Room Resources
+
+Rooms are created manually and stored as individual resources. The
+generator assembles these resources; it does not generate room interiors
+from scratch.
+
+Each room defines:
+
+-   Its dimensions.
+-   Its tile data.
+-   The positions of its doorways.
+
+Room dimensions are not fixed globally. Each room resource defines its
+own width and height.
+
+A conceptual initial resource structure is:
+
+``` gdscript
 class_name DungeonRoomResource
 extends Resource
 
 @export var room_name: String
-
 @export var map_width: int
 @export var map_height: int
 @export var map: Array[int]
-
 @export var doorways: Array[Vector2i]
 ```
 
-This is a conceptual starting structure. We can refine it when implementing room storage.
+This structure is a starting point and may be refined during
+implementation.
 
-### Room doorways
+### 4.1 Doorways
 
-A doorway represents a possible connection point between a room and a passage.
+A doorway is a possible connection point between a room and a passage.
 
-Important characteristics:
+-   A room can have any supported number of doorways.
+-   Doorways are defined by positions on the room boundary.
+-   Doorways are not permanently classified as entrances or exits.
+-   Any available doorway may be used to connect the room to another
+    room.
+-   A doorway that is not used by the connection that placed the room
+    becomes a candidate for further generation.
 
-- Rooms can have different numbers of doorways.
-- Doorways can be positioned anywhere along the room's boundaries.
-- Doorways are not permanently designated as entrances or exits.
-- Any doorway can be used for generation or progression.
-- Room dimensions are defined individually in their resources.
+Starting and ending rooms are selected from rooms with exactly one
+doorway.
 
-### Room rotation
+### 4.2 Room Rotation
 
-Rooms can be rotated in 90-degree increments.
+Rooms can be rotated by 0, 90, 180, or 270 degrees.
 
-Possible rotations:
+Rotation must update both:
 
-- 0°
-- 90°
-- 180°
-- 270°
+-   The room's tile data.
+-   The positions of all its doorways.
 
-Rotation must affect both room tile data and doorway positions.
+The generator should use rotation to increase layout variety without
+requiring separately authored resources for every orientation.
 
-This prevents repetitive room orientations and increases the number of possible dungeon configurations without requiring multiple manually created versions of the same room.
+Room rotation must preserve the room's dimensions correctly. For 90- and
+270-degree rotations, the resulting width and height are exchanged.
 
-## 3. Main path generation
+## 5. Main Path Generation
 
-The first generation stage creates the dungeon's main progression route.
+The first generation stage creates the main progression route.
 
-### Generation process
+### 5.1 Starting and Ending Rooms
 
-1. Select a random starting room with exactly one doorway.
-2. Select a random ending room with exactly one doorway.
-3. Generate approximately 15 rooms between them.
-4. Randomly position rooms with significant horizontal and vertical variation.
-5. Connect consecutive rooms using procedurally generated passages.
-6. Ensure every connection is traversable.
+1.  Select a starting room with exactly one doorway.
+2.  Select an ending room with exactly one doorway.
+3.  Keep the selected ending room as the designated final destination.
+4.  Generate approximately 15 rooms between the starting and ending
+    rooms.
 
-[GitHub - OndrejNepozitek/Edgar-DotNet: Configurable procedural layout generator](https://images.openai.com/static-rsc-4/_d_Bm8baPXA8sLcC5xbmf0TRjiAEYI3DjmTYE32jvcuaZptt3wnWy_1h6fix7UfOcOWuXfXhMnARC3M90GVPVPvE2edFPd-1-WPPfzteWqNClxjqPWzt2Cz10K66X9qfl9-i0SxqlqOqj3kWAfFes2FourVzU4hqbCvzWznRMXw?purpose=inline)
+The starting and ending rooms are connected to the main route through
+their single doorways.
 
-[RogueLike地牢生成算法Unity实现 - SPIDER的陌生人 - 博客园](https://images.openai.com/static-rsc-4/Fc0mbbZdninIxId8kf0l3K53uXNj2YAm0ewcfVWN-nUqr3nBLYZ5kA0ifKx_49c9TooLSvbFRVQKjvf7vQc5xtej3nYnWo_I3HbYG8EMA55gm41mKxh7h74Xsris0txn5bubweeqWBf-YIAi8GFrC8BkyL5PFC9QlFR7RfvmCZk?purpose=inline)
+### 5.2 Intermediate Room Placement
 
-[LoBit old school tileset (core) by Helicity](https://images.openai.com/static-rsc-4/63exx4aaOYGoi1B-yC28SsLPSQjp3ksacAIMx_0B2CabTTu63eXdnpS6PaWCXyKsMVP-9Kj9-Vzndjrpflrx4NQaeGppucP16fBDRrcDCMvx9WNIeaZPQgnuFBdPxCNZLzai1iE6JuOy0ZHdFnQhXmm4l0Hz17CEyMd25aOa9aM?purpose=inline)
+Intermediate rooms should be placed with irregular horizontal and
+vertical variation.
 
-10
+The main route must not form a predictable straight line. Room positions
+should vary in both axes, and passages should accommodate the resulting
+distances and directions.
 
-The main path should not resemble a straight line.
+Room placement must account for:
 
-Room positioning should be unpredictable, allowing the route to move up, down, left, and right.
+-   The selected room's dimensions.
+-   Its chosen rotation.
+-   The doorway used for the incoming connection.
+-   Existing room geometry.
+-   The space needed to generate a valid passage.
 
-The ending room represents the boss destination.
+Rooms may be placed close together. There is no required minimum
+separation distance, but room geometry must not overlap in a way that
+produces an invalid layout.
 
-Important: The generator internally knows which rooms belong to the main path, but the player receives no indication of this.
+### 5.3 Main Path Metadata
 
-## 4. Passage generation
+The generator must retain which rooms belong to the main path.
 
-Passages connect room doorways.
+This information is generation metadata. It is not exposed to the player
+and should not be used to visually identify the main route.
 
-Unlike traditional rectangular corridors, passages should resemble irregular underground cave systems.
+Retaining this information will be useful later for boss placement,
+progression logic, debugging, and other gameplay systems.
 
-[AI Game Map Generator for RPG, Roguelike & Strategy Games](https://images.openai.com/static-rsc-4/lMZX-LT7W6rR9dl22mIBDQxpqUlngCfXmEtm14LdM1CLSVv1GiocaX-u_o2g6-cj34vN5ZsCOeCSr4Lx1jwRi-SI9cMsITKxGfjfUyvX9DC7Z2HJbe__0VFF-zvQYkGZ46h79FO79I6Q80tTY0KCyWAkjvSW6-nldvxVY6CFSfs?purpose=inline)
+## 6. Passage Generation
 
-[Cave Construction Sample by Madcowchef | Fantasy map, Dungeon maps, Tabletop rpg maps](https://images.openai.com/static-rsc-4/UsifHZFlRMYYn8MoQmjGtdLkS7d-nBFubBIh2BeTBv2Aax0jghwvkgdMFO3DbIWzQWxRjDTNfwkUXLvYGG7XMq6w3m_d3B1cWdCNevCTGZtoEhrhWhX9PjslUfXH1kn6_NJdmB93RHLiR68oRD3Q4xTnAzp6CNA4jJ2pnu48qDc?purpose=inline)
+Passages connect compatible room doorways.
 
-[Andor's Trail Interactive map \[0.7.0\] | blackwater_mountain38](https://images.openai.com/static-rsc-4/eYEsUx9dXwviWi_dtVb83ziW85H1lelLOAA_b-fGSmJPpiKHY9SBABQLe6vmIfV6M77gOWGZscNtFXEdvY3CdC0stnKASa_SUFuehImBA5lgQjP_m49NqaB3gqH72lVNsPjzBFC98pa5J_FeeuOKaNH7nMTPHEvvVGkl3RITZGE?purpose=inline)
+Passages should resemble irregular underground cave tunnels in a 2D
+environment rather than conventional straight, uniform corridors.
 
-9
+### 6.1 Passage Characteristics
 
-### Passage characteristics
+Passages may include:
 
-- Irregular shapes.
-- Random horizontal and vertical movement.
-- Variable passage widths.
-- Occasional narrow sections.
-- Potential parkour challenges.
-- Vertical variation where possible.
-- Traversable connections between rooms.
+-   Irregular winding paths.
+-   Horizontal and vertical movement.
+-   Variable widths.
+-   Narrow sections.
+-   Gaps and jumps.
+-   Different platform heights.
+-   Descending sections.
+-   Other traversal challenges supported by the game's movement system.
 
-### Parkour
+The generator may produce parkour-like challenges naturally through
+passage geometry. A separate parkour-generation system is not required
+for the initial implementation.
 
-The generator does not need a dedicated parkour-generation system initially.
+### 6.2 Reachability
 
-Instead, irregular passage generation should naturally produce interesting traversal challenges.
+Randomness must not create an impossible required connection.
 
-Possible outcomes include:
+Every passage connecting two rooms must be traversable from one doorway
+to the other using the game's movement capabilities.
 
-- Gaps requiring jumps.
-- Different platform heights.
-- Narrow platforms.
-- Descending sections.
-- Difficult but reachable terrain.
+Passage generation must validate the connection before accepting it.
 
-Critical requirement: Randomness must never produce an impossible connection.
+### 6.3 Passage Intersections
 
-### Passage intersections
+During the initial implementation, passages should not intentionally
+reuse or intersect existing passages.
 
-Passages will not intentionally intersect or reuse existing passages during the initial implementation.
+Avoiding passage intersections reduces the complexity of geometry
+generation, tile merging, and connection validation.
 
-This avoids the additional complexity of handling overlapping passage geometry.
+Connecting a doorway to an existing room is a separate feature described
+in Section 8. It does not imply that arbitrary passage intersections are
+supported.
 
-## 5. Side-path generation
+## 7. Side-Path Generation
 
-After the main path is complete, the generator processes every unused doorway.
+After the main path has been generated, the generator processes every
+unused doorway.
 
-This is where the dungeon becomes a network of exploration paths.
+Side paths are not predetermined optional branches with a fixed
+destination. They are generated by repeatedly attaching rooms to unused
+doorways. Newly generated rooms may introduce further unused doorways,
+which can produce additional branches.
 
-### Generation algorithm
+### 7.1 Doorway Processing
 
-Initialize doorway queue
+Use a queue or another explicit worklist to track doorways that still
+need processing.
 
-Collect all unused doorways from main-path rooms.
+For each doorway:
 
-Select next doorway
+1.  Select one unprocessed doorway.
+2.  Attempt to connect it to a newly generated room or, when enabled, an
+    existing room.
+3.  If a new room is placed, identify all of its unused doorways.
+4.  Add those doorways to the worklist with their associated side-path
+    depth.
+5.  Continue until the worklist is empty.
 
-Remove one doorway from the queue.
+Process doorways sequentially. A room's unused doorways are not
+discarded merely because another doorway from that room has already been
+processed.
 
-Generate connected room
+Each doorway must be marked as processed, connected, or blocked so that
+it cannot be processed repeatedly.
 
-Select, rotate, position and connect a compatible room.
+### 7.2 Side-Path Depth
 
-Collect new doorways
+Track the depth of each side path.
 
-Add every unused doorway from the newly generated room to the queue.
-
-Repeat
-
-Continue until all doorways have been processed.
-
-### Side-path termination probability
-
-As side paths become longer, the probability of generating a room with exactly one doorway increases.
-
-| Side-path depth | Probability bonus |
-| --------------- | ----------------- |
-| 1               | 0%                |
-| 2               | 0%                |
-| 3               | 0%                |
-| 4               | +25%              |
-| 5               | +50%              |
-| 6               | +75%              |
-| 7               | +100%             |
+The first room generated from an unused doorway on a main-path room is
+side-path depth 1. Each additional room generated farther along that
+branch increases the depth by 1.
 
 The intended maximum side-path length is six rooms.
 
-At the maximum depth, the generator must terminate the branch rather than create additional rooms.
+At the maximum depth, the generator must terminate the branch. It must
+not enqueue further room-generation work beyond that limit.
 
-The percentages represent an increasing probability bonus. The base probability and exact probability calculation will be established during implementation.
+### 7.3 Single-Doorway Room Probability
 
-### Branch behavior
+As side-path depth increases, the probability of selecting a room with
+exactly one doorway should increase. This encourages branches to
+terminate progressively rather than growing indefinitely.
 
-- Every unused doorway can produce another side path.
-- Side rooms can generate additional side rooms.
-- Side paths can have multiple branches.
-- Side paths terminate naturally through single-doorway rooms.
-- All generated branches must remain traversable.
+The intended probability bonus is:
 
-## 6. Connecting to existing rooms
+    Side-path depth   Probability bonus
+  ----------------- -------------------
+                  1                  0%
+                  2                  0%
+                  3                  0%
+                  4                +25%
+                  5                +50%
+                  6                +75%
+       7 and beyond               +100%
 
-Configurable feature
+The bonus is applied to a base probability that will be established
+during implementation. The exact probability calculation and clamping
+behavior must be defined in code.
 
-The generator should support the possibility of connecting a doorway to an already existing room instead of generating a new room.
+The hard maximum depth remains authoritative regardless of the
+probability result.
 
-This can produce loops and shortcuts.
+## 8. Connections to Existing Rooms
 
-Introduce a configurable probability:
+The generator should support an adjustable probability of connecting a
+doorway to an already generated room instead of creating a new room.
 
-```
+This can create loops and shortcuts in the dungeon.
+
+A configurable property is proposed:
+
+``` gdscript
 @export_range(0.0, 1.0)
 var existing_room_connection_chance: float
 ```
 
-When the probability check succeeds:
+When the probability check succeeds, the generator should:
 
-1. Search for a compatible existing room.
-2. Check whether it has an available doorway.
-3. Verify that the connection is geometrically valid.
-4. Connect the two rooms.
+1.  Find candidate existing rooms.
+2.  Find an available doorway on a candidate room.
+3.  Check whether the two doorways can be connected geometrically.
+4.  Validate the proposed connection.
+5.  Create the connection if valid.
 
-Otherwise, generate a new room.
+If no valid existing-room connection is found, normal room generation
+may be attempted.
 
-This feature is planned, but its exact implementation can be deferred until the basic generation system works.
+This feature is planned, but its implementation can be deferred until
+basic room placement, passage generation, and side-path generation are
+working.
 
-## 7. Room placement and failed connections
+## 9. Placement Failure and Blocked Doorways
 
-Room placement must account for:
+Room placement can fail because of occupied space, incompatible doorway
+geometry, or an inability to create a valid passage.
 
-- Room dimensions.
-- Room rotation.
-- Doorway position.
-- Passage geometry.
-- Existing room occupancy.
-- Traversability.
+Each doorway receives up to three placement attempts.
 
-### Placement attempts
+An attempt may select another room or try another rotation. The
+generator should make a reasonable effort to find a valid placement
+before abandoning the doorway.
 
-Each doorway gets up to three placement attempts.
+If all three attempts fail:
 
-Each attempt can select another room or try another rotation.
+-   Mark the doorway as blocked.
+-   Place a dedicated blocking tile or texture over the doorway.
+-   Do not leave the doorway visually open as though it were a valid
+    passage.
+-   Do not repeatedly retry the same doorway.
 
-Placement failure handling
+The blocking tile must be represented in the tile data used by the final
+assembled dungeon.
 
-1. Attempt room placement.
-2. If unsuccessful, try another room or rotation.
-3. Repeat up to three attempts.
-4. If all attempts fail, block the doorway.
+A failed side-path placement should not invalidate the rest of the
+generated dungeon.
 
-Blocking texture
+## 10. Dungeon Size and Bounds
 
-A dedicated blocking texture will be included in the tile system and placed over doorways where room generation fails.
+There is no predefined maximum world size or fixed dungeon width and
+height.
 
-The generator should not silently leave failed connections open.
+The dungeon expands according to the positions and dimensions of its
+generated rooms and passages.
 
-### Room spacing
+After generation is complete, the assembler calculates the overall
+bounds of all generated geometry. These bounds determine the final
+`map_width`, `map_height`, and tile array size.
 
-Rooms can be extremely close to one another.
+The implementation must still account for practical engine and memory
+limits, but the design does not impose an arbitrary gameplay boundary.
 
-There is no requirement for a fixed minimum separation distance.
+## 11. Dungeon Assembly
 
-However, their actual geometry must not overlap in a way that creates invalid room layouts.
+Once room placement, passage generation, and connection processing are
+complete, the generator combines all generated geometry into the final
+map.
 
-## 8. Dungeon boundaries
+### 11.1 Assembly Responsibilities
 
-There will be no predefined maximum dungeon dimensions.
+1.  Calculate the complete dungeon bounding rectangle.
+2.  Allocate the final tile array.
+3.  Copy each room's tile data into its final position.
+4.  Copy passage tile data into the same map.
+5.  Place blocking tiles at failed connections.
+6.  Produce the final `MapData`.
+7.  Package the result into a `DungeonResource`.
 
-The dungeon should expand according to its generated room and passage positions.
+The assembler must account for the final offsets of all rooms and
+passages when copying their tile data into the map.
 
-Its final dimensions will be calculated from the generated layout.
+The final map must use the tile IDs and tile definitions expected by the
+existing dungeon rendering system.
 
-The assembler will eventually determine the required `map_width`, `map_height`, and tile array size.
+### 11.2 Output Compatibility
 
-## 9. Final dungeon assembly
+The generated `DungeonResource` must be usable by the existing dungeon
+loading and rendering workflow.
 
-Once room placement, passage generation, and connections are complete, everything must be combined into your existing dungeon data structure.
+The renderer should not need separate logic for procedural dungeons.
 
-Your current architecture:
+The initial implementation does not generate or populate:
 
-```
-DungeonResource
-│
-├── dungeon_name
-│
-├── dungeon_tilemap: MapData
-│   ├── tile_size
-│   ├── map_width
-│   ├── map_height
-│   ├── map
-│   └── map_tiles
-│
-├── checkpoints
-│
-└── damage_areas
-```
+-   Enemies.
+-   Boss encounters.
+-   Checkpoints.
+-   Damage areas.
+-   Loot.
+-   Other gameplay objects.
 
-The generated dungeon should produce a normal `DungeonResource`.
+These systems will be considered after the main tilemap generation
+pipeline is working.
 
-The generation system must not require changes to your existing dungeon rendering system.
+## 12. Generation Metadata
 
-### Assembly responsibilities
+The generator should retain useful structural information while
+generating the dungeon.
 
-1. Calculate the complete dungeon bounding rectangle.
-2. Allocate the final tile array.
-3. Copy room tile data into the appropriate positions.
-4. Copy passage tile data.
-5. Place blocking textures where necessary.
-6. Produce the final `MapData`.
-7. Package the result into `DungeonResource`.
+At minimum, retain enough information to identify:
 
-Enemy placement, checkpoint generation, and damage-area generation are deliberately excluded from the initial implementation.
+-   Which rooms belong to the main path.
+-   Which rooms belong to side paths.
+-   Each side room's depth.
+-   Which doorways are available.
+-   Which doorways have been connected.
+-   Which doorways have been blocked.
+-   Which rooms are connected to one another.
+-   Which room is the starting room.
+-   Which room is the ending room.
 
-## 10. Proposed implementation roadmap
+This metadata should remain separate from the final tile array where
+practical.
 
-The implementation will be divided into independent milestones.
+It will be useful for debugging, validating connectivity, and
+implementing later gameplay systems.
 
-Implementation progress
+## 13. Proposed System Responsibilities
 
-# 0/24
+The implementation may use separate classes or functions for the
+following responsibilities. The exact class boundaries should be decided
+while coding.
 
-Phase 1 — Room resource system
+  -----------------------------------------------------------------------
+  Responsibility                      Purpose
+  ----------------------------------- -----------------------------------
+  Room database                       Stores and provides available room
+                                      resources.
 
-Define DungeonRoomResource
+  Main path generation                Selects and positions the starting
+                                      room, intermediate rooms, and
+                                      ending room.
 
-Store room dimensions and tile data
-
-Define doorway positions
-
-Implement room rotation
-
-Phase 2 — Main path generation
-
-Select starting and ending rooms
-
-Generate approximately 15 intermediate rooms
-
-Calculate irregular room positions
-
-Connect rooms with passages
-
-Phase 3 — Passage generation
-
-Generate winding passages
-
-Support variable passage widths
-
-Generate vertical traversal challenges
-
-Validate passage connectivity
-
-Phase 4 — Side-path generation
-
-Implement doorway queue
-
-Generate side rooms
-
-Implement depth-based termination probability
-
-Implement failed-placement blocking
-
-Phase 5 — Advanced connections
-
-Add existing-room connection probability
-
-Support loops and shortcuts
-
-Validate all connections
-
-Phase 6 — Dungeon assembly
-
-Calculate dungeon bounds
-
-Merge room tile data
-
-Merge passage tile data
-
-Generate final MapData
-
-Produce DungeonResource
-
-## 11. Important architectural principles
-
-These are the rules I'd preserve throughout development:
-
-1. Rooms are handcrafted. The generator assembles them rather than inventing their geometry.
-2. Room placement is independent of room rendering.
-3. Doorways drive generation. Unused doorways are the source of new branches.
-4. The main path is hidden from the player.
-5. Randomness must preserve reachability.
-6. Dungeon size is unrestricted by an arbitrary configured boundary.
-7. Generation metadata should be retained. Room connections, main-path membership, and side-path depth will be useful later.
-8. The generator produces the same `DungeonResource` format as manually designed dungeons.
-
-## 12. Scope of the first implementation
-
-Initial target
-
-The first working version should accomplish only this:
-
-- Load premade room resources.
-- Rotate rooms.
-- Generate the main path.
-- Generate irregular connecting passages.
-- Generate side paths.
-- Handle failed placements.
-- Assemble the final `MapData`.
-- Render the generated dungeon.
-
-No enemies, bosses, loot, checkpoints, or damage areas yet.
-
-The ultimate goal: Give the generator a collection of handcrafted rooms and a random seed, and have it produce a large, unpredictable, interconnected dungeon that is fully traversable and ready to play.
-
-That's the specification we'll use as our foundation.
+  Room placement                      Handles room positioning, rotation,
+                                      and overlap checks.
+
+  Passage generation                  Generates and validates irregular
+                                      connections between doorways.
+
+  Side-path generation                Processes unused doorways and
+                                      generates additional rooms.
+
+  Dungeon assembly                    Combines room and passage data into
+                                      the final `MapData`.
+  -----------------------------------------------------------------------
+
+These are logical responsibilities, not a requirement to create one
+script per responsibility.
+
+## 14. Implementation Order
+
+Implementation should proceed in the following order:
+
+### Phase 1: Room Resource System
+
+-   Define the room resource.
+-   Store room dimensions and tile data.
+-   Define doorway positions.
+-   Implement room rotation.
+-   Verify that rotated tile data and doorway positions remain aligned.
+
+### Phase 2: Main Path Generation
+
+-   Select starting and ending rooms.
+-   Generate approximately 15 intermediate rooms.
+-   Calculate irregular room positions.
+-   Connect consecutive rooms.
+
+### Phase 3: Passage Generation
+
+-   Generate winding passages.
+-   Support variable passage widths.
+-   Generate traversal challenges where supported.
+-   Validate passage connectivity and reachability.
+
+### Phase 4: Side-Path Generation
+
+-   Implement the doorway worklist.
+-   Generate rooms from unused doorways.
+-   Track side-path depth.
+-   Implement the depth-based single-doorway-room probability.
+-   Implement the three-attempt placement limit.
+-   Implement blocked-doorway tiles.
+
+### Phase 5: Advanced Connections
+
+-   Add the existing-room connection probability.
+-   Search for compatible existing room doorways.
+-   Validate loops and shortcuts.
+-   Ensure all accepted connections are traversable.
+
+### Phase 6: Dungeon Assembly
+
+-   Calculate final dungeon bounds.
+-   Merge room tile data.
+-   Merge passage tile data.
+-   Place blocking tiles.
+-   Generate the final `MapData`.
+-   Produce a compatible `DungeonResource`.
+-   Test the generated map in the existing renderer.
+
+## 15. Initial Implementation Scope
+
+The first complete working version should:
+
+-   Load premade room resources.
+-   Rotate rooms.
+-   Generate the main path.
+-   Place rooms irregularly.
+-   Generate winding passages.
+-   Generate side paths from unused doorways.
+-   Enforce side-path depth limits.
+-   Handle failed placement attempts.
+-   Block doorways when placement fails.
+-   Assemble all geometry into the final `MapData`.
+-   Produce a playable dungeon using the existing rendering system.
+
+Enemy placement, bosses, loot, checkpoints, and damage areas are
+intentionally postponed until the main tilemap generation system is
+complete.
+
+## 16. Core Requirements
+
+The following requirements should guide implementation decisions:
+
+1.  Rooms are handcrafted resources; the generator assembles them.
+2.  Room dimensions and doorway positions are defined by each room.
+3.  Rooms can be rotated in 90-degree increments.
+4.  The main route contains a starting room, approximately 15
+    intermediate rooms, and an ending room.
+5.  Room placement must be irregular in both horizontal and vertical
+    directions.
+6.  Passages should be winding and cave-like rather than uniformly
+    straight.
+7.  Every required room connection must be reachable.
+8.  Unused doorways generate side paths.
+9.  Side paths may branch further through additional unused doorways.
+10. Side-path depth increases the probability of selecting a
+    single-doorway room.
+11. Side paths have a hard maximum length of six rooms.
+12. Existing-room connections and loops are supported as a planned
+    configurable feature.
+13. Each failed doorway placement receives up to three attempts.
+14. A doorway that cannot be connected is visibly blocked.
+15. There is no arbitrary maximum dungeon world size.
+16. The final output is a standard `DungeonResource`.
+17. Enemy, boss, checkpoint, damage-area, and loot generation are
+    deferred.
+
+The intended result is a large, irregular, exploration-focused dungeon
+assembled from handcrafted rooms and procedurally generated passages.
+The main progression route is known to the generator but concealed from
+the player, making every unexplored doorway a possible route toward the
+final encounter.
