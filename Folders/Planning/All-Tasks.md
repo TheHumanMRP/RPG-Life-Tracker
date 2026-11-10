@@ -8,6 +8,7 @@
 		- [X] Make the `dungeon_tilemap` resource
 	- [X] Refactor the dungoen_level scrpt to use the upated tile_map var
 	- [ ] Make the `DungeonRoom` resource
+	- [ ] Make an editor for `DungeonRoom` resource
 ---
 - [ ] Make a settings menu
         - [ ] Make the online backup settings section
