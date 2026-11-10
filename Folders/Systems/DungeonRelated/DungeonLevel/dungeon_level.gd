@@ -1,8 +1,10 @@
-extends TileMapLayer
+extends Node2D
 
 const TILE_SIZE := Vector2i(32, 32)
 
 var dungeon_resource: DungeonResource
+
+@export var dungoen_tilemap: TileMap
 
 func setup(new_dungeon_resource: DungeonResource) -> void:
 	dungeon_resource = new_dungeon_resource
@@ -11,8 +13,8 @@ func _ready() -> void:
 	# Crash if dungeon_resource not present in debug builds
 	assert(dungeon_resource, "Dungeon Level: No dungeon resource!")
 
-	tile_set = TileSet.new()
-	tile_set.tile_size = TILE_SIZE
+	dungoen_tilemap.tile_set = TileSet.new()
+	dungoen_tilemap.tile_set.tile_size = TILE_SIZE
 
 	build_tilemap(dungeon_resource.dungeon_tilemap)
 
