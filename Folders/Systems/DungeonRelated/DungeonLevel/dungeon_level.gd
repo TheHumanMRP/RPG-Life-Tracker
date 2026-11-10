@@ -2,7 +2,7 @@ extends Node2D
 
 var dungeon_resource: DungeonResource
 
-@export var dungoen_tilemap: TileMap
+@export var dungoen_tilemap: TileMapLayer
 
 func setup(new_dungeon_resource: DungeonResource) -> void:
 	dungeon_resource = new_dungeon_resource
