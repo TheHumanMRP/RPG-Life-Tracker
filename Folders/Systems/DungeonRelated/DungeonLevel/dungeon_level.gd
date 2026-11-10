@@ -87,4 +87,8 @@ func _place_damage_areas() -> void:
 	var damage_area_packed_scene: PackedScene = load(Constants.PATH_TO_DAMAGE_AREA)
 
 	for damage_area_resource in dungeon_resource.damage_areas:
-		var damage_area: 
+		var damage_area: Node = damage_area_packed_scene.instantiate()
+
+		damage_area.setup(damage_area_resource)
+
+		
