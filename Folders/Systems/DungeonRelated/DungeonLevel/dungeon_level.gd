@@ -20,10 +20,10 @@ func _ready() -> void:
 	dungoen_tilemap.tile_set = TileSet.new()
 	dungoen_tilemap.tile_set.tile_size = dungeon_resource.dungeon_tilemap.tile_size
 
-	build_tilemap(dungeon_resource.dungeon_tilemap)
+	_build_tilemap(dungeon_resource.dungeon_tilemap)
 
 
-func build_tilemap(map_data: MapData) -> void:
+func _build_tilemap(map_data: MapData) -> void:
 	var loaded_tiles: Dictionary[int, Vector2i] = {}
 
 	for y in range(map_data.map_height):
@@ -72,5 +72,5 @@ func get_tile(loaded_tiles: Dictionary[int, Vector2i], tile_id: int) -> Vector2i
 
 	return coords
 
-func place_checkpoints() -> void:
+func _place_checkpoints() -> void:
 	pass
