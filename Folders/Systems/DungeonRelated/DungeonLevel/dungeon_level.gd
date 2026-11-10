@@ -3,7 +3,7 @@ extends Node2D
 var dungeon_resource: DungeonResource
 
 @export var checkpoint_container: Node
-@export var dungeon_areas_container: Node
+@export var damage_areas_container: Node
 @export var dungoen_tilemap: TileMapLayer
 
 func setup(new_dungeon_resource: DungeonResource) -> void:
@@ -91,3 +91,5 @@ func _place_damage_areas() -> void:
 		var damage_area: Node = damage_area_packed_scene.instantiate()
 
 		damage_area.setup(damage_area_resource)
+
+		damage_areas_container.add_child(damage_area)

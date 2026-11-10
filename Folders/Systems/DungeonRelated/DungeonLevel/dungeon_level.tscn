@@ -2,9 +2,10 @@
 
 [ext_resource type="Script" uid="uid://dx61wrve64jwn" path="res://Folders/Systems/DungeonRelated/DungeonLevel/dungeon_level.gd" id="1_u83e5"]
 
-[node name="Dungeon_Level" type="Node2D" unique_id=1601527455 node_paths=PackedStringArray("checkpoint_container", "dungoen_tilemap")]
+[node name="Dungeon_Level" type="Node2D" unique_id=1601527455 node_paths=PackedStringArray("checkpoint_container", "damage_areas_container", "dungoen_tilemap")]
 script = ExtResource("1_u83e5")
 checkpoint_container = NodePath("CheckpointContainer")
+damage_areas_container = NodePath("DamageAreasContainer")
 dungoen_tilemap = NodePath("DungeonTileMap")
 
 [node name="SpawnPoint" type="Marker2D" parent="." unique_id=1782200329]
