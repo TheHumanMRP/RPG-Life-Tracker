@@ -12,7 +12,7 @@ func _ready() -> void:
 	assert(dungeon_resource, "Dungeon Level: No dungeon resource!")
 
 	dungoen_tilemap.tile_set = TileSet.new()
-	dungoen_tilemap.tile_set.tile_size = dungeon_resource..
+	dungoen_tilemap.tile_set.tile_size = dungeon_resource.dungeon_tilemap.tile_size
 
 	build_tilemap(dungeon_resource.dungeon_tilemap)
 
