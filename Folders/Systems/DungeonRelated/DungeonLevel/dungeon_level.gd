@@ -82,3 +82,6 @@ func _place_checkpoints() -> void:
 		checkpoint.setup(checkpoint_position)
 
 		checkpoint_container.add_child(checkpoint)
+
+func _place_damage_areas() -> void:
+	var damage_area_packed_scene :PackedScene = load[Constants.pathtodam]
