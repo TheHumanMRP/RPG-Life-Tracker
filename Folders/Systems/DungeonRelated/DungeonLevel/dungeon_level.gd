@@ -75,5 +75,6 @@ func get_tile(loaded_tiles: Dictionary[int, Vector2i], tile_id: int) -> Vector2i
 func _place_checkpoints() -> void:
 	var checkpoint_packed_scene: PackedScene = load(Constants.PATH_TO_CHECKPOINT)
 
-	for checkpoint in dungeon_resource.checkpoints:
+	for checkpoint_pos in dungeon_resource.checkpoints:
+		var checkpoint : Node = checkpoint_packed_scene.instantiate()
 		
