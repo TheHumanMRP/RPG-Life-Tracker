@@ -57,6 +57,7 @@ func _build_tilemap(map_data: MapData) -> void:
 				continue
 
 			var pixel_position: Vector2i = dungeon_tilemap.tilemap_data[tile_id]
+			@warning_ignore("integer_division")
 			var atlas_coords: Vector2i = pixel_position / dungeon_tilemap.tile_size
 
 			dungoen_tilemap.set_cell(
