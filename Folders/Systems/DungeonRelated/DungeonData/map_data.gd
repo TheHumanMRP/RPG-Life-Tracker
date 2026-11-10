@@ -6,12 +6,3 @@ class_name MapData
 @export var map_height: int
 @export var map: Array[int]
 @export var map_tiles: DungeonTilemap
-
-# -------------------------------------------------
-# Example map tile
-# -------------------------------------------------
-#
-# map_tiles: Dictionary[int, String] = {
-# 	1: "res://Folders/Assets/Player-Front.png",
-
-# }

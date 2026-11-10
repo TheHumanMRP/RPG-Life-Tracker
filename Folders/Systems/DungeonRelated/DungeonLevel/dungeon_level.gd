@@ -48,7 +48,7 @@ func _build_tilemap(map_data: MapData) -> void:
 			)
 
 
-func get_tile(loaded_tiles: Dictionary[int, Vector2i], tile_id: int) -> Vector2i:
+func _get_tile(loaded_tiles: Dictionary[int, Vector2i], tile_id: int) -> Vector2i:
 	if loaded_tiles.has(tile_id):
 		return loaded_tiles[tile_id]
 
