@@ -4,7 +4,8 @@
 ## To-Do
 ---
 - [ ] Make the procedural generation
-	- [ ] Refactor the tile_map var to use the `dungoen_tilemap` resource
+	- [ ] Refactor the tile_map var to use the `dungeon_tilemap` resource
+		- [ ] Make the `dungeon_tilemap` resource
 	- [ ] Refactor the dungoen_level scrpt to use the upated tile_map var
 ---
 - [ ] Make a settings menu

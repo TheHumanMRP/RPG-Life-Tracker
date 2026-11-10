@@ -18,7 +18,7 @@ enum ITEM_TYPES {
 
 }
 
-# Don't forget to update the Global script dude
+# Don't forget to update the Global script after editing thsi
 enum GAME_STATES {
 	MainMenu,
 	DungeonSelectionMenu,
