@@ -2,6 +2,7 @@ extends Node2D
 
 var dungeon_resource: DungeonResource
 
+@export var checkpoint_container: Node
 @export var dungoen_tilemap: TileMapLayer
 
 func setup(new_dungeon_resource: DungeonResource) -> void:
@@ -76,8 +77,8 @@ func _place_checkpoints() -> void:
 	var checkpoint_packed_scene: PackedScene = load(Constants.PATH_TO_CHECKPOINT)
 
 	for checkpoint_position in dungeon_resource.checkpoints:
-		var checkpoint : Node = checkpoint_packed_scene.instantiate()
+		var checkpoint: Node = checkpoint_packed_scene.instantiate()
 
 		checkpoint.setup(checkpoint_position)
 
-		add_child(checkpoint)
+		checkpoint_container.add_child(checkpoint)
