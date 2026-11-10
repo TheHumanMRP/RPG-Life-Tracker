@@ -7,8 +7,11 @@ class_name MapData
 @export var map: Array[int]
 @export var map_tiles: Dictionary[int, String]
 
-
-# MAP_TILES: Dictionary[int, String] = {
+# -------------------------------------------------
+# Example map tile
+# -------------------------------------------------
+#
+# map_tiles: Dictionary[int, String] = {
 # 	1: "res://Folders/Assets/Player-Front.png",
 
 # }
