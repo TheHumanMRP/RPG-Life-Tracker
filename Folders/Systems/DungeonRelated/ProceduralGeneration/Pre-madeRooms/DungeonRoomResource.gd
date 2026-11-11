@@ -11,6 +11,7 @@ extends Resource
 @export_group("Room Data")
 @export var map: Array[int]
 @export var doorways: Array[Vector2i]
+@export var map_tiles: DungeonTilemap
 
 func is_valid() -> bool:
 	if map_width <= 0 or map_height <= 0:
