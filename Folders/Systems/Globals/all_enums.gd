@@ -41,9 +41,3 @@ enum TASK_STATUS {
 	Completed,
 
 }
-
-enum DUNGEON_TILEMAP_TYPES {
-	Fire,
-	Ice,
-	Wood
-}
