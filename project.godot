@@ -35,10 +35,6 @@ window/size/mode=4
 window/stretch/mode="viewport"
 mouse_cursor/custom_image="uid://duypwv8ql7v1"
 
-[editor_plugins]
-
-enabled=PackedStringArray("res://addons/DungeonRoomEditor/plugin.cfg")
-
 [input]
 
 equip_item={
