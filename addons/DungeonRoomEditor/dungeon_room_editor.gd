@@ -1,33 +1,11 @@
-@tool
-extends EditorPlugin
-
-const EDITOR_SCENE = preload("res://addons/DungeonRoomEditor/dungeon_room_editor.tscn")
-
-var editor_instance: Control
-
-func _enter_tree() -> void:
-	editor_instance = EDITOR_SCENE.instantiate()
-	EditorInterface.get_editor_main_screen().add_child(editor_instance)
-	editor_instance.hide()
+extends Control
 
 
-func _exit_tree() -> void:
-	if editor_instance:
-		editor_instance.queue_free()
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
 
 
-func _has_main_screen() -> bool:
-	return true
-
-
-func _make_visible(visible: bool) -> void:
-	if editor_instance:
-		editor_instance.visible = visible
-
-
-func _get_plugin_name() -> String:
-	return "Room Editor"
-
-
-func _get_plugin_icon() -> Texture2D:
-	return EditorInterface.get_editor_theme().get_icon("TileMap", "EditorIcons")
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
