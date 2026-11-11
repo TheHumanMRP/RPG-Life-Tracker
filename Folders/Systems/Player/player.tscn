@@ -78,6 +78,7 @@ animations = [{
 size = Vector2(32, 32)
 
 [node name="Player" type="CharacterBody2D" unique_id=1761644757 node_paths=PackedStringArray("health_component", "movement_component", "equipment_manager", "animation_player_component")]
+position = Vector2(0, -1)
 collision_layer = 2
 script = ExtResource("1_4ek6g")
 health_component = NodePath("HealthComponent")
