@@ -37,7 +37,7 @@ mouse_cursor/custom_image="uid://duypwv8ql7v1"
 
 [editor_plugins]
 
-enabled=PackedStringArray()
+enabled=PackedStringArray("res://addons/DungeonRoomEditor/plugin.cfg")
 
 [input]
 
