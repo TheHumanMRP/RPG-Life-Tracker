@@ -1,22 +1,34 @@
 @tool
 extends EditorPlugin
 
+const EDITOR_SCENE = preload("res://addons/dungeon_room_editor/dungeon_room_editor.tscn")
 
-func _enable_plugin() -> void:
-	# Add autoloads here.
-	pass
-
-
-func _disable_plugin() -> void:
-	# Remove autoloads here.
-	pass
+var editor_instance: Control
 
 
 func _enter_tree() -> void:
-	# Initialization of the plugin goes here.
-	pass
+	editor_instance = EDITOR_SCENE.instantiate()
+	EditorInterface.get_editor_main_screen().add_child(editor_instance)
+	editor_instance.hide()
 
 
 func _exit_tree() -> void:
-	# Clean-up of the plugin goes here.
-	pass
+	if editor_instance:
+		editor_instance.queue_free()
+
+
+func _has_main_screen() -> bool:
+	return true
+
+
+func _make_visible(visible: bool) -> void:
+	if editor_instance:
+		editor_instance.visible = visible
+
+
+func _get_plugin_name() -> String:
+	return "Room Editor"
+
+
+func _get_plugin_icon() -> Texture2D:
+	return EditorInterface.get_editor_theme().get_icon("TileMap", "EditorIcons")
