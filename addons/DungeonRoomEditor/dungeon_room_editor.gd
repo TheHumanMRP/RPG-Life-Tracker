@@ -1,10 +1,9 @@
 @tool
 extends EditorPlugin
 
-const EDITOR_SCENE = preload("res://addons/dungeon_room_editor/dungeon_room_editor.tscn")
+const EDITOR_SCENE = preload("res://addons/DungeonRoomEditor/dungeon_room_editor.tscn")
 
 var editor_instance: Control
-
 
 func _enter_tree() -> void:
 	editor_instance = EDITOR_SCENE.instantiate()
