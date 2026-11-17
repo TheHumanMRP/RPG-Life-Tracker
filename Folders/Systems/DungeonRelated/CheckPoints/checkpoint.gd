@@ -5,9 +5,6 @@ const levitate_amount: float = 100.0
 # Prevents making running 2 times if player enters again
 var is_claimed: bool = false
 
-@export var collision_area: CollisionShape2D
-@export var display_texture: Sprite2D
-
 var respawn_position: Vector2
 
 func setup(checkpoint_position: Vector2) -> void:
