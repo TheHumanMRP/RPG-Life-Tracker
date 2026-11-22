@@ -7,7 +7,7 @@
 	- [X] Refactor the tile_map var to use the `dungeon_tilemap` resource
 		- [X] Make the `dungeon_tilemap` resource
 	- [X] Refactor the dungoen_level scrpt to use the upated tile_map var
-	- [ ] Make the `DungeonRoom` resource
+	- [X] Make the `DungeonRoom` resource
 	- [ ] Make an editor for `DungeonRoom` resource
 ---
 - [ ] Make a settings menu
