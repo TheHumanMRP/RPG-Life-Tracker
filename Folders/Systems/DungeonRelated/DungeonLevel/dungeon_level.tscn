@@ -8,10 +8,6 @@ checkpoint_container = NodePath("CheckpointContainer")
 damage_areas_container = NodePath("DamageAreasContainer")
 dungoen_tilemap = NodePath("DungeonTileMap")
 
-[node name="SpawnPoint" type="Marker2D" parent="." unique_id=1782200329]
-unique_name_in_owner = true
-position = Vector2(-140, 93)
-
 [node name="DungeonTileMap" type="TileMapLayer" parent="." unique_id=722540266]
 
 [node name="CheckpointContainer" type="Node" parent="." unique_id=2139208561]
