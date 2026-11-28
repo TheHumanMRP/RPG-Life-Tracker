@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://gdbbj4t5s8w8"]
 
+[ext_resource type="Theme" uid="uid://deuleb40h735d" path="res://Folders/Assets/UITheme/rpg-life-tracker-ui-theme.tres" id="1_el10s"]
 [ext_resource type="Script" uid="uid://b2q4bgckmbgh1" path="res://Folders/Systems/TaskManager/Display/TaskManagerUI/task_manager_ui.gd" id="1_tv5vg"]
 [ext_resource type="PackedScene" uid="uid://begy5501tfsx6" path="res://Folders/Systems/TaskManager/TaskGrid/task_grid.tscn" id="2_tv5vg"]
 
@@ -9,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_el10s")
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
