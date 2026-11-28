@@ -7,7 +7,6 @@ extends Resource
 @export var hotbar_save_data: HotbarSaveData
 @export var tasks_save_data: TasksSaveData
 @export var online_backup_settings: OnlineBackupSettings
-@export var dungeon_save_data: DungeonSaveData
 
 func _init() -> void:
 	all_global_items_data = AllGlobalItemsData.new()
@@ -16,4 +15,3 @@ func _init() -> void:
 	hotbar_save_data = HotbarSaveData.new()
 	tasks_save_data = TasksSaveData.new()
 	online_backup_settings = OnlineBackupSettings.new()
-	dungeon_save_data = DungeonSaveData.new()
