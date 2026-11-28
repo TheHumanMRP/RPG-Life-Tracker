@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://b0fsly2l8nwi5"]
+
+[node name="Room1" type="Node2D" unique_id=1087340911]
+
+[node name="RoomTilemap" type="TileMapLayer" parent="." unique_id=1134245432]
