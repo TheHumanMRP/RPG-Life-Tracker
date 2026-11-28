@@ -3,7 +3,7 @@
 
 ## To-Do
 ---
-
+- [ ] 
 ---
 - [ ] Make the procedural generation
 	- [ ] Make 2 rooms with tilemap
@@ -13,7 +13,7 @@
 ---
 - [ ] Impliment Inventory screen
 ---
-- [ ] Add pixel art for text input cancle button
+- [ ] Add pixel art for text input cancel button
 ---
 - [ ] Add transitions when changing scenes
 
