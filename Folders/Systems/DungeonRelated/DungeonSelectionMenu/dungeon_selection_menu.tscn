@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bro14pularecm"]
 
-[ext_resource type="Script" uid="uid://bbuxxfdoifd8" path="res://Folders/Systems/DungeonRelated/DungeonSelectionMenu/DungeonSelectionMenuScene/dungeon_selection_menu.gd" id="1_wstq6"]
+[ext_resource type="Script" uid="uid://bbuxxfdoifd8" path="res://Folders/Systems/DungeonRelated/DungeonSelectionMenu/dungeon_selection_menu.gd" id="1_wstq6"]
 
 [node name="Dungeon_Selection_Menu" type="CanvasLayer" unique_id=915991939 node_paths=PackedStringArray("dungeon_items_container")]
 script = ExtResource("1_wstq6")

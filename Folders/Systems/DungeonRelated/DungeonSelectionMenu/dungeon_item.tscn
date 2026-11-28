@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://mo3byinu41e0"]
+[gd_scene format=3 uid="uid://dxosq1r8vfjxo"]
 
-[ext_resource type="Theme" uid="uid://deuleb40h735d" path="res://Folders/Assets/UITheme/rpg-life-tracker-ui-theme.tres" id="1_b030d"]
-[ext_resource type="Script" uid="uid://yq8cvwng1ati" path="res://Folders/Systems/DungeonRelated/DungeonSelectionMenu/DungeonSelectionMenuUIComponents/dungeon_item.gd" id="2_dn3w8"]
+[ext_resource type="Theme" uid="uid://deuleb40h735d" path="res://Folders/Assets/UITheme/rpg-life-tracker-ui-theme.tres" id="1_cju5p"]
+[ext_resource type="Script" uid="uid://yq8cvwng1ati" path="res://Folders/Systems/DungeonRelated/DungeonSelectionMenu/DungeonSelectionMenuUIComponents/dungeon_item.gd" id="2_31u6f"]
 
 [node name="Dungeon_Item" type="PanelContainer" unique_id=1998990663 node_paths=PackedStringArray("dungeon_name_label", "play_button")]
 anchors_preset = 8
@@ -11,8 +11,8 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_b030d")
-script = ExtResource("2_dn3w8")
+theme = ExtResource("1_cju5p")
+script = ExtResource("2_31u6f")
 dungeon_name_label = NodePath("MarginContainer/VBoxContainer/Dungeon_Name")
 play_button = NodePath("MarginContainer/VBoxContainer/Play_Button")
 
