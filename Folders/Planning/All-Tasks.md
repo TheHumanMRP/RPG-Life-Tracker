@@ -6,11 +6,7 @@
 
 ---
 - [ ] Make the procedural generation
-	- [X] Refactor the tile_map var to use the `dungeon_tilemap` resource
-		- [X] Make the `dungeon_tilemap` resource
-	- [X] Refactor the dungoen_level scrpt to use the upated tile_map var
-	- [X] Make the `DungeonRoom` resource
-	- [ ] Make an editor for `DungeonRoom` resource
+	- [ ] Make 2 rooms with tilemap
 ---
 - [ ] Make a settings menu
         - [ ] Make the online backup settings section
