@@ -23,7 +23,7 @@
 
 ## Completed Tasks
 ---
-- [X] Wipe out the entire old dungeon system and start building it from scratch
+- [X] Wipe out the entire old dungeon system and start building it from scratch cause the old architecture is holding me back
 
 - [X] Refactor the entire dungeon_level to the new `DungeonResource` resource
 	- [X] Import the tilemap script and stuff from the `tile-map-testing` project
