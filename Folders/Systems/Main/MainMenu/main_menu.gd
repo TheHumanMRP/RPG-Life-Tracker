@@ -43,7 +43,7 @@ func _set_mouse_filters() -> void:
 # Handling Input
 # ==============================================
 func _on_dungeon_selection_menu_button_pressed() -> void:
-	SignalBus.switch_scene.emit(_get_scene(Constants.PATH_TO_DUNGEON_SELECTION_MENU))
+	SignalBus.switch_scene.emit()
 
 func _on_task_manager_button_pressed() -> void:
 	SignalBus.switch_scene.emit(_get_scene(Constants.PATH_TO_TASK_MANAGER))
